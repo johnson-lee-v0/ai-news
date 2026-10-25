@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-25T02:41:54+00:00",
+  "coverage_note": "Curated public identity watchlist, not a connected X feed. Browser session, current posts, engagement and comprehensive trends were not checked. X posts are discovery leads requiring corroboration.",
+  "accounts": [
+    {
+      "id": "dylan-patel",
+      "name": "Dylan Patel",
+      "handle": "@dylan522p",
+      "url": "https://x.com/dylan522p",
+      "role": "Founder and CEO, SemiAnalysis",
+      "topics": [
+        "semiconductors",
+        "AI infrastructure",
+        "compute economics",
+        "capacity"
+      ],
+      "why": "Connect accelerator, memory, networking and data-center developments to the cost and delivery of compute.",
+      "bias": "Commercial research and consulting perspective. Some underlying models are paid; use public evidence only. Shares an organization with Doug O’Laughlin, so the two are not independent corroboration.",
+      "verification_url": "https://semianalysis.com/dylan-patel/",
+      "verified_at": "2026-10-25T02:41:54+00:00",
+      "verification_note": "Own biography links Twitter and describes semiconductor and cloud coverage.",
+      "alternate_read_url": "https://semianalysis.com/",
+      "example_note": "No recent individual X post was verified with its publication time in this review. No post is seeded as current evidence.",
+      "access_status": "public_identity_verified_session_not_checked"
+    },
+    {
+      "id": "doug-olaughlin",
+      "name": "Doug O’Laughlin / Fabricated Knowledge",
+      "handle": "@fabknowledge",
+      "url": "https://x.com/fabknowledge",
+      "role": "President, SemiAnalysis; writer, Fabricated Knowledge",
+      "topics": [
+        "semiconductors",
+        "earnings",
+        "capital allocation",
+        "AI supply chain"
+      ],
+      "why": "Follow component suppliers, competitive shifts and earnings read-throughs across the AI hardware chain.",
+      "bias": "Investment and commercial research perspective. Estimates and opinions need issuer checks. Shares an organization with Dylan Patel; duplicated arguments are one research lineage.",
+      "verification_url": "https://www.fabricatedknowledge.com/about",
+      "verified_at": "2026-10-25T02:41:54+00:00",
+      "verification_note": "Author site identifies Doug; current public X profile identifies Fabricated Knowledge and SemiAnalysis. Historical handles may differ.",
+      "alternate_read_url": "https://www.fabricatedknowledge.com/",
+      "example_note": "No recent individual X post was verified with its publication time in this review. No post is seeded as current evidence.",
+      "access_status": "public_identity_verified_session_not_checked"
+    },
+    {
+      "id": "patrick-moorhead",
+      "name": "Patrick Moorhead",
+      "handle": "@PatrickMoorhead",
+      "url": "https://x.com/PatrickMoorhead",
+      "role": "Founder, CEO and chief analyst, Moor Insights & Strategy",
+      "topics": [
+        "enterprise adoption",
+        "cloud",
+        "semiconductors",
+        "earnings"
+      ],
+      "why": "Track enterprise infrastructure and software adoption, product roadmaps and management explanations.",
+      "bias": "Industry advisory and consulting relationships can shape access and perspective. Separate vendor claims, analyst interpretation and measured customer results.",
+      "verification_url": "https://moorinsightsstrategy.com/team/patrick-moorhead/",
+      "verified_at": "2026-10-25T02:41:54+00:00",
+      "verification_note": "Own biography describes expertise; own published articles and current public profile identify @PatrickMoorhead.",
+      "alternate_read_url": "https://moorinsightsstrategy.com/",
+      "example_note": "No recent individual X post was verified with its publication time in this review. No post is seeded as current evidence.",
+      "access_status": "public_identity_verified_session_not_checked"
+    },
+    {
+      "id": "ming-chi-kuo",
+      "name": "Ming-Chi Kuo",
+      "handle": "@mingchikuo",
+      "url": "https://x.com/mingchikuo",
+      "role": "Technology supply-chain analyst, TF International Securities",
+      "topics": [
+        "semiconductors",
+        "foundry",
+        "hardware supply chain",
+        "capacity"
+      ],
+      "why": "Find supply-chain leads on advanced manufacturing, memory and hardware demand when they affect AI capacity or supplier economics.",
+      "bias": "Often forward-looking channel checks with unnamed sources. Apple-heavy coverage needs an AI materiality filter; forecasts are not orders or issuer-confirmed production.",
+      "verification_url": "https://www.macrumors.com/guide/ming-chi-kuo/",
+      "verified_at": "2026-10-25T02:41:54+00:00",
+      "verification_note": "Reliable industry profile identifies role; public X profile and linked reporting identify the handle.",
+      "alternate_read_url": "https://medium.com/@mingchikuo",
+      "example_note": "No recent individual X post was verified with its publication time in this review. No post is seeded as current evidence.",
+      "access_status": "public_identity_verified_session_not_checked"
+    },
+    {
+      "id": "ed-zitron",
+      "name": "Ed Zitron",
+      "handle": "@edzitron",
+      "url": "https://x.com/edzitron",
+      "role": "Writer, Where’s Your Ed At; host, Better Offline; CEO, EZPR",
+      "topics": [
+        "funding",
+        "circular financing",
+        "unit economics",
+        "counterevidence"
+      ],
+      "why": "Pressure-test capital requirements, customer concentration and claims about AI business economics.",
+      "bias": "Explicitly skeptical editorial perspective and a PR/research business role. Trace numerical claims to originals and test counterarguments with the same standard used for optimistic claims.",
+      "verification_url": "https://www.wheresyoured.at/about/",
+      "verified_at": "2026-10-25T02:41:54+00:00",
+      "verification_note": "Own site verifies role; public podcast profile and X profile identify @edzitron. Site also offers a non-X route.",
+      "alternate_read_url": "https://www.wheresyoured.at/",
+      "example_note": "No recent individual X post was verified with its publication time in this review. No post is seeded as current evidence.",
+      "access_status": "public_identity_verified_session_not_checked"
+    },
+    {
+      "id": "nat-bullard",
+      "name": "Nat Bullard",
+      "handle": "@NatBullard",
+      "url": "https://x.com/NatBullard",
+      "role": "Energy researcher and adviser; co-founder, Halcyon; former BloombergNEF chief content officer",
+      "topics": [
+        "power",
+        "grid",
+        "capacity delivery",
+        "capital markets"
+      ],
+      "why": "Connect data-center plans to electricity, permitting, grid constraints and physical delivery.",
+      "bias": "Energy consulting and company-building perspective. Broad energy charts do not establish a particular site’s powered capacity; follow through to utility, permitting and company records.",
+      "verification_url": "https://www.nathanielbullard.com/about",
+      "verified_at": "2026-10-25T02:41:54+00:00",
+      "verification_note": "Own biography links Twitter and describes energy, technology and capital-markets experience.",
+      "alternate_read_url": "https://www.nathanielbullard.com/",
+      "example_note": "No recent individual X post was verified with its publication time in this review. No post is seeded as current evidence.",
+      "access_status": "public_identity_verified_session_not_checked"
+    },
+    {
+      "id": "eric-flaningam",
+      "name": "Eric Flaningam",
+      "handle": "@EricFlaningam",
+      "url": "https://x.com/EricFlaningam",
+      "role": "Technology investor and writer, Generative Value",
+      "topics": [
+        "AI value chain",
+        "funding",
+        "business models",
+        "capital allocation"
+      ],
+      "why": "Map who captures value, who funds growth, and how changes pass between model labs, clouds, chips and software.",
+      "bias": "Investor’s personal analysis; positions or commercial interests may matter. Treat valuation scenarios as assumptions, and verify transaction terms and operating results separately.",
+      "verification_url": "https://www.generativevalue.com/about",
+      "verified_at": "2026-10-25T02:41:54+00:00",
+      "verification_note": "Author’s own about page explicitly names Twitter @EricFlaningam.",
+      "alternate_read_url": "https://www.generativevalue.com/",
+      "example_note": "No recent individual X post was verified with its publication time in this review. No post is seeded as current evidence.",
+      "access_status": "public_identity_verified_session_not_checked"
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "handle": "@simonw",
+      "url": "https://x.com/simonw",
+      "role": "Open-source developer; creator, Datasette; co-creator, Django",
+      "topics": [
+        "technical adoption",
+        "model capability",
+        "inference costs",
+        "reliability"
+      ],
+      "why": "Check what models and tools can actually do, what reproducible tests show, and whether product changes could affect cost or adoption.",
+      "bias": "Hands-on demonstrations do not measure enterprise demand or profitability. Read disclosed sponsorship, vendor preview access and credits alongside the work.",
+      "verification_url": "https://simonwillison.net/about/",
+      "verified_at": "2026-10-25T02:41:54+00:00",
+      "verification_note": "Author’s own about page links @simonw and documents public Atom feeds and disclosures.",
+      "alternate_read_url": "https://simonwillison.net/",
+      "example_note": "No recent individual X post was verified with its publication time in this review. No post is seeded as current evidence.",
+      "access_status": "public_identity_verified_session_not_checked"
+    }
+  ]
+}

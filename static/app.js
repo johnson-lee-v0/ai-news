@@ -1,0 +1,316 @@
+'use strict';
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const state = { data: null, page: 'brief', limit: 40, refreshing: false };
+  const sections = new Set(['brief', 'evidence', 'financing', 'earnings', 'sources']);
+  const labels = { demand: 'Demand', capacity: 'Capacity', funding: 'Funding', earnings: 'Earnings', models: 'Model economics', policy: 'Policy & constraints', other: 'Source update' };
+  const roleLabels = { primary: 'Primary disclosure', secondary: 'Reported news', discovery: 'Discovery lead' };
+  const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const list = (value) => Array.isArray(value) ? value : [];
+  const text = (value, fallback = 'Not assessed') => {
+    if (value === null || value === undefined || value === '') return fallback;
+    if (Array.isArray(value)) return value.map((v) => text(v, '')).filter(Boolean).join(' · ') || fallback;
+    if (typeof value === 'object') return Object.entries(value).map(([k, v]) => `${k}: ${text(v, '')}`).join('; ');
+    return String(value);
+  };
+  const safeUrl = (value) => {
+    try { const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password ? url.href : null; } catch (_) { return null; }
+  };
+  const link = (url, label, cls = '') => {
+    const target = safeUrl(url);
+    return target ? `<a href="${esc(target)}" target="_blank" rel="noopener noreferrer"${cls ? ` class="${esc(cls)}"` : ''}>${label}</a>` : `<span>${label}</span>`;
+  };
+  const dateValue = (value) => { if (!value) return null; const date = new Date(value); return Number.isNaN(date.getTime()) ? null : date; };
+  const dateLabel = (value, withTime = false) => {
+    const date = dateValue(value);
+    if (!date) return 'Date unavailable';
+    return new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short', year: 'numeric', ...(withTime ? { hour: '2-digit', minute: '2-digit', hour12: false } : {}), timeZone: 'UTC' }).format(date) + (withTime ? ' UTC' : '');
+  };
+  const timestamp = (value) => dateValue(value)?.getTime() || 0;
+  const plural = (n, singular, multiple = `${singular}s`) => `${n} ${Number(n) === 1 ? singular : multiple}`;
+  const empty = (title, explanation, extra = '') => `<div class="empty"><p class="eyebrow">Nothing inferred from missing data</p><h2>${esc(title)}</h2><p>${esc(explanation)}</p>${extra}</div>`;
+  const notify = (message, type = '') => { const el = $('notification'); el.textContent = message; el.className = `notification ${type}`; el.hidden = false; };
+  async function api(path, options = {}) {
+    const response = await fetch(path, { cache: 'no-store', ...options });
+    let body;
+    try { body = await response.json(); } catch (_) { throw new Error(`The local server returned an unreadable response (${response.status}).`); }
+    if (!response.ok) throw new Error(body.error || body.message || `Request failed (${response.status}).`);
+    return body;
+  }
+  function selectPage() {
+    const hash = location.hash.slice(1);
+    state.page = sections.has(hash) ? hash : 'brief';
+    document.querySelectorAll('[data-panel]').forEach((panel) => { panel.hidden = panel.dataset.panel !== state.page; });
+    document.querySelectorAll('[data-nav]').forEach((item) => {
+      const active = item.dataset.nav === state.page;
+      item.classList.toggle('active', active);
+      if (active) item.setAttribute('aria-current', 'page'); else item.removeAttribute('aria-current');
+    });
+    document.title = `${{ brief: 'Daily brief', evidence: 'Evidence feed', financing: 'Financing map', earnings: 'Earnings', sources: 'Sources & leads' }[state.page]} — AI Stock Pulse`;
+  }
+  function lastRefresh() {
+    const refresh = list(state.data?.refreshes)[0];
+    return refresh || {};
+  }
+  function isNew(article) {
+    const latest = lastRefresh();
+    return Boolean(latest.started_at && timestamp(article.first_seen_at) >= timestamp(latest.started_at));
+  }
+  function roleOf(item) {
+    if (roleLabels[item.source_role || item.role]) return item.source_role || item.role;
+    if (item.verification_status === 'discovery_lead') return 'discovery';
+    if (['company_ir','sec_filing'].includes(item.kind)) return 'primary';
+    return 'secondary';
+  }
+  function stories() { return Array.isArray(state.data?.stories) ? state.data.stories : list(state.data?.articles); }
+  function readingState(article) { return ['reviewed','dismissed'].includes(article.review_status) ? article.review_status : 'unreviewed'; }
+  function groupedArticleIds(article) {
+    const ids = [...new Set([article.id, ...list(article.article_ids), ...list(article.related_sources).map(source => source.article_id)].filter(id => id !== null && id !== undefined))];
+    if (!ids.length || ids.some(id => typeof id !== 'string' || !id.trim())) throw new Error('This reading group has incomplete source identifiers. Reload before changing its state.');
+    if (ids.length > 100) throw new Error('This group exceeds the 100-source action limit. Its reading state has not changed.');
+    return ids;
+  }
+  function renderArticle(article, rank) {
+    const lens = labels[article.lens] ? article.lens : 'other';
+    const role = roleOf(article);
+    const reviewed = readingState(article);
+    const published = dateValue(article.published_at);
+    const future = article.date_precision === 'future_unverified' || (published && published.getTime() > Date.now());
+    const dateKind = article.date_kind || (article.kind === 'sec_filing' ? 'filing_date' : role === 'discovery' ? 'search_feed_date' : 'feed_date');
+    const dateName = {filing_date:'Filed',search_feed_date:'Search feed date',feed_date:'Feed date',publication_date:'Published'}[dateKind] || 'Source date';
+    const publication = future ? `Unverified source date ${dateLabel(article.published_at)}` : published ? `${dateName} ${dateLabel(article.published_at)}` : 'Source date unknown';
+    const revised = lastRefresh().started_at && article.revised_at && timestamp(article.revised_at) >= timestamp(lastRefresh().started_at);
+    const details = [
+      ['Potential beneficiaries', article.beneficiaries], ['Exposures / possible losers', article.risks], ['Counterevidence to seek', article.counterevidence],
+      ['Would strengthen the implication', article.confirms], ['Would weaken the implication', article.refutes], ['Uncertainty', article.uncertainty],
+    ];
+    const related = list(article.related_sources);
+    const relationCount = Number.isFinite(Number(article.related_count)) ? Number(article.related_count) : related.length;
+    return `<article class="article ${reviewed === 'dismissed' ? 'article-dismissed' : ''}"><div class="article-rank" aria-hidden="true">${String(rank).padStart(2, '0')}</div><div class="article-main">
+      <div class="article-meta"><span class="badge ${lens}">${labels[lens]}</span><span class="badge source-${role}">${roleLabels[role]}</span>${isNew(article) ? '<span class="badge new">Newly discovered</span>' : ''}${revised ? '<span class="badge amber">Revised</span>' : ''}${reviewed !== 'unreviewed' ? `<span class="badge subtle">${reviewed === 'reviewed' ? 'Read' : 'Dismissed'}</span>` : ''}<span class="source-name">${esc(article.publisher_name || article.source_name || article.source_id || 'Source')}</span><span class="meta-separator" aria-hidden="true">/</span><span>${esc(publication)}</span></div>
+      <h3>${link(article.url, `${esc(article.title || 'Untitled source item')} <span class="article-link-icon" aria-hidden="true">↗</span>`)}</h3>
+      ${role === 'discovery' ? '<p class="discovery-caveat">Discovery lead: this search result is a pointer to reporting. Open the publisher and verify the claim and original publication date; the search-feed date can be later. It is not independent corroboration.</p>' : ''}
+      <div class="article-body"><div class="article-block"><p class="eyebrow">${role === 'discovery' ? 'Claim to investigate · search metadata' : 'Observation · source metadata'}</p><p>${esc(text(article.observation || article.summary || article.title, 'No excerpt available. Open the original source.'))}</p></div><div class="article-block inference"><p class="eyebrow">Conditional implication · reading prompt</p><p>${esc(text(article.implication, 'Read the source before drawing a conclusion. This item has not received a specific analyst interpretation.'))}</p></div></div>
+      <div class="reading-actions" aria-label="Reading state for ${esc(article.title || 'source item')}">${reviewed !== 'reviewed' ? `<button class="queue-button" type="button" data-review="reviewed" data-article-id="${esc(article.id)}">Mark read</button>` : ''}${reviewed !== 'dismissed' ? `<button class="queue-button quiet" type="button" data-review="dismissed" data-article-id="${esc(article.id)}">Dismiss</button>` : ''}${reviewed !== 'unreviewed' ? `<button class="queue-button quiet" type="button" data-review="unreviewed" data-article-id="${esc(article.id)}">Reset to unread</button>` : ''}${relationCount ? `<span class="related-count">${plural(relationCount, 'related source appearance')}</span>` : ''}</div>
+      ${relationCount ? '<p class="fine-print reading-scope">Reading actions apply to every source appearance currently grouped here.</p>' : ''}<details class="article-details"><summary>Test the implication & inspect provenance</summary><div class="source-excerpt"><p class="eyebrow">Source excerpt / filing metadata</p><p>${esc(text(article.summary, 'No source excerpt supplied. Open the original.'))}</p></div><div class="analysis-grid">${details.map(([heading, value]) => `<div class="analysis-item"><p class="eyebrow">${esc(heading)}</p><p>${esc(text(value, 'Not assessed for this item.'))}</p></div>`).join('')}<div class="analysis-item wide"><p class="eyebrow">Why this is ranked here</p><p>${esc(text(article.score_reason, 'Priority rules consider signal relevance and source dates.'))}${Number.isFinite(article.score) ? ` · Priority score: ${article.score}` : ''}</p>${article.priority_factors ? `<p class="factor-line">${esc(text(article.priority_factors, ''))}</p>` : ''}</div></div>
+      ${related.length ? `<div class="related-sources"><p class="eyebrow">Related coverage</p>${related.map(source => `<p>${link(source.url || source.original_url, esc(source.title || source.name || source.source_name || source.publisher_name || 'Related source'))}${source.source_role || source.role ? ` <span class="badge subtle">${esc(roleLabels[source.source_role || source.role] || source.source_role || source.role)}</span>` : ''}</p>`).join('')}<p class="fine-print">A similar headline or multiple links may trace to the same announcement. Grouping is a reading aid, not proof of independent corroboration.</p></div>` : ''}
+      <div class="provenance-line"><span>First discovered ${esc(dateLabel(article.first_seen_at, true))}</span><span>Last observed ${esc(dateLabel(article.observed_at, true))}</span>${article.revised_at ? `<span>Last revised ${esc(dateLabel(article.revised_at, true))}</span>` : ''}<span>Date kind: ${esc(dateKind)} · precision: ${esc(article.date_precision || 'unknown')}</span><span>${link(article.url, role === 'discovery' ? 'Open discovery result ↗' : 'Open dated source ↗')}</span></div>
+      ${article.source_quality ? `<p class="fine-print">Source scope: ${esc(text(article.source_quality))}</p>` : ''}${article.content_hash ? `<div class="provenance-line"><span>Content fingerprint ${esc(String(article.content_hash).slice(0, 16))}…</span></div>` : ''}${list(article.provenance).length ? `<div class="provenance-line"><span>Recorded appearances (${list(article.provenance).length}): ${list(article.provenance).map(p => link(p.original_url, esc(p.source_name || p.source_id || 'Source'))).join(' · ')}.</span></div>` : ''}<p class="fine-print">Read / dismissed is your local reading queue, not a verification judgment.</p></details>
+    </div></article>`;
+  }
+  function renderBrief() {
+    const data = state.data;
+    const stats = data.stats || {};
+    const sources = list(data.sources);
+    const articles = list(data.articles);
+    const latest = lastRefresh();
+    const latestTime = latest.finished_at || (typeof stats.last_refresh === 'string' ? stats.last_refresh : stats.last_refresh?.finished_at);
+    $('edition-date').textContent = new Intl.DateTimeFormat('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date());
+    $('edition-asof').textContent = latestTime ? `Last refresh ${dateLabel(latestTime, true)}` : 'No refresh completed';
+    $('stat-new').textContent = stats.new_items ?? latest.new_count ?? 0;
+    $('stat-changed').textContent = `${stats.changed_items ?? latest.changed_count ?? 0} revised`;
+    $('stat-stories').textContent = `${stats.story_count ?? stories().length} reading groups`;
+    $('stat-review').textContent = stats.needs_review ?? stories().filter(a => readingState(a) === 'unreviewed' && a.relevance === 'material').length;
+    $('stat-total').textContent = stats.total_articles ?? stats.articles ?? articles.length;
+    $('stat-sources').textContent = `${stats.source_ok ?? sources.filter((s) => s.status === 'ok').length} / ${stats.source_total ?? sources.length}`;
+    $('nav-count').textContent = stories().filter(a => readingState(a) !== 'dismissed').length;
+    const roleCounts = {primary:0,secondary:0,discovery:0}; sources.forEach(source => { roleCounts[roleOf(source)] += 1; });
+    $('scope-strip').innerHTML = `<div><strong>Selected coverage, not the whole market.</strong><span>${roleCounts.primary} primary sources · ${roleCounts.secondary} reporting feeds · ${roleCounts.discovery} discovery searches. A clear source check is not a complete news check.</span></div><a class="text-link" href="#sources">See coverage & gaps ↗</a>`;
+    const issues = [];
+    if (!latestTime) issues.push('No refresh has completed. Refresh sources to begin; no example articles are mixed into this feed.');
+    else if (Date.now() - timestamp(latestTime) > 48 * 3600000) issues.push('The last refresh is over 48 hours old. Refresh before treating this as a current brief.');
+    const failed = sources.filter((s) => s.status === 'error').length;
+    if (failed) issues.push(`${plural(failed, 'source')} failed on the latest attempt. Stored evidence may be older; inspect Sources & leads.`);
+    const freshestPublication = Math.max(0, ...articles.filter((a) => a.date_precision !== 'future_unverified' && timestamp(a.published_at) <= Date.now()).map((a) => timestamp(a.published_at)));
+    if (articles.length && freshestPublication && Date.now() - freshestPublication > 7 * 86400000) issues.push('The newest loaded source date is over seven days old. A successful fetch does not mean the articles are new.');
+    $('freshness').textContent = issues.join(' ');
+    $('freshness').hidden = !issues.length;
+    $('brief-headline').textContent = data.brief?.headline || (articles.length ? 'The evidence is ready for review.' : 'Your brief starts with primary sources.');
+    const bullets = list(data.brief?.bullets);
+    $('brief-bullets').innerHTML = bullets.length ? bullets.map((item) => `<li>${esc(text(item, ''))}</li>`).join('') : '<li>Refresh official sources to start a dated evidence history.</li><li>Use X links as leads; confirm the underlying claim before assigning an implication.</li>';
+    $('coverage-note').textContent = data.brief?.coverage_note || 'Coverage is limited to configured public sources. No comprehensive X trend stream, market-wide consensus feed or real-time price feed is connected.';
+    const briefItems = Array.isArray(data.brief?.priority_items) ? data.brief.priority_items : stories();
+    const activeStories = briefItems.filter(a => readingState(a) !== 'dismissed');
+    $('brief-feed').innerHTML = activeStories.length ? activeStories.slice(0, 6).map((a, i) => renderArticle(a, i + 1)).join('') : empty(articles.length ? 'No active priority signals in selected coverage.' : 'No evidence has been collected yet.', articles.length ? 'Browse all evidence or revisit dismissed items. This does not establish an absence of important news elsewhere.' : 'Refresh configured sources. Source failures stay visible; missing coverage does not mean nothing happened.');
+    const questions = list(data.brief?.priority_questions);
+    $('priority-questions').hidden = !questions.length;
+    $('priority-questions').innerHTML = questions.length ? `<p class="eyebrow">The questions that can change the view</p><div>${questions.slice(0,4).map((q,i) => `<p><span>${String(i+1).padStart(2,'0')}</span>${esc(typeof q === 'string' ? q : q.question || q.title || text(q))}</p>`).join('')}</div>` : '';
+    renderNotes();
+  }
+  function renderNotes() {
+    const notes = list(state.data.notes);
+    const cards = notes.map((note) => {
+      const sources = list(note.sources);
+      const accessGap = sources.some(source => source.access_status === 'failed');
+      const implication = text(note.implication);
+      const takeaway = implication.match(/^.*?[.!?](?:\s|$)/)?.[0] || implication;
+      const old = timestamp(note.as_of) && Date.now() - timestamp(note.as_of) > 7 * 86400000;
+      return `<article class="article curated-note"><div class="article-rank" aria-hidden="true">↳</div><div>
+        <div class="article-meta"><span class="badge teal">Curated research</span><span>As of ${esc(dateLabel(note.as_of))}</span><span class="badge ${labels[note.lens] ? note.lens : 'subtle'}">${esc(labels[note.lens] || 'Research')}</span>${accessGap ? '<span class="badge amber">Some direct sources unavailable</span>' : ''}${old ? '<span class="badge amber">Review age · over 7 days</span>' : ''}</div>
+        <h3>${esc(note.title)}</h3><p class="curated-takeaway">${esc(takeaway)}</p>
+        <details class="article-details"><summary>Read the evidence, implications & uncertainty</summary>
+          <div class="article-body curated-expanded"><div class="article-block"><p class="eyebrow">Sourced observation</p><p>${esc(text(note.observation))}</p></div><div class="article-block inference"><p class="eyebrow">Interpretation · not a prediction</p><p>${esc(implication)}</p></div></div>
+          <div class="analysis-grid">${[['Counterevidence',note.counterevidence],['Would strengthen',note.confirms],['Would weaken',note.refutes],['Potential beneficiaries',note.beneficiaries],['Exposures / possible losers',note.risks],['Uncertainty',note.uncertainty]].map(([label, value]) => `<div class="analysis-item"><p class="eyebrow">${esc(label)}</p><p>${esc(text(value))}</p></div>`).join('')}</div>
+          <div class="note-sources">${sources.map(source => `<p class="fine-print">${link(source.url, `${esc(source.title || 'Source')} ↗`)} · ${esc(dateLabel(source.date))}${source.access_status || source.status ? ` · Access: ${esc(source.access_status || source.status)}` : ''}</p>`).join('')}</div>
+          ${note.source_access ? `<p class="fine-print">Source access: ${esc(text(note.source_access))}</p>` : ''}
+        </details></div></article>`;
+    }).join('');
+    $('curated-research').innerHTML = notes.length ? `<div class="section-heading"><div><p class="eyebrow">Source-grounded research</p><h2>Claims in context</h2></div><span class="badge teal">Curated · dated sources</span></div><p class="section-description">A quick read, with the full evidence and limitations one click away. These dated research notes are reviewed separately from automatic feed refreshes.</p><div class="article-list">${cards}</div>` : '';
+  }
+  function renderEvidence() {
+    const query = $('search').value.trim().toLowerCase();
+    const lens = $('lens-filter').value;
+    const role = $('role-filter').value;
+    const entity = $('entity-filter').value;
+    const relevance = $('relevance-filter').value;
+    const review = $('review-filter').value;
+    let items = stories().filter(a => {
+      const entities = [...list(a.entities), ...list(a.source_entities)];
+      const status = readingState(a);
+      return (lens === 'all' || (a.lens || 'other') === lens)
+        && (role === 'all' || roleOf(a) === role)
+        && (entity === 'all' || entities.includes(entity))
+        && (relevance === 'all' || a.relevance === relevance)
+        && (review === 'all' || (review === 'active' ? status !== 'dismissed' : status === review))
+        && (!query || [a.title,a.summary,a.source_name,a.publisher_name,...entities,...list(a.tags),...list(a.event_flags)].join(' ').toLowerCase().includes(query));
+    });
+    if ($('sort').value === 'date') items.sort((a,b) => timestamp(b.published_at)-timestamp(a.published_at));
+    else if ($('sort').value === 'discovery') items.sort((a,b) => timestamp(b.first_seen_at)-timestamp(a.first_seen_at));
+    else items.sort((a,b) => (Number(b.score)||0)-(Number(a.score)||0));
+    $('evidence-count').textContent = plural(stories().length,'reading group');
+    $('filter-count').textContent = `${plural(items.length,'matching group')} from ${plural(list(state.data.articles).length,'loaded source item')} of ${state.data.stats?.total_articles ?? list(state.data.articles).length} retained. Filed, feed and search-feed dates are labeled separately; timestamps use UTC.`;
+    $('evidence-feed').innerHTML = items.length ? items.slice(0,state.limit).map((a,i) => renderArticle(a,i+1)).join('') : empty('No evidence matches these filters.', 'Try another company, source type or reading state. No result is not evidence that the topic has no developments.');
+    $('show-more').hidden = items.length <= state.limit;
+  }
+  function populateEntities() {
+    const select = $('entity-filter'); const previous = select.value;
+    const entities = [...new Set([...list(state.data.watchlist?.entities).map(e => typeof e === 'string' ? e : e.name || e.id).filter(Boolean),...list(state.data.articles).flatMap(a => [...list(a.entities),...list(a.source_entities)])])].sort();
+    select.innerHTML = '<option value="all">All companies</option>' + entities.map(entity => `<option value="${esc(entity)}">${esc(entity)}</option>`).join('');
+    select.value = entities.includes(previous) ? previous : 'all';
+  }
+  function amount(value, currency) {
+    if (value === null || value === undefined || value === '') return 'Amount not stated';
+    return `${currency ? `${currency} ` : ''}${typeof value === 'number' ? new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(value) : text(value)}`;
+  }
+  function renderLedger() {
+    const records = list(state.data.ledger);
+    $('ledger-count').textContent = plural(records.length, 'sourced record');
+    $('ledger-content').innerHTML = records.length ? `<div class="table-wrap" tabindex="0" role="region" aria-label="Financing evidence ledger; scroll horizontally if needed"><table><thead><tr><th>Relationship</th><th>Instrument / state</th><th>Amount / exposure</th><th>Timing & overlap</th><th>Provenance</th></tr></thead><tbody>${records.map((r) => `<tr><td><span class="entity-path">${esc(r.from_entity)}</span><span class="path-arrow" aria-hidden="true">↓</span><span class="entity-path">${esc(r.to_entity)}</span></td><td>${esc(r.instrument)}<small>${esc(r.status || 'Status unknown')}</small></td><td>${esc(amount(r.amount,r.currency))}<small>${esc(r.note || 'No additional terms recorded.')}</small></td><td>As of ${esc(dateLabel(r.as_of))}<small>Overlap group: ${esc(r.overlap_group || 'Not assessed')}</small></td><td>${link(r.source_url, 'Source ↗')}<small>${esc(dateLabel(r.source_date))}</small></td></tr>`).join('')}</tbody></table></div><p class="table-note">Amounts are not totaled. Rows may describe different stages of the same economic arrangement; overlap groups flag possible duplication. An announced commitment is not recognized revenue.</p>` : empty('No financing relationships validated yet.', 'The ledger accepts sourced, dated relationships. Feed headlines do not automatically become confirmed investments, contracts, debt or revenue.', '<p>Review evidence and import a curation file with <code>python3 -m pulse import-curation research.json</code>. See the local README for the schema.</p>');
+  }
+  const metricValue = (value, unit) => value === null || value === undefined || value === '' ? '<span class="unavailable">Not sourced</span>' : `${esc(text(value))}${unit ? `<small>${esc(unit)}</small>` : ''}`;
+  function renderEarnings() {
+    const records = list(state.data.earnings);
+    $('earnings-content').innerHTML = records.length ? `<div class="table-wrap" tabindex="0" role="region" aria-label="Earnings comparisons; scroll horizontally if needed"><table><thead><tr><th>Company / period</th><th>Metric</th><th>Reported</th><th>Guidance</th><th>Consensus</th><th>Evidence</th></tr></thead><tbody>${records.map((r) => `<tr><td><strong>${esc(r.company)}</strong><small>${esc(r.period)}</small></td><td>${esc(r.metric)}<small>${esc(r.note || '')}</small></td><td>${metricValue(r.reported,r.unit)}<small>Period: ${esc(r.reported_period || r.period || 'Not specified')}</small></td><td>${metricValue(r.guidance,r.unit)}<small>Guidance period: ${esc(r.guidance_period || 'Not specified')}</small></td><td>${metricValue(r.consensus,r.unit)}<small>Consensus period: ${esc(r.consensus_period || 'Not specified')}</small><small>Consensus as of: ${esc(r.consensus_as_of ? dateLabel(r.consensus_as_of, true) : 'Not sourced')}</small>${r.consensus_source_url ? `<small>${link(r.consensus_source_url, 'Consensus source ↗')}</small>` : ''}</td><td>${link(r.source_url, 'Company source ↗')}<small>${esc(dateLabel(r.source_date))}</small></td></tr>`).join('')}</tbody></table></div><p class="table-note">No beat / miss is calculated automatically. Verify fiscal period, units, GAAP versus adjusted basis, and consensus timestamp before comparing.</p>` : empty('No earnings comparisons verified yet.', 'Earnings announcements can appear in the feed. Numeric comparisons are added only after the reported period, metric, accounting basis and source are checked. Unavailable consensus remains blank.', '<p>Add reviewed comparisons using <code>python3 -m pulse import-curation research.json</code>. Separate actuals and management guidance; attach an independent source to consensus.</p>');
+  }
+  function renderCoverage() {
+    const coverage = state.data.coverage || {};
+    const sourceMap = new Map(list(state.data.sources).map(s => [s.id,s]));
+    $('coverage-explanation').textContent = coverage.note || 'These are the questions mapped to selected sources. Coverage is not exhaustive; source health and the quality of the underlying evidence still matter.';
+    $('coverage-matrix').innerHTML = list(coverage.domains).length ? list(coverage.domains).map(domain => {
+      const mapped = list(domain.connected_sources).map(s => typeof s === 'string' ? sourceMap.get(s) || {id:s,name:s} : s);
+      const status = domain.status === 'covered' ? 'Sources mapped' : domain.status === 'discovery_only' ? 'Discovery only' : 'Coverage gap';
+      return `<article class="coverage-cell"><div class="coverage-cell-heading"><h3>${esc(domain.name || domain.id)}</h3><span class="badge ${domain.status === 'covered' ? 'teal' : 'amber'}">${status}</span></div><p>${esc(domain.question || '')}</p><p class="fine-print">${esc(domain.note || '')}</p><div class="coverage-source-links">${mapped.length ? mapped.map(source => source.url ? link(source.url, esc(source.name || source.id)) : `<span>${esc(source.name || source.id)}</span>`).join(' · ') : 'No configured source mapped'}</div></article>`;
+    }).join('') : empty('Coverage mapping is not available.', 'The source list below shows what is configured, not proof of complete topic coverage.');
+    const gaps = list(coverage.gaps);
+    $('coverage-gaps').innerHTML = gaps.length ? `<p class="eyebrow">Known gaps</p><ul>${gaps.map(gap => `<li>${esc(typeof gap === 'string' ? gap : gap.note || gap.message || gap.name || text(gap))}</li>`).join('')}</ul>` : '';
+    $('coverage-gaps').hidden = !gaps.length;
+  }
+  function renderAccounts() {
+    const access = state.data.x_access || {};
+    const blocked = access.status !== 'connected';
+    $('x-access').innerHTML = `<span class="badge ${blocked ? 'amber' : 'teal'}">${blocked ? 'X session not verified' : 'X session available'}</span><div><strong>${access.automatic ? 'X collection status' : 'X reading is separate from automatic refresh'}</strong><p>${esc(access.detail || 'Manual post capture is available; no automated timeline or trend coverage is configured.')}</p><small>${access.checked_at ? `Access check ${esc(dateLabel(access.checked_at,true))}` : 'Existing browser session has not been checked.'}</small></div>`;
+    const accounts = list(state.data.accounts);
+    $('account-count').textContent = plural(accounts.length,'profile');
+    $('account-list').innerHTML = accounts.length ? accounts.map(account => `<article class="account-card"><div class="account-heading"><h3>${link(account.url,esc(account.name || account.handle || 'Account'))}</h3><span class="account-handle">${esc(account.handle ? '@'+String(account.handle).replace(/^@/,'') : '')}</span></div><p class="account-role">${esc(text(account.role,''))}</p><div class="account-topics">${list(account.topics).map(topic => `<span class="badge subtle">${esc(topic)}</span>`).join('')}</div><p>${esc(text(account.why,''))}</p><p class="account-caveat"><strong>Read with context:</strong> ${esc(text(account.bias,'No source is a substitute for primary evidence.'))}</p>${account.example_url ? `<p class="account-example">${link(account.example_url,'Example post ↗')}${account.example_note ? ` · ${esc(account.example_note)}` : ''}</p>` : ''}<div class="account-footer">${account.verification_url ? link(account.verification_url,'Identity / expertise evidence ↗') : '<span>Identity source unavailable</span>'}<span>Checked ${esc(dateLabel(account.verified_at))}</span></div><p class="fine-print">Public identity checked; session access and every post are not verified.</p></article>`).join('') : empty('No reading-list profiles verified yet.', 'Profiles will appear here once their identity and area of expertise have source references. No accounts are followed automatically.');
+  }
+  function renderSources() {
+    renderCoverage(); renderAccounts();
+    const sources = list(state.data.sources);
+    const ok = sources.filter(s => s.status === 'ok').length;
+    $('source-status-summary').textContent = `${ok} / ${sources.length} last fetches successful`;
+    $('source-list').innerHTML = sources.length ? sources.map(source => {
+      const successful = source.status === 'ok';
+      const never = !source.last_attempt_at;
+      const stale = source.last_success_at && Date.now()-timestamp(source.last_success_at)>48*3600000;
+      const role = roleOf(source);
+      return `<article class="source-row"><div class="source-heading-wrap"><div class="source-heading">${link(source.url,esc(source.name || source.id))}<span class="badge ${successful ? stale ? 'amber' : 'teal' : never ? 'subtle' : 'error'}">${successful ? stale ? 'Fetch old' : 'Fetched' : never ? 'Not fetched' : 'Fetch failed'}</span><span class="badge source-${role}">${roleLabels[role]}</span></div><p class="source-detail">${esc(source.kind === 'sec_filing' ? 'SEC filing metadata' : text(source.format || source.kind,'Public source'))} · ${plural(source.item_count ?? 0,'item in last successful fetch')}</p>${source.quality_note || source.coverage_note ? `<p class="source-quality">${esc(text(source.quality_note || source.coverage_note,''))}</p>` : ''}${source.cadence_hint ? `<p class="source-detail">${esc(text(source.cadence_hint,''))}</p>` : ''}${list(source.topics).length ? `<p class="source-detail">Topics: ${esc(list(source.topics).join(' · '))}</p>` : ''}</div><div class="source-time">Last attempt<strong>${esc(dateLabel(source.last_attempt_at,true))}</strong></div><div class="source-time">Last success<strong>${esc(dateLabel(source.last_success_at,true))}</strong></div>${source.last_error && !successful ? `<div class="source-error">${esc(source.last_error)}. Previously stored evidence is retained.</div>` : ''}${source.rejected_count ? `<div class="source-error">${esc(source.rejected_count)} unusable items were rejected on the last check; this is partial coverage.</div>` : ''}</article>`;
+    }).join('') : empty('No sources configured.', 'Configured sources and their actual status will appear here.');
+    const leads = list(state.data.leads);
+    $('lead-count').textContent = plural(leads.length,'lead');
+    $('lead-list').innerHTML = leads.length ? leads.map(lead => `<article class="lead-item"><span class="badge amber">Unverified lead</span><div>${link(lead.url,`${esc(lead.url)} ↗`)}${lead.note ? `<p>${esc(lead.note)}</p>` : ''}<p class="fine-print">Saved ${esc(dateLabel(lead.created_at,true))} · Contents not fetched or verified</p></div></article>`).join('') : empty('No X leads saved.', 'Paste a public post link above to investigate. A saved link never counts as confirmed evidence.');
+  }
+  function render() { populateEntities(); renderBrief(); renderEvidence(); renderLedger(); renderEarnings(); renderSources(); selectPage(); }
+  async function load(initial = false) {
+    if (initial) { $('loading').hidden = false; $('load-error').hidden = true; }
+    try {
+      state.data = await api('/api/dashboard');
+      render();
+      $('dashboard').hidden = false; $('loading').hidden = true; $('load-error').hidden = true;
+    } catch (error) {
+      $('loading').hidden = true;
+      if (state.data) notify(`${error.message} The visible data is the last loaded snapshot.`, 'error');
+      else { $('load-error-text').textContent = `${error.message} Check that the local launcher is running.`; $('load-error').hidden = false; }
+      throw error;
+    }
+  }
+  $('refresh').addEventListener('click', async () => {
+    if (state.refreshing) return;
+    state.refreshing = true;
+    const button = $('refresh'); button.disabled = true; button.textContent = 'Refreshing…';
+    notify('Checking public sources. This can take a minute; individual failures will be recorded.');
+    try {
+      const result = await api('/api/refresh', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
+      await load();
+      const summary = result.summary || result;
+      const errors = Number(summary.error_count ?? 0);
+      const added = Number(summary.new_count ?? 0);
+      const duplicates = Number(summary.duplicate_count ?? 0);
+      const changed = Number(summary.changed_count ?? 0);
+      const rejected = Number(summary.rejected_count ?? 0);
+      const skipped = Number(summary.skip_count ?? summary.skipped_count ?? 0);
+      notify(`Refresh ${errors || skipped || rejected ? 'completed with gaps' : 'completed'}: ${plural(added,'new item')}; ${plural(changed,'revised item')}; ${plural(duplicates,'unchanged item')}.${errors ? ` ${plural(errors,'source')} failed.` : ''}${skipped ? ` ${plural(skipped,'source')} skipped.` : ''}${rejected ? ` ${plural(rejected,'unusable item')} rejected.` : ''}${errors || skipped || rejected ? ' Check Sources & leads for details.' : ' This describes configured coverage, not all market news.'}`, errors || skipped || rejected ? '' : 'success');
+    } catch (error) { notify(`Refresh did not complete: ${error.message} Previously stored evidence is preserved.`, 'error'); }
+    finally { state.refreshing = false; button.disabled = false; button.innerHTML = '<span aria-hidden="true">↻</span> Refresh sources'; }
+  });
+  $('lead-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget; const button = form.querySelector('button'); const url = $('lead-url').value.trim();
+    if (!/^https:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/[A-Za-z0-9_]+\/status\/\d+(?:[/?#].*)?$/.test(url)) { $('lead-message').textContent = 'Use a public https://x.com/account/status/123 or twitter.com post URL.'; $('lead-url').focus(); return; }
+    button.disabled = true; $('lead-message').textContent = 'Saving the unverified lead locally…';
+    try {
+      const result = await api('/api/leads', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url, note: $('lead-note').value.trim() }) });
+      await load(); form.reset(); $('lead-message').textContent = result.duplicate || result.created === false ? 'This post is already saved. It remains an unverified lead.' : 'Saved locally as an unverified lead. The post contents were not fetched.';
+    } catch (error) { $('lead-message').textContent = `Could not save this lead: ${error.message}`; }
+    finally { button.disabled = false; }
+  });
+  $('cds-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const spread = Number($('cds-spread').value); const years = Number($('cds-years').value); const recovery = Number($('cds-recovery').value);
+    if (![spread, years, recovery].every(Number.isFinite) || spread < 0 || years <= 0 || recovery < 0 || recovery >= 100) { $('cds-output').textContent = 'Use a nonnegative spread, a positive horizon and recovery below 100%.'; return; }
+    const probability = -Math.expm1(-(spread / 10000) * years / (1 - recovery / 100));
+    const oneYear = -Math.expm1(-(spread / 10000) / (1 - recovery / 100));
+    $('cds-output').innerHTML = `<strong>${(probability * 100).toFixed(1)}% over ${esc(years)} ${years === 1 ? 'year' : 'years'}</strong>Simplified cumulative risk-neutral illustration. ${(oneYear * 100).toFixed(1)}% over one year with the same assumptions. Inputs: ${esc(spread)} bps; ${esc(recovery)}% recovery. No issuer or live market quote is implied.`;
+  });
+  ['search', 'lens-filter', 'sort', 'role-filter', 'entity-filter', 'relevance-filter', 'review-filter'].forEach((id) => $(id).addEventListener(id === 'search' ? 'input' : 'change', () => { state.limit = 40; if (state.data) renderEvidence(); }));
+  $('dashboard').addEventListener('click', async event => {
+    const button = event.target.closest('button[data-review]');
+    if (!button || button.disabled) return;
+    const status = button.dataset.review;
+    const articleId = button.dataset.articleId;
+    if (!articleId || !['unreviewed','reviewed','dismissed'].includes(status)) return;
+    button.disabled = true;
+    try {
+      const article = [...stories(), ...list(state.data?.brief?.priority_items)].find(item => item.id === articleId);
+      if (!article) throw new Error('This item is no longer in the loaded snapshot. Reload before changing its state.');
+      const articleIds = groupedArticleIds(article);
+      const result = await api('/api/review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({article_ids:articleIds,status})});
+      await load();
+      const scope = `${plural(result.count ?? articleIds.length, 'source appearance')} in this group. `;
+      notify(scope + (status === 'dismissed' ? 'Dismissed from the active reading queue. Use the Dismissed filter to restore it.' : status === 'reviewed' ? 'Marked read. This changes your queue, not the verification status of the claim.' : 'Returned to the unread queue.'),'success');
+    } catch(error) { button.disabled = false; notify(`Reading state was not saved: ${error.message}`,'error'); }
+  });
+  $('show-more').addEventListener('click', () => { state.limit += 40; renderEvidence(); });
+  $('retry').addEventListener('click', () => { load(true).catch(() => {}); });
+  window.addEventListener('hashchange', selectPage);
+  selectPage(); load(true).catch(() => {});
+})();

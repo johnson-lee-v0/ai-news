@@ -1,0 +1,46 @@
+# Runtime evidence and personal research
+data/
+research/
+backups/
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3-shm
+*.sqlite3-wal
+*.db
+*.db-shm
+*.db-wal
+# Credentials and local configuration
+.env
+.env.*
+*.env
+.envrc
+.secrets/
+secrets/
+credentials*
+*credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+.netrc
+# Generated files and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.cache/
+*.log
+logs/
+.DS_Store
+coverage/
+.coverage
+.pytest_cache/
+playwright-report/
+test-results/
+docs/validation/
+docs/validation-v2/
+config/x_access.json
