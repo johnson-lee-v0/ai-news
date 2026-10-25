@@ -7,6 +7,9 @@
   <meta name="theme-color" content="#f5f4ee">
   <title>AI Stock Pulse — evidence before narrative</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./finance.css">
+  <script src="./finance.js" defer></script>
+  <script src="./visit-state.js" defer></script>
   <script src="./app.js" defer></script>
 </head>
 <body>
@@ -16,13 +19,9 @@
       <a class="brand" href="#brief" aria-label="AI Stock Pulse home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>AI Stock <strong>Pulse</strong><small>Evidence before narrative.</small></span></a>
       <div class="masthead-actions"><span class="local-label"><span class="status-dot"></span><span id="mode-label">LOCAL / PUBLIC SOURCES</span></span><button id="refresh" class="button primary local-only" type="button"><span aria-hidden="true">↻</span> Refresh sources</button></div>
     </header>
-    <nav class="nav" aria-label="Dashboard sections">
-      <a href="#brief" data-nav="brief" class="active" aria-current="page">Daily brief</a>
-      <a href="#evidence" data-nav="evidence">Evidence feed <span id="nav-count" class="nav-count">—</span></a>
-      <a href="#financing" data-nav="financing">Financing map</a>
-      <a href="#layers" data-nav="layers">Five AI layers</a>
-      <a href="#earnings" data-nav="earnings">Earnings</a>
-      <a href="#sources" data-nav="sources">Sources & leads</a>
+    <nav class="nav primary-nav" aria-label="Main navigation">
+      <a href="#brief" data-nav="brief" class="active" aria-current="page">News</a>
+      <a href="#explore" data-nav="explore">Explore <span aria-hidden="true">↗</span></a>
     </nav>
     <div id="publication-banner" class="publication-banner" hidden></div>
     <div id="notification" class="notification" role="status" aria-live="polite" hidden></div>
@@ -31,52 +30,76 @@
       <div id="load-error" class="empty error-panel" hidden><p class="eyebrow">Connection interrupted</p><h1>The local feed could not be loaded.</h1><p id="load-error-text"></p><button type="button" id="retry" class="button">Try again</button></div>
       <div id="dashboard" hidden>
         <section id="panel-brief" data-panel="brief">
-          <div class="page-heading"><div><p id="desk-kicker" class="eyebrow">The daily research desk</p><h1>Follow the evidence.<br><em>Understand the implications.</em></h1></div><div class="edition"><span id="edition-date">—</span><small id="edition-asof">Not refreshed yet</small></div></div>
-          <div id="freshness" class="freshness" hidden></div>
+          <div class="news-header"><div><p id="desk-kicker" class="eyebrow">The daily research desk</p><h1>AI stock news.</h1></div><div class="edition news-edition"><span id="edition-date">—</span><small id="edition-asof">Not refreshed yet</small></div></div>
+          <div id="freshness" class="freshness news-freshness" hidden></div>
+          <div class="news-tools"><div class="news-search"><label for="news-search" class="sr-only">Search news</label><span aria-hidden="true">⌕</span><input id="news-search" type="search" placeholder="Search news or companies" autocomplete="off"></div><details id="news-filters" class="news-filters"><summary><span>Filters</span><span class="details-mark" aria-hidden="true">+</span></summary><div class="news-filter-controls"><label><span class="filter-label">Signal</span><select id="news-lens"><option value="all">All signals</option><option value="demand">Demand</option><option value="capacity">Capacity</option><option value="funding">Funding</option><option value="earnings">Earnings</option><option value="models">Model economics</option><option value="policy">Policy & constraints</option><option value="other">Other</option></select></label><label><span class="filter-label">Company</span><select id="news-entity"><option value="all">All companies</option></select></label><label><span class="filter-label">AI layer</span><select id="news-layer"><option value="all">All layers</option><option value="energy">Energy</option><option value="chips">Chips</option><option value="infrastructure">Infrastructure</option><option value="models">Models</option><option value="applications">Applications</option></select></label><a class="text-link" href="#evidence">All evidence & filters <span aria-hidden="true">↗</span></a></div></details></div>
+          <div class="news-toolbar"><div class="news-order" role="group" aria-label="News order"><button type="button" data-news-order="latest" class="active" aria-pressed="true">Latest</button><button type="button" data-news-order="important" aria-pressed="false">Important</button></div><p id="visit-summary" class="visit-summary" aria-live="polite"></p></div>
+          <p id="news-count" class="news-count" aria-live="polite"></p>
+          <div id="brief-feed" class="article-list news-feed" aria-label="News updates"></div>
+          <details id="brief-context" class="brief-context"><summary><span>Brief, coverage & method</span><span class="details-mark" aria-hidden="true">+</span></summary><div class="brief-context-body">
           <div id="scope-strip" class="scope-strip" aria-label="Coverage boundary"></div>
           <div class="stats" aria-label="Feed coverage"><div><span class="stat-value" id="stat-new">—</span><span id="stat-new-label" class="stat-label">New in last refresh</span><small id="stat-changed" class="stat-sub">0 revised</small></div><div><span class="stat-value" id="stat-total">—</span><span id="stat-total-label" class="stat-label">Stored evidence items</span><small id="stat-stories" class="stat-sub">Grouped for reading</small></div><div><span class="stat-value" id="stat-sources">—</span><span id="stat-sources-label" class="stat-label">Last fetches successful</span></div><div><span class="stat-value" id="stat-review">—</span><span id="stat-review-label" class="stat-label">Priority groups to review</span><small class="stat-sub local-only">Read ≠ verified</small></div></div>
           <div class="brief-grid"><article class="daily-note"><div class="section-kicker"><span>01 / THE BRIEF</span><span id="brief-method" class="badge subtle">Rules + source metadata</span></div><h2 id="brief-headline">Your next brief starts with a refresh.</h2><ul id="brief-bullets" class="brief-bullets"></ul><p id="coverage-note" class="fine-print"></p></article><aside class="signal-guide"><p class="eyebrow">Three different signals</p><div><span class="signal-num">01</span><p><strong>Demand</strong>Usage, orders, contracted spend.<small>A commitment is not recognized revenue.</small></p></div><div><span class="signal-num">02</span><p><strong>Capacity</strong>Power, sites, chips, delivery dates.<small>A site delay alone does not prove lower demand.</small></p></div><div><span class="signal-num">03</span><p><strong>Funding</strong>Cash, debt, equity, guarantees.<small>Financing can enable growth and concentrate risk.</small></p></div></aside></div>
           <div id="priority-questions" class="priority-questions" hidden></div>
           <div id="curated-research"></div>
-          <div class="section-heading"><div><p class="eyebrow">What deserves a closer look</p><h2>Research priorities</h2></div><a class="text-link" href="#evidence">All evidence <span aria-hidden="true">↗</span></a></div>
+
           <p id="priority-description" class="section-description">Ranked within selected coverage. Newly discovered and revised items are labeled separately; older stories stay dated. Discovery leads need source checks before their claims can support an implication.</p>
-          <div id="brief-feed" class="article-list"></div>
+
           <div class="bottom-note"><span class="note-symbol" aria-hidden="true">↳</span><p><strong>Keep the claim and the evidence separate.</strong> Company statements establish what was announced. Filings establish what was filed. Independent confirmation still matters.</p></div>
+          </div></details>
+        </section>
+        <section id="panel-explore" data-panel="explore" hidden>
+          <div class="page-heading compact explore-heading"><div><p class="eyebrow">Go deeper</p><h1>Explore the connections.</h1><p class="heading-description">Follow the money, trace the AI supply chain, or inspect the sources behind a headline.</p></div></div>
+          <div class="explore-grid">
+            <a class="explore-card explore-card-featured" href="#financing" data-nav="financing"><span class="explore-kicker">Capital & commitments</span><h2>Financing map</h2><p>See who funds whom, who buys compute, and where obligations overlap.</p><span class="explore-action">Open the map <span aria-hidden="true">↗</span></span></a>
+            <a class="explore-card" href="#layers" data-nav="layers"><span class="explore-kicker">The supply chain</span><h2>Five AI layers</h2><p>Energy, chips, infrastructure, models and applications—each with different evidence to watch.</p><span class="explore-action">Explore the layers <span aria-hidden="true">↗</span></span></a>
+            <a class="explore-card" href="#earnings" data-nav="earnings"><span class="explore-kicker">Company performance</span><h2>Earnings</h2><p>Keep reported results, management guidance and sourced expectations separate.</p><span class="explore-action">Compare the evidence <span aria-hidden="true">↗</span></span></a>
+            <a class="explore-card" href="#evidence" data-nav="evidence"><span class="explore-kicker">The full reading desk <span id="nav-count" class="nav-count">—</span></span><h2>All evidence</h2><p>Search the complete loaded collection by company, source, signal or AI layer.</p><span class="explore-action">Browse evidence <span aria-hidden="true">↗</span></span></a>
+            <a class="explore-card" href="#sources" data-nav="sources"><span class="explore-kicker">Know the limits</span><h2>Sources & scope</h2><p>See the dated references, source status and coverage gaps behind this desk.</p><span class="explore-action">Inspect the sources <span aria-hidden="true">↗</span></span></a>
+          </div>
         </section>
         <section id="panel-evidence" data-panel="evidence" hidden>
+          <a class="back-link" href="#explore"><span aria-hidden="true">←</span> Back to Explore</a>
           <div class="page-heading compact"><div><p class="eyebrow">Trace every claim</p><h1>The evidence feed.</h1><p class="heading-description">Filing, feed and discovery dates; provenance; and the questions that change the interpretation.</p></div><div class="edition"><span id="evidence-count">— items</span><small id="evidence-scope">Ranked within connected coverage</small></div></div>
-          <div class="filter-bar"><label class="search-wrap"><span class="sr-only">Search evidence</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search company, topic or headline…" autocomplete="off"></label><label><span class="sr-only">Signal category</span><select id="lens-filter"><option value="all">All signals</option><option value="demand">Demand</option><option value="capacity">Capacity</option><option value="funding">Funding</option><option value="earnings">Earnings</option><option value="models">Model economics</option><option value="policy">Policy & constraints</option><option value="other">Other / filing</option></select></label><label><span class="sr-only">Order evidence</span><select id="sort"><option value="rank">Highest priority</option><option value="date">Newest source date</option><option value="discovery">Recently discovered</option></select></label></div>
+          <div class="filter-bar evidence-search-bar"><label class="search-wrap"><span class="sr-only">Search evidence</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search company, topic or headline…" autocomplete="off"></label></div>
+          <details id="evidence-filters" class="evidence-filters"><summary><span>Filters</span><span class="details-mark" aria-hidden="true">+</span></summary><div class="filter-details-body"><div class="filter-bar filter-primary"><label><span class="sr-only">Signal category</span><select id="lens-filter"><option value="all">All signals</option><option value="demand">Demand</option><option value="capacity">Capacity</option><option value="funding">Funding</option><option value="earnings">Earnings</option><option value="models">Model economics</option><option value="policy">Policy & constraints</option><option value="other">Other / filing</option></select></label><label><span class="sr-only">Order evidence</span><select id="sort"><option value="rank">Highest priority</option><option value="date">Newest source date</option><option value="discovery">Recently discovered</option></select></label></div>
           <div class="filter-bar filter-secondary" aria-label="Evidence filters">
-            <label><span class="filter-label">Evidence type</span><select id="role-filter"><option value="all">All source types</option><option value="primary">Primary disclosure</option><option value="secondary">Reported news</option><option value="discovery">Discovery lead</option></select></label>
+            <label><span class="filter-label">Evidence type</span><select id="role-filter"><option value="all">All source types</option><option value="primary">Primary source</option><option value="secondary">Reported news</option><option value="discovery">Discovery lead</option></select></label>
             <label><span class="filter-label">Company</span><select id="entity-filter"><option value="all">All companies</option></select></label>
             <label><span class="filter-label">AI layer</span><select id="layer-filter"><option value="all">All layers</option><option value="energy">Energy</option><option value="chips">Chips</option><option value="infrastructure">Infrastructure</option><option value="models">Models</option><option value="applications">Applications</option></select></label>
             <label><span class="filter-label">Priority</span><select id="relevance-filter"><option value="all">All priorities</option><option value="material">Material signals</option><option value="watch">Watch</option><option value="background">Background</option></select></label>
             <label class="local-only"><span class="filter-label">Reading queue</span><select id="review-filter"><option value="active">Active · hide dismissed</option><option value="unreviewed">Unread</option><option value="reviewed">Read</option><option value="dismissed">Dismissed</option><option value="all">All reading states</option></select></label>
           </div>
-          <div class="evidence-legend"><span class="badge source-primary">Primary disclosure</span><span class="badge source-secondary">Reported news</span><span class="badge source-discovery">Discovery lead · verify source</span><span class="local-only">Read is a local queue state, not fact verification.</span></div>
+          <div class="evidence-legend"><span class="badge source-primary">Primary source</span><span class="badge source-secondary">Reported news</span><span class="badge source-discovery">Discovery lead · verify source</span><span class="local-only">Read is a local queue state, not fact verification.</span></div>
+          </div></details>
           <p id="filter-count" class="fine-print" aria-live="polite"></p><div id="evidence-feed" class="article-list"></div><button id="show-more" type="button" class="button more-button" hidden>Show more evidence</button>
         </section>
         <section id="panel-layers" data-panel="layers" hidden>
+          <a class="back-link" href="#explore"><span aria-hidden="true">←</span> Back to Explore</a>
           <div class="page-heading compact"><div><p class="eyebrow">From power to useful software</p><h1>Five layers.<br><em>Different signals.</em></h1><p class="heading-description">Energy powers chips. Chips support infrastructure, models and applications. Follow the evidence at each layer without treating every announcement as demand.</p></div></div>
           <div id="layer-method" class="layer-method"></div>
           <div id="layer-grid" class="layer-grid"></div>
           <p id="layer-scope" class="table-note"></p>
         </section>
         <section id="panel-financing" data-panel="financing" hidden>
-          <div class="page-heading compact"><div><p class="eyebrow">Follow each relationship</p><h1>Who provides what?</h1><p class="heading-description">Read the arrow, then check the stage. A proposal, a transfer and recorded revenue mean different things.</p></div></div>
+          <a class="back-link" href="#explore"><span aria-hidden="true">←</span> Back to Explore</a>
+          <div class="finance-page-heading"><h1>Financing map.</h1><span id="ledger-count" class="badge subtle">0 sourced relationships</span></div><div id="ledger-content"></div>
+          <details class="finance-definitions"><summary><span>What each relationship means</span><span class="details-mark" aria-hidden="true">+</span></summary><div class="finance-definitions-body">
           <div class="section-heading finance-legend-heading"><h2>Read the arrows</h2><span class="badge subtle">Definitions, not extra records</span></div>
           <dl class="finance-legend"><div><dt>Equity</dt><dd>Capital for ownership. A proposed raise is not cash received.</dd></div><div><dt>Debt</dt><dd>Borrowing that must be repaid. A facility can remain undrawn.</dd></div><div><dt>Customer commitment</dt><dd>A promise or agreement to buy. Contract value is not revenue.</dd></div><div><dt>Revenue</dt><dd>Earned and recognized in a sourced reporting period. Cash collection can differ.</dd></div></dl>
-          <div class="section-heading"><h2>Sourced relationships</h2><span id="ledger-count" class="badge subtle">0 sourced relationships</span></div><div id="ledger-content"></div>
+          </div></details>
           <details id="cds-guide" class="cds-guide"><summary>Optional: understand a default-probability claim <span aria-hidden="true">+</span></summary>
           <div class="calculator"><div><p class="eyebrow">Interpret a default-probability claim</p><h2>Start with the horizon.</h2><p>A quoted cumulative five-year probability is not a one-year probability. Market pricing can include risk premia and liquidity effects.</p><p class="fine-print">Optional illustration: a flat spread and constant recovery imply hazard ≈ spread ÷ (1 − recovery), then cumulative probability = 1 − exp(−hazard × years). This simplified risk-neutral calculation is not an observed issuer forecast, a full CDS model, or a real-world probability.</p></div><form id="cds-form"><div class="calculator-fields"><label>Spread <span>basis points / year</span><input name="spread" id="cds-spread" type="number" min="0" max="100000" step="any" placeholder="Enter observed spread" required></label><label>Horizon <span>years</span><input name="years" id="cds-years" type="number" min="0.01" max="100" step="any" placeholder="Years" required></label><label>Recovery <span>percent</span><input name="recovery" id="cds-recovery" type="number" min="0" max="99.9" step="any" placeholder="Assumption" required></label></div><button class="button" type="submit">Calculate illustration</button><output id="cds-output" aria-live="polite">Enter all three assumptions to compare the horizon.</output></form></div></details>
         </section>
         <section id="panel-earnings" data-panel="earnings" hidden>
+          <a class="back-link" href="#explore"><span aria-hidden="true">←</span> Back to Explore</a>
           <div class="page-heading compact"><div><p class="eyebrow">The earnings checkpoint</p><h1>Actuals, expectations,<br><em>and what changed.</em></h1><p class="heading-description">Compare the same metric, period and accounting basis. An announced earnings date is not a reported result.</p></div></div>
           <div class="earnings-key"><p><span class="badge teal">Reported</span> What the company released.</p><p><span class="badge amber">Guidance</span> Management’s future outlook.</p><p><span class="badge subtle">Consensus</span> External expectations, only when sourced.</p></div>
           <div id="earnings-content"></div>
           <div class="bottom-note"><span class="note-symbol" aria-hidden="true">↳</span><p><strong>A beat alone is not the implication.</strong> Ask whether demand converted to revenue, cash generation kept pace, capacity arrived on time, and the outlook changed relative to sourced expectations.</p></div>
         </section>
         <section id="panel-sources" data-panel="sources" hidden>
+          <a class="back-link" href="#explore"><span aria-hidden="true">←</span> Back to Explore</a>
           <div class="page-heading compact"><div><p class="eyebrow">Know the limits of the lens</p><h1 id="sources-title">Sources & research leads.</h1><p id="sources-description" class="heading-description">A refresh records what was reachable. Failed sources retain their previous evidence and remain visibly out of date.</p></div></div>
           <div id="refresh-explainer" class="refresh-explainer"><div><p class="eyebrow">How refresh works, simply</p><h2>A wider net. A visible boundary.</h2><p>Refresh checks a selected set of publisher feeds and topic searches. It removes repeated items, preserves the supplied filing or feed dates, and sorts signals for review. A successful check proves that source responded; important stories may still be missing.</p></div><ol><li><strong>Discover</strong><span>Company disclosures, reporting and search leads.</span></li><li><strong>Compare</strong><span>New items, revisions and repeated coverage stay distinct.</span></li><li><strong>Investigate</strong><span>Open the source. Test the implication. Keep uncertainty visible.</span></li></ol></div>
           <div class="section-heading"><h2>What the desk watches</h2><span class="badge subtle">Mapping ≠ completeness</span></div>

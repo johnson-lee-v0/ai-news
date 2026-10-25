@@ -29,3 +29,36 @@ Reviewed **2026-10-25 15:28:13 UTC**. All linked material is NVIDIA's own public
 | [Supply-chain capacity plans](https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout) | Published October 21, 2026; KYEC U.S. high-volume production target April 2027. | NVIDIA describes a $1.1bn capacity-reservation advance supporting KYEC testing facilities/equipment. The public release does not establish payment timing or recognized KYEC revenue. The ledger records an announced advance for future capacity, not debt, equity, delivered capacity or a second revenue total. |
 
 The five-layer labels organize the post across energy, chips, infrastructure, models and applications. They are analytical categories, not evidence of five independently verified commercial outcomes. No automated monitoring or publication is implied by this addition.
+
+## News and network revision prepared October 25, 2026
+
+This revision was reviewed on October 25, 2026. The two X posts were inspected by the coordinating researcher through a public browser; this local text reader received HTTP 403. Their contents support attribution of opinions and executive statements, not independent verification of the underlying claims. No live X access or engagement signal is implied. The new SpaceX $40 billion claim is excluded from confirmed debt edges.
+
+The network includes selected historical, funded, contracted and conditional relationships. It is not exhaustive, and mixed or overlapping amounts are never summed. Source dates and record as-of dates remain distinct from review times.
+
+| Source | Source date | Evidence boundary |
+|---|---|---|
+| [Microsoft FY2025 financial report](https://www.microsoft.com/investor/reports/ar25/index.html) | 2025-07-30 | Historical funding commitments; fiscal year ended June 30, 2025. Not a current cash balance. |
+| [OpenAI: Microsoft partnership recapitalization](https://openai.com/index/next-chapter-of-microsoft-openai-partnership/) | 2025-10-28 | Original contract and historical ownership terms. Stake valuation is not money invested. |
+| [Microsoft: amended OpenAI partnership](https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/) | 2026-04-27 | Later amendment permits distribution across other cloud providers. |
+| [OpenAI: February funding announcement](https://openai.com/index/scaling-ai-for-everyone/) | 2026-02-27 | Announced investor commitments; does not establish each investor payment date. |
+| [OpenAI: Amazon strategic partnership](https://openai.com/index/amazon-partnership/) | 2026-02-27 | Initial and conditional investment tranches are separate from compute commitments. |
+| [CoreWeave 8-K: NVIDIA cash equity placement](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000044/crwv-20260123.htm) | 2026-01-26 | Filing dated January 26 reports the January 23 cash closing. |
+| [CoreWeave 8-K: NVIDIA capacity arrangement](https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm) | 2025-09-15 | Order signed September 9; NVIDIA residual-capacity purchases depend on delivery and availability. |
+| [CoreWeave: cumulative OpenAI agreements](https://www.coreweave.com/news/coreweave-expands-agreement-with-openai-by-up-to-6-5b) | 2025-09-25 | Cumulative contract ceiling, not recognized revenue or cash collection. |
+| [Amazon: expanded Anthropic collaboration](https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai) | 2026-04-20 | Distinguishes prior investment, announced current investment, milestones and future AWS spending. |
+| [Anthropic: joint Google and Broadcom TPU agreement](https://www.anthropic.com/news/google-broadcom-partnership-compute) | 2026-04-06 | Joint capacity agreement; no separate counterparty dollar or capacity allocation is disclosed. |
+| [OpenAI: Oracle Stargate capacity agreement](https://openai.com/index/stargate-advances-with-partnership-with-oracle/) | 2025-07-22 | Additional capacity under development; no dollar procurement value in this source. |
+| [xAI: Series E funding](https://x.ai/news/series-e) | 2026-01-06 | Round total is not the amount invested by NVIDIA. |
+| [xAI: acquisition by SpaceX](https://x.ai/news/xai-joins-spacex) | 2026-02-02 | Confirms corporate ownership change; does not disclose consideration in this announcement. |
+| [CoreWeave: delayed-draw facility closing](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-Landmark-8-5-Billion-Financing-Facility-Achieving-First-Investment-Grade-Rated-GPU-backed-Financing/default.aspx) | 2026-03-31 | Facility capacity and actual draws are different; the release does not quantify draws. |
+| [NVIDIA 10-Q: SB Energy lease guarantees](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm) | 2026-08-26 | July-quarter report discloses August guarantees as subsequent events. Cap is contingent exposure, not paid cash. |
+| [Nebius: Citi senior secured facility](https://nebius.com/newsroom/nebius-secures-3-5-billion-financing-facility-with-citi) | 2026-10-22 | Signed borrowing facility, not evidence of the amount already drawn. |
+| [Crusoe: Neuberger equipment financing](https://www.crusoe.ai/resources/newsroom/neuberger-and-crusoe-announce-700-million-facility) | 2026-10-22 | Equipment-secured power financing; actual draw and commissioning are not disclosed. |
+| [SoftBank: final OpenAI investment tranche](https://group.softbank/news/press/20261001) | 2026-10-01 | Japanese issuer release confirms the third tranche and completion of the announced 2026 investment. |
+| [Reuters via Investing.com: Google-Anthropic commitment](https://www.investing.com/news/stock-market-news/google-plans-to-invest-up-to-40-billion-in-anthropic-bloomberg-news-reports-4636417) | 2026-04-24 | Reported terms attributed to Anthropic; independent closing/payment documentation was not reviewed. |
+| [Anthropic: Microsoft and NVIDIA partnerships](https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships) | 2025-11-18 | Investment ceilings and compute purchases; not a disbursement statement. |
+| [Anthropic: Series G funding](https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation) | 2026-02-12 | Confirms portions of earlier Microsoft/NVIDIA investments are included, without per-investor amounts. |
+| [TeraWulf: Fluidstack expansion and Google backstop](https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner) | 2025-08-18 | Cumulative backstop, warrants and contracted capacity are distinct exposures. |
+| [Chamath Palihapitiya · original commentary](https://x.com/chamath/status/2114389987563381004) | 2026-10-25T16:13:00Z | Primary evidence of the author’s opinion, not independent confirmation of financing conditions. Energized-land investor perspective. |
+| [Elon Musk · executive statement](https://x.com/elonmusk/status/2114434646914068862) | 2026-10-25T19:11:00Z | Primary evidence of an executive’s statement. The claimed new $40 billion financing has no independent closing document in this review. |

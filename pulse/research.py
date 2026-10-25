@@ -99,9 +99,20 @@ def validate(section, raw):
         date(record["as_of"], "as_of")
         if section == "ledger":
             required(record, ("from_entity", "to_entity", "instrument", "status", "note"))
-            allowed = ("equity", "customer_contract", "cloud_credits", "debt", "guarantee", "capacity", "investment", "other")
+            allowed = ("equity", "customer_contract", "cloud_credits", "debt", "guarantee", "capacity", "investment", "other", "compute_purchase", "reservation", "capacity_backstop", "revenue")
             if record["instrument"] not in allowed:
                 raise ValueError("Unknown financing instrument; use " + ", ".join(allowed))
+            if record.get("flow_type") not in (None, "money", "service", "capacity", "guarantee", "credit", "ownership", "unspecified"):
+                raise ValueError("Unknown relationship flow type")
+            if record.get("changed_at"):
+                date(record["changed_at"], "material change date")
+            if "sources" in record:
+                if not isinstance(record["sources"], list) or len(record["sources"]) > 8:
+                    raise ValueError("Use up to eight supplemental relationship sources")
+                for source in record["sources"]:
+                    required(source, ("url", "title", "date"))
+                    source["url"] = url(source["url"])
+                    date(source["date"], "supplemental source date")
             # No aggregation: face values, contingencies and overlapping commitments are not additive.
             record.setdefault("overlap_group", "unassessed")
         elif section == "earnings":

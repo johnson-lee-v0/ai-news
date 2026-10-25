@@ -50,11 +50,12 @@ async function main() {
     const load = async (section='brief') => {
       await page.goto(`${url}/?test=${++navigation}#${section}`);
       await page.locator('#dashboard').waitFor({state:'visible'});
+      if(section==='evidence')await page.locator('#evidence-filters > summary').click();
     };
     const data = async () => (await context.request.get(`${url}/api/dashboard`)).json();
     await load();
-    assert.match(await page.locator('#brief-feed').innerText(), /No evidence has been collected/);
-    assert.equal(await page.locator('#stat-total').innerText(), '0');
+    assert.match(await page.locator('#brief-feed').innerText(), /No news matches|No evidence has been collected/);
+    assert.equal(await page.locator('#stat-total').textContent(), '0');
     await load('sources');
     assert.equal(await page.locator('.source-row').count(), 3);
     assert.match(await page.locator('#source-list').innerText(), /Not fetched/);
@@ -74,6 +75,7 @@ async function main() {
       assert.equal(await page.locator(`#evidence-feed .source-${role}`).count(), 1);
     }
     assert.match(await page.locator('#evidence-feed').innerText(), /Search feed date/);
+    await page.locator('#evidence-feed .article-details > summary').first().click();
     assert.match(await page.locator('#evidence-feed').innerText(), /original publication date/);
     await page.locator('#role-filter').selectOption('all');
     await page.locator('#entity-filter').selectOption('Synthetic Finance');
@@ -93,6 +95,8 @@ async function main() {
     assert.ok(group, 'Synthetic repeated headline should form one reading group');
     const button = status => page.locator(`#evidence-feed button[data-article-id="${group.id}"][data-review="${status}"]`);
     async function review(status, message) {
+      const details=button(status).locator('xpath=ancestor::details[1]');
+      if(await details.getAttribute('open')===null)await details.locator(':scope > summary').click();
       const responsePromise = page.waitForResponse(response => response.url() === `${url}/api/review`);
       await button(status).click();
       const response = await responsePromise;
@@ -133,11 +137,11 @@ async function main() {
     await page.getByRole('button', {name:'Refresh sources'}).click();
     await page.waitForFunction(() => document.querySelector('#notification').textContent.includes('Synthetic offline failure'));
     assert.equal(await page.locator('#refresh').isEnabled(), true);
-    assert.equal(await page.locator('#stat-total').innerText(), '4');
+    assert.equal(await page.locator('#stat-total').textContent(), '4');
 
     for (const viewport of [{width:1440,height:1000},{width:390,height:844}]) {
       await page.setViewportSize(viewport);
-      for (const section of ['brief','evidence','layers','financing','earnings','sources']) {
+      for (const section of ['brief','explore','evidence','layers','financing','earnings','sources']) {
         await load(section);
         const width = await page.evaluate(() => document.documentElement.scrollWidth);
         assert.ok(width <= viewport.width, `${section} overflows at ${viewport.width}px`);
@@ -166,4 +170,4 @@ async function main() {
     fs.rmSync(tmp, {recursive:true,force:true});
   }
 }
-main().catch(error => {console.error(error.message); process.exitCode = 1;});
+main().catch(error => {console.error(error.stack || error.message); process.exitCode = 1;});

@@ -15,11 +15,11 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path: sys.path.insert(0, str(ROOT))
 from pulse.layers import LAYER_IDS, annotate as annotate_layers, tracking as layer_tracking
 FORMAT = 'ai-stock-pulse-static-v1'
-OUTPUTS = {'index.html', 'app.js', 'styles.css', 'favicon.svg', 'data/dashboard.json', 'build.json', '.nojekyll'}
+OUTPUTS = {'index.html', 'app.js', 'styles.css', 'finance.js', 'finance.css', 'visit-state.js', 'favicon.svg', 'data/dashboard.json', 'build.json', '.nojekyll'}
 TOP_FIELDS = {'reviewed_at', 'headline', 'bullets', 'notice', 'articles', 'sources', 'ledger', 'earnings'}
 ARTICLE_FIELDS = {'id','title','url','published_at','date_kind','date_precision','source_id','source_name','source_role','lens','relevance','observation','summary','implication','beneficiaries','risks','counterevidence','confirms','refutes','uncertainty','entities','rank','event_date','event_start','event_end','reviewed_at','report_period','publication_note','claim_type','access_note','source_date_note','methodology_url','republished_at','quote_as_of','highlights','ai_layers'}
 HIGHLIGHT_FIELDS = {'title','observation','claim_type','implication','source_url','source_date'}
-RECORD_FIELDS = {'ledger':{'id','as_of','source_url','source_date','from_entity','to_entity','instrument','status','amount','currency','note','overlap_group','risk','payment_status','revenue_status','reviewed_at'},'earnings':{'id','as_of','source_url','source_date','company','period','metric','unit','reported','reported_period','guidance','guidance_period','consensus','consensus_source_url','consensus_as_of','consensus_period','note'}}
+RECORD_FIELDS = {'ledger':{'id','as_of','source_url','source_date','from_entity','to_entity','instrument','status','amount','currency','note','overlap_group','risk','payment_status','revenue_status','reviewed_at','flow_type','flow_label','uncertainty','sources','changed_at'},'earnings':{'id','as_of','source_url','source_date','company','period','metric','unit','reported','reported_period','guidance','guidance_period','consensus','consensus_source_url','consensus_as_of','consensus_period','note'}}
 SOURCE_FIELDS = {'id','name','url','role','kind','reviewed_at','quality_note','topics','access_note','source_date','publication_note'}
 DOMAINS = [('funding','Funding & valuation','Can operators fund their commitments?'),('demand','Paid demand','Does usage convert to collected cash?'),('capacity','Capacity delivery','Which projects reach service?'),('earnings','Earnings','What is reported versus forecast?'),('models','Model economics','Does capability become paid use?'),('policy','Policy & constraints','What rules affect access or delivery?')]
 
@@ -53,13 +53,14 @@ def validate_public(raw):
     safe_text(raw)
     reviewed = iso(raw['reviewed_at'])
     if reviewed > datetime.now(timezone.utc): raise ValueError('Review date cannot be in the future')
-    if not 1 <= len(raw['articles']) <= 20 or not 1 <= len(raw['sources']) <= 30: raise ValueError('Public snapshot must be small and populated')
+    if not 1 <= len(raw['articles']) <= 20 or not 1 <= len(raw['sources']) <= 60: raise ValueError('Public snapshot must be small and populated')
     ids = set()
     for source in raw['sources']:
         if set(source) - SOURCE_FIELDS: raise ValueError('Unexpected public source field')
         for key in ('id','name','url','role','reviewed_at','quality_note','topics'):
             if key not in source: raise ValueError('Missing public source field: '+key)
         if source['id'] in ids or source['role'] not in ('primary','secondary'): raise ValueError('Sources must have unique IDs and reviewed evidence roles')
+        if source.get('source_date') and iso(source['source_date']) > reviewed: raise ValueError('Source date cannot be later than snapshot review')
         if iso(source['reviewed_at']) > reviewed: raise ValueError('Source review is later than the snapshot')
         public_url(source['url']);ids.add(source['id'])
     article_ids = set()
@@ -97,6 +98,14 @@ def validate_public(raw):
         for record in raw[section]:
             if set(record)-RECORD_FIELDS[section]: raise ValueError('Unexpected public financial-record field')
             if record.get('reviewed_at') and iso(record['reviewed_at']) > reviewed: raise ValueError('Record review cannot be later than snapshot')
+            for field in ('source_date','as_of','changed_at'):
+                if record.get(field) and iso(record[field]) > reviewed: raise ValueError('Financial context date cannot be later than review')
+            reviewed_urls={source['url'] for source in raw['sources']}
+            if record.get('source_url') not in reviewed_urls: raise ValueError('Financial record source must be in the reviewed references')
+            for extra in record.get('sources',[]):
+                if not isinstance(extra,dict) or set(extra)-{'url','title','date','role'}: raise ValueError('Unexpected supplemental source field')
+                if extra.get('date') and iso(extra['date']) > reviewed: raise ValueError('Supplemental source date cannot be later than review')
+                if extra.get('url') not in reviewed_urls: raise ValueError('Supplemental source must be reviewed')
             validate(section, deepcopy(record))
     return raw
 
@@ -106,7 +115,7 @@ def dashboard(raw, accounts, commit):
     articles=[]
     for value in sorted(raw['articles'], key=lambda x: x['rank']):
         item=deepcopy(value)
-        item.update(editorial_rank=item.pop('rank'), first_seen_at=stamp, observed_at=stamp,
+        item.update(visitKind='curated', editorial_rank=item.pop('rank'), first_seen_at=stamp, observed_at=stamp,
                     review_status='unreviewed', verification_status='source_reviewed_not_independently_audited',
                     inference_type='conditional_editorial_inference', article_ids=[item['id']], related_count=0,
                     score_reason='Editorial order in this selected, manually reviewed public snapshot. It is not a price forecast or a confidence score.')
@@ -159,7 +168,7 @@ def build(output, source=None):
     html=html.replace('</head>', '<link rel="icon" type="image/svg+xml" href="./favicon.svg">\n<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; style-src \'self\'; img-src \'self\' data:; connect-src \'self\'; base-uri \'none\'; form-action \'none\'">\n</head>')
     if 'data-mode="static"' not in html: raise ValueError('Static HTML marker missing')
     (output/'index.html').write_text(html)
-    for name in ('app.js','styles.css'): (output/name).write_bytes((ROOT/'static'/name).read_bytes())
+    for name in ('app.js','styles.css','finance.js','finance.css','visit-state.js'): (output/name).write_bytes((ROOT/'static'/name).read_bytes())
     (output/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#f5f4ee"/><path stroke="#226d60" stroke-width="4" stroke-linecap="round" d="M8 20V13M16 24V8M24 27V5"/></svg>\n')
     (output/'.nojekyll').write_text('')
     files={str(p.relative_to(output)):hashlib.sha256(p.read_bytes()).hexdigest() for p in output.rglob('*') if p.is_file() and p.name!='build.json'}

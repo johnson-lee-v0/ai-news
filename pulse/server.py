@@ -70,6 +70,7 @@ def make_handler(db_path):
                 if path == "/api/dashboard":
                     return self.respond(200, dashboard(db_path))
                 routes = {"/": ("index.html", "text/html"), "/index.html": ("index.html", "text/html"), "/app.js": ("app.js", "text/javascript"), "/styles.css": ("styles.css", "text/css")}
+                routes.update({"/"+name:(name,"text/javascript" if name.endswith(".js") else "text/css") for name in ("finance.js","finance.css","visit-state.js")})
                 if path in routes:
                     name, mime = routes[path]
                     return self.respond(200, (ROOT / "static" / name).read_bytes(), mime + "; charset=utf-8")

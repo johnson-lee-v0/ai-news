@@ -87,4 +87,18 @@ class PublicBuildTests(unittest.TestCase):
         for original,article in zip(sorted(self.raw['articles'],key=lambda a:a['rank']),output['articles']):
             self.assertEqual(article.get('reviewed_at'),original.get('reviewed_at'))
 
+    def test_financing_sources_must_be_reviewed_and_not_future(self):
+        raw=deepcopy(self.raw);raw['ledger'][0]['source_url']='https://example.com/not-reviewed'
+        with self.assertRaises(ValueError): validate_public(raw)
+        raw=deepcopy(self.raw);raw['ledger'][0]['sources']=[{'url':raw['sources'][0]['url'],'date':'2099-01-01','title':'Synthetic future source'}]
+        with self.assertRaises(ValueError): validate_public(raw)
+        raw=deepcopy(self.raw);raw['sources'][0]['source_date']='2099-01-01'
+        with self.assertRaises(ValueError): validate_public(raw)
+
+    def test_financing_flow_and_supplemental_private_fields_rejected(self):
+        raw=deepcopy(self.raw);raw['ledger'][0]['flow_type']='guessed cash'
+        with self.assertRaises(ValueError): validate_public(raw)
+        raw=deepcopy(self.raw);raw['ledger'][0]['sources']=[{'url':raw['sources'][0]['url'],'date':'2026-01-01','title':'Synthetic source','private_note':'excluded'}]
+        with self.assertRaises(ValueError): validate_public(raw)
+
 if __name__=='__main__': unittest.main()

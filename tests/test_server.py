@@ -43,6 +43,16 @@ class HTTPTests(unittest.TestCase):
         with self.fetch('/api/health') as response:
             self.assertEqual(json.load(response)['status'], 'ok')
 
+    def test_allowlisted_news_and_finance_assets_have_correct_types(self):
+        for path,kind in (('/finance.js','text/javascript'),('/visit-state.js','text/javascript'),('/finance.css','text/css')):
+            with self.fetch(path) as response:
+                self.assertEqual(response.status,200)
+                self.assertIn(kind,response.headers['Content-Type'])
+                self.assertTrue(response.read())
+        with self.assertRaises(urllib.error.HTTPError) as error:
+            self.fetch('/docs/NEWS_AND_NETWORK.md')
+        self.assertEqual(error.exception.code,404)
+
     def test_cannot_expose_files_or_different_host(self):
         for path in ('/../pulse/server.py', '/data/pulse.sqlite3'):
             with self.assertRaises(urllib.error.HTTPError) as error:
