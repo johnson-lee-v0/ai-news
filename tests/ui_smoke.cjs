@@ -137,12 +137,20 @@ async function main() {
 
     for (const viewport of [{width:1440,height:1000},{width:390,height:844}]) {
       await page.setViewportSize(viewport);
-      for (const section of ['brief','evidence','financing','earnings','sources']) {
+      for (const section of ['brief','evidence','layers','financing','earnings','sources']) {
         await load(section);
         const width = await page.evaluate(() => document.documentElement.scrollWidth);
         assert.ok(width <= viewport.width, `${section} overflows at ${viewport.width}px`);
       }
     }
+    await load('layers');
+    assert.equal(await page.locator('.layer-card').count(),5);
+    assert.match(await page.locator('#panel-layers').innerText(),/Unavailable/);
+    const tracked=(await data()).layer_tracking.layers.find(layer=>layer.article_count>0);
+    assert.ok(tracked,'Synthetic evidence should map to a layer');
+    await page.locator(`button[data-layer="${tracked.id}"]`).click();
+    await page.locator('#panel-evidence').waitFor({state:'visible'});
+    assert.equal(await page.locator('#layer-filter').inputValue(),tracked.id);
     const anchors = await page.locator('a[target="_blank"]').evaluateAll(nodes => nodes.map(node => ({href:node.href,rel:node.rel})));
     assert.ok(anchors.every(a => a.href.startsWith('https://') && a.rel.includes('noopener')));
     assert.deepEqual(errors, []);

@@ -4,7 +4,8 @@
   const isStatic = document.documentElement.dataset.mode === 'static';
   let snapshotRequest;
   const state = { data: null, page: 'brief', limit: 40, refreshing: false };
-  const sections = new Set(['brief', 'evidence', 'financing', 'earnings', 'sources']);
+  const sections = new Set(['brief', 'evidence', 'financing', 'layers', 'earnings', 'sources']);
+  const layerNames = {energy:'Energy',chips:'Chips',infrastructure:'Infrastructure',models:'Models',applications:'Applications'};
   const labels = { demand: 'Demand', capacity: 'Capacity', funding: 'Funding', earnings: 'Earnings', models: 'Model economics', policy: 'Policy & constraints', other: 'Source update' };
   const roleLabels = { primary: 'Primary disclosure', secondary: 'Reported news', discovery: 'Discovery lead' };
   const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -86,7 +87,7 @@
     const publication = state.data.publication || {};
     const reviewedAt = publication.reviewed_at || publication.as_of;
     $('publication-banner').hidden = false;
-    $('publication-banner').innerHTML = `<div><span class="badge teal">Public reviewed snapshot</span><strong>Reviewed ${esc(dateLabel(reviewedAt,true))}</strong><p>${esc(publication.notice || 'A dated, read-only selection of public research. No automatic news refresh or private inputs are connected.')}</p></div>${publication.repository_url ? link(publication.repository_url,'Source code ↗','text-link') : ''}`;
+    $('publication-banner').innerHTML = `<div>${publication.draft ? '<p class="publication-draft">Local draft — not published; approval pending.</p>' : ''}<span class="badge teal">Public reviewed snapshot</span><strong>Reviewed ${esc(dateLabel(reviewedAt,true))}</strong><p>${esc(publication.notice || 'A dated, read-only selection of public research. No automatic news refresh or private inputs are connected.')}</p></div>${publication.repository_url ? link(publication.repository_url,'Source code ↗','text-link') : ''}`;
   }
   function selectPage() {
     const hash = location.hash.slice(1);
@@ -97,7 +98,7 @@
       item.classList.toggle('active', active);
       if (active) item.setAttribute('aria-current', 'page'); else item.removeAttribute('aria-current');
     });
-    document.title = `${{ brief: isStatic ? 'Reviewed brief' : 'Daily brief', evidence: 'Evidence feed', financing: 'Financing map', earnings: 'Earnings', sources: isStatic ? 'Sources & scope' : 'Sources & leads' }[state.page]} — AI Stock Pulse`;
+    document.title = `${{ brief: isStatic ? 'Reviewed brief' : 'Daily brief', evidence: 'Evidence feed', financing: 'Financing map', layers:'Five AI layers', earnings: 'Earnings', sources: isStatic ? 'Sources & scope' : 'Sources & leads' }[state.page]} — AI Stock Pulse`;
   }
   function lastRefresh() {
     const refresh = list(state.data?.refreshes)[0];
@@ -122,6 +123,10 @@
     if (ids.length > 100) throw new Error('This group exceeds the 100-source action limit. Its reading state has not changed.');
     return ids;
   }
+  function renderHighlights(raw) {
+    const highlights = list(raw).filter(item => item && typeof item === 'object');
+    return highlights.length ? `<section class="article-highlights"><p class="eyebrow">Highlights to investigate</p><ol>${highlights.map(highlight => `<li><div class="highlight-heading"><h4>${esc(highlight.title || 'Source highlight')}</h4><span class="badge amber">${esc(text(highlight.claim_type,'Claim type not specified').replace(/_/g,' '))}</span></div><p>${esc(text(highlight.observation,'Observation unavailable.'))}</p><p class="highlight-implication"><strong>Conditional implication:</strong> ${esc(text(highlight.implication,'Not assessed.'))}</p><p class="fine-print">${link(highlight.source_url,'Source ↗')} · ${esc(dateLabel(highlight.source_date))}</p></li>`).join('')}</ol></section>` : '';
+  }
   function renderArticle(article, rank) {
     const lens = labels[article.lens] ? article.lens : 'other';
     const role = roleOf(article);
@@ -139,7 +144,7 @@
     const related = list(article.related_sources);
     const relationCount = Number.isFinite(Number(article.related_count)) ? Number(article.related_count) : related.length;
     const dated = value => value ? dateLabel(value, String(value).includes('T')) : null;
-    const sourceContext = [['Claim type', article.claim_type], ['Event date', dated(article.event_date)], ['Report period', article.report_period], ['Republished', dated(article.republished_at)], ['Market quote as of', dated(article.quote_as_of)], ['Source date context', article.source_date_note || article.publication_note], ['Source access', article.access_note]].filter(([,value]) => value);
+    const sourceContext = [['Claim type', article.claim_type], ['Item reviewed', dated(article.reviewed_at)], ['Event date', dated(article.event_date)], ['Event starts', dated(article.event_start)], ['Event ends', dated(article.event_end)], ['Report period', article.report_period], ['Republished', dated(article.republished_at)], ['Market quote as of', dated(article.quote_as_of)], ['Source date context', article.source_date_note || article.publication_note], ['Source access', article.access_note]].filter(([,value]) => value);
     return `<article class="article ${reviewed === 'dismissed' ? 'article-dismissed' : ''}"><div class="article-rank" aria-hidden="true">${String(rank).padStart(2, '0')}</div><div class="article-main">
       <div class="article-meta"><span class="badge ${lens}">${labels[lens]}</span><span class="badge source-${role}">${roleLabels[role]}</span>${isNew(article) ? '<span class="badge new">Newly discovered</span>' : ''}${revised ? '<span class="badge amber">Revised</span>' : ''}${reviewed !== 'unreviewed' ? `<span class="badge subtle">${reviewed === 'reviewed' ? 'Read' : 'Dismissed'}</span>` : ''}<span class="source-name">${esc(article.publisher_name || article.source_name || article.source_id || 'Source')}</span><span class="meta-separator" aria-hidden="true">/</span><span>${esc(publication)}</span></div>
       <h3>${link(article.url, `${esc(article.title || 'Untitled source item')} <span class="article-link-icon" aria-hidden="true">↗</span>`)}</h3>
@@ -148,6 +153,9 @@
       <div class="reading-actions local-only" aria-label="Reading state for ${esc(article.title || 'source item')}">${reviewed !== 'reviewed' ? `<button class="queue-button" type="button" data-review="reviewed" data-article-id="${esc(article.id)}">Mark read</button>` : ''}${reviewed !== 'dismissed' ? `<button class="queue-button quiet" type="button" data-review="dismissed" data-article-id="${esc(article.id)}">Dismiss</button>` : ''}${reviewed !== 'unreviewed' ? `<button class="queue-button quiet" type="button" data-review="unreviewed" data-article-id="${esc(article.id)}">Reset to unread</button>` : ''}${relationCount ? `<span class="related-count">${plural(relationCount, 'related source appearance')}</span>` : ''}</div>
       ${relationCount ? '<p class="fine-print reading-scope local-only">Reading actions apply to every source appearance currently grouped here.</p>' : ''}<details class="article-details"><summary>Test the implication & inspect provenance</summary><div class="source-excerpt"><p class="eyebrow">${isStatic ? 'Source summary & date context' : 'Source excerpt / filing metadata'}</p><p>${esc(text(article.summary, 'No source excerpt supplied. Open the original.'))}</p>${sourceContext.length ? `<dl class="source-context">${sourceContext.map(([label,value]) => `<div><dt>${esc(label)}</dt><dd>${esc(text(value))}</dd></div>`).join('')}</dl>` : ''}${article.methodology_url ? `<p class="methodology-link">${link(article.methodology_url,'Probability methodology / assumptions ↗')}</p>` : ''}</div><div class="analysis-grid">${details.map(([heading, value]) => `<div class="analysis-item"><p class="eyebrow">${esc(heading)}</p><p>${esc(text(value, 'Not assessed for this item.'))}</p></div>`).join('')}<div class="analysis-item wide"><p class="eyebrow">${isStatic ? 'Why this is included' : 'Why this is ranked here'}</p><p>${esc(text(article.score_reason, isStatic ? 'Selected for this dated public brief. Editorial order is not a market-impact forecast.' : 'Priority rules consider signal relevance and source dates.'))}${Number.isFinite(article.score) ? ` · Priority score: ${article.score}` : ''}</p>${article.priority_factors ? `<p class="factor-line">${esc(text(article.priority_factors, ''))}</p>` : ''}</div></div>
       ${related.length ? `<div class="related-sources"><p class="eyebrow">Related coverage</p>${related.map(source => `<p>${link(source.url || source.original_url, esc(source.title || source.name || source.source_name || source.publisher_name || 'Related source'))}${source.source_role || source.role ? ` <span class="badge subtle">${esc(roleLabels[source.source_role || source.role] || source.source_role || source.role)}</span>` : ''}</p>`).join('')}<p class="fine-print">A similar headline or multiple links may trace to the same announcement. Grouping is a reading aid, not proof of independent corroboration.</p></div>` : ''}
+      ${renderHighlights(article.highlights)}
+      ${relationCount && list(article.layer_matches).length ? `<div class="layer-attributions"><p class="eyebrow">Where the layer tags came from</p>${list(article.layer_matches).filter(match => match && typeof match==='object' && list(match.ai_layers).some(id => layerNames[id])).map(match => `<p>${list(match.ai_layers).filter(id => layerNames[id]).map(id => esc(layerNames[id])).join(' · ')} <span aria-hidden="true">→</span> ${link(match.url,esc(match.source_name || match.source_id || 'Related source'))} <span class="badge subtle">${esc(roleLabels[match.source_role] || 'Source role unknown')}</span> · ${esc({filing_date:'Filed',search_feed_date:'Search feed date',feed_date:'Feed date',publication_date:'Published'}[match.date_kind] || 'Source date')} ${esc(dateLabel(match.published_at))}</p>`).join('')}<p class="fine-print">Layer tags may come from related coverage. Grouping does not turn related text into a primary disclosure or independent corroboration.</p></div>` : ''}
+      ${list(article.ai_layers).filter(id => layerNames[id]).length ? `<p class="fine-print">Metadata layer matches: ${list(article.ai_layers).filter(id => layerNames[id]).map(id => esc(layerNames[id])).join(' · ')}. Classification is not verification.</p>` : ''}
       <div class="provenance-line">${isStatic ? `<span>Snapshot reviewed ${esc(dateLabel(state.data.publication?.reviewed_at || state.data.publication?.as_of,true))}</span>${article.as_of ? `<span>Analysis as of ${esc(dateLabel(article.as_of))}</span>` : ''}` : `<span>First discovered ${esc(dateLabel(article.first_seen_at, true))}</span><span>Last observed ${esc(dateLabel(article.observed_at, true))}</span>`}${article.revised_at ? `<span>Last revised ${esc(dateLabel(article.revised_at, true))}</span>` : ''}<span>Date kind: ${esc(dateKind)} · precision: ${esc(article.date_precision || 'unknown')}</span><span>${link(article.url, role === 'discovery' ? 'Open discovery result ↗' : 'Open dated source ↗')}</span></div>
       ${article.source_quality ? `<p class="fine-print">Source scope: ${esc(text(article.source_quality))}</p>` : ''}${article.content_hash ? `<div class="provenance-line"><span>Content fingerprint ${esc(String(article.content_hash).slice(0, 16))}…</span></div>` : ''}${list(article.provenance).length ? `<div class="provenance-line"><span>Recorded appearances (${list(article.provenance).length}): ${list(article.provenance).map(p => link(p.original_url, esc(p.source_name || p.source_id || 'Source'))).join(' · ')}.</span></div>` : ''}<p class="fine-print local-only">Read / dismissed is your local reading queue, not a verification judgment.</p></details>
     </div></article>`;
@@ -203,11 +211,12 @@
       const takeaway = implication.match(/^.*?[.!?](?:\s|$)/)?.[0] || implication;
       const old = timestamp(note.as_of) && Date.now() - timestamp(note.as_of) > 7 * 86400000;
       return `<article class="article curated-note"><div class="article-rank" aria-hidden="true">↳</div><div>
-        <div class="article-meta"><span class="badge teal">Curated research</span><span>As of ${esc(dateLabel(note.as_of))}</span><span class="badge ${labels[note.lens] ? note.lens : 'subtle'}">${esc(labels[note.lens] || 'Research')}</span>${accessGap ? '<span class="badge amber">Some direct sources unavailable</span>' : ''}${old ? '<span class="badge amber">Review age · over 7 days</span>' : ''}</div>
+        <div class="article-meta"><span class="badge teal">Curated research</span><span>As of ${esc(dateLabel(note.as_of))}</span>${note.reviewed_at ? `<span>Item reviewed ${esc(dateLabel(note.reviewed_at,true))}</span>` : ''}<span class="badge ${labels[note.lens] ? note.lens : 'subtle'}">${esc(labels[note.lens] || 'Research')}</span>${accessGap ? '<span class="badge amber">Some direct sources unavailable</span>' : ''}${old ? '<span class="badge amber">Review age · over 7 days</span>' : ''}</div>
         <h3>${esc(note.title)}</h3><p class="curated-takeaway">${esc(takeaway)}</p>
         <details class="article-details"><summary>Read the evidence, implications & uncertainty</summary>
           <div class="article-body curated-expanded"><div class="article-block"><p class="eyebrow">Sourced observation</p><p>${esc(text(note.observation))}</p></div><div class="article-block inference"><p class="eyebrow">Interpretation · not a prediction</p><p>${esc(implication)}</p></div></div>
           <div class="analysis-grid">${[['Counterevidence',note.counterevidence],['Would strengthen',note.confirms],['Would weaken',note.refutes],['Potential beneficiaries',note.beneficiaries],['Exposures / possible losers',note.risks],['Uncertainty',note.uncertainty]].map(([label, value]) => `<div class="analysis-item"><p class="eyebrow">${esc(label)}</p><p>${esc(text(value))}</p></div>`).join('')}</div>
+          ${renderHighlights(note.highlights)}
           <div class="note-sources">${sources.map(source => `<p class="fine-print">${link(source.url, `${esc(source.title || 'Source')} ↗`)} · ${esc(dateLabel(source.date))}${source.access_status || source.status ? ` · Access: ${esc(source.access_status || source.status)}` : ''}</p>`).join('')}</div>
           ${note.source_access ? `<p class="fine-print">Source access: ${esc(text(note.source_access))}</p>` : ''}
         </details></div></article>`;
@@ -220,6 +229,7 @@
     const role = $('role-filter').value;
     const entity = $('entity-filter').value;
     const relevance = $('relevance-filter').value;
+    const layer = $('layer-filter').value;
     const review = $('review-filter').value;
     let items = stories().filter(a => {
       const entities = [...list(a.entities), ...list(a.source_entities)];
@@ -228,6 +238,7 @@
         && (role === 'all' || roleOf(a) === role)
         && (entity === 'all' || entities.includes(entity))
         && (relevance === 'all' || a.relevance === relevance)
+        && (layer === 'all' || list(a.ai_layers).includes(layer))
         && (review === 'all' || (review === 'active' ? status !== 'dismissed' : status === review))
         && (!query || [a.title,a.summary,a.source_name,a.publisher_name,...entities,...list(a.tags),...list(a.event_flags)].join(' ').toLowerCase().includes(query));
     });
@@ -248,12 +259,58 @@
   }
   function amount(value, currency) {
     if (value === null || value === undefined || value === '') return 'Amount not stated';
-    return `${currency ? `${currency} ` : ''}${typeof value === 'number' ? new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(value) : text(value)}`;
+    const formatted = typeof value === 'number' ? new Intl.NumberFormat('en-US', {maximumFractionDigits:2}).format(value) : text(value);
+    const unit = typeof currency === 'string' ? currency.trim().replace(/_/g,' ') : '';
+    const scaled = unit.match(/^([A-Z]{3})\s+(bn|billion|mn|million)$/i);
+    return scaled ? `${scaled[1].toUpperCase()} ${formatted} ${scaled[2]}` : `${unit ? unit+' ' : ''}${formatted}`;
   }
+  const instruments = {
+    equity:{label:'Equity investment',moves:'Capital for ownership',note:'An investment buys ownership; it is not customer revenue.'},
+    debt:{label:'Debt / loan',moves:'Borrowed capital',note:'Debt must be repaid. An announced facility may be undrawn.'},
+    customer_contract:{label:'Customer commitment',moves:'A purchase commitment',note:'Orders or contract value do not establish delivery, cash received or earned revenue.'},
+    cloud_credits:{label:'Cloud credits',moves:'A cloud-use allowance',note:'Credits can support usage without being a cash payment or lasting demand.'},
+    guarantee:{label:'Guarantee',moves:'Conditional credit support',note:'A guarantee can create a future obligation. It is not a current cash transfer.'},
+    capacity:{label:'Compute capacity',moves:'Planned or available compute',note:'Capacity is a physical or service commitment. Delivery and utilization need separate evidence.'},
+    revenue:{label:'Revenue',moves:'Earned revenue, if sourced',note:'Recognition needs a dated reporting source and accounting period; cash collection may differ.'},
+    investment:{label:'Investment',moves:'Capital on stated terms',note:'Check the instrument and closing terms before treating an announcement as funded capital.'},
+    other:{label:'Other arrangement',moves:'See the sourced terms',note:'The economic substance and transfer need to be established from the source.'},
+  };
   function renderLedger() {
-    const records = list(state.data.ledger);
-    $('ledger-count').textContent = plural(records.length, 'sourced record');
-    $('ledger-content').innerHTML = records.length ? `<div class="table-wrap" tabindex="0" role="region" aria-label="Financing evidence ledger; scroll horizontally if needed"><table><thead><tr><th>Relationship</th><th>Instrument / state</th><th>Amount / exposure</th><th>Timing & overlap</th><th>Provenance</th></tr></thead><tbody>${records.map((r) => `<tr><td><span class="entity-path">${esc(r.from_entity)}</span><span class="path-arrow" aria-hidden="true">↓</span><span class="entity-path">${esc(r.to_entity)}</span></td><td>${esc(r.instrument)}<small>${esc(r.status || 'Status unknown')}</small></td><td>${esc(amount(r.amount,r.currency))}<small>${esc(r.note || 'No additional terms recorded.')}</small></td><td>As of ${esc(dateLabel(r.as_of))}<small>Overlap group: ${esc(r.overlap_group || 'Not assessed')}</small></td><td>${link(r.source_url, 'Source ↗')}<small>${esc(dateLabel(r.source_date))}</small></td></tr>`).join('')}</tbody></table></div><p class="table-note">Amounts are not totaled. Rows may describe different stages of the same economic arrangement; overlap groups flag possible duplication. An announced commitment is not recognized revenue.</p>` : empty('No financing relationships validated yet.', 'The ledger accepts sourced, dated relationships. Feed headlines do not automatically become confirmed investments, contracts, debt or revenue.', isStatic ? '' : '<p>Review evidence and import a curation file with <code>python3 -m pulse import-curation research.json</code>. See the local README for the schema.</p>');
+    const records = list(state.data.ledger).filter(record => record && typeof record === 'object');
+    const overlaps = new Map();
+    records.forEach(record => {const group=String(record.overlap_group || '').trim(); if(group && group!=='unassessed') overlaps.set(group,(overlaps.get(group)||0)+1);});
+    $('ledger-count').textContent = plural(records.length,'sourced relationship');
+    $('ledger-content').innerHTML = records.length ? `<div class="relationship-list">${records.map(record => {
+      const kind = instruments[record.instrument] || {label:'Instrument not specified',moves:'What moves is unknown',note:'No instrument has been established for this record.'};
+      const status = typeof record.status === 'string' ? record.status.trim().toLowerCase().replace(/_/g,' ') : '';
+      const proposed = ['proposed','announced','planned','target','negotiating'].includes(status);
+      const committed = ['committed','signed','promised','contracted'].includes(status);
+      const funded = ['funded','disbursed','drawn','cash received'].includes(status);
+      const sourced = Boolean(safeUrl(record.source_url) && dateValue(record.source_date));
+      const recognized = record.instrument==='revenue' && sourced && ['recognized','revenue recognized','reported'].includes(status);
+      const stage = proposed ? 'Proposed / not confirmed funded' : committed ? 'Committed / not confirmed funded' : funded ? 'Funded — as stated by source' : recognized ? 'Recognized revenue — as sourced' : status ? `Source status: ${record.status}` : 'Stage unknown';
+      const cash = funded ? 'Reported funded; check the source for cash timing and amount.' : 'Not confirmed in this record.';
+      const recognition = recognized ? 'Recognized in the cited reporting source; check its period and basis.' : record.instrument==='revenue' ? 'Recognition not established by a dated source and status.' : 'This is not a revenue record. Do not count its amount as earned revenue.';
+      const group=String(record.overlap_group || '').trim();
+      const related=group && group!=='unassessed' ? (overlaps.get(group)||1)-1 : 0;
+      const overlap=related ? `Shares an arrangement with ${plural(related,'other relationship')} shown here. These amounts may overlap; do not add them.` : group && group!=='unassessed' ? 'An overlap label is recorded, but no related row is shown here. Duplication has not been ruled out.' : 'Overlap not assessed. Check whether the same arrangement appears as investment, purchase commitment or future revenue.';
+      return `<article class="relationship-card"><div class="relationship-heading"><h3>${esc(kind.label)}</h3><span class="badge ${funded || recognized ? 'teal' : 'amber'}">${esc(stage)}</span></div><div class="relationship-flow" aria-label="${esc(text(record.from_entity,'Unknown source entity'))} to ${esc(text(record.to_entity,'Unknown recipient'))}: ${esc(kind.label)}"><div class="flow-entity"><span>From</span><strong>${esc(text(record.from_entity,'Source entity unknown'))}</strong></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-instrument"><span>What moves</span><strong>${esc(kind.moves)}</strong></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-entity"><span>To</span><strong>${esc(text(record.to_entity,'Recipient unknown'))}</strong></div></div><div class="relationship-amount"><span class="eyebrow">Stated amount / exposure</span><strong>${esc(amount(record.amount,record.currency))}</strong><small>${esc(record.currency ? `Units: ${record.currency}` : 'Units not stated; no currency or scale assumed.')}</small></div><p class="relationship-note">${esc(text(record.note,'Terms have not been summarized. Open the source before interpreting the relationship.'))}</p><p class="relationship-definition">${esc(kind.note)}</p><dl class="relationship-checks"><div><dt>Cash moved?</dt><dd>${esc(cash)}</dd></div><div><dt>Revenue earned?</dt><dd>${esc(recognition)}</dd></div><div><dt>Risk to check</dt><dd>${esc(text(record.risk || record.risks,record.note || 'Specific risks are not assessed. Check conditions, delivery, repayment and counterparty exposure.'))}</dd></div><div><dt>Could this be counted twice?</dt><dd>${esc(overlap)}</dd></div></dl><div class="relationship-provenance"><span>Arrangement as of <strong>${esc(dateLabel(record.as_of))}</strong></span><span>Source dated <strong>${esc(dateLabel(record.source_date))}</strong></span>${sourced ? link(record.source_url,'Read the source ↗','text-link') : '<span class="unavailable">Dated source unavailable</span>'}</div></article>`;
+    }).join('')}</div><p class="table-note">Only sourced relationships are shown. Arrows can represent capital, obligations, credits or compute; they are not all cash flows. Amounts are not totaled.</p>` : empty('No sourced financing relationships yet.', 'A relationship appears only when its parties, instrument and dated source are recorded. No investment, debt, commitment or revenue is inferred from an empty map.');
+  }
+  function renderLayers() {
+    const tracking = state.data.layer_tracking || {};
+    const supplied = new Map(list(tracking.layers).filter(layer => layer && layerNames[layer.id]).map(layer => [layer.id,layer]));
+    const sources = new Map(list(state.data.sources).map(source => [source.id,source]));
+    const framework = tracking.source || {};
+    $('layer-method').innerHTML = `<p class="eyebrow">A framework for questions, not proof</p><p>${esc(text(tracking.method,'Layer assignments have not been supplied for this snapshot. The five views below do not imply monitoring is connected.'))}</p><p class="fine-print">Assignments are transparent metadata matches, not verified claims or comprehensive monitoring. One item can match more than one layer; counts are not additive.</p>${framework.url ? `<p class="fine-print">Framework: ${link(framework.url,esc(framework.title || 'Original source'))} · ${esc(dateLabel(framework.date))}</p>` : '<p class="fine-print">Framework source not supplied.</p>'}`;
+    $('layer-grid').innerHTML = Object.entries(layerNames).map(([id,name],index) => {
+      const layer=supplied.get(id) || {};
+      const count=Number.isInteger(layer.article_count) && layer.article_count>=0 ? layer.article_count : null;
+      const matched=list(layer.source_ids).map(sourceId => sources.get(sourceId)).filter(Boolean);
+      const status=count===null ? 'Not assessed' : count ? 'Metadata matches' : 'No matched evidence';
+      return `<article class="layer-card" data-layer-card="${id}"><div class="layer-heading"><span class="layer-number">${String(index+1).padStart(2,'0')}</span><div><h2>${esc(layer.name || name)}</h2><span class="badge ${count ? 'teal' : 'amber'}">${status}</span></div></div><p class="layer-summary">${esc(text(layer.summary,'What matters at this layer has not been summarized in the supplied data.'))}</p><div class="layer-question"><p class="eyebrow">What would change the view?</p><p>${esc(text(layer.question,'No question has been assessed for this layer yet.'))}</p></div><div class="layer-metrics"><p class="eyebrow">What to measure</p>${list(layer.metrics).length ? `<ul>${list(layer.metrics).map(metric => `<li>${esc(text(metric))}</li>`).join('')}</ul>` : '<p>Metrics have not been specified.</p>'}<p class="fine-print">${esc(text(layer.metric_status,'Measured metrics are unavailable in this view.'))}</p></div><div class="layer-evidence"><strong>${count===null ? '—' : count}</strong><span>${count===null ? 'Match count unavailable' : 'matched evidence '+(count===1?'item':'items')}</span></div><p class="fine-print">Latest matched source date: ${esc(dateLabel(layer.last_source_date))}</p>${layer.status ? `<p class="fine-print">Supplied coverage status: ${esc(String(layer.status).replace(/_/g,' '))}</p>` : ''}<div class="layer-source-links">${matched.length ? matched.map(source => link(source.url,esc(source.name || source.title || source.id))).join(' · ') : 'No linked source matched in this view.'}</div><p class="layer-gap"><strong>Gap:</strong> ${esc(text(layer.gap,'Completeness has not been assessed. A match does not establish ongoing coverage.'))}</p><button type="button" class="button layer-button" data-layer="${id}">View ${esc(name.toLowerCase())} evidence <span aria-hidden="true">↗</span></button></article>`;
+    }).join('');
+    $('layer-scope').textContent = tracking.scope || 'Selected evidence only. Missing matches do not establish that nothing happened at a layer.';
   }
   const metricValue = (value, unit) => value === null || value === undefined || value === '' ? '<span class="unavailable">Not sourced</span>' : `${esc(text(value))}${unit ? `<small>${esc(unit)}</small>` : ''}`;
   function renderEarnings() {
@@ -312,7 +369,7 @@
     $('lead-count').textContent = plural(leads.length,'lead');
     $('lead-list').innerHTML = leads.length ? leads.map(lead => `<article class="lead-item"><span class="badge amber">Unverified lead</span><div>${link(lead.url,`${esc(lead.url)} ↗`)}${lead.note ? `<p>${esc(lead.note)}</p>` : ''}<p class="fine-print">Saved ${esc(dateLabel(lead.created_at,true))} · Contents not fetched or verified</p></div></article>`).join('') : empty('No X leads saved.', 'Paste a public post link above to investigate. A saved link never counts as confirmed evidence.');
   }
-  function render() { renderPublication(); populateEntities(); renderBrief(); renderEvidence(); renderLedger(); renderEarnings(); renderSources(); selectPage(); if (isStatic) hideLocalControls(); }
+  function render() { renderPublication(); populateEntities(); renderBrief(); renderEvidence(); renderLedger(); renderLayers(); renderEarnings(); renderSources(); selectPage(); if (isStatic) hideLocalControls(); }
   async function load(initial = false) {
     if (initial) { $('loading').hidden = false; $('load-error').hidden = true; }
     try {
@@ -366,7 +423,18 @@
     const oneYear = -Math.expm1(-(spread / 10000) / (1 - recovery / 100));
     $('cds-output').innerHTML = `<strong>${(probability * 100).toFixed(1)}% over ${esc(years)} ${years === 1 ? 'year' : 'years'}</strong>Simplified cumulative risk-neutral illustration. ${(oneYear * 100).toFixed(1)}% over one year with the same assumptions. Inputs: ${esc(spread)} bps; ${esc(recovery)}% recovery. No issuer or live market quote is implied.`;
   });
-  ['search', 'lens-filter', 'sort', 'role-filter', 'entity-filter', 'relevance-filter', 'review-filter'].forEach((id) => $(id).addEventListener(id === 'search' ? 'input' : 'change', () => { state.limit = 40; if (state.data) renderEvidence(); }));
+  ['search', 'lens-filter', 'sort', 'role-filter', 'entity-filter', 'layer-filter', 'relevance-filter', 'review-filter'].forEach((id) => $(id).addEventListener(id === 'search' ? 'input' : 'change', () => { state.limit = 40; if (state.data) renderEvidence(); }));
+  $('layer-grid').addEventListener('click', event => {
+    const button=event.target.closest('button[data-layer]');
+    if (!button || !layerNames[button.dataset.layer]) return;
+    $('layer-filter').value=button.dataset.layer;
+    $('search').value='';
+    ['lens-filter','role-filter','entity-filter','relevance-filter'].forEach(id => {$(id).value='all';});
+    // The layer count includes every loaded group, including locally dismissed ones.
+    $('review-filter').value='all';
+    state.limit=40; renderEvidence();
+    location.hash='evidence'; selectPage();
+  });
   $('dashboard').addEventListener('click', async event => {
     if (isStatic) return;
     const button = event.target.closest('button[data-review]');

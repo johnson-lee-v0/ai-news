@@ -1,12 +1,93 @@
 {
-  "reviewed_at": "2026-10-25T07:20:41Z",
-  "headline": "Funding terms cool while capacity spending stays substantial",
+  "reviewed_at": "2026-10-25T15:28:13Z",
+  "headline": "GTC Berlin: testing delivery across AI's five layers",
   "bullets": [
+    "NVIDIA targets faster deployment and resource efficiency; distinguish prepared-site installation, future manufacturing capacity and paid adoption.",
     "OpenAI and Anthropic reports concern proposed prices or investor expectations, not completed down rounds.",
     "Separate demand, delivery and funding; none alone establishes the others."
   ],
-  "notice": "Selected public sources reviewed Oct 25, 2026. Static snapshot, not live or comprehensive. Implications are conditional analysis; no X trends or live market data.",
+  "notice": "Static, selected-source snapshot. GTC reviewed October 25; earlier items retain their own review dates. Implications are conditional analysis, not live monitoring or comprehensive coverage.",
   "articles": [
+    {
+      "id": "nvidia-gtc-berlin-20261021",
+      "title": "GTC Berlin: five highlights, five tests of delivery",
+      "url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/",
+      "published_at": "2026-10-21",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "event_date": "2026-10-21",
+      "event_start": "2026-10-20",
+      "event_end": "2026-10-22",
+      "reviewed_at": "2026-10-25T15:28:13Z",
+      "source_id": "nvidia-gtc-berlin",
+      "source_name": "NVIDIA Blog",
+      "source_role": "primary",
+      "lens": "capacity",
+      "relevance": "material",
+      "rank": 1,
+      "entities": [
+        "NVIDIA",
+        "KYEC"
+      ],
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "observation": "NVIDIA presented deployment, efficiency, agent-security and manufacturing plans on October 21; GTC ran October 20–22, including workshops.",
+      "summary": "Five highlights below separate issuer claims from realized adoption.",
+      "implication": "If execution follows, faster deployment and efficiency could improve economics; customer utilization still determines returns.",
+      "beneficiaries": "Suppliers and operators delivering accepted capacity.",
+      "risks": "Site readiness, production delays and weak utilization.",
+      "counterevidence": "Plans, reference designs and demonstrations do not establish sales.",
+      "confirms": "Independent operating metrics, shipments and paid deployments.",
+      "refutes": "Slippage, missed efficiency targets or weak adoption.",
+      "uncertainty": "Issuer announcements reviewed October 25; outcomes are not independently verified.",
+      "highlights": [
+        {
+          "title": "DSX POD: installation, not site development",
+          "observation": "NVIDIA claims prepared-site deployment can fall from six months to as little as 14 days; partner deliveries target early 2027.",
+          "claim_type": "issuer_performance_claim_and_forward_plan",
+          "implication": "Site power, cooling and networking must already be ready.",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "Efficiency: separate power from cooling water",
+          "observation": "MaxLPS claims up to 30% less power for equal token output. Separately, closed-loop/dry-cooler designs target near-zero facility cooling water; climate matters.",
+          "claim_type": "conditional_issuer_performance_claim",
+          "implication": "Check workload and climate conditions; facility cooling water is not the total water footprint.",
+          "source_url": "https://nvidianews.nvidia.com/news/european-ecosystem-builds-worlds-most-efficient-ai-factories-with-nvidia-dsx",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "OpenShell: an architecture for agents",
+          "observation": "The available reference architecture combines Rubin inference, Vera CPUs and BlueField/Sentry controls for agents.",
+          "claim_type": "issuer_product_announcement",
+          "implication": "Available architecture proves neither material sales nor perfect security; test production adoption and controls.",
+          "source_url": "https://nvidianews.nvidia.com/news/openshell-reference-architecture",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "Manufacturing: commitments precede output",
+          "observation": "NVIDIA announced a $1.1bn KYEC reservation advance, with U.S. testing targeted for April 2027. Other plans: 2.5x substrate capacity over three years; Amkor advanced packaging more than 300% higher by end-2028; SPIL optical-engine capacity 15x by mid-2027.",
+          "claim_type": "announced_advance_and_forward_capacity_target",
+          "implication": "Future capacity is not delivered output or sales. Advance disbursement and KYEC revenue recognition remain unverified.",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "Physical AI: demonstrations precede adoption",
+          "observation": "The keynote showed industrial, healthcare and robotics uses and announced the Isaac GR00T-based Agile ONE SN humanoid, expected in 2027.",
+          "claim_type": "issuer_demonstration",
+          "implication": "Scaled deployment, reliability and customer economics need evidence.",
+          "source_url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/",
+          "source_date": "2026-10-21"
+        }
+      ]
+    },
     {
       "id": "openai-price-talks",
       "title": "OpenAI's reported funding price softens",
@@ -18,7 +99,7 @@
       "entities": [
         "OpenAI"
       ],
-      "rank": 1,
+      "rank": 2,
       "observation": "Bloomberg reports a $1.25tn valuation target, versus $1.4tn discussed earlier, for a proposed ~$30bn raise.",
       "summary": "Negotiations remain open; this is not a completed financing.",
       "implication": "If capital becomes harder to secure, labs may prioritize fewer compute commitments.",
@@ -31,7 +112,8 @@
       "url": "https://news.bloombergtax.com/financial-accounting/openai-shifts-value-to-1-25-trillion-as-funding-talks-finalize",
       "source_name": "Bloomberg News via Bloomberg Tax",
       "source_role": "secondary",
-      "date_kind": "publication_date"
+      "date_kind": "publication_date",
+      "reviewed_at": "2026-10-25T07:20:41Z"
     },
     {
       "id": "anthropic-ipo-expectations",
@@ -47,7 +129,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 2,
+      "rank": 3,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -60,7 +142,8 @@
       "url": "https://live.euronext.com/en/financial-news/investors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown",
       "source_name": "Reuters via Euronext",
       "source_role": "secondary",
-      "date_kind": "publication_date"
+      "date_kind": "publication_date",
+      "reviewed_at": "2026-10-25T07:20:41Z"
     },
     {
       "id": "meta-capex-floor",
@@ -74,7 +157,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 3,
+      "rank": 4,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -87,7 +170,8 @@
       "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
       "source_name": "Meta Investor Relations",
       "source_role": "primary",
-      "date_kind": "publication_date"
+      "date_kind": "publication_date",
+      "reviewed_at": "2026-10-25T07:20:41Z"
     },
     {
       "id": "amazon-gwu-withdrawal",
@@ -100,7 +184,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 4,
+      "rank": 5,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -113,7 +197,8 @@
       "url": "https://www.datacenterdynamics.com/en/news/amazon-withdraws-application-for-data-center-campus-at-gwu-site-in-ashburn-virginia/",
       "source_name": "Data Center Dynamics",
       "source_role": "secondary",
-      "date_kind": "publication_date"
+      "date_kind": "publication_date",
+      "reviewed_at": "2026-10-25T07:20:41Z"
     },
     {
       "id": "coreweave-historical-cds",
@@ -128,7 +213,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 5,
+      "rank": 6,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -141,7 +226,8 @@
       "url": "https://news.bloomberglaw.com/artificial-intelligence/coreweave-risk-gauge-hits-record-pricing-60-odds-of-default",
       "source_name": "Bloomberg News via Bloomberg Law",
       "source_role": "secondary",
-      "date_kind": "publication_date"
+      "date_kind": "publication_date",
+      "reviewed_at": "2026-10-25T07:20:41Z"
     }
   ],
   "sources": [
@@ -228,6 +314,88 @@
       ],
       "source_date": "2009-09-17",
       "publication_note": "Page last updated September 17, 2009; paper version May 2009. Methodology, not a current issuer quote."
+    },
+    {
+      "id": "nvidia-gtc-berlin",
+      "name": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T15:28:13Z",
+      "quality_note": "Issuer keynote account; demonstrations are not adoption.",
+      "topics": [
+        "energy",
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ]
+    },
+    {
+      "id": "nvidia-gtc-dates",
+      "name": "NVIDIA GTC FAQ",
+      "url": "https://www.nvidia.com/en-eu/gtc/faq/",
+      "role": "primary",
+      "kind": "event_schedule",
+      "reviewed_at": "2026-10-25T15:28:13Z",
+      "quality_note": "Undated FAQ; event dates, not publication date.",
+      "topics": [
+        "events"
+      ]
+    },
+    {
+      "id": "nvidia-dsx-pod",
+      "name": "NVIDIA Newsroom · DSX POD",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T15:28:13Z",
+      "quality_note": "Prepared-site claim; future delivery target.",
+      "topics": [
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "nvidia-dsx-efficiency",
+      "name": "NVIDIA Newsroom · DSX efficiency",
+      "url": "https://nvidianews.nvidia.com/news/european-ecosystem-builds-worlds-most-efficient-ai-factories-with-nvidia-dsx",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T15:28:13Z",
+      "quality_note": "Conditional issuer claims; facility and workload boundaries matter.",
+      "topics": [
+        "energy",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "nvidia-openshell",
+      "name": "NVIDIA Newsroom · OpenShell",
+      "url": "https://nvidianews.nvidia.com/news/openshell-reference-architecture",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T15:28:13Z",
+      "quality_note": "Architecture availability does not establish sales.",
+      "topics": [
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ]
+    },
+    {
+      "id": "nvidia-supply-capacity",
+      "name": "NVIDIA Newsroom · Supply chain",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T15:28:13Z",
+      "quality_note": "Future targets; advance disbursement unverified.",
+      "topics": [
+        "chips",
+        "infrastructure",
+        "funding"
+      ]
     }
   ],
   "ledger": [
@@ -243,6 +411,22 @@
       "amount": 30,
       "currency": "USD bn",
       "note": "Approximate target, not closed proceeds. Public Bloomberg excerpt; terms may change."
+    },
+    {
+      "id": "nvidia-kyec-reservation-20261021",
+      "as_of": "2026-10-21",
+      "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout",
+      "source_date": "2026-10-21",
+      "from_entity": "NVIDIA",
+      "to_entity": "KYEC",
+      "instrument": "customer_contract",
+      "status": "Announced capacity-reservation advance; payment timing unverified",
+      "amount": 1.1,
+      "currency": "USD bn",
+      "note": "Reservation advance for future testing capacity, not equity or debt. No evidence here of KYEC recognized revenue. April 2027 production target.",
+      "risk": "Commissioning delays; payment and refund terms undisclosed.",
+      "overlap_group": "nvidia-kyec-testing-20261021",
+      "reviewed_at": "2026-10-25T15:28:13Z"
     }
   ],
   "earnings": [

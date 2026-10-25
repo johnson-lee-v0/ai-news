@@ -1,6 +1,6 @@
 # Public snapshot provenance
 
-Reviewed: **2026-10-25 07:20:41 UTC**. This is a manually reviewed snapshot of selected public reporting, not a live feed or complete market survey. Article text is independently written paraphrase. Linked publishers retain their original reporting; article bodies are not distributed here.
+Latest source review: **2026-10-25 15:28:13 UTC** for the added NVIDIA GTC post. Earlier sources below retain their original **2026-10-25 07:20:41 UTC** review time. This is a manually reviewed snapshot of selected public reporting, not a live feed or complete market survey. Article text is independently written paraphrase. Linked publishers retain their original reporting; article bodies are not distributed here.
 
 ## Sources and dates
 
@@ -14,3 +14,18 @@ Reviewed: **2026-10-25 07:20:41 UTC**. This is a manually reviewed snapshot of s
 | [Federal Reserve discussion paper: credit-risk methodology](https://www.federalreserve.gov/pubs/feds/2009/200937/index.html) | Paper version May 2009; page last updated September 17, 2009. Methodological context only. | Public paper reviewed, especially section 2.1. CDS-implied probabilities incorporate risk and liquidity premiums and depend on recovery/model assumptions. This supports the risk-neutral caveat; it does not validate ICE's CoreWeave calculation. |
 
 `brief.json` separates reported observations from conditional implications, counterevidence and potential confirmation/refutation tests. A source review date does not make historical data current. No X trend feed, real-time CDS, analyst consensus, full-article redistribution or automated publication is included.
+
+## NVIDIA GTC Berlin addition
+
+Reviewed **2026-10-25 15:28:13 UTC**. All linked material is NVIDIA's own public account. Issuer status establishes provenance, not independent verification of performance, commercial adoption or realized returns. The existing articles were not re-reviewed for this addition.
+
+| Source | Publication / event scope | Access and interpretation limits |
+| --- | --- | --- |
+| [NVIDIA keynote account](https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/) | Published October 21, 2026; keynote October 21. | Public blog reviewed. Covers open models, factory simulation and Microduck demonstrations; these examples do not establish adoption at scale. |
+| [NVIDIA GTC FAQ](https://www.nvidia.com/en-eu/gtc/faq/) | Undated page; workshops October 20, keynote October 21, conference/exhibits October 21–22, 2026. | Public schedule reviewed. October 20–22 is the event span, not a publication date. |
+| [DSX POD announcement](https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment) | Published October 21, 2026; delivery target early 2027. | The six-month-to-as-little-as-14-day claim concerns deployment at a prepared site. Power, cooling, networking and supporting infrastructure must be ready; it is not an end-to-end greenfield construction timetable. |
+| [DSX efficiency announcement](https://nvidianews.nvidia.com/news/european-ecosystem-builds-worlds-most-efficient-ai-factories-with-nvidia-dsx) | Published October 21, 2026. | MaxLPS's up-to-30% power reduction concerns equal token output. Separately, closed-loop liquid cooling and dry coolers can make facility cooling-water consumption near zero. Climate may require supplemental mechanical cooling. Neither figure measures every site's total resource footprint. |
+| [OpenShell reference architecture](https://nvidianews.nvidia.com/news/openshell-reference-architecture) | Published October 21, 2026; architecture described as available. | Public announcement reviewed. Rubin, Vera and BlueField/Sentry roles describe a technical architecture. Listed collaborations do not establish quantified orders, realized sales or an independent safety guarantee. |
+| [Supply-chain capacity plans](https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout) | Published October 21, 2026; KYEC U.S. high-volume production target April 2027. | NVIDIA describes a $1.1bn capacity-reservation advance supporting KYEC testing facilities/equipment. The public release does not establish payment timing or recognized KYEC revenue. The ledger records an announced advance for future capacity, not debt, equity, delivered capacity or a second revenue total. |
+
+The five-layer labels organize the post across energy, chips, infrastructure, models and applications. They are analytical categories, not evidence of five independently verified commercial outcomes. No automated monitoring or publication is implied by this addition.

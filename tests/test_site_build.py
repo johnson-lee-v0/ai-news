@@ -68,4 +68,23 @@ class PublicBuildTests(unittest.TestCase):
         self.assertNotIn('last_success_at',output['sources'][0])
         self.assertEqual(output['earnings'][0]['guidance'],self.raw['earnings'][0]['guidance'])
 
+    def test_highlights_reject_unreviewed_sources_and_private_fields(self):
+        raw=deepcopy(self.raw)
+        raw['articles'][0]['highlights']=[{'title':'Example','observation':'Synthetic test','claim_type':'management claim','implication':'Conditional','source_url':'https://example.com/unreviewed','source_date':'2026-01-01'}]
+        with self.assertRaises(ValueError): validate_public(raw)
+        raw['articles'][0]['highlights'][0]['source_url']=raw['sources'][0]['url']
+        raw['articles'][0]['highlights'][0]['private_note']='synthetic'
+        with self.assertRaises(ValueError): validate_public(raw)
+
+    def test_layer_ids_and_old_review_dates_remain_explicit(self):
+        raw=deepcopy(self.raw);raw['articles'][0]['ai_layers']=['unknown']
+        with self.assertRaises(ValueError): validate_public(raw)
+        raw=deepcopy(self.raw);raw['articles'][0]['reviewed_at']='2099-01-01'
+        with self.assertRaises(ValueError): validate_public(raw)
+        output=dashboard(self.raw,[],'uncommitted')
+        self.assertTrue(output['publication']['draft'])
+        self.assertEqual(len(output['layer_tracking']['layers']),5)
+        for original,article in zip(sorted(self.raw['articles'],key=lambda a:a['rank']),output['articles']):
+            self.assertEqual(article.get('reviewed_at'),original.get('reviewed_at'))
+
 if __name__=='__main__': unittest.main()

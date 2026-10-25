@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 import re
 import hashlib
 import unicodedata
+from .layers import annotate as annotate_layers, tracking as layer_tracking
 
 RULES = {
     "funding": {
@@ -193,6 +194,12 @@ def group_stories(articles):
         head.update(story_id=key, article_ids=[a["id"] for a in ordered if a.get("id")], related_count=len(group)-1,
                     related_sources=[{"name": a.get("source_name"), "url": a.get("url"), "role": a.get("source_role"), "article_id": a.get("id")} for a in ordered[1:]],
                     grouping_note="Matching title and publication day only. Related appearances may repeat one report; they are not independent confirmations.")
+        head["ai_layers"] = list(dict.fromkeys(layer for item in ordered for layer in item.get("ai_layers", [])))
+        head["layer_matches"] = [{"article_id": item.get("id"), "source_id": item.get("source_id"),
+                                  "source_name": item.get("source_name"), "source_role": item.get("source_role"),
+                                  "url": item.get("url"), "published_at": item.get("published_at"),
+                                  "date_kind": item.get("date_kind"), "date_precision": item.get("date_precision"),
+                                  "ai_layers": item.get("ai_layers", [])} for item in ordered if item.get("ai_layers")]
         stories.append(head)
     stories.sort(key=lambda a: (a["score"], a.get("published_at") or ""), reverse=True)
     return stories
@@ -218,7 +225,7 @@ def coverage(sources, now):
 def compose(data, now=None):
     now = now or datetime.now(timezone.utc)
     reviews = data.get("reviews", {})
-    articles = [enrich({**a, **reviews.get(a.get("id"), {})}, now) for a in data.get("articles", [])]
+    articles = [annotate_layers(enrich({**a, **reviews.get(a.get("id"), {})}, now)) for a in data.get("articles", [])]
     articles.sort(key=lambda a: (a["score"], a.get("published_at") or "", a.get("first_seen_at") or ""), reverse=True)
     stories = group_stories(articles)
     refreshes = data.get("refreshes", [])
@@ -251,7 +258,7 @@ def compose(data, now=None):
             break
     questions = [{"topic": key, "question": question, "items": sum(a["topic"] == key for a in actionable)} for key, name, question, entities in DOMAINS]
     return {**data, "articles": articles, "stories": stories, "as_of": now.isoformat(),
-            "coverage": coverage(sources, now), "watchlist": {"entities": WATCHLIST, "topics": [x[0] for x in DOMAINS]},
+            "coverage": coverage(sources, now), "layer_tracking": layer_tracking(stories, sources, now), "watchlist": {"entities": WATCHLIST, "topics": [x[0] for x in DOMAINS]},
             "brief": {"headline": headline, "bullets": bullets, "priority_questions": questions, "priority_items": priority_items,
                       "coverage_note": "Selected official feeds + reporting + public search RSS. Ranked by cash, orders, delivery and economics terms; automatic implications remain conditional prompts. X and market-wide completeness are not claimed."},
             "stats": {"articles": len(articles), "total_articles": data.get("total_count", len(articles)), "story_count": len(stories), "new_items": fresh_count, "changed_items": changed, "last_refresh": latest.get("finished_at"), "source_ok": ok, "source_total": len(sources), "recent_items": len(recent), "discovery_items": sum(a["source_role"] == "discovery" for a in articles), "needs_review": sum(a["review_status"] == "unreviewed" and a["relevance"] == "material" for a in stories)}}

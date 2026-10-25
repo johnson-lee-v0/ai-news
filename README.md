@@ -40,6 +40,7 @@ python3 -m pulse --data-dir /tmp/pulse-scratch serve
 
 ## What it provides
 
+- Five-layer tracking for energy, chips, infrastructure, models and applications, with evidence filters, source dates and explicit measurement gaps. See [the layer and financing guide](docs/LAYERS.md).
 - A short, diverse reading queue with source dates, source-quality labels, relevance filters and local read/dismiss controls.
 - A distinction between demand, physical capacity and funding. Commitments are not automatically treated as revenue; a circular financing relationship is not automatically treated as fraudulent.
 - Conditional implications, counterevidence and confirmation/refutation prompts. Automatic cards use source metadata and transparent rules, not verified full-document analysis.

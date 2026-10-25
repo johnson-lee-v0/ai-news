@@ -8,14 +8,18 @@ import os
 from pathlib import Path
 import re
 import subprocess
+import sys
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path: sys.path.insert(0, str(ROOT))
+from pulse.layers import LAYER_IDS, annotate as annotate_layers, tracking as layer_tracking
 FORMAT = 'ai-stock-pulse-static-v1'
 OUTPUTS = {'index.html', 'app.js', 'styles.css', 'favicon.svg', 'data/dashboard.json', 'build.json', '.nojekyll'}
 TOP_FIELDS = {'reviewed_at', 'headline', 'bullets', 'notice', 'articles', 'sources', 'ledger', 'earnings'}
-ARTICLE_FIELDS = {'id','title','url','published_at','date_kind','date_precision','source_id','source_name','source_role','lens','relevance','observation','summary','implication','beneficiaries','risks','counterevidence','confirms','refutes','uncertainty','entities','rank','event_date','report_period','publication_note','claim_type','access_note','source_date_note','methodology_url','republished_at','quote_as_of'}
-RECORD_FIELDS = {'ledger':{'id','as_of','source_url','source_date','from_entity','to_entity','instrument','status','amount','currency','note','overlap_group'},'earnings':{'id','as_of','source_url','source_date','company','period','metric','unit','reported','reported_period','guidance','guidance_period','consensus','consensus_source_url','consensus_as_of','consensus_period','note'}}
+ARTICLE_FIELDS = {'id','title','url','published_at','date_kind','date_precision','source_id','source_name','source_role','lens','relevance','observation','summary','implication','beneficiaries','risks','counterevidence','confirms','refutes','uncertainty','entities','rank','event_date','event_start','event_end','reviewed_at','report_period','publication_note','claim_type','access_note','source_date_note','methodology_url','republished_at','quote_as_of','highlights','ai_layers'}
+HIGHLIGHT_FIELDS = {'title','observation','claim_type','implication','source_url','source_date'}
+RECORD_FIELDS = {'ledger':{'id','as_of','source_url','source_date','from_entity','to_entity','instrument','status','amount','currency','note','overlap_group','risk','payment_status','revenue_status','reviewed_at'},'earnings':{'id','as_of','source_url','source_date','company','period','metric','unit','reported','reported_period','guidance','guidance_period','consensus','consensus_source_url','consensus_as_of','consensus_period','note'}}
 SOURCE_FIELDS = {'id','name','url','role','kind','reviewed_at','quality_note','topics','access_note','source_date','publication_note'}
 DOMAINS = [('funding','Funding & valuation','Can operators fund their commitments?'),('demand','Paid demand','Does usage convert to collected cash?'),('capacity','Capacity delivery','Which projects reach service?'),('earnings','Earnings','What is reported versus forecast?'),('models','Model economics','Does capability become paid use?'),('policy','Policy & constraints','What rules affect access or delivery?')]
 
@@ -66,7 +70,24 @@ def validate_public(raw):
         if item['id'] in article_ids or item['source_id'] not in ids: raise ValueError('Duplicate article or unknown public source')
         if item['source_role'] not in ('primary','secondary') or iso(item['published_at']) > reviewed: raise ValueError('Unreviewed/future evidence cannot be published')
         public_url(item['url'])
+        for date_key in ('reviewed_at','event_start','event_end'):
+            if item.get(date_key) and iso(item[date_key]) > reviewed:
+                raise ValueError('Article context dates cannot be later than review')
+        if item.get('event_start') and item.get('event_end') and iso(item['event_start']) > iso(item['event_end']):
+            raise ValueError('Event date range is reversed')
         if item.get('methodology_url'): public_url(item['methodology_url'])
+        if 'ai_layers' in item:
+            if not isinstance(item['ai_layers'], list) or any(key not in LAYER_IDS for key in item['ai_layers']) or len(set(item['ai_layers'])) != len(item['ai_layers']):
+                raise ValueError('Public layer mappings must use unique framework IDs')
+        if 'highlights' in item:
+            if not isinstance(item['highlights'], list) or not 1 <= len(item['highlights']) <= 8:
+                raise ValueError('Use one to eight short reviewed highlights')
+            for highlight in item['highlights']:
+                if not isinstance(highlight, dict) or set(highlight) != HIGHLIGHT_FIELDS or any(not isinstance(value, str) or not value.strip() for value in highlight.values()):
+                    raise ValueError('Highlights require explicit claims, implications and dated sources')
+                public_url(highlight['source_url'])
+                if highlight['source_url'] not in {source['url'] for source in raw['sources']} or iso(highlight['source_date']) > reviewed:
+                    raise ValueError('Highlight source must be reviewed and not future dated')
         article_ids.add(item['id'])
     # Validation functions inspect input only and do not create a database.
     import sys
@@ -75,6 +96,7 @@ def validate_public(raw):
     for section in ('ledger','earnings'):
         for record in raw[section]:
             if set(record)-RECORD_FIELDS[section]: raise ValueError('Unexpected public financial-record field')
+            if record.get('reviewed_at') and iso(record['reviewed_at']) > reviewed: raise ValueError('Record review cannot be later than snapshot')
             validate(section, deepcopy(record))
     return raw
 
@@ -88,7 +110,7 @@ def dashboard(raw, accounts, commit):
                     review_status='unreviewed', verification_status='source_reviewed_not_independently_audited',
                     inference_type='conditional_editorial_inference', article_ids=[item['id']], related_count=0,
                     score_reason='Editorial order in this selected, manually reviewed public snapshot. It is not a price forecast or a confidence score.')
-        articles.append(item)
+        articles.append(annotate_layers(item))
     sources=[{**source,'status':'reviewed','item_count':sum(a['source_id']==source['id'] for a in articles)} for source in raw['sources']]
     domains=[]
     for key,name,question in DOMAINS:
@@ -96,9 +118,9 @@ def dashboard(raw, accounts, commit):
         domains.append({'id':key,'name':name,'question':question,'status':'snapshot' if mapped else 'gap','connected_sources':mapped,
                         'note':'Reviewed sources are included for this topic; no live ingestion or complete coverage is implied.' if mapped else 'No reviewed item for this topic in the current public snapshot.'})
     safe_text(accounts)
-    return {'as_of':stamp,'publication':{'mode':'static','reviewed_at':stamp,'notice':raw['notice'],'repository_url':'https://github.com/johnson-lee-v0/ai-news','commit':commit},
+    return {'as_of':stamp,'publication':{'mode':'static','reviewed_at':stamp,'notice':raw['notice'],'repository_url':'https://github.com/johnson-lee-v0/ai-news','commit':commit,'draft':commit=='uncommitted'},
             'articles':articles,'stories':deepcopy(articles),'sources':sources,'refreshes':[], 'leads':[], 'notes':[], 'reviews':{},
-            'ledger':raw['ledger'],'earnings':raw['earnings'],'accounts':accounts,
+            'ledger':raw['ledger'],'earnings':raw['earnings'],'accounts':accounts,'layer_tracking':layer_tracking(articles,sources,static=True),
             'x_access':{'status':'not_connected','automatic':False,'can_capture':False,'detail':'This public snapshot does not collect X posts, trends or engagement. Profile links are a reading list; saved leads remain a local-app feature.'},
             'coverage':{'domains':domains,'gaps':['This is a selected manually reviewed snapshot, not a live or exhaustive feed.','X trends, live market/CDS quotes and consensus are not connected.','Local feed refreshes do not automatically publish to this site.'],'note':'Included sources were reviewed for this publication. These are not live endpoint-health checks.'},
             'watchlist':{'entities':sorted({e for a in articles for e in a['entities']}),'topics':[x[0] for x in DOMAINS]},
@@ -109,7 +131,9 @@ def dashboard(raw, accounts, commit):
 def revision():
     value=os.environ.get('GITHUB_SHA')
     if not value:
-        try: value=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip()
+        try:
+            dirty=subprocess.check_output(['git','status','--porcelain','--untracked-files=normal'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip()
+            value='uncommitted' if dirty else subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip()
         except (OSError,subprocess.CalledProcessError): value='uncommitted'
     if value!='uncommitted' and not re.fullmatch(r'[0-9a-f]{40}',value): raise ValueError('Invalid public commit identifier')
     return value
