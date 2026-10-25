@@ -1,6 +1,6 @@
 # Public snapshot provenance
 
-Latest source review: **2026-10-25 15:28:13 UTC** for the added NVIDIA GTC post. Earlier sources below retain their original **2026-10-25 07:20:41 UTC** review time. This is a manually reviewed snapshot of selected public reporting, not a live feed or complete market survey. Article text is independently written paraphrase. Linked publishers retain their original reporting; article bodies are not distributed here.
+Latest additions reviewed **October 25, 2026**: SpaceX filing/call analysis and PHP2Shell security analysis. Exact article and snapshot review timestamps are in `brief.json`; earlier sources retain their own review dates. This is a manually reviewed snapshot of selected public reporting, not a live feed or complete market survey. Article text is independently written paraphrase. Linked publishers retain their original reporting; article bodies are not distributed here.
 
 ## Sources and dates
 
@@ -62,3 +62,29 @@ The network includes selected historical, funded, contracted and conditional rel
 | [TeraWulf: Fluidstack expansion and Google backstop](https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner) | 2025-08-18 | Cumulative backstop, warrants and contracted capacity are distinct exposures. |
 | [Chamath Palihapitiya · original commentary](https://x.com/chamath/status/2114389987563381004) | 2026-10-25T16:13:00Z | Primary evidence of the author’s opinion, not independent confirmation of financing conditions. Energized-land investor perspective. |
 | [Elon Musk · executive statement](https://x.com/elonmusk/status/2114434646914068862) | 2026-10-25T19:11:00Z | Primary evidence of an executive’s statement. The claimed new $40 billion financing has no independent closing document in this review. |
+
+## SpaceX filing and call analysis
+
+Reviewed October 25, 2026. The new analysis preserves the distinction between source publication, reporting period and analyst review. The previously published network and stories remain intact. No additional confirmed debt edge is inferred from an executive post.
+
+| Source | Source date | Evidence boundary |
+|---|---|---|
+| [SEC filing index](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/0001628280-26-066880-index.html) | October 22, 2026 | Confirms filing date and September 30 reporting period. |
+| [SpaceX Q3 10-Q](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm) | October 22, 2026 | Cash flows, debt and cloud-contract terms. Operating cash less PP&E purchases is explicitly a calculation, not company-defined free cash flow. Valor financing is already within debt principal. These are period-end figures, not current liquidity. |
+| [Official earnings transcript](https://s21.q4cdn.com/184289198/files/content_files/SpaceX-Third-Quarter-2026-Webcast-Transcript.pdf) | October 20, 2026 | PDF pages 7–8, 10 and 12: management strategy, guidance and payback claims. The allocation target does not measure utilization; forecast capacity and revenue are not delivered results. |
+| [Q3 release and segment tables](https://d18rn0p25nwr6d.cloudfront.net/CIK-0001181412/31b2b4f8-a7d7-44f3-a94b-9c2cba49b021.html) | October 20, 2026 | Reported SI, Connectivity and Space results. SI includes acquired and non-rental revenue; adjusted EBITDA is not cash flow. |
+| [Official earnings event](https://ir.spacex.com/events/event-details/2026/Q3-2026-Earnings/default.aspx) | October 20, 2026 | Establishes call date and links the official materials. |
+
+SpaceX's merchant/captive classification is analytical. Connectivity earnings are not evidence of segment cash freely available for transfer. The October 25 debt claim remains unreconciled with the September filing; its amount is not added to filed obligations.
+
+## PHP2Shell and reported agentic post-exploitation
+
+Reviewed October 25, 2026. The runtime flaws, defensive research process and reported attacker activity are separate claims. The story uses the October 23 material update as its ordering date and explicitly retains the October 21 disclosure/patch date. It does not represent a newly discovered October 25 incident.
+
+| Source | Source date | Evidence boundary |
+|---|---|---|
+| [PHP Foundation security release](https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/) | October 21, 2026 | Maintainer account of the two core-runtime vulnerabilities and security releases; total PHP adoption is not an exposed or compromised population count. |
+| [Wiz PHP2Shell research](https://www.wiz.io/blog/php2shell-php-rce) | October 21, 2026 | Defensive research and AI-assisted exploitability validation; this is distinct from evidence of attacker use. |
+| [Unit 42 incident report](https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/) | October 21, updated October 23, 2026 | Researcher's account of observed post-exploitation behavior. The model/provider is unidentified and full autonomy is not established. No exploit procedure is reproduced. |
+
+Security-spending implications are conditional, with no inferred orders or revenue. This editorial addition does not add an automated security feed or guarantee detection of every future same-URL article update.

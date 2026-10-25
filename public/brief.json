@@ -1,13 +1,188 @@
 {
-  "reviewed_at": "2026-10-25T21:01:28.086036+00:00",
-  "headline": "AI financing is selective; funding still has to become usable capacity and paying demand.",
+  "reviewed_at": "2026-10-25T21:37:12.437849+00:00",
+  "headline": "AI growth depends on funded capacity, durable cash flow and secure applications.",
   "bullets": [
-    "Read source dates separately from the review date. The latest source is not the date the page was opened.",
-    "Inspect funding, compute commitments, service capacity and guarantees separately. Announced or contingent amounts are not cash or revenue.",
-    "Use the full selected network to see relationships; choose a company to inspect dated terms and uncertainty."
+    "SpaceX combines rented compute and internal AI products. Separate operating cash, installed capacity, management forecasts and later debt claims.",
+    "PHP2Shell connects runtime exposure with reported AI-assisted attacker activity. Patching, identity controls and bounded agent permissions matter; vendor revenue impact is unproven.",
+    "The financing map retains the full selected network. Commitments, contingent exposure and capacity are not summed into cash or revenue."
   ],
   "notice": "Selected public evidence and a curated financing network, manually reviewed on the displayed date. This is not a live or comprehensive feed. Original source dates remain separate; X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "spacex-q3-filing-neocloud-20261025",
+      "title": "SpaceX’s neocloud model: sell compute, keep compute, fund both",
+      "published_at": "2026-10-22",
+      "date_kind": "filing_date",
+      "date_precision": "day",
+      "event_date": "2026-10-20",
+      "report_period": "Quarter and nine months ended September 30, 2026",
+      "reviewed_at": "2026-10-25T21:30:00Z",
+      "source_name": "SpaceX · SEC filing and official earnings call",
+      "source_role": "primary",
+      "claim_type": "reported results / management guidance; implications are inference",
+      "lens": "funding",
+      "observation": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone.",
+      "implication": "Short-term compute sales must fund long-lived assets.",
+      "beneficiaries": "Conditional: chip, power and construction suppliers benefit if expansion becomes delivered capacity; external compute customers benefit only if capacity remains available after internal allocation. Other clouds could receive inference demand, but no new purchase contract is established here.",
+      "risks": "Idle capacity, falling renewal prices or heavier internal allocation could reduce external cash receipts while financing costs continue. A customer can be a competitor too; avoid treating every link as incremental market demand.",
+      "counterevidence": "Connectivity profitability, positive Q3 SI operating income and the September cash-and-securities balance weaken a simple funding-crisis story. The nine-month SI loss and cash-spending gap weaken a self-funding-growth story. Both can be true.",
+      "confirms": "The risk thesis strengthens if energized capacity outruns paid utilization, renewal prices weaken, cash conversion deteriorates or debt draws and collateral requirements increase. Track external versus internal allocation and customer concentration separately.",
+      "refutes": "Sustained external utilization, durable renewal prices, improving operating cash conversion and timely capacity delivery would weaken the risk thesis. Installed GW or EBITDA alone would not settle it.",
+      "uncertainty": "No independently verified reconciliation connects Musk’s October 25 $40 billion GPU-debt statement to the September 30 balance sheet. Do not add the claim to filed debt. Customer-level utilization, realized rental pricing and future funding terms remain insufficiently disclosed here; consensus is not connected.",
+      "source_date_note": "Results and call: October 20. SEC filing: October 22, covering September 30. This is new analysis reviewed October 25, not newly reported October 25 operating data. The separate October 25 debt statement is later than the reporting period and remains unreconciled.",
+      "access_note": "SEC filing/index, issuer release and official transcript reviewed through public sources on October 25. No account access, live X feed or third-party transcript is used to establish the financial figures.",
+      "entities": [
+        "SpaceX",
+        "xAI",
+        "Starlink",
+        "Grok",
+        "Cursor"
+      ],
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "highlights": [
+        {
+          "title": "The cloud seller is also a compute consumer",
+          "claim_type": "management strategy; inference",
+          "observation": "On the call, Musk described a roughly equal internal/external allocation that could move to 60/40, favored spot pricing and short contracts, and said SpaceX had tried sourcing inference elsewhere.",
+          "implication": "Classify SpaceX as merchant infrastructure plus a captive user, and a potential customer of other clouds. Allocation targets are not measured utilization or contracted demand.",
+          "source_url": "https://s21.q4cdn.com/184289198/files/content_files/SpaceX-Third-Quarter-2026-Webcast-Transcript.pdf",
+          "source_date": "2026-10-20"
+        },
+        {
+          "title": "AI revenue is broader than GPU rental",
+          "claim_type": "reported Q3 results; inference",
+          "observation": "USD billions: SI revenue 7.560, operating income 0.431 and capex 16.444. Revenue includes 0.538 advertising and 7.022 solutions/infrastructure; acquired Cursor contributed 0.608. Connectivity produced 2.367 operating income on 5.248 revenue; Space recorded a 0.007 operating loss. SI’s nine-month operating loss was 3.295; its Q3 adjusted EBITDA of 4.953 is not cash flow.",
+          "implication": "Separate acquired growth, model/app sales and rented compute. Connectivity offers earnings support, but segment operating income does not prove cash is freely transferable or growth is self-funding.",
+          "source_url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001181412/31b2b4f8-a7d7-44f3-a94b-9c2cba49b021.html",
+          "source_date": "2026-10-20"
+        },
+        {
+          "title": "A large cash buffer followed a large capital raise",
+          "claim_type": "reported cash flows; explicit calculation",
+          "observation": "Nine-month operating cash of $13.097bn minus PP&E purchases of $48.069bn equals −$34.972bn. This comparison precedes separately reported rebates/capitalized interest and is not company-defined FCF. September 30 cash plus securities totaled $89.855bn, excluding restricted cash. Net IPO proceeds were $85.675bn; do not add that flow to the ending balance.",
+          "implication": "The buffer can finance growth, while the spending gap shows why ongoing funding and cash conversion matter. These are September figures, not current liquidity.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
+          "source_date": "2026-10-22"
+        },
+        {
+          "title": "Count obligations once; contract duration needs scrutiny",
+          "claim_type": "filed obligations and contract terms; inference",
+          "observation": "September debt principal was $38.006bn, with $0.983bn finance leases separate. Valor’s $12.897bn failed-sale-leaseback financing is already included within that debt total. This accounting term means financing rather than a completed accounting sale, not a default. Cloud contracts are typically three years but terminable by either party on 90 days’ notice.",
+          "implication": "A nominal multiyear term can offer less revenue certainty than it suggests. Inspect termination rights, collateral and actual draws; neither the Valor balance nor the later $40bn executive claim is an additive confirmed debt edge.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
+          "source_date": "2026-10-22"
+        },
+        {
+          "title": "Fast expansion and payback remain management expectations",
+          "claim_type": "guidance / management claim",
+          "observation": "Management guided Q4 capex to $35–40bn, year-end nameplate compute to 2.5–3GW versus 1.7GW at September 30, and Q1 2027 revenue to $33–37bn. It claimed new-compute payback below one year at current prices, while expecting Q4 gross margin nearer Q2 after Q3 tariff/customer-mix benefits.",
+          "implication": "Nameplate capacity is not utilization, and payback at current prices is not a proven durable return. Compare delivered capacity, paid workloads, realized prices and cash receipts against each forecast.",
+          "source_url": "https://s21.q4cdn.com/184289198/files/content_files/SpaceX-Third-Quarter-2026-Webcast-Transcript.pdf",
+          "source_date": "2026-10-20"
+        },
+        {
+          "title": "Where SpaceX fits in the five AI layers",
+          "claim_type": "analytical classification",
+          "observation": "Infrastructure is the merchant/captive compute operation; Grok sits in models and Cursor in applications. Energy and chips are dependencies. Starlink provides distribution and a separate earnings stream; that is not proof it supplies data-center interconnect or deployed orbital compute.",
+          "implication": "Follow energy → installed chips → utilized infrastructure → paid model/app usage → collected cash. Each transition needs evidence; financing is a constraint across the layers, not a replacement sixth layer.",
+          "source_url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001181412/31b2b4f8-a7d7-44f3-a94b-9c2cba49b021.html",
+          "source_date": "2026-10-20"
+        }
+      ],
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
+      "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
+      "rank": 1,
+      "relevance": "material",
+      "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
+    },
+    {
+      "id": "php2shell-agentic-security-update-20261023",
+      "title": "PHP2Shell: AI helps defenders—and may accelerate intrusions",
+      "published_at": "2026-10-23",
+      "date_kind": "update_date",
+      "date_precision": "day",
+      "event_date": "2026-10-21",
+      "reviewed_at": "2026-10-25T21:34:34Z",
+      "source_name": "PHP Foundation · Wiz Research · Palo Alto Networks Unit 42",
+      "source_role": "primary",
+      "claim_type": "maintainer disclosure / vendor research and incident report; implications are inference",
+      "lens": "policy",
+      "observation": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement.",
+      "implication": "Faster attacks may raise the value of faster defense.",
+      "beneficiaries": "Conditional: application-security, identity, cloud-monitoring and incident-response providers could see demand if enterprises accelerate remediation. The sources establish no incremental vendor bookings or revenue.",
+      "risks": "Affected operators face downtime, sensitive-data exposure and emergency remediation costs. Additional tools alone cannot substitute for verified patches and response capability.",
+      "counterevidence": "Patches are available, exploitation conditions vary, and defenders also use AI. One vendor’s incident account does not establish a universal attack success rate or an industrywide spending increase.",
+      "confirms": "Independent incident corroboration, faster observed attack timelines, persistent unpatched exposure and disclosed security-contract growth would strengthen the operational or spending thesis.",
+      "refutes": "Rapid verified patch adoption, contained incidents and no measurable change in security purchasing would weaken the thesis of sustained incremental spending.",
+      "uncertainty": "Unit 42 attributes agentic activity from behavior; the attacker’s model is unidentified and full autonomy is unproven. The public account is not an independently reproduced forensic record.",
+      "source_date_note": "Event date means patch/disclosure date, not the intrusion date: October 21. Unit 42 originally reported October 21; its October 23, 12:30 p.m. PT update adds agentic activity. October 25 is this review date; the incident date is unspecified.",
+      "access_note": "All three primary pages were publicly readable on October 25. Vendor findings and incident attribution remain attributed claims; no private telemetry was accessed.",
+      "entities": [
+        "PHP",
+        "PHP2Shell",
+        "Wiz",
+        "Palo Alto Networks",
+        "cybersecurity"
+      ],
+      "ai_layers": [
+        "applications",
+        "infrastructure",
+        "models"
+      ],
+      "highlights": [
+        {
+          "title": "Patch the runtime, not just the application",
+          "claim_type": "maintainer disclosure",
+          "observation": "PHP’s October 21 releases 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix CVE-2026-109618 and CVE-2026-109619 in the core runtime.",
+          "implication": "Inventory the deployed runtime and verify remediation; updating application code alone may leave the shared dependency exposed.",
+          "source_url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "AI-assisted defense is a separate finding",
+          "claim_type": "vendor research claim; inference",
+          "observation": "Wiz says frontier models supported its vulnerability research, detection and patch validation, coordinated with PHP and other researchers.",
+          "implication": "AI can shorten defensive validation too. This work is not evidence that Wiz’s research models powered the reported intrusion.",
+          "source_url": "https://www.wiz.io/blog/php2shell-php-rce",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "Two hours is an incident claim, not a benchmark",
+          "claim_type": "vendor incident report / behavioral attribution",
+          "observation": "Unit 42 reports password hashes and MFA secrets accessed within two hours of initial exploitation at a European government entity. It interprets subsequent behavior as agentic AI activity.",
+          "implication": "If corroborated, the report raises the value of rapid containment and identity protection; it does not prove autonomous discovery of the PHP flaws.",
+          "source_url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
+          "source_date": "2026-10-23"
+        },
+        {
+          "title": "Wide deployment does not mean universal compromise",
+          "claim_type": "research scope; inference",
+          "observation": "Wiz demonstrated impact on selected deployments and describes differing exploitation requirements. PHP prevalence is not a count of successfully attacked sites.",
+          "implication": "Assess exposure by runtime, deployment and controls. Do not infer that every PHP site is exploitable or already compromised.",
+          "source_url": "https://www.wiz.io/blog/php2shell-php-rce",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "Three AI layers, one security dependency",
+          "claim_type": "analytical classification / conditional implication",
+          "observation": "Applications depend on PHP; infrastructure supplies isolation and monitoring; models assist security workflows. The Foundation says humans still make patch decisions.",
+          "implication": "Enterprises deploying agents should consider least privilege, bounded agent permissions and isolation alongside patching. Possible security spending is a hypothesis, not proven supplier revenue.",
+          "source_url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+          "source_date": "2026-10-21"
+        }
+      ],
+      "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
+      "source_id": "php2shell-agentic-security-update-20261023-source-1",
+      "rank": 2,
+      "relevance": "material",
+      "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
+    },
     {
       "id": "ai-credit-selectivity-20261025",
       "title": "Chamath and Musk warn on AI credit; new loans complicate the claim",
@@ -36,7 +211,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 1,
+      "rank": 3,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -99,7 +274,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 2,
+      "rank": 4,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -174,7 +349,7 @@
       "entities": [
         "OpenAI"
       ],
-      "rank": 3,
+      "rank": 5,
       "observation": "Bloomberg reports a $1.25tn valuation target, versus $1.4tn discussed earlier, for a proposed ~$30bn raise.",
       "summary": "Negotiations remain open; this is not a completed financing.",
       "implication": "If capital becomes harder to secure, labs may prioritize fewer compute commitments.",
@@ -204,7 +379,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 4,
+      "rank": 6,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -232,7 +407,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 5,
+      "rank": 7,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -259,7 +434,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 6,
+      "rank": 8,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -288,7 +463,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 7,
+      "rank": 9,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -809,6 +984,131 @@
         "capacity"
       ],
       "access_note": "Public reply inspected on October 25. Post time approximately 19:11 UTC; engagement counts are not evidence."
+    },
+    {
+      "id": "spacex-q3-filing-neocloud-20261025-source-1",
+      "name": "SpaceX · September 30 10-Q, cash flows, debt and SI contract terms",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
+      "source_date": "2026-10-22",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T21:30:00Z",
+      "quality_note": "Primary issuer disclosure. Reported figures, management forecasts and analytical implications are distinguished; later unconfirmed financing is not added to filed debt.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "SEC filing/index, issuer release and official transcript reviewed through public sources on October 25. No account access, live X feed or third-party transcript is used to establish the financial figures."
+    },
+    {
+      "id": "spacex-q3-filing-neocloud-20261025-source-2",
+      "name": "SEC index · filing date and reporting period",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/0001628280-26-066880-index.html",
+      "source_date": "2026-10-22",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T21:30:00Z",
+      "quality_note": "Primary issuer disclosure. Reported figures, management forecasts and analytical implications are distinguished; later unconfirmed financing is not added to filed debt.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "SEC filing/index, issuer release and official transcript reviewed through public sources on October 25. No account access, live X feed or third-party transcript is used to establish the financial figures."
+    },
+    {
+      "id": "spacex-q3-filing-neocloud-20261025-source-3",
+      "name": "Official Q3 call transcript · PDF pages 7–8, 10 and 12",
+      "url": "https://s21.q4cdn.com/184289198/files/content_files/SpaceX-Third-Quarter-2026-Webcast-Transcript.pdf",
+      "source_date": "2026-10-20",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T21:30:00Z",
+      "quality_note": "Primary issuer disclosure. Reported figures, management forecasts and analytical implications are distinguished; later unconfirmed financing is not added to filed debt.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "SEC filing/index, issuer release and official transcript reviewed through public sources on October 25. No account access, live X feed or third-party transcript is used to establish the financial figures."
+    },
+    {
+      "id": "spacex-q3-filing-neocloud-20261025-source-4",
+      "name": "SpaceX · Q3 results release and segment tables",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001181412/31b2b4f8-a7d7-44f3-a94b-9c2cba49b021.html",
+      "source_date": "2026-10-20",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T21:30:00Z",
+      "quality_note": "Primary issuer disclosure. Reported figures, management forecasts and analytical implications are distinguished; later unconfirmed financing is not added to filed debt.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "SEC filing/index, issuer release and official transcript reviewed through public sources on October 25. No account access, live X feed or third-party transcript is used to establish the financial figures."
+    },
+    {
+      "id": "spacex-q3-filing-neocloud-20261025-source-5",
+      "name": "SpaceX IR · October 20 earnings event and official materials",
+      "url": "https://ir.spacex.com/events/event-details/2026/Q3-2026-Earnings/default.aspx",
+      "source_date": "2026-10-20",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T21:30:00Z",
+      "quality_note": "Primary issuer disclosure. Reported figures, management forecasts and analytical implications are distinguished; later unconfirmed financing is not added to filed debt.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "SEC filing/index, issuer release and official transcript reviewed through public sources on October 25. No account access, live X feed or third-party transcript is used to establish the financial figures."
+    },
+    {
+      "id": "php2shell-agentic-security-update-20261023-source-1",
+      "name": "Unit 42 · October 23 update to October 21 threat brief",
+      "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
+      "source_date": "2026-10-23",
+      "role": "primary",
+      "kind": "security_research",
+      "reviewed_at": "2026-10-25T21:34:34Z",
+      "quality_note": "Primary maintainer/researcher account. Research methods and incident attribution are distinct; no population-wide compromise or vendor revenue is inferred.",
+      "topics": [
+        "models",
+        "policy"
+      ],
+      "access_note": "All three primary pages were publicly readable on October 25. Vendor findings and incident attribution remain attributed claims; no private telemetry was accessed."
+    },
+    {
+      "id": "php2shell-agentic-security-update-20261023-source-2",
+      "name": "PHP Foundation · patched versions and coordinated security work",
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+      "source_date": "2026-10-21",
+      "role": "primary",
+      "kind": "security_research",
+      "reviewed_at": "2026-10-25T21:34:34Z",
+      "quality_note": "Primary maintainer/researcher account. Research methods and incident attribution are distinct; no population-wide compromise or vendor revenue is inferred.",
+      "topics": [
+        "models",
+        "policy"
+      ],
+      "access_note": "All three primary pages were publicly readable on October 25. Vendor findings and incident attribution remain attributed claims; no private telemetry was accessed."
+    },
+    {
+      "id": "php2shell-agentic-security-update-20261023-source-3",
+      "name": "Wiz Research · PHP2Shell defensive research and validation",
+      "url": "https://www.wiz.io/blog/php2shell-php-rce",
+      "source_date": "2026-10-21",
+      "role": "primary",
+      "kind": "security_research",
+      "reviewed_at": "2026-10-25T21:34:34Z",
+      "quality_note": "Primary maintainer/researcher account. Research methods and incident attribution are distinct; no population-wide compromise or vendor revenue is inferred.",
+      "topics": [
+        "models",
+        "policy"
+      ],
+      "access_note": "All three primary pages were publicly readable on October 25. Vendor findings and incident attribution remain attributed claims; no private telemetry was accessed."
     }
   ],
   "ledger": [
