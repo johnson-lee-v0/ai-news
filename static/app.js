@@ -1,6 +1,8 @@
 'use strict';
 (() => {
   const $ = (id) => document.getElementById(id);
+  const isStatic = document.documentElement.dataset.mode === 'static';
+  let snapshotRequest;
   const state = { data: null, page: 'brief', limit: 40, refreshing: false };
   const sections = new Set(['brief', 'evidence', 'financing', 'earnings', 'sources']);
   const labels = { demand: 'Demand', capacity: 'Capacity', funding: 'Funding', earnings: 'Earnings', models: 'Model economics', policy: 'Policy & constraints', other: 'Source update' };
@@ -31,11 +33,60 @@
   const empty = (title, explanation, extra = '') => `<div class="empty"><p class="eyebrow">Nothing inferred from missing data</p><h2>${esc(title)}</h2><p>${esc(explanation)}</p>${extra}</div>`;
   const notify = (message, type = '') => { const el = $('notification'); el.textContent = message; el.className = `notification ${type}`; el.hidden = false; };
   async function api(path, options = {}) {
+    if (isStatic) throw new Error('The public snapshot does not connect to the local API.');
     const response = await fetch(path, { cache: 'no-store', ...options });
     let body;
     try { body = await response.json(); } catch (_) { throw new Error(`The local server returned an unreadable response (${response.status}).`); }
     if (!response.ok) throw new Error(body.error || body.message || `Request failed (${response.status}).`);
     return body;
+  }
+  function loadSnapshot() {
+    if (!snapshotRequest) snapshotRequest = fetch('./data/dashboard.json', {cache:'no-store'}).then(async response => {
+      if (!response.ok) throw new Error(`The published snapshot is unavailable (${response.status}).`);
+      const data = await response.json();
+      if (data?.publication?.mode !== 'static') throw new Error('This file is not a published research snapshot.');
+      return data;
+    });
+    return snapshotRequest;
+  }
+  function hideLocalControls() {
+    document.querySelectorAll('.local-only').forEach(element => {
+      element.hidden = true;
+      if ('disabled' in element) element.disabled = true;
+      element.querySelectorAll('input,textarea,select,button').forEach(control => {control.disabled = true;});
+    });
+  }
+  function configureStaticMode() {
+    if (!isStatic) return;
+    hideLocalControls();
+    $('review-filter').value = 'all';
+    const discoveryOrder = $('sort').querySelector('[value="discovery"]');
+    discoveryOrder.hidden = true; discoveryOrder.disabled = true;
+    const replacements = {
+      'mode-label':'PUBLIC / REVIEWED SNAPSHOT', 'desk-kicker':'The public research desk',
+      'stat-new-label':'Days since review', 'stat-total-label':'Published evidence items',
+      'stat-sources-label':'Linked sources', 'stat-review-label':'Topics represented',
+      'brief-method':'Reviewed public snapshot', 'priority-description':'Selected research and dated evidence from this published snapshot. Source links, counterevidence and uncertainty remain available for inspection.',
+      'evidence-scope':'Selected for this public snapshot', 'sources-title':'Sources behind the snapshot.',
+      'sources-description':'These are the dated references selected for this public edition. Source access and market conditions may have changed since review.',
+      'sources-heading':'Linked source references', 'footer-desk':'A public research snapshot',
+      'account-description':'Public profile links offer additional viewpoints. Identity references do not certify every claim. This site does not follow accounts or capture posts.',
+    };
+    Object.entries(replacements).forEach(([id,value]) => {$(id).textContent = value;});
+    document.querySelector('[data-nav="brief"]').textContent = 'Reviewed brief';
+    document.querySelector('[data-nav="sources"]').textContent = 'Sources & scope';
+    $('loading').textContent = 'Opening the published research snapshot…';
+    $('load-error').querySelector('h1').textContent = 'The published snapshot could not be loaded.';
+    $('retry').textContent = 'Reload page';
+    $('refresh-explainer').innerHTML = '<div><p class="eyebrow">How this public edition works</p><h2>A dated view. A visible boundary.</h2><p>This site loads one reviewed snapshot. It does not refresh the news, check source availability, or collect posts. Search and filters explore the published evidence; they cannot find events outside it.</p></div><ol><li><strong>Read the date</strong><span>Snapshot review and source publication describe different events.</span></li><li><strong>Inspect the evidence</strong><span>Open the linked source and compare the claim with its context.</span></li><li><strong>Test the implication</strong><span>Use counterevidence and the next checks to challenge the interpretation.</span></li></ol>';
+    $('methodology').innerHTML = '<summary>How this public snapshot works <span aria-hidden="true">+</span></summary><div><p>This is a reviewed, read-only publication. It contains selected evidence and interpretation as of the displayed review date, not a complete or continuously updated market feed.</p><p>Source dates describe publication or filing. A review date records when this edition was examined; it does not establish that linked pages remain available or that claims remain current.</p><p>Search, filters and the probability illustration run in this page. No reading state or personal notes are saved or sent to an application server. The hosting provider may process ordinary page-request logs.</p><p>Financing and earnings comparisons keep commitments, revenue, guidance and sourced consensus separate. Missing fields mean unavailable, not zero. Conditional implications are not forecasts.</p></div>';
+  }
+  function renderPublication() {
+    if (!isStatic) return;
+    const publication = state.data.publication || {};
+    const reviewedAt = publication.reviewed_at || publication.as_of;
+    $('publication-banner').hidden = false;
+    $('publication-banner').innerHTML = `<div><span class="badge teal">Public reviewed snapshot</span><strong>Reviewed ${esc(dateLabel(reviewedAt,true))}</strong><p>${esc(publication.notice || 'A dated, read-only selection of public research. No automatic news refresh or private inputs are connected.')}</p></div>${publication.repository_url ? link(publication.repository_url,'Source code ↗','text-link') : ''}`;
   }
   function selectPage() {
     const hash = location.hash.slice(1);
@@ -46,13 +97,14 @@
       item.classList.toggle('active', active);
       if (active) item.setAttribute('aria-current', 'page'); else item.removeAttribute('aria-current');
     });
-    document.title = `${{ brief: 'Daily brief', evidence: 'Evidence feed', financing: 'Financing map', earnings: 'Earnings', sources: 'Sources & leads' }[state.page]} — AI Stock Pulse`;
+    document.title = `${{ brief: isStatic ? 'Reviewed brief' : 'Daily brief', evidence: 'Evidence feed', financing: 'Financing map', earnings: 'Earnings', sources: isStatic ? 'Sources & scope' : 'Sources & leads' }[state.page]} — AI Stock Pulse`;
   }
   function lastRefresh() {
     const refresh = list(state.data?.refreshes)[0];
     return refresh || {};
   }
   function isNew(article) {
+    if (isStatic) return false;
     const latest = lastRefresh();
     return Boolean(latest.started_at && timestamp(article.first_seen_at) >= timestamp(latest.started_at));
   }
@@ -63,7 +115,7 @@
     return 'secondary';
   }
   function stories() { return Array.isArray(state.data?.stories) ? state.data.stories : list(state.data?.articles); }
-  function readingState(article) { return ['reviewed','dismissed'].includes(article.review_status) ? article.review_status : 'unreviewed'; }
+  function readingState(article) { return !isStatic && ['reviewed','dismissed'].includes(article.review_status) ? article.review_status : 'unreviewed'; }
   function groupedArticleIds(article) {
     const ids = [...new Set([article.id, ...list(article.article_ids), ...list(article.related_sources).map(source => source.article_id)].filter(id => id !== null && id !== undefined))];
     if (!ids.length || ids.some(id => typeof id !== 'string' || !id.trim())) throw new Error('This reading group has incomplete source identifiers. Reload before changing its state.');
@@ -76,26 +128,28 @@
     const reviewed = readingState(article);
     const published = dateValue(article.published_at);
     const future = article.date_precision === 'future_unverified' || (published && published.getTime() > Date.now());
-    const dateKind = article.date_kind || (article.kind === 'sec_filing' ? 'filing_date' : role === 'discovery' ? 'search_feed_date' : 'feed_date');
+    const dateKind = article.date_kind || (isStatic ? 'publication_date' : article.kind === 'sec_filing' ? 'filing_date' : role === 'discovery' ? 'search_feed_date' : 'feed_date');
     const dateName = {filing_date:'Filed',search_feed_date:'Search feed date',feed_date:'Feed date',publication_date:'Published'}[dateKind] || 'Source date';
     const publication = future ? `Unverified source date ${dateLabel(article.published_at)}` : published ? `${dateName} ${dateLabel(article.published_at)}` : 'Source date unknown';
-    const revised = lastRefresh().started_at && article.revised_at && timestamp(article.revised_at) >= timestamp(lastRefresh().started_at);
+    const revised = !isStatic && lastRefresh().started_at && article.revised_at && timestamp(article.revised_at) >= timestamp(lastRefresh().started_at);
     const details = [
       ['Potential beneficiaries', article.beneficiaries], ['Exposures / possible losers', article.risks], ['Counterevidence to seek', article.counterevidence],
       ['Would strengthen the implication', article.confirms], ['Would weaken the implication', article.refutes], ['Uncertainty', article.uncertainty],
     ];
     const related = list(article.related_sources);
     const relationCount = Number.isFinite(Number(article.related_count)) ? Number(article.related_count) : related.length;
+    const dated = value => value ? dateLabel(value, String(value).includes('T')) : null;
+    const sourceContext = [['Claim type', article.claim_type], ['Event date', dated(article.event_date)], ['Report period', article.report_period], ['Republished', dated(article.republished_at)], ['Market quote as of', dated(article.quote_as_of)], ['Source date context', article.source_date_note || article.publication_note], ['Source access', article.access_note]].filter(([,value]) => value);
     return `<article class="article ${reviewed === 'dismissed' ? 'article-dismissed' : ''}"><div class="article-rank" aria-hidden="true">${String(rank).padStart(2, '0')}</div><div class="article-main">
       <div class="article-meta"><span class="badge ${lens}">${labels[lens]}</span><span class="badge source-${role}">${roleLabels[role]}</span>${isNew(article) ? '<span class="badge new">Newly discovered</span>' : ''}${revised ? '<span class="badge amber">Revised</span>' : ''}${reviewed !== 'unreviewed' ? `<span class="badge subtle">${reviewed === 'reviewed' ? 'Read' : 'Dismissed'}</span>` : ''}<span class="source-name">${esc(article.publisher_name || article.source_name || article.source_id || 'Source')}</span><span class="meta-separator" aria-hidden="true">/</span><span>${esc(publication)}</span></div>
       <h3>${link(article.url, `${esc(article.title || 'Untitled source item')} <span class="article-link-icon" aria-hidden="true">↗</span>`)}</h3>
       ${role === 'discovery' ? '<p class="discovery-caveat">Discovery lead: this search result is a pointer to reporting. Open the publisher and verify the claim and original publication date; the search-feed date can be later. It is not independent corroboration.</p>' : ''}
-      <div class="article-body"><div class="article-block"><p class="eyebrow">${role === 'discovery' ? 'Claim to investigate · search metadata' : 'Observation · source metadata'}</p><p>${esc(text(article.observation || article.summary || article.title, 'No excerpt available. Open the original source.'))}</p></div><div class="article-block inference"><p class="eyebrow">Conditional implication · reading prompt</p><p>${esc(text(article.implication, 'Read the source before drawing a conclusion. This item has not received a specific analyst interpretation.'))}</p></div></div>
-      <div class="reading-actions" aria-label="Reading state for ${esc(article.title || 'source item')}">${reviewed !== 'reviewed' ? `<button class="queue-button" type="button" data-review="reviewed" data-article-id="${esc(article.id)}">Mark read</button>` : ''}${reviewed !== 'dismissed' ? `<button class="queue-button quiet" type="button" data-review="dismissed" data-article-id="${esc(article.id)}">Dismiss</button>` : ''}${reviewed !== 'unreviewed' ? `<button class="queue-button quiet" type="button" data-review="unreviewed" data-article-id="${esc(article.id)}">Reset to unread</button>` : ''}${relationCount ? `<span class="related-count">${plural(relationCount, 'related source appearance')}</span>` : ''}</div>
-      ${relationCount ? '<p class="fine-print reading-scope">Reading actions apply to every source appearance currently grouped here.</p>' : ''}<details class="article-details"><summary>Test the implication & inspect provenance</summary><div class="source-excerpt"><p class="eyebrow">Source excerpt / filing metadata</p><p>${esc(text(article.summary, 'No source excerpt supplied. Open the original.'))}</p></div><div class="analysis-grid">${details.map(([heading, value]) => `<div class="analysis-item"><p class="eyebrow">${esc(heading)}</p><p>${esc(text(value, 'Not assessed for this item.'))}</p></div>`).join('')}<div class="analysis-item wide"><p class="eyebrow">Why this is ranked here</p><p>${esc(text(article.score_reason, 'Priority rules consider signal relevance and source dates.'))}${Number.isFinite(article.score) ? ` · Priority score: ${article.score}` : ''}</p>${article.priority_factors ? `<p class="factor-line">${esc(text(article.priority_factors, ''))}</p>` : ''}</div></div>
+      <div class="article-body"><div class="article-block"><p class="eyebrow">${isStatic ? 'Sourced observation' : role === 'discovery' ? 'Claim to investigate · search metadata' : 'Observation · source metadata'}</p><p>${esc(text(article.observation || article.summary || article.title, 'No excerpt available. Open the original source.'))}</p></div><div class="article-block inference"><p class="eyebrow">${isStatic ? 'Interpretation · not a prediction' : 'Conditional implication · reading prompt'}</p><p>${esc(text(article.implication, 'Read the source before drawing a conclusion. This item has not received a specific analyst interpretation.'))}</p></div></div>
+      <div class="reading-actions local-only" aria-label="Reading state for ${esc(article.title || 'source item')}">${reviewed !== 'reviewed' ? `<button class="queue-button" type="button" data-review="reviewed" data-article-id="${esc(article.id)}">Mark read</button>` : ''}${reviewed !== 'dismissed' ? `<button class="queue-button quiet" type="button" data-review="dismissed" data-article-id="${esc(article.id)}">Dismiss</button>` : ''}${reviewed !== 'unreviewed' ? `<button class="queue-button quiet" type="button" data-review="unreviewed" data-article-id="${esc(article.id)}">Reset to unread</button>` : ''}${relationCount ? `<span class="related-count">${plural(relationCount, 'related source appearance')}</span>` : ''}</div>
+      ${relationCount ? '<p class="fine-print reading-scope local-only">Reading actions apply to every source appearance currently grouped here.</p>' : ''}<details class="article-details"><summary>Test the implication & inspect provenance</summary><div class="source-excerpt"><p class="eyebrow">${isStatic ? 'Source summary & date context' : 'Source excerpt / filing metadata'}</p><p>${esc(text(article.summary, 'No source excerpt supplied. Open the original.'))}</p>${sourceContext.length ? `<dl class="source-context">${sourceContext.map(([label,value]) => `<div><dt>${esc(label)}</dt><dd>${esc(text(value))}</dd></div>`).join('')}</dl>` : ''}${article.methodology_url ? `<p class="methodology-link">${link(article.methodology_url,'Probability methodology / assumptions ↗')}</p>` : ''}</div><div class="analysis-grid">${details.map(([heading, value]) => `<div class="analysis-item"><p class="eyebrow">${esc(heading)}</p><p>${esc(text(value, 'Not assessed for this item.'))}</p></div>`).join('')}<div class="analysis-item wide"><p class="eyebrow">${isStatic ? 'Why this is included' : 'Why this is ranked here'}</p><p>${esc(text(article.score_reason, isStatic ? 'Selected for this dated public brief. Editorial order is not a market-impact forecast.' : 'Priority rules consider signal relevance and source dates.'))}${Number.isFinite(article.score) ? ` · Priority score: ${article.score}` : ''}</p>${article.priority_factors ? `<p class="factor-line">${esc(text(article.priority_factors, ''))}</p>` : ''}</div></div>
       ${related.length ? `<div class="related-sources"><p class="eyebrow">Related coverage</p>${related.map(source => `<p>${link(source.url || source.original_url, esc(source.title || source.name || source.source_name || source.publisher_name || 'Related source'))}${source.source_role || source.role ? ` <span class="badge subtle">${esc(roleLabels[source.source_role || source.role] || source.source_role || source.role)}</span>` : ''}</p>`).join('')}<p class="fine-print">A similar headline or multiple links may trace to the same announcement. Grouping is a reading aid, not proof of independent corroboration.</p></div>` : ''}
-      <div class="provenance-line"><span>First discovered ${esc(dateLabel(article.first_seen_at, true))}</span><span>Last observed ${esc(dateLabel(article.observed_at, true))}</span>${article.revised_at ? `<span>Last revised ${esc(dateLabel(article.revised_at, true))}</span>` : ''}<span>Date kind: ${esc(dateKind)} · precision: ${esc(article.date_precision || 'unknown')}</span><span>${link(article.url, role === 'discovery' ? 'Open discovery result ↗' : 'Open dated source ↗')}</span></div>
-      ${article.source_quality ? `<p class="fine-print">Source scope: ${esc(text(article.source_quality))}</p>` : ''}${article.content_hash ? `<div class="provenance-line"><span>Content fingerprint ${esc(String(article.content_hash).slice(0, 16))}…</span></div>` : ''}${list(article.provenance).length ? `<div class="provenance-line"><span>Recorded appearances (${list(article.provenance).length}): ${list(article.provenance).map(p => link(p.original_url, esc(p.source_name || p.source_id || 'Source'))).join(' · ')}.</span></div>` : ''}<p class="fine-print">Read / dismissed is your local reading queue, not a verification judgment.</p></details>
+      <div class="provenance-line">${isStatic ? `<span>Snapshot reviewed ${esc(dateLabel(state.data.publication?.reviewed_at || state.data.publication?.as_of,true))}</span>${article.as_of ? `<span>Analysis as of ${esc(dateLabel(article.as_of))}</span>` : ''}` : `<span>First discovered ${esc(dateLabel(article.first_seen_at, true))}</span><span>Last observed ${esc(dateLabel(article.observed_at, true))}</span>`}${article.revised_at ? `<span>Last revised ${esc(dateLabel(article.revised_at, true))}</span>` : ''}<span>Date kind: ${esc(dateKind)} · precision: ${esc(article.date_precision || 'unknown')}</span><span>${link(article.url, role === 'discovery' ? 'Open discovery result ↗' : 'Open dated source ↗')}</span></div>
+      ${article.source_quality ? `<p class="fine-print">Source scope: ${esc(text(article.source_quality))}</p>` : ''}${article.content_hash ? `<div class="provenance-line"><span>Content fingerprint ${esc(String(article.content_hash).slice(0, 16))}…</span></div>` : ''}${list(article.provenance).length ? `<div class="provenance-line"><span>Recorded appearances (${list(article.provenance).length}): ${list(article.provenance).map(p => link(p.original_url, esc(p.source_name || p.source_id || 'Source'))).join(' · ')}.</span></div>` : ''}<p class="fine-print local-only">Read / dismissed is your local reading queue, not a verification judgment.</p></details>
     </div></article>`;
   }
   function renderBrief() {
@@ -104,34 +158,37 @@
     const sources = list(data.sources);
     const articles = list(data.articles);
     const latest = lastRefresh();
-    const latestTime = latest.finished_at || (typeof stats.last_refresh === 'string' ? stats.last_refresh : stats.last_refresh?.finished_at);
-    $('edition-date').textContent = new Intl.DateTimeFormat('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date());
-    $('edition-asof').textContent = latestTime ? `Last refresh ${dateLabel(latestTime, true)}` : 'No refresh completed';
-    $('stat-new').textContent = stats.new_items ?? latest.new_count ?? 0;
-    $('stat-changed').textContent = `${stats.changed_items ?? latest.changed_count ?? 0} revised`;
+    const reviewedAt = data.publication?.reviewed_at || data.publication?.as_of;
+    const latestTime = isStatic ? reviewedAt : latest.finished_at || (typeof stats.last_refresh === 'string' ? stats.last_refresh : stats.last_refresh?.finished_at);
+    $('edition-date').textContent = isStatic ? `Snapshot as of ${dateLabel(data.publication?.as_of || reviewedAt)}` : new Intl.DateTimeFormat('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date());
+    $('edition-asof').textContent = isStatic ? `Reviewed ${dateLabel(reviewedAt,true)}` : latestTime ? `Last refresh ${dateLabel(latestTime, true)}` : 'No refresh completed';
+    const reviewAge = dateValue(reviewedAt) ? (Date.now()-timestamp(reviewedAt))/86400000 : null;
+    $('stat-new').textContent = isStatic ? reviewAge !== null && reviewAge >= 0 ? Math.floor(reviewAge) : '—' : stats.new_items ?? latest.new_count ?? 0;
+    $('stat-changed').textContent = isStatic ? 'See the exact date above' : `${stats.changed_items ?? latest.changed_count ?? 0} revised`;
     $('stat-stories').textContent = `${stats.story_count ?? stories().length} reading groups`;
-    $('stat-review').textContent = stats.needs_review ?? stories().filter(a => readingState(a) === 'unreviewed' && a.relevance === 'material').length;
+    $('stat-review').textContent = isStatic ? new Set(articles.map(article => article.lens || 'other')).size : stats.needs_review ?? stories().filter(a => readingState(a) === 'unreviewed' && a.relevance === 'material').length;
     $('stat-total').textContent = stats.total_articles ?? stats.articles ?? articles.length;
-    $('stat-sources').textContent = `${stats.source_ok ?? sources.filter((s) => s.status === 'ok').length} / ${stats.source_total ?? sources.length}`;
+    $('stat-sources').textContent = isStatic ? sources.length : `${stats.source_ok ?? sources.filter((s) => s.status === 'ok').length} / ${stats.source_total ?? sources.length}`;
     $('nav-count').textContent = stories().filter(a => readingState(a) !== 'dismissed').length;
     const roleCounts = {primary:0,secondary:0,discovery:0}; sources.forEach(source => { roleCounts[roleOf(source)] += 1; });
-    $('scope-strip').innerHTML = `<div><strong>Selected coverage, not the whole market.</strong><span>${roleCounts.primary} primary sources · ${roleCounts.secondary} reporting feeds · ${roleCounts.discovery} discovery searches. A clear source check is not a complete news check.</span></div><a class="text-link" href="#sources">See coverage & gaps ↗</a>`;
+    $('scope-strip').innerHTML = isStatic ? `<div><strong>Selected public evidence, reviewed as a dated snapshot.</strong><span>${roleCounts.primary} primary sources · ${roleCounts.secondary} reported sources · ${roleCounts.discovery} discovery leads. Linked sources are references, not live feed connections.</span></div><a class="text-link" href="#sources">See sources & scope ↗</a>` : `<div><strong>Selected coverage, not the whole market.</strong><span>${roleCounts.primary} primary sources · ${roleCounts.secondary} reporting feeds · ${roleCounts.discovery} discovery searches. A clear source check is not a complete news check.</span></div><a class="text-link" href="#sources">See coverage & gaps ↗</a>`;
     const issues = [];
-    if (!latestTime) issues.push('No refresh has completed. Refresh sources to begin; no example articles are mixed into this feed.');
-    else if (Date.now() - timestamp(latestTime) > 48 * 3600000) issues.push('The last refresh is over 48 hours old. Refresh before treating this as a current brief.');
+    if (!dateValue(latestTime)) issues.push(isStatic ? 'The snapshot review date is unavailable. Check original sources before relying on these claims.' : 'No refresh has completed. Refresh sources to begin; no example articles are mixed into this feed.');
+    else if (timestamp(latestTime) > Date.now()) issues.push(isStatic ? 'The supplied review date is in the future and has not been validated.' : 'The recorded refresh time is in the future. Check the local clock.');
+    else if (Date.now() - timestamp(latestTime) > 48 * 3600000) issues.push(isStatic ? 'This snapshot was reviewed over 48 hours ago. It may be stale; inspect source updates before treating it as current.' : 'The last refresh is over 48 hours old. Refresh before treating this as a current brief.');
     const failed = sources.filter((s) => s.status === 'error').length;
-    if (failed) issues.push(`${plural(failed, 'source')} failed on the latest attempt. Stored evidence may be older; inspect Sources & leads.`);
+    if (failed && !isStatic) issues.push(`${plural(failed, 'source')} failed on the latest attempt. Stored evidence may be older; inspect Sources & leads.`);
     const freshestPublication = Math.max(0, ...articles.filter((a) => a.date_precision !== 'future_unverified' && timestamp(a.published_at) <= Date.now()).map((a) => timestamp(a.published_at)));
-    if (articles.length && freshestPublication && Date.now() - freshestPublication > 7 * 86400000) issues.push('The newest loaded source date is over seven days old. A successful fetch does not mean the articles are new.');
+    if (articles.length && freshestPublication && Date.now() - freshestPublication > 7 * 86400000) issues.push(isStatic ? 'The newest published source date is over seven days old. This is a historical snapshot.' : 'The newest loaded source date is over seven days old. A successful fetch does not mean the articles are new.');
     $('freshness').textContent = issues.join(' ');
     $('freshness').hidden = !issues.length;
-    $('brief-headline').textContent = data.brief?.headline || (articles.length ? 'The evidence is ready for review.' : 'Your brief starts with primary sources.');
+    $('brief-headline').textContent = data.brief?.headline || (isStatic ? 'A dated view of the evidence.' : articles.length ? 'The evidence is ready for review.' : 'Your brief starts with primary sources.');
     const bullets = list(data.brief?.bullets);
-    $('brief-bullets').innerHTML = bullets.length ? bullets.map((item) => `<li>${esc(text(item, ''))}</li>`).join('') : '<li>Refresh official sources to start a dated evidence history.</li><li>Use X links as leads; confirm the underlying claim before assigning an implication.</li>';
+    $('brief-bullets').innerHTML = bullets.length ? bullets.map((item) => `<li>${esc(text(item, ''))}</li>`).join('') : isStatic ? '<li>Read the review date and each source date together.</li><li>Use the evidence and counterevidence to test conditional implications.</li>' : '<li>Refresh official sources to start a dated evidence history.</li><li>Use X links as leads; confirm the underlying claim before assigning an implication.</li>';
     $('coverage-note').textContent = data.brief?.coverage_note || 'Coverage is limited to configured public sources. No comprehensive X trend stream, market-wide consensus feed or real-time price feed is connected.';
     const briefItems = Array.isArray(data.brief?.priority_items) ? data.brief.priority_items : stories();
     const activeStories = briefItems.filter(a => readingState(a) !== 'dismissed');
-    $('brief-feed').innerHTML = activeStories.length ? activeStories.slice(0, 6).map((a, i) => renderArticle(a, i + 1)).join('') : empty(articles.length ? 'No active priority signals in selected coverage.' : 'No evidence has been collected yet.', articles.length ? 'Browse all evidence or revisit dismissed items. This does not establish an absence of important news elsewhere.' : 'Refresh configured sources. Source failures stay visible; missing coverage does not mean nothing happened.');
+    $('brief-feed').innerHTML = activeStories.length ? activeStories.slice(0, 6).map((a, i) => renderArticle(a, i + 1)).join('') : isStatic ? empty('No evidence cards in this edition.', 'Missing cards do not establish an absence of important news. The publication date and scope define this snapshot.') : empty(articles.length ? 'No active priority signals in selected coverage.' : 'No evidence has been collected yet.', articles.length ? 'Browse all evidence or revisit dismissed items. This does not establish an absence of important news elsewhere.' : 'Refresh configured sources. Source failures stay visible; missing coverage does not mean nothing happened.');
     const questions = list(data.brief?.priority_questions);
     $('priority-questions').hidden = !questions.length;
     $('priority-questions').innerHTML = questions.length ? `<p class="eyebrow">The questions that can change the view</p><div>${questions.slice(0,4).map((q,i) => `<p><span>${String(i+1).padStart(2,'0')}</span>${esc(typeof q === 'string' ? q : q.question || q.title || text(q))}</p>`).join('')}</div>` : '';
@@ -155,7 +212,7 @@
           ${note.source_access ? `<p class="fine-print">Source access: ${esc(text(note.source_access))}</p>` : ''}
         </details></div></article>`;
     }).join('');
-    $('curated-research').innerHTML = notes.length ? `<div class="section-heading"><div><p class="eyebrow">Source-grounded research</p><h2>Claims in context</h2></div><span class="badge teal">Curated · dated sources</span></div><p class="section-description">A quick read, with the full evidence and limitations one click away. These dated research notes are reviewed separately from automatic feed refreshes.</p><div class="article-list">${cards}</div>` : '';
+    $('curated-research').innerHTML = notes.length ? `<div class="section-heading"><div><p class="eyebrow">Source-grounded research</p><h2>Claims in context</h2></div><span class="badge teal">Curated · dated sources</span></div><p class="section-description">A quick read, with the full evidence and limitations one click away. ${isStatic ? 'These notes reflect their displayed review dates; this site does not update them automatically.' : 'These dated research notes are reviewed separately from automatic feed refreshes.'}</p><div class="article-list">${cards}</div>` : '';
   }
   function renderEvidence() {
     const query = $('search').value.trim().toLowerCase();
@@ -176,11 +233,12 @@
     });
     if ($('sort').value === 'date') items.sort((a,b) => timestamp(b.published_at)-timestamp(a.published_at));
     else if ($('sort').value === 'discovery') items.sort((a,b) => timestamp(b.first_seen_at)-timestamp(a.first_seen_at));
-    else items.sort((a,b) => (Number(b.score)||0)-(Number(a.score)||0));
+    else items.sort((a,b) => isStatic ? (Number(a.editorial_rank)||Number.MAX_SAFE_INTEGER)-(Number(b.editorial_rank)||Number.MAX_SAFE_INTEGER) : (Number(b.score)||0)-(Number(a.score)||0));
     $('evidence-count').textContent = plural(stories().length,'reading group');
-    $('filter-count').textContent = `${plural(items.length,'matching group')} from ${plural(list(state.data.articles).length,'loaded source item')} of ${state.data.stats?.total_articles ?? list(state.data.articles).length} retained. Filed, feed and search-feed dates are labeled separately; timestamps use UTC.`;
+    $('filter-count').textContent = isStatic ? `${plural(items.length,'matching group')} from ${plural(list(state.data.articles).length,'published evidence item')}. Source dates and snapshot review dates are distinct; timestamps use UTC.` : `${plural(items.length,'matching group')} from ${plural(list(state.data.articles).length,'loaded source item')} of ${state.data.stats?.total_articles ?? list(state.data.articles).length} retained. Filed, feed and search-feed dates are labeled separately; timestamps use UTC.`;
     $('evidence-feed').innerHTML = items.length ? items.slice(0,state.limit).map((a,i) => renderArticle(a,i+1)).join('') : empty('No evidence matches these filters.', 'Try another company, source type or reading state. No result is not evidence that the topic has no developments.');
     $('show-more').hidden = items.length <= state.limit;
+    if (isStatic) hideLocalControls();
   }
   function populateEntities() {
     const select = $('entity-filter'); const previous = select.value;
@@ -195,12 +253,12 @@
   function renderLedger() {
     const records = list(state.data.ledger);
     $('ledger-count').textContent = plural(records.length, 'sourced record');
-    $('ledger-content').innerHTML = records.length ? `<div class="table-wrap" tabindex="0" role="region" aria-label="Financing evidence ledger; scroll horizontally if needed"><table><thead><tr><th>Relationship</th><th>Instrument / state</th><th>Amount / exposure</th><th>Timing & overlap</th><th>Provenance</th></tr></thead><tbody>${records.map((r) => `<tr><td><span class="entity-path">${esc(r.from_entity)}</span><span class="path-arrow" aria-hidden="true">↓</span><span class="entity-path">${esc(r.to_entity)}</span></td><td>${esc(r.instrument)}<small>${esc(r.status || 'Status unknown')}</small></td><td>${esc(amount(r.amount,r.currency))}<small>${esc(r.note || 'No additional terms recorded.')}</small></td><td>As of ${esc(dateLabel(r.as_of))}<small>Overlap group: ${esc(r.overlap_group || 'Not assessed')}</small></td><td>${link(r.source_url, 'Source ↗')}<small>${esc(dateLabel(r.source_date))}</small></td></tr>`).join('')}</tbody></table></div><p class="table-note">Amounts are not totaled. Rows may describe different stages of the same economic arrangement; overlap groups flag possible duplication. An announced commitment is not recognized revenue.</p>` : empty('No financing relationships validated yet.', 'The ledger accepts sourced, dated relationships. Feed headlines do not automatically become confirmed investments, contracts, debt or revenue.', '<p>Review evidence and import a curation file with <code>python3 -m pulse import-curation research.json</code>. See the local README for the schema.</p>');
+    $('ledger-content').innerHTML = records.length ? `<div class="table-wrap" tabindex="0" role="region" aria-label="Financing evidence ledger; scroll horizontally if needed"><table><thead><tr><th>Relationship</th><th>Instrument / state</th><th>Amount / exposure</th><th>Timing & overlap</th><th>Provenance</th></tr></thead><tbody>${records.map((r) => `<tr><td><span class="entity-path">${esc(r.from_entity)}</span><span class="path-arrow" aria-hidden="true">↓</span><span class="entity-path">${esc(r.to_entity)}</span></td><td>${esc(r.instrument)}<small>${esc(r.status || 'Status unknown')}</small></td><td>${esc(amount(r.amount,r.currency))}<small>${esc(r.note || 'No additional terms recorded.')}</small></td><td>As of ${esc(dateLabel(r.as_of))}<small>Overlap group: ${esc(r.overlap_group || 'Not assessed')}</small></td><td>${link(r.source_url, 'Source ↗')}<small>${esc(dateLabel(r.source_date))}</small></td></tr>`).join('')}</tbody></table></div><p class="table-note">Amounts are not totaled. Rows may describe different stages of the same economic arrangement; overlap groups flag possible duplication. An announced commitment is not recognized revenue.</p>` : empty('No financing relationships validated yet.', 'The ledger accepts sourced, dated relationships. Feed headlines do not automatically become confirmed investments, contracts, debt or revenue.', isStatic ? '' : '<p>Review evidence and import a curation file with <code>python3 -m pulse import-curation research.json</code>. See the local README for the schema.</p>');
   }
   const metricValue = (value, unit) => value === null || value === undefined || value === '' ? '<span class="unavailable">Not sourced</span>' : `${esc(text(value))}${unit ? `<small>${esc(unit)}</small>` : ''}`;
   function renderEarnings() {
     const records = list(state.data.earnings);
-    $('earnings-content').innerHTML = records.length ? `<div class="table-wrap" tabindex="0" role="region" aria-label="Earnings comparisons; scroll horizontally if needed"><table><thead><tr><th>Company / period</th><th>Metric</th><th>Reported</th><th>Guidance</th><th>Consensus</th><th>Evidence</th></tr></thead><tbody>${records.map((r) => `<tr><td><strong>${esc(r.company)}</strong><small>${esc(r.period)}</small></td><td>${esc(r.metric)}<small>${esc(r.note || '')}</small></td><td>${metricValue(r.reported,r.unit)}<small>Period: ${esc(r.reported_period || r.period || 'Not specified')}</small></td><td>${metricValue(r.guidance,r.unit)}<small>Guidance period: ${esc(r.guidance_period || 'Not specified')}</small></td><td>${metricValue(r.consensus,r.unit)}<small>Consensus period: ${esc(r.consensus_period || 'Not specified')}</small><small>Consensus as of: ${esc(r.consensus_as_of ? dateLabel(r.consensus_as_of, true) : 'Not sourced')}</small>${r.consensus_source_url ? `<small>${link(r.consensus_source_url, 'Consensus source ↗')}</small>` : ''}</td><td>${link(r.source_url, 'Company source ↗')}<small>${esc(dateLabel(r.source_date))}</small></td></tr>`).join('')}</tbody></table></div><p class="table-note">No beat / miss is calculated automatically. Verify fiscal period, units, GAAP versus adjusted basis, and consensus timestamp before comparing.</p>` : empty('No earnings comparisons verified yet.', 'Earnings announcements can appear in the feed. Numeric comparisons are added only after the reported period, metric, accounting basis and source are checked. Unavailable consensus remains blank.', '<p>Add reviewed comparisons using <code>python3 -m pulse import-curation research.json</code>. Separate actuals and management guidance; attach an independent source to consensus.</p>');
+    $('earnings-content').innerHTML = records.length ? `<div class="table-wrap" tabindex="0" role="region" aria-label="Earnings comparisons; scroll horizontally if needed"><table><thead><tr><th>Company / period</th><th>Metric</th><th>Reported</th><th>Guidance</th><th>Consensus</th><th>Evidence</th></tr></thead><tbody>${records.map((r) => `<tr><td><strong>${esc(r.company)}</strong><small>${esc(r.period)}</small></td><td>${esc(r.metric)}<small>${esc(r.note || '')}</small></td><td>${metricValue(r.reported,r.unit)}<small>Period: ${esc(r.reported_period || r.period || 'Not specified')}</small></td><td>${metricValue(r.guidance,r.unit)}<small>Guidance period: ${esc(r.guidance_period || 'Not specified')}</small></td><td>${metricValue(r.consensus,r.unit)}<small>Consensus period: ${esc(r.consensus_period || 'Not specified')}</small><small>Consensus as of: ${esc(r.consensus_as_of ? dateLabel(r.consensus_as_of, true) : 'Not sourced')}</small>${r.consensus_source_url ? `<small>${link(r.consensus_source_url, 'Consensus source ↗')}</small>` : ''}</td><td>${link(r.source_url, 'Company source ↗')}<small>${esc(dateLabel(r.source_date))}</small></td></tr>`).join('')}</tbody></table></div><p class="table-note">No beat / miss is calculated automatically. Verify fiscal period, units, GAAP versus adjusted basis, and consensus timestamp before comparing.</p>` : empty('No earnings comparisons verified yet.', 'Earnings announcements can appear in the feed. Numeric comparisons are added only after the reported period, metric, accounting basis and source are checked. Unavailable consensus remains blank.', isStatic ? '' : '<p>Add reviewed comparisons using <code>python3 -m pulse import-curation research.json</code>. Separate actuals and management guidance; attach an independent source to consensus.</p>');
   }
   function renderCoverage() {
     const coverage = state.data.coverage || {};
@@ -208,17 +266,23 @@
     $('coverage-explanation').textContent = coverage.note || 'These are the questions mapped to selected sources. Coverage is not exhaustive; source health and the quality of the underlying evidence still matter.';
     $('coverage-matrix').innerHTML = list(coverage.domains).length ? list(coverage.domains).map(domain => {
       const mapped = list(domain.connected_sources).map(s => typeof s === 'string' ? sourceMap.get(s) || {id:s,name:s} : s);
-      const status = domain.status === 'covered' ? 'Sources mapped' : domain.status === 'discovery_only' ? 'Discovery only' : 'Coverage gap';
-      return `<article class="coverage-cell"><div class="coverage-cell-heading"><h3>${esc(domain.name || domain.id)}</h3><span class="badge ${domain.status === 'covered' ? 'teal' : 'amber'}">${status}</span></div><p>${esc(domain.question || '')}</p><p class="fine-print">${esc(domain.note || '')}</p><div class="coverage-source-links">${mapped.length ? mapped.map(source => source.url ? link(source.url, esc(source.name || source.id)) : `<span>${esc(source.name || source.id)}</span>`).join(' · ') : 'No configured source mapped'}</div></article>`;
+      const status = isStatic ? mapped.length ? 'Included' : 'Outside snapshot' : domain.status === 'covered' ? 'Sources mapped' : domain.status === 'discovery_only' ? 'Discovery only' : 'Coverage gap';
+      return `<article class="coverage-cell"><div class="coverage-cell-heading"><h3>${esc(domain.name || domain.id)}</h3><span class="badge ${(isStatic ? mapped.length : domain.status === 'covered') ? 'teal' : 'amber'}">${status}</span></div><p>${esc(domain.question || '')}</p><p class="fine-print">${esc(domain.note || '')}</p><div class="coverage-source-links">${mapped.length ? mapped.map(source => source.url ? link(source.url, esc(source.name || source.id)) : `<span>${esc(source.name || source.id)}</span>`).join(' · ') : isStatic ? 'No reference included for this question' : 'No configured source mapped'}</div></article>`;
     }).join('') : empty('Coverage mapping is not available.', 'The source list below shows what is configured, not proof of complete topic coverage.');
     const gaps = list(coverage.gaps);
     $('coverage-gaps').innerHTML = gaps.length ? `<p class="eyebrow">Known gaps</p><ul>${gaps.map(gap => `<li>${esc(typeof gap === 'string' ? gap : gap.note || gap.message || gap.name || text(gap))}</li>`).join('')}</ul>` : '';
     $('coverage-gaps').hidden = !gaps.length;
   }
   function renderAccounts() {
+    if (isStatic) {
+      $('x-access').innerHTML = '<span class="badge amber">No X collection</span><div><strong>A public snapshot has no account connection.</strong><p>This page does not read timelines, find trending posts or accept personal research notes. Any included social reference remains a lead to check against its underlying evidence.</p></div>';
+      const hasAccounts = list(state.data.accounts).length > 0;
+      ['account-heading','account-description','account-list'].forEach(id => {$(id).hidden = !hasAccounts;});
+      if (!hasAccounts) return;
+    }
     const access = state.data.x_access || {};
     const blocked = access.status !== 'connected';
-    $('x-access').innerHTML = `<span class="badge ${blocked ? 'amber' : 'teal'}">${blocked ? 'X session not verified' : 'X session available'}</span><div><strong>${access.automatic ? 'X collection status' : 'X reading is separate from automatic refresh'}</strong><p>${esc(access.detail || 'Manual post capture is available; no automated timeline or trend coverage is configured.')}</p><small>${access.checked_at ? `Access check ${esc(dateLabel(access.checked_at,true))}` : 'Existing browser session has not been checked.'}</small></div>`;
+    if (!isStatic) $('x-access').innerHTML = `<span class="badge ${blocked ? 'amber' : 'teal'}">${blocked ? 'X session not verified' : 'X session available'}</span><div><strong>${access.automatic ? 'X collection status' : 'X reading is separate from automatic refresh'}</strong><p>${esc(access.detail || 'Manual post capture is available; no automated timeline or trend coverage is configured.')}</p><small>${access.checked_at ? `Access check ${esc(dateLabel(access.checked_at,true))}` : 'Existing browser session has not been checked.'}</small></div>`;
     const accounts = list(state.data.accounts);
     $('account-count').textContent = plural(accounts.length,'profile');
     $('account-list').innerHTML = accounts.length ? accounts.map(account => `<article class="account-card"><div class="account-heading"><h3>${link(account.url,esc(account.name || account.handle || 'Account'))}</h3><span class="account-handle">${esc(account.handle ? '@'+String(account.handle).replace(/^@/,'') : '')}</span></div><p class="account-role">${esc(text(account.role,''))}</p><div class="account-topics">${list(account.topics).map(topic => `<span class="badge subtle">${esc(topic)}</span>`).join('')}</div><p>${esc(text(account.why,''))}</p><p class="account-caveat"><strong>Read with context:</strong> ${esc(text(account.bias,'No source is a substitute for primary evidence.'))}</p>${account.example_url ? `<p class="account-example">${link(account.example_url,'Example post ↗')}${account.example_note ? ` · ${esc(account.example_note)}` : ''}</p>` : ''}<div class="account-footer">${account.verification_url ? link(account.verification_url,'Identity / expertise evidence ↗') : '<span>Identity source unavailable</span>'}<span>Checked ${esc(dateLabel(account.verified_at))}</span></div><p class="fine-print">Public identity checked; session access and every post are not verified.</p></article>`).join('') : empty('No reading-list profiles verified yet.', 'Profiles will appear here once their identity and area of expertise have source references. No accounts are followed automatically.');
@@ -226,6 +290,15 @@
   function renderSources() {
     renderCoverage(); renderAccounts();
     const sources = list(state.data.sources);
+    if (isStatic) {
+      $('source-status-summary').textContent = plural(sources.length,'linked reference');
+      $('source-list').innerHTML = sources.length ? sources.map(source => {
+        const role = roleOf(source);
+        return `<article class="source-row"><div class="source-heading-wrap"><div class="source-heading">${link(source.url,esc(source.name || source.title || source.id))}<span class="badge subtle">Curated reference</span><span class="badge source-${role}">${roleLabels[role]}</span></div><p class="source-quality">${esc(text(source.quality_note || source.coverage_note,'Selected evidence for this edition. Inclusion does not verify every claim or establish current availability.'))}</p>${source.access_note ? `<p class="source-detail">${esc(source.access_note)}</p>` : ''}</div><div class="source-time">Source date<strong>${esc(dateLabel(source.published_at || source.source_date || source.date))}</strong></div><div class="source-time">${source.reviewed_at ? 'Reviewed for this edition' : 'Snapshot reviewed'}<strong>${esc(dateLabel(source.reviewed_at || state.data.publication?.reviewed_at,true))}</strong></div></article>`;
+      }).join('') : empty('No source references in this edition.', 'This public snapshot does not check live feed availability.');
+      $('lead-list').innerHTML = '';
+      return;
+    }
     const ok = sources.filter(s => s.status === 'ok').length;
     $('source-status-summary').textContent = `${ok} / ${sources.length} last fetches successful`;
     $('source-list').innerHTML = sources.length ? sources.map(source => {
@@ -239,21 +312,22 @@
     $('lead-count').textContent = plural(leads.length,'lead');
     $('lead-list').innerHTML = leads.length ? leads.map(lead => `<article class="lead-item"><span class="badge amber">Unverified lead</span><div>${link(lead.url,`${esc(lead.url)} ↗`)}${lead.note ? `<p>${esc(lead.note)}</p>` : ''}<p class="fine-print">Saved ${esc(dateLabel(lead.created_at,true))} · Contents not fetched or verified</p></div></article>`).join('') : empty('No X leads saved.', 'Paste a public post link above to investigate. A saved link never counts as confirmed evidence.');
   }
-  function render() { populateEntities(); renderBrief(); renderEvidence(); renderLedger(); renderEarnings(); renderSources(); selectPage(); }
+  function render() { renderPublication(); populateEntities(); renderBrief(); renderEvidence(); renderLedger(); renderEarnings(); renderSources(); selectPage(); if (isStatic) hideLocalControls(); }
   async function load(initial = false) {
     if (initial) { $('loading').hidden = false; $('load-error').hidden = true; }
     try {
-      state.data = await api('/api/dashboard');
+      state.data = isStatic ? await loadSnapshot() : await api('/api/dashboard');
       render();
       $('dashboard').hidden = false; $('loading').hidden = true; $('load-error').hidden = true;
     } catch (error) {
       $('loading').hidden = true;
       if (state.data) notify(`${error.message} The visible data is the last loaded snapshot.`, 'error');
-      else { $('load-error-text').textContent = `${error.message} Check that the local launcher is running.`; $('load-error').hidden = false; }
+      else { $('load-error-text').textContent = `${error.message} ${isStatic ? 'Reload this page or check the published site later.' : 'Check that the local launcher is running.'}`; $('load-error').hidden = false; }
       throw error;
     }
   }
   $('refresh').addEventListener('click', async () => {
+    if (isStatic) return;
     if (state.refreshing) return;
     state.refreshing = true;
     const button = $('refresh'); button.disabled = true; button.textContent = 'Refreshing…';
@@ -274,6 +348,7 @@
   });
   $('lead-form').addEventListener('submit', async (event) => {
     event.preventDefault();
+    if (isStatic) return;
     const form = event.currentTarget; const button = form.querySelector('button'); const url = $('lead-url').value.trim();
     if (!/^https:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/[A-Za-z0-9_]+\/status\/\d+(?:[/?#].*)?$/.test(url)) { $('lead-message').textContent = 'Use a public https://x.com/account/status/123 or twitter.com post URL.'; $('lead-url').focus(); return; }
     button.disabled = true; $('lead-message').textContent = 'Saving the unverified lead locally…';
@@ -293,6 +368,7 @@
   });
   ['search', 'lens-filter', 'sort', 'role-filter', 'entity-filter', 'relevance-filter', 'review-filter'].forEach((id) => $(id).addEventListener(id === 'search' ? 'input' : 'change', () => { state.limit = 40; if (state.data) renderEvidence(); }));
   $('dashboard').addEventListener('click', async event => {
+    if (isStatic) return;
     const button = event.target.closest('button[data-review]');
     if (!button || button.disabled) return;
     const status = button.dataset.review;
@@ -310,7 +386,7 @@
     } catch(error) { button.disabled = false; notify(`Reading state was not saved: ${error.message}`,'error'); }
   });
   $('show-more').addEventListener('click', () => { state.limit += 40; renderEvidence(); });
-  $('retry').addEventListener('click', () => { load(true).catch(() => {}); });
+  $('retry').addEventListener('click', () => { if (isStatic) location.reload(); else load(true).catch(() => {}); });
   window.addEventListener('hashchange', selectPage);
-  selectPage(); load(true).catch(() => {});
+  configureStaticMode(); selectPage(); load(true).catch(() => {});
 })();

@@ -1,0 +1,263 @@
+{
+  "reviewed_at": "2026-10-25T07:20:41Z",
+  "headline": "Funding terms cool while capacity spending stays substantial",
+  "bullets": [
+    "OpenAI and Anthropic reports concern proposed prices or investor expectations, not completed down rounds.",
+    "Separate demand, delivery and funding; none alone establishes the others."
+  ],
+  "notice": "Selected public sources reviewed Oct 25, 2026. Static snapshot, not live or comprehensive. Implications are conditional analysis; no X trends or live market data.",
+  "articles": [
+    {
+      "id": "openai-price-talks",
+      "title": "OpenAI's reported funding price softens",
+      "source_id": "openai-funding",
+      "published_at": "2026-10-22T23:31:00Z",
+      "date_precision": "minute",
+      "lens": "funding",
+      "relevance": "material",
+      "entities": [
+        "OpenAI"
+      ],
+      "rank": 1,
+      "observation": "Bloomberg reports a $1.25tn valuation target, versus $1.4tn discussed earlier, for a proposed ~$30bn raise.",
+      "summary": "Negotiations remain open; this is not a completed financing.",
+      "implication": "If capital becomes harder to secure, labs may prioritize fewer compute commitments.",
+      "beneficiaries": "Investors negotiating terms.",
+      "risks": "Capital-dependent labs and suppliers.",
+      "counterevidence": "A lower asking price does not establish weaker product demand.",
+      "confirms": "Final terms; spending revisions.",
+      "refutes": "Completed funding supporting unchanged compute plans.",
+      "uncertainty": "Anonymous sources; terms and valuation basis may change.",
+      "url": "https://news.bloombergtax.com/financial-accounting/openai-shifts-value-to-1-25-trillion-as-funding-talks-finalize",
+      "source_name": "Bloomberg News via Bloomberg Tax",
+      "source_role": "secondary",
+      "date_kind": "publication_date"
+    },
+    {
+      "id": "anthropic-ipo-expectations",
+      "title": "Anthropic IPO expectations cool",
+      "source_id": "anthropic-ipo",
+      "published_at": "2026-10-15",
+      "date_precision": "day",
+      "republished_at": "2026-10-16",
+      "event_date": "2026-10-14",
+      "report_period": "Q3 2026",
+      "lens": "funding",
+      "relevance": "material",
+      "entities": [
+        "Anthropic"
+      ],
+      "rank": 2,
+      "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
+      "summary": "Investor expectations changed; no executed IPO price was established.",
+      "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
+      "beneficiaries": "Investors seeking lower entry prices.",
+      "risks": "Labs and funding-dependent counterparties.",
+      "counterevidence": "Management reportedly said Q3 revenue rose 45% sequentially to $16.8bn.",
+      "confirms": "Prospectus, final pricing, cash proceeds.",
+      "refutes": "Strong subscriptions and funded commitments.",
+      "uncertainty": "Anonymous sources; Oct 15 report, Oct 16 republication.",
+      "url": "https://live.euronext.com/en/financial-news/investors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown",
+      "source_name": "Reuters via Euronext",
+      "source_role": "secondary",
+      "date_kind": "publication_date"
+    },
+    {
+      "id": "meta-capex-floor",
+      "title": "Meta raises its capex floor",
+      "source_id": "meta-guidance",
+      "published_at": "2026-10-21",
+      "date_precision": "day",
+      "report_period": "Q3 2026; guidance FY2026",
+      "lens": "demand",
+      "relevance": "material",
+      "entities": [
+        "Meta"
+      ],
+      "rank": 3,
+      "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
+      "summary": "Only the floor rose; the ceiling stayed unchanged.",
+      "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
+      "beneficiaries": "Suppliers with funded orders.",
+      "risks": "Power bottlenecks; delayed returns.",
+      "counterevidence": "Guidance is not supplier revenue.",
+      "confirms": "Actual spending; energized capacity.",
+      "refutes": "Guidance cuts; canceled orders.",
+      "uncertainty": "Management guidance; FY2027 budget unfinished.",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+      "source_name": "Meta Investor Relations",
+      "source_role": "primary",
+      "date_kind": "publication_date"
+    },
+    {
+      "id": "amazon-gwu-withdrawal",
+      "title": "Amazon withdraws a proposed campus",
+      "source_id": "amazon-capacity",
+      "published_at": "2026-10-21",
+      "date_precision": "day",
+      "lens": "capacity",
+      "relevance": "watch",
+      "entities": [
+        "Amazon"
+      ],
+      "rank": 4,
+      "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
+      "summary": "This concerns proposed development, not closure of an operating data center.",
+      "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
+      "beneficiaries": "Alternative permitted sites, conditionally.",
+      "risks": "Delayed capacity delivery.",
+      "counterevidence": "One withdrawal does not establish broad demand weakness.",
+      "confirms": "Replacement-site commitments; permitting delays.",
+      "refutes": "Widespread cancellations accompanied by spending cuts.",
+      "uncertainty": "Secondary account; underlying county post not independently reviewed.",
+      "url": "https://www.datacenterdynamics.com/en/news/amazon-withdraws-application-for-data-center-campus-at-gwu-site-in-ashburn-virginia/",
+      "source_name": "Data Center Dynamics",
+      "source_role": "secondary",
+      "date_kind": "publication_date"
+    },
+    {
+      "id": "coreweave-historical-cds",
+      "title": "CoreWeave: the 60% figure spans five years",
+      "source_id": "coreweave-credit",
+      "published_at": "2026-10-15T18:11:00Z",
+      "date_precision": "minute",
+      "quote_as_of": "2026-10-15",
+      "methodology_url": "https://www.federalreserve.gov/pubs/feds/2009/200937/index.html",
+      "lens": "funding",
+      "relevance": "watch",
+      "entities": [
+        "CoreWeave"
+      ],
+      "rank": 5,
+      "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
+      "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
+      "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
+      "beneficiaries": "Better-funded competitors, conditionally.",
+      "risks": "Refinancing-dependent builders.",
+      "counterevidence": "CDS prices include risk and liquidity premiums.",
+      "confirms": "Current spreads; liquidity and maturity disclosures.",
+      "refutes": "Refinancing secured on improving terms.",
+      "uncertainty": "Risk-neutral estimate; recovery and ICE model unverified. No live CDS connection.",
+      "url": "https://news.bloomberglaw.com/artificial-intelligence/coreweave-risk-gauge-hits-record-pricing-60-odds-of-default",
+      "source_name": "Bloomberg News via Bloomberg Law",
+      "source_role": "secondary",
+      "date_kind": "publication_date"
+    }
+  ],
+  "sources": [
+    {
+      "id": "openai-funding",
+      "name": "Bloomberg News via Bloomberg Tax",
+      "url": "https://news.bloombergtax.com/financial-accounting/openai-shifts-value-to-1-25-trillion-as-funding-talks-finalize",
+      "role": "secondary",
+      "kind": "news_report",
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "quality_note": "Public excerpt; anonymous sources; negotiations ongoing.",
+      "topics": [
+        "funding",
+        "valuation"
+      ],
+      "source_date": "2026-10-22T23:31:00Z"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Reuters via Euronext",
+      "url": "https://live.euronext.com/en/financial-news/investors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown",
+      "role": "secondary",
+      "kind": "news_report",
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "quality_note": "Syndicated reporting; anonymous sources; Oct 15 report republished Oct 16.",
+      "topics": [
+        "funding",
+        "valuation"
+      ],
+      "source_date": "2026-10-15"
+    },
+    {
+      "id": "meta-guidance",
+      "name": "Meta Investor Relations",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "quality_note": "Management guidance, not realized spending.",
+      "topics": [
+        "capex",
+        "earnings"
+      ],
+      "source_date": "2026-10-21"
+    },
+    {
+      "id": "amazon-capacity",
+      "name": "Data Center Dynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/amazon-withdraws-application-for-data-center-campus-at-gwu-site-in-ashburn-virginia/",
+      "role": "secondary",
+      "kind": "news_report",
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "quality_note": "Reports company/county statements; underlying social post not independently reviewed.",
+      "topics": [
+        "capacity",
+        "permitting"
+      ],
+      "source_date": "2026-10-21"
+    },
+    {
+      "id": "coreweave-credit",
+      "name": "Bloomberg News via Bloomberg Law",
+      "url": "https://news.bloomberglaw.com/artificial-intelligence/coreweave-risk-gauge-hits-record-pricing-60-odds-of-default",
+      "role": "secondary",
+      "kind": "news_report",
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "quality_note": "Public excerpt; historical ICE quote; underlying model unavailable.",
+      "topics": [
+        "credit",
+        "funding"
+      ],
+      "source_date": "2026-10-15T18:11:00Z"
+    },
+    {
+      "id": "cds-methodology",
+      "name": "Federal Reserve discussion paper",
+      "url": "https://www.federalreserve.gov/pubs/feds/2009/200937/index.html",
+      "role": "primary",
+      "kind": "methodology",
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "quality_note": "2009 research context, not CoreWeave-specific calibration.",
+      "topics": [
+        "credit"
+      ],
+      "source_date": "2009-09-17",
+      "publication_note": "Page last updated September 17, 2009; paper version May 2009. Methodology, not a current issuer quote."
+    }
+  ],
+  "ledger": [
+    {
+      "id": "openai-proposed-equity",
+      "as_of": "2026-10-22",
+      "source_url": "https://news.bloombergtax.com/financial-accounting/openai-shifts-value-to-1-25-trillion-as-funding-talks-finalize",
+      "source_date": "2026-10-22",
+      "from_entity": "Prospective investors",
+      "to_entity": "OpenAI",
+      "instrument": "equity",
+      "status": "proposed",
+      "amount": 30,
+      "currency": "USD bn",
+      "note": "Approximate target, not closed proceeds. Public Bloomberg excerpt; terms may change."
+    }
+  ],
+  "earnings": [
+    {
+      "id": "meta-fy2026-capex",
+      "as_of": "2026-10-21",
+      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+      "source_date": "2026-10-21",
+      "company": "Meta",
+      "period": "FY2026",
+      "metric": "Capital expenditures including finance-lease principal",
+      "unit": "USD bn",
+      "guidance": "135–145",
+      "guidance_period": "FY2026",
+      "note": "Company guidance; prior range 130–145. Floor raised; ceiling unchanged. No actual or consensus figure supplied."
+    }
+  ]
+}

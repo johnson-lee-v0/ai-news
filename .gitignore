@@ -44,3 +44,5 @@ test-results/
 docs/validation/
 docs/validation-v2/
 config/x_access.json
+# Generated, explicitly built public artifact
+_site/
