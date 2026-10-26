@@ -155,7 +155,7 @@
     return nodes;
   }
   function makeGraph(rows) {
-    const companies=companyCounts(rows);const width=1000,height=state.company?(companies.length>12?680:520):Math.max(430,Math.ceil(companies.length/4)*140+10);
+    const companies=companyCounts(rows);const width=1000,height=state.company?(Math.max(companies.length,rows.length)>12?680:520):Math.max(430,Math.ceil(companies.length/4)*140+10);
     const section=element('section','pf-graph-section');section.setAttribute('aria-label','Interactive relationship overview');
     append(section,element('p','pf-graph-hint','Select a company to follow its relationships. The full overview shows every company in the selected network. Choose a company for labeled relationships, or select a line to inspect its source. Every relationship is also listed below.'),button('Skip map to relationship list','pf-skip-map',()=>{const heading=state.container.querySelector('.pf-list-heading h3');if(heading){heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'auto'});}}));
     if(companies.length>30){append(section,element('p','pf-empty','This network has '+companies.length+' companies. Choose a company for a readable map; the full relationship list remains below.'));return section;}
@@ -165,11 +165,14 @@
     Object.keys(flowNames).forEach(type=>{const marker=document.createElementNS(NS,'marker');marker.setAttribute('id','pf-arrow-'+type);marker.setAttribute('viewBox','0 0 10 10');marker.setAttribute('refX','8');marker.setAttribute('refY','5');marker.setAttribute('markerWidth','6');marker.setAttribute('markerHeight','6');marker.setAttribute('orient','auto-start-reverse');const arrow=document.createElementNS(NS,'path');arrow.setAttribute('d','M 0 0 L 10 5 L 0 10 z');arrow.setAttribute('class','pf-marker pf-flow-'+type);marker.append(arrow);defs.append(marker);});svg.append(defs);
     const nodes=graphPositions(companies,rows,width,height),byName=new Map(nodes.map(n=>[n.name,n]));const pairs=new Map(),labels=[];
     rows.forEach(row=>{const key=[row.from_entity,row.to_entity].sort().join('\u0000');if(!pairs.has(key))pairs.set(key,[]);pairs.get(key).push(row);});
-    rows.forEach(row=>{
+    // Place the busiest pairs first so their parallel labels have room.
+    const pairedCount=row=>pairs.get([row.from_entity,row.to_entity].sort().join('\u0000')).length;
+    const graphRows=state.company?rows.slice().sort((a,b)=>pairedCount(b)-pairedCount(a)):rows;
+    graphRows.forEach(row=>{
       const from=byName.get(row.from_entity),to=byName.get(row.to_entity);if(!from||!to)return;
       const pair=pairs.get([row.from_entity,row.to_entity].sort().join('\u0000')),pairIndex=pair.indexOf(row);
       let dx=to.x-from.x,dy=to.y-from.y,distance=Math.max(1,Math.hypot(dx,dy));
-      const self=from===to;const bend=((pairIndex-(pair.length-1)/2)*58+(self?90:18))*(row.from_entity.localeCompare(row.to_entity)<=0?1:-1);
+      const self=from===to;const bend=((pairIndex-(pair.length-1)/2)*(state.company?110:58)+(self?90:18))*(row.from_entity.localeCompare(row.to_entity)<=0?1:-1);
       const start={x:from.x+dx/distance*65,y:from.y+dy/distance*33};const end={x:to.x-dx/distance*72,y:to.y-dy/distance*39};
       const control={x:(from.x+to.x)/2-dy/distance*bend,y:(from.y+to.y)/2+dx/distance*bend};
       if(self){start.x=from.x-36;end.x=from.x+36;start.y=end.y=from.y-25;control.x=from.x;control.y=from.y-120;}
@@ -177,7 +180,7 @@
       const hit=document.createElementNS(NS,'path');hit.setAttribute('d',path.getAttribute('d'));hit.setAttribute('class','pf-edge-hit');const hitTitle=document.createElementNS(NS,'title');hitTitle.textContent=row.from_entity+' → '+row.to_entity+' · '+row.flow_label+' · '+row.amount_label;hit.append(hitTitle);hit.addEventListener('click',()=>openRelationship(row,state.container.querySelector('.pf-company-selector select')));svg.append(hit);
       if(!state.company)return; // Dense overview uses lines plus the complete list; focus reveals labels.
       const position=t=>({x:(1-t)*(1-t)*start.x+2*(1-t)*t*control.x+t*t*end.x,y:(1-t)*(1-t)*start.y+2*(1-t)*t*control.y+t*t*end.y});
-      const candidates=[.5,.34,.66,.23,.77].map(position);const collision=p=>nodes.reduce((n,x)=>n+(Math.abs(x.x-p.x)<115&&Math.abs(x.y-p.y)<55?3:0),0)+labels.reduce((n,x)=>n+(Math.abs(x.x-p.x)<100&&Math.abs(x.y-p.y)<28?2:0),0);
+      const candidates=[.5,...Array.from({length:17},(_,index)=>(index+2)/20)].map(position);const collision=p=>nodes.reduce((n,x)=>n+(Math.abs(x.x-p.x)<100&&Math.abs(x.y-p.y)<45?3:0),0)+labels.reduce((n,x)=>n+(Math.abs(x.x-p.x)<100&&Math.abs(x.y-p.y)<40?2:0),0);
       candidates.sort((a,b)=>collision(a)-collision(b));const point=candidates[0];labels.push(point);
       const label=button(state.company?row.ordinal+' · '+(row.instrument==='other'?row.flow_label:row.instrument_name):String(row.ordinal),'pf-edge-label'+(state.company?'':' pf-edge-label-compact')+' pf-flow-'+row.flow_type,event=>openRelationship(row,event.currentTarget));label.style.left=point.x/width*100+'%';label.style.top=point.y/height*100+'%';label.title=row.from_entity+' → '+row.to_entity+' · '+row.amount_label;label.setAttribute('aria-label','Relationship '+row.ordinal+': '+row.from_entity+' to '+row.to_entity+', '+row.instrument_name+', '+row.amount_label);graph.append(label);
     });

@@ -1,6 +1,21 @@
 # Public snapshot provenance
 
-Latest additions reviewed **October 25, 2026**: SpaceX filing/call analysis and PHP2Shell security analysis. Exact article and snapshot review timestamps are in `brief.json`; earlier sources retain their own review dates. This is a manually reviewed snapshot of selected public reporting, not a live feed or complete market survey. Article text is independently written paraphrase. Linked publishers retain their original reporting; article bodies are not distributed here.
+Latest additions reviewed **October 26, 2026**: Anthropic's public S-1 and Meta's financing proposals. Earlier SpaceX, PHP2Shell, GTC and other stories retain their source and review dates. Exact timestamps are in `brief.json`. This is a manually reviewed snapshot of selected public reporting, not a live feed or complete market survey. Article text is independently written paraphrase. Linked publishers retain their original reporting; article bodies are not distributed here.
+
+## October 26 filing and financing review
+
+| Source | Date and scope | Review boundary |
+|---|---|---|
+| [Anthropic S-1](https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm) | Filed October 26, 2026; CIK 2130357, accession 0001628280-26-067168, SEC file 333-299633. Financial comparisons use H1 ended June 30, with Q2 identified separately. | The coordinating researcher reviewed the downloaded original prospectus and supplied statement/contract extracts. Filing metadata and selected indexed passages were independently cross-checked. The publication environment could not retrieve the full body; no raw prospectus is distributed. |
+| [SEC filing index](https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/0001628280-26-067168-index.htm) | Filing date October 26; displayed acceptance 09:00:11 has no timezone label. | Confirms filing identity; acceptance time is not relabeled UTC. |
+| [Anthropic issuer announcement](https://www.anthropic.com/news/s1-sec) | October 26 public registration; separate from June's confidential submission. | Proposed Nasdaq ticker ANT; offering price and size unset, registration not effective. No priced IPO valuation or proceeds inferred. |
+| [Meta financing launch](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx) | October 26, with [issuer distribution](https://www.prnewswire.com/news-releases/meta-announces-launch-of-offering-of-depositary-shares-representing-series-a-mandatory-convertible-preferred-stock-and-offering-of-class-a-common-stock-in-connection-with-forward-sale-agreements-302919267.html) timestamp 06:58 ET / 10:58 UTC. | Full issuer/distribution text reviewed. No later pricing or closing was verified in the bounded review. The three proposed financing instruments have different cash timing. Supplier interest is nonbinding, aggregate and within the common offering. |
+
+Anthropic's net loss, operating loss, operating cash flow and financing inflow are separate measures. Noncash revaluations are not cash burn; June liquidity is not an October balance. Cloud-marketplace revenue describes distribution, not automatically purchases by investor-partners. Training/internal compute and free-access/channel costs also make simplistic gross-margin comparisons misleading.
+
+The map updates existing AWS and Azure relationships rather than adding the old and new announcements. Contract pages 171–172 distinguish minimum purchases from conditional ceilings and cancellation rights. Broadcom's aggregate five-year lease amount includes the March arrangement; it is not added to that subset. Note 7's uncommenced leases, Note 13's purchase commitments and Note 17's later new/amended agreements have different scopes and dates. They are not summed with counterparty rows. Capacity links retain no allocated dollar amounts and are not extra monetary obligations. Investor funding statuses remain unchanged where new cash payment was not established.
+
+Meta's October 21 Class C and capex disclosures remain older context. October 26 financing proposals do not increase the previously announced capex range. This publication adds no scheduled public refresh.
 
 ## Sources and dates
 

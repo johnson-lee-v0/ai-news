@@ -1,13 +1,160 @@
 {
-  "reviewed_at": "2026-10-25T21:37:12.437849+00:00",
-  "headline": "AI growth depends on funded capacity, durable cash flow and secure applications.",
+  "reviewed_at": "2026-10-26T16:31:37.283546+00:00",
+  "headline": "Funding announcements, accounting losses and cash are different signals.",
   "bullets": [
-    "SpaceX combines rented compute and internal AI products. Separate operating cash, installed capacity, management forecasts and later debt claims.",
-    "PHP2Shell connects runtime exposure with reported AI-assisted attacker activity. Patching, identity controls and bounded agent permissions matter; vendor revenue impact is unproven.",
-    "The financing map retains the full selected network. Commitments, contingent exposure and capacity are not summed into cash or revenue."
+    "Anthropic’s public S-1 separates operating traction from financing revaluations and long-lived compute obligations. The IPO is not yet priced.",
+    "Meta’s financing plan has three stages. Supplier interest is nonbinding and already inside the common offering; it is not extra revenue.",
+    "Compare dated obligations, delivered capacity, paid usage and collections. The selected financing map has no additive network-wide dollar total."
   ],
   "notice": "Selected public evidence and a curated financing network, manually reviewed on the displayed date. This is not a live or comprehensive feed. Original source dates remain separate; X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "anthropic-s1-20261026",
+      "title": "Anthropic’s S-1: positive operating cash, future compute bills",
+      "published_at": "2026-10-26",
+      "event_date": "2026-10-26",
+      "date_kind": "filing_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-26T16:31:37.252655+00:00",
+      "source_name": "Anthropic · SEC S-1",
+      "source_role": "primary",
+      "lens": "earnings",
+      "claim_type": "filed results; implications are analysis",
+      "report_period": "H1 ended June 30, 2026; Q2 and prior-year comparisons separately labeled",
+      "publication_note": "Public S-1 filed October 26, 2026; CIK 2130357, accession 0001628280-26-067168, file 333-299633. This is separate from the June confidential submission.",
+      "entities": [
+        "Anthropic",
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Broadcom",
+        "NVIDIA",
+        "AMD",
+        "SpaceX",
+        "Nscale",
+        "Lambda"
+      ],
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "observation": "H1 revenue was $16.286bn, operating loss $0.693bn and operating cash inflow $3.929bn. The $80.748bn net loss includes large noncash financing revaluations; it is not cash burn. The IPO remains unpriced and not effective.",
+      "implication": "Growth and financing strength can coexist with compute-payment risk.",
+      "beneficiaries": "Clouds, chip suppliers and infrastructure operators benefit if capacity is accepted, used and paid for; applications benefit if reliable model access produces customer returns.",
+      "risks": "Usage can change faster than infrastructure bills. Financing partners also supply, distribute and compete. Founder voting control and benefit-trust board control limit ordinary shareholder influence.",
+      "counterevidence": "Q2 generated $0.974bn operating profit; H1 operating cash was positive. June liquidity was substantial. These challenge a simple distress thesis, without proving durable self-funding.",
+      "confirms": "Check September statements, customer collections, full training/inference costs, delivered capacity, payment activation and final IPO dilution.",
+      "refutes": "Weak collections, lower usage, delayed capacity or repriced funding would weaken the growth-to-durable-cash thesis.",
+      "uncertainty": "IPO shares, price and proceeds are unset. Headline aggregate compute fields are blank, not zero; no single commitment total is inferred. June balances are not October liquidity.",
+      "source_date_note": "Filing and issuer announcement: October 26. Financial period: June 30; Q2 is separately identified. Lease disclosures span period-end and later transactions; review time does not redate them.",
+      "access_note": "The coordinating researcher reviewed the downloaded original SEC prospectus and supplied statement and contract extracts. Filing metadata and selected indexed passages were independently cross-checked; this environment could not retrieve the complete body. Issuer announcement reviewed publicly.",
+      "highlights": [
+        {
+          "title": "Loss is not cash burn",
+          "observation": "H1 net loss includes $72.388bn of convertible/derivative/SAFE revaluation and $8.720bn of other mark-to-market adjustments. Financing cash inflow was $110.774bn; June cash, cash equivalents and short-term investments totaled $131.651bn, excluding restricted cash.",
+          "implication": "Separate financing accounting, operating performance and capital raised. Positive cash flow alone does not establish repeatable self-funding.",
+          "claim_type": "filed disclosure",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+          "source_date": "2026-10-26"
+        },
+        {
+          "title": "Obligations have different dates and exit terms",
+          "observation": "June 30 future undiscounted uncommenced lease payments: $321.4bn over terms under one to 20 years; noncancelable fixed/minimum purchases: $265.6bn over 1–20 years, excluding variable amounts. Later new/amended agreements: $245bn, plus $21bn short-term minimums. Broadcom leases: $161.2bn excluding interest; March’s $125.2bn is a subset.",
+          "implication": "Do not add overlapping scopes. The map separates counterparties, payment periods, delivery conditions and termination rights.",
+          "claim_type": "filed disclosure",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+          "source_date": "2026-10-26"
+        },
+        {
+          "title": "Distribution is not the same as partner purchases",
+          "observation": "H1 revenue was 80.2% consumption-based and 48% distributed through cloud marketplaces. June 30 remaining performance obligations were $10.8bn, about 75% expected to be recognized as revenue within 12 months.",
+          "implication": "Marketplace revenue is a channel measure, not proof of investor-partner purchases. Revenue recognition is not collection; this measure is not exhaustive demand coverage or comparable to lifetime compute bills.",
+          "claim_type": "filed disclosure",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+          "source_date": "2026-10-26"
+        },
+        {
+          "title": "Five layers, one conversion test",
+          "observation": "Anthropic sells models and applications while contracting chips and infrastructure that depend on power. The filing describes minimum purchases, leases and conditional capacity with different horizons.",
+          "implication": "Watch energy readiness → accepted chips/capacity → useful model output → paid application usage → collected cash; announcements alone do not complete that chain.",
+          "claim_type": "analytical framework, not a forecast",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+          "source_date": "2026-10-26"
+        }
+      ],
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_id": "anthropic-s1-20261026-source-1",
+      "rank": 1,
+      "relevance": "material",
+      "summary": "H1 revenue was $16.286bn, operating loss $0.693bn and operating cash inflow $3.929bn. The $80.748bn net loss includes large noncash financing revaluations; it is not cash burn. The IPO remains unpriced and not effective."
+    },
+    {
+      "id": "meta-financing-20261026",
+      "title": "Meta’s $95bn plan is not cash received",
+      "observation": "Meta launched financing proposals on October 26. The forward sale gives Meta no initial proceeds; the preferred offering is not verified closed and the future ATM is not established.",
+      "implication": "More funding could support growth; announcements alone do not establish paid demand.",
+      "reviewed_at": "2026-10-26T16:19:17Z",
+      "published_at": "2026-10-26T10:58:00Z",
+      "event_date": "2026-10-26",
+      "date_kind": "publication_date",
+      "date_precision": "minute",
+      "source_name": "Meta · issuer financing announcement",
+      "source_role": "primary",
+      "claim_type": "issuer proposals; implications are conditional analysis",
+      "lens": "funding",
+      "entities": [
+        "Meta",
+        "NVIDIA",
+        "AMD",
+        "Broadcom"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure"
+      ],
+      "beneficiaries": "Meta and suppliers benefit only if funded plans become delivered capacity and paid usage.",
+      "risks": "Dilution, funding delays and idle capacity.",
+      "counterevidence": "Unchanged capex guidance does not establish extra spending; existing operating cash weakens a simple cash-crisis thesis.",
+      "confirms": "Verify pricing, closings, proceeds, supplier allocations, ATM sales and delivered capacity.",
+      "refutes": "Withdrawn offerings, absent allocations or delayed capacity would weaken the funding-to-growth thesis.",
+      "uncertainty": "Base sizes exclude underwriter options. Exact dilution and actual allocations remain unverified. No later pricing or closing was found in this bounded check.",
+      "source_date_note": "Announcement: October 26, 06:58 ET / 10:58 UTC. Prior Q3/Class C context: October 21. The review does not redate either.",
+      "access_note": "Full issuer and distribution text retrieved through the web reader. The dynamic release list was unavailable; SEC prospectus bodies were not verified.",
+      "highlights": [
+        {
+          "title": "Three instruments, three stages",
+          "claim_type": "issuer financing proposals",
+          "observation": "$22.5bn forward common offering; ~$12.5bn mandatory-convertible depositary offering; planned ~$60bn Class C at-the-market (ATM) program.",
+          "implication": "Track future proceeds separately from announced amounts.",
+          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "source_date": "2026-10-26"
+        },
+        {
+          "title": "Supplier interest is not funding",
+          "claim_type": "nonbinding indications of interest",
+          "observation": "NVIDIA, AMD and Broadcom indicated nonbinding aggregate interest up to $5bn within the common offering; individual allocations are unknown.",
+          "implication": "Possible supplier ownership increases shared exposure; it proves neither orders nor artificial transactions.",
+          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "source_date": "2026-10-26"
+        },
+        {
+          "title": "Older guidance still applies",
+          "claim_type": "prior issuer guidance and governance announcement",
+          "observation": "FY2026 capex, including finance-lease principal, remains $135–145bn. Class C’s nonvoting design was announced October 21.",
+          "implication": "New issuance can dilute economic ownership without diluting votes.",
+          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+          "source_date": "2026-10-21"
+        }
+      ],
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "source_id": "meta-financing-20261026-source-1",
+      "rank": 2,
+      "relevance": "material",
+      "summary": "Meta launched financing proposals on October 26. The forward sale gives Meta no initial proceeds; the preferred offering is not verified closed and the future ATM is not established."
+    },
     {
       "id": "spacex-q3-filing-neocloud-20261025",
       "title": "SpaceX’s neocloud model: sell compute, keep compute, fund both",
@@ -97,7 +244,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 1,
+      "rank": 3,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
     },
@@ -179,7 +326,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 2,
+      "rank": 4,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
     },
@@ -211,7 +358,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 3,
+      "rank": 5,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -274,7 +421,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 4,
+      "rank": 6,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -349,7 +496,7 @@
       "entities": [
         "OpenAI"
       ],
-      "rank": 5,
+      "rank": 7,
       "observation": "Bloomberg reports a $1.25tn valuation target, versus $1.4tn discussed earlier, for a proposed ~$30bn raise.",
       "summary": "Negotiations remain open; this is not a completed financing.",
       "implication": "If capital becomes harder to secure, labs may prioritize fewer compute commitments.",
@@ -379,7 +526,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 6,
+      "rank": 8,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -407,7 +554,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 7,
+      "rank": 9,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -434,7 +581,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 8,
+      "rank": 10,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -463,7 +610,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 9,
+      "rank": 11,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -1109,6 +1256,86 @@
         "policy"
       ],
       "access_note": "All three primary pages were publicly readable on October 25. Vendor findings and incident attribution remain attributed claims; no private telemetry was accessed."
+    },
+    {
+      "id": "meta-financing-20261026-source-1",
+      "name": "Meta · financing-plan launch",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "source_date": "2026-10-26",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-26T16:19:17Z",
+      "quality_note": "Filed results, announced proposals, cash receipts and conditional implications are distinguished. Historical period-end figures are not current balances.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "Full issuer and distribution text retrieved through the web reader. The dynamic release list was unavailable; SEC prospectus bodies were not verified."
+    },
+    {
+      "id": "meta-financing-20261026-source-2",
+      "name": "Meta via PRNewswire · announcement timestamp",
+      "url": "https://www.prnewswire.com/news-releases/meta-announces-launch-of-offering-of-depositary-shares-representing-series-a-mandatory-convertible-preferred-stock-and-offering-of-class-a-common-stock-in-connection-with-forward-sale-agreements-302919267.html",
+      "source_date": "2026-10-26T10:58:00Z",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-26T16:19:17Z",
+      "quality_note": "Filed results, announced proposals, cash receipts and conditional implications are distinguished. Historical period-end figures are not current balances.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "Full issuer and distribution text retrieved through the web reader. The dynamic release list was unavailable; SEC prospectus bodies were not verified."
+    },
+    {
+      "id": "anthropic-s1-20261026-source-1",
+      "name": "Anthropic S-1 · financial statements, pp. 74–75 and 171–172; Notes 7, 13 and 17",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-26T16:31:37.252655+00:00",
+      "quality_note": "Filed results, announced proposals, cash receipts and conditional implications are distinguished. Historical period-end figures are not current balances.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "The coordinating researcher reviewed the downloaded original SEC prospectus and supplied statement and contract extracts. Filing metadata and selected indexed passages were independently cross-checked; this environment could not retrieve the complete body. Issuer announcement reviewed publicly."
+    },
+    {
+      "id": "anthropic-s1-20261026-source-2",
+      "name": "Anthropic · public S-1 announcement and unpriced offering status",
+      "url": "https://www.anthropic.com/news/s1-sec",
+      "source_date": "2026-10-26",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-26T16:31:37.252655+00:00",
+      "quality_note": "Filed results, announced proposals, cash receipts and conditional implications are distinguished. Historical period-end figures are not current balances.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "The coordinating researcher reviewed the downloaded original SEC prospectus and supplied statement and contract extracts. Filing metadata and selected indexed passages were independently cross-checked; this environment could not retrieve the complete body. Issuer announcement reviewed publicly."
+    },
+    {
+      "id": "anthropic-s1-20261026-source-3",
+      "name": "SEC · accession 0001628280-26-067168 filing index",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/0001628280-26-067168-index.htm",
+      "source_date": "2026-10-26",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-26T16:31:37.252655+00:00",
+      "quality_note": "Filed results, announced proposals, cash receipts and conditional implications are distinguished. Historical period-end figures are not current balances.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "The coordinating researcher reviewed the downloaded original SEC prospectus and supplied statement and contract extracts. Filing metadata and selected indexed passages were independently cross-checked; this environment could not retrieve the complete body. Issuer announcement reviewed publicly."
     }
   ],
   "ledger": [
@@ -1418,21 +1645,29 @@
       "from_entity": "Anthropic",
       "to_entity": "Amazon",
       "instrument": "customer_contract",
-      "amount": "More than 100",
-      "currency": "USD billion",
-      "status": "committed",
-      "source_url": "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai",
-      "source_date": "2026-04-20",
-      "as_of": "2026-04-20",
-      "reviewed_at": "2026-10-25T20:59:12.618999+00:00",
-      "note": "Ten-year AWS purchase commitment with up to 5GW of Trainium capacity.",
-      "risk": "Delivery and workload economics determine returns.",
+      "amount": 110,
+      "currency": "USD bn",
+      "status": "filed minimum commitment; termination exceptions",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26",
+      "reviewed_at": "2026-10-26T16:25:58Z",
+      "note": "October 26 S-1, pp. 171–172: minimum $110.0B over May 2026–April 2036 regardless of usage, subject to contractual termination exceptions. This updates the April announcement; it is not an additional $110B contract or a verified remaining unpaid balance.",
+      "risk": "Minimum payments can outlast weaker usage or demand.",
       "flow_type": "money",
-      "flow_label": "Compute purchase commitment",
-      "payment_status": "Future spending, not cash already paid.",
-      "revenue_status": "Not recognized revenue.",
-      "uncertainty": "Capacity and utilization are different.",
-      "overlap_group": "anthropic-amazon-cloud"
+      "flow_label": "AWS minimum purchase obligation",
+      "payment_status": "Contract-period amounts, not proof of cash paid or received; paid-to-date amounts unverified.",
+      "revenue_status": "Contract value is not recognized revenue; actual supplier revenue unverified.",
+      "uncertainty": "Exact cash schedule and realized utilization are not established here. Do not sum with aggregate leases, purchase commitments or subsequent amendments.",
+      "overlap_group": "anthropic-s1-compute-obligations",
+      "sources": [
+        {
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai",
+          "title": "Amazon: April 20 collaboration announcement; historical terms",
+          "date": "2026-04-20",
+          "role": "primary"
+        }
+      ]
     },
     {
       "id": "anthropic-google-tpu-20260406",
@@ -1444,16 +1679,24 @@
       "status": "signed future capacity agreement",
       "source_url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
       "source_date": "2026-04-06",
-      "as_of": "2026-04-06",
-      "reviewed_at": "2026-10-25T20:59:12.618999+00:00",
-      "note": "One joint Google/Broadcom agreement for multiple GW of TPU capacity starting in 2027; no separate allocation to this party.",
+      "as_of": "2026-10-26",
+      "reviewed_at": "2026-10-26T16:25:58Z",
+      "note": "April 6 announcement: one joint Google/Broadcom agreement for multiple GW of TPU capacity starting in 2027; no separate capacity allocation to this party. The October 26 S-1 money obligation is shown separately (Google cloud minimum obligation); do not count this service link as another monetary commitment.",
       "risk": "Power and commissioning can delay delivery.",
       "flow_type": "capacity",
       "flow_label": "Joint TPU capacity agreement",
-      "payment_status": "Dollar terms undisclosed.",
+      "payment_status": "This service/capacity row has no separately allocated cash amount; see the distinct monetary obligation.",
       "revenue_status": "Not recognized revenue.",
-      "uncertainty": "Planned capacity is not utilization.",
-      "overlap_group": "anthropic-google-broadcom-joint"
+      "uncertainty": "Joint capacity is not a separate dollar allocation or measured utilization. This relationship’s original announcement date remains April 6.",
+      "overlap_group": "anthropic-google-broadcom-joint",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+          "title": "Anthropic S-1, pp. 171–172: separately disclosed monetary obligations",
+          "date": "2026-10-26",
+          "role": "primary"
+        }
+      ]
     },
     {
       "id": "anthropic-broadcom-tpu-20260406",
@@ -1465,16 +1708,24 @@
       "status": "signed future capacity agreement",
       "source_url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
       "source_date": "2026-04-06",
-      "as_of": "2026-04-06",
-      "reviewed_at": "2026-10-25T20:59:12.618999+00:00",
-      "note": "One joint Google/Broadcom agreement for multiple GW of TPU capacity starting in 2027; no separate allocation to this party.",
+      "as_of": "2026-10-26",
+      "reviewed_at": "2026-10-26T16:25:58Z",
+      "note": "April 6 announcement: one joint Google/Broadcom agreement for multiple GW of TPU capacity starting in 2027; no separate capacity allocation to this party. The October 26 S-1 money obligation is shown separately (Broadcom equipment lease obligation); do not count this service link as another monetary commitment.",
       "risk": "Power and commissioning can delay delivery.",
       "flow_type": "capacity",
       "flow_label": "Joint TPU capacity agreement",
-      "payment_status": "Dollar terms undisclosed.",
+      "payment_status": "This service/capacity row has no separately allocated cash amount; see the distinct monetary obligation.",
       "revenue_status": "Not recognized revenue.",
-      "uncertainty": "Planned capacity is not utilization.",
-      "overlap_group": "anthropic-google-broadcom-joint"
+      "uncertainty": "Joint capacity is not a separate dollar allocation or measured utilization. This relationship’s original announcement date remains April 6.",
+      "overlap_group": "anthropic-google-broadcom-joint",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+          "title": "Anthropic S-1, pp. 171–172: separately disclosed monetary obligations",
+          "date": "2026-10-26",
+          "role": "primary"
+        }
+      ]
     },
     {
       "id": "oracle-openai-stargate-20250722",
@@ -1770,21 +2021,29 @@
       "from_entity": "Anthropic",
       "to_entity": "Microsoft",
       "instrument": "customer_contract",
-      "amount": 30,
-      "currency": "USD billion",
-      "status": "committed",
-      "source_url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
-      "source_date": "2025-11-18",
-      "as_of": "2025-11-18",
-      "reviewed_at": "2026-10-25T20:59:12.618999+00:00",
-      "note": "Azure compute purchases plus additional capacity up to 1GW.",
-      "risk": "Delivery and paying demand determine returns.",
+      "amount": 44.9,
+      "currency": "USD bn",
+      "status": "filed minimum commitment; termination exceptions",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26",
+      "reviewed_at": "2026-10-26T16:25:58Z",
+      "note": "October 26 S-1, pp. 171–172: minimum $44.9B over November 2026–May 2033 regardless of usage, subject to contractual termination exceptions. This updates the earlier $30B announcement; do not add the two figures.",
+      "risk": "Committed spending can exceed realized workload demand.",
       "flow_type": "money",
-      "flow_label": "Azure compute commitment",
-      "payment_status": "Not cash already collected.",
-      "revenue_status": "Not recognized revenue.",
-      "uncertainty": "Actual utilization unmeasured.",
-      "overlap_group": "anthropic-microsoft-cloud"
+      "flow_label": "Azure minimum purchase obligation",
+      "payment_status": "Contract-period amounts, not proof of cash paid or received; paid-to-date amounts unverified.",
+      "revenue_status": "Contract value is not recognized revenue; actual supplier revenue unverified.",
+      "uncertainty": "Delivery, termination rights and cash timing matter; the minimum is not cash paid today. Do not sum with aggregate leases, purchase commitments or subsequent amendments.",
+      "overlap_group": "anthropic-s1-compute-obligations",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+          "title": "Anthropic: November 18 Microsoft/NVIDIA partnership; historical terms",
+          "date": "2025-11-18",
+          "role": "primary"
+        }
+      ]
     },
     {
       "id": "google-terawulf-backstop-20250818",
@@ -1848,6 +2107,195 @@
       "revenue_status": "Not recognized revenue.",
       "uncertainty": "No current utilization measured.",
       "overlap_group": "terawulf-fluidstack-google"
+    },
+    {
+      "to_entity": "Meta",
+      "instrument": "equity",
+      "currency": "USD bn",
+      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26T16:19:17Z",
+      "reviewed_at": "2026-10-26T16:19:17Z",
+      "flow_type": "money",
+      "revenue_status": "Not revenue.",
+      "id": "meta-forward-common-20261026",
+      "from_entity": "Morgan Stanley / Goldman Sachs",
+      "amount": 22.5,
+      "status": "proposed forward offering",
+      "flow_label": "Future equity proceeds",
+      "payment_status": "No initial Meta proceeds.",
+      "note": "Settlement contemplated through November 19, 2027.",
+      "uncertainty": "Closing not verified.",
+      "risk": "Pricing and settlement risk.",
+      "overlap_group": "meta-common-20261026"
+    },
+    {
+      "to_entity": "Meta",
+      "instrument": "equity",
+      "currency": "USD bn",
+      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26T16:19:17Z",
+      "reviewed_at": "2026-10-26T16:19:17Z",
+      "flow_type": "money",
+      "revenue_status": "Not revenue.",
+      "id": "meta-convertible-preferred-20261026",
+      "from_entity": "Prospective preferred investors",
+      "amount": 12.5,
+      "status": "launched; closing unverified",
+      "flow_label": "Proposed preferred equity",
+      "payment_status": "Cash receipt unverified.",
+      "note": "Approximate base size; mandatory-convertible depositary shares.",
+      "uncertainty": "Dividend and conversion terms pending pricing.",
+      "risk": "Dilution and pricing risk.",
+      "overlap_group": "meta-preferred-20261026"
+    },
+    {
+      "to_entity": "Meta",
+      "instrument": "equity",
+      "currency": "USD bn",
+      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26T16:19:17Z",
+      "reviewed_at": "2026-10-26T16:19:17Z",
+      "flow_type": "money",
+      "revenue_status": "Not revenue.",
+      "id": "meta-future-class-c-atm-20261026",
+      "from_entity": "Prospective Class C investors",
+      "amount": 60,
+      "status": "planned; program not established",
+      "flow_label": "Future ATM equity",
+      "payment_status": "No completed sales verified.",
+      "note": "Up to $60bn; expected from Q1 2027.",
+      "uncertainty": "Actual issuance uncertain.",
+      "risk": "Dilution and timing risk.",
+      "overlap_group": "meta-atm-20261026"
+    },
+    {
+      "to_entity": "Meta",
+      "instrument": "equity",
+      "currency": "USD bn",
+      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26T16:19:17Z",
+      "reviewed_at": "2026-10-26T16:19:17Z",
+      "flow_type": "money",
+      "revenue_status": "Not revenue.",
+      "id": "meta-supplier-interest-20261026",
+      "from_entity": "NVIDIA / AMD / Broadcom",
+      "amount": 5,
+      "status": "nonbinding interest, up to aggregate amount",
+      "flow_label": "Possible supplier equity",
+      "payment_status": "Purchase and allocations unverified.",
+      "note": "Subset of common offering; separate indications, not a joint commitment.",
+      "uncertainty": "Individual allocations unknown; purchases may be zero.",
+      "risk": "Shared supplier/customer exposure.",
+      "overlap_group": "meta-common-20261026"
+    },
+    {
+      "id": "anthropic-google-cloud-minimum-20261026",
+      "from_entity": "Anthropic",
+      "to_entity": "Google",
+      "instrument": "customer_contract",
+      "amount": 114.5,
+      "currency": "USD bn",
+      "status": "filed minimum commitment; termination exceptions",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26",
+      "reviewed_at": "2026-10-26T16:25:58Z",
+      "note": "October 26 S-1, pp. 171–172: minimum $114.5B over April 2026–July 2033 regardless of usage, subject to contractual termination exceptions. This money obligation is separate from the map’s unallocated joint Google/Broadcom capacity description, not evidence of incremental capacity.",
+      "risk": "Cloud supplier and investor exposures intersect; minimum spending can persist if usage disappoints.",
+      "flow_type": "money",
+      "flow_label": "Google cloud minimum obligation",
+      "payment_status": "Contract-period amounts, not proof of cash paid or received; paid-to-date amounts unverified.",
+      "revenue_status": "Contract value is not recognized revenue; actual supplier revenue unverified.",
+      "uncertainty": "The contractual period has already begun; the disclosed amount is not established here as the remaining unpaid balance. Do not sum with aggregate leases, purchase commitments or subsequent amendments.",
+      "overlap_group": "anthropic-s1-compute-obligations"
+    },
+    {
+      "id": "anthropic-broadcom-equipment-leases-20261026",
+      "from_entity": "Anthropic",
+      "to_entity": "Broadcom",
+      "instrument": "other",
+      "amount": 161.2,
+      "currency": "USD bn",
+      "status": "filed aggregate equipment lease obligations",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26",
+      "reviewed_at": "2026-10-26T16:25:58Z",
+      "note": "October 26 S-1, Infrastructure Equipment Leases, p. 172: multiple five-year master leases aggregate approximately $161.2B excluding interest. The $125.2B March arrangement on p. 75 is a subset, not an extra lease amount. Capacity-service links are not additional monetary obligations.",
+      "risk": "Fixed lease obligations and interest can burden cash flow if deployed equipment underperforms.",
+      "flow_type": "money",
+      "flow_label": "Equipment lease payments",
+      "payment_status": "Contract-period amounts, not proof of cash paid or received; paid-to-date amounts unverified.",
+      "revenue_status": "Contract value is not recognized revenue; actual supplier revenue unverified.",
+      "uncertainty": "Interest is additional; commencement, delivery and contract conditions affect timing. No netting against investment funding is established. Do not sum with aggregate leases, purchase commitments or subsequent amendments.",
+      "overlap_group": "anthropic-s1-compute-obligations"
+    },
+    {
+      "id": "anthropic-spacex-compute-20261026",
+      "from_entity": "Anthropic",
+      "to_entity": "SpaceX",
+      "instrument": "customer_contract",
+      "amount": "Up to 120.5",
+      "currency": "USD bn",
+      "status": "filed ceiling; cancellation rights after initial periods",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26",
+      "reviewed_at": "2026-10-26T16:25:58Z",
+      "note": "October 26 S-1, pp. 171–172: SpaceX.AI LLC, a SpaceX subsidiary, may receive up to $120.5B into 2029. Cancellation is permitted on 90 days’ notice after initial noncancelable periods ending in January/March 2027. The ceiling is not guaranteed backlog.",
+      "risk": "Early termination or delayed capacity delivery can reduce provider receipts and weaken expected financing support.",
+      "flow_type": "money",
+      "flow_label": "Compute payments, conditional ceiling",
+      "payment_status": "Contract-period amounts, not proof of cash paid or received; paid-to-date amounts unverified.",
+      "revenue_status": "Contract value is not recognized revenue; actual supplier revenue unverified.",
+      "uncertainty": "Initial periods vary by contract; do not apply one termination date to all capacity. Actual cash receipts and utilized capacity remain unverified. Do not sum with aggregate leases, purchase commitments or subsequent amendments.",
+      "overlap_group": "anthropic-s1-compute-obligations"
+    },
+    {
+      "id": "anthropic-nscale-compute-20261026",
+      "from_entity": "Anthropic",
+      "to_entity": "Nscale",
+      "instrument": "customer_contract",
+      "amount": "Up to 44.6",
+      "currency": "USD bn",
+      "status": "filed potential payments; contractual conditions",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26",
+      "reviewed_at": "2026-10-26T16:25:58Z",
+      "note": "October 26 S-1, pp. 171–172: Nscale arrangements provide for up to $44.6B into 2033. Applicable delivery, acceptance and financing conditions govern the contracts; the ceiling is not proof of commissioned or utilized capacity.",
+      "risk": "Provider financing and delivery delays can prevent forecast capacity and receipts from materializing.",
+      "flow_type": "money",
+      "flow_label": "Compute payments, conditional ceiling",
+      "payment_status": "Contract-period amounts, not proof of cash paid or received; paid-to-date amounts unverified.",
+      "revenue_status": "Contract value is not recognized revenue; actual supplier revenue unverified.",
+      "uncertainty": "This summary does not allocate the ceiling among facilities or treat it as an unconditional debt balance. Do not sum with aggregate leases, purchase commitments or subsequent amendments.",
+      "overlap_group": "anthropic-s1-compute-obligations"
+    },
+    {
+      "id": "anthropic-lambda-compute-20261026",
+      "from_entity": "Anthropic",
+      "to_entity": "Lambda",
+      "instrument": "customer_contract",
+      "amount": "Approximately 41.3",
+      "currency": "USD bn",
+      "status": "filed potential payments; contractual conditions",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-26",
+      "reviewed_at": "2026-10-26T16:25:58Z",
+      "note": "October 26 S-1, pp. 171–172: Lambda arrangements provide for approximately $41.3B into 2034, subject to applicable delivery, acceptance and financing conditions. This is a contractual-period estimate, not verified revenue, cash paid or utilized capacity.",
+      "risk": "Capacity delivery and contract conditions affect when spending and supplier receipts can begin.",
+      "flow_type": "money",
+      "flow_label": "Compute payments, conditional amount",
+      "payment_status": "Contract-period amounts, not proof of cash paid or received; paid-to-date amounts unverified.",
+      "revenue_status": "Contract value is not recognized revenue; actual supplier revenue unverified.",
+      "uncertainty": "Exact realized payments, facility-level timing and utilization are not established here. Do not sum with aggregate leases, purchase commitments or subsequent amendments.",
+      "overlap_group": "anthropic-s1-compute-obligations"
     }
   ],
   "earnings": [
@@ -1863,6 +2311,97 @@
       "guidance": "135–145",
       "guidance_period": "FY2026",
       "note": "Company guidance; prior range 130–145. Floor raised; ceiling unchanged. No actual or consensus figure supplied."
+    },
+    {
+      "id": "anthropic-h1-revenue-2026",
+      "company": "Anthropic",
+      "period": "H1 2026 ended June 30",
+      "reported_period": "H1 2026 ended June 30",
+      "metric": "Revenue",
+      "unit": "USD bn",
+      "reported": 16.286,
+      "note": "Reported H1 revenue; H1 2025 comparator $1.163bn.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-06-30"
+    },
+    {
+      "id": "anthropic-h1-operating-income-2026",
+      "company": "Anthropic",
+      "period": "H1 2026 ended June 30",
+      "reported_period": "H1 2026 ended June 30",
+      "metric": "Operating income (loss)",
+      "unit": "USD bn",
+      "reported": -0.693,
+      "note": "Reported operating loss; distinct from net loss and cash flow.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-06-30"
+    },
+    {
+      "id": "anthropic-h1-net-income-2026",
+      "company": "Anthropic",
+      "period": "H1 2026 ended June 30",
+      "reported_period": "H1 2026 ended June 30",
+      "metric": "Net income (loss)",
+      "unit": "USD bn",
+      "reported": -80.748,
+      "note": "Includes substantial noncash financing and investment revaluations; not cash burn.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-06-30"
+    },
+    {
+      "id": "anthropic-h1-operating-cash-2026",
+      "company": "Anthropic",
+      "period": "H1 2026 ended June 30",
+      "reported_period": "H1 2026 ended June 30",
+      "metric": "Net cash from operating activities",
+      "unit": "USD bn",
+      "reported": 3.929,
+      "note": "Reported cash flow, not a forecast of sustainable free cash flow.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-06-30"
+    },
+    {
+      "id": "anthropic-h1-financing-cash-2026",
+      "company": "Anthropic",
+      "period": "H1 2026 ended June 30",
+      "reported_period": "H1 2026 ended June 30",
+      "metric": "Net cash from financing activities",
+      "unit": "USD bn",
+      "reported": 110.774,
+      "note": "Primarily equity financing; not revenue or operating cash.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-06-30"
+    },
+    {
+      "id": "anthropic-june-liquidity-2026",
+      "company": "Anthropic",
+      "period": "As of June 30, 2026",
+      "reported_period": "As of June 30, 2026",
+      "metric": "Cash, cash equivalents and short-term investments",
+      "unit": "USD bn",
+      "reported": 131.651,
+      "note": "Excludes $2.529bn restricted cash; historical balance, not current liquidity.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-06-30"
+    },
+    {
+      "id": "anthropic-q2-operating-income-2026",
+      "company": "Anthropic",
+      "period": "Q2 2026 ended June 30",
+      "reported_period": "Q2 2026 ended June 30",
+      "metric": "Operating income (loss)",
+      "unit": "USD bn",
+      "reported": 0.974,
+      "note": "Q2 profit does not erase the separately reported H1 loss.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-06-30"
     }
   ]
 }
