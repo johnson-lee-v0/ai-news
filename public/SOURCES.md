@@ -1,6 +1,28 @@
 # Public snapshot provenance
 
-Latest additions reviewed **October 26, 2026**: Anthropic's public S-1 and Meta's financing proposals. Earlier SpaceX, PHP2Shell, GTC and other stories retain their source and review dates. Exact timestamps are in `brief.json`. This is a manually reviewed snapshot of selected public reporting, not a live feed or complete market survey. Article text is independently written paraphrase. Linked publishers retain their original reporting; article bodies are not distributed here.
+Latest additions reviewed **October 27, 2026**: Corning earnings and AI connectivity, Meta offering pricing, SpaceX lease commitment, CoreWeave Denmark capacity and a Fanatics application example. Earlier stories retain their individual source and review dates. Exact timestamps are in `brief.json`. This is a selected reviewed snapshot, not a live feed or complete market survey. Summaries are independently written; linked article bodies are not distributed. The user authorized automatic publication of material verified updates through the existing daily workflow; every publication still requires source review, tests and privacy checks.
+
+## October 27 updates
+
+The Meta story keeps its stable identity and records the new pricing stage; it is not counted as a second independent raise. The original October 26 launch reference stays as history. SpaceX’s later filing supports a commitment, not the earlier claim of a completed closing. No model/vendor identity is inferred from the GPU lease filing.
+
+| Reviewed source | Source date | Boundary |
+|---|---|---|
+| [Meta · common and preferred offering pricing](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx) | 2026-10-27 | Full public issuer and issuer-distributed pricing releases read through the public web reader by the research reviewer. No authenticated access used. |
+| [NVIDIA · proposed Meta investment and model collaboration](https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth) | 2026-10-26 | Full issuer release read through an indexed public web-reader reference after direct URL resolution failed. |
+| [SpaceX · filed equipment-lease commitment](https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm) | 2026-10-26 | Full 124-line public SEC filing body reviewed. No completed master-lease or funding receipt was established. |
+| [CoreWeave · Denmark capacity and planned network backbone](https://www.coreweave.com/news/coreweave-expands-global-ai-cloud-platform-with-new-capacity-in-denmark-and-first-ai-network-backbone) | 2026-10-27 | Full 196-line issuer page read through its indexed public reference; direct URL resolution failed. No site telemetry or original HTML archive is claimed. |
+| [OpenAI · Fanatics Shop the Look case study](https://openai.com/index/fanatics-streamline-fan-experience/) | 2026-10-26 | Full public issuer case study read; no independent experiment replication or origin HTML archive is claimed. |
+| [Corning · Q3 2026 earnings release](https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx) | 2026-10-27 | Full issuer release read by the independent reviewer through an indexed public reference. Direct URL resolution and origin download failed; no raw body is redistributed. |
+| [Corning · SEC Q3 earnings exhibit and cash reconciliation](https://www.sec.gov/Archives/edgar/data/24741/000002474126000273/glw-20261027xex99xq32026.htm) | 2026-10-27 | Exact cash reconciliation reviewed in the SEC exhibit by the coordinating researcher. Publication environment could not retrieve this body; no claim of a full call or Q3 10-Q review. |
+| [Corning · Q2 SEC exhibit explaining core currency methodology](https://www.sec.gov/Archives/edgar/data/24741/000002474126000253/glw-20260728xex99xq22026.htm) | 2026-07-28 | Full public SEC exhibit reviewed, especially methodology pages 12–13 and 19. Historical context, not a new October policy change. |
+| [Meta · historical multiyear Corning agreement](https://about.fb.com/news/2026/01/meta-6-billion-agreement-corning-support-us-manufacturing/) | 2026-01-27 | Full public issuer announcement reviewed. Agreement ceiling and manufacturing plans do not establish recognized sales, cash payment or completed new factory capacity. |
+
+Corning core results are non-GAAP. April 1’s prospective currency-methodology change means the stated year-over-year growth is not same-method constant-currency or organic growth; prior currency comparatives were not recast. Segment net-income margin is not operating margin. The calculated optical share of sales growth is not a disclosed AI-only share. Q3 operating cash less capex ($516m) is distinct from adjusted free cash flow ($661m). Nine-month cash support from deposits/incentives has a different period and does not establish recurring AI profit. Q4 figures are guidance; no consensus, stock-move explanation or full-call analysis is asserted.
+
+The Meta–Corning agreement is historical January context; an up-to ceiling is not current revenue. CoreWeave’s online-capacity statement does not quantify usage; its announcement date is not a verified activation date. Fanatics engagement is a vendor-reported proxy, not measured sales or return on investment. No new delivered GTC Berlin milestone is claimed.
+
+## Prior review history
 
 ## October 26 filing and financing review
 
@@ -28,7 +50,7 @@ Meta's October 21 Class C and capex disclosures remain older context. October 26
 | [Bloomberg News via Bloomberg Law: CoreWeave CDS](https://news.bloomberglaw.com/artificial-intelligence/coreweave-risk-gauge-hits-record-pricing-60-odds-of-default) | Published October 15, 2026, 18:11 UTC; quote belongs to October 15. Contract horizon: five years. | Public excerpt reviewed; subscriber remainder not accessed. Bloomberg attributes the 1,194.5bp CDS quote and implied probability above 60% to ICE data. The exact recovery assumption and calibration were not accessible. This historical observation is not a current quote or one-year forecast. |
 | [Federal Reserve discussion paper: credit-risk methodology](https://www.federalreserve.gov/pubs/feds/2009/200937/index.html) | Paper version May 2009; page last updated September 17, 2009. Methodological context only. | Public paper reviewed, especially section 2.1. CDS-implied probabilities incorporate risk and liquidity premiums and depend on recovery/model assumptions. This supports the risk-neutral caveat; it does not validate ICE's CoreWeave calculation. |
 
-`brief.json` separates reported observations from conditional implications, counterevidence and potential confirmation/refutation tests. A source review date does not make historical data current. No X trend feed, real-time CDS, analyst consensus, full-article redistribution or automated publication is included.
+`brief.json` separates reported observations from conditional implications, counterevidence and potential confirmation/refutation tests. A source review date does not make historical data current. No X trend feed, real-time CDS, analyst consensus or full-article redistribution is included. Older sections below document their original review scope; October 27 publication authority is described above.
 
 ## NVIDIA GTC Berlin addition
 

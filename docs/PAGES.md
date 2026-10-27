@@ -18,9 +18,9 @@ The build script reads only the reviewed public brief, public account catalog an
 
 1. Recheck the original public sources. Edit the public brief with source dates, access limits, counterevidence and the actual review time. Do not copy the local database or article bodies.
 2. Run unit and browser checks. Build `_site/`, inspect the desktop/mobile result, and scan the exact source, Git history and artifact for secrets/private details.
-3. Commit and push the reviewed changes. Run the **GitHub Pages** workflow manually on the intended `main` commit.
+3. Commit and push the reviewed changes. Dispatch the **GitHub Pages** workflow on the intended `main` commit, either during an authorized task or through the separately approved daily automation.
 4. Verify that the Pages deployment succeeded for that commit, then check the live `/ai-news/` assets, populated snapshot, manifest and interactive behavior.
 
-There is no scheduled workflow and no automatic public news refresh. A rebuild does not change the review timestamp or make historical evidence current. GitHub Actions uses pinned official actions, read-only build permissions and the Pages/OIDC permissions needed for the deployment job. No persistent credential is added to the repository.
+On October 27, 2026, the user authorized automatic publication of material verified updates through the existing daily automation. The repository itself has no cron and this workflow adds no background service. The automation must complete source review, sanitization, tests and deployment verification; unavailable access or failed checks must be reported rather than represented as a successful update. Raw local refreshes do not publish themselves. A rebuild does not change the review timestamp or make historical evidence current. GitHub Actions uses pinned official actions, read-only build permissions and the Pages/OIDC permissions needed for deployment. No persistent credential is added to the repository.
 
 Visit comparison uses one path-scoped localStorage key containing stable IDs, fingerprints and a visit timestamp. It sends nothing to an application server; no source text, URLs, personal notes or user-account data are stored there. Storage failures degrade to an explicit unavailable state. A new browser or cleared storage establishes a baseline without marking existing content new.

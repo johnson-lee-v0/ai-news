@@ -16,7 +16,7 @@ Build the exact static artifact locally:
 python3 scripts/build_site.py
 ```
 
-The ten-file artifact is written to ignored `_site/`. Use `node tests/pages_smoke.cjs` with an existing Playwright installation to test it under the `/ai-news/` repository prefix. The GitHub Pages workflow is **manual only**, with no cron or automatic data publication. After reviewing and auditing a new public snapshot, push it and explicitly run that workflow. See [Pages deployment](docs/PAGES.md).
+The ten-file artifact is written to ignored `_site/`. Use `node tests/pages_smoke.cjs` with an existing Playwright installation to test it under the `/ai-news/` repository prefix. The GitHub Pages workflow uses an explicit dispatch trigger, with no repository cron. The separately approved daily automation may review and publish material verified updates without another confirmation, using the same tests and publication audit. Raw refresh output is never published directly. See [Pages deployment](docs/PAGES.md).
 
 ## Run locally
 

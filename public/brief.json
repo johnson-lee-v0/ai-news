@@ -1,13 +1,244 @@
 {
-  "reviewed_at": "2026-10-26T16:31:37.283546+00:00",
-  "headline": "Funding announcements, accounting losses and cash are different signals.",
+  "reviewed_at": "2026-10-27T14:10:47+00:00",
+  "headline": "Supplier earnings, financing and delivered capacity are different signals.",
   "bullets": [
-    "Anthropic’s public S-1 separates operating traction from financing revaluations and long-lived compute obligations. The IPO is not yet priced.",
-    "Meta’s financing plan has three stages. Supplier interest is nonbinding and already inside the common offering; it is not extra revenue.",
-    "Compare dated obligations, delivered capacity, paid usage and collections. The selected financing map has no additive network-wide dollar total."
+    "Corning’s optical growth reaches reported sales and segment profit; cash quality and customer returns need separate tests.",
+    "Meta priced its offerings; SpaceX disclosed a conditional lease commitment. Neither equals cash received or equipment delivered.",
+    "CoreWeave reports Denmark capacity online. Follow paid utilization and collections, while keeping older filing and GTC context dated."
   ],
-  "notice": "Selected public evidence and a curated financing network, manually reviewed on the displayed date. This is not a live or comprehensive feed. Original source dates remain separate; X trends, live CDS and consensus are not connected.",
+  "notice": "Selected public evidence and financing relationships, reviewed on the displayed dates. Material verified updates may be published through the approved daily workflow; this remains a dated snapshot, not a live or exhaustive feed. X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "corning-q3-ai-buildout-20261027",
+      "title": "Corning: AI connectivity is reaching sales and profit",
+      "published_at": "2026-10-27",
+      "event_date": "2026-10-27",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-27T14:10:47+00:00",
+      "source_name": "Corning · Q3 2026 earnings",
+      "source_role": "primary",
+      "lens": "earnings",
+      "entities": [
+        "Corning",
+        "GLW",
+        "Meta"
+      ],
+      "ai_layers": [
+        "infrastructure"
+      ],
+      "report_period": "Q3 ended September 30, 2026; year-to-date cash and Q4 guidance separately labeled",
+      "claim_type": "issuer-reported results and guidance; AI implication is analysis",
+      "observation": "Core sales rose 19% to $5.081bn and core EPS reached $0.91. Optical sales rose 44% to $2.379bn, with $532m segment net income. Core measures are non-GAAP.",
+      "implication": "AI wiring demand is becoming supplier earnings; customers’ utilization and AI returns remain separate tests.",
+      "summary": "Core sales rose 19% to $5.081bn and core EPS reached $0.91. Optical sales rose 44% to $2.379bn, with $532m segment net income. Core measures are non-GAAP.",
+      "beneficiaries": "Corning benefits directly through fiber, cable and connectivity for infrastructure. Models and applications are downstream demand drivers, not Corning product revenue.",
+      "risks": "Customer concentration, delayed data centers, working capital and factory ramps can slow conversion of orders into collected cash.",
+      "counterevidence": "Glass sales fell 3%; Solar grew 37% but lost $7m at segment level. Strong optics do not make every business or every AI investment profitable.",
+      "confirms": "Sustained optical shipments and segment margins, on-time factory ramps, collections, cash after deposits and capex, and Q4 results against guidance.",
+      "refutes": "Customer deferrals, lower optical margins, weaker collections or prolonged Solar losses would weaken the earnings-conversion case.",
+      "uncertainty": "Exact AI revenue dollars and carrier split were not established. Core currency methodology changed prospectively April 1; prior periods were not recast to that method. Reported growth is not same-method currency-neutral or organic growth. No full Q3 call transcript, Q3 10-Q, consensus comparison or stock-price reaction is asserted.",
+      "source_date_note": "Earnings released October 27 for Q3 ended September 30. Q4 figures are guidance. Cash support is for the first nine months. The Meta agreement is January 27 context, not a new October contract.",
+      "access_note": "Issuer release and the prior methodology exhibit were independently reviewed. Detailed Q3 cash reconciliation comes from the coordinating researcher’s SEC review; direct retrieval was unavailable in this publication environment. Public sources establish what was disclosed, not independent audit of operations.",
+      "highlights": [
+        {
+          "title": "Above its prior outlook, not a sourced consensus comparison",
+          "claim_type": "reported result versus earlier management guidance",
+          "observation": "July guidance for Q3 was $4.9–5.0bn core sales and $0.85–0.89 core EPS. Actual results exceeded those upper bounds by $81m and $0.02. This compares company guidance with reported non-GAAP results, not analyst consensus.",
+          "implication": "Execution exceeded management’s prior range; sustainability still depends on shipments, margins and collections.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000253/glw-20260728xex99xq22026.htm",
+          "source_date": "2026-07-28"
+        },
+        {
+          "title": "Optics provides the direct AI link",
+          "claim_type": "reported results; contribution and margin calculations",
+          "observation": "Enterprise sales grew 84%; GenAI product sales more than doubled. On published figures, optics supplied $727m of the $809m core-sales increase (~90%) and 46.8% of core sales. Its segment net-income margin was 22.4% versus 17.9%; this is not operating margin or AI-only revenue.",
+          "implication": "The infrastructure layer has recorded revenue and profit. Q4 core guidance is $5.2–5.3bn sales and $0.96–1.00 EPS; these are expectations, not reported outcomes.",
+          "source_url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+          "source_date": "2026-10-27"
+        },
+        {
+          "title": "Cash: separate the calculation from the adjusted measure",
+          "claim_type": "SEC cash disclosure and explicitly calculated comparison",
+          "observation": "Q3 operating cash of $1.061bn less $545m capex equals $516m. Company-adjusted free cash flow is $661m after $145m of translated-earnings-contract gains and other adjustments. Nine-month operating cash of $3.140bn includes $639m customer deposits/government incentives; capex was $1.299bn.",
+          "implication": "Do not call adjusted free cash flow ordinary operating cash less capex or wholly recurring AI cash. Deposits can help fund construction before the related economics are earned.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000273/glw-20261027xex99xq32026.htm",
+          "source_date": "2026-10-27"
+        },
+        {
+          "title": "A multiyear agreement is a pipeline, not current revenue",
+          "claim_type": "historical issuer agreement announcement",
+          "observation": "Meta announced an up-to-$6bn multiyear Corning fiber-optic supply agreement on January 27, supporting U.S. manufacturing expansion. It is a ceiling for an agreement, not $6bn of Q3 sales.",
+          "implication": "Follow contract shipments, customer acceptance and new capacity ramps. Supplier sales do not establish that customers’ compute is utilized or their applications earn adequate returns.",
+          "source_url": "https://about.fb.com/news/2026/01/meta-6-billion-agreement-corning-support-us-manufacturing/",
+          "source_date": "2026-01-27"
+        }
+      ],
+      "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+      "source_id": "corning-q3-20261027",
+      "rank": 1,
+      "relevance": "material"
+    },
+    {
+      "id": "meta-financing-20261026",
+      "title": "Meta prices a larger offering; common proceeds come later",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "published_at": "2026-10-27",
+      "event_date": "2026-10-26",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "source_id": "meta-20261027-reviewed",
+      "source_name": "Meta · common and preferred offering pricing",
+      "source_role": "primary",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "lens": "funding",
+      "entities": [
+        "Meta",
+        "NVIDIA",
+        "AMD",
+        "Broadcom"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure",
+        "models"
+      ],
+      "rank": 2,
+      "relevance": "material",
+      "observation": "Meta priced a $25bn common forward and $12.5bn preferred offering. Conditional closing is expected October 29; common proceeds arrive later.",
+      "summary": "Meta priced a $25bn common forward and $12.5bn preferred offering. Conditional closing is expected October 29; common proceeds arrive later.",
+      "implication": "Pricing reduces financing uncertainty while leaving dilution, cash timing and operating returns to prove.",
+      "access_note": "Full public issuer and issuer-distributed pricing releases read through the public web reader by the research reviewer. No authenticated access used.",
+      "source_date_note": "Pricing/release dateline October 26; issuer distribution October 27 at 01:01 ET. Expected October 29 closing is a future condition.",
+      "claim_type": "priced offerings; future proceeds and closing remain conditional",
+      "beneficiaries": "Meta gains funding flexibility if the offerings close. Suppliers benefit from accepted hardware and paid usage, not from offering size alone.",
+      "risks": "Dilution, preferred dividends, settlement adjustments and capacity delays remain. Supplier equity adds shared exposure to customer execution.",
+      "counterevidence": "The common offering's increase from $22.5bn to $25bn weakens a blanket funding-shutdown thesis. It does not increase the previously announced capex range or prove incremental demand.",
+      "confirms": "October 29 closings, actual proceeds, forward settlements and supplier allocations; then equipment acceptance, usage and collections.",
+      "refutes": "Reduced or delayed proceeds, unfilled supplier allocations or weak usage would weaken the financing-to-growth thesis.",
+      "uncertainty": "Underwriter options are not assumed exercised. No completed closing or ATM sale verified. Offering prices are not live stock quotes; expected proceeds are subject to adjustments.",
+      "publication_note": "Material update to the October 26 financing story: new pricing disclosure published October 27, not a second independent raise.",
+      "highlights": [
+        {
+          "title": "Common cash is deferred; preferred terms are set",
+          "claim_type": "issuer pricing terms",
+          "observation": "Forty million common shares at $625 equal $25bn. Meta initially gets no common proceeds; about $24.9bn is expected through settlement by November 19, 2027. The $12.5bn preferred carries a 6.5% cumulative dividend and mandatory conversion around August 2029.",
+          "implication": "The cash timings differ. Pricing is progress, while closing and received cash still need confirmation.",
+          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "source_date": "2026-10-27"
+        },
+        {
+          "title": "NVIDIA's proposed $3bn is inside the offering",
+          "claim_type": "issuer proposed investment and collaboration",
+          "observation": "NVIDIA announced proposed participation and expanded hardware/model work on October 26. No completed investment, quantified shipment or realized sales figure was established.",
+          "implication": "Do not add $3bn to the offering total or to the earlier aggregate up-to-$5bn supplier indications. Equity exposure and hardware revenue are different flows.",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+          "source_date": "2026-10-26"
+        },
+        {
+          "title": "The earlier ATM remains a separate plan",
+          "claim_type": "prior proposal retained as historical context",
+          "observation": "The October 26 launch also described a future roughly $60bn Class C ATM. Establishment and completed sales have not been verified in this update.",
+          "implication": "Keep it separate from priced offerings and cash received. The earlier $95bn headline is not a current cash balance.",
+          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "source_date": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "id": "spacex-lease-commitment-20261026",
+      "title": "SpaceX files a conditional $40bn GPU lease commitment",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm",
+      "published_at": "2026-10-26",
+      "event_date": "2026-10-24",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "source_id": "spacex-20261027-reviewed",
+      "source_name": "SpaceX · filed equipment-lease commitment",
+      "source_role": "primary",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "lens": "funding",
+      "entities": [
+        "SpaceX",
+        "Apollo"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure"
+      ],
+      "rank": 3,
+      "relevance": "material",
+      "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
+      "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
+      "implication": "Financing access improves the supply outlook; power readiness and collected compute revenue still determine returns.",
+      "access_note": "Full 124-line public SEC filing body reviewed. No completed master-lease or funding receipt was established.",
+      "source_date_note": "Accession 0001104659-26-118614; commitment October 24, disclosure signed/filed October 26. Expected lease commencement is in H1 2027.",
+      "claim_type": "filed commitment; timing and aggregate principal are management expectations",
+      "beneficiaries": "SpaceX and equipment providers could benefit if the agreement closes and deliveries are accepted. Supplier identity is not established here.",
+      "risks": "Funding cost is not set. Power delays or weak paid usage could leave fixed lease obligations ahead of cash generation.",
+      "counterevidence": "The commitment weakens a universal financing-shutdown thesis, but its conditions do not establish financing access for every neocloud.",
+      "confirms": "Final pricing and executed master lease, delivery/commencement records, subsequent recognized balances, utilization and collected external revenue.",
+      "refutes": "Failed closing, delayed equipment or power, poor utilization or weaker rental prices would reduce the operating benefit.",
+      "uncertainty": "The filing does not name Rubin or NVIDIA, disclose a Starlink pledge, or establish full collateral/recourse terms. It does not reconcile anticipated principal to September debt. Do not add it to the September balance or count previously included Valor financing again.",
+      "highlights": [
+        {
+          "title": "Commitment now documented; completion still conditional",
+          "claim_type": "issuer-filed terms and expectations",
+          "observation": "An Apollo-managed lessor would buy GPU pods for delivery in tranches. Lease terms are about 5–5.25 years, with interest and expenses beyond principal. Closing is expected before year-end; commencements are expected on H1 2027 delivery.",
+          "implication": "This supports the earlier executive claim at the commitment stage, without verifying 'closed'. It is not received cash or delivered capacity.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm",
+          "source_date": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "id": "coreweave-denmark-online-20261027",
+      "title": "CoreWeave reports Denmark compute online",
+      "url": "https://www.coreweave.com/news/coreweave-expands-global-ai-cloud-platform-with-new-capacity-in-denmark-and-first-ai-network-backbone",
+      "published_at": "2026-10-27",
+      "event_date": "2026-10-27",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "source_id": "coreweave-20261027-reviewed",
+      "source_name": "CoreWeave · Denmark capacity and planned network backbone",
+      "source_role": "primary",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "lens": "capacity",
+      "entities": [
+        "CoreWeave",
+        "atNorth",
+        "NVIDIA"
+      ],
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure"
+      ],
+      "rank": 4,
+      "relevance": "material",
+      "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
+      "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
+      "implication": "Reported deployment advances supply; customer acceptance and paid utilization must turn it into cash.",
+      "access_note": "Full 196-line issuer page read through its indexed public reference; direct URL resolution failed. No site telemetry or original HTML archive is claimed.",
+      "source_date_note": "Announcement October 27; event_date denotes that announcement, not a verified commissioning date. Exact activation timing is unspecified.",
+      "claim_type": "issuer operational statement; site telemetry not independently verified",
+      "beneficiaries": "CoreWeave, atNorth and customers seeking European compute may benefit. The announcement does not establish incremental NVIDIA revenue recognized today.",
+      "risks": "Unfilled capacity, discounts or late collections can leave fixed costs ahead of cash generation.",
+      "counterevidence": "Online capacity counters a universal-delays thesis, but planned network points of presence from Q4 2026 to mid-2027 are still future milestones.",
+      "confirms": "Accepted customer workloads, billed utilization, realized rental prices, cash collections and completed network milestones.",
+      "refutes": "Delayed remaining capacity, weak paid usage, price discounting or collection problems would weaken the cash-conversion case.",
+      "uncertainty": "The full 22.5MW is not stated to be online. Exact activation date and site-level economics are unknown; 'online' is the issuer's description.",
+      "highlights": [
+        {
+          "title": "Operational supply and future network plans are separate",
+          "claim_type": "issuer deployment claim and forward plan",
+          "observation": "The majority of planned DEN01 capacity at atNorth Copenhagen is reported online with Blackwell systems. Additional backbone locations are scheduled through mid-2027.",
+          "implication": "This does not verify delivery of separate GTC Berlin DSX POD or Vera Rubin targets, nor establish profitable occupancy.",
+          "source_url": "https://www.coreweave.com/news/coreweave-expands-global-ai-cloud-platform-with-new-capacity-in-denmark-and-first-ai-network-backbone",
+          "source_date": "2026-10-27"
+        }
+      ]
+    },
     {
       "id": "anthropic-s1-20261026",
       "title": "Anthropic’s S-1: positive operating cash, future compute bills",
@@ -87,73 +318,9 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
       "source_id": "anthropic-s1-20261026-source-1",
-      "rank": 1,
+      "rank": 5,
       "relevance": "material",
       "summary": "H1 revenue was $16.286bn, operating loss $0.693bn and operating cash inflow $3.929bn. The $80.748bn net loss includes large noncash financing revaluations; it is not cash burn. The IPO remains unpriced and not effective."
-    },
-    {
-      "id": "meta-financing-20261026",
-      "title": "Meta’s $95bn plan is not cash received",
-      "observation": "Meta launched financing proposals on October 26. The forward sale gives Meta no initial proceeds; the preferred offering is not verified closed and the future ATM is not established.",
-      "implication": "More funding could support growth; announcements alone do not establish paid demand.",
-      "reviewed_at": "2026-10-26T16:19:17Z",
-      "published_at": "2026-10-26T10:58:00Z",
-      "event_date": "2026-10-26",
-      "date_kind": "publication_date",
-      "date_precision": "minute",
-      "source_name": "Meta · issuer financing announcement",
-      "source_role": "primary",
-      "claim_type": "issuer proposals; implications are conditional analysis",
-      "lens": "funding",
-      "entities": [
-        "Meta",
-        "NVIDIA",
-        "AMD",
-        "Broadcom"
-      ],
-      "ai_layers": [
-        "chips",
-        "infrastructure"
-      ],
-      "beneficiaries": "Meta and suppliers benefit only if funded plans become delivered capacity and paid usage.",
-      "risks": "Dilution, funding delays and idle capacity.",
-      "counterevidence": "Unchanged capex guidance does not establish extra spending; existing operating cash weakens a simple cash-crisis thesis.",
-      "confirms": "Verify pricing, closings, proceeds, supplier allocations, ATM sales and delivered capacity.",
-      "refutes": "Withdrawn offerings, absent allocations or delayed capacity would weaken the funding-to-growth thesis.",
-      "uncertainty": "Base sizes exclude underwriter options. Exact dilution and actual allocations remain unverified. No later pricing or closing was found in this bounded check.",
-      "source_date_note": "Announcement: October 26, 06:58 ET / 10:58 UTC. Prior Q3/Class C context: October 21. The review does not redate either.",
-      "access_note": "Full issuer and distribution text retrieved through the web reader. The dynamic release list was unavailable; SEC prospectus bodies were not verified.",
-      "highlights": [
-        {
-          "title": "Three instruments, three stages",
-          "claim_type": "issuer financing proposals",
-          "observation": "$22.5bn forward common offering; ~$12.5bn mandatory-convertible depositary offering; planned ~$60bn Class C at-the-market (ATM) program.",
-          "implication": "Track future proceeds separately from announced amounts.",
-          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-          "source_date": "2026-10-26"
-        },
-        {
-          "title": "Supplier interest is not funding",
-          "claim_type": "nonbinding indications of interest",
-          "observation": "NVIDIA, AMD and Broadcom indicated nonbinding aggregate interest up to $5bn within the common offering; individual allocations are unknown.",
-          "implication": "Possible supplier ownership increases shared exposure; it proves neither orders nor artificial transactions.",
-          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-          "source_date": "2026-10-26"
-        },
-        {
-          "title": "Older guidance still applies",
-          "claim_type": "prior issuer guidance and governance announcement",
-          "observation": "FY2026 capex, including finance-lease principal, remains $135–145bn. Class C’s nonvoting design was announced October 21.",
-          "implication": "New issuance can dilute economic ownership without diluting votes.",
-          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
-          "source_date": "2026-10-21"
-        }
-      ],
-      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-      "source_id": "meta-financing-20261026-source-1",
-      "rank": 2,
-      "relevance": "material",
-      "summary": "Meta launched financing proposals on October 26. The forward sale gives Meta no initial proceeds; the preferred offering is not verified closed and the future ATM is not established."
     },
     {
       "id": "spacex-q3-filing-neocloud-20261025",
@@ -244,7 +411,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 3,
+      "rank": 6,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
     },
@@ -326,7 +493,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 4,
+      "rank": 7,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
     },
@@ -358,7 +525,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 5,
+      "rank": 8,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -421,7 +588,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 6,
+      "rank": 9,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -496,7 +663,7 @@
       "entities": [
         "OpenAI"
       ],
-      "rank": 7,
+      "rank": 10,
       "observation": "Bloomberg reports a $1.25tn valuation target, versus $1.4tn discussed earlier, for a proposed ~$30bn raise.",
       "summary": "Negotiations remain open; this is not a completed financing.",
       "implication": "If capital becomes harder to secure, labs may prioritize fewer compute commitments.",
@@ -526,7 +693,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 8,
+      "rank": 11,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -554,7 +721,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 9,
+      "rank": 12,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -581,7 +748,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 10,
+      "rank": 13,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -610,7 +777,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 11,
+      "rank": 14,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -625,6 +792,42 @@
       "source_role": "secondary",
       "date_kind": "publication_date",
       "reviewed_at": "2026-10-25T07:20:41Z"
+    },
+    {
+      "id": "fanatics-ai-engagement-20261026",
+      "title": "Fanatics reports more shopping engagement; returns remain unmeasured",
+      "url": "https://openai.com/index/fanatics-streamline-fan-experience/",
+      "published_at": "2026-10-26",
+      "event_date": "2026-10-26",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "source_id": "fanatics-20261027-reviewed",
+      "source_name": "OpenAI · Fanatics Shop the Look case study",
+      "source_role": "primary",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "lens": "demand",
+      "entities": [
+        "OpenAI",
+        "Fanatics"
+      ],
+      "ai_layers": [
+        "models",
+        "applications"
+      ],
+      "rank": 15,
+      "relevance": "watch",
+      "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
+      "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
+      "implication": "Deployment is a useful adoption signal; engagement needs to convert into purchases after AI costs.",
+      "access_note": "Full public issuer case study read; no independent experiment replication or origin HTML archive is claimed.",
+      "source_date_note": "Case study published October 26. event_date denotes the announcement; activation and underlying test dates are unspecified.",
+      "claim_type": "vendor/customer case study; economic implication is inference",
+      "beneficiaries": "Fanatics and model/application suppliers could benefit if recommendations increase profitable purchases.",
+      "risks": "Engagement can rise without incremental sales, retention or margin after inference and integration costs.",
+      "counterevidence": "The live application is stronger evidence of use than a demo, but no sales, conversion, gross-profit or net-return measure is provided.",
+      "confirms": "Comparable-control results for purchase conversion, revenue per visit, retention and contribution after AI costs.",
+      "refutes": "No incremental purchases, cannibalized orders or costs exceeding gains would weaken the economic case.",
+      "uncertainty": "The roughly 30,000 MLB products describe test coverage, not customers or purchases. Test period and full study design are unspecified; results are not independently replicated."
     }
   ],
   "sources": [
@@ -1336,6 +1539,151 @@
         "capacity"
       ],
       "access_note": "The coordinating researcher reviewed the downloaded original SEC prospectus and supplied statement and contract extracts. Filing metadata and selected indexed passages were independently cross-checked; this environment could not retrieve the complete body. Issuer announcement reviewed publicly."
+    },
+    {
+      "id": "meta-20261027-reviewed",
+      "name": "Meta · common and preferred offering pricing",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "source_date": "2026-10-27",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "topics": [
+        "funding",
+        "capacity"
+      ],
+      "quality_note": "Priced offerings remain subject to closing; deferred proceeds and supplier participation are not extra revenue.",
+      "access_note": "Full public issuer and issuer-distributed pricing releases read through the public web reader by the research reviewer. No authenticated access used.",
+      "publication_note": "Pricing/release dateline October 26; issuer distribution October 27 at 01:01 ET. Expected October 29 closing is a future condition."
+    },
+    {
+      "id": "nvidia-20261027-reviewed",
+      "name": "NVIDIA · proposed Meta investment and model collaboration",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+      "source_date": "2026-10-26",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "topics": [
+        "funding",
+        "capacity",
+        "models"
+      ],
+      "quality_note": "Proposed investment and deployment intentions are issuer claims, not completed funding, shipment or revenue measurements.",
+      "access_note": "Full issuer release read through an indexed public web-reader reference after direct URL resolution failed.",
+      "publication_note": "The issuer release is October 26; the feed appearance is October 27. The later feed date does not redate the announcement."
+    },
+    {
+      "id": "spacex-20261027-reviewed",
+      "name": "SpaceX · filed equipment-lease commitment",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm",
+      "source_date": "2026-10-26",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "topics": [
+        "funding",
+        "capacity"
+      ],
+      "quality_note": "The filing establishes a binding commitment letter; master-lease closing, pricing and future deliveries remain conditional.",
+      "access_note": "Full 124-line public SEC filing body reviewed. No completed master-lease or funding receipt was established.",
+      "publication_note": "Accession 0001104659-26-118614; commitment October 24, disclosure signed/filed October 26. Expected lease commencement is in H1 2027."
+    },
+    {
+      "id": "coreweave-20261027-reviewed",
+      "name": "CoreWeave · Denmark capacity and planned network backbone",
+      "url": "https://www.coreweave.com/news/coreweave-expands-global-ai-cloud-platform-with-new-capacity-in-denmark-and-first-ai-network-backbone",
+      "source_date": "2026-10-27",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "topics": [
+        "capacity",
+        "demand"
+      ],
+      "quality_note": "Issuer-reported operational capacity is distinct from independently measured power, paid utilization and recognized revenue.",
+      "access_note": "Full 196-line issuer page read through its indexed public reference; direct URL resolution failed. No site telemetry or original HTML archive is claimed.",
+      "publication_note": "Announcement October 27; exact activation date and online MW are unspecified. Backbone milestones through mid-2027 remain prospective."
+    },
+    {
+      "id": "fanatics-20261027-reviewed",
+      "name": "OpenAI · Fanatics Shop the Look case study",
+      "url": "https://openai.com/index/fanatics-streamline-fan-experience/",
+      "source_date": "2026-10-26",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "topics": [
+        "demand",
+        "models"
+      ],
+      "quality_note": "Vendor/customer case study reports engagement, not incremental revenue, profit or independently measured ROI.",
+      "access_note": "Full public issuer case study read; no independent experiment replication or origin HTML archive is claimed.",
+      "publication_note": "Published October 26. The underlying test period and complete study design are not disclosed."
+    },
+    {
+      "id": "corning-q3-20261027",
+      "name": "Corning · Q3 2026 earnings release",
+      "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+      "source_date": "2026-10-27",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-27T14:10:47+00:00",
+      "quality_note": "Reported results, management guidance, non-GAAP adjustments and commitments have different meanings.",
+      "topics": [
+        "earnings",
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Full issuer release read by the independent reviewer through an indexed public reference. Direct URL resolution and origin download failed; no raw body is redistributed."
+    },
+    {
+      "id": "corning-cash-20261027",
+      "name": "Corning · SEC Q3 earnings exhibit and cash reconciliation",
+      "url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000273/glw-20261027xex99xq32026.htm",
+      "source_date": "2026-10-27",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-27T14:10:47+00:00",
+      "quality_note": "Reported results, management guidance, non-GAAP adjustments and commitments have different meanings.",
+      "topics": [
+        "earnings",
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Exact cash reconciliation reviewed in the SEC exhibit by the coordinating researcher. Publication environment could not retrieve this body; no claim of a full call or Q3 10-Q review."
+    },
+    {
+      "id": "corning-method-20260728",
+      "name": "Corning · Q2 SEC exhibit explaining core currency methodology",
+      "url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000253/glw-20260728xex99xq22026.htm",
+      "source_date": "2026-07-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-27T14:10:47+00:00",
+      "quality_note": "Reported results, management guidance, non-GAAP adjustments and commitments have different meanings.",
+      "topics": [
+        "earnings",
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Full public SEC exhibit reviewed, especially methodology pages 12–13 and 19. Historical context, not a new October policy change."
+    },
+    {
+      "id": "meta-corning-20260127",
+      "name": "Meta · historical multiyear Corning agreement",
+      "url": "https://about.fb.com/news/2026/01/meta-6-billion-agreement-corning-support-us-manufacturing/",
+      "source_date": "2026-01-27",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-27T14:10:47+00:00",
+      "quality_note": "Reported results, management guidance, non-GAAP adjustments and commitments have different meanings.",
+      "topics": [
+        "earnings",
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Full public issuer announcement reviewed. Agreement ceiling and manufacturing plans do not establish recognized sales, cash payment or completed new factory capacity."
     }
   ],
   "ledger": [
@@ -2112,43 +2460,61 @@
       "to_entity": "Meta",
       "instrument": "equity",
       "currency": "USD bn",
-      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-      "source_date": "2026-10-26",
-      "as_of": "2026-10-26T16:19:17Z",
-      "reviewed_at": "2026-10-26T16:19:17Z",
+      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:05:11+00:00",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
       "flow_type": "money",
       "revenue_status": "Not revenue.",
       "id": "meta-forward-common-20261026",
       "from_entity": "Morgan Stanley / Goldman Sachs",
-      "amount": 22.5,
-      "status": "proposed forward offering",
+      "amount": 25,
+      "status": "priced; closing and forward settlement pending",
       "flow_label": "Future equity proceeds",
-      "payment_status": "No initial Meta proceeds.",
-      "note": "Settlement contemplated through November 19, 2027.",
-      "uncertainty": "Closing not verified.",
-      "risk": "Pricing and settlement risk.",
-      "overlap_group": "meta-common-20261026"
+      "payment_status": "No initial Meta common proceeds; about $24.9bn expected on forward settlement, subject to adjustments.",
+      "note": "Priced October 26: 40m shares at $625, up from the prior $22.5bn proposal. Conditional closing expected October 29; settlement intended through November 19, 2027. Amount is gross base offering size, not cash received.",
+      "uncertainty": "Closing, future settlement and option exercise unverified. Offering price is not a live stock quote.",
+      "risk": "Settlement adjustments, delays and economic dilution.",
+      "overlap_group": "meta-common-20261026",
+      "changed_at": "2026-10-27",
+      "sources": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "title": "Prior October 26 offering launch",
+          "date": "2026-10-26",
+          "role": "primary"
+        }
+      ]
     },
     {
       "to_entity": "Meta",
       "instrument": "equity",
       "currency": "USD bn",
-      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-      "source_date": "2026-10-26",
-      "as_of": "2026-10-26T16:19:17Z",
-      "reviewed_at": "2026-10-26T16:19:17Z",
+      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:05:11+00:00",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
       "flow_type": "money",
       "revenue_status": "Not revenue.",
       "id": "meta-convertible-preferred-20261026",
       "from_entity": "Prospective preferred investors",
       "amount": 12.5,
-      "status": "launched; closing unverified",
-      "flow_label": "Proposed preferred equity",
-      "payment_status": "Cash receipt unverified.",
-      "note": "Approximate base size; mandatory-convertible depositary shares.",
-      "uncertainty": "Dividend and conversion terms pending pricing.",
-      "risk": "Dilution and pricing risk.",
-      "overlap_group": "meta-preferred-20261026"
+      "status": "priced; closing pending",
+      "flow_label": "Priced preferred equity",
+      "payment_status": "Cash receipt unverified; conditional closing expected October 29.",
+      "note": "250m depositary shares at $50: $12.5bn gross base size, with 6.5% cumulative dividends and mandatory conversion around August 2029. Dividends may be cash or stock under the terms.",
+      "uncertainty": "No closed transaction verified; options are not assumed exercised.",
+      "risk": "Dividend burden, economic dilution and closing risk.",
+      "overlap_group": "meta-preferred-20261026",
+      "changed_at": "2026-10-27",
+      "sources": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "title": "Prior October 26 offering launch",
+          "date": "2026-10-26",
+          "role": "primary"
+        }
+      ]
     },
     {
       "to_entity": "Meta",
@@ -2177,8 +2543,8 @@
       "currency": "USD bn",
       "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
       "source_date": "2026-10-26",
-      "as_of": "2026-10-26T16:19:17Z",
-      "reviewed_at": "2026-10-26T16:19:17Z",
+      "as_of": "2026-10-27T14:05:11+00:00",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
       "flow_type": "money",
       "revenue_status": "Not revenue.",
       "id": "meta-supplier-interest-20261026",
@@ -2186,11 +2552,26 @@
       "amount": 5,
       "status": "nonbinding interest, up to aggregate amount",
       "flow_label": "Possible supplier equity",
-      "payment_status": "Purchase and allocations unverified.",
-      "note": "Subset of common offering; separate indications, not a joint commitment.",
-      "uncertainty": "Individual allocations unknown; purchases may be zero.",
+      "payment_status": "NVIDIA disclosed a proposed $3bn participation; no completed purchases verified.",
+      "note": "Earlier up-to-$5bn aggregate indications are a subset of the common offering. NVIDIA's October 26 proposed $3bn is included, not an additional raise or joint supplier commitment. AMD/Broadcom allocations remain unverified.",
+      "uncertainty": "Final individual allocations and completed funding unknown. Do not add $3bn to $5bn or either to the common offering.",
       "risk": "Shared supplier/customer exposure.",
-      "overlap_group": "meta-common-20261026"
+      "overlap_group": "meta-common-20261026",
+      "changed_at": "2026-10-26",
+      "sources": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+          "title": "NVIDIA proposed participation",
+          "date": "2026-10-26",
+          "role": "primary"
+        },
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "title": "Meta offering pricing",
+          "date": "2026-10-27",
+          "role": "primary"
+        }
+      ]
     },
     {
       "id": "anthropic-google-cloud-minimum-20261026",
@@ -2296,6 +2677,50 @@
       "revenue_status": "Contract value is not recognized revenue; actual supplier revenue unverified.",
       "uncertainty": "Exact realized payments, facility-level timing and utilization are not established here. Do not sum with aggregate leases, purchase commitments or subsequent amendments.",
       "overlap_group": "anthropic-s1-compute-obligations"
+    },
+    {
+      "id": "spacex-apollo-equipment-20261024",
+      "from_entity": "Apollo-managed lessor",
+      "to_entity": "SpaceX",
+      "instrument": "other",
+      "amount": 40,
+      "currency": "USD bn",
+      "status": "binding commitment; master lease conditional",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm",
+      "source_date": "2026-10-26",
+      "as_of": "2026-10-27T14:05:11+00:00",
+      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "changed_at": "2026-10-26",
+      "flow_type": "credit",
+      "flow_label": "Conditional equipment lease financing",
+      "note": "October 24 letter contemplates lessor purchases of GPU equipment for SpaceX. About $40bn expected principal across future 5–5.25-year tranches, plus interest/expenses. Closing expected before year-end; lease commencement on expected H1 2027 delivery.",
+      "payment_status": "Financing commitment; funded amount, cash receipt and delivered equipment unverified.",
+      "revenue_status": "Not customer revenue or proven profitable utilization.",
+      "risk": "Funding cost, closing, power readiness and utilization can separate lease obligations from collected compute revenue.",
+      "uncertainty": "Rate unset; detailed recourse and collateral not disclosed here. No Rubin identification or Starlink pledge established. Do not add expected principal to September debt or count included Valor financing again.",
+      "overlap_group": "spacex-apollo-equipment-20261024"
+    },
+    {
+      "id": "meta-corning-supply-20260127",
+      "from_entity": "Meta",
+      "to_entity": "Corning",
+      "instrument": "customer_contract",
+      "amount": 6,
+      "currency": "USD bn",
+      "status": "historical agreement, up to ceiling",
+      "source_url": "https://about.fb.com/news/2026/01/meta-6-billion-agreement-corning-support-us-manufacturing/",
+      "source_date": "2026-01-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "reviewed_at": "2026-10-27T14:10:47+00:00",
+      "changed_at": "2026-01-27",
+      "flow_type": "money",
+      "flow_label": "Multiyear optical-supply agreement",
+      "note": "January 27 announced up-to-$6bn agreement for fiber-optic data-center connectivity. Supports manufacturing expansion; not a new October agreement or $6bn of current sales.",
+      "payment_status": "Actual aggregate cash paid and remaining spend unverified.",
+      "revenue_status": "Contract ceiling is not recognized revenue; no amount allocated to Q3 here.",
+      "risk": "Customer timing, equipment acceptance and factory-ramp execution.",
+      "uncertainty": "Detailed minimum-purchase and cancellation terms not established in the announcement. No completed new factory is inferred.",
+      "overlap_group": "meta-corning-supply-20260127"
     }
   ],
   "earnings": [
@@ -2402,6 +2827,127 @@
       "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
       "source_date": "2026-10-26",
       "as_of": "2026-06-30"
+    },
+    {
+      "id": "glw-q3-2026-core-sales",
+      "company": "Corning (GLW)",
+      "period": "Q3 2026",
+      "reported_period": "Q3 ended September 30, 2026",
+      "metric": "Core sales (non-GAAP)",
+      "unit": "USD bn",
+      "reported": 5.081,
+      "source_url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "note": "Reported +19% YoY; April currency-method change means growth is not organic or same-method currency-neutral. Guidance is a range for Q4.",
+      "guidance": "5.2–5.3",
+      "guidance_period": "Q4 2026"
+    },
+    {
+      "id": "glw-q3-2026-core-eps",
+      "company": "Corning (GLW)",
+      "period": "Q3 2026",
+      "reported_period": "Q3 ended September 30, 2026",
+      "metric": "Core diluted EPS (non-GAAP)",
+      "unit": "USD/share",
+      "reported": 0.91,
+      "source_url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "note": "Reported +36% YoY; distinct from GAAP. Guidance is for Q4; no consensus sourced.",
+      "guidance": "0.96–1.00",
+      "guidance_period": "Q4 2026"
+    },
+    {
+      "id": "glw-q3-2026-gaap-sales",
+      "company": "Corning (GLW)",
+      "period": "Q3 2026",
+      "reported_period": "Q3 ended September 30, 2026",
+      "metric": "GAAP net sales",
+      "unit": "USD bn",
+      "reported": 4.855,
+      "source_url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "note": "Separate accounting basis from core sales."
+    },
+    {
+      "id": "glw-q3-2026-gaap-eps",
+      "company": "Corning (GLW)",
+      "period": "Q3 2026",
+      "reported_period": "Q3 ended September 30, 2026",
+      "metric": "GAAP diluted EPS",
+      "unit": "USD/share",
+      "reported": 0.78,
+      "source_url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "note": "Separate accounting basis from core EPS."
+    },
+    {
+      "id": "glw-q3-2026-optical-sales",
+      "company": "Corning (GLW)",
+      "period": "Q3 2026",
+      "reported_period": "Q3 ended September 30, 2026",
+      "metric": "Optical Communications sales",
+      "unit": "USD bn",
+      "reported": 2.379,
+      "source_url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "note": "Reported +44%; not all optical sales are AI revenue."
+    },
+    {
+      "id": "glw-q3-2026-optical-income",
+      "company": "Corning (GLW)",
+      "period": "Q3 2026",
+      "reported_period": "Q3 ended September 30, 2026",
+      "metric": "Optical segment net income",
+      "unit": "USD bn",
+      "reported": 0.532,
+      "source_url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "note": "Reported +80%; segment net income is not operating profit."
+    },
+    {
+      "id": "glw-q3-2026-operating-cash",
+      "company": "Corning (GLW)",
+      "period": "Q3 2026",
+      "reported_period": "Q3 ended September 30, 2026",
+      "metric": "Operating cash flow",
+      "unit": "USD bn",
+      "reported": 1.061,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000273/glw-20261027xex99xq32026.htm",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "note": "Q3, not nine-month cash; exact SEC reconciliation reviewed by coordinating researcher."
+    },
+    {
+      "id": "glw-q3-2026-capex",
+      "company": "Corning (GLW)",
+      "period": "Q3 2026",
+      "reported_period": "Q3 ended September 30, 2026",
+      "metric": "Capital expenditure",
+      "unit": "USD bn",
+      "reported": 0.545,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000273/glw-20261027xex99xq32026.htm",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "note": "Q3 operating cash less this capex is a calculated $516m, distinct from company-adjusted FCF."
+    },
+    {
+      "id": "glw-q3-2026-adjusted-fcf",
+      "company": "Corning (GLW)",
+      "period": "Q3 2026",
+      "reported_period": "Q3 ended September 30, 2026",
+      "metric": "Adjusted free cash flow (non-GAAP)",
+      "unit": "USD bn",
+      "reported": 0.661,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000273/glw-20261027xex99xq32026.htm",
+      "source_date": "2026-10-27",
+      "as_of": "2026-10-27T14:10:47+00:00",
+      "note": "Includes $145m adjustments beyond Q3 operating cash less capex; not wholly recurring AI cash."
     }
   ]
 }

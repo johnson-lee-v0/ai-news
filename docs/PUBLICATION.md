@@ -26,4 +26,4 @@ These checks reduce risk but cannot guarantee the absence of every secret or sen
 
 ## CI
 
-The workflow runs unit tests on Linux with read-only repository permissions. Third-party actions are pinned to reviewed commit IDs. Browser tests remain optional and require a separately installed Playwright/Chromium runtime. A separate manual GitHub Pages workflow deploys the allowlisted static artifact using only repository-scoped Pages permissions. No scheduled publishing, paid service or private account data integration is configured.
+The workflow runs unit tests on Linux with read-only repository permissions. Third-party actions are pinned to reviewed commit IDs. Browser tests use a separately installed Playwright/Chromium runtime. A separate explicitly dispatched GitHub Pages workflow deploys the allowlisted static artifact using only repository-scoped Pages permissions. The existing external daily automation is authorized to publish material verified public research after these checks; no repository cron, new background service or private account-data integration is added.

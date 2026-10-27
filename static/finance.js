@@ -158,7 +158,7 @@
     const companies=companyCounts(rows);const width=1000,height=state.company?(Math.max(companies.length,rows.length)>12?680:520):Math.max(430,Math.ceil(companies.length/4)*140+10);
     const section=element('section','pf-graph-section');section.setAttribute('aria-label','Interactive relationship overview');
     append(section,element('p','pf-graph-hint','Select a company to follow its relationships. The full overview shows every company in the selected network. Choose a company for labeled relationships, or select a line to inspect its source. Every relationship is also listed below.'),button('Skip map to relationship list','pf-skip-map',()=>{const heading=state.container.querySelector('.pf-list-heading h3');if(heading){heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'auto'});}}));
-    if(companies.length>30){append(section,element('p','pf-empty','This network has '+companies.length+' companies. Choose a company for a readable map; the full relationship list remains below.'));return section;}
+    if(companies.length>36){append(section,element('p','pf-empty','This network has '+companies.length+' companies. Choose a company for a readable map; the full relationship list remains below.'));return section;}
     const graph=element('div','pf-graph');graph.style.aspectRatio=width+' / '+height;
     const svg=document.createElementNS(NS,'svg');svg.setAttribute('viewBox','0 0 '+width+' '+height);svg.setAttribute('aria-hidden','true');svg.setAttribute('focusable','false');svg.setAttribute('preserveAspectRatio','none');
     const defs=document.createElementNS(NS,'defs');
