@@ -1,6 +1,15 @@
 # Public snapshot provenance
 
-Latest additions reviewed **October 27, 2026**: Corning earnings and AI connectivity, Meta offering pricing, SpaceX lease commitment, CoreWeave Denmark capacity and a Fanatics application example. Earlier stories retain their individual source and review dates. Exact timestamps are in `brief.json`. This is a selected reviewed snapshot, not a live feed or complete market survey. Summaries are independently written; linked article bodies are not distributed. The user authorized automatic publication of material verified updates through the existing daily workflow; every publication still requires source review, tests and privacy checks.
+Latest addition reviewed **October 28, 2026**: SK hynix earnings and the distinction between memory pricing, shipment growth and cash conversion. Earlier stories retain their individual source and review dates. Exact timestamps are in `brief.json`. This is a selected reviewed snapshot, not a live feed or complete market survey. Summaries are independently written; linked article bodies are not distributed. The user authorized automatic publication of material verified updates through the existing daily workflow; every publication still requires source review, tests and privacy checks.
+
+## October 28: SK hynix
+
+| Reviewed source | Source date | Boundary |
+|---|---|---|
+| [SK hynix Q3 earnings release](https://news.skhynix.com/en/q3-2026-business-results/) | 2026-10-28 | Full issuer release reviewed through the public web reader. Preliminary consolidated K-IFRS, not completed independent review. Future factory milestones and shortage forecasts remain management expectations. |
+| [DART earnings presentation](https://dart.fss.or.kr/report/download.do?dcmNo=11629600&flNm=2.+3Q26_Earnings+Presentation_ENG.pdf) | 2026-10-28 | Original public PDF retrieved, with operating indicators, income reconciliation, cash footnotes and LTA terms checked. Relevant pages: 4–7, 10–12, 16 and 20. No full call transcript reviewed. |
+
+Amounts are explicitly labeled KRW trillion after conversion from source tables in KRW billions. Operating income, net income, operating cash flow and quarter-end cash have different meanings. Cash includes short-term instruments; operating cash less PP&E purchases is an analyst calculation. Pricing growth is distinct from shipment growth. No unnamed contract counterparties, dollar-value backlog, receipt of deposits, stock reaction or consensus comparison is inferred. Existing financing relationships and older analysis are preserved.
 
 ## October 27 updates
 

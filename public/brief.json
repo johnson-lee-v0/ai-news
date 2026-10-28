@@ -1,13 +1,86 @@
 {
-  "reviewed_at": "2026-10-27T14:10:47+00:00",
-  "headline": "Supplier earnings, financing and delivered capacity are different signals.",
+  "reviewed_at": "2026-10-28T04:19:04+00:00",
+  "headline": "Memory pricing reaches supplier profits; downstream returns remain a separate test.",
   "bullets": [
-    "Corning’s optical growth reaches reported sales and segment profit; cash quality and customer returns need separate tests.",
-    "Meta priced its offerings; SpaceX disclosed a conditional lease commitment. Neither equals cash received or equipment delivered.",
-    "CoreWeave reports Denmark capacity online. Follow paid utilization and collections, while keeping older filing and GTC context dated."
+    "SK hynix’s results strengthen the upstream memory thesis; price and volume growth have different implications.",
+    "Cash generation, contract coverage and factory milestones require separate checks.",
+    "Earlier Corning, Meta and SpaceX analysis retains its original source and review dates."
   ],
   "notice": "Selected public evidence and financing relationships, reviewed on the displayed dates. Material verified updates may be published through the approved daily workflow; this remains a dated snapshot, not a live or exhaustive feed. X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "sk-hynix-q3-20261028",
+      "title": "SK hynix: memory scarcity is turning into profit",
+      "published_at": "2026-10-28",
+      "event_date": "2026-10-28",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-28T04:19:04+00:00",
+      "source_name": "SK hynix · Q3 earnings",
+      "source_role": "primary",
+      "lens": "earnings",
+      "entities": [
+        "SK hynix",
+        "HBM",
+        "DRAM",
+        "NAND"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure"
+      ],
+      "report_period": "Q3 ended September 30, 2026; Q4 and later milestones are management expectations",
+      "claim_type": "preliminary issuer-reported results; management outlook; conditional analysis",
+      "observation": "Revenue KRW104.6155tn; operating profit KRW83.3338tn; net income KRW39.7756tn. The source table uses billion KRW; these values are converted to trillion KRW.",
+      "summary": "Upstream pricing strength can reward memory suppliers while squeezing compute buyers.",
+      "implication": "Memory pricing strengthens supplier profits; it can raise compute costs without proving better AI customer returns.",
+      "beneficiaries": "SK hynix has direct chips-layer exposure. Infrastructure buyers may gain component availability but can face higher costs; models and applications still need to earn returns on that spending.",
+      "risks": "Margins can reverse if supply catches demand. Customer financing, power delays, contract renegotiation and expensive factory ramps can interrupt the conversion into collected cash.",
+      "counterevidence": "Operating cash flow fell about 16.6% sequentially while PP&E purchases rose about 18.7% (calculated). Strong reported profit does not mean uniformly improving cash conversion.",
+      "confirms": "Watch Q4 HBM4 product mix, year-end M15X execution, collections after capex and pricing as new supply arrives.",
+      "refutes": "Weaker realized prices, delayed ramps, renegotiated contracts or deteriorating cash conversion would weaken the scarcity-profit thesis.",
+      "uncertainty": "No customer-by-customer contract economics, verified stock reaction or analyst-consensus comparison is included. Supplier earnings do not establish downstream utilization or application ROI.",
+      "source_date_note": "Release and presentation: October 28. Reported quarter ends September 30; review date is separate. Planned milestones are not delivered capacity.",
+      "access_note": "Issuer release and original DART presentation reviewed. Preliminary disclosures establish the company’s reported position, not independently audited operations.",
+      "highlights": [
+        {
+          "title": "Pricing is doing more work than shipment growth",
+          "claim_type": "management-reported sequential operating indicators",
+          "observation": "DRAM bits rose roughly 10%, versus ASP growth in the high twenties. NAND bits slipped slightly, while ASP rose in the mid twenties (presentation p4).",
+          "implication": "Scarcity and mix matter: revenue growth cannot be treated as equivalent physical-volume growth or proof of end-user demand.",
+          "source_url": "https://dart.fss.or.kr/report/download.do?dcmNo=11629600&flNm=2.+3Q26_Earnings+Presentation_ENG.pdf",
+          "source_date": "2026-10-28"
+        },
+        {
+          "title": "Profit, cash flow and cash balance are different",
+          "claim_type": "preliminary results and explicitly labeled calculation",
+          "observation": "Q3 CFO KRW54.781tn minus PP&E purchases KRW12.670tn equals KRW42.111tn, a calculation rather than company-defined FCF. Period-end cash KRW114.460tn includes short-term instruments (p7/16).",
+          "implication": "Compare spending with recurring collections. A large balance can support investment, but it is not this quarter’s cash generation.",
+          "source_url": "https://dart.fss.or.kr/report/download.do?dcmNo=11629600&flNm=2.+3Q26_Earnings+Presentation_ENG.pdf",
+          "source_date": "2026-10-28"
+        },
+        {
+          "title": "The net-profit gap has disclosed non-operating effects",
+          "claim_type": "preliminary income-statement reconciliation",
+          "observation": "FX loss KRW11.633tn and investment-asset loss about KRW22.92tn contribute to net non-operating loss KRW32.625tn; other items offset part of those losses. Tax is KRW10.933tn (p6/20).",
+          "implication": "Do not equate operating income with net income or attribute every investment loss to Kioxia. Neither measure alone is cash flow.",
+          "source_url": "https://dart.fss.or.kr/report/download.do?dcmNo=11629600&flNm=2.+3Q26_Earnings+Presentation_ENG.pdf",
+          "source_date": "2026-10-28"
+        },
+        {
+          "title": "Contracts provide visibility; delivery still matters",
+          "claim_type": "management statements and future milestones",
+          "observation": "Signed LTAs cover over half of 2027–28 capacity. Management targets Q4 HBM4 crossover, full M15X ramp by year-end and Yongin Phase 1 operations next year; shortage through 2030 is its forecast.",
+          "implication": "Contract coverage is not recognized revenue. Follow delivery, acceptance and payment; do not assume unnamed counterparties or add a speculative financing edge.",
+          "source_url": "https://news.skhynix.com/en/q3-2026-business-results/",
+          "source_date": "2026-10-28"
+        }
+      ],
+      "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+      "source_id": "sk-hynix-q3-release-20261028",
+      "rank": 1,
+      "relevance": "material"
+    },
     {
       "id": "corning-q3-ai-buildout-20261027",
       "title": "Corning: AI connectivity is reaching sales and profit",
@@ -76,7 +149,7 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 1,
+      "rank": 2,
       "relevance": "material"
     },
     {
@@ -103,7 +176,7 @@
         "infrastructure",
         "models"
       ],
-      "rank": 2,
+      "rank": 3,
       "relevance": "material",
       "observation": "Meta priced a $25bn common forward and $12.5bn preferred offering. Conditional closing is expected October 29; common proceeds arrive later.",
       "summary": "Meta priced a $25bn common forward and $12.5bn preferred offering. Conditional closing is expected October 29; common proceeds arrive later.",
@@ -166,7 +239,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 3,
+      "rank": 4,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -214,7 +287,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 4,
+      "rank": 5,
       "relevance": "material",
       "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
       "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
@@ -318,7 +391,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
       "source_id": "anthropic-s1-20261026-source-1",
-      "rank": 5,
+      "rank": 6,
       "relevance": "material",
       "summary": "H1 revenue was $16.286bn, operating loss $0.693bn and operating cash inflow $3.929bn. The $80.748bn net loss includes large noncash financing revaluations; it is not cash burn. The IPO remains unpriced and not effective."
     },
@@ -411,7 +484,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 6,
+      "rank": 7,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
     },
@@ -493,7 +566,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 7,
+      "rank": 8,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
     },
@@ -525,7 +598,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 8,
+      "rank": 9,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -588,7 +661,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 9,
+      "rank": 10,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -663,7 +736,7 @@
       "entities": [
         "OpenAI"
       ],
-      "rank": 10,
+      "rank": 11,
       "observation": "Bloomberg reports a $1.25tn valuation target, versus $1.4tn discussed earlier, for a proposed ~$30bn raise.",
       "summary": "Negotiations remain open; this is not a completed financing.",
       "implication": "If capital becomes harder to secure, labs may prioritize fewer compute commitments.",
@@ -693,7 +766,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 11,
+      "rank": 12,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -721,7 +794,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 12,
+      "rank": 13,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -748,7 +821,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 13,
+      "rank": 14,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -777,7 +850,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 14,
+      "rank": 15,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -814,7 +887,7 @@
         "models",
         "applications"
       ],
-      "rank": 15,
+      "rank": 16,
       "relevance": "watch",
       "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
       "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
@@ -1684,6 +1757,38 @@
         "demand"
       ],
       "access_note": "Full public issuer announcement reviewed. Agreement ceiling and manufacturing plans do not establish recognized sales, cash payment or completed new factory capacity."
+    },
+    {
+      "id": "sk-hynix-q3-release-20261028",
+      "name": "SK hynix · Q3 2026 results",
+      "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T04:19:04+00:00",
+      "quality_note": "Preliminary reported results and management projections are distinct.",
+      "topics": [
+        "earnings",
+        "demand",
+        "capacity"
+      ],
+      "access_note": "Full issuer release reviewed through the public web reader. Consolidated K-IFRS results are preliminary; independent review was not finalized."
+    },
+    {
+      "id": "sk-hynix-q3-deck-20261028",
+      "name": "SK hynix · DART earnings presentation",
+      "url": "https://dart.fss.or.kr/report/download.do?dcmNo=11629600&flNm=2.+3Q26_Earnings+Presentation_ENG.pdf",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T04:19:04+00:00",
+      "quality_note": "Preliminary reported results and management projections are distinct.",
+      "topics": [
+        "earnings",
+        "demand",
+        "capacity"
+      ],
+      "access_note": "Original public DART PDF downloaded and relevant tables visually checked: pages 4–7, 10–12 and 16. No earnings-call transcript or independent audit is claimed."
     }
   ],
   "ledger": [
@@ -2948,6 +3053,84 @@
       "source_date": "2026-10-27",
       "as_of": "2026-10-27T14:10:47+00:00",
       "note": "Includes $145m adjustments beyond Q3 operating cash less capex; not wholly recurring AI cash."
+    },
+    {
+      "id": "sk-hynix-q3-2026-revenue",
+      "company": "SK hynix",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Revenue",
+      "unit": "KRW trillion",
+      "reported": 104.6155,
+      "source_url": "https://news.skhynix.com/en/q3-2026-business-results/",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T04:19:04+00:00",
+      "note": "Consolidated K-IFRS; preliminary."
+    },
+    {
+      "id": "sk-hynix-q3-2026-operating-profit",
+      "company": "SK hynix",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Operating profit",
+      "unit": "KRW trillion",
+      "reported": 83.3338,
+      "source_url": "https://news.skhynix.com/en/q3-2026-business-results/",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T04:19:04+00:00",
+      "note": "Different from net income and operating cash flow."
+    },
+    {
+      "id": "sk-hynix-q3-2026-net-income",
+      "company": "SK hynix",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Net income",
+      "unit": "KRW trillion",
+      "reported": 39.7756,
+      "source_url": "https://news.skhynix.com/en/q3-2026-business-results/",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T04:19:04+00:00",
+      "note": "Includes non-operating effects; not operating cash flow."
+    },
+    {
+      "id": "sk-hynix-q3-2026-operating-cash",
+      "company": "SK hynix",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Operating cash flow",
+      "unit": "KRW trillion",
+      "reported": 54.781,
+      "source_url": "https://dart.fss.or.kr/report/download.do?dcmNo=11629600&flNm=2.+3Q26_Earnings+Presentation_ENG.pdf",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T04:19:04+00:00",
+      "note": "Presentation p16. Q2 was 65.710; not uniformly improving cash conversion."
+    },
+    {
+      "id": "sk-hynix-q3-2026-ppe-purchases",
+      "company": "SK hynix",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "PP&E purchases",
+      "unit": "KRW trillion",
+      "reported": 12.67,
+      "source_url": "https://dart.fss.or.kr/report/download.do?dcmNo=11629600&flNm=2.+3Q26_Earnings+Presentation_ENG.pdf",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T04:19:04+00:00",
+      "note": "Presentation p16. Q2 was 10.671; CFO less this outflow is calculated 42.111, not company-defined FCF."
+    },
+    {
+      "id": "sk-hynix-q3-2026-cash-instruments",
+      "company": "SK hynix",
+      "period": "September 30, 2026",
+      "reported_period": "Balance at September 30, 2026",
+      "metric": "Cash including short-term instruments",
+      "unit": "KRW trillion",
+      "reported": 114.46,
+      "source_url": "https://dart.fss.or.kr/report/download.do?dcmNo=11629600&flNm=2.+3Q26_Earnings+Presentation_ENG.pdf",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T04:19:04+00:00",
+      "note": "September 30 balance, not a quarterly flow; presentation p7/16 footnote."
     }
   ]
 }
