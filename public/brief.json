@@ -1,13 +1,139 @@
 {
-  "reviewed_at": "2026-10-28T04:19:04+00:00",
-  "headline": "Memory pricing reaches supplier profits; downstream returns remain a separate test.",
+  "reviewed_at": "2026-10-28T12:34:06+00:00",
+  "headline": "Supplier results strengthen the buildout case; funding, rollout and usage remain separate.",
   "bullets": [
-    "SK hynix’s results strengthen the upstream memory thesis; price and volume growth have different implications.",
-    "Cash generation, contract coverage and factory milestones require separate checks.",
-    "Earlier Corning, Meta and SpaceX analysis retains its original source and review dates."
+    "Vertiv and Generac report supplier sales and cash; inspect advances, backlog conversion and future delivery conditions.",
+    "Oracle broadens chip availability in stages. AMD’s announced Meta participation stays inside the existing raise.",
+    "SK hynix was already reviewed today and is preserved as context, not another new event."
   ],
   "notice": "Selected public evidence and financing relationships, reviewed on the displayed dates. Material verified updates may be published through the approved daily workflow; this remains a dated snapshot, not a live or exhaustive feed. X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "vertiv-q3-20261028",
+      "title": "Vertiv turns infrastructure demand into sales; inspect the cash support",
+      "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+      "source_id": "vertiv-q3-20261028",
+      "source_name": "Vertiv · Q3 earnings furnished to SEC",
+      "source_role": "primary",
+      "published_at": "2026-10-28",
+      "event_date": "2026-10-28",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "entities": [
+        "Vertiv",
+        "VRT"
+      ],
+      "ai_layers": [
+        "infrastructure"
+      ],
+      "lens": "earnings",
+      "relevance": "material",
+      "rank": 1,
+      "observation": "Q3 sales reached $4.3128bn, up 61.2% (55% organic). GAAP operating profit was $983.8m; adjusted operating profit was $1,086.9m.",
+      "summary": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
+      "implication": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
+      "report_period": "Q3 ended September 30, 2026; Q4 guidance separately identified",
+      "claim_type": "unaudited reported results, non-GAAP measures and management guidance",
+      "beneficiaries": "Vertiv benefits directly from power, cooling and services. Equipment sales do not establish neocloud profitability or application ROI.",
+      "risks": "Inventory, receivables, customer delivery obligations and manufacturing expansion can absorb cash. Power, permits and labor can delay customers.",
+      "counterevidence": "Net operating working capital used $138.3m despite the positive deferred-revenue contribution. Order growth does not establish cancellation-free revenue.",
+      "confirms": "Shipments, customer acceptance, collections, revenue recognized against advances, sustained margins and Q4 actuals against guidance.",
+      "refutes": "Customer deferrals, inventory or receivables outpacing collections, lower margins or factory delays would weaken conversion.",
+      "uncertainty": "No current backlog dollars, cancellation rate, AI-only sales or consensus comparison established. The 11am ET call was upcoming at review; no call or Q3 10-Q analysis is claimed.",
+      "source_date_note": "Released and furnished October 28; quarterly results end September 30. Source, reporting and review dates are separate.",
+      "access_note": "Original SEC earnings exhibit and official PDF reviewed; no customer telemetry independently inspected.",
+      "highlights": [
+        {
+          "title": "Cash includes customer funding",
+          "observation": "CFO of $794m includes a $490.2m positive deferred-revenue working-capital contribution. Separate current deferred revenue was $4.1205bn at September 30.",
+          "implication": "These are a cash-flow contribution and a liability balance, respectively—not gross new deposits, recognized sales or a normalized-cash calculation.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+          "source_date": "2026-10-28",
+          "claim_type": "issuer-reported results; implication is analysis"
+        },
+        {
+          "title": "Use the company’s cash definition",
+          "observation": "Company-adjusted FCF is $652.2m: CFO less $139.1m capex and $2.7m capitalized software. Q4 sales guidance is $4.313–4.513bn; adjusted EPS $2.22–2.28.",
+          "implication": "Keep GAAP, adjusted measures, periods and guidance separate; this is not a sourced consensus beat.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+          "source_date": "2026-10-28",
+          "claim_type": "issuer-reported results; implication is analysis"
+        },
+        {
+          "title": "DSX efficiency claims remain modeled",
+          "observation": "The deck identifies a Polar Heroya example, but its DSX token-output and deployment-speed benefits are modeled comparisons.",
+          "implication": "Do not count modeled improvements as measured output or completion of all Berlin factory targets. Track actual commissioning and paid workloads.",
+          "source_url": "https://s205.q4cdn.com/554782763/files/content_files/Vertiv-Third-Quarter-2026-Results-Presentation.pdf",
+          "source_date": "2026-10-28",
+          "claim_type": "issuer example and modeled efficiency comparison"
+        }
+      ]
+    },
+    {
+      "id": "generac-q3-20261028",
+      "title": "Generac’s power orders grow; the largest deliveries are still ahead",
+      "url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+      "source_id": "generac-q3-20261028",
+      "source_name": "Generac · Q3 earnings and backup-power orders",
+      "source_role": "primary",
+      "published_at": "2026-10-28",
+      "event_date": "2026-10-28",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "entities": [
+        "Generac",
+        "GNRC",
+        "Amazon"
+      ],
+      "ai_layers": [
+        "energy",
+        "infrastructure"
+      ],
+      "lens": "earnings",
+      "relevance": "material",
+      "rank": 2,
+      "observation": "C&I external sales rose 28% to about $552m. Data-center backlog is approximately $4.5bn; Amazon’s expected initial 2027–28 deliveries total $2.4bn.",
+      "summary": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
+      "implication": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
+      "report_period": "Q3 ended September 30, 2026; expected Amazon deliveries in 2027–28",
+      "claim_type": "unaudited reported results and expected future deliveries",
+      "beneficiaries": "Generac directly; data-center operators may gain resilience when equipment is accepted and commissioned. C&I is not wholly AI revenue.",
+      "risks": "Cancellations, delivery requirements, performance liabilities, factory ramps and rising capex can interrupt backlog conversion.",
+      "counterevidence": "Residential remains substantial, and C&I also reflects acquisition, divestiture and FX effects. Backup generators do not establish grid energization or profitable utilization.",
+      "confirms": "Accepted 2027–28 shipments, factory ramps, collections and sustainable margins after capital spending.",
+      "refutes": "Order renegotiation, delays, margin compression or working capital and capex outrunning collections would weaken the pipeline.",
+      "uncertainty": "No verified unconditional Amazon purchase minimum or cash receipt. No full 10-Q, call, consensus or stock-reaction analysis; the 10am ET call was upcoming at review.",
+      "source_date_note": "October 28 earnings release; Amazon agreement was previously disclosed during the quarter. Exact signing date is not established, so it is not labeled a new contract today.",
+      "access_note": "Full 644-line issuer page retrieved by public web-reader via link99 on issuer press-release index after direct resolver error. Original HTTP download returned403; no source-body hash claimed.",
+      "highlights": [
+        {
+          "title": "An executed relationship, a future delivery estimate",
+          "observation": "The Amazon supply agreement is executed. Its $2.4bn figure describes expected deliveries, not received cash or an unconditional minimum.",
+          "implication": "Do not add the expected delivery value to the $4.5bn backlog or count either as current revenue.",
+          "source_url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+          "source_date": "2026-10-28",
+          "claim_type": "issuer-confirmed agreement; management delivery expectation"
+        },
+        {
+          "title": "Cash conversion is already observable",
+          "observation": "Q3 CFO $170.989m less PP&E spending $39.250m equals company-defined FCF $131.739m.",
+          "implication": "This supports supplier cash generation, but not customers’ power availability or AI returns.",
+          "source_url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+          "source_date": "2026-10-28",
+          "claim_type": "issuer-reported results; implication is analysis"
+        },
+        {
+          "title": "A higher guidance floor",
+          "observation": "FY2026 adjusted EBITDA-margin guidance moved from 20.0–21.0% to 20.5–21.0%; the upper bound did not rise.",
+          "implication": "Test future margins against this range rather than treating guidance as achieved earnings.",
+          "source_url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+          "source_date": "2026-10-28",
+          "claim_type": "management guidance, not reported margin"
+        }
+      ]
+    },
     {
       "id": "sk-hynix-q3-20261028",
       "title": "SK hynix: memory scarcity is turning into profit",
@@ -78,8 +204,146 @@
       ],
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
-      "rank": 1,
+      "rank": 3,
       "relevance": "material"
+    },
+    {
+      "id": "oracle-chip-options-20261027",
+      "title": "Oracle’s chip choices expand; delivery is still staged",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
+      "source_id": "oracle-nvidia-rubin-20261027",
+      "source_name": "NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure",
+      "source_role": "primary",
+      "published_at": "2026-10-27",
+      "event_date": "2026-10-27",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "entities": [
+        "Oracle",
+        "NVIDIA",
+        "Google"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure"
+      ],
+      "lens": "capacity",
+      "relevance": "material",
+      "rank": 4,
+      "observation": "NVIDIA and Oracle announced Rubin NVL72 availability on October 27, while multi-gigawatt expansion remains planned. Oracle schedules Google TPUs for 2027.",
+      "summary": "Wider chip choice can improve compute economics; paid utilization and workload costs still decide the return.",
+      "implication": "Wider chip choice can improve compute economics; paid utilization and workload costs still decide the return.",
+      "claim_type": "issuer availability announcements and future regional rollout",
+      "report_period": "October 27 announcement; regional rollout this quarter and TPUs in 2027",
+      "beneficiaries": "NVIDIA and Oracle if availability becomes accepted, paid workloads; Google if the future TPU distribution channel converts into shipments and usage. Customers may gain choice.",
+      "risks": "Power and cooling readiness, regional rollout delays, software portability, deployment cost, unproven price/performance and insufficient paid utilization.",
+      "counterevidence": "Regional timing remains qualified; TPU service is future. No new deployment revenue or utilization is disclosed. Existing Blackwell customer use cannot validate planned Rubin/TPU scale.",
+      "confirms": "Named regions, bookable capacity, accepted installations, paid consumption, renewal pricing and workload cost per successful task.",
+      "refutes": "Rollout delays, idle capacity, weak paid consumption or software-porting costs exceeding gains.",
+      "uncertainty": "No verified delivered GW, revenue, utilization or contract price. Vendor benchmarks do not establish realized OCI customer savings.",
+      "source_date_note": "All three sources are October 27 announcements, reviewed October 28. Availability headlines and future scale have different dates.",
+      "access_note": "Full public NVIDIA and Oracle releases and the detailed CPU post reviewed by the primary-source reviewer.",
+      "highlights": [
+        {
+          "title": "Rubin availability is not multi-gigawatt delivery",
+          "claim_type": "issuer availability announcement and forward plan",
+          "observation": "Rubin NVL72 is announced as generally available; expansion to multi-gigawatt scale and smaller Rubin NVL8 systems remain plans.",
+          "implication": "Test actual regional availability, paid usage and cash conversion before treating the pipeline as realized supply.",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
+          "source_date": "2026-10-27"
+        },
+        {
+          "title": "CPU rollout has regional qualifications",
+          "claim_type": "issuer rollout statement",
+          "observation": "Oracle says 150,000 Vera CPUs will initially be made available and availability will reach select regions this quarter.",
+          "implication": "Do not call the whole amount installed or utilized. Performance claims are not measured OCI customer returns.",
+          "source_url": "https://blogs.oracle.com/cloud-infrastructure/nvidia-vera-cpus-oci",
+          "source_date": "2026-10-27"
+        },
+        {
+          "title": "Google TPU option starts later",
+          "claim_type": "future product rollout",
+          "observation": "TPUs on OCI target calendar 2027, followed by a multi-year ramp; no spend or delivered GW is specified.",
+          "implication": "Choice may increase competitive pressure, but it is not today’s usable capacity or booked revenue.",
+          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/",
+          "source_date": "2026-10-27"
+        }
+      ]
+    },
+    {
+      "id": "meta-financing-20261026",
+      "title": "Meta’s supplier funding gets clearer; Helios remains in testing",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure",
+      "published_at": "2026-10-27",
+      "event_date": "2026-10-27",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "source_id": "amd-meta-20261027",
+      "source_name": "AMD · Meta investment and Helios testing",
+      "source_role": "primary",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "lens": "funding",
+      "entities": [
+        "Meta",
+        "NVIDIA",
+        "AMD",
+        "Broadcom"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure",
+        "models"
+      ],
+      "rank": 5,
+      "relevance": "material",
+      "observation": "AMD says it will invest $1bn in Meta’s existing equity offering. Initial Helios racks are installed and being tested; broader deployment remains ahead.",
+      "summary": "Supplier equity and hardware adoption are linked exposures, not additional financing totals or proof of profitable demand.",
+      "implication": "Supplier equity deepens shared exposure; hardware testing still needs to become accepted, paid deployment.",
+      "access_note": "Full public issuer and issuer-distributed pricing releases read through the public web reader by the research reviewer. No authenticated access used. AMD’s full issuer IR release was reviewed for this update.",
+      "source_date_note": "Pricing/release dateline October 26; issuer distribution October 27 at 01:01 ET. Expected October 29 closing is a future condition. AMD’s investment/testing disclosure is October 27; no new closing confirmation.",
+      "claim_type": "priced offering, announced supplier participation and issuer testing status",
+      "beneficiaries": "Meta gains funding flexibility if the offerings close. Suppliers benefit from accepted hardware and paid usage, not from offering size alone.",
+      "risks": "Dilution, preferred dividends, settlement adjustments and capacity delays remain. Supplier equity adds shared exposure to customer execution.",
+      "counterevidence": "The common offering's increase from $22.5bn to $25bn weakens a blanket funding-shutdown thesis. It does not increase the previously announced capex range or prove incremental demand.",
+      "confirms": "October 29 closings, actual proceeds, forward settlements and supplier allocations; then equipment acceptance, usage and collections.",
+      "refutes": "Reduced or delayed proceeds, unfilled supplier allocations or weak usage would weaken the financing-to-growth thesis.",
+      "uncertainty": "Underwriter options are not assumed exercised. No completed closing or ATM sale verified. Offering prices are not live stock quotes; expected proceeds are subject to adjustments.",
+      "publication_note": "October 28 review adds AMD’s October 27 disclosure to the existing offering story; not a second independent raise.",
+      "highlights": [
+        {
+          "title": "Common cash is deferred; preferred terms are set",
+          "claim_type": "issuer pricing terms",
+          "observation": "Forty million common shares at $625 equal $25bn. Meta initially gets no common proceeds; about $24.9bn is expected through settlement by November 19, 2027. The $12.5bn preferred carries a 6.5% cumulative dividend and mandatory conversion around August 2029.",
+          "implication": "The cash timings differ. Pricing is progress, while closing and received cash still need confirmation.",
+          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "source_date": "2026-10-27"
+        },
+        {
+          "title": "NVIDIA's proposed $3bn is inside the offering",
+          "claim_type": "issuer proposed investment and collaboration",
+          "observation": "NVIDIA announced proposed participation and expanded hardware/model work on October 26. No completed investment, quantified shipment or realized sales figure was established.",
+          "implication": "Do not add $3bn to the offering total or to the earlier aggregate up-to-$5bn supplier indications. Equity exposure and hardware revenue are different flows.",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+          "source_date": "2026-10-26"
+        },
+        {
+          "title": "The earlier ATM remains a separate plan",
+          "claim_type": "prior proposal retained as historical context",
+          "observation": "The October 26 launch also described a future roughly $60bn Class C ATM. Establishment and completed sales have not been verified in this update.",
+          "implication": "Keep it separate from priced offerings and cash received. The earlier $95bn headline is not a current cash balance.",
+          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "source_date": "2026-10-26"
+        },
+        {
+          "title": "AMD adds a disclosed $1bn participation",
+          "observation": "AMD says it will invest $1bn. Initial Helios racks are installed and being tested, while other Instinct GPUs already run in production.",
+          "implication": "The $1bn is inside the existing offering and earlier supplier-interest aggregate. Initial testing is not a completed broad Helios rollout; no new order value is disclosed.",
+          "source_url": "https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure",
+          "source_date": "2026-10-27",
+          "claim_type": "issuer investment intention and equipment testing status"
+        }
+      ]
     },
     {
       "id": "corning-q3-ai-buildout-20261027",
@@ -149,74 +413,8 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 2,
+      "rank": 6,
       "relevance": "material"
-    },
-    {
-      "id": "meta-financing-20261026",
-      "title": "Meta prices a larger offering; common proceeds come later",
-      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-      "published_at": "2026-10-27",
-      "event_date": "2026-10-26",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "source_id": "meta-20261027-reviewed",
-      "source_name": "Meta · common and preferred offering pricing",
-      "source_role": "primary",
-      "reviewed_at": "2026-10-27T14:05:11+00:00",
-      "lens": "funding",
-      "entities": [
-        "Meta",
-        "NVIDIA",
-        "AMD",
-        "Broadcom"
-      ],
-      "ai_layers": [
-        "chips",
-        "infrastructure",
-        "models"
-      ],
-      "rank": 3,
-      "relevance": "material",
-      "observation": "Meta priced a $25bn common forward and $12.5bn preferred offering. Conditional closing is expected October 29; common proceeds arrive later.",
-      "summary": "Meta priced a $25bn common forward and $12.5bn preferred offering. Conditional closing is expected October 29; common proceeds arrive later.",
-      "implication": "Pricing reduces financing uncertainty while leaving dilution, cash timing and operating returns to prove.",
-      "access_note": "Full public issuer and issuer-distributed pricing releases read through the public web reader by the research reviewer. No authenticated access used.",
-      "source_date_note": "Pricing/release dateline October 26; issuer distribution October 27 at 01:01 ET. Expected October 29 closing is a future condition.",
-      "claim_type": "priced offerings; future proceeds and closing remain conditional",
-      "beneficiaries": "Meta gains funding flexibility if the offerings close. Suppliers benefit from accepted hardware and paid usage, not from offering size alone.",
-      "risks": "Dilution, preferred dividends, settlement adjustments and capacity delays remain. Supplier equity adds shared exposure to customer execution.",
-      "counterevidence": "The common offering's increase from $22.5bn to $25bn weakens a blanket funding-shutdown thesis. It does not increase the previously announced capex range or prove incremental demand.",
-      "confirms": "October 29 closings, actual proceeds, forward settlements and supplier allocations; then equipment acceptance, usage and collections.",
-      "refutes": "Reduced or delayed proceeds, unfilled supplier allocations or weak usage would weaken the financing-to-growth thesis.",
-      "uncertainty": "Underwriter options are not assumed exercised. No completed closing or ATM sale verified. Offering prices are not live stock quotes; expected proceeds are subject to adjustments.",
-      "publication_note": "Material update to the October 26 financing story: new pricing disclosure published October 27, not a second independent raise.",
-      "highlights": [
-        {
-          "title": "Common cash is deferred; preferred terms are set",
-          "claim_type": "issuer pricing terms",
-          "observation": "Forty million common shares at $625 equal $25bn. Meta initially gets no common proceeds; about $24.9bn is expected through settlement by November 19, 2027. The $12.5bn preferred carries a 6.5% cumulative dividend and mandatory conversion around August 2029.",
-          "implication": "The cash timings differ. Pricing is progress, while closing and received cash still need confirmation.",
-          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-          "source_date": "2026-10-27"
-        },
-        {
-          "title": "NVIDIA's proposed $3bn is inside the offering",
-          "claim_type": "issuer proposed investment and collaboration",
-          "observation": "NVIDIA announced proposed participation and expanded hardware/model work on October 26. No completed investment, quantified shipment or realized sales figure was established.",
-          "implication": "Do not add $3bn to the offering total or to the earlier aggregate up-to-$5bn supplier indications. Equity exposure and hardware revenue are different flows.",
-          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
-          "source_date": "2026-10-26"
-        },
-        {
-          "title": "The earlier ATM remains a separate plan",
-          "claim_type": "prior proposal retained as historical context",
-          "observation": "The October 26 launch also described a future roughly $60bn Class C ATM. Establishment and completed sales have not been verified in this update.",
-          "implication": "Keep it separate from priced offerings and cash received. The earlier $95bn headline is not a current cash balance.",
-          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-          "source_date": "2026-10-26"
-        }
-      ]
     },
     {
       "id": "spacex-lease-commitment-20261026",
@@ -239,7 +437,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 4,
+      "rank": 7,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -287,7 +485,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 5,
+      "rank": 8,
       "relevance": "material",
       "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
       "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
@@ -391,7 +589,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
       "source_id": "anthropic-s1-20261026-source-1",
-      "rank": 6,
+      "rank": 9,
       "relevance": "material",
       "summary": "H1 revenue was $16.286bn, operating loss $0.693bn and operating cash inflow $3.929bn. The $80.748bn net loss includes large noncash financing revaluations; it is not cash burn. The IPO remains unpriced and not effective."
     },
@@ -484,7 +682,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 7,
+      "rank": 10,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
     },
@@ -566,7 +764,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 8,
+      "rank": 11,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
     },
@@ -598,7 +796,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 9,
+      "rank": 12,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -661,7 +859,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 10,
+      "rank": 13,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -736,7 +934,7 @@
       "entities": [
         "OpenAI"
       ],
-      "rank": 11,
+      "rank": 14,
       "observation": "Bloomberg reports a $1.25tn valuation target, versus $1.4tn discussed earlier, for a proposed ~$30bn raise.",
       "summary": "Negotiations remain open; this is not a completed financing.",
       "implication": "If capital becomes harder to secure, labs may prioritize fewer compute commitments.",
@@ -766,7 +964,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 12,
+      "rank": 15,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -794,7 +992,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 13,
+      "rank": 16,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -821,7 +1019,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 14,
+      "rank": 17,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -850,7 +1048,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 15,
+      "rank": 18,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -887,7 +1085,7 @@
         "models",
         "applications"
       ],
-      "rank": 16,
+      "rank": 19,
       "relevance": "watch",
       "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
       "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
@@ -1789,6 +1987,113 @@
         "capacity"
       ],
       "access_note": "Original public DART PDF downloaded and relevant tables visually checked: pages 4–7, 10–12 and 16. No earnings-call transcript or independent audit is claimed."
+    },
+    {
+      "id": "amd-meta-20261027",
+      "name": "AMD · Meta investment and Helios testing",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure",
+      "source_date": "2026-10-27",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "quality_note": "Reported results, issuer operational statements and forward plans remain distinct.",
+      "topics": [
+        "funding",
+        "capacity"
+      ],
+      "access_note": "Full issuer IR release reviewed through the public web reader. No completed equity purchase or broad Helios fleet delivery established."
+    },
+    {
+      "id": "vertiv-q3-20261028",
+      "name": "Vertiv · Q3 earnings furnished to SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "quality_note": "Reported results, issuer operational statements and forward plans remain distinct.",
+      "topics": [
+        "earnings",
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Full original HTML downloaded and income statement, balance sheet, cash flow and non-GAAP reconciliations read. Unaudited statements."
+    },
+    {
+      "id": "vertiv-q3-deck-20261028",
+      "name": "Vertiv · Q3 presentation and modeled DSX comparison",
+      "url": "https://s205.q4cdn.com/554782763/files/content_files/Vertiv-Third-Quarter-2026-Results-Presentation.pdf",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "quality_note": "Reported results, issuer operational statements and forward plans remain distinct.",
+      "topics": [
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "Downloaded official PDF; text reviewed throughout, key pages 5 and 13 rendered and visually checked."
+    },
+    {
+      "id": "generac-q3-20261028",
+      "name": "Generac · Q3 earnings and backup-power orders",
+      "url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "quality_note": "Reported results, issuer operational statements and forward plans remain distinct.",
+      "topics": [
+        "earnings",
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Full 644-line issuer page retrieved by public web-reader via link99 on issuer press-release index after direct resolver error. Original HTTP download returned403; no source-body hash claimed."
+    },
+    {
+      "id": "oracle-nvidia-rubin-20261027",
+      "name": "NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
+      "source_date": "2026-10-27",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "quality_note": "Reported results, issuer operational statements and forward plans remain distinct.",
+      "topics": [
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Full public issuer release retrieved and read with web reader, 232 parsed lines. No authenticated access; no original HTTP body archive claimed."
+    },
+    {
+      "id": "oracle-vera-cpu-20261027",
+      "name": "Announcing General Availability of OCI Compute with NVIDIA Vera CPUs",
+      "url": "https://blogs.oracle.com/cloud-infrastructure/nvidia-vera-cpus-oci",
+      "source_date": "2026-10-27",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "quality_note": "Reported results, issuer operational statements and forward plans remain distinct.",
+      "topics": [
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Full public Oracle product post read with web reader, 146 parsed lines; no signed-in cloud console or region-capacity API used."
+    },
+    {
+      "id": "oracle-google-tpu-20261027",
+      "name": "Oracle Brings Google TPUs to Oracle Cloud Infrastructure",
+      "url": "https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/",
+      "source_date": "2026-10-27",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "quality_note": "Reported results, issuer operational statements and forward plans remain distinct.",
+      "topics": [
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Full public issuer release read with web reader, 99 parsed lines."
     }
   ],
   "ledger": [
@@ -2648,8 +2953,8 @@
       "currency": "USD bn",
       "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
       "source_date": "2026-10-26",
-      "as_of": "2026-10-27T14:05:11+00:00",
-      "reviewed_at": "2026-10-27T14:05:11+00:00",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
       "flow_type": "money",
       "revenue_status": "Not revenue.",
       "id": "meta-supplier-interest-20261026",
@@ -2657,12 +2962,12 @@
       "amount": 5,
       "status": "nonbinding interest, up to aggregate amount",
       "flow_label": "Possible supplier equity",
-      "payment_status": "NVIDIA disclosed a proposed $3bn participation; no completed purchases verified.",
-      "note": "Earlier up-to-$5bn aggregate indications are a subset of the common offering. NVIDIA's October 26 proposed $3bn is included, not an additional raise or joint supplier commitment. AMD/Broadcom allocations remain unverified.",
-      "uncertainty": "Final individual allocations and completed funding unknown. Do not add $3bn to $5bn or either to the common offering.",
+      "payment_status": "NVIDIA proposed $3bn and AMD announced $1bn participation; completed purchases unverified.",
+      "note": "Earlier up-to-$5bn aggregate supplier indications are within the common offering. NVIDIA’s $3bn and AMD’s $1bn are components, not additional raises. Broadcom’s final allocation is unknown.",
+      "uncertainty": "Individual allocations and completed funding remain unverified. Do not add supplier components to the aggregate or to the common offering.",
       "risk": "Shared supplier/customer exposure.",
       "overlap_group": "meta-common-20261026",
-      "changed_at": "2026-10-26",
+      "changed_at": "2026-10-27",
       "sources": [
         {
           "url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
@@ -2673,6 +2978,12 @@
         {
           "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
           "title": "Meta offering pricing",
+          "date": "2026-10-27",
+          "role": "primary"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure",
+          "title": "AMD participation and testing disclosure",
           "date": "2026-10-27",
           "role": "primary"
         }
@@ -2826,6 +3137,26 @@
       "risk": "Customer timing, equipment acceptance and factory-ramp execution.",
       "uncertainty": "Detailed minimum-purchase and cancellation terms not established in the announcement. No completed new factory is inferred.",
       "overlap_group": "meta-corning-supply-20260127"
+    },
+    {
+      "id": "amazon-generac-supply-reviewed-20261028",
+      "from_entity": "Amazon",
+      "to_entity": "Generac",
+      "instrument": "customer_contract",
+      "status": "executed agreement; future delivery estimate",
+      "source_url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "reviewed_at": "2026-10-28T12:34:06+00:00",
+      "changed_at": "2026-10-28",
+      "flow_type": "money",
+      "flow_label": "Backup-generator supply",
+      "note": "Previously disclosed agreement; exact signing date not established. Earnings release expects $2.4bn combined initial deliveries in 2027–28. This is not a disclosed unconditional minimum or a newly signed October 28 deal.",
+      "payment_status": "Received cash and payment schedule unverified.",
+      "revenue_status": "Future delivery estimate, not recognized current revenue. Do not add it to approximately $4.5bn data-center backlog.",
+      "risk": "Customer cancellation, delivery and performance-liability risks.",
+      "uncertainty": "Detailed Amazon clauses and exact backlog overlap not established.",
+      "overlap_group": "generac-data-center-backlog"
     }
   ],
   "earnings": [
@@ -3131,6 +3462,166 @@
       "source_date": "2026-10-28",
       "as_of": "2026-10-28T04:19:04+00:00",
       "note": "September 30 balance, not a quarterly flow; presentation p7/16 footnote."
+    },
+    {
+      "id": "vertiv-q3-2026-sales",
+      "company": "Vertiv (VRT)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Net sales",
+      "unit": "USD million",
+      "reported": 4312.8,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "Reported 61.2% growth; organic 55% excludes specified FX/acquisition effects.",
+      "guidance": "4313–4513",
+      "guidance_period": "Q4 2026"
+    },
+    {
+      "id": "vertiv-q3-2026-gaap-op",
+      "company": "Vertiv (VRT)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "GAAP operating profit",
+      "unit": "USD million",
+      "reported": 983.8,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "GAAP margin 22.8%; distinct from adjusted margin25.2%."
+    },
+    {
+      "id": "vertiv-q3-2026-adjusted-op",
+      "company": "Vertiv (VRT)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Adjusted operating profit (non-GAAP)",
+      "unit": "USD million",
+      "reported": 1086.9,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "Adjusted operating profit adds back amortization and acquisition-related items; it is not GAAP operating profit."
+    },
+    {
+      "id": "vertiv-q3-2026-cfo",
+      "company": "Vertiv (VRT)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Operating cash flow",
+      "unit": "USD million",
+      "reported": 794,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "Includes net deferred-revenue working-capital contribution490.2, not gross new deposits."
+    },
+    {
+      "id": "vertiv-q3-2026-adjusted-fcf",
+      "company": "Vertiv (VRT)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Adjusted free cash flow (non-GAAP)",
+      "unit": "USD million",
+      "reported": 652.2,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "Company-defined: CFO less capex139.1 and capitalized software2.7."
+    },
+    {
+      "id": "vertiv-q3-2026-deferred",
+      "company": "Vertiv (VRT)",
+      "period": "September 30, 2026",
+      "reported_period": "Balance at September 30, 2026",
+      "metric": "Current deferred revenue",
+      "unit": "USD million",
+      "reported": 4120.5,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "Liability balance, not current-quarter cash receipts or recognized sales."
+    },
+    {
+      "id": "vertiv-q3-2026-adjusted-eps",
+      "company": "Vertiv (VRT)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Adjusted diluted EPS (non-GAAP)",
+      "unit": "USD/share",
+      "reported": 2.21,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "GAAP diluted EPS is1.95; no sourced consensus comparison.",
+      "guidance": "2.22–2.28",
+      "guidance_period": "Q4 2026"
+    },
+    {
+      "id": "generac-q3-2026-sales",
+      "company": "Generac (GNRC)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Net sales (rounded)",
+      "unit": "USD million",
+      "reported": 1290,
+      "source_url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "Rounded release headline; +16% reported growth."
+    },
+    {
+      "id": "generac-q3-2026-ci-sales",
+      "company": "Generac (GNRC)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "C&I external sales (rounded)",
+      "unit": "USD million",
+      "reported": 552,
+      "source_url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "External sales; distinct from553.0 including intersegment. Not all AI sales."
+    },
+    {
+      "id": "generac-q3-2026-cfo",
+      "company": "Generac (GNRC)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Operating cash flow",
+      "unit": "USD million",
+      "reported": 170.989,
+      "source_url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "Quarterly cash flow, not adjusted EBITDA."
+    },
+    {
+      "id": "generac-q3-2026-ppe",
+      "company": "Generac (GNRC)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "PP&E expenditures",
+      "unit": "USD million",
+      "reported": 39.25,
+      "source_url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "Deducted from CFO in company FCF definition."
+    },
+    {
+      "id": "generac-q3-2026-fcf",
+      "company": "Generac (GNRC)",
+      "period": "Q3 2026",
+      "reported_period": "Quarter ended September 30, 2026",
+      "metric": "Company-defined free cash flow (non-GAAP)",
+      "unit": "USD million",
+      "reported": 131.739,
+      "source_url": "https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28T12:34:06+00:00",
+      "note": "CFO170.989 less PP&E39.250; distinct from EBITDA."
     }
   ]
 }

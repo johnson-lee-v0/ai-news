@@ -1,6 +1,20 @@
 # Public snapshot provenance
 
-Latest addition reviewed **October 28, 2026**: SK hynix earnings and the distinction between memory pricing, shipment growth and cash conversion. Earlier stories retain their individual source and review dates. Exact timestamps are in `brief.json`. This is a selected reviewed snapshot, not a live feed or complete market survey. Summaries are independently written; linked article bodies are not distributed. The user authorized automatic publication of material verified updates through the existing daily workflow; every publication still requires source review, tests and privacy checks.
+Latest daily review **October 28, 2026**: Vertiv and Generac earnings, Oracle's staged chip availability, and AMD's participation in Meta's existing offering. The earlier SK hynix review and other stories retain their source and review dates. Exact timestamps are in `brief.json`. This is a selected reviewed snapshot, not a live feed or complete market survey. Summaries are independently written; linked article bodies are not distributed. The user authorized automatic publication of material verified updates through the existing daily workflow; every publication still requires source review, tests and privacy checks.
+
+## October 28 daily review
+
+| Reviewed source | Source date | Boundary |
+|---|---|---|
+| [Vertiv SEC earnings exhibit](https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm) | 2026-10-28 | Original issuer exhibit downloaded and statements/reconciliations read. Unaudited Q3 results ended September 30. Deferred-revenue cash-flow contribution differs from its balance; adjusted measures differ from GAAP. |
+| [Vertiv presentation](https://s205.q4cdn.com/554782763/files/content_files/Vertiv-Third-Quarter-2026-Results-Presentation.pdf) | 2026-10-28 | Official PDF reviewed; key tables visually checked. DSX efficiency comparisons are modeled, not measured output. No full call or Q3 10-Q review claimed. |
+| [Generac Q3 release](https://investors.generac.com/news-releases/news-release-details/generac-reports-third-quarter-2026-results) | 2026-10-28 | Full issuer release read through its press-release index; origin download returned HTTP 403, so no original-body hash claimed. Company FCF definition was checked. The Amazon contract was previously disclosed; its signing date and unconditional minimum are not established here. |
+| [AMD Meta partnership update](https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure) | 2026-10-27 | Full issuer release reviewed. Announced equity participation is inside the existing offering; initial Helios testing does not establish broad rollout or a completed purchase. |
+| [NVIDIA Oracle availability announcement](https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure) | 2026-10-27 | Full issuer release reviewed. General availability and planned multigigawatt expansion are distinct. Existing Blackwell usage is not evidence of Rubin utilization. |
+| [Oracle Vera CPU details](https://blogs.oracle.com/cloud-infrastructure/nvidia-vera-cpus-oci) | 2026-10-27 | Full product post reviewed. Regional timing qualifies the availability headline; no authenticated capacity booking or independent workload test performed. |
+| [Oracle Google TPU announcement](https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/) | 2026-10-27 | Full issuer release reviewed. Future rollout, with no disclosed delivered GW, price, utilization or revenue. |
+
+Supplier sales, customer advances, expected deliveries and paid compute use are different stages. No live stock reaction, investing recommendation or consensus comparison is added. The previously reviewed SK hynix, GTC, Anthropic and SpaceX stories are preserved rather than recast as new events. Source freshness does not imply exhaustive market coverage.
 
 ## October 28: SK hynix
 
