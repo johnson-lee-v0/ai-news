@@ -57,6 +57,26 @@ class V2AnalysisTests(unittest.TestCase):
         self.assertEqual(result['stats']['articles'],8)
         self.assertEqual(result['stats']['changed_items'],1)
 
+    def test_takeaways_are_relevant_context_not_verified_headlines(self):
+        result=compose({'articles':[article(source_role='discovery',verification_status='discovery_lead')],'sources':[]},NOW)
+        takeaways=result['brief']['priority_takeaways']
+        self.assertEqual([item['topic'] for item in takeaways],['funding'])
+        self.assertEqual(takeaways[0]['basis'],'general_context')
+        self.assertIn('conditional commitments',takeaways[0]['takeaway'])
+        self.assertNotIn('?',takeaways[0]['takeaway'])
+        self.assertEqual(result['articles'][0]['verification_status'],'discovery_lead')
+        self.assertNotIn('priority_questions',result['brief'])
+        self.assertEqual(compose({'articles':[],'sources':[]},NOW)['brief']['priority_takeaways'],[])
+        dismissed=article(review_status='dismissed',reviewed_hash='hash-one')
+        self.assertEqual(compose({'articles':[dismissed],'sources':[]},NOW)['brief']['priority_takeaways'],[])
+
+    def test_coverage_takeaways_do_not_imply_missing_evidence_was_found(self):
+        result=coverage([],NOW)
+        self.assertTrue(all(domain['status']=='gap' for domain in result['domains']))
+        self.assertTrue(all(domain['takeaway'] and '?' not in domain['takeaway'] for domain in result['domains']))
+        self.assertTrue(all('question' not in domain for domain in result['domains']))
+        self.assertIn('Source health',result['note'])
+
     def test_product_maps_to_models_and_stale_sources_not_covered(self):
         source={'id':'official-model','topics':['product'],'role':'primary','status':'ok','last_success_at':NOW.isoformat()}
         result=coverage([source],NOW)

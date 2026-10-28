@@ -1,4 +1,4 @@
-"""Five-layer research questions and transparent, non-exclusive metadata tags."""
+"""Five-layer economic context and transparent, non-exclusive metadata tags."""
 from datetime import datetime, timezone
 import re
 
@@ -10,27 +10,27 @@ FRAMEWORK_SOURCE = {
 
 LAYERS = (
     {"id": "energy", "name": "Energy", "summary": "Electricity and cooling that can actually reach the machines.",
-     "question": "Are energized MW, grid dates and power costs improving?",
+     "takeaway": "Power that reaches a site enables revenue; connection delays can leave financed equipment idle.",
      "metrics": ["Energized MW", "Grid connection dates", "Power and cooling cost"],
      "terms": ("power", "electricity", "grid", "cooling", "energy", "fuel cell", "megawatt", "gigawatt", "mw", "gw"),
      "sources": ("dcd-news", "discovery-capacity")},
     {"id": "chips", "name": "Chips", "summary": "Processors, memory and packaging that are qualified and shipped.",
-     "question": "Does planned chip and HBM capacity become qualified supply and shipments?",
+     "takeaway": "Qualified chip and memory shipments can relieve bottlenecks; announced factories do not yet add usable supply.",
      "metrics": ["Qualified and shipped chips", "HBM supply", "Packaging capacity and yields"],
      "terms": ("gpu", "gpus", "chip", "chips", "semiconductor", "hbm", "packaging", "substrate", "substrates", "vera rubin", "blackwell"),
      "sources": ("nvidia-news", "amd-ir", "sec-nvda")},
     {"id": "infrastructure", "name": "Infrastructure", "summary": "Data centers and clouds turning installed systems into paid compute.",
-     "question": "Are capacity, utilization and rents supported by cash and financing?",
+     "takeaway": "Utilization, rental prices and collections determine returns; installed capacity alone does not cover debt service.",
      "metrics": ["Operating capacity and utilization", "Rental rates", "Capex, financing and liquidity"],
      "terms": ("data center", "data centers", "data centre", "data centres", "datacenter", "cloud", "ai factory", "ai factories", "compute", "capex", "coreweave", "nebius", "nscale"),
      "sources": ("dcd-news", "microsoft-blog", "sec-crwv", "sec-msft", "sec-meta", "sec-amzn", "discovery-capacity")},
     {"id": "models", "name": "Models", "summary": "Useful model capability at a sustainable cost and reliability.",
-     "question": "Does cost per successful task fall while reliability and paid use improve?",
+     "takeaway": "Cheaper successful tasks can expand paid adoption; weak reliability and retries can erase lower token prices.",
      "metrics": ["Cost per successful task", "Reliability", "Paid model usage"],
      "terms": ("language model", "foundation model", "llm", "openai", "anthropic", "inference", "training", "token", "tokens", "reasoning model", "model economics", "model release", "gr00t"),
      "sources": ("openai-news", "google-ai", "techcrunch-ai", "discovery-lab-funding")},
     {"id": "applications", "name": "Applications", "summary": "Products that customers keep paying for because they deliver value.",
-     "question": "Do paid adoption, retention and gross profit demonstrate customer returns?",
+     "takeaway": "Repeat paid use and gross profit support durable adoption; demos and free users do not establish customer returns.",
      "metrics": ["Paid adoption and retention", "Gross profit", "Customer ROI"],
      "terms": ("ai application", "ai applications", "ai apps", "copilot", "chatgpt", "software agent", "industrial agent", "customer service", "drug discovery", "autonomous", "robotics", "humanoid"),
      "sources": ("microsoft-blog", "google-ai", "techcrunch-ai")},
@@ -79,7 +79,7 @@ def tracking(articles, sources, now=None, static=False):
         dated = [(item.get("published_at"), _time(item.get("published_at"))) for item in appearances if item.get("date_precision") != "future_unverified"]
         valid = [(raw, date) for raw, date in dated if date and date <= now]
         latest = max(valid, key=lambda pair: pair[1])[0] if valid else None
-        cards.append({key: layer[key] for key in ("id", "name", "summary", "question", "metrics")})
+        cards.append({key: layer[key] for key in ("id", "name", "summary", "takeaway", "metrics")})
         cards[-1].update(article_count=len(matches), source_ids=[source["id"] for source in mapped], last_source_date=latest,
                          status=status, metric_status="Unavailable — not a measured metrics feed",
                          gap="No measured layer metrics are connected. Source dates may be filing or discovery-feed dates; inspect each record. " +

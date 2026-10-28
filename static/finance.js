@@ -98,7 +98,7 @@
     const subtitle=element('p','pf-dialog-subtitle',row.instrument_name+' · '+row.amount_label);
     const stage=element('p','pf-stage',row.status);
     const flow=append(element('div','pf-detail-flow'),element('span','pf-kicker','What moves'),element('strong','',row.flow_label),element('p','',row.from_entity+' → '+row.to_entity));
-    const facts=append(element('dl','pf-detail-grid'),detailField('Cash moved?',row.payment_status),detailField('Revenue earned?',row.revenue_status),detailField('Arrangement as of',dateLabel(row.as_of)),detailField('Source date',dateLabel(row.source_date)),detailField('Amount / units',row.amount_label),detailField('Units',string(row.unit || row.currency,'Units not stated')),detailField('Overlap group',string(row.overlap_group,'Overlap not assessed')));
+    const facts=append(element('dl','pf-detail-grid'),detailField('Cash status',row.payment_status),detailField('Revenue status',row.revenue_status),detailField('Arrangement as of',dateLabel(row.as_of)),detailField('Source date',dateLabel(row.source_date)),detailField('Amount / units',row.amount_label),detailField('Units',string(row.unit || row.currency,'Units not stated')),detailField('Overlap group',string(row.overlap_group,'Overlap not assessed')));
     if(row.reviewed_at)facts.append(detailField('Record reviewed',dateLabel(row.reviewed_at)));
     const note=append(element('section','pf-detail-section'),element('h3','','Evidence and scope'),element('p','',string(row.note,'No explanatory note supplied.')));
     const uncertainty=append(element('section','pf-detail-section pf-caution'),element('h3','','Uncertainty / risk'),element('p','',row.uncertainty));
@@ -125,7 +125,7 @@
     const transfer=append(element('div','pf-transfer'),element('span','pf-kicker','What moves'),element('strong','',row.flow_label),element('span','pf-card-amount',row.amount_label));
     if(!row.unit && !row.currency)transfer.append(element('small','pf-unit-note','Units not stated'));
     const stage=element('p','pf-stage',row.status);
-    const checks=append(element('dl','pf-card-checks'),detailField('Cash moved?',row.payment_status),detailField('Revenue earned?',row.revenue_status));
+    const checks=append(element('dl','pf-card-checks'),detailField('Cash status',row.payment_status),detailField('Revenue status',row.revenue_status));
     const metadata=element('p','pf-card-meta','Arrangement as of '+dateLabel(row.as_of)+' · '+string(row.overlap_group,'Overlap not assessed'));
     const caveat=element('p','pf-card-caveat',row.instrument==='revenue'?'Reported revenue is not automatically collected cash.':'This is not a revenue record.');
     const details=button('Inspect relationship','pf-inspect',event=>openRelationship(row,event.currentTarget));

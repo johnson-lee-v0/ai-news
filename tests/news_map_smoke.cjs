@@ -368,8 +368,8 @@ async function financingChecks({page,dataset,go,capture,noOverflow,url,mobile=fa
   await page.locator('dialog.pf-dialog').waitFor({state:'visible'});
   assert.ok(page.url().includes('#financing/relationship/'));
   const dialog=page.locator('dialog.pf-dialog');
-  assert.match(await dialog.innerText(),/Cash moved\?/);
-  assert.match(await dialog.innerText(),/Revenue earned\?/);
+  assert.match(await dialog.innerText(),/Cash status/);
+  assert.match(await dialog.innerText(),/Revenue status/);
   assert.match(await dialog.innerText(),/Source date/);
   assert.match(await dialog.innerText(),/Uncertainty \/ risk/);
   assert.ok((await dialog.innerText()).includes(relation.from_entity));

@@ -68,6 +68,22 @@ class PublicBuildTests(unittest.TestCase):
         self.assertNotIn('last_success_at',output['sources'][0])
         self.assertEqual(output['earnings'][0]['guidance'],self.raw['earnings'][0]['guidance'])
 
+    def test_public_takeaways_preserve_reviewed_content_and_coverage_limits(self):
+        before=deepcopy(self.raw)
+        output=dashboard(self.raw,[],'a'*40)
+        self.assertEqual(self.raw,before)
+        self.assertEqual(output['brief']['bullets'],before['bullets'])
+        self.assertEqual(output['brief']['priority_takeaways'],[])
+        self.assertNotIn('priority_questions',output['brief'])
+        for domain in output['coverage']['domains']:
+            self.assertTrue(domain['takeaway'])
+            self.assertNotIn('?',domain['takeaway'])
+            self.assertNotIn('question',domain)
+            self.assertIn(domain['status'],('snapshot','gap'))
+        for original,item in zip(sorted(before['articles'],key=lambda a:a['rank']),output['articles']):
+            for field in ('implication','counterevidence','uncertainty','published_at','url'):
+                self.assertEqual(item.get(field),original.get(field))
+
     def test_highlights_reject_unreviewed_sources_and_private_fields(self):
         raw=deepcopy(self.raw)
         raw['articles'][0]['highlights']=[{'title':'Example','observation':'Synthetic test','claim_type':'management claim','implication':'Conditional','source_url':'https://example.com/unreviewed','source_date':'2026-01-01'}]

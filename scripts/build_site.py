@@ -21,7 +21,14 @@ ARTICLE_FIELDS = {'id','title','url','published_at','date_kind','date_precision'
 HIGHLIGHT_FIELDS = {'title','observation','claim_type','implication','source_url','source_date'}
 RECORD_FIELDS = {'ledger':{'id','as_of','source_url','source_date','from_entity','to_entity','instrument','status','amount','currency','note','overlap_group','risk','payment_status','revenue_status','reviewed_at','flow_type','flow_label','uncertainty','sources','changed_at'},'earnings':{'id','as_of','source_url','source_date','company','period','metric','unit','reported','reported_period','guidance','guidance_period','consensus','consensus_source_url','consensus_as_of','consensus_period','note'}}
 SOURCE_FIELDS = {'id','name','url','role','kind','reviewed_at','quality_note','topics','access_note','source_date','publication_note'}
-DOMAINS = [('funding','Funding & valuation','Can operators fund their commitments?'),('demand','Paid demand','Does usage convert to collected cash?'),('capacity','Capacity delivery','Which projects reach service?'),('earnings','Earnings','What is reported versus forecast?'),('models','Model economics','Does capability become paid use?'),('policy','Policy & constraints','What rules affect access or delivery?')]
+DOMAINS = [
+    ('funding', 'Funding & valuation', 'Usable financing can fund construction before customer cash arrives; conditional commitments do not yet provide that cash.'),
+    ('demand', 'Paid demand', 'Recurring paid usage and collections support durable demand; contracts and temporary credits alone do not.'),
+    ('capacity', 'Capacity delivery', 'Power and commissioning delays can postpone revenue despite demand; planned capacity is not operating supply.'),
+    ('earnings', 'Earnings', 'Reported growth matters more when margins and cash keep pace; guidance remains a forecast, not an earned result.'),
+    ('models', 'Model economics', 'Lower cost per successful task can improve adoption and margins if reliability holds; token price alone is incomplete.'),
+    ('policy', 'Policy & constraints', 'Binding rules can restrict sales or delay capacity; proposals and exemptions may leave the actual impact unresolved.'),
+]
 
 
 def iso(value):
@@ -122,9 +129,9 @@ def dashboard(raw, accounts, commit):
         articles.append(annotate_layers(item))
     sources=[{**source,'status':'reviewed','item_count':sum(a['source_id']==source['id'] for a in articles)} for source in raw['sources']]
     domains=[]
-    for key,name,question in DOMAINS:
+    for key,name,takeaway in DOMAINS:
         mapped=[s['id'] for s in sources if key in s.get('topics',[])]
-        domains.append({'id':key,'name':name,'question':question,'status':'snapshot' if mapped else 'gap','connected_sources':mapped,
+        domains.append({'id':key,'name':name,'takeaway':takeaway,'status':'snapshot' if mapped else 'gap','connected_sources':mapped,
                         'note':'Reviewed sources are included for this topic; no live ingestion or complete coverage is implied.' if mapped else 'No reviewed item for this topic in the current public snapshot.'})
     safe_text(accounts)
     return {'as_of':stamp,'publication':{'mode':'static','reviewed_at':stamp,'notice':raw['notice'],'repository_url':'https://github.com/johnson-lee-v0/ai-news','commit':commit,'draft':commit=='uncommitted'},
@@ -133,7 +140,7 @@ def dashboard(raw, accounts, commit):
             'x_access':{'status':'not_connected','automatic':False,'can_capture':False,'detail':'This public snapshot does not collect X posts, trends or engagement. Profile links are a reading list; saved leads remain a local-app feature.'},
             'coverage':{'domains':domains,'gaps':['This is a selected reviewed snapshot, not a live or exhaustive feed.','X trends, live market/CDS quotes and consensus are not connected.','Only verified material updates pass the separate publication review; raw local refreshes are never published directly.'],'note':'Included sources were reviewed for this publication. These are not live endpoint-health checks.'},
             'watchlist':{'entities':sorted({e for a in articles for e in a['entities']}),'topics':[x[0] for x in DOMAINS]},
-            'brief':{'headline':raw['headline'],'bullets':raw['bullets'],'coverage_note':raw['notice'],'priority_items':deepcopy(articles),'priority_questions':[]},
+            'brief':{'headline':raw['headline'],'bullets':raw['bullets'],'coverage_note':raw['notice'],'priority_items':deepcopy(articles),'priority_takeaways':[]},
             'stats':{'articles':len(articles),'total_articles':len(articles),'story_count':len(articles),'new_items':0,'changed_items':0,'source_ok':0,'source_total':len(sources),'needs_review':0,'recent_items':0,'discovery_items':0,'last_refresh':None}}
 
 

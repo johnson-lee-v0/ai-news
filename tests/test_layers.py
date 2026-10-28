@@ -16,6 +16,14 @@ class LayerTests(unittest.TestCase):
         self.assertIn('Unavailable',result['layers'][0]['metric_status'])
         self.assertNotIn('operating_mw',result['layers'][0])
 
+    def test_layer_takeaways_keep_implications_and_missing_metrics_separate(self):
+        cards=tracking([],[],NOW,static=True)['layers']
+        self.assertTrue(all(card['takeaway'] and '?' not in card['takeaway'] for card in cards))
+        self.assertTrue(all('question' not in card for card in cards))
+        self.assertTrue(all(card['status']=='gap' and card['article_count']==0 for card in cards))
+        self.assertTrue(all('Unavailable' in card['metric_status'] for card in cards))
+        self.assertIn('debt service',next(card for card in cards if card['id']=='infrastructure')['takeaway'])
+
     def test_administrative_words_do_not_become_model_or_app_tags(self):
         item=annotate({'title':'Campus permit application and default model update','summary':'PowerPoint presentation'})
         self.assertEqual(item['ai_layers'],[])

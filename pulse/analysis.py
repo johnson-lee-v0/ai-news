@@ -49,7 +49,7 @@ RULES = {
         "risks": "Unresolved; no directional market call is inferred.",
         "counterevidence": "The item may be administrative or unrelated to AI economics.",
         "confirms": "An explicit, dated disclosure connecting the event to demand, capacity, funding or reported earnings.",
-        "refutes": "The full document provides no material connection to those questions.",
+        "refutes": "The full document provides no material connection to those economic factors.",
     },
 }
 
@@ -86,12 +86,12 @@ RULES["policy"] = {
 WATCHLIST = ["OpenAI", "Anthropic", "NVIDIA", "AMD", "Microsoft", "Amazon", "Alphabet", "Meta", "CoreWeave", "Oracle", "Broadcom", "TSMC", "SpaceX"]
 ALIASES = {"OpenAI": ("openai", "chatgpt"), "Anthropic": ("anthropic", "claude"), "NVIDIA": ("nvidia",), "AMD": ("amd", "advanced micro devices"), "Microsoft": ("microsoft", "azure"), "Amazon": ("amazon", "aws"), "Alphabet": ("alphabet", "google", "deepmind"), "Meta": ("meta", "facebook"), "CoreWeave": ("coreweave",), "Oracle": ("oracle",), "Broadcom": ("broadcom",), "TSMC": ("tsmc",), "SpaceX": ("spacex", "xai", "grok")}
 DOMAINS = [
-    ("funding", "Funding & valuation", "Can the builders pay for their commitments?", ["OpenAI", "Anthropic", "CoreWeave", "Oracle"]),
-    ("demand", "Paid demand", "Is usage becoming recurring cash receipts?", ["OpenAI", "Anthropic", "Microsoft", "Amazon", "Alphabet"]),
-    ("capacity", "Capacity & power", "What is planned, energized, delivered and actually used?", ["NVIDIA", "AMD", "CoreWeave", "Oracle", "Broadcom", "TSMC"]),
-    ("earnings", "Results & guidance", "Did results and outlook change for comparable periods?", WATCHLIST),
-    ("models", "Model economics", "Does better or cheaper AI change real production economics?", ["OpenAI", "Anthropic", "Alphabet", "Meta"]),
-    ("policy", "Policy & constraints", "What rules or physical constraints alter delivery or access?", WATCHLIST),
+    ("funding", "Funding & valuation", "Usable financing can fund construction before customer cash arrives; conditional commitments do not yet provide that cash.", ["OpenAI", "Anthropic", "CoreWeave", "Oracle"]),
+    ("demand", "Paid demand", "Recurring paid usage and collections support durable demand; contracts and temporary credits alone do not.", ["OpenAI", "Anthropic", "Microsoft", "Amazon", "Alphabet"]),
+    ("capacity", "Capacity & power", "Power and commissioning delays can postpone revenue despite demand; planned capacity is not operating supply.", ["NVIDIA", "AMD", "CoreWeave", "Oracle", "Broadcom", "TSMC"]),
+    ("earnings", "Results & guidance", "Reported growth matters more when margins and cash keep pace; guidance remains a forecast, not an earned result.", WATCHLIST),
+    ("models", "Model economics", "Lower cost per successful task can improve adoption and margins if reliability holds; token price alone is incomplete.", ["OpenAI", "Anthropic", "Alphabet", "Meta"]),
+    ("policy", "Policy & constraints", "Binding rules can restrict sales or delay capacity; proposals and exemptions may leave the actual impact unresolved.", WATCHLIST),
 ]
 
 
@@ -207,15 +207,15 @@ def group_stories(articles):
 
 def coverage(sources, now):
     domains = []
-    for key, name, question, entities in DOMAINS:
+    for key, name, takeaway, entities in DOMAINS:
         aliases = {"models": {"models", "product"}, "policy": {"policy", "permits"}, "funding": {"funding", "valuation"}, "capacity": {"capacity", "power"}}.get(key, {key})
         mapped = [s for s in sources if aliases & set(s.get("topics") or s.get("source_topics") or [])]
         available = [s for s in mapped if s.get("status") == "ok" and parse_time(s.get("last_success_at")) and 0 <= (now - parse_time(s["last_success_at"])).total_seconds() <= 48*3600]
         direct = [s for s in available if s.get("role") in ("primary", "secondary")]
         status = "covered" if direct else "discovery_only" if available else "gap"
-        domains.append({"id": key, "name": name, "question": question, "entities": entities,
+        domains.append({"id": key, "name": name, "takeaway": takeaway, "entities": entities,
                         "connected_sources": [s["id"] for s in available], "status": status,
-                        "note": "A working source is mapped to this question; completeness and every named company are not guaranteed." if direct else "Discovery leads only; source verification is still required." if available else "No mapped source succeeded within 48 hours. Use a targeted manual source check."})
+                        "note": "A working source is mapped to this topic; completeness and every named company are not guaranteed." if direct else "Discovery leads only; source verification is still required." if available else "No mapped source succeeded within 48 hours. Use a targeted manual source check."})
     return {"domains": domains,
             "gaps": ["X trends/session coverage is not connected.", "Live CDS and consensus estimates are not connected.", "SEC coverage is selected recent filing metadata, not full-text financial extraction.", "Anthropic has discovery coverage; no direct Anthropic official news feed is connected.", "RSS search results are a bounded discovery sample; publication dates and original reporting require review."],
             "source_health": {"ok": sum(s.get("status") == "ok" for s in sources), "total": len(sources)},
@@ -256,9 +256,13 @@ def compose(data, now=None):
         priority_items.append(article)
         if len(priority_items) == 6:
             break
-    questions = [{"topic": key, "question": question, "items": sum(a["topic"] == key for a in actionable)} for key, name, question, entities in DOMAINS]
+    # These are general implications of the matched topics, not findings verified
+    # from a headline. Reviewed notes and their evidence remain separate.
+    takeaways = [{"topic": key, "takeaway": takeaway, "items": sum(a["topic"] == key for a in actionable),
+                  "basis": "general_context"}
+                 for key, name, takeaway, entities in DOMAINS if any(a["topic"] == key for a in actionable)]
     return {**data, "articles": articles, "stories": stories, "as_of": now.isoformat(),
             "coverage": coverage(sources, now), "layer_tracking": layer_tracking(stories, sources, now), "watchlist": {"entities": WATCHLIST, "topics": [x[0] for x in DOMAINS]},
-            "brief": {"headline": headline, "bullets": bullets, "priority_questions": questions, "priority_items": priority_items,
+            "brief": {"headline": headline, "bullets": bullets, "priority_takeaways": takeaways, "priority_items": priority_items,
                       "coverage_note": "Selected official feeds + reporting + public search RSS. Ranked by cash, orders, delivery and economics terms; automatic implications remain conditional prompts. X and market-wide completeness are not claimed."},
             "stats": {"articles": len(articles), "total_articles": data.get("total_count", len(articles)), "story_count": len(stories), "new_items": fresh_count, "changed_items": changed, "last_refresh": latest.get("finished_at"), "source_ok": ok, "source_total": len(sources), "recent_items": len(recent), "discovery_items": sum(a["source_role"] == "discovery" for a in articles), "needs_review": sum(a["review_status"] == "unreviewed" and a["relevance"] == "material" for a in stories)}}
