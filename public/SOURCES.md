@@ -151,7 +151,7 @@ Security-spending implications are conditional, with no inferred orders or reven
 
 ## October 28 cloud earnings
 
-Two new stories retain the earlier research. Both report quarters ended September 30; Microsoft calls this FY2027 Q1. Written call-transcript review remains pending. The existing snapshot is a dated publication, not a live transcript feed.
+Two new stories retain the earlier research. Both report quarters ended September 30; Microsoft calls this FY2027 Q1. At the initial release review, written call-transcript review was pending. The existing snapshot is a dated publication, not a live transcript feed.
 
 | Primary source | Review boundary |
 |---|---|
@@ -161,3 +161,12 @@ Two new stories retain the earlier research. Both report quarters ended Septembe
 | [Alphabet presentation](https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-slides.pdf) | Original issuer PDF reviewed. Quarterly and TTM company-defined non-GAAP FCF are separate; users and token counts do not establish paid conversion or unit profit. |
 
 No new consensus, share-price reaction, utilization, energized capacity or AI-only return is inferred. The bounded snapshot allowance increases from 20 to 24 stories to retain all prior coverage alongside these two additions. No private database, source body, log or investing discussion is part of the public export.
+
+
+## Alphabet full-call update, October 28
+
+The existing Alphabet story now includes prepared remarks and Q&A from the [StockAnalysis/Quartr transcript](https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/). This is a third-party transcription of management statements, not company-edited text. The [official Alphabet Investor Relations webcast](https://www.youtube.com/watch?v=X9mmCagxJTo) is linked as a recording reference. Player metadata was accessible, but caption downloads returned empty responses; this review does not claim independent caption verification or use unverified timestamp anchors.
+
+The update distinguishes Q4 rental-compute margin pressure from Q3's reported margin; cash capex from TPU inventory and the EC fine; multiyear contractual ceilings from annual capex; and signed orders from delivery, payment and utilization. Backlog conversion and future spending remain management expectations. The 100m-plus knowledge-work seats cover all AI services, not Gemini Enterprise alone. The analyst's $35bn-per-GW premise is not management guidance.
+
+Microsoft's single additional normal deck-download attempt timed out without a saved file. Its release/metrics review remains unchanged, with deck-only figures excluded and written call-transcript review pending. No private data, source transcript body or caption URL is exported.

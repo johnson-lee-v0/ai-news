@@ -36,3 +36,5 @@ html[data-mode="static"] .local-only{display:none!important}html[data-mode="stat
 .finance-page-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:19px 0 23px}.finance-page-heading h1{font-size:37px;letter-spacing:-1px}.finance-page-heading .badge{flex:none}@media(max-width:760px){.finance-page-heading{padding:14px 0 19px;gap:12px}.finance-page-heading h1{font-size:29px;letter-spacing:-.8px}.finance-page-heading .badge{font-size:8px;white-space:normal;text-align:right;max-width:100px}}
 
 .article-body.article-observation{grid-template-columns:minmax(0,1fr)}
+
+.highlight-heading .badge{max-width:100%;white-space:normal;overflow-wrap:anywhere}

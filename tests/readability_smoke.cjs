@@ -136,6 +136,7 @@ async function main() {
       assert.ok((await detail.innerText()).includes(first.uncertainty), 'Uncertainty retained');
       if (first.highlights?.length) assert.match(await detail.innerText(), /Key takeaways/i);
       assert.ok((await detail.innerText()).includes(first.observation), 'Observation retained');
+      await noOverflow(page, width + 'px expanded evidence');
       await page.locator('#news-search').fill('');
       await page.locator('#news-filters > summary').click();
       const layer = dataset.layer_tracking.layers.find(item => item.article_count > 0);
@@ -155,6 +156,11 @@ async function main() {
       await page.goBack();await page.locator('#panel-explore').waitFor({state:'visible'});
       await page.goForward();await page.locator('#panel-layers').waitFor({state:'visible'});
       await page.reload();await ready(page);await page.locator('#panel-layers').waitFor({state:'visible'});
+      await go(page, 'earnings');
+      const sourceLinks = page.locator('#earnings-content tbody tr td:last-child a');
+      assert.equal(await sourceLinks.count(), dataset.earnings.length, 'Every earnings comparison retains its evidence link');
+      assert.deepEqual(await sourceLinks.allTextContents(), dataset.earnings.map(() => 'Source ↗'), 'Neutral evidence labels do not misidentify third-party transcripts as company sources');
+      assert.deepEqual(await sourceLinks.evaluateAll(links => links.map(link => link.href)), dataset.earnings.map(row => row.source_url), 'Earnings links preserve exact source attribution');
       await go(page, 'brief');
       await page.reload();await ready(page);
       assert.match(await page.locator('#visit-summary').innerText(), /0 new stor.*0 material revision/);
@@ -166,7 +172,8 @@ async function main() {
     const synthetic = JSON.parse(JSON.stringify(dataset));
     const example = {...rows[0], id:'synthetic-readability-only', title:'Synthetic complete implication test', url:'https://example.org/readability-test',
       implication:'A disclosed factory expansion can support equipment demand when customers accept deliveries and pay the supplier on time.\nThe second sentence is essential: financing commitments do not establish realized revenue, energized capacity, sustained utilization or durable returns, and this caveat must remain visible without expanding anything. ' + 'LongUnbrokenSyntheticToken'.repeat(12),
-      observation:'Synthetic observation for the isolated browser test only.', article_ids:['synthetic-readability-only']};
+      observation:'Synthetic observation for the isolated browser test only.', article_ids:['synthetic-readability-only'],
+      highlights:[{title:'Synthetic source classification',observation:'Synthetic claim for layout verification.',implication:'Synthetic interpretation, not public research.',claim_type:'Management statement reproduced in a third-party transcript; interpretation is conditional analysis with explicit uncertainty',source_url:'https://example.org/readability-test',source_date:'2026-10-25'}]};
     synthetic.articles=[example];synthetic.stories=[example];synthetic.notes=[];synthetic.brief.priority_items=[example];
     assert.ok(example.implication.length > 230);
     for (const width of [320,390,1440]) {
@@ -177,6 +184,14 @@ async function main() {
       await readable(page.locator('#brief-feed .news-card-implication'), example.implication, 'Synthetic ' + width + 'px');
       await noOverflow(page, 'Synthetic ' + width + 'px');
       if (width === 390) await capture(page, 'synthetic-complete-390.png');
+      await page.locator('#brief-feed .article-details > summary').click();
+      const classification = page.locator('#brief-feed .highlight-heading .badge');
+      assert.equal(await classification.textContent(), example.highlights[0].claim_type, 'Complete source classification retained');
+      assert.ok(await classification.evaluate(element => {
+        const box = element.getBoundingClientRect(), parent = element.parentElement.getBoundingClientRect();
+        return box.right <= parent.right + 1 && box.left >= parent.left - 1 && element.scrollWidth <= element.clientWidth + 1;
+      }), 'Long source classification stays readable within the card at ' + width + 'px');
+      await noOverflow(page, 'Expanded synthetic ' + width + 'px');
       await context.close();
     }
     assert.deepEqual(errors, [], 'No runtime errors');
