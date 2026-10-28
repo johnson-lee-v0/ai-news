@@ -148,3 +148,16 @@ Reviewed October 25, 2026. The runtime flaws, defensive research process and rep
 | [Unit 42 incident report](https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/) | October 21, updated October 23, 2026 | Researcher's account of observed post-exploitation behavior. The model/provider is unidentified and full autonomy is not established. No exploit procedure is reproduced. |
 
 Security-spending implications are conditional, with no inferred orders or revenue. This editorial addition does not add an automated security feed or guarantee detection of every future same-URL article update.
+
+## October 28 cloud earnings
+
+Two new stories retain the earlier research. Both report quarters ended September 30; Microsoft calls this FY2027 Q1. Written call-transcript review remains pending. The existing snapshot is a dated publication, not a live transcript feed.
+
+| Primary source | Review boundary |
+|---|---|
+| [Microsoft release](https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast) | Full issuer text reviewed through the public web reader. Azure includes non-AI workloads and is included in Microsoft Cloud. CFO minus cash PP&E is an explicitly calculated comparison. |
+| [Microsoft official metrics](https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/metrics) | Current and historical RPO, Cloud margin and bookings reviewed. The deck download was unavailable in this review; deck-only figures and call guidance are excluded. |
+| [Alphabet release](https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf) | Original issuer PDF and financial tables reviewed. Cloud includes TPU product sales; segment profit excludes certain shared AI costs. Financing is not revenue or an AI-only cash allocation. |
+| [Alphabet presentation](https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-slides.pdf) | Original issuer PDF reviewed. Quarterly and TTM company-defined non-GAAP FCF are separate; users and token counts do not establish paid conversion or unit profit. |
+
+No new consensus, share-price reaction, utilization, energized capacity or AI-only return is inferred. The bounded snapshot allowance increases from 20 to 24 stories to retain all prior coverage alongside these two additions. No private database, source body, log or investing discussion is part of the public export.

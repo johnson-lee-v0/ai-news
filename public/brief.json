@@ -1,13 +1,161 @@
 {
-  "reviewed_at": "2026-10-28T12:34:06+00:00",
-  "headline": "Supplier results strengthen the buildout case; funding, rollout and usage remain separate.",
+  "reviewed_at": "2026-10-28T21:44:13+00:00",
+  "headline": "Cloud revenue grows; cash investment and conversion remain the test",
   "bullets": [
-    "Vertiv and Generac report supplier sales and cash; inspect advances, backlog conversion and future delivery conditions.",
-    "Oracle broadens chip availability in stages. AMD’s announced Meta participation stays inside the existing raise.",
-    "SK hynix was already reviewed today and is preserved as context, not another new event."
+    "Microsoft: Azure revenue grows 48%; cash equipment spending outpaces operating cash growth.",
+    "Alphabet: Cloud revenue doubles, with TPU hardware contributing; quarterly capex exceeds operating cash.",
+    "Written call transcripts pending. Alphabet release/deck and Microsoft release/metrics reviewed; Microsoft deck retrieval unavailable."
   ],
   "notice": "Selected public evidence and financing relationships, reviewed on the displayed dates. Material verified updates may be published through the approved daily workflow; this remains a dated snapshot, not a live or exhaustive feed. X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "microsoft-fy27q1-20261028",
+      "title": "Microsoft’s Azure growth rises; equipment spending absorbs more cash",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "source_id": "microsoft-fy27q1-20261028",
+      "source_name": "Microsoft · FY27 Q1 release",
+      "source_role": "primary",
+      "published_at": "2026-10-28",
+      "event_date": "2026-10-28",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-28T21:44:13+00:00",
+      "entities": [
+        "Microsoft",
+        "MSFT",
+        "Azure"
+      ],
+      "ai_layers": [
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "lens": "earnings",
+      "relevance": "material",
+      "rank": 1,
+      "observation": "Azure revenue reached $33.165bn, up 48%; Microsoft Cloud was $63.9bn, up 30%. Azure is included in Cloud. Release and official metrics reviewed; written transcript pending.",
+      "summary": "Paid cloud growth supports the buildout; faster equipment spending leaves less near-term cash after investment.",
+      "implication": "Paid cloud growth supports the buildout; faster equipment spending leaves less near-term cash after investment.",
+      "report_period": "FY2027 Q1, quarter ended September 30, 2026",
+      "claim_type": "reported results and calculated cash comparison",
+      "beneficiaries": "Equipment suppliers with delivered exposure; profitable customer workloads could benefit from additional cloud capability.",
+      "risks": "Capital intensity, depreciation and margin pressure can rise before new capacity produces collections.",
+      "counterevidence": "Microsoft generated $58bn operating cash. Cloud margin improved one point sequentially, although it fell two points year over year.",
+      "confirms": "Sustained revenue and collections, stable margins, and operating cash growing faster than equipment spending would strengthen returns.",
+      "refutes": "Slower revenue, weaker margins or delayed contract conversion while spending rises would weaken the thesis.",
+      "uncertainty": "Azure includes non-AI workloads; standalone AI returns, utilization and energized MW are not disclosed here. Microsoft deck retrieval was unavailable; deck-only figures and call guidance are excluded. Written transcript review pending.",
+      "source_date_note": "Release dated October 28 for quarter ended September 30. Accompanying metrics compare September with June and the prior September; review time is separate.",
+      "access_note": "Issuer release and official Metrics page reviewed through the public web reader. No completed call or deck review claimed.",
+      "highlights": [
+        {
+          "title": "More cash invested, less left over",
+          "observation": "CFO $58.000bn less cash PP&E $39.367bn equals $18.633bn, down 27.4% year over year (calculated).",
+          "implication": "This cash comparison is not lease-inclusive capex or an AI-only return; no unverified deck FCF definition is assumed.",
+          "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+          "source_date": "2026-10-28",
+          "claim_type": "reported components; calculated comparison"
+        },
+        {
+          "title": "Large commitments still need conversion",
+          "observation": "Commercial RPO was $677bn, up 73% year over year but near June’s $678bn. Bookings growth was −12%.",
+          "implication": "RPO is future revenue, not current cash. The rounded sequential balance is near-flat; weaker bookings do not alone establish falling usage.",
+          "source_url": "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/metrics",
+          "source_date": "2026-10-28",
+          "claim_type": "reported results; implication is analysis"
+        },
+        {
+          "title": "Margins offer mixed evidence",
+          "observation": "Microsoft Cloud gross margin was 66%, versus 68% a year earlier and 65% in June.",
+          "implication": "Sequential improvement supports profitability, while the annual decline keeps delivery cost and pricing in focus.",
+          "source_url": "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/metrics",
+          "source_date": "2026-10-28",
+          "claim_type": "reported results; implication is analysis"
+        }
+      ]
+    },
+    {
+      "id": "alphabet-q3-20261028",
+      "title": "Alphabet’s Cloud doubles; investment exceeds quarterly operating cash",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+      "source_id": "alphabet-q3-20261028",
+      "source_name": "Alphabet · Q3 release",
+      "source_role": "primary",
+      "published_at": "2026-10-28",
+      "event_date": "2026-10-28",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-28T21:44:13+00:00",
+      "entities": [
+        "Alphabet",
+        "Google",
+        "GOOGL",
+        "GOOG"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "lens": "earnings",
+      "relevance": "material",
+      "rank": 2,
+      "observation": "Google Cloud revenue was $30.709bn, up 103%, with $11.121bn segment operating profit. TPU systems sales meaningfully contributed. Release and deck reviewed; written transcript pending.",
+      "summary": "Cloud monetization is growing, but hardware mix and heavy investment limit conclusions about recurring AI returns.",
+      "implication": "Cloud monetization is growing, but hardware mix and heavy investment limit conclusions about recurring AI returns.",
+      "report_period": "Q3 2026, quarter ended September 30, 2026",
+      "claim_type": "reported results and management usage claims",
+      "beneficiaries": "Suppliers with delivered memory, networking, power or cooling exposure; customers may benefit if TPU systems lower workload costs.",
+      "risks": "Capital intensity, shared AI costs, financing obligations and dilution; the hardware-versus-service revenue mix remains undisclosed.",
+      "counterevidence": "Group operating profit was $40.576bn; cash and marketable securities totaled $265.098bn at September 30. Positive TTM FCF and profitable core operations counter a cash-crisis thesis.",
+      "confirms": "Repeat paid workloads, collections, service revenue mix and cash growth outpacing investment would strengthen durable monetization.",
+      "refutes": "One-off hardware revenue, weaker collections or rising shared costs and capex without subsequent cash growth would weaken the thesis.",
+      "uncertainty": "No TPU dollar split, energized MW, utilization, paid Gemini conversion or AI-only returns established. Written call transcript review pending. No consensus or stock-reaction analysis.",
+      "source_date_note": "Release and presentation dated October 28; quarterly financial period ends September 30. TTM measures are separately labeled.",
+      "access_note": "Original issuer release and presentation PDFs retrieved and relevant tables visually checked. No call-transcript or Q3 10-Q review claimed.",
+      "highlights": [
+        {
+          "title": "Cloud includes hardware, not only subscriptions",
+          "observation": "Cloud’s 103% growth includes meaningful TPU systems product sales; no dollar split was supplied.",
+          "implication": "Recognized revenue supports monetization, but this growth is not entirely recurring hosted consumption or proof of customer utilization.",
+          "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+          "source_date": "2026-10-28",
+          "claim_type": "reported results; implication is analysis"
+        },
+        {
+          "title": "Cash investment runs ahead of cash generation",
+          "observation": "Q3 CFO $42.290bn less cash capex $51.355bn produced company-defined non-GAAP FCF of −$9.065bn. TTM FCF was $19.747bn, down 73%.",
+          "implication": "Suppliers receive investment now; Alphabet still needs future collections to rebuild cash after spending. Negative quarterly FCF is not insolvency.",
+          "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-slides.pdf",
+          "source_date": "2026-10-28",
+          "claim_type": "reported results; implication is analysis"
+        },
+        {
+          "title": "Segment margin excludes shared AI costs",
+          "observation": "Cloud operating margin was 36.2%. Alphabet-level expenses of $7.655bn primarily cover shared AI research, with certain AI costs outside segment results.",
+          "implication": "Cloud profitability improved, but 36.2% is not fully allocated AI profit or return on all AI capital.",
+          "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+          "source_date": "2026-10-28",
+          "claim_type": "reported results; implication is analysis"
+        },
+        {
+          "title": "Usage is not paid conversion",
+          "observation": "Management reports over 1bn Gemini monthly active users and about 32bn API tokens per minute, up 40% sequentially.",
+          "implication": "Usage growth supports adoption; paid retention, price per successful task and unit profit remain unestablished.",
+          "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-slides.pdf",
+          "source_date": "2026-10-28",
+          "claim_type": "management usage metrics"
+        },
+        {
+          "title": "Financing supplements operating cash",
+          "observation": "Q3 equity issuance generated $12.371bn net proceeds; senior-note proceeds were $28.7bn for general corporate purposes.",
+          "implication": "These are financing, not revenue or an AI-only allocation. Note proceeds sit within broader debt proceeds and must not be added again.",
+          "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+          "source_date": "2026-10-28",
+          "claim_type": "reported results; implication is analysis"
+        }
+      ]
+    },
     {
       "id": "vertiv-q3-20261028",
       "title": "Vertiv turns infrastructure demand into sales; inspect the cash support",
@@ -29,7 +177,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 1,
+      "rank": 3,
       "observation": "Q3 sales reached $4.3128bn, up 61.2% (55% organic). GAAP operating profit was $983.8m; adjusted operating profit was $1,086.9m.",
       "summary": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
       "implication": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
@@ -93,7 +241,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 2,
+      "rank": 4,
       "observation": "C&I external sales rose 28% to about $552m. Data-center backlog is approximately $4.5bn; Amazon’s expected initial 2027–28 deliveries total $2.4bn.",
       "summary": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
       "implication": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
@@ -204,7 +352,7 @@
       ],
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
-      "rank": 3,
+      "rank": 5,
       "relevance": "material"
     },
     {
@@ -230,7 +378,7 @@
       ],
       "lens": "capacity",
       "relevance": "material",
-      "rank": 4,
+      "rank": 6,
       "observation": "NVIDIA and Oracle announced Rubin NVL72 availability on October 27, while multi-gigawatt expansion remains planned. Oracle schedules Google TPUs for 2027.",
       "summary": "Wider chip choice can improve compute economics; paid utilization and workload costs still decide the return.",
       "implication": "Wider chip choice can improve compute economics; paid utilization and workload costs still decide the return.",
@@ -295,7 +443,7 @@
         "infrastructure",
         "models"
       ],
-      "rank": 5,
+      "rank": 7,
       "relevance": "material",
       "observation": "AMD says it will invest $1bn in Meta’s existing equity offering. Initial Helios racks are installed and being tested; broader deployment remains ahead.",
       "summary": "Supplier equity and hardware adoption are linked exposures, not additional financing totals or proof of profitable demand.",
@@ -413,7 +561,7 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 6,
+      "rank": 8,
       "relevance": "material"
     },
     {
@@ -437,7 +585,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 7,
+      "rank": 9,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -485,7 +633,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 8,
+      "rank": 10,
       "relevance": "material",
       "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
       "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
@@ -589,7 +737,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
       "source_id": "anthropic-s1-20261026-source-1",
-      "rank": 9,
+      "rank": 11,
       "relevance": "material",
       "summary": "H1 revenue was $16.286bn, operating loss $0.693bn and operating cash inflow $3.929bn. The $80.748bn net loss includes large noncash financing revaluations; it is not cash burn. The IPO remains unpriced and not effective."
     },
@@ -682,7 +830,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 10,
+      "rank": 12,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
     },
@@ -764,7 +912,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 11,
+      "rank": 13,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
     },
@@ -796,7 +944,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 12,
+      "rank": 14,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -859,7 +1007,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 13,
+      "rank": 15,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -934,7 +1082,7 @@
       "entities": [
         "OpenAI"
       ],
-      "rank": 14,
+      "rank": 16,
       "observation": "Bloomberg reports a $1.25tn valuation target, versus $1.4tn discussed earlier, for a proposed ~$30bn raise.",
       "summary": "Negotiations remain open; this is not a completed financing.",
       "implication": "If capital becomes harder to secure, labs may prioritize fewer compute commitments.",
@@ -964,7 +1112,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 15,
+      "rank": 17,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -992,7 +1140,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 16,
+      "rank": 18,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -1019,7 +1167,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 17,
+      "rank": 19,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -1048,7 +1196,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 18,
+      "rank": 20,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -1085,7 +1233,7 @@
         "models",
         "applications"
       ],
-      "rank": 19,
+      "rank": 21,
       "relevance": "watch",
       "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
       "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
@@ -2094,6 +2242,69 @@
         "demand"
       ],
       "access_note": "Full public issuer release read with web reader, 99 parsed lines."
+    },
+    {
+      "id": "microsoft-fy27q1-20261028",
+      "name": "Microsoft · FY27 Q1 release",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "topics": [
+        "earnings",
+        "demand",
+        "capacity"
+      ],
+      "access_note": "Full issuer release read through the public web reader. Original raw download returned HTTP 403; no original-byte hash claimed. Written call transcript pending.",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T21:44:13+00:00",
+      "quality_note": "Quarterly results, management usage claims, calculations and conditional implications remain separate."
+    },
+    {
+      "id": "microsoft-fy27q1-metrics-20261028",
+      "name": "Microsoft · FY27 Q1 official metrics",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/metrics",
+      "topics": [
+        "earnings",
+        "demand"
+      ],
+      "access_note": "Official current and historical metrics table reviewed. Earnings deck download unavailable in this review; no deck-only figures included.",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T21:44:13+00:00",
+      "quality_note": "Quarterly results, management usage claims, calculations and conditional implications remain separate."
+    },
+    {
+      "id": "alphabet-q3-20261028",
+      "name": "Alphabet · Q3 release",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+      "topics": [
+        "earnings",
+        "demand",
+        "funding"
+      ],
+      "access_note": "Original issuer PDF retrieved; cash-flow, financing and segment tables visually checked. Written call transcript pending.",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T21:44:13+00:00",
+      "quality_note": "Quarterly results, management usage claims, calculations and conditional implications remain separate."
+    },
+    {
+      "id": "alphabet-q3-deck-20261028",
+      "name": "Alphabet · Q3 presentation",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-slides.pdf",
+      "topics": [
+        "earnings",
+        "demand",
+        "models"
+      ],
+      "access_note": "Original issuer PDF retrieved; Cloud, cash-flow and usage slides visually checked. Presentation review is not call-transcript review.",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-28T21:44:13+00:00",
+      "quality_note": "Quarterly results, management usage claims, calculations and conditional implications remain separate."
     }
   ],
   "ledger": [
@@ -3622,6 +3833,216 @@
       "source_date": "2026-10-28",
       "as_of": "2026-10-28T12:34:06+00:00",
       "note": "CFO170.989 less PP&E39.250; distinct from EBITDA."
+    },
+    {
+      "id": "msft-fy27q1-azure",
+      "company": "Microsoft",
+      "metric": "Azure revenue",
+      "reported": 33165,
+      "unit": "USD million",
+      "period": "FY2027 Q1 ended September 30, 2026",
+      "reported_period": "FY2027 Q1 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "note": "+48% year over year; includes non-AI workloads. Included in Microsoft Cloud. FY2027 definitions and comparative periods recast."
+    },
+    {
+      "id": "msft-fy27q1-cloud",
+      "company": "Microsoft",
+      "metric": "Microsoft Cloud revenue",
+      "reported": 63900,
+      "unit": "USD million",
+      "period": "FY2027 Q1 ended September 30, 2026",
+      "reported_period": "FY2027 Q1 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/metrics",
+      "note": "+30% year over year; rounded to $63.9bn. Includes Azure; do not sum the two."
+    },
+    {
+      "id": "msft-fy27q1-cfo",
+      "company": "Microsoft",
+      "metric": "Operating cash flow",
+      "reported": 58000,
+      "unit": "USD million",
+      "period": "FY2027 Q1 ended September 30, 2026",
+      "reported_period": "FY2027 Q1 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "note": "Consolidated cash flow; not AI-only."
+    },
+    {
+      "id": "msft-fy27q1-ppe",
+      "company": "Microsoft",
+      "metric": "Cash additions to property and equipment",
+      "reported": 39367,
+      "unit": "USD million",
+      "period": "FY2027 Q1 ended September 30, 2026",
+      "reported_period": "FY2027 Q1 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "note": "Cash statement measure, distinct from capex including finance leases."
+    },
+    {
+      "id": "msft-fy27q1-cash-after-ppe",
+      "company": "Microsoft",
+      "metric": "CFO less cash PP&E (calculated)",
+      "reported": 18633,
+      "unit": "USD million",
+      "period": "FY2027 Q1 ended September 30, 2026",
+      "reported_period": "FY2027 Q1 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "note": "Calculated 58,000−39,367; −27.4% versus prior 25,663. No deck-based company FCF definition assumed."
+    },
+    {
+      "id": "msft-fy27q1-rpo",
+      "company": "Microsoft",
+      "metric": "Commercial remaining performance obligations",
+      "reported": 677000,
+      "unit": "USD million",
+      "period": "FY2027 Q1 ended September 30, 2026",
+      "reported_period": "FY2027 Q1 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/metrics",
+      "note": "At September 30; rounded $677bn versus $678bn June and $392bn prior September. Future revenue, not current cash."
+    },
+    {
+      "id": "msft-fy27q1-cloud-margin",
+      "company": "Microsoft",
+      "metric": "Microsoft Cloud gross margin",
+      "reported": 66,
+      "unit": "percent",
+      "period": "FY2027 Q1 ended September 30, 2026",
+      "reported_period": "FY2027 Q1 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/metrics",
+      "note": "−2 percentage points year over year; +1 point versus June. Not Azure-only margin."
+    },
+    {
+      "id": "alphabet-q3-20261028-1",
+      "company": "Alphabet",
+      "metric": "Google Cloud revenue",
+      "reported": 30709,
+      "unit": "USD million",
+      "period": "Q3 2026 ended September 30, 2026",
+      "reported_period": "Q3 2026 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+      "note": "+103% year over year; includes TPU product sales and recurring services, with no product-dollar breakout."
+    },
+    {
+      "id": "alphabet-q3-20261028-2",
+      "company": "Alphabet",
+      "metric": "Google Cloud operating income",
+      "reported": 11121,
+      "unit": "USD million",
+      "period": "Q3 2026 ended September 30, 2026",
+      "reported_period": "Q3 2026 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+      "note": "Segment margin 36.2%; certain shared AI R&D and technical infrastructure costs remain outside the segment."
+    },
+    {
+      "id": "alphabet-q3-20261028-3",
+      "company": "Alphabet",
+      "metric": "Google Cloud operating margin",
+      "reported": 36.2,
+      "unit": "percent",
+      "period": "Q3 2026 ended September 30, 2026",
+      "reported_period": "Q3 2026 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-slides.pdf",
+      "note": "Segment operating margin, not fully allocated AI margin or return on invested capital."
+    },
+    {
+      "id": "alphabet-q3-20261028-4",
+      "company": "Alphabet",
+      "metric": "Operating cash flow",
+      "reported": 42290,
+      "unit": "USD million",
+      "period": "Q3 2026 ended September 30, 2026",
+      "reported_period": "Q3 2026 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+      "note": "Group Q3, down 13% year over year; not AI-only cash flow."
+    },
+    {
+      "id": "alphabet-q3-20261028-5",
+      "company": "Alphabet",
+      "metric": "Cash purchases of property and equipment",
+      "reported": 51355,
+      "unit": "USD million",
+      "period": "Q3 2026 ended September 30, 2026",
+      "reported_period": "Q3 2026 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+      "note": "Group Q3 cash capex, up 114% year over year; no inference that all is AI-only or already utilized."
+    },
+    {
+      "id": "alphabet-q3-20261028-6",
+      "company": "Alphabet",
+      "metric": "Free cash flow",
+      "reported": -9065,
+      "unit": "USD million",
+      "period": "Q3 2026 ended September 30, 2026",
+      "reported_period": "Q3 2026 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+      "note": "Company-defined non-GAAP CFO less capital expenditures; Q3 2026."
+    },
+    {
+      "id": "alphabet-q3-20261028-7",
+      "company": "Alphabet",
+      "metric": "Trailing-twelve-month free cash flow",
+      "reported": 19747,
+      "unit": "USD million",
+      "period": "TTM ended September 30, 2026",
+      "reported_period": "TTM ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "as_of": "2026-10-28",
+      "source_date": "2026-10-28",
+      "source_url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-slides.pdf",
+      "note": "Company-defined non-GAAP TTM ending September 30, 2026; down 73% year over year. Distinct from quarterly FCF."
     }
   ]
 }

@@ -60,7 +60,7 @@ def validate_public(raw):
     safe_text(raw)
     reviewed = iso(raw['reviewed_at'])
     if reviewed > datetime.now(timezone.utc): raise ValueError('Review date cannot be in the future')
-    if not 1 <= len(raw['articles']) <= 20 or not 1 <= len(raw['sources']) <= 80: raise ValueError('Public snapshot must be small and populated')
+    if not 1 <= len(raw['articles']) <= 24 or not 1 <= len(raw['sources']) <= 80: raise ValueError('Public snapshot must be small and populated')
     ids = set()
     for source in raw['sources']:
         if set(source) - SOURCE_FIELDS: raise ValueError('Unexpected public source field')
