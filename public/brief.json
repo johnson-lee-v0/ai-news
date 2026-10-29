@@ -1,25 +1,25 @@
 {
-  "reviewed_at": "2026-10-29T00:13:56+00:00",
-  "headline": "Microsoft’s call separates efficiency gains from delivery and funding risks",
+  "reviewed_at": "2026-10-29T13:11:35+00:00",
+  "headline": "Supplier profits and recurring revenue grow; collections and funding remain the test.",
   "bullets": [
-    "Microsoft: better use of existing equipment supports Azure growth; delayed third-party GPU capacity moves spending into fiscal H2.",
-    "Q2 guidance pairs strong growth with lower blended Cloud margin. Positive cash FCF does not make lease-financed expansion self-funded.",
-    "Official Microsoft prepared remarks verified; Q&A and outlook deck have separately attributed coordinating research. Alphabet’s full-call update is preserved."
+    "Microsoft’s filing separates $10bn OpenAI-linked revenue, $7.2bn receivables and funded investment commitments.",
+    "Samsung, Caterpillar and Equinix report operating evidence; prior guidance, one-time fees and expansion cash needs qualify the headlines.",
+    "Oracle’s financing and positive-FCF milestones are future targets. Earlier cloud calls and SK hynix coverage remain context, not new events."
   ],
   "notice": "Selected public evidence and financing relationships, reviewed on the displayed dates. Material verified updates may be published through the approved daily workflow; this remains a dated snapshot, not a live or exhaustive feed. X trends, live CDS and consensus are not connected.",
   "articles": [
     {
       "id": "microsoft-fy27q1-20261028",
-      "title": "Microsoft’s AI growth improves; delayed capacity shifts spending ahead",
-      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
-      "source_id": "microsoft-fy27q1-20261028",
-      "source_name": "Microsoft · FY27 Q1 release",
+      "title": "Microsoft discloses $10bn of quarterly OpenAI-linked revenue",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+      "source_id": "microsoft-q1-10q-20261028",
+      "source_name": "Microsoft · FY27 Q1 10-Q",
       "source_role": "primary",
       "published_at": "2026-10-28",
       "event_date": "2026-10-28",
       "date_kind": "publication_date",
       "date_precision": "day",
-      "reviewed_at": "2026-10-29T00:13:56+00:00",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
       "entities": [
         "Microsoft",
         "MSFT",
@@ -33,20 +33,28 @@
       "lens": "earnings",
       "relevance": "material",
       "rank": 1,
-      "observation": "Azure revenue grew 48% to $33.165bn. The call adds evidence of better use of existing equipment and faster deployment, alongside delayed third-party GPU capacity and rising spending plans.",
-      "summary": "Official prepared remarks support the numbers; Q&A adds context from a separately attributed third-party transcript.",
-      "implication": "Efficiency is turning more existing capacity into revenue, but delayed GPU deliveries shift spending ahead and keep cash returns under pressure.",
+      "observation": "The October 28 10-Q reports $10bn of OpenAI commercial revenue, including revenue-sharing, for the September quarter. OpenAI receivables were $7.2bn at September 30 versus $6bn at June 30.",
+      "summary": "New filing detail adds counterparty exposure to the previously reviewed call; efficiency, guidance and delivery caveats remain below.",
+      "implication": "Shared investment and customer exposure make cash collection central to Microsoft’s AI-growth story; recognized revenue is not collected cash.",
       "report_period": "FY2027 Q1, quarter ended September 30, 2026",
-      "claim_type": "reported results; management claims and guidance; attributed third-party Q&A",
+      "claim_type": "filed related-party disclosures; management call claims and guidance",
       "beneficiaries": "Delivered chip, memory, storage and cloud-capacity suppliers may benefit as spending rises. Customers can gain from better price-performance, if workload reliability holds.",
       "risks": "Delayed third-party deliveries, volatile token prices and model mix, depreciation and slower enterprise deployment can separate usage growth from cash returns.",
       "counterevidence": "Q1 operating cash was $58bn and company-described free cash flow about $18.6bn. Cloud margin improved one point sequentially to 66%, although down two points year over year. Management expects positive FY27 FCF.",
       "confirms": "Capacity entering service, paid consumption and collections, repeat efficiency gains and margins after the spending ramp would strengthen the returns case.",
       "refutes": "Further delivery slippage, weaker paid consumption or token revenue, rising lease payments and cash spending without matching collections would weaken it.",
-      "uncertainty": "No fleet-wide utilization, energized MW or AI-only return is disclosed here. No updated total paid Copilot seat count was given. Official written material contains prepared remarks only. Full Q&A and deck were reviewed by coordinating research; this publication check could not independently retrieve those files and verified numerical guidance in the official remarks.",
-      "source_date_note": "Results and call: October 28, for FY2027 Q1 ended September 30. Reviewed October 29; this revises the existing story rather than creating a new earnings event. Q2 guidance covers December; fiscal H2 is January–June 2027; calendar 2026 is a separate period.",
-      "access_note": "Official prepared-remarks DOCX retrieved and read in full. Third-party Q&A reviewed by coordinating research, not company-edited text; local re-download unavailable. Outlook deck reviewed by coordinating research; guidance independently corroborated in the official remarks.",
+      "uncertainty": "No fleet-wide utilization, energized MW or AI-only return is disclosed here. No updated total paid Copilot seat count was given. Official written material contains prepared remarks only. Full Q&A and deck were reviewed by coordinating research; this publication check could not independently retrieve those files and verified numerical guidance in the official remarks. OpenAI revenue is not all Azure or GPU rental. Receivable aging and cash/credit composition of funded commitments are not established; no default inference.",
+      "source_date_note": "Results and call: October 28, for FY2027 Q1 ended September 30. Reviewed October 29; this revises the existing story rather than creating a new earnings event. Q2 guidance covers December; fiscal H2 is January–June 2027; calendar 2026 is a separate period. October 29 review adds Note 1 from the October 28 10-Q; it is not a second earnings event.",
+      "access_note": "Official prepared-remarks DOCX retrieved and read in full. Third-party Q&A reviewed by coordinating research, not company-edited text; local re-download unavailable. Outlook deck reviewed by coordinating research; guidance independently corroborated in the official remarks. Original 10-Q downloaded; selected related-party, lease and cash sections checked.",
       "highlights": [
+        {
+          "title": "Investment, revenue and receivables are separate",
+          "observation": "The filing reports $10bn of quarterly OpenAI commercial revenue including revenue-sharing, $7.2bn receivables, and $12bn funded against $13bn investment commitments at September 30.",
+          "implication": "Do not add these flows and balances to each other or to the $250bn compute commitment. No aging or overdue conclusion is established; shared relationships do not prove fictitious revenue.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+          "source_date": "2026-10-28",
+          "claim_type": "filed Note 1 disclosures; implication is analysis"
+        },
         {
           "title": "Delivery delays move spending forward",
           "observation": "Management reports Q1 capex of $45.2bn, affected by delayed third-party deliveries. Some third-party GPU service capacity shifted to fiscal H2. Q2 capex is guided above $50bn; calendar 2026 around $170bn, with fiscal H2 accelerating.",
@@ -57,8 +65,8 @@
         },
         {
           "title": "Existing equipment is producing more revenue",
-          "observation": "Management says it added 24 data centers, cut GB300 dock-to-live time about 20% in its largest regions and lifted Copilot throughput over 50% quarter over quarter. Azure also monetized previously underused CPU capacity; GPU efficiencies and higher token revenue helped.",
-          "implication": "These are useful operating signals, not fleet utilization or MW. Q2 Azure growth guidance of 49–50% in constant currency partly depends on further efficiencies; model mix and token revenue can vary.",
+          "observation": "Management says it added 24 data centers, cut GB300 dock-to-live time about 20% in its largest regions and lifted Copilot throughput over 50% quarter over quarter. Azure also monetized previously underused CPU capacity; GPU efficiencies and higher token revenue helped. First Rubin GPUs have docked; Maia 300 remains a future efficiency claim.",
+          "implication": "These are useful operating signals, not fleet utilization or MW. Q2 Azure growth guidance of 49–50% in constant currency partly depends on further efficiencies; model mix and token revenue can vary. Hardware arrival is not commissioned capacity.",
           "source_url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/33/TranscriptFY27Q1.docx",
           "source_date": "2026-10-28",
           "claim_type": "management statement; implication is analysis"
@@ -102,16 +110,328 @@
           "source_url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/33/TranscriptFY27Q1.docx",
           "source_date": "2026-10-28",
           "claim_type": "management statement; implication is analysis"
-        },
-        {
-          "title": "Docked chips are not live capacity",
-          "observation": "Management says its first Vera Rubin GPUs have docked. Maia 300 efficiency improvements remain a forward-looking product claim.",
-          "implication": "Track commissioning and paid workloads separately from hardware arrival or future performance claims. No Rubin utilization, delivered MW or new supplier financing is established by these remarks.",
-          "source_url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/33/TranscriptFY27Q1.docx",
-          "source_date": "2026-10-28",
-          "claim_type": "management statement; implication is analysis"
         }
       ]
+    },
+    {
+      "id": "samsung-q3-20261029",
+      "title": "Samsung’s AI memory boom contrasts with consumer losses",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+      "source_id": "samsung-q3-release-20261029",
+      "source_name": "Samsung · Q3 results",
+      "source_role": "primary",
+      "published_at": "2026-10-29",
+      "event_date": "2026-10-29",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "entities": [
+        "Samsung",
+        "Memory",
+        "HBM",
+        "DRAM",
+        "NAND"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure"
+      ],
+      "lens": "earnings",
+      "relevance": "material",
+      "rank": 2,
+      "report_period": "Q3 ended September 30, 2026; later capacity and spending are management plans",
+      "claim_type": "issuer-reported K-IFRS results before external review; management outlook; conditional analysis",
+      "observation": "Revenue was KRW195.3tn and operating profit KRW107.4tn. Device Solutions generated KRW106.5tn operating profit, while Device eXperience lost KRW0.8tn.",
+      "summary": "New segment and investment detail separates supplier profits from the economics of memory buyers.",
+      "implication": "Scarce memory supports chip profits while higher component costs can squeeze buyers; supplier earnings do not establish AI application returns.",
+      "beneficiaries": "Samsung’s memory business and suppliers serving confirmed fab investment can benefit. Compute buyers and consumer-device businesses face cost pressure; downstream AI returns remain unmeasured.",
+      "risks": "Memory pricing can reverse as supply ramps, while large new fabs require timely qualification, customer acceptance and collections. Product and customer concentration remain relevant.",
+      "counterevidence": "Q3 operating cash remained strongly positive at KRW98.6tn. Management reports stronger HBM4 sales and improved foundry utilization, but consumer losses and softer sequential cash generation limit a uniform-growth thesis.",
+      "confirms": "Sustained realized prices, contracted deliveries, successful HBM qualification, fab commissioning and cash generation after investment would strengthen the scarcity-profit view.",
+      "refutes": "Weaker prices, customer deferrals, slower cash collection or costly factory ramps without accepted shipments would weaken it.",
+      "uncertainty": "No full earnings-call transcript reviewed. Numerical DRAM/NAND bit-shipment and ASP growth, standalone memory operating profit, downstream utilization and AI-only returns are not disclosed in the reviewed release/deck. The deck says external financial review is not yet complete.",
+      "source_date_note": "October 29 final earnings detail for September quarter; headline sales/profit were substantially previewed October 8. New to this selected feed, not a new surprise across every headline metric. Review and reporting dates remain separate.",
+      "access_note": "Original issuer release and official presentation downloaded; segment and cash tables visually checked. Prior October 8 guidance reviewed through the public web reader; its direct download returned HTTP403. No full-call or independently audited-results claim.",
+      "highlights": [
+        {
+          "title": "Semiconductor profits dominate, but are not all AI",
+          "observation": "Device Solutions earned KRW106.5tn operating profit on KRW147.1tn sales; Device eXperience lost KRW0.8tn. The deck gives memory sales of KRW140.7tn, not standalone memory profit.",
+          "implication": "DS includes memory, foundry and System LSI; it is not a pure AI segment. Segment sales include internal transactions, so do not sum them into consolidated revenue.",
+          "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+          "source_date": "2026-10-29",
+          "claim_type": "issuer-reported results; implication is analysis"
+        },
+        {
+          "title": "Pricing and product mix matter as well as demand",
+          "observation": "Management links memory strength to AI-oriented product mix, constrained capacity and higher market prices, and says HBM4 sales increased.",
+          "implication": "Revenue growth is not equivalent to shipped-bit growth. Higher input costs can coexist with strong supplier profits; no numerical price-versus-volume attribution is established.",
+          "source_url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+          "source_date": "2026-10-29",
+          "claim_type": "management operating commentary; implication is analysis"
+        },
+        {
+          "title": "Cash is strong, but investment is catching up",
+          "observation": "Q3 CFO was KRW98.6tn versus Q2’s KRW105.1tn; cash PP&E purchases rose to KRW26.9tn from KRW14.1tn. CFO less cash PP&E is KRW71.7tn, calculated; release capex is KRW29tn under a different measure.",
+          "implication": "Cash after PP&E is not company-defined FCF or AI-only cash. Period-end cash of KRW214.8tn includes short-term financial instruments and is not quarterly cash generation.",
+          "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+          "source_date": "2026-10-29",
+          "claim_type": "issuer-reported results; implication is analysis"
+        },
+        {
+          "title": "Expansion remains a plan until capacity works",
+          "observation": "FY2026 capex is expected at KRW84.4tn, including KRW76.8tn for DS. Management plans new fabs and expects Taylor operations in 2027; it forecasts tighter AI-memory supply.",
+          "implication": "Investment and shortage forecasts do not establish delivered output, contracted customer cash or durable prices. Monitor commissioning, yields, accepted shipments and collections.",
+          "source_url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+          "source_date": "2026-10-29",
+          "claim_type": "management guidance and future milestones; implication is analysis"
+        }
+      ]
+    },
+    {
+      "id": "caterpillar-q3-20261029",
+      "title": "Caterpillar turns data-center power demand into sales and profit",
+      "url": "https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf",
+      "source_id": "caterpillar-q3-20261029",
+      "source_name": "Caterpillar · Q3 earnings release",
+      "source_role": "primary",
+      "published_at": "2026-10-29",
+      "event_date": "2026-10-29",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "entities": [
+        "Caterpillar",
+        "CAT"
+      ],
+      "ai_layers": [
+        "energy",
+        "infrastructure"
+      ],
+      "lens": "earnings",
+      "relevance": "material",
+      "rank": 3,
+      "observation": "Power Generation sales rose 30% to $3.421bn. Power & Energy segment profit rose 31% to $2.143bn, with a 24.4% margin versus 21.9% a year earlier.",
+      "summary": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
+      "implication": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
+      "report_period": "Q3 ended September 30, 2026; cash-table comparisons cover nine months",
+      "claim_type": "reported results; management attribution; conditional analysis",
+      "beneficiaries": "Generator, turbine and related-service suppliers with delivered exposure; projects able to commission equipment and secure fuel/power connections.",
+      "risks": "Customer project delays, manufacturing and fuel/permitting constraints, working capital, pricing/tariff volatility. These are analytical risks, not newly disclosed shutdowns.",
+      "counterevidence": "Reported sales and segment profit already grew, and enterprise cash generation is positive. Growth extends beyond data centers, so neither an all-AI boom nor an all-AI cash attribution is supported.",
+      "confirms": "Sustained Power Generation shipments and service revenue, stable segment margins, customer advances converting into fulfilled orders and improving cash conversion.",
+      "refutes": "Cancellations, delayed commissioning, weaker segment margins or rising inventories/receivables despite advances and reported demand.",
+      "uncertainty": "No AI-only sales, installed MW or customer GPU utilization verified. Release-only analysis; full call and Q&A not reviewed. No new order backlog, stock reaction or unreported call guidance inferred.",
+      "source_date_note": "October 29 release for the September quarter. Quarterly cash headline and nine-month cash table are explicitly separated.",
+      "access_note": "Full issuer release PDF reviewed through public web reader; origin download timed out. No original-byte hash or full call review claimed.",
+      "highlights": [
+        {
+          "title": "Reported sales are stronger evidence than plans",
+          "observation": "Management links Power Generation growth to turbines and related services and large engines, primarily for data centers.",
+          "implication": "These are supplier sales, not proof of installed MW, commissioning or AI-only customer returns.",
+          "source_url": "https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf",
+          "source_date": "2026-10-29",
+          "claim_type": "reported sales and management attribution"
+        },
+        {
+          "title": "A mixed segment earns a higher margin",
+          "observation": "Power & Energy profit rose 31% to $2.143bn; segment margin reached 24.4%, from 21.9%.",
+          "implication": "This includes multiple end markets and is not a pure data-center profit measure. Segment sales include internal transactions and should not be added to consolidated sales.",
+          "source_url": "https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf",
+          "source_date": "2026-10-29",
+          "claim_type": "issuer-reported results; implication is analysis"
+        },
+        {
+          "title": "Customer advances support cash and create obligations",
+          "observation": "Q3 enterprise operating cash was $4.4bn. Separately, nine-month CFO of $10.593bn includes $4.002bn of customer-advance inflows.",
+          "implication": "Pre-delivery cash helps fund operations but is not extra revenue or proven recurring AI cash. Follow fulfilment and collections.",
+          "source_url": "https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf",
+          "source_date": "2026-10-29",
+          "claim_type": "issuer-reported results; implication is analysis"
+        },
+        {
+          "title": "Tariffs and working capital qualify the headline",
+          "observation": "Consolidated Q3 operating profit includes $128m of tariff recoveries. Nine-month inventory and receivable movements absorbed $4.118bn and $3.761bn.",
+          "implication": "Check underlying margins and working capital before extrapolating supplier cash conversion.",
+          "source_url": "https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf",
+          "source_date": "2026-10-29",
+          "claim_type": "issuer-reported results; implication is analysis"
+        }
+      ]
+    },
+    {
+      "id": "equinix-q3-20261028",
+      "title": "Equinix’s recurring revenue grows; expansion still needs funding",
+      "url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+      "source_id": "equinix-q3-20261028",
+      "source_name": "Equinix · Q3 results and guidance",
+      "source_role": "primary",
+      "published_at": "2026-10-28",
+      "event_date": "2026-10-28",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "entities": [
+        "Equinix",
+        "EQIX"
+      ],
+      "ai_layers": [
+        "infrastructure"
+      ],
+      "lens": "earnings",
+      "relevance": "material",
+      "rank": 4,
+      "observation": "Q3 revenue was $2.571bn, up 11%, with $2.442bn recurring revenue. Annualized gross bookings were $533m; these are not recognized revenue or cash.",
+      "summary": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
+      "implication": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
+      "report_period": "Q3 ended September 30, 2026; cash measures below cover nine months",
+      "claim_type": "reported GAAP and non-GAAP results; management outlook",
+      "beneficiaries": "Delivered power, cooling, connectivity and colocation suppliers; no vendor-specific incremental sales inferred.",
+      "risks": "Construction/power delays, weaker bookings conversion, expensive funding and customer churn.",
+      "counterevidence": "Recurring revenue and interconnection growth strengthen the operating case; normalized AFFO still grows excluding the transaction fee.",
+      "confirms": "Delivered cabinets, billed recurring revenue and cash collections improve as fee-free AFFO growth persists.",
+      "refutes": "Delayed deliveries, weak recurring collections or higher churn while debt and expansion spending rise.",
+      "uncertainty": "No AI-only revenue, GPU utilization or downstream application ROI established. No full call transcript reviewed. Cabinet utilization is a different measure from GPU use. The $31m guidance bridge is not the exact Q3 cash fee.",
+      "source_date_note": "Released October 28 after close, reviewed October 29. This is a late-discovered prior-day event; source, reporting and review dates are separate.",
+      "access_note": "Issuer page and financial/reconciliation tables reviewed through public web reader. Direct origin request403; no original-body hash. Published analysis uses release evidence; no full call claim.",
+      "highlights": [
+        {
+          "title": "Recurring revenue supports demand",
+          "observation": "Q3 revenue was $2.571bn; recurring revenue $2.442bn, versus $2.377bn in Q2.",
+          "implication": "Colocation and connectivity show monetization, but traditional workloads are included.",
+          "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+          "source_date": "2026-10-28",
+          "claim_type": "reported results or management expectation; implication is analysis"
+        },
+        {
+          "title": "Bookings are a conversion signal",
+          "observation": "Annualized gross bookings reached $533m, up 35%.",
+          "implication": "These are not revenue or cash; watch installation, billing and retention.",
+          "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+          "source_date": "2026-10-28",
+          "claim_type": "reported results or management expectation; implication is analysis"
+        },
+        {
+          "title": "Separate recurring growth from transaction fees",
+          "observation": "AFFO per share was $11.64, up 18% reported versus 12% normalized/constant currency excluding the atNorth fee. Total AFFO rose 20% reported versus 14% on that adjusted comparison.",
+          "implication": "AFFO is non-GAAP and does not deduct all expansion spending. The full headline gain is not recurring operating growth.",
+          "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+          "source_date": "2026-10-28",
+          "claim_type": "issuer-reported results; implication is analysis"
+        },
+        {
+          "title": "Cash after expansion differs from AFFO",
+          "observation": "Nine-month CFO was $3.027bn; company FCF −$801m and adjusted FCF −$567m. CFO less $4.392bn purchases of other PP&E is −$1.365bn, a separate calculation.",
+          "implication": "Keep cash definitions and periods separate. Funding and construction timing still matter even while recurring revenue and AFFO grow.",
+          "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+          "source_date": "2026-10-28",
+          "claim_type": "issuer-reported results; implication is analysis"
+        },
+        {
+          "title": "Higher capacity remains a plan",
+          "observation": "Management expects nearly 40% more 2026 cabinet deliveries than initially planned.",
+          "implication": "Installation is not AI utilization. Test on-time commissioning and recurring collections.",
+          "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+          "source_date": "2026-10-28",
+          "claim_type": "reported results or management expectation; implication is analysis"
+        },
+        {
+          "title": "The guidance raise has several components",
+          "observation": "FY2026 revenue guidance is $10.325–10.365bn; the $100m midpoint increase includes $84m underlying growth and $16m FX. The $90m AFFO midpoint raise includes $52m underlying, $31m atNorth and $7m FX.",
+          "implication": "Underlying improvement is meaningful; the fee and currency benefits are not a repeatable AI revenue run rate.",
+          "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+          "source_date": "2026-10-28",
+          "claim_type": "management guidance and reconciliation; implication is analysis"
+        }
+      ]
+    },
+    {
+      "id": "oracle-chip-options-20261027",
+      "title": "Oracle’s cash plan depends on delivery and partner funding",
+      "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Investor-Day-2026-Accelerating-Value-Creation/default.aspx",
+      "source_id": "oracle-investor-day-20261028",
+      "source_name": "Oracle · Investor Day outlook",
+      "source_role": "primary",
+      "published_at": "2026-10-28",
+      "event_date": "2026-10-28",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "entities": [
+        "Oracle",
+        "NVIDIA",
+        "Google"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure"
+      ],
+      "lens": "funding",
+      "relevance": "material",
+      "rank": 5,
+      "observation": "Oracle’s October 28 Investor Day targets positive free cash flow in fiscal H2 2028 and at least $30bn in FY2029. It expects at most $20bn in additional capital raises through FY2030, excluding refinancings.",
+      "summary": "New financing and cash-flow targets qualify the earlier chip-rollout story; existing hardware milestones are retained below.",
+      "implication": "Vendor financing and customer advances can lower upfront cash needs, but shift obligations rather than proving the buildout already funds itself.",
+      "claim_type": "management financing and operating outlook; earlier staged availability claims",
+      "report_period": "October 28 Investor Day; FY2027–FY2030 outlook; October 27 chip announcements retained",
+      "beneficiaries": "Oracle and delivered compute suppliers if contracted workloads convert into collections. Vendor and customer financing providers also absorb exposure.",
+      "risks": "Delivery and power delays, customer collection risk, refinancing costs and partner obligations can change the cash forecast.",
+      "counterevidence": "Management reaffirms FY2027 revenue of at least $90bn and forecasts later positive FCF. These are outlook statements; the release does not establish cash self-sufficiency today.",
+      "confirms": "Commissioned capacity, customer collections, disclosed vendor-financing terms and reported FCF approaching the dated targets.",
+      "refutes": "Further delivery delays, additional funding needs or cash deficits beyond the forecast horizon would weaken the plan.",
+      "uncertainty": "No full Investor Day call/Q&A or deck review. No new financing closing, complete cash-obligation reconciliation, delivered GW or utilization inferred. Existing chip availability still has regional and future-rollout qualifications.",
+      "source_date_note": "Stable October 27 story now incorporates the October 28 Investor Day release, reviewed October 29. Forecast years differ from publication date; prior availability evidence remains dated October 27.",
+      "access_note": "Full Investor Day issuer release reviewed via public web reader; origin returned HTTP 403. Earlier NVIDIA/Oracle chip-source review retained.",
+      "highlights": [
+        {
+          "title": "The financing ceiling excludes refinancing",
+          "observation": "Oracle targets at most $20bn of additional capital raises through FY2030, currently split $10bn equity and $10bn gross debt. Existing-debt refinancing is excluded; $20bn of ATM equity already raised in FY27 Q1 is separate.",
+          "implication": "This is a future financing plan, not fresh cash received or a cap on every funding obligation. Supplier finance and customer advances also affect exposure.",
+          "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Investor-Day-2026-Accelerating-Value-Creation/default.aspx",
+          "source_date": "2026-10-28",
+          "claim_type": "management financing outlook; implication is analysis"
+        },
+        {
+          "title": "Cash self-sufficiency is a future target",
+          "observation": "Management expects positive free cash flow in fiscal H2 2028 and at least $30bn in FY2029, following peak capex in FY2027–2028. Vendor financing, customer hardware and prepayments are expected to reduce upfront cash needs.",
+          "implication": "Watch commissioning, collections and obligations shifted to partners. The forecast does not establish that today’s buildout funds itself.",
+          "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Investor-Day-2026-Accelerating-Value-Creation/default.aspx",
+          "source_date": "2026-10-28",
+          "claim_type": "management outlook; implication is analysis"
+        },
+        {
+          "title": "Long-term sales remain conditional",
+          "observation": "Oracle sets FY2030 revenue at $225bn or more and reaffirms FY2027 revenue of at least $90bn.",
+          "implication": "Keep projected sales separate from reported revenue, cash and deployed compute; no new customer demand is proven by the forecast alone.",
+          "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Investor-Day-2026-Accelerating-Value-Creation/default.aspx",
+          "source_date": "2026-10-28",
+          "claim_type": "management outlook; implication is analysis"
+        },
+        {
+          "title": "Rubin availability is not multi-gigawatt delivery",
+          "claim_type": "issuer availability announcement and forward plan",
+          "observation": "Rubin NVL72 is announced as generally available; expansion to multi-gigawatt scale and smaller Rubin NVL8 systems remain plans.",
+          "implication": "Test actual regional availability, paid usage and cash conversion before treating the pipeline as realized supply.",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
+          "source_date": "2026-10-27"
+        },
+        {
+          "title": "CPU rollout has regional qualifications",
+          "claim_type": "issuer rollout statement",
+          "observation": "Oracle says 150,000 Vera CPUs will initially be made available and availability will reach select regions this quarter.",
+          "implication": "Do not call the whole amount installed or utilized. Performance claims are not measured OCI customer returns.",
+          "source_url": "https://blogs.oracle.com/cloud-infrastructure/nvidia-vera-cpus-oci",
+          "source_date": "2026-10-27"
+        },
+        {
+          "title": "Google TPU option starts later",
+          "claim_type": "future product rollout",
+          "observation": "TPUs on OCI target calendar 2027, followed by a multi-year ramp; no spend or delivered GW is specified.",
+          "implication": "Choice may increase competitive pressure, but it is not today’s usable capacity or booked revenue.",
+          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/",
+          "source_date": "2026-10-27"
+        }
+      ],
+      "publication_note": "Original chip-availability story dated October 27; this same story now links the October 28 Investor Day release. Earlier source and event dates remain in the retained highlights."
     },
     {
       "id": "alphabet-q3-20261028",
@@ -139,7 +459,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 2,
+      "rank": 6,
       "observation": "Q3 Cloud revenue was $30.709bn, up 103%, with $11.121bn operating profit and a 36.2% segment margin. The full third-party call transcript adds Q4 cost pressure and cash-flow context; no company-edited transcript reviewed.",
       "summary": "Release/deck figures plus prepared remarks and Q&A reproduced by StockAnalysis/Quartr. New call statements are attributed management claims.",
       "implication": "External compute can ease supply constraints, but its cost pressures near-term Cloud margins while cash awaits delivery and collection.",
@@ -241,7 +561,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 3,
+      "rank": 7,
       "observation": "Q3 sales reached $4.3128bn, up 61.2% (55% organic). GAAP operating profit was $983.8m; adjusted operating profit was $1,086.9m.",
       "summary": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
       "implication": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
@@ -305,7 +625,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 4,
+      "rank": 8,
       "observation": "C&I external sales rose 28% to about $552m. Data-center backlog is approximately $4.5bn; Amazon’s expected initial 2027–28 deliveries total $2.4bn.",
       "summary": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
       "implication": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
@@ -416,72 +736,8 @@
       ],
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
-      "rank": 5,
+      "rank": 9,
       "relevance": "material"
-    },
-    {
-      "id": "oracle-chip-options-20261027",
-      "title": "Oracle’s chip choices expand; delivery is still staged",
-      "url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
-      "source_id": "oracle-nvidia-rubin-20261027",
-      "source_name": "NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure",
-      "source_role": "primary",
-      "published_at": "2026-10-27",
-      "event_date": "2026-10-27",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "reviewed_at": "2026-10-28T12:34:06+00:00",
-      "entities": [
-        "Oracle",
-        "NVIDIA",
-        "Google"
-      ],
-      "ai_layers": [
-        "chips",
-        "infrastructure"
-      ],
-      "lens": "capacity",
-      "relevance": "material",
-      "rank": 6,
-      "observation": "NVIDIA and Oracle announced Rubin NVL72 availability on October 27, while multi-gigawatt expansion remains planned. Oracle schedules Google TPUs for 2027.",
-      "summary": "Wider chip choice can improve compute economics; paid utilization and workload costs still decide the return.",
-      "implication": "Wider chip choice can improve compute economics; paid utilization and workload costs still decide the return.",
-      "claim_type": "issuer availability announcements and future regional rollout",
-      "report_period": "October 27 announcement; regional rollout this quarter and TPUs in 2027",
-      "beneficiaries": "NVIDIA and Oracle if availability becomes accepted, paid workloads; Google if the future TPU distribution channel converts into shipments and usage. Customers may gain choice.",
-      "risks": "Power and cooling readiness, regional rollout delays, software portability, deployment cost, unproven price/performance and insufficient paid utilization.",
-      "counterevidence": "Regional timing remains qualified; TPU service is future. No new deployment revenue or utilization is disclosed. Existing Blackwell customer use cannot validate planned Rubin/TPU scale.",
-      "confirms": "Named regions, bookable capacity, accepted installations, paid consumption, renewal pricing and workload cost per successful task.",
-      "refutes": "Rollout delays, idle capacity, weak paid consumption or software-porting costs exceeding gains.",
-      "uncertainty": "No verified delivered GW, revenue, utilization or contract price. Vendor benchmarks do not establish realized OCI customer savings.",
-      "source_date_note": "All three sources are October 27 announcements, reviewed October 28. Availability headlines and future scale have different dates.",
-      "access_note": "Full public NVIDIA and Oracle releases and the detailed CPU post reviewed by the primary-source reviewer.",
-      "highlights": [
-        {
-          "title": "Rubin availability is not multi-gigawatt delivery",
-          "claim_type": "issuer availability announcement and forward plan",
-          "observation": "Rubin NVL72 is announced as generally available; expansion to multi-gigawatt scale and smaller Rubin NVL8 systems remain plans.",
-          "implication": "Test actual regional availability, paid usage and cash conversion before treating the pipeline as realized supply.",
-          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
-          "source_date": "2026-10-27"
-        },
-        {
-          "title": "CPU rollout has regional qualifications",
-          "claim_type": "issuer rollout statement",
-          "observation": "Oracle says 150,000 Vera CPUs will initially be made available and availability will reach select regions this quarter.",
-          "implication": "Do not call the whole amount installed or utilized. Performance claims are not measured OCI customer returns.",
-          "source_url": "https://blogs.oracle.com/cloud-infrastructure/nvidia-vera-cpus-oci",
-          "source_date": "2026-10-27"
-        },
-        {
-          "title": "Google TPU option starts later",
-          "claim_type": "future product rollout",
-          "observation": "TPUs on OCI target calendar 2027, followed by a multi-year ramp; no spend or delivered GW is specified.",
-          "implication": "Choice may increase competitive pressure, but it is not today’s usable capacity or booked revenue.",
-          "source_url": "https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/",
-          "source_date": "2026-10-27"
-        }
-      ]
     },
     {
       "id": "meta-financing-20261026",
@@ -507,7 +763,7 @@
         "infrastructure",
         "models"
       ],
-      "rank": 7,
+      "rank": 10,
       "relevance": "material",
       "observation": "AMD says it will invest $1bn in Meta’s existing equity offering. Initial Helios racks are installed and being tested; broader deployment remains ahead.",
       "summary": "Supplier equity and hardware adoption are linked exposures, not additional financing totals or proof of profitable demand.",
@@ -625,7 +881,7 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 8,
+      "rank": 11,
       "relevance": "material"
     },
     {
@@ -649,7 +905,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 9,
+      "rank": 12,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -697,7 +953,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 10,
+      "rank": 13,
       "relevance": "material",
       "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
       "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
@@ -801,7 +1057,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
       "source_id": "anthropic-s1-20261026-source-1",
-      "rank": 11,
+      "rank": 14,
       "relevance": "material",
       "summary": "H1 revenue was $16.286bn, operating loss $0.693bn and operating cash inflow $3.929bn. The $80.748bn net loss includes large noncash financing revaluations; it is not cash burn. The IPO remains unpriced and not effective."
     },
@@ -894,7 +1150,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 12,
+      "rank": 15,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
     },
@@ -976,7 +1232,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 13,
+      "rank": 16,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
     },
@@ -1008,7 +1264,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 14,
+      "rank": 17,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -1071,7 +1327,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 15,
+      "rank": 18,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -1146,7 +1402,7 @@
       "entities": [
         "OpenAI"
       ],
-      "rank": 16,
+      "rank": 19,
       "observation": "Bloomberg reports a $1.25tn valuation target, versus $1.4tn discussed earlier, for a proposed ~$30bn raise.",
       "summary": "Negotiations remain open; this is not a completed financing.",
       "implication": "If capital becomes harder to secure, labs may prioritize fewer compute commitments.",
@@ -1176,7 +1432,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 17,
+      "rank": 20,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -1204,7 +1460,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 18,
+      "rank": 21,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -1231,7 +1487,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 19,
+      "rank": 22,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -1260,7 +1516,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 20,
+      "rank": 23,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -1297,7 +1553,7 @@
         "models",
         "applications"
       ],
-      "rank": 21,
+      "rank": 24,
       "relevance": "watch",
       "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
       "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
@@ -2455,6 +2711,116 @@
       ],
       "quality_note": "Outlook is management guidance for the December quarter, not reported results.",
       "access_note": "Coordinating research reviewed the outlook deck. This publication check received HTTP 403 on normal downloads; it independently verified all guidance used here in the official prepared remarks. No locally verified deck hash is claimed."
+    },
+    {
+      "id": "samsung-q3-release-20261029",
+      "name": "Samsung · Q3 final results",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+      "source_date": "2026-10-29",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "quality_note": "Reported results, management statements, calculations and future plans remain distinct.",
+      "topics": [
+        "earnings",
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Original issuer release downloaded and read; provenance hash retained privately. No full earnings-call review."
+    },
+    {
+      "id": "samsung-q3-deck-20261029",
+      "name": "Samsung · Q3 earnings presentation",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+      "source_date": "2026-10-29",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "quality_note": "Reported results, management statements, calculations and future plans remain distinct.",
+      "topics": [
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "Original 16-page PDF retrieved; segment page 13 and cash page 15 visually checked. Financial review not yet complete per document disclaimer."
+    },
+    {
+      "id": "samsung-q3-preliminary-20261008",
+      "name": "Samsung · earlier Q3 earnings guidance",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026",
+      "source_date": "2026-10-08",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "quality_note": "Reported results, management statements, calculations and future plans remain distinct.",
+      "topics": [
+        "earnings"
+      ],
+      "access_note": "Full primary page reviewed through the public web reader; direct download returned HTTP 403. Historical guidance, not new October 29 results."
+    },
+    {
+      "id": "equinix-q3-20261028",
+      "name": "Equinix · Q3 results and guidance",
+      "url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "quality_note": "Reported results, management statements, calculations and future plans remain distinct.",
+      "topics": [
+        "earnings",
+        "capacity",
+        "demand",
+        "funding"
+      ],
+      "access_note": "Issuer page and financial/reconciliation tables reviewed through public web reader. Direct origin request403; no original-body hash. The published story uses this release and its tables; no full call review."
+    },
+    {
+      "id": "caterpillar-q3-20261029",
+      "name": "Caterpillar · Q3 earnings release",
+      "url": "https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf",
+      "source_date": "2026-10-29",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "quality_note": "Reported results, management statements, calculations and future plans remain distinct.",
+      "topics": [
+        "earnings",
+        "capacity",
+        "demand"
+      ],
+      "access_note": "Full 25-page issuer PDF text available via public web reader; segment, cash and non-GAAP sections checked. Origin download timed out; no original-byte hash or full-call review claimed."
+    },
+    {
+      "id": "oracle-investor-day-20261028",
+      "name": "Oracle · Investor Day outlook",
+      "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Investor-Day-2026-Accelerating-Value-Creation/default.aspx",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "quality_note": "Reported results, management statements, calculations and future plans remain distinct.",
+      "topics": [
+        "funding",
+        "earnings",
+        "capacity"
+      ],
+      "access_note": "Full issuer release read through public web reader. Origin returned HTTP 403; no original-byte hash. No full Investor Day Q&A or deck review."
+    },
+    {
+      "id": "microsoft-q1-10q-20261028",
+      "name": "Microsoft · September-quarter 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+      "source_date": "2026-10-28",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "quality_note": "Reported results, management statements, calculations and future plans remain distinct.",
+      "topics": [
+        "funding",
+        "earnings",
+        "demand"
+      ],
+      "access_note": "Original SEC HTML retrieved with provenance hash. Notes 1, 11 and 12, relevant cash statements and liquidity sections reviewed; not an exhaustive legal-risk review."
     }
   ],
   "ledger": [
@@ -2498,18 +2864,18 @@
       "instrument": "equity",
       "amount": 13,
       "currency": "USD billion",
-      "status": "historical funding commitments",
-      "source_url": "https://www.microsoft.com/investor/reports/ar25/index.html",
-      "source_date": "2025-07-30",
-      "as_of": "2025-06-30",
-      "reviewed_at": "2026-10-25T20:59:12.618999+00:00",
-      "note": "FY2025 funding commitments. The $135B stake valuation at the October 2025 recap was not an investment payment.",
+      "status": "committed; funded balance disclosed",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-09-30",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "note": "Retains the $13bn commitment ceiling; $12bn funded is a component, not a new raise. The filing reports approximately 24% as-converted ownership at September 30; October 2025’s 27% recap snapshot is historical, and its $135bn stake value was not invested cash.",
       "risk": "Ownership and customer exposure can move together.",
       "flow_type": "money",
-      "flow_label": "Historical equity commitment",
-      "payment_status": "Historical commitment; current funded balance not verified.",
-      "revenue_status": "Not recognized revenue.",
-      "uncertainty": "Current balances and utilization are not established.",
+      "flow_label": "Investment commitment",
+      "payment_status": "$12bn funded against $13bn commitments at September 30, 2026; funding form is unspecified here.",
+      "revenue_status": "Investment commitments and funded amounts are not recognized revenue.",
+      "uncertainty": "No October 29 cash balance or dilution mechanism inferred. Cash versus credits within funded amounts is not separately established; the $1bn difference is arithmetic, not a newly announced financing.",
       "overlap_group": "microsoft-openai-historic-equity",
       "sources": [
         {
@@ -2518,7 +2884,8 @@
           "date": "2025-10-28",
           "role": "primary"
         }
-      ]
+      ],
+      "changed_at": "2026-10-28"
     },
     {
       "id": "openai-microsoft-azure-20251028",
@@ -3518,6 +3885,28 @@
       "risk": "Customer cancellation, delivery and performance-liability risks.",
       "uncertainty": "Detailed Amazon clauses and exact backlog overlap not established.",
       "overlap_group": "generac-data-center-backlog"
+    },
+    {
+      "id": "openai-microsoft-revenue-q1fy27",
+      "from_entity": "OpenAI",
+      "to_entity": "Microsoft",
+      "instrument": "revenue",
+      "amount": 10,
+      "currency": "USD billion",
+      "status": "recognized revenue for September quarter",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-09-30",
+      "reviewed_at": "2026-10-29T13:11:35+00:00",
+      "changed_at": "2026-10-28",
+      "flow_type": "money",
+      "flow_label": "Reported commercial revenue",
+      "note": "Microsoft FY2027 Q1 commercial revenue from OpenAI, including revenue-sharing payments. Not all Azure/GPU rental and already included in Microsoft group revenue. Do not add to the long-term $250bn compute commitment or investment totals.",
+      "payment_status": "Revenue recognized, not evidence all cash collected; OpenAI receivables $7.2bn at September 30 versus $6bn at June 30.",
+      "revenue_status": "$10bn recognized in the quarter ended September 30, 2026; not annualized.",
+      "risk": "Investment, supplier and customer concentration can interact; collections and contractual offsets matter.",
+      "uncertainty": "No receivable aging/default conclusion or cash collection amount established.",
+      "overlap_group": "microsoft-openai-commercial-revenue-and-compute"
     }
   ],
   "earnings": [
@@ -4343,6 +4732,276 @@
       "source_url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/Document/DownloadDocument/33/TranscriptFY27Q1.docx",
       "note": "Full principal recognized in capex at commencement; not equal to cash lease payments in this quarter.",
       "reported_period": "FY2027 Q1 ended September 30, 2026"
+    },
+    {
+      "id": "samsung-q3-revenue",
+      "company": "Samsung",
+      "metric": "Revenue",
+      "reported": 195.3,
+      "unit": "KRW trillion",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+      "source_date": "2026-10-29",
+      "as_of": "2026-10-29",
+      "note": "KRW trillion, not billion; consolidated.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "samsung-q3-op",
+      "company": "Samsung",
+      "metric": "Operating profit",
+      "reported": 107.4,
+      "unit": "KRW trillion",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+      "source_date": "2026-10-29",
+      "as_of": "2026-10-29",
+      "note": "Not net income or cash; substantially previewed October 8.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "samsung-q3-ds-op",
+      "company": "Samsung",
+      "metric": "Device Solutions operating profit",
+      "reported": 106.5,
+      "unit": "KRW trillion",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+      "source_date": "2026-10-29",
+      "as_of": "2026-10-29",
+      "note": "Includes memory, foundry and System LSI; not pure AI profit.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "samsung-q3-cfo",
+      "company": "Samsung",
+      "metric": "Operating cash flow",
+      "reported": 98.6,
+      "unit": "KRW trillion",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+      "source_date": "2026-10-29",
+      "as_of": "2026-10-29",
+      "note": "Quarterly, versus Q2 105.1; not uniformly improving sequential cash conversion.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "samsung-q3-cash-ppe",
+      "company": "Samsung",
+      "metric": "Cash PP&E purchases",
+      "reported": 26.9,
+      "unit": "KRW trillion",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+      "source_date": "2026-10-29",
+      "as_of": "2026-10-29",
+      "note": "Cash-flow measure differs from release capex29.0; not additive.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "samsung-fy26-capex-guidance",
+      "company": "Samsung",
+      "metric": "Capital expenditure guidance",
+      "reported": null,
+      "unit": "KRW trillion",
+      "period": "FY2026",
+      "guidance": "approximately 84.4",
+      "consensus": null,
+      "source_url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+      "source_date": "2026-10-29",
+      "as_of": "2026-10-29",
+      "note": "Future spending plan, not completed capacity; DS 76.8 is included.",
+      "guidance_period": "FY2026"
+    },
+    {
+      "id": "equinix-q3-revenue",
+      "company": "Equinix",
+      "metric": "Revenue",
+      "reported": 2571,
+      "unit": "USD million",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28",
+      "note": "Includes non-AI workloads.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "equinix-q3-recurring",
+      "company": "Equinix",
+      "metric": "Recurring revenue",
+      "reported": 2442,
+      "unit": "USD million",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28",
+      "note": "Subset of total revenue; do not add to total.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "equinix-q3-affo-ps",
+      "company": "Equinix",
+      "metric": "AFFO per diluted share (non-GAAP)",
+      "reported": 11.64,
+      "unit": "USD/share",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28",
+      "note": "+18% reported vs+12% normalized/CC excluding atNorth fee; not cash after all growth capex.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "equinix-9m-cfo",
+      "company": "Equinix",
+      "metric": "Operating cash flow",
+      "reported": 3027,
+      "unit": "USD million",
+      "period": "Nine months ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28",
+      "note": "Not Q3-only cash flow.",
+      "reported_period": "Nine months ended September 30, 2026"
+    },
+    {
+      "id": "equinix-9m-fcf",
+      "company": "Equinix",
+      "metric": "Company-defined free cash flow (non-GAAP)",
+      "reported": -801,
+      "unit": "USD million",
+      "period": "Nine months ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://equinix.mediaroom.com/2026-10-28-Equinix-Reports-Third-Quarter-Results-and-Raises-2026-Guidance",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28",
+      "note": "CFO plus investing cash flow excluding net equity-investment purchases/distributions; differs from adjusted FCF−567 and CFO less other PP&E −1365.",
+      "reported_period": "Nine months ended September 30, 2026"
+    },
+    {
+      "id": "caterpillar-q3-power-sales",
+      "company": "Caterpillar",
+      "metric": "Power Generation sales",
+      "reported": 3421,
+      "unit": "USD million",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf",
+      "source_date": "2026-10-29",
+      "as_of": "2026-10-29",
+      "note": "Includes non-AI applications; equipment sales not energized MW.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "caterpillar-q3-power-op",
+      "company": "Caterpillar",
+      "metric": "Power & Energy segment profit",
+      "reported": 2143,
+      "unit": "USD million",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf",
+      "source_date": "2026-10-29",
+      "as_of": "2026-10-29",
+      "note": "Mixed end-market segment, not AI-only profit.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "caterpillar-q3-power-margin",
+      "company": "Caterpillar",
+      "metric": "Power & Energy segment profit margin",
+      "reported": 24.4,
+      "unit": "percent",
+      "period": "Quarter ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf",
+      "source_date": "2026-10-29",
+      "as_of": "2026-10-29",
+      "note": "Versus 21.9% in the prior year; not group or AI-only margin.",
+      "reported_period": "Quarter ended September 30, 2026"
+    },
+    {
+      "id": "oracle-fy30-revenue-outlook",
+      "company": "Oracle",
+      "metric": "Revenue outlook",
+      "reported": null,
+      "unit": "USD billion",
+      "period": "FY2030",
+      "guidance": "at least 225",
+      "consensus": null,
+      "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Investor-Day-2026-Accelerating-Value-Creation/default.aspx",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28",
+      "note": "Long-term management outlook, not reported revenue or proof of new demand.",
+      "guidance_period": "FY2030"
+    },
+    {
+      "id": "oracle-fy29-fcf-outlook",
+      "company": "Oracle",
+      "metric": "Free cash flow outlook",
+      "reported": null,
+      "unit": "USD billion",
+      "period": "FY2029",
+      "guidance": "at least 30",
+      "consensus": null,
+      "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Investor-Day-2026-Accelerating-Value-Creation/default.aspx",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28",
+      "note": "Management target after expected peak capex; positive FCF expected fiscal H2 2028. No claim current buildout self-funded.",
+      "guidance_period": "FY2029"
+    },
+    {
+      "id": "msft-openai-revenue-fy27q1",
+      "company": "Microsoft",
+      "metric": "OpenAI commercial revenue including revenue-sharing",
+      "reported": 10,
+      "unit": "USD billion",
+      "period": "FY2027 Q1 ended September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28",
+      "note": "Already within group revenue; not all Azure or cash received. Do not add to investment or contract commitments.",
+      "reported_period": "FY2027 Q1 ended September 30, 2026"
+    },
+    {
+      "id": "msft-openai-receivables-20260930",
+      "company": "Microsoft",
+      "metric": "OpenAI accounts receivable",
+      "reported": 7.2,
+      "unit": "USD billion",
+      "period": "Balance at September 30, 2026",
+      "guidance": null,
+      "consensus": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm",
+      "source_date": "2026-10-28",
+      "as_of": "2026-10-28",
+      "note": "Versus $6.0bn at June 30, 2026. Balance, not quarterly revenue; no aging or overdue conclusion established.",
+      "reported_period": "Balance at September 30, 2026"
     }
   ]
 }
