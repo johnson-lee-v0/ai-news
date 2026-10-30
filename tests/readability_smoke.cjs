@@ -49,7 +49,7 @@ async function main() {
   const dataset = JSON.parse(fs.readFileSync(path.join(site, 'data/dashboard.json')));
   assert.equal(dataset.publication.mode, 'static');
   const rows = dataset.stories || dataset.articles;
-  assert.ok(rows.length > 0 && rows.length <= 24, 'Small populated public snapshot');
+  assert.ok(rows.length > 0 && rows.length <= 32, 'Small populated public snapshot');
   const assets = new Set(['build.json', ...Object.keys(manifest.files)]);
   for (const file of assets) assert.ok(!path.isAbsolute(file) && !file.split('/').includes('..'), 'Safe artifact paths');
   const mime = {'.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.json':'application/json', '.svg':'image/svg+xml'};

@@ -195,7 +195,7 @@
     const sourceTime=a => a.date_precision==='future_unverified' || timestamp(a.published_at)>Date.now() ? 0 : timestamp(a.published_at);
     const important=(a,b) => isStatic ? (Number(a.editorial_rank)||999)-(Number(b.editorial_rank)||999) : (Number(b.score)||0)-(Number(a.score)||0);
     items.sort(state.newsOrder==='important' ? (a,b)=>important(a,b)||sourceTime(b)-sourceTime(a) : (a,b)=>sourceTime(b)-sourceTime(a)||important(a,b));
-    $('brief-feed').innerHTML=items.length ? items.slice(0,isStatic ? 24 : 20).map((item,index)=>renderArticle(item,index+1)).join('') : empty('No news matches this view.', 'Try another filter or open Explore → All evidence. This is selected coverage, not proof that nothing happened.');
+    $('brief-feed').innerHTML=items.length ? items.slice(0,isStatic ? 32 : 20).map((item,index)=>renderArticle(item,index+1)).join('') : empty('No news matches this view.', 'Try another filter or open Explore → All evidence. This is selected coverage, not proof that nothing happened.');
     if ($('news-count')) $('news-count').textContent=`${plural(items.length,'selected story')} · ${state.newsOrder==='latest' ? 'Latest source date first; unknown dates last' : 'Important first; priority is editorial or rule-based'} · ${isStatic ? 'Review date is not publication date.' : 'Background items remain in All evidence.'}`;
     document.querySelectorAll('[data-news-order]').forEach(button=>{const selected=button.dataset.newsOrder===state.newsOrder;button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected));});
     const visit=state.visit;
