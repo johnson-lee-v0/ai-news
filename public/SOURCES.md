@@ -1,6 +1,18 @@
 # Public snapshot provenance
 
-Latest daily review **October 30, 2026**: new Amazon, Intel and Sandisk results; Microsoft debt pricing; Meta preferred closing; Mistral weights; and an explicitly unconfirmed Nscale financing report. Earlier stories retain their dates and evidence. This is selected public research, not a live or comprehensive market feed. Summaries are independently written; article bodies, local data and private notes are not distributed.
+Latest daily review **October 31, 2026**: Amazon investment/facility terms, Meta’s credit outlook, attributed OpenAI fundraising targets and DXN’s intended cancellation. Earlier stories retain their dates and evidence. This is selected public research, not a live or comprehensive market feed. Summaries are independently written; article bodies, local data and private notes are not distributed.
+
+## October 31 evidence and access
+
+| Reviewed source | Source date | Boundary |
+|---|---|---|
+| [Amazon · September-quarter 10-Q](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm) | 2026-10-30 | Full SEC HTML available through public web reader; selected notes 1–5 and liquidity sections reviewed. Direct original download returned HTTP403, so no original-byte hash is claimed. |
+| [S&P Global Ratings · Meta outlook action](https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3652897) | 2026-10-30 | Agency press-release index confirms October 30 at 17:03 EDT. Indexed agency action table shows AA− unchanged and outlook Stable→Negative. Full release body unavailable; direct retrieval returned HTTP 403. |
+| [Reuters · S&P outlook and Meta response](https://uk.marketscreener.com/news/s-p-global-revises-meta-s-outlook-to-negative-on-ai-spending-cash-flow-worries-ce785fdbd081ff2c) | 2026-10-30 | Full Reuters syndication text read through public web reader; Reuters origin unavailable. Conflicting secondary forecast-year figures omitted. No stock-price narrative. |
+| [DXN · ASX quarterly activities and Appendix 4C](https://newswire.iguana2.com/2fee0049d633f441/announcements/dxn.asx/3A705372/DXN_Quarterly_Activities_Appendix_4C_Cash_Flow_Report.pdf) | 2026-10-30 | Public web reader exposed the original 12-page PDF; selected pages 1, 3–4 and Appendix 4C reviewed. Local direct download failed DNS; no original-byte hash claimed. |
+| [Reuters via KELO-AM · OpenAI fundraising target](https://kelo.com/2026/10/30/openai-cuts-funding-target-by-10-billion-ft-reports/) | 2026-10-31 | Complete Reuters syndication read on a public KELO-AM page through the reporting credit. Normal direct retrieval succeeded; provenance hash retained privately. Original FT article was not reviewed and OpenAI has not confirmed the report. |
+
+Amazon’s previously inaccessible 10-Q is now readable through a public SEC reader; selected investment, facility and contract notes were reviewed. Funded components replace earlier statuses without double counting. Future supplier credit is not cash received. S&P’s action is confirmed in official records, but its full analytical body remains unavailable; disputed secondary forecast figures are omitted. DXN cancellation and remaining payment are still expected. No original-byte hash is claimed for reader-only documents. Earlier access limitations below describe those earlier reviews. No new verified GTC energization or utilization milestone is claimed.
 
 ## October 30 evidence and access
 
