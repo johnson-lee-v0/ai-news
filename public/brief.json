@@ -1,13 +1,69 @@
 {
-  "reviewed_at": "2026-10-31T13:11:59+00:00",
-  "headline": "Funded investments, available credit and collected revenue remain different milestones.",
+  "reviewed_at": "2026-11-01T13:19:43+00:00",
+  "headline": "Power delivery depends on permitting as well as equipment and funding.",
   "bullets": [
-    "Amazon’s filing confirms funded AI stakes and a future borrowing option. Those flows do not establish cloud revenue or delivered capacity.",
-    "Meta’s outlook turns negative with its AA− rating unchanged. OpenAI reportedly seeks a smaller raise; DXN’s intended cancellation tests contract protection.",
-    "Earlier earnings and delivery stories retain their dates. This review adds verified changes, not a fresh label on unchanged news."
+    "An October 30 court order allows the Southaven gas-plant case against xAI and MZX Tech to proceed. It does not order a shutdown or establish lost compute capacity.",
+    "The power plant supplies Colossus 2 in Memphis. Possible compliance costs or interruption remain conditional on later decisions and actual operating evidence.",
+    "Earlier financing and earnings coverage is unchanged. No newly verified closing, guarantee or GTC delivery milestone was found in this review."
   ],
   "notice": "Selected public evidence and financing relationships, reviewed on the displayed dates. Material verified updates may be published through the approved daily workflow; this remains a dated snapshot, not a live or exhaustive feed. X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "xai-power-lawsuit-20261030",
+      "title": "xAI power lawsuit proceeds; operating impact remains unproven",
+      "url": "https://earthjustice.org/wp-content/uploads/2026/10/10313375508_6407.pdf",
+      "source_id": "xai-order-20261030",
+      "source_name": "U.S. District Court · order hosted by Earthjustice",
+      "source_role": "primary",
+      "published_at": "2026-10-30",
+      "event_date": "2026-10-30",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-01T13:19:43+00:00",
+      "entities": [
+        "xAI",
+        "MZX Tech",
+        "Colossus 2"
+      ],
+      "ai_layers": [
+        "energy",
+        "infrastructure"
+      ],
+      "lens": "policy",
+      "relevance": "material",
+      "rank": 1,
+      "observation": "The court denied X.AI Corp. and MZX Tech LLC’s dismissal motion in the Southaven power-plant case. It rejected their mobile-source exemption argument; the claims proceed.",
+      "summary": "The October 30 ruling concerns Mississippi power supplying Colossus 2 in Memphis. It is not a final liability or damages judgment.",
+      "implication": "Installed turbines do not remove permitting risk. Later remedies could add cost or constrain power supply, but this order establishes no outage or lost compute revenue.",
+      "claim_type": "court ruling on dismissal; allegations remain distinct; implications are conditional analysis",
+      "beneficiaries": "Compliant power and pollution-control suppliers could benefit from remediation spending; no new orders are established.",
+      "risks": "Possible permitting, compliance and litigation costs; future operating restrictions remain unresolved.",
+      "counterevidence": "This order does not grant an injunction or direct a shutdown. Earthjustice said the preliminary-injunction request remained pending as of October 30.",
+      "confirms": "A later injunction, enforceable permit conditions or disclosed compliance spending would establish an operational or financial effect.",
+      "refutes": "A resolution without material operating limits, cost or delivery changes would weaken the constraint thesis.",
+      "uncertainty": "No later docket review, final liability, penalty, outage, affected utilization or financial impact is established. Earthjustice represents plaintiffs; its broader allegations are not independent findings.",
+      "source_date_note": "Order signed and filed October 30; press statement October 30 and discovery reporting October 31. Reviewed November 1. Complaint filed April 14; no new November 1 ruling is claimed.",
+      "access_note": "Original 28-page court order downloaded normally from Earthjustice’s public mirror (HTTP 200); private SHA-256 receipt retained. Order text reviewed, including case caption, pleading standard, permitting analysis and conclusion. No paid docket or sign-in used.",
+      "publication_note": "A new policy/energy development, separate from existing SpaceX financing and earnings stories. Named defendants are X.AI Corp. and MZX Tech LLC, not SpaceX in this order.",
+      "highlights": [
+        {
+          "title": "Legal defenses failed at the dismissal stage",
+          "observation": "Judge Debra M. Brown denied the motion in case 3:26-cv-00074-DMB-JMV, document 139. The pleading standard accepts well-pleaded facts for this stage.",
+          "implication": "The case can continue. Surviving dismissal does not establish every alleged violation or award the requested remedies.",
+          "claim_type": "court order and procedural standard; implication is analysis",
+          "source_url": "https://earthjustice.org/wp-content/uploads/2026/10/10313375508_6407.pdf",
+          "source_date": "2026-10-30"
+        },
+        {
+          "title": "The requested injunction is a separate milestone",
+          "observation": "Plaintiffs’ counsel reported that the preliminary-injunction request was still awaiting a ruling on October 30.",
+          "implication": "Do not subtract capacity or forecast lost sales from this dismissal decision. Watch an actual operating order and the company’s response.",
+          "claim_type": "litigant-reported procedural status, dated October 30; implication is analysis",
+          "source_url": "https://earthjustice.org/press/2026/court-denies-xais-motion-to-dismiss-air-pollution-lawsuit-against-elon-musks-company",
+          "source_date": "2026-10-30"
+        }
+      ]
+    },
     {
       "id": "amazon-q3-20261029",
       "title": "Amazon’s filing separates invested AI stakes from future credit",
@@ -34,7 +90,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 1,
+      "rank": 2,
       "observation": "The 10-Q confirms $50bn invested in OpenAI by September 30 and discloses up to approximately $80bn of supplier credit with draws permitted from 2027.",
       "summary": "The prior earnings story gains filed investment status and future financing terms, rather than a new earnings event.",
       "implication": "Funding customers and supplying their compute deepens shared exposure; future equipment credit helps timing but still requires cash returns.",
@@ -140,7 +196,7 @@
         "infrastructure",
         "models"
       ],
-      "rank": 2,
+      "rank": 3,
       "relevance": "material",
       "observation": "S&P changed Meta’s outlook to negative while leaving its AA− rating unchanged, citing spending and cash-flow uncertainty.",
       "summary": "New credit scrutiny follows the previously closed preferred offering; common-forward cash remains deferred.",
@@ -227,7 +283,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 3,
+      "rank": 4,
       "observation": "Reuters, citing the FT, reports OpenAI cut its fundraising target by $10bn to about $20bn. A first close was still expected below that target.",
       "summary": "The reported raise target is smaller; no closed round, funded cash or cancelled compute contract is established.",
       "implication": "A smaller raise could tighten the timing of compute spending. It does not establish cancelled contracts, lower paid usage or weaker AI demand.",
@@ -271,7 +327,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 4,
+      "rank": 5,
       "observation": "An unnamed customer intends to cancel an A$8.8m project. DXN expects payment for completed and committed work; cancellation remains unfinalized.",
       "summary": "An unnamed US-listed neocloud changed strategy; the larger follow-on campus is unlikely.",
       "implication": "Progress-payment protections can cushion cancellations, but backlog still depends on acceptance and collection. One customer’s retreat does not establish industry-wide demand collapse.",
@@ -328,7 +384,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 5,
+      "rank": 6,
       "observation": "Microsoft’s October 30 filing confirms $25bn of senior unsecured notes priced October 29 across ten tranches. Delivery against payment is expected November 4; no settled cash is established today.",
       "summary": "This updates the existing earnings and funding review: an open financing option is now a priced transaction, with settlement still ahead.",
       "implication": "Borrowing can support the spending ramp once settled, but adds debt service; it does not prove new capacity is operating or that AI investment is paying back.",
@@ -432,7 +488,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 6,
+      "rank": 7,
       "observation": "Intel reports Data Center and AI revenue of $7.3bn, up 78%, while client revenue fell 5%. Q4 group revenue is guided below Q3 despite further expected server growth.",
       "summary": "Real server sales and profit strengthen the CPU case; memory costs, factory disruption and expansion funding limit the group-level benefit.",
       "implication": "AI infrastructure is benefiting CPUs as well as GPUs, but memory costs hurt PC demand while manufacturing and packaging constraints limit server deliveries.",
@@ -501,7 +557,7 @@
       "source_role": "primary",
       "lens": "earnings",
       "relevance": "material",
-      "rank": 7,
+      "rank": 8,
       "event_date": "2026-10-29",
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "report_period": "Fiscal Q1 2027, quarter ended October 2, 2026",
@@ -574,7 +630,7 @@
       "source_role": "primary",
       "lens": "models",
       "relevance": "material",
-      "rank": 8,
+      "rank": 9,
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "claim_type": "issuer release; vendor benchmark claims; conditional inference",
       "entities": [
@@ -649,7 +705,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 9,
+      "rank": 10,
       "observation": "Reuters, citing The Information, reports unsigned NVIDIA credit-support talks for Nscale’s West Virginia project serving Anthropic. Proposed support would cover power and construction; final terms remain unsettled.",
       "summary": "A financing watch item, with earlier filed contract terms as context.",
       "implication": "If agreed, supplier backing could help a project borrow before customer payments begin, while making chip sales and credit exposure more dependent on the same buildout.",
@@ -707,7 +763,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 10,
+      "rank": 11,
       "report_period": "Q3 ended September 30, 2026; later capacity and spending are management plans",
       "claim_type": "issuer-reported K-IFRS results before external review; management outlook; conditional analysis",
       "observation": "Revenue was KRW195.3tn and operating profit KRW107.4tn. Device Solutions generated KRW106.5tn operating profit, while Device eXperience lost KRW0.8tn.",
@@ -778,7 +834,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 11,
+      "rank": 12,
       "observation": "Power Generation sales rose 30% to $3.421bn. Power & Energy segment profit rose 31% to $2.143bn, with a 24.4% margin versus 21.9% a year earlier.",
       "summary": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
       "implication": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
@@ -848,7 +904,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 12,
+      "rank": 13,
       "observation": "Q3 revenue was $2.571bn, up 11%, with $2.442bn recurring revenue. Annualized gross bookings were $533m; these are not recognized revenue or cash.",
       "summary": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
       "implication": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
@@ -936,7 +992,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 13,
+      "rank": 14,
       "observation": "Oracle’s October 28 Investor Day targets positive free cash flow in fiscal H2 2028 and at least $30bn in FY2029. It expects at most $20bn in additional capital raises through FY2030, excluding refinancings.",
       "summary": "New financing and cash-flow targets qualify the earlier chip-rollout story; existing hardware milestones are retained below.",
       "implication": "Vendor financing and customer advances can lower upfront cash needs, but shift obligations rather than proving the buildout already funds itself.",
@@ -1028,7 +1084,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 14,
+      "rank": 15,
       "observation": "Q3 Cloud revenue was $30.709bn, up 103%, with $11.121bn operating profit and a 36.2% segment margin. The full third-party call transcript adds Q4 cost pressure and cash-flow context; no company-edited transcript reviewed.",
       "summary": "Release/deck figures plus prepared remarks and Q&A reproduced by StockAnalysis/Quartr. New call statements are attributed management claims.",
       "implication": "External compute can ease supply constraints, but its cost pressures near-term Cloud margins while cash awaits delivery and collection.",
@@ -1130,7 +1186,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 15,
+      "rank": 16,
       "observation": "Q3 sales reached $4.3128bn, up 61.2% (55% organic). GAAP operating profit was $983.8m; adjusted operating profit was $1,086.9m.",
       "summary": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
       "implication": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
@@ -1194,7 +1250,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 16,
+      "rank": 17,
       "observation": "C&I external sales rose 28% to about $552m. Data-center backlog is approximately $4.5bn; Amazon’s expected initial 2027–28 deliveries total $2.4bn.",
       "summary": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
       "implication": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
@@ -1305,7 +1361,7 @@
       ],
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
-      "rank": 17,
+      "rank": 18,
       "relevance": "material"
     },
     {
@@ -1376,7 +1432,7 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 18,
+      "rank": 19,
       "relevance": "material"
     },
     {
@@ -1400,7 +1456,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 19,
+      "rank": 20,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -1448,7 +1504,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 20,
+      "rank": 21,
       "relevance": "material",
       "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
       "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
@@ -1552,7 +1608,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
       "source_id": "anthropic-s1-20261026-source-1",
-      "rank": 21,
+      "rank": 22,
       "relevance": "material",
       "summary": "H1 revenue was $16.286bn, operating loss $0.693bn and operating cash inflow $3.929bn. The $80.748bn net loss includes large noncash financing revaluations; it is not cash burn. The IPO remains unpriced and not effective."
     },
@@ -1645,7 +1701,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 22,
+      "rank": 23,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
     },
@@ -1727,7 +1783,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 23,
+      "rank": 24,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
     },
@@ -1759,7 +1815,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 24,
+      "rank": 25,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -1822,7 +1878,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 25,
+      "rank": 26,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -1900,7 +1956,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 26,
+      "rank": 27,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -1928,7 +1984,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 27,
+      "rank": 28,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -1955,7 +2011,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 28,
+      "rank": 29,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -1984,7 +2040,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 29,
+      "rank": 30,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -2021,7 +2077,7 @@
         "models",
         "applications"
       ],
-      "rank": 30,
+      "rank": 31,
       "relevance": "watch",
       "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
       "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
@@ -3628,6 +3684,36 @@
       ],
       "quality_note": "Reuters relays FT anonymous-source reporting. Target and proposed valuation are not a completed transaction; original FT full body not reviewed.",
       "access_note": "Complete Reuters syndication read on a public KELO-AM page through the reporting credit. Normal direct retrieval succeeded; provenance hash retained privately. Original FT article was not reviewed and OpenAI has not confirmed the report."
+    },
+    {
+      "id": "xai-order-20261030",
+      "name": "U.S. District Court · xAI dismissal opinion and order",
+      "url": "https://earthjustice.org/wp-content/uploads/2026/10/10313375508_6407.pdf",
+      "source_date": "2026-10-30",
+      "role": "primary",
+      "kind": "court_order",
+      "reviewed_at": "2026-11-01T13:19:43+00:00",
+      "quality_note": "Court order, N.D. Mississippi, Oxford Division; case 3:26-cv-00074-DMB-JMV, document 139. Hosted by plaintiffs’ counsel; court text controls over advocacy summaries.",
+      "topics": [
+        "policy",
+        "capacity"
+      ],
+      "access_note": "Original 28-page court order downloaded normally from Earthjustice’s public mirror (HTTP 200); private SHA-256 receipt retained. Order text reviewed, including case caption, pleading standard, permitting analysis and conclusion. No paid docket or sign-in used."
+    },
+    {
+      "id": "xai-earthjustice-20261030",
+      "name": "Earthjustice · litigation statement",
+      "url": "https://earthjustice.org/press/2026/court-denies-xais-motion-to-dismiss-air-pollution-lawsuit-against-elon-musks-company",
+      "source_date": "2026-10-30",
+      "role": "primary",
+      "kind": "litigant_statement",
+      "reviewed_at": "2026-11-01T13:19:43+00:00",
+      "quality_note": "Plaintiffs’ counsel describes its litigation position and pending injunction request. Advocacy statements are not independent findings or new capacity data.",
+      "topics": [
+        "policy",
+        "capacity"
+      ],
+      "access_note": "Full public statement read. Pending-injunction status is attributed and dated October 30, not asserted as a fresh November 1 docket check."
     }
   ],
   "ledger": [

@@ -1,6 +1,15 @@
 # Public snapshot provenance
 
-Latest daily review **October 31, 2026**: Amazon investment/facility terms, Meta’s credit outlook, attributed OpenAI fundraising targets and DXN’s intended cancellation. Earlier stories retain their dates and evidence. This is selected public research, not a live or comprehensive market feed. Summaries are independently written; article bodies, local data and private notes are not distributed.
+Latest daily review **November 1, 2026**: an October 30 ruling in the Southaven gas-plant litigation adds a power-permitting risk update. All prior earnings and financing stories retain their evidence and dates. This is selected public research, not a live or comprehensive market feed. Independently written summaries only; raw documents, local data and private notes are not distributed.
+
+## November 1 evidence and access
+
+| Reviewed source | Source date | Boundary |
+|---|---|---|
+| [U.S. District Court · xAI dismissal opinion and order](https://earthjustice.org/wp-content/uploads/2026/10/10313375508_6407.pdf) | 2026-10-30 | Original 28-page court order downloaded normally from Earthjustice’s public mirror (HTTP 200); private SHA-256 receipt retained. Order text reviewed, including case caption, pleading standard, permitting analysis and conclusion. No paid docket or sign-in used. |
+| [Earthjustice · litigation statement](https://earthjustice.org/press/2026/court-denies-xais-motion-to-dismiss-air-pollution-lawsuit-against-elon-musks-company) | 2026-10-30 | Full public statement read. Pending-injunction status is attributed and dated October 30, not asserted as a fresh November 1 docket check. |
+
+The court ruling denies dismissal. Allegations are not final findings of liability; an injunction request is not a shutdown order. The Southaven, Mississippi power plant and Memphis, Tennessee data center are distinct locations. No lost capacity, quantified financial damage, new supplier order or financing transaction is inferred. Earlier source limitations below describe those reviews.
 
 ## October 31 evidence and access
 
