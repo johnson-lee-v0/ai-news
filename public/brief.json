@@ -1,13 +1,247 @@
 {
-  "reviewed_at": "2026-11-01T13:19:43+00:00",
-  "headline": "Power delivery depends on permitting as well as equipment and funding.",
+  "reviewed_at": "2026-11-02T13:34:20+00:00",
+  "headline": "AI expansion: an optics deal, a completed building, utility investment and a running pilot.",
   "bullets": [
-    "An October 30 court order allows the Southaven gas-plant case against xAI and MZX Tech to proceed. It does not order a shutdown or establish lost compute capacity.",
-    "The power plant supplies Colossus 2 in Memphis. Possible compliance costs or interruption remain conditional on later decisions and actual operating evidence.",
-    "Earlier financing and earnings coverage is unchanged. No newly verified closing, guarantee or GTC delivery milestone was found in this review."
+    "Marvell and Lumentum signed a proposed all-stock combination. Integration and regulatory approval remain ahead; the deal value is neither compute revenue nor cash funding.",
+    "LG CNS reports completing Jakarta’s 30 MW first phase. Customer commitments are stronger evidence than an empty building, but GPU use and cash returns remain undisclosed.",
+    "Google’s Malaysian water project is enabling infrastructure still to be built. Abu Dhabi reports a government AI pilot already running; broader OpenAI agreements disclose no measured returns."
   ],
   "notice": "Selected public evidence and financing relationships, reviewed on the displayed dates. Material verified updates may be published through the approved daily workflow; this remains a dated snapshot, not a live or exhaustive feed. X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "marvell-lumentum-agreement-20261102",
+      "title": "Marvell agrees to buy Lumentum: AI optics consolidates",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
+      "source_id": "marvell-lumentum-issuer-20261102",
+      "source_name": "Marvell and Lumentum · joint announcement",
+      "source_role": "primary",
+      "published_at": "2026-11-02",
+      "event_date": "2026-11-02",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-02T13:34:20+00:00",
+      "entities": [
+        "Marvell",
+        "Lumentum"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure"
+      ],
+      "lens": "funding",
+      "relevance": "material",
+      "rank": 1,
+      "observation": "The companies announced a definitive all-stock acquisition agreement: 4.500 Marvell shares per Lumentum share, with approximately $115 billion implied enterprise value.",
+      "summary": "Closing is targeted for the first half of 2028 and requires both shareholder and regulatory approvals. This advances the earlier talks to an announced agreement.",
+      "implication": "Combining networking chips with lasers could ease AI data-transfer bottlenecks. The deal changes ownership; it does not add $115 billion of buildout cash or delivered capacity.",
+      "claim_type": "issuer-disclosed agreement and terms; strategic benefits are management expectations; implications are analysis",
+      "beneficiaries": "AI infrastructure customers could gain more closely integrated optical and semiconductor products; component suppliers may gain from future production if qualification and demand convert to orders.",
+      "risks": "Regulatory or shareholder rejection, integration disruption, customer retention and changing AI capital spending could prevent the expected benefits.",
+      "counterevidence": "No closing or incremental customer shipments are established. Separately, Marvell kept its preliminary fiscal Q3 revenue guidance midpoint unchanged; the merger announcement itself is not a revenue upgrade.",
+      "confirms": "Approvals, customer-qualified joint products and subsequent shipment, margin and cash-flow disclosures would support the integration thesis.",
+      "refutes": "A failed or delayed closing, lost customers, weak product adoption or unrecovered integration costs would weaken it.",
+      "uncertainty": "Approvals and integration remain prospective. The $550 billion calendar-2030 addressable market and more than $1 billion annual run-rate cost synergies are management estimates, not orders or achieved savings.",
+      "source_date_note": "Agreement announced November 2, 2026, advancing earlier reported talks. The approximate $1,132 per-share value and 23.9% premium use October 28 unaffected share prices, not a current quote. Reviewed November 2.",
+      "access_note": "Full issuer announcement and 24-page investor deck retrieved normally (HTTP 200) and reviewed. Joint call, merger agreement exhibits and Form S-4 have not been reviewed.",
+      "publication_note": "New signed-deal announcement, distinct from prior speculation. All-stock acquisition consideration is not customer revenue, capex or a cash financing injection. No stock-price reaction or investment recommendation is included.",
+      "highlights": [
+        {
+          "title": "Fixed shares; variable market value",
+          "observation": "Lumentum holders would receive 4.500 Marvell shares each and own about 33% of the combined company; existing Marvell holders would own about 67%.",
+          "implication": "The approximately $115 billion enterprise value is not a fixed cash payment. The share ratio is fixed while the market value of the consideration can change.",
+          "claim_type": "issuer-disclosed transaction terms; implication is analysis",
+          "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
+          "source_date": "2026-11-02"
+        },
+        {
+          "title": "Chips and lasers would be designed together",
+          "observation": "Marvell contributes interconnect, switching and custom silicon; Lumentum contributes lasers, optical transceivers, optical circuit switching and compound-semiconductor manufacturing.",
+          "implication": "Closer integration could improve bandwidth and power efficiency, but benefits require qualified products and actual customer deployment.",
+          "claim_type": "issuer-described capabilities and intended benefits; implication is conditional analysis",
+          "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
+          "source_date": "2026-11-02"
+        },
+        {
+          "title": "2028 closing is a milestone, not completion",
+          "observation": "Both boards unanimously approved the agreement. The companies target closing in the first half of 2028, subject to shareholder, regulatory and customary conditions.",
+          "implication": "Do not count the proposed combination as integrated supply today. Approval, execution and customer-retention risks remain.",
+          "claim_type": "issuer-disclosed approval status and closing expectation; implication is analysis",
+          "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
+          "source_date": "2026-11-02"
+        }
+      ]
+    },
+    {
+      "id": "lgcns-jakarta-completion-20261102",
+      "title": "LG CNS completes Jakarta’s first 30 MW phase; use and returns remain undisclosed",
+      "url": "https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1",
+      "published_at": "2026-11-02T01:00:00Z",
+      "event_date": "2026-11-01",
+      "date_kind": "publication_date",
+      "date_precision": "timestamp",
+      "source_id": "lgcns-jakarta-20261102",
+      "source_name": "LG CNS · Jakarta construction completion",
+      "source_role": "primary",
+      "reviewed_at": "2026-11-02T13:34:20+00:00",
+      "lens": "capacity",
+      "entities": [
+        "LG CNS",
+        "KMG",
+        "LG Electronics",
+        "LG Energy Solution"
+      ],
+      "ai_layers": [
+        "energy",
+        "infrastructure"
+      ],
+      "rank": 2,
+      "relevance": "material",
+      "observation": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
+      "summary": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
+      "implication": "Completed construction reduces delivery risk and supports power-and-cooling suppliers; paid workloads must still prove the project’s economics.",
+      "claim_type": "issuer-reported construction milestone; economic implication is inference",
+      "beneficiaries": "LG CNS gains a completed overseas reference; LG Electronics supplies cooling and LG Energy Solution batteries.",
+      "risks": "Reserved space may take time to become revenue-producing compute; customer terms and returns are undisclosed.",
+      "counterevidence": "Customers covering all capacity provide a stronger demand signal than an unleased build, but do not establish active GPU use or cash collection.",
+      "confirms": "Customer move-ins, measured power draw, active GPU hours and collected revenue would demonstrate commercial conversion.",
+      "refutes": "Delayed activation, tenant cancellations or weak collections would weaken the economic case despite completed construction.",
+      "uncertainty": "No separately disclosed energization test, installed GPU count, utilization, rental revenue or project cash flow. The 30 MW label describes facility capacity, not measured demand.",
+      "source_date_note": "Issuer publication November 2; photo caption dates the completion ceremony November 1. Exact technical acceptance/energization dates are unspecified.",
+      "access_note": "Full public issuer HTML retrieved with HTTP 200; headline and article body checked. Publication timestamp comes from issuer structured metadata; ceremony date from its photo caption.",
+      "highlights": [
+        {
+          "title": "Completed first phase; expansion remains a plan",
+          "observation": "The issuer reports 30 MW completed. Proposed expansion to 400 MW of receiving-power capacity remains in follow-on design.",
+          "implication": "Count the first construction milestone, not the entire future expansion, as delivered building capacity.",
+          "claim_type": "issuer report; interpretation distinguishes project stages",
+          "source_url": "https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1",
+          "source_date": "2026-11-02"
+        },
+        {
+          "title": "Cooling capability is staged",
+          "observation": "Phase one uses air cooling; liquid cooling is planned for later phases.",
+          "implication": "Do not equate the completed building with a fully installed liquid-cooled GPU cluster.",
+          "claim_type": "issuer report; implication is inference",
+          "source_url": "https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1",
+          "source_date": "2026-11-02"
+        }
+      ]
+    },
+    {
+      "id": "google-malaysia-water-20261102",
+      "title": "Google commits $160m to shared water infrastructure for a future Malaysian campus",
+      "url": "https://www.googlecloudpresscorner.com/2026-11-1-Google-Funds-US-160-Million-in-Shared-Water-Infrastructure-Alongside-Digital-Infrastructure-Development-in-Negeri-Sembilan",
+      "source_id": "google-malaysia-water-release-20261102",
+      "source_name": "Google Cloud Press Corner",
+      "source_role": "primary",
+      "published_at": "2026-11-01",
+      "event_date": "2026-11-02",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-02T13:34:20+00:00",
+      "entities": [
+        "Alphabet",
+        "Google",
+        "Gamuda",
+        "SAINS",
+        "MBINS"
+      ],
+      "ai_layers": [
+        "infrastructure",
+        "energy"
+      ],
+      "lens": "capacity",
+      "relevance": "material",
+      "rank": 3,
+      "observation": "Google announced $160m of funding for shared water infrastructure in Negeri Sembilan and appointed Gamuda to build a reservoir and treatment plant serving its future Port Dickson campus and the public.",
+      "summary": "Planned treatment capacity is 65 million liters a day. The facilities are to become state-owned upon completion; this is a development commitment, with payments and commissioning unverified.",
+      "implication": "Compute expansion needs utilities before workloads can run. Google is funding enabling infrastructure, creating potential construction demand while leaving delivery timing and actual compute usage unproven.",
+      "claim_type": "issuer-announced funding and contractor appointment; future capacity is a company projection; implication is analysis",
+      "beneficiaries": "Gamuda is the appointed builder; the state and local users are intended beneficiaries. No contractor revenue recognition or profit is established.",
+      "risks": "Construction and utility readiness can affect campus timing. The release gives no spending schedule or quantified return.",
+      "counterevidence": "Google says its assessment found no high local water-scarcity risk. The project is not evidence of a current shortage, and the campus will support general Google services rather than disclosed AI-only workloads.",
+      "confirms": "Verified treatment-plant commissioning, campus grid connection and operating workloads would establish progress from funding to usable infrastructure.",
+      "refutes": "Delays, scope reductions or a campus opening without meaningful use would weaken the delivery thesis.",
+      "uncertainty": "No paid-cash amount, completion date, campus MW, Google water consumption, compute utilization or AI-specific revenue is disclosed. The 65m-liter figure is shared future capacity, not Google demand.",
+      "source_date_note": "Page header and URL show November 1; the release dateline and announcement say November 2, 2026. Reviewed November 2; retain both dates.",
+      "access_note": "Full official release retrieved and reviewed.",
+      "publication_note": "Infrastructure-stage development; no addition to delivered compute capacity or confirmed cash payments.",
+      "highlights": [
+        {
+          "title": "Water capacity is planned and shared",
+          "observation": "The reservoir and treatment plant are intended for public users and Google. MBINS will own the facilities after completion.",
+          "implication": "Do not treat all 65 million liters a day as Google consumption or as already available supply.",
+          "claim_type": "company-announced project design and future ownership",
+          "source_url": "https://www.googlecloudpresscorner.com/2026-11-1-Google-Funds-US-160-Million-in-Shared-Water-Infrastructure-Alongside-Digital-Infrastructure-Development-in-Negeri-Sembilan",
+          "source_date": "2026-11-02"
+        },
+        {
+          "title": "Power costs also sit outside the server bill",
+          "observation": "Google says it will pay for all campus electricity and direct grid-connection infrastructure costs.",
+          "implication": "Site economics include enabling utilities; the announcement alone does not establish energized MW or paying AI usage.",
+          "claim_type": "management commitment; implication is analysis",
+          "source_url": "https://www.googlecloudpresscorner.com/2026-11-1-Google-Funds-US-160-Million-in-Shared-Water-Infrastructure-Alongside-Digital-Infrastructure-Development-in-Negeri-Sembilan",
+          "source_date": "2026-11-02"
+        }
+      ]
+    },
+    {
+      "id": "openai-uae-deployment-20261102",
+      "title": "OpenAI expands UAE agreements; a government pilot is already running",
+      "url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
+      "published_at": "2026-11-02",
+      "event_date": "2026-11-02",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "source_id": "openai-uae-20261102-reviewed",
+      "source_name": "Abu Dhabi Media Office",
+      "source_role": "primary",
+      "reviewed_at": "2026-11-02T13:34:20+00:00",
+      "lens": "demand",
+      "entities": [
+        "OpenAI",
+        "ADNOC",
+        "G42",
+        "Inception42",
+        "Mubadala"
+      ],
+      "ai_layers": [
+        "models",
+        "applications"
+      ],
+      "rank": 4,
+      "relevance": "watch",
+      "observation": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
+      "summary": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
+      "implication": "Industrial and government workflows open another route to recurring model demand. Signed agreements and a production pilot still need to translate into paid usage, renewals and savings after AI costs.",
+      "claim_type": "official announcement and deployment-status claims; economic interpretation is inference",
+      "beneficiaries": "OpenAI and Inception42 could gain model and implementation business; customers benefit only if reliable automation saves more than it costs.",
+      "risks": "Integration, inference costs, errors and compliance oversight can limit returns.",
+      "counterevidence": "A production pilot is stronger adoption evidence than a proposal, although no measured economic results are provided.",
+      "confirms": "Paid renewals, deployment acceptance and audited processing-time, error-rate and cost improvements would strengthen the case.",
+      "refutes": "Limited rollout, weak renewals or operating costs exceeding savings would weaken it.",
+      "uncertainty": "Contract values, cash receipts, paid users and measured productivity are undisclosed. No new energized capacity or funded equity is established.",
+      "access_note": "Full public government announcement retrieved and read. Deployment claims have not been independently audited.",
+      "source_date_note": "Published and agreements announced November 2. Pilot start date is unspecified; the pilot is not treated as newly activated today.",
+      "highlights": [
+        {
+          "title": "Separate the pilot from expansion",
+          "observation": "The food-import pilot supports officials; they retain final accountability. ADNOC and Mubadala signed agreements for operational and investment-analysis applications.",
+          "claim_type": "official deployment-status claim and signed agreements",
+          "implication": "A running pilot does not establish completed rollout across these organizations.",
+          "source_url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
+          "source_date": "2026-11-02"
+        },
+        {
+          "title": "Five years describes the channel agreement",
+          "observation": "OpenAI and Inception42 signed a five-year adoption agreement covering government, enterprise and education.",
+          "claim_type": "announced agreement",
+          "implication": "This creates a distribution route, not a disclosed revenue backlog or an investment in OpenAI.",
+          "source_url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
+          "source_date": "2026-11-02"
+        }
+      ]
+    },
     {
       "id": "xai-power-lawsuit-20261030",
       "title": "xAI power lawsuit proceeds; operating impact remains unproven",
@@ -31,7 +265,7 @@
       ],
       "lens": "policy",
       "relevance": "material",
-      "rank": 1,
+      "rank": 5,
       "observation": "The court denied X.AI Corp. and MZX Tech LLC’s dismissal motion in the Southaven power-plant case. It rejected their mobile-source exemption argument; the claims proceed.",
       "summary": "The October 30 ruling concerns Mississippi power supplying Colossus 2 in Memphis. It is not a final liability or damages judgment.",
       "implication": "Installed turbines do not remove permitting risk. Later remedies could add cost or constrain power supply, but this order establishes no outage or lost compute revenue.",
@@ -90,7 +324,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 2,
+      "rank": 6,
       "observation": "The 10-Q confirms $50bn invested in OpenAI by September 30 and discloses up to approximately $80bn of supplier credit with draws permitted from 2027.",
       "summary": "The prior earnings story gains filed investment status and future financing terms, rather than a new earnings event.",
       "implication": "Funding customers and supplying their compute deepens shared exposure; future equipment credit helps timing but still requires cash returns.",
@@ -196,7 +430,7 @@
         "infrastructure",
         "models"
       ],
-      "rank": 3,
+      "rank": 7,
       "relevance": "material",
       "observation": "S&P changed Meta’s outlook to negative while leaving its AA− rating unchanged, citing spending and cash-flow uncertainty.",
       "summary": "New credit scrutiny follows the previously closed preferred offering; common-forward cash remains deferred.",
@@ -283,7 +517,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 4,
+      "rank": 8,
       "observation": "Reuters, citing the FT, reports OpenAI cut its fundraising target by $10bn to about $20bn. A first close was still expected below that target.",
       "summary": "The reported raise target is smaller; no closed round, funded cash or cancelled compute contract is established.",
       "implication": "A smaller raise could tighten the timing of compute spending. It does not establish cancelled contracts, lower paid usage or weaker AI demand.",
@@ -327,7 +561,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 5,
+      "rank": 9,
       "observation": "An unnamed customer intends to cancel an A$8.8m project. DXN expects payment for completed and committed work; cancellation remains unfinalized.",
       "summary": "An unnamed US-listed neocloud changed strategy; the larger follow-on campus is unlikely.",
       "implication": "Progress-payment protections can cushion cancellations, but backlog still depends on acceptance and collection. One customer’s retreat does not establish industry-wide demand collapse.",
@@ -384,7 +618,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 6,
+      "rank": 10,
       "observation": "Microsoft’s October 30 filing confirms $25bn of senior unsecured notes priced October 29 across ten tranches. Delivery against payment is expected November 4; no settled cash is established today.",
       "summary": "This updates the existing earnings and funding review: an open financing option is now a priced transaction, with settlement still ahead.",
       "implication": "Borrowing can support the spending ramp once settled, but adds debt service; it does not prove new capacity is operating or that AI investment is paying back.",
@@ -488,7 +722,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 7,
+      "rank": 11,
       "observation": "Intel reports Data Center and AI revenue of $7.3bn, up 78%, while client revenue fell 5%. Q4 group revenue is guided below Q3 despite further expected server growth.",
       "summary": "Real server sales and profit strengthen the CPU case; memory costs, factory disruption and expansion funding limit the group-level benefit.",
       "implication": "AI infrastructure is benefiting CPUs as well as GPUs, but memory costs hurt PC demand while manufacturing and packaging constraints limit server deliveries.",
@@ -557,7 +791,7 @@
       "source_role": "primary",
       "lens": "earnings",
       "relevance": "material",
-      "rank": 8,
+      "rank": 12,
       "event_date": "2026-10-29",
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "report_period": "Fiscal Q1 2027, quarter ended October 2, 2026",
@@ -630,7 +864,7 @@
       "source_role": "primary",
       "lens": "models",
       "relevance": "material",
-      "rank": 9,
+      "rank": 13,
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "claim_type": "issuer release; vendor benchmark claims; conditional inference",
       "entities": [
@@ -705,7 +939,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 10,
+      "rank": 14,
       "observation": "Reuters, citing The Information, reports unsigned NVIDIA credit-support talks for Nscale’s West Virginia project serving Anthropic. Proposed support would cover power and construction; final terms remain unsettled.",
       "summary": "A financing watch item, with earlier filed contract terms as context.",
       "implication": "If agreed, supplier backing could help a project borrow before customer payments begin, while making chip sales and credit exposure more dependent on the same buildout.",
@@ -763,7 +997,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 11,
+      "rank": 15,
       "report_period": "Q3 ended September 30, 2026; later capacity and spending are management plans",
       "claim_type": "issuer-reported K-IFRS results before external review; management outlook; conditional analysis",
       "observation": "Revenue was KRW195.3tn and operating profit KRW107.4tn. Device Solutions generated KRW106.5tn operating profit, while Device eXperience lost KRW0.8tn.",
@@ -834,7 +1068,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 12,
+      "rank": 16,
       "observation": "Power Generation sales rose 30% to $3.421bn. Power & Energy segment profit rose 31% to $2.143bn, with a 24.4% margin versus 21.9% a year earlier.",
       "summary": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
       "implication": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
@@ -904,7 +1138,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 13,
+      "rank": 17,
       "observation": "Q3 revenue was $2.571bn, up 11%, with $2.442bn recurring revenue. Annualized gross bookings were $533m; these are not recognized revenue or cash.",
       "summary": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
       "implication": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
@@ -992,7 +1226,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 14,
+      "rank": 18,
       "observation": "Oracle’s October 28 Investor Day targets positive free cash flow in fiscal H2 2028 and at least $30bn in FY2029. It expects at most $20bn in additional capital raises through FY2030, excluding refinancings.",
       "summary": "New financing and cash-flow targets qualify the earlier chip-rollout story; existing hardware milestones are retained below.",
       "implication": "Vendor financing and customer advances can lower upfront cash needs, but shift obligations rather than proving the buildout already funds itself.",
@@ -1084,7 +1318,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 15,
+      "rank": 19,
       "observation": "Q3 Cloud revenue was $30.709bn, up 103%, with $11.121bn operating profit and a 36.2% segment margin. The full third-party call transcript adds Q4 cost pressure and cash-flow context; no company-edited transcript reviewed.",
       "summary": "Release/deck figures plus prepared remarks and Q&A reproduced by StockAnalysis/Quartr. New call statements are attributed management claims.",
       "implication": "External compute can ease supply constraints, but its cost pressures near-term Cloud margins while cash awaits delivery and collection.",
@@ -1186,7 +1420,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 16,
+      "rank": 20,
       "observation": "Q3 sales reached $4.3128bn, up 61.2% (55% organic). GAAP operating profit was $983.8m; adjusted operating profit was $1,086.9m.",
       "summary": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
       "implication": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
@@ -1250,7 +1484,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 17,
+      "rank": 21,
       "observation": "C&I external sales rose 28% to about $552m. Data-center backlog is approximately $4.5bn; Amazon’s expected initial 2027–28 deliveries total $2.4bn.",
       "summary": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
       "implication": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
@@ -1361,7 +1595,7 @@
       ],
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
-      "rank": 18,
+      "rank": 22,
       "relevance": "material"
     },
     {
@@ -1432,7 +1666,7 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 19,
+      "rank": 23,
       "relevance": "material"
     },
     {
@@ -1456,7 +1690,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 20,
+      "rank": 24,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -1504,7 +1738,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 21,
+      "rank": 25,
       "relevance": "material",
       "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
       "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
@@ -1608,7 +1842,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
       "source_id": "anthropic-s1-20261026-source-1",
-      "rank": 22,
+      "rank": 26,
       "relevance": "material",
       "summary": "H1 revenue was $16.286bn, operating loss $0.693bn and operating cash inflow $3.929bn. The $80.748bn net loss includes large noncash financing revaluations; it is not cash burn. The IPO remains unpriced and not effective."
     },
@@ -1701,7 +1935,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 23,
+      "rank": 27,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
     },
@@ -1783,7 +2017,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 24,
+      "rank": 28,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
     },
@@ -1815,7 +2049,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 25,
+      "rank": 29,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -1878,7 +2112,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 26,
+      "rank": 30,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -1956,7 +2190,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 27,
+      "rank": 31,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -1984,7 +2218,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 28,
+      "rank": 32,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -2011,7 +2245,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 29,
+      "rank": 33,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -2040,7 +2274,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 30,
+      "rank": 34,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -2077,7 +2311,7 @@
         "models",
         "applications"
       ],
-      "rank": 31,
+      "rank": 35,
       "relevance": "watch",
       "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
       "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
@@ -3714,6 +3948,84 @@
         "capacity"
       ],
       "access_note": "Full public statement read. Pending-injunction status is attributed and dated October 30, not asserted as a fresh November 1 docket check."
+    },
+    {
+      "id": "marvell-lumentum-issuer-20261102",
+      "name": "Marvell and Lumentum · definitive agreement announcement",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
+      "source_date": "2026-11-02",
+      "role": "primary",
+      "kind": "issuer_release",
+      "reviewed_at": "2026-11-02T13:34:20+00:00",
+      "quality_note": "Joint company announcement confirms transaction terms and conditional closing target. Synergies, addressable market and product benefits are management forecasts, not independently realized outcomes.",
+      "topics": [
+        "funding",
+        "capacity"
+      ],
+      "access_note": "Full issuer announcement and 24-page investor deck retrieved normally (HTTP 200) and reviewed. Joint call, merger agreement exhibits and Form S-4 have not been reviewed."
+    },
+    {
+      "id": "marvell-lumentum-deck-20261102",
+      "name": "Marvell and Lumentum · combination investor presentation",
+      "url": "https://investor.marvell.com/_assets/_cd374c2dc2b315cc33f74eeebf563db7/marvell/db/3849/35441/description/marvell-lumentum-combine-investor-presentation-110226.pdf",
+      "source_date": "2026-11-02",
+      "role": "primary",
+      "kind": "investor_presentation",
+      "reviewed_at": "2026-11-02T13:34:20+00:00",
+      "quality_note": "Issuer deck, pages 10–21: technology rationale, calendar-2030 TAM, projected synergies and conditional closing. Annualized illustrative figures and external consensus charts are not reported combined-company results.",
+      "topics": [
+        "funding",
+        "capacity"
+      ],
+      "access_note": "Public issuer PDF retrieved normally (HTTP 200), 24 pages; text reviewed. Source body remains outside the public snapshot."
+    },
+    {
+      "id": "lgcns-jakarta-20261102",
+      "name": "LG CNS · Jakarta construction completion",
+      "url": "https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1",
+      "source_date": "2026-11-02",
+      "role": "primary",
+      "kind": "issuer_release",
+      "reviewed_at": "2026-11-02T13:34:20+00:00",
+      "quality_note": "Original Korean issuer release reviewed in full. Construction and customer coverage are company-reported, without independently measured occupancy, GPU activity or financial returns.",
+      "topics": [
+        "capacity",
+        "energy",
+        "infrastructure"
+      ],
+      "access_note": "Full public issuer HTML retrieved with HTTP 200; headline and article body checked. Publication timestamp comes from issuer structured metadata; ceremony date from its photo caption."
+    },
+    {
+      "id": "google-malaysia-water-release-20261102",
+      "name": "Google Cloud Press Corner",
+      "url": "https://www.googlecloudpresscorner.com/2026-11-1-Google-Funds-US-160-Million-in-Shared-Water-Infrastructure-Alongside-Digital-Infrastructure-Development-in-Negeri-Sembilan",
+      "role": "primary",
+      "kind": "company_release",
+      "reviewed_at": "2026-11-02T13:34:20+00:00",
+      "quality_note": "Full issuer release reviewed. Header November 1; dateline/event November 2. Funding announcement and future capacity, not verified cash payment or commissioning.",
+      "topics": [
+        "infrastructure",
+        "water",
+        "energy",
+        "capacity"
+      ],
+      "source_date": "2026-11-01"
+    },
+    {
+      "id": "openai-uae-20261102-reviewed",
+      "name": "Abu Dhabi Media Office · OpenAI agreements",
+      "url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
+      "role": "primary",
+      "kind": "official_announcement",
+      "reviewed_at": "2026-11-02T13:34:20+00:00",
+      "source_date": "2026-11-02",
+      "quality_note": "Official government announcement establishes reported signing and pilot status, not independently verified financial returns.",
+      "topics": [
+        "demand",
+        "models",
+        "applications"
+      ],
+      "access_note": "Full public HTML retrieved successfully; no sign-in."
     }
   ],
   "ledger": [

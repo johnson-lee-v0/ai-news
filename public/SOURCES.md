@@ -1,6 +1,18 @@
 # Public snapshot provenance
 
-Latest daily review **November 1, 2026**: an October 30 ruling in the Southaven gas-plant litigation adds a power-permitting risk update. All prior earnings and financing stories retain their evidence and dates. This is selected public research, not a live or comprehensive market feed. Independently written summaries only; raw documents, local data and private notes are not distributed.
+Latest daily review **November 2, 2026**: a proposed optics combination, completed Jakarta construction, Malaysian utility investment and UAE adoption evidence. All prior earnings and financing stories retain their dates and evidence. Selected public research only; raw articles, private records and local data are excluded.
+
+## November 2 evidence and access
+
+| Reviewed source | Source date | Boundary |
+|---|---|---|
+| [Marvell and Lumentum · definitive agreement announcement](https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity) | 2026-11-02 | Joint company announcement confirms transaction terms and conditional closing target. Synergies, addressable market and product benefits are management forecasts, not independently realized outcomes. |
+| [Marvell and Lumentum · combination investor presentation](https://investor.marvell.com/_assets/_cd374c2dc2b315cc33f74eeebf563db7/marvell/db/3849/35441/description/marvell-lumentum-combine-investor-presentation-110226.pdf) | 2026-11-02 | Issuer deck, pages 10–21: technology rationale, calendar-2030 TAM, projected synergies and conditional closing. Annualized illustrative figures and external consensus charts are not reported combined-company results. |
+| [LG CNS · Jakarta construction completion](https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1) | 2026-11-02 | Original Korean issuer release reviewed in full. Construction and customer coverage are company-reported, without independently measured occupancy, GPU activity or financial returns. |
+| [Google Cloud Press Corner](https://www.googlecloudpresscorner.com/2026-11-1-Google-Funds-US-160-Million-in-Shared-Water-Infrastructure-Alongside-Digital-Infrastructure-Development-in-Negeri-Sembilan) | 2026-11-01 | Full issuer release reviewed. Header November 1; dateline/event November 2. Funding announcement and future capacity, not verified cash payment or commissioning. |
+| [Abu Dhabi Media Office · OpenAI agreements](https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/) | 2026-11-02 | Official government announcement establishes reported signing and pilot status, not independently verified financial returns. |
+
+A definitive acquisition agreement is not a closed transaction or cash investment. Completed buildings and reserved capacity do not establish utilization. Google’s 65 million liters/day is planned shared treatment capacity, not consumption; its page header and announcement dateline differ by one day. A running government pilot is separate from broad signed expansion and does not establish customer returns. No new financing or earnings figures are inferred from these announcements. Earlier access limitations below describe their original reviews.
 
 ## November 1 evidence and access
 
