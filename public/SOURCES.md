@@ -1,6 +1,23 @@
 # Public snapshot provenance
 
-Latest daily review **November 2, 2026**: a proposed optics combination, completed Jakarta construction, Malaysian utility investment and UAE adoption evidence. All prior earnings and financing stories retain their dates and evidence. Selected public research only; raw articles, private records and local data are excluded.
+Latest daily review **November 3, 2026**: updated Anthropic financials and commitments, Lumentum operating evidence, reported Meta financing discussions, and new Palantir, onsemi and Drax analysis. Prior stories and historical financial periods remain retained. Selected public research only; raw source bodies and private data are excluded.
+
+## November 3 evidence and access
+
+| Reviewed source | Source date | Boundary |
+|---|---|---|
+| [Lumentum · fiscal Q1 2027 results](https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx) | 2026-11-02 | Full unaudited results and GAAP/non-GAAP reconciliations establish reported figures. Purchase commitments are management disclosures without contract terms; outlook is guidance. Cash balance changes do not establish operating cash flow. |
+| [Lumentum · August 11 fiscal Q4 2026 earnings deck](https://s21.q4cdn.com/377324469/files/doc_financials/2026/q4/Q4-FY26-Earnings-Presentation_final.pdf) | 2026-08-11 | Thirteen-page issuer deck. Page 7 supplies the original fiscal Q1 2027 guidance: $1.225–1.275 billion revenue, 39.5–40.5% non-GAAP operating margin and $4.05–4.35 non-GAAP diluted EPS. It is a dated benchmark, not new results. |
+| [Palantir · Q3 2026 earnings release (SEC exhibit)](https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm) | 2026-11-02 | Unaudited reported results and issuer definitions. TCV assumes contract options and no termination; it is not cash. Guidance and AI value claims remain management expectations. |
+| [Palantir · Q3 2026 business update](https://investors.palantir.com/files/Palantir%20-%20Q3%202026%20Business%20Update.pdf) | 2026-11-02 | Issuer presentation; GAAP/non-GAAP reconciliations and customer metrics. Forecasts and product benefits are not independently realized outcomes. |
+| [onsemi · Q3 2026 earnings release (SEC exhibit)](https://www.sec.gov/Archives/edgar/data/1097864/000114036126041580/ef20084671_ex99-1.htm) | 2026-11-02 | Unaudited results for the quarter ended October 2. Free cash flow is a non-GAAP measure: operating cash less PP&E spending. AI growth rates are issuer-reported. |
+| [onsemi · Q3 2026 investor presentation](https://investor.onsemi.com/static-files/163ecc65-b996-4134-b408-f8cdbbb92fbc) | 2026-11-02 | Issuer deck reports AI end-market revenue, other markets and reconciliations. Future doubling targets and addressable content are management forecasts. |
+| [Drax · RNS 5051B](https://www.drax.com/news/strategic-partnership-for-gw-scale-data-centre/) | 2026-11-03T07:01:35+00:00 | Full regulatory announcement. Agreement to develop partnership; tenant, approvals, commercial terms and investment decisions remain outstanding. |
+| [Drax · project announcement](https://www.drax.com/news/drax-brookfield-and-radiant-announce-20bn-partnership-to-deliver-gw-scale-data-centre-capacity-at-drax-power-station/) | 2026-11-03T07:01:49+00:00 | Issuer promotional announcement; same underlying event and not independent corroboration. |
+| [Anthropic · November 2 SEC S-1/A](https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm) | 2026-11-02 | Filed interim results and contractual obligations. Periods and conditions differ; no IPO proceeds or current-cash inference. |
+| [Reuters via KFGO · reported Meta bond discussions](https://kfgo.com/2026/11/02/meta-eyes-at-least-20-billion-from-potential-bond-offerings-bloomberg-news-reports/) | 2026-11-02 | Full Reuters report citing Bloomberg unnamed sources. One reporting chain; proposed financing is not priced or received cash. |
+
+Anthropic’s aggregate has a defined scope and payment horizon; do not add prior note components or individual map contracts again. Reported net losses, operating cash, available facilities and actual cash balances differ. Meta’s proposal is attributed reporting, not priced or settled debt. Drax is a development agreement, not operating capacity. Full-reader extracts are identified where direct downloads failed. Earlier limitations below describe the prior reviews.
 
 ## November 2 evidence and access
 
