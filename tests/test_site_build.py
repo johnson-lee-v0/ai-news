@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from scripts.build_site import ROOT, OUTPUTS, READING_REVIEW_BASIS, build, dashboard, validate_public
+from scripts.build_site import ROOT, OUTPUTS, READING_REVIEW_BASIS, build, dashboard, reading_content_hash, validate_public
 
 
 class PublicBuildTests(unittest.TestCase):
@@ -122,7 +122,22 @@ class PublicBuildTests(unittest.TestCase):
         return {'key_takeaway':'Synthetic concise reading takeaway.',
                 'worth_reading':'skim','rationale':'Synthetic reading rationale.',
                 'basis':READING_REVIEW_BASIS,
-                'reviewed_at':datetime.now(timezone.utc).isoformat()}
+                'reviewed_at':datetime.now(timezone.utc).isoformat(),
+                'content_hash':reading_content_hash(self.raw['articles'][0])}
+
+    def test_reading_review_cannot_survive_changed_research_content(self):
+        for field in ('title','observation','summary','implication','uncertainty','counterevidence'):
+            with self.subTest(field=field):
+                raw=deepcopy(self.raw)
+                raw['articles'][0][field]='Changed synthetic research content'
+                with self.assertRaisesRegex(ValueError,'does not match the current research content'):
+                    validate_public(raw)
+        item=deepcopy(self.raw['articles'][0])
+        digest=reading_content_hash(item)
+        item['rank']=999
+        item['reviewed_at']='2026-01-01T00:00:00Z'
+        item['reading_review']['reviewed_at']='2026-11-01T00:00:00Z'
+        self.assertEqual(reading_content_hash(item),digest)
 
     def test_reading_review_preserves_evidence_and_its_older_review_date(self):
         raw=deepcopy(self.raw)

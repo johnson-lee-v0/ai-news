@@ -13,6 +13,25 @@ from test_wall_review import fixture
 
 
 class WallPublicationGateTests(unittest.TestCase):
+    def test_missing_curated_reading_review_preserves_existing_artifact(self):
+        raw = json.loads((build_site.ROOT / "public/brief.json").read_text())
+        raw["articles"][0].pop("reading_review")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            existing = root / "existing-site"
+            build_site.build(existing)
+            before = {str(path.relative_to(existing)): path.read_bytes()
+                      for path in existing.rglob("*") if path.is_file()}
+            source = root / "brief-without-reading-review.json"
+            source.write_text(json.dumps(raw))
+            for output in (existing, root / "new-site"):
+                with self.assertRaisesRegex(ValueError, "Curated research publication blocked: 1 article"):
+                    build_site.build(output, source=source)
+            self.assertFalse((root / "new-site").exists())
+            after = {str(path.relative_to(existing)): path.read_bytes()
+                     for path in existing.rglob("*") if path.is_file()}
+            self.assertEqual(before, after)
+
     def build_fixture(self, directory, value):
         root = Path(directory) / "source"
         (root / "public").mkdir(parents=True)

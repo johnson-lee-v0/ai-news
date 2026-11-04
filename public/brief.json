@@ -95,7 +95,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The newest reviewed filing changes the scale and timing of the funding question. Read the obligation terms and cash limitations rather than equating commitments with spending already paid.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "03210292bb7cf64d163f6e57e1b709cb6f9559c6316d951151bca8af6023ee80"
       }
     },
     {
@@ -156,7 +157,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "Strong operating evidence makes this more useful than an AI adoption headline. The contrast between sales, cash and contract growth is the main detail to inspect.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "3600eaadf98cb66f21ca75471841f4c1e9053928977f70a6f65757a62dfac8b5"
       }
     },
     {
@@ -259,7 +261,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "A material transaction plus fresh results deserve attention. Read delivery, cancellation and cash-conversion limits before treating the announced value as incremental demand.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "77042ba5a55263d5eb12cbda1da03c52232417fb1318626d07142ca7c9bc2cd6"
       }
     },
     {
@@ -321,7 +324,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The disclosed AI sales line is a useful operating checkpoint. Read how low capital spending and the weaker automotive segment affect the companywide cash picture.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "fafb43a9a4a9a8b0c774a95815d23c2915345585f053d5d28af17a5330f8820c"
       }
     },
     {
@@ -385,7 +389,8 @@
         "worth_reading": "skim",
         "rationale": "The proposal could matter for future capacity, but it supplies no operating compute or committed tenant evidence yet. The milestones matter more than the investment headline.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "21386918e474a5bc9b8ebfcba89e5867c080d22fbacbaa77be44ffe1c5859618"
       }
     },
     {
@@ -490,7 +495,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The funding scale is material, but the report is one secondary sourcing chain. Read the distinction between a proposed issue, prior closed funding and returns on future spending.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "79d60f23cecc349fc09e4cb10c3fcc230f4fe1b1e118023486e05951c3bc09f3"
       }
     },
     {
@@ -553,7 +559,8 @@
         "worth_reading": "skim",
         "rationale": "A useful delivery milestone. Further detail has limited economic value until energization, customer workloads or cash generation are disclosed.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "d667a3df2dd015db85469477b37014f411351c36ecb7db2688694bf65cffe104"
       }
     },
     {
@@ -618,7 +625,8 @@
         "worth_reading": "skim",
         "rationale": "Useful context on enabling infrastructure. The missing completion date, campus capacity and paid-cash figures limit a deeper financial conclusion.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "48ca211e0a59741bf7372827b040c00e22a4dcef7c6cb86ab7d7724ca9e5d885"
       }
     },
     {
@@ -682,7 +690,8 @@
         "worth_reading": "skim",
         "rationale": "The production pilot is more informative than the agreement count. Read further mainly for workflow details, not as established evidence of profitable adoption.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "7eaa579d496b49c8dfc00feab57f84f3736d593bfcd852f5ff556e21a74e8572"
       }
     },
     {
@@ -745,7 +754,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The distinction between permitting risk and an actual operating restriction is essential. Read the order’s scope and dated procedural limits before drawing a capacity conclusion.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "7d03abc9211e8acdda2ab40a3dfceef6a657410f4bcad48b25438d845e02fe3c"
       }
     },
     {
@@ -860,7 +870,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The disclosed funding relationships materially affect exposure. Read timing and cash-versus-credit distinctions alongside AWS operating strength.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "4b5e28fb3ebc8764f680bc3480f16203c381f7c77604ac913c3beaf4c96912e4"
       }
     },
     {
@@ -913,7 +924,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The potential financing change is important. The details prevent a target revision from being confused with lost demand or cash already withheld.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "c2566b89ce5d13f02c693acfc7ab2b8beceaa6d9a15ee2abd83aa07d94b460ff"
       }
     },
     {
@@ -972,7 +984,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "This is a concrete test of backlog quality. Read the unfinalized cancellation and payment status instead of treating the contract value as a known loss.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "30ba8ee2d0fef228aa3ce2506d459891643ee253b3e10236fed4a2abbbc001f2"
       }
     },
     {
@@ -1084,7 +1097,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "A substantial financing event with useful operating context. The saved review predates the expected settlement, so do not infer completion from the calendar alone.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "c9b75efa9a787daab94ee23b125d5f3a453ca944c46d6a7ef00228b703b85f27"
       }
     },
     {
@@ -1171,7 +1185,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "Useful evidence that AI infrastructure demand extends beyond GPUs. Read segment results and delivery constraints together, with no AI-only revenue claim.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "25a58644200161ac5335111496592fd0391fdcb4335a8c13e3ea2e3f1fb6b6fe"
       }
     },
     {
@@ -1250,7 +1265,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "Operating results are more informative than contract headlines. The cash-flow and customer-advance details help assess the durability of supplier gains.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "7793f2711b9bc0f5680bfe01d2c29297c59f03f0d44a13be8a1d77be9e48e4b5"
       }
     },
     {
@@ -1320,7 +1336,8 @@
         "worth_reading": "skim",
         "rationale": "Useful if following enterprise model options. Independent performance and customer-return evidence are absent, so the release alone supports a limited conclusion.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "6ed3ae47c19a89f9dbc8729cc63bbe87ffe9b9731315ef0fefc3036288a34386"
       }
     },
     {
@@ -1385,7 +1402,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "Relevant to how the buildout is funded. Read what is proposed versus already closed, and keep supplier support distinct from delivered capacity or revenue.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "dd0b9768ceac8b58a897271151fade39dbedaed16fe8cf4220f106fe789940d1"
       }
     },
     {
@@ -1466,7 +1484,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The segment split is the important detail. Read the limits on AI attribution and cash conversion before extending memory profits into a broad AI-return conclusion.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "f2a15e6ce27535a6238bc7a9f8019716221e8f8d35dc41d27e7229d985228dfe"
       }
     },
     {
@@ -1544,7 +1563,8 @@
         "worth_reading": "skim",
         "rationale": "A solid supplier checkpoint. The release-only review and lack of AI-only sales make it most useful as corroborating buildout evidence.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "39d502dffb27e7b99fcce40a76f8ff26c0061d45d3fc5cf2a5aeb2e902ca3c2c"
       }
     },
     {
@@ -1637,7 +1657,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The recurring-versus-nonrecurring split merits reading. Keep bookings, recognized revenue, cabinet utilization and GPU usage separate.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "46d5dff7aca358d1920310ba41d1eee243db45a5dd1cce00bcf9042ae9bcfb0d"
       }
     },
     {
@@ -1733,7 +1754,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "A central funding-and-execution question. Read the forecast dates and missing obligation reconciliation before treating financing arrangements as cash returns.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "598035641995862798ba78ffbdbf7dfd86679ea7d38bebee583f9e6280918692"
       }
     },
     {
@@ -1847,7 +1869,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The call adds material qualifications to the headline. Read those cash and margin details with the third-party transcript provenance in mind.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "165c20cba270726be6e5d79b7bef5528aa160e217b4689eab2b56b913f2d70d0"
       }
     },
     {
@@ -1916,7 +1939,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "Useful operating evidence with a meaningful cash distinction. The saved review did not cover the full call or quarterly filing.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "76554b1b73bedba37e4577b78a96be3dde29c63a79d087b81760ad4d16de438e"
       }
     },
     {
@@ -1987,7 +2011,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The backlog-to-delivery gap is financially important. Read the dates and lack of verified unconditional purchase minimums before counting orders as cash.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "2ed1f81e361a164052b35a813d92f99ae31e6e179ab2e0325b690f011eeb92ea"
       }
     },
     {
@@ -2067,7 +2092,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The profit-versus-cash contrast is worth the detail. Supplier pricing strength does not establish returns for compute buyers.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "833bb4d16503a20a68f3a2df28e01977c64fc687269b97f300e44816d9ccb0fc"
       }
     },
     {
@@ -2145,7 +2171,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "Read the methodology and cash limitations alongside optics. This is an operating-results review, not a stock-price or valuation judgment.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "1a62a423611d89bf42b23565f68ee0684153028d556df667035943a85ae764a2"
       }
     },
     {
@@ -2198,7 +2225,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "The commitment is material, but double counting it with earlier debt would distort exposure. Read the unestablished collateral and closing details.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "c64ae0ddddf12d0583b0e6fe19a2c4f116aed69f623034aa68f64bd3c9aa9420"
       }
     },
     {
@@ -2253,7 +2281,8 @@
         "worth_reading": "skim",
         "rationale": "A useful supply milestone with limited detail on returns. Avoid treating the entire planned capacity as operating or earning revenue.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "1a11639c6767090f5a0a454b01bb623a7a9008bf5298a8d9a3e1fb44c491db99"
       }
     },
     {
@@ -2353,7 +2382,8 @@
         "worth_reading": "dig_deeper",
         "rationale": "This fuller filing-and-call review explains the business structure behind later financing headlines. Cash conversion and external-versus-internal use are the key details.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "9646310b239a3f9b6fd09064f30450eb172d4b165a987173b6b73e434af85fda"
       }
     },
     {
@@ -2442,7 +2472,8 @@
         "worth_reading": "skim",
         "rationale": "Useful if following AI’s operational effects. The attribution remains qualified, and the spending implication is conditional.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "c9f2b69c358145c510423904c9cee585acca78aa4437dac9b312769ad33b9b0e"
       }
     },
     {
@@ -2524,7 +2555,8 @@
         "worth_reading": "skim",
         "rationale": "Useful framing, but newer filed financing is more authoritative than the original social commentary. Preserve the unverified closing and rumor limitations.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "fc7719db190f1e9c66c20276ecb60afcd25bcd1cb6cf9b33f9b373e88dd34d22"
       }
     },
     {
@@ -2611,7 +2643,8 @@
         "worth_reading": "skim",
         "rationale": "A concise technology roadmap reference. The delivery tests are more useful than treating issuer claims as realized sales.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "fda317a602135a0c8ccbff4420b50b2e96cf77f49a515ac3821740eb69ecdcfa"
       }
     },
     {
@@ -2648,7 +2681,8 @@
         "worth_reading": "skip",
         "rationale": "The newer Anthropic filing review provides more substantial evidence. Keep this older expectations story only as historical context.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "7a3dca77df009208c5f4ea55b07d3e0bc3ba706a40f65349130a00ebbfbb0c69"
       }
     },
     {
@@ -2683,7 +2717,8 @@
         "worth_reading": "skim",
         "rationale": "The floor-versus-ceiling distinction is useful, but the short guidance update adds less detail than later funding and earnings research.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "81253b00411cda8ffe0c31e49efc9f813b23318932f8700ae98475f03149dbe0"
       }
     },
     {
@@ -2717,7 +2752,8 @@
         "worth_reading": "skim",
         "rationale": "Useful as a delivery-constraint example. The secondary sourcing and single-site scope limit broader conclusions.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "b15e3c2d2d231ba6c4d352daf692645f24865ecfa60b681ac9dc38f966f68b0b"
       }
     },
     {
@@ -2753,7 +2789,8 @@
         "worth_reading": "skim",
         "rationale": "Read for the horizon and risk-neutral-pricing distinction. The recovery/model assumptions remain unverified, and no live CDS feed is connected.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "f72b1565c5d51e8b4308c8af98dcdeb09db7a06b8aba10e85422f93d7e615907"
       }
     },
     {
@@ -2796,7 +2833,8 @@
         "worth_reading": "skim",
         "rationale": "A useful adoption example that illustrates the gap between engagement and returns. Deeper financial conclusions need conversion, costs and controlled results.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z"
+        "reviewed_at": "2026-11-04T05:20:12Z",
+        "content_hash": "41a6e2b5ca0308984af9bae111ac89a3d0e3049a7dd0f451509add3fcea31b05"
       }
     }
   ],

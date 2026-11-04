@@ -19,7 +19,7 @@ FORMAT = 'ai-stock-pulse-static-v1'
 OUTPUTS = {'index.html', 'app.js', 'styles.css', 'finance.js', 'finance.css', 'visit-state.js', 'wall.js', 'wall.css', 'favicon.svg', 'data/dashboard.json', 'build.json', '.nojekyll'}
 TOP_FIELDS = {'reviewed_at', 'headline', 'bullets', 'notice', 'articles', 'sources', 'ledger', 'earnings'}
 ARTICLE_FIELDS = {'id','title','url','published_at','date_kind','date_precision','source_id','source_name','source_role','lens','relevance','observation','summary','implication','beneficiaries','risks','counterevidence','confirms','refutes','uncertainty','entities','rank','event_date','event_start','event_end','reviewed_at','report_period','publication_note','claim_type','access_note','source_date_note','methodology_url','republished_at','quote_as_of','highlights','ai_layers','reading_review'}
-READING_REVIEW_FIELDS = {'key_takeaway','worth_reading','rationale','basis','reviewed_at'}
+READING_REVIEW_FIELDS = {'key_takeaway','worth_reading','rationale','basis','reviewed_at','content_hash'}
 READING_REVIEW_BASIS = 'GPT triage of the existing reviewed research snapshot; original sources were not newly verified.'
 HIGHLIGHT_FIELDS = {'title','observation','claim_type','implication','source_url','source_date'}
 RECORD_FIELDS = {'ledger':{'id','as_of','source_url','source_date','from_entity','to_entity','instrument','status','amount','currency','note','overlap_group','risk','payment_status','revenue_status','reviewed_at','flow_type','flow_label','uncertainty','sources','changed_at'},'earnings':{'id','as_of','source_url','source_date','company','period','metric','unit','reported','reported_period','guidance','guidance_period','consensus','consensus_source_url','consensus_as_of','consensus_period','note'}}
@@ -58,7 +58,19 @@ def public_url(value):
         raise ValueError('Public evidence requires a plain HTTPS URL')
 
 
-def validate_reading_review(value, source_reviewed_at):
+def reading_content_hash(item):
+    """Bind triage to research content, excluding rank and review-time noise."""
+    fields = ('title','url','published_at','source_id','observation','summary',
+              'implication','uncertainty','highlights','risks','counterevidence',
+              'confirms','refutes','beneficiaries','report_period','claim_type',
+              'access_note','publication_note','source_date_note','event_date',
+              'event_start','event_end','quote_as_of')
+    content = {key: item.get(key) for key in fields}
+    return hashlib.sha256(json.dumps(content, ensure_ascii=False, sort_keys=True,
+                                     separators=(',', ':')).encode('utf-8')).hexdigest()
+
+
+def validate_reading_review(value, source_reviewed_at, item):
     """Reading priority is dated separately from the original evidence review."""
     if not isinstance(value, dict) or set(value) != READING_REVIEW_FIELDS:
         raise ValueError('Reading review requires exactly the public triage fields')
@@ -69,6 +81,8 @@ def validate_reading_review(value, source_reviewed_at):
         raise ValueError('Reading review judgment must use an explicit reading priority')
     if value['basis'] != READING_REVIEW_BASIS:
         raise ValueError('Reading review must disclose its existing-snapshot basis')
+    if not wall.valid_hash(value['content_hash']) or value['content_hash'] != reading_content_hash(item):
+        raise ValueError('Reading review does not match the current research content; review the changed article again')
     stamp = value['reviewed_at']
     if not isinstance(stamp, str):
         raise ValueError('Reading review requires a dated timestamp')
@@ -110,7 +124,7 @@ def validate_public(raw):
             raise ValueError('Event date range is reversed')
         if item.get('methodology_url'): public_url(item['methodology_url'])
         if 'reading_review' in item:
-            validate_reading_review(item['reading_review'], item.get('reviewed_at') or raw['reviewed_at'])
+            validate_reading_review(item['reading_review'], item.get('reviewed_at') or raw['reviewed_at'], item)
         if 'ai_layers' in item:
             if not isinstance(item['ai_layers'], list) or any(key not in LAYER_IDS for key in item['ai_layers']) or len(set(item['ai_layers'])) != len(item['ai_layers']):
                 raise ValueError('Public layer mappings must use unique framework IDs')
@@ -186,6 +200,9 @@ def build(output, source=None):
     output=Path(output)
     source=Path(source) if source else ROOT/'public/brief.json'
     raw=validate_public(json.loads(source.read_text(encoding='utf-8')))
+    missing_reading_reviews=sum('reading_review' not in item for item in raw['articles'])
+    if missing_reading_reviews:
+        raise ValueError('Curated research publication blocked: '+str(missing_reading_reviews)+' article(s) lack a structured reading review. Add a key takeaway and worth-reading assessment before building.')
     # Apply the same bounded projection that the reviewer queues. A raw refresh
     # may retain unreviewed local records, but none may enter this public build.
     wall_path=ROOT/'public/wall.json'
