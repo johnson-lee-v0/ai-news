@@ -113,6 +113,7 @@ async function main() {
       const page = await context.newPage();
       await page.goto(base.href);await ready(page);
       assert.equal(await page.locator('#brief-feed details[open]').count(), 0, 'Details start collapsed');
+      while (await page.locator('#news-more').isVisible()) await page.locator('#news-more').click();
       const cards = page.locator('#brief-feed .news-card');
       assert.equal(await cards.count(), rows.length);
       for (let index = 0; index < rows.length; index++) {

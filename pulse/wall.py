@@ -25,15 +25,28 @@ TIMEOUT = 15
 MAX_FEED_ITEMS = 24
 MAX_PUBLIC_ITEMS_PER_SOURCE = 16
 MAX_CHANNEL_ITEMS = 8
-YOUTUBE_CHANNEL_IDS = {"tevis-investing": "UChvd7RCRJS50RWlwbfcwr3A", "sixers-highlights": "UC5qJUyng_ezl0TVjVJFqtfQ", "knicks-highlights": "UC0hb8f0OXHEzDrJDUq-YVVw"}
+YOUTUBE_CHANNEL_IDS = {
+    "tevis-investing": "UChvd7RCRJS50RWlwbfcwr3A",
+    "sixers-highlights": "UC5qJUyng_ezl0TVjVJFqtfQ",
+    "knicks-highlights": "UC0hb8f0OXHEzDrJDUq-YVVw",
+    "ben-felix": "UCDXTQ8nWmx_EhZ2v-kp7QxA",
+    "andrej-karpathy": "UCXUPKJO5MZQN11PqgIvyuvQ",
+    "thinking-basketball": "UC3HPbvB6f58X_7SMIp6OPYw",
+    "formula1-video": "UCB_qr75-ydFVKSF9Dmo6izg",
+}
+YOUTUBE_CHANNEL_LIMITS = {"ben-felix": 3, "andrej-karpathy": 2, "thinking-basketball": 3, "formula1-video": 3}
 MEDIA_HOSTS = ("traffic.megaphone.fm", "dcs-cached.megaphone.fm")
 TOP_FIELDS = {"version", "updated_at", "source_status", "items", "coverage", "model_status"}
 SOURCE_FIELDS = {"id", "name", "section", "kind", "status", "home_url", "feed_url", "last_attempt_at", "last_success_at", "item_count", "note", "topics", "cooldown_until"}
 ITEM_FIELDS = {"id", "section", "source_id", "title", "url", "published_at", "first_seen_at", "updated_at", "format", "topics", "summary", "media_url", "duration", "analysis", "content_hash", "provenance_hash"}
 ANALYSIS_FIELDS = {"text", "basis", "reviewed_at", "source_urls"}
 REVIEW_FIELDS = {"key_takeaway", "worth_reading", "rationale", "scope", "confidence", "content_hash"}
+VIDEO_REVIEW_FIELDS = {"video_citations"}
 EVIDENCE_FIELDS = {"url", "published_at", "retrieved_at", "content_hash", "scope"}
-REVIEW_SCOPES = {"full_text", "excerpt", "metadata", "unavailable"}
+OPTIONAL_EVIDENCE_FIELDS = {"video_url"}
+THIRD_PARTY_TRANSCRIPT_BASIS = "Third-party transcript; not verified against video footage."
+VIDEO_CONTENT_SCOPES = {"transcript", "partial_transcript", "video_viewed"}
+REVIEW_SCOPES = {"full_text", "excerpt", "metadata", "unavailable"} | VIDEO_CONTENT_SCOPES
 SOURCES = [
     {"id": "f1-official", "name": "Formula 1", "section": "sports", "kind": "rss", "home_url": "https://www.formula1.com/en/latest", "feed_url": "https://www.formula1.com/en/latest/all.xml", "topics": ["F1"], "note": "Official F1 feed. Some entries have no publication date; fetch time is not an event date."},
     {"id": "nba-communications", "name": "NBA Communications", "section": "sports", "kind": "rss", "home_url": "https://pr.nba.com/", "feed_url": "https://pr.nba.com/feed/", "topics": ["NBA"], "note": "League announcements, including business and WNBA coverage. This is not comprehensive game or breaking-news coverage."},
@@ -44,6 +57,10 @@ SOURCES = [
     {"id": "tevis-investing", "name": "Tevis · Fundamentals of Investing", "section": "markets", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@Funofinvesting", "feed_url": "https://www.youtube.com/@Funofinvesting/videos", "topics": ["Markets", "Company analysis"], "note": "Tevis Shkodra's official site identifies this channel. Public Videos-page metadata, at most eight videos per refresh; RSS returned 404. No transcript is collected, and relative dates remain unknown unless separately verified."},
     {"id": "sixers-highlights", "name": "Philadelphia 76ers · highlights", "section": "sports", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@sixers", "feed_url": "https://www.youtube.com/@sixers/videos", "topics": ["NBA", "Sixers", "Highlights"], "note": "Official team Videos-page metadata. Up to eight highlight/game-recap titles per refresh; not every game or the full channel. Dates and video content require separate review; RSS returned 404."},
     {"id": "knicks-highlights", "name": "New York Knicks · highlights", "section": "sports", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@NYKnicks", "feed_url": "https://www.youtube.com/@NYKnicks/videos", "topics": ["NBA", "Knicks", "Highlights"], "note": "Official team Videos-page metadata. Up to eight highlight/game-recap titles per refresh; not every game or the full channel. Dates and video content require separate review; RSS returned 404."},
+    {"id": "ben-felix", "name": "Ben Felix", "section": "markets", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@BenFelixCSI", "feed_url": "https://www.youtube.com/@BenFelixCSI/videos", "topics": ["Markets", "Investing education"], "note": "Verified BenFelixCSI channel. Up to three public long-form videos per refresh; displayed durations below five minutes, Shorts, obvious promotions and member-only items are excluded. Source review scope is separate from channel metadata."},
+    {"id": "andrej-karpathy", "name": "Andrej Karpathy", "section": "markets", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@AndrejKarpathy", "feed_url": "https://www.youtube.com/@AndrejKarpathy/videos", "topics": ["Markets", "AI education"], "note": "Verified AndrejKarpathy channel. Up to two public long-form AI videos per refresh; short/promotional and member-only items are excluded. Older educational videos keep their source dates and are not current market news."},
+    {"id": "thinking-basketball", "name": "Thinking Basketball", "section": "sports", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@ThinkingBasketball", "feed_url": "https://www.youtube.com/@ThinkingBasketball/videos", "topics": ["NBA", "Basketball analysis"], "note": "Verified ThinkingBasketball channel. Up to three public videos per refresh, excluding member-only videos, short clips and obvious promotions. Analysis is the creator's interpretation; selected older films remain dated."},
+    {"id": "formula1-video", "name": "Formula 1 · videos", "section": "sports", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@formula1", "feed_url": "https://www.youtube.com/@formula1/videos", "topics": ["F1", "Highlights", "Race analysis"], "note": "Verified official Formula 1 channel. Up to three public analysis, onboard or race/qualifying-highlight videos per refresh; under-five-minute clips, Shorts, obvious promotions and member-only items are excluded. This is a selected view, not every upload."},
 ]
 GAPS = [
     {"id": "kobeissi-letter", "name": "The Kobeissi Letter", "section": "markets", "kind": "requested", "home_url": "https://www.thekobeissiletter.com/about/feed", "feed_url": None, "topics": ["Markets", "Macro"], "note": "Official site confirms @KobeissiLetter. Selected public posts can be reviewed through the existing external research task's supported browser access. Direct HTTP access is restricted; no automatic timeline API, complete X coverage or paid newsletter is connected."},
@@ -80,6 +97,41 @@ def item_content_hash(item):
 
 def valid_hash(value):
     return isinstance(value, str) and re.fullmatch(r"[0-9a-f]{64}", value) is not None
+
+
+def duration_seconds(value):
+    """Read known publisher durations; unknown/live labels remain unbounded."""
+    text = str(value).strip() if type(value) in (int, str) else ""
+    if re.fullmatch(r"\d+", text):
+        seconds = int(text)
+        return seconds if seconds > 0 else None
+    if re.fullmatch(r"\d{1,3}:\d{2}(?::\d{2})?", text):
+        parts = [int(part) for part in text.split(":")]
+        if any(part >= 60 for part in parts[1:]):
+            return None
+        seconds = 0
+        for part in parts:
+            seconds = seconds * 60 + part
+        return seconds if seconds > 0 else None
+    return None
+
+
+def video_source_identity(url):
+    """Compare the reviewed video, permitting ordinary YouTube time links."""
+    parsed = urllib.parse.urlsplit(public_url(url))
+    host = parsed.hostname
+    video_id = None
+    if host in {"youtube.com", "www.youtube.com", "m.youtube.com"}:
+        if parsed.path == "/watch":
+            video_id = urllib.parse.parse_qs(parsed.query).get("v", [None])[0]
+        else:
+            match = re.fullmatch(r"/(?:shorts|embed)/([A-Za-z0-9_-]{11})/?", parsed.path)
+            video_id = match.group(1) if match else None
+    elif host == "youtu.be":
+        video_id = parsed.path.strip("/")
+    if video_id and re.fullmatch(r"[A-Za-z0-9_-]{11}", video_id):
+        return "youtube:" + video_id
+    return public_url(url)
 
 
 def date_value(value):
@@ -199,14 +251,14 @@ def validate_public(payload):
             raise ValueError("Item content hash does not match its current metadata")
         analysis = item["analysis"]
         if analysis is not None:
-            if not isinstance(analysis, dict) or set(analysis) - (ANALYSIS_FIELDS | REVIEW_FIELDS | {"evidence"}) or not ANALYSIS_FIELDS <= set(analysis) or not isinstance(analysis["text"], str) or not analysis["text"].strip() or len(analysis["text"]) > 1200:
+            if not isinstance(analysis, dict) or set(analysis) - (ANALYSIS_FIELDS | REVIEW_FIELDS | VIDEO_REVIEW_FIELDS | {"evidence"}) or not ANALYSIS_FIELDS <= set(analysis) or not isinstance(analysis["text"], str) or not analysis["text"].strip() or len(analysis["text"]) > 1200:
                 raise ValueError("Analysis requires explicit text, basis and dated sources")
             if not isinstance(analysis["basis"], str) or not analysis["basis"].strip() or not isinstance(analysis["source_urls"], list) or not 1 <= len(analysis["source_urls"]) <= 10:
                 raise ValueError("Analysis provenance is missing")
             valid_date(analysis["reviewed_at"])
             for url in analysis["source_urls"]:
                 public_url(url)
-            if set(analysis) & (REVIEW_FIELDS | {"evidence"}):
+            if set(analysis) & (REVIEW_FIELDS | VIDEO_REVIEW_FIELDS | {"evidence"}):
                 if not REVIEW_FIELDS | {"evidence"} <= set(analysis):
                     raise ValueError("Reading judgments require complete review fields and evidence")
                 for field, maximum in (("key_takeaway", 350), ("rationale", 500), ("basis", 800)):
@@ -216,17 +268,31 @@ def validate_public(payload):
                     raise ValueError("Invalid reading judgment, access scope or confidence")
                 if not valid_hash(analysis["content_hash"]) or analysis["content_hash"] != item_content_hash(item):
                     raise ValueError("Review does not match the current item content")
-                if analysis["scope"] in {"metadata", "unavailable"} and analysis["confidence"] == "high":
+                if analysis["scope"] in {"metadata", "unavailable", "partial_transcript"} and analysis["confidence"] == "high":
                     raise ValueError("Limited source access cannot support a high-confidence judgment")
                 if analysis["scope"] == "unavailable" and (analysis["worth_reading"] != "unavailable" or analysis["confidence"] != "low"):
                     raise ValueError("Unavailable content cannot support a reading judgment")
                 evidence = analysis["evidence"]
                 if not isinstance(evidence, list) or not 1 <= len(evidence) <= 10:
                     raise ValueError("Review requires one to ten source evidence records")
+                external_transcripts = []
                 for record in evidence:
-                    if not isinstance(record, dict) or set(record) != EVIDENCE_FIELDS or record["scope"] not in REVIEW_SCOPES:
+                    if not isinstance(record, dict) or not EVIDENCE_FIELDS <= set(record) or set(record) - (EVIDENCE_FIELDS | OPTIONAL_EVIDENCE_FIELDS) or record["scope"] not in REVIEW_SCOPES:
                         raise ValueError("Invalid review evidence fields")
                     public_url(record["url"])
+                    if "video_url" in record:
+                        if record["scope"] not in {"transcript", "partial_transcript"} or item["format"] != "video":
+                            raise ValueError("Only video transcript evidence may declare a linked video URL")
+                        if public_url(record["video_url"]) != public_url(item["url"]):
+                            raise ValueError("Transcript linked video URL must match this exact canonical video")
+                    if record["scope"] in {"transcript", "partial_transcript"} and video_source_identity(record["url"]) != video_source_identity(item["url"]):
+                        if urllib.parse.urlsplit(record["url"]).hostname in {"youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be", "www.youtube-nocookie.com"}:
+                            raise ValueError("Video review requires content evidence for this exact video")
+                        if "video_url" not in record:
+                            raise ValueError("External transcript evidence requires its explicitly linked canonical video URL")
+                        if record["url"] not in analysis["source_urls"]:
+                            raise ValueError("External transcript evidence must be cited at its actual source URL")
+                        external_transcripts.append(record)
                     valid_date(record["retrieved_at"])
                     if date_value(record["retrieved_at"]) > date_value(analysis["reviewed_at"]):
                         raise ValueError("Evidence retrieval cannot be later than its review")
@@ -244,12 +310,52 @@ def validate_public(payload):
                         raise ValueError("Accessed evidence requires a SHA256 content hash")
                 if not set(analysis["source_urls"]) <= {record["url"] for record in evidence}:
                     raise ValueError("Every analysis source must have an evidence receipt")
+                if external_transcripts:
+                    if not any(record["scope"] == "metadata" and record["url"] in analysis["source_urls"]
+                               and video_source_identity(record["url"]) == video_source_identity(item["url"])
+                               for record in evidence):
+                        raise ValueError("External transcript review requires a cited original-video metadata receipt")
+                    if THIRD_PARTY_TRANSCRIPT_BASIS not in analysis["basis"]:
+                        raise ValueError("External transcript review must disclose that it was not verified against video footage")
+                    if analysis["confidence"] == "high":
+                        raise ValueError("External transcript reviews cannot have high confidence")
                 # An uncited supplemental receipt cannot upgrade the access
                 # claimed for the sources the reader is actually given.
                 scopes = {record["scope"] for record in evidence if record["url"] in analysis["source_urls"]}
-                supported = {"full_text": {"full_text"}, "excerpt": {"full_text", "excerpt"}, "metadata": {"full_text", "excerpt", "metadata"}, "unavailable": {"unavailable"}}
+                supported = {"full_text": {"full_text"}, "excerpt": {"full_text", "excerpt"}, "metadata": {"full_text", "excerpt", "metadata"}, "unavailable": {"unavailable"},
+                             "transcript": {"transcript"}, "partial_transcript": {"transcript", "partial_transcript"}, "video_viewed": {"video_viewed"}}
                 if not scopes & supported[analysis["scope"]] or (analysis["scope"] == "unavailable" and scopes != {"unavailable"}):
                     raise ValueError("Review scope exceeds its recorded source access")
+                if analysis["scope"] in VIDEO_CONTENT_SCOPES:
+                    if item["format"] != "video":
+                        raise ValueError("Video content review scopes require a video item")
+                    matching = [record for record in evidence
+                                if record["url"] in analysis["source_urls"]
+                                and record["scope"] in supported[analysis["scope"]]
+                                and (video_source_identity(record["url"]) == video_source_identity(item["url"])
+                                     or record in external_transcripts)]
+                    if not matching:
+                        raise ValueError("Video review requires content evidence for this exact video")
+                    citations = analysis.get("video_citations")
+                    if not isinstance(citations, list) or not 1 <= len(citations) <= 6:
+                        raise ValueError("Video content review requires one to six timestamped citations")
+                    known_duration = duration_seconds(item.get("duration"))
+                    for citation in citations:
+                        if not isinstance(citation, dict) or set(citation) != {"start_seconds", "end_seconds", "note"}:
+                            raise ValueError("Video citations require timestamps and an authored note")
+                        start, end = citation["start_seconds"], citation["end_seconds"]
+                        if type(start) is not int or not 0 <= start <= 172800:
+                            raise ValueError("Invalid video citation start timestamp")
+                        if end is not None and (type(end) is not int or not start < end <= 172800):
+                            raise ValueError("Invalid video citation end timestamp")
+                        if known_duration is not None and (start > known_duration + 2 or (end is not None and end > known_duration + 2)):
+                            raise ValueError("Video citation exceeds the known duration (two-second rounding tolerance)")
+                        if analysis["scope"] == "partial_transcript" and end is None:
+                            raise ValueError("Partial transcript citations require explicit covered ranges")
+                        if not isinstance(citation["note"], str) or not citation["note"].strip() or len(citation["note"]) > 220:
+                            raise ValueError("Video citation notes must be short authored takeaways")
+                elif "video_citations" in analysis:
+                    raise ValueError("Metadata or unavailable reviews cannot claim video timestamp evidence")
     return deepcopy(payload)
 
 
@@ -327,6 +433,45 @@ def _youtube_url(value):
     return "https://www.youtube.com/watch?v=" + video
 
 
+def _channel_card_access(node):
+    """Inspect only displayed badges; never use account or API state."""
+    duration, restricted = None, False
+    def walk(value):
+        nonlocal duration, restricted
+        if isinstance(value, dict):
+            for key in ("badgeViewModel", "metadataBadgeRenderer"):
+                badge = value.get(key)
+                if isinstance(badge, dict):
+                    label = badge.get("badgeText") or badge.get("label") or ""
+                    style = badge.get("badgeStyle") or badge.get("style") or ""
+                    if re.search(r"\b(members? only|premium|paid)\b", str(label), re.I) or "MEMBERS_ONLY" in str(style):
+                        restricted = True
+            badge = value.get("thumbnailBadgeViewModel")
+            if isinstance(badge, dict) and isinstance(badge.get("text"), str) and re.fullmatch(r"\d{1,3}:\d{2}(?::\d{2})?", badge["text"]):
+                duration = badge["text"]
+            for child in value.values():
+                walk(child)
+        elif isinstance(value, list):
+            for child in value:
+                walk(child)
+    walk(node)
+    length = node.get("lengthText", {})
+    if not duration and isinstance(length, dict):
+        value = length.get("simpleText") or "".join(r.get("text", "") for r in length.get("runs", []))
+        if re.fullmatch(r"\d{1,3}:\d{2}(?::\d{2})?", value):
+            duration = value
+    return duration, restricted
+
+
+def _duration_seconds(value):
+    if not isinstance(value, str) or not re.fullmatch(r"\d{1,3}:\d{2}(?::\d{2})?", value):
+        return None
+    parts = [int(part) for part in value.split(":")]
+    if any(part >= 60 for part in parts[1:]):
+        return None
+    return sum(part * 60 ** i for i, part in enumerate(reversed(parts)))
+
+
 def _parse_youtube_channel(payload, source, observed_at):
     """Use only the ordinary public page's displayed Videos-tab metadata.
 
@@ -352,12 +497,14 @@ def _parse_youtube_channel(payload, source, observed_at):
         if isinstance(value, dict):
             if "lockupViewModel" in value:
                 node = value["lockupViewModel"]
-                entries.append((node.get("contentId"), node.get("metadata", {}).get("lockupMetadataViewModel", {}).get("title", {}).get("content", "")))
+                duration, restricted = _channel_card_access(node)
+                entries.append((node.get("contentId"), node.get("metadata", {}).get("lockupMetadataViewModel", {}).get("title", {}).get("content", ""), duration, restricted))
                 return
             if "videoRenderer" in value:
                 node = value["videoRenderer"]
                 title = node.get("title", {})
-                entries.append((node.get("videoId"), title.get("simpleText") or "".join(r.get("text", "") for r in title.get("runs", []))))
+                duration, restricted = _channel_card_access(node)
+                entries.append((node.get("videoId"), title.get("simpleText") or "".join(r.get("text", "") for r in title.get("runs", [])), duration, restricted))
                 return
             for child in value.values():
                 walk(child)
@@ -368,11 +515,22 @@ def _parse_youtube_channel(payload, source, observed_at):
     if not entries:
         raise ValueError("No displayed video cards found")
     rows, seen, rejected, filtered = [], set(), 0, 0
-    for video, title in entries[:MAX_FEED_ITEMS]:
+    for video, title, duration, restricted in entries[:MAX_FEED_ITEMS]:
         if not isinstance(video, str) or not re.fullmatch(r"[A-Za-z0-9_-]{11}", video) or not isinstance(title, str) or not title.strip():
             rejected += 1
             continue
         title = re.sub(r"\s+", " ", title).strip()[:500]
+        if restricted:
+            filtered += 1
+            continue
+        if source["id"] in YOUTUBE_CHANNEL_LIMITS:
+            seconds = _duration_seconds(duration)
+            if (seconds is not None and seconds < 300) or re.search(r"#shorts?\b|\b(channel trailer|subscribe now|giveaway|merch drop)\b", title, re.I):
+                filtered += 1
+                continue
+        if source["id"] == "formula1-video" and not re.search(r"\b(analysis|onboards?|race highlights|qualifying highlights)\b", title, re.I):
+            filtered += 1
+            continue
         if source["id"] in ("sixers-highlights", "knicks-highlights") and not re.search(r"\b(highlights?|game recap|defeat(?:s|ed)?|take on|takes on)\b", title, re.I):
             filtered += 1
             continue
@@ -386,12 +544,15 @@ def _parse_youtube_channel(payload, source, observed_at):
                "format": "video", "topics": list(source["topics"]),
                "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
                "analysis": None, "provenance_hash": hashlib.sha256(payload).hexdigest()}
+        if source["id"] in YOUTUBE_CHANNEL_LIMITS and _duration_seconds(duration) is not None:
+            row["duration"] = duration
         row["content_hash"] = item_content_hash(row)
         rows.append(row)
     if not rows and rejected and not filtered:
         raise ValueError("Public channel video cards were invalid")
-    return rows[:MAX_CHANNEL_ITEMS], {"rejected_count": rejected, "filtered_count": filtered,
-                                     "window_truncated_count": max(0, len(entries) - MAX_FEED_ITEMS) + max(0, len(rows) - MAX_CHANNEL_ITEMS)}
+    limit = YOUTUBE_CHANNEL_LIMITS.get(source["id"], MAX_CHANNEL_ITEMS)
+    return rows[:limit], {"rejected_count": rejected, "filtered_count": filtered,
+                         "window_truncated_count": max(0, len(entries) - MAX_FEED_ITEMS) + max(0, len(rows) - limit)}
 
 
 def parse_feed(payload, source, observed_at):

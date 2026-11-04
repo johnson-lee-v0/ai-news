@@ -17,6 +17,8 @@ def main(argv=None):
     queue.add_argument("--data-file", required=True, type=Path)
     queue.add_argument("--output", type=Path, help="Keep review work outside the public source checkout")
     queue.add_argument("--include-reviewed", action="store_true", help="Also revisit current reviews, including metadata-only triage")
+    queue.add_argument("--limit", type=int, default=wall_review.DEFAULT_QUEUE_LIMIT, help="Maximum review candidates, 1–200 (default 24)")
+    queue.add_argument("--per-source", type=int, default=wall_review.DEFAULT_PER_SOURCE, help="Maximum candidates per source, 1–24 (default 4)")
     ingest = commands.add_parser("import", help="Atomically import an externally authored review packet")
     ingest.add_argument("--data-file", required=True, type=Path)
     ingest.add_argument("--packet", required=True, type=Path)
@@ -31,7 +33,7 @@ def main(argv=None):
             result = wall_review.import_file(args.data_file, wall_review.read_packet(args.packet))
         else:
             payload = wall.load_file(args.data_file, strict=True)
-            result = wall_review.review_queue(payload, args.include_reviewed) if args.command == "queue" else wall_review.coverage(payload)
+            result = wall_review.review_queue(payload, args.include_reviewed, args.limit, args.per_source) if args.command == "queue" else wall_review.coverage(payload)
         encoded = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
         if args.command == "queue" and args.output:
             if args.output.resolve() == args.data_file.resolve():
@@ -40,7 +42,7 @@ def main(argv=None):
                 raise ValueError("Review queue output must not be a symlink")
             args.output.parent.mkdir(parents=True, exist_ok=True)
             args.output.write_text(encoded, encoding="utf-8")
-            print(json.dumps({"queued_items": len(result["items"]), "coverage": result["coverage"]}, indent=2))
+            print(json.dumps({"queued_items": len(result["items"]), "selection": result["selection"], "coverage": result["coverage"]}, indent=2))
         else:
             print(encoded, end="")
         return 2 if args.command == "check" and args.require_complete and not result["complete"] else 0

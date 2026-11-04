@@ -23,10 +23,18 @@ def rss(subtitle="A fictional election interview", extra=""):
             '</item>' + extra + '</channel></rss>').encode()
 
 
-def channel(identity, titles, selected="Videos"):
+def channel(identity, titles, selected="Videos", durations=None, members=None):
     cards = [{"richItemRenderer": {"content": {"lockupViewModel": {"contentId": video,
               "metadata": {"lockupMetadataViewModel": {"title": {"content": title}}}}}}}
              for video, title in titles]
+    for card in cards:
+        node = card["richItemRenderer"]["content"]["lockupViewModel"]
+        if durations and node["contentId"] in durations:
+            node["contentImage"] = {"thumbnailViewModel": {"overlays": [{"thumbnailBottomOverlayViewModel": {
+                "badges": [{"thumbnailBadgeViewModel": {"text": durations[node["contentId"]]}}]}}]}}
+        if node["contentId"] in (members or []):
+            node["metadata"]["lockupMetadataViewModel"]["badges"] = [{"badgeViewModel": {
+                "badgeText": "Members only", "badgeStyle": "BADGE_MEMBERS_ONLY"}}]
     data = {"metadata": {"channelMetadataRenderer": {"externalId": identity}},
             "contents": {"twoColumnBrowseResultsRenderer": {"tabs": [{"tabRenderer": {
                 "title": selected, "selected": True, "content": {"richGridRenderer": {"contents": cards}}}}]}}}
@@ -108,6 +116,42 @@ class WallSourceTests(unittest.TestCase):
         rows, _ = wall.parse_feed(body, s, STAMP)
         self.assertEqual(rows[0]["format"], "video")
         self.assertEqual(rows[0]["published_at"], "2026-11-01T10:00:00Z")
+
+    def test_new_channel_selection_skips_short_promotional_and_members_only_cards(self):
+        s = source("thinking-basketball")
+        entries = [("abcdefghij" + str(i), title) for i, title in enumerate([
+            "Synthetic brief clip", "Synthetic private analysis", "Synthetic #Shorts clip",
+            "Channel trailer", "Synthetic public analysis one", "Synthetic public analysis two",
+            "Synthetic public analysis three", "Synthetic public analysis four"])]
+        durations = {video: "12:34" for video, _ in entries}
+        durations[entries[0][0]] = "2:59"
+        rows, stats = wall.parse_feed(channel(wall.YOUTUBE_CHANNEL_IDS[s["id"]], entries,
+                                            durations=durations, members=[entries[1][0]]), s, STAMP)
+        self.assertEqual([row["title"] for row in rows], [title for _, title in entries[4:7]])
+        self.assertEqual(stats["filtered_count"], 4)
+        self.assertEqual(stats["window_truncated_count"], 1)
+        self.assertTrue(all(row["duration"] == "12:34" for row in rows))
+        self.assertTrue(all(row["published_at"] is None for row in rows))
+
+    def test_formula1_video_selection_focuses_on_analysis_and_race_coverage(self):
+        s = source("formula1-video")
+        entries = [("abcdefghij" + str(i), title) for i, title in enumerate([
+            "Synthetic Palmer's Analysis", "Synthetic Top 10 Onboards", "Radio Rewind Synthetic Race",
+            "Synthetic Driver Interview", "Race Highlights Synthetic Grand Prix", "Qualifying Highlights Fixture"])]
+        rows, stats = wall.parse_feed(channel(wall.YOUTUBE_CHANNEL_IDS[s["id"]], entries), s, STAMP)
+        self.assertEqual([row["title"] for row in rows], [entries[i][1] for i in (0, 1, 4)])
+        self.assertEqual(stats["filtered_count"], 2)
+        self.assertEqual(stats["window_truncated_count"], 1)
+
+    def test_new_channel_identities_have_deliberate_small_limits_and_correct_sections(self):
+        for identity, section in (("ben-felix", "markets"), ("andrej-karpathy", "markets"),
+                                  ("thinking-basketball", "sports"), ("formula1-video", "sports")):
+            with self.subTest(identity=identity):
+                s = source(identity)
+                self.assertEqual(s["section"], section)
+                self.assertEqual(wall.YOUTUBE_CHANNEL_LIMITS[identity], 2 if identity == "andrej-karpathy" else 3)
+                self.assertTrue(wall.YOUTUBE_CHANNEL_IDS[identity].startswith("UC"))
+                self.assertEqual(s["kind"], "public_youtube_channel")
 
     def test_kobeissi_identity_is_a_gap_not_a_fabricated_feed(self):
         payload = wall.empty_payload()
