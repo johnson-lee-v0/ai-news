@@ -1,13 +1,185 @@
 {
-  "reviewed_at": "2026-11-03T14:13:02+00:00",
-  "headline": "AI sales and cash grow; future commitments still carry execution risk.",
+  "reviewed_at": "2026-11-04T13:48:33+00:00",
+  "headline": "AI chip sales grow; funding and cash conversion still matter.",
   "bullets": [
-    "Anthropic’s amended filing adds September financials and a source-defined schedule of future commitments. Positive operating cash is separate from financing and the cost of future capacity.",
-    "Palantir, Lumentum and onsemi report realized sales growth. Contract values, companywide margins and customer returns measure different things.",
-    "Drax’s first proposed phase targets 2028 with major approvals still pending. Meta’s reported bond discussions establish no new financing proceeds."
+    "AMD’s record data-center sales coexist with weaker quarterly cash conversion. Initial Helios customer workloads are a limited vendor-reported milestone, not fleet utilization.",
+    "Meta has priced $15bn of dollar bonds and reports received preferred-option proceeds. The euro issue remains preliminary; neither face value nor future commitments equal cash received."
   ],
   "notice": "Selected public evidence and financing relationships, reviewed on the displayed dates. Material verified updates may be published through the approved daily workflow; this remains a dated snapshot, not a live or exhaustive feed. X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "meta-financing-20261026",
+      "title": "Meta prices $15bn of debt; preferred option adds cash",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526446110/d44678d424b5.htm",
+      "published_at": "2026-11-04",
+      "event_date": "2026-11-03",
+      "date_kind": "filing_date",
+      "date_precision": "day",
+      "source_id": "meta-euro-prelim-20261104",
+      "source_name": "Meta · SEC prospectus and pricing sheet via public mirrors",
+      "source_role": "primary",
+      "reviewed_at": "2026-11-04T13:48:33+00:00",
+      "lens": "funding",
+      "entities": [
+        "Meta",
+        "NVIDIA",
+        "AMD",
+        "Broadcom"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure",
+        "models"
+      ],
+      "rank": 1,
+      "relevance": "material",
+      "observation": "Meta priced $15bn of dollar notes on November 3. Its November 4 filing also reports $1.869bn of preferred-option net proceeds received November 2.",
+      "summary": "Dollar debt is priced but settlement is ahead; the euro prospectus remains preliminary.",
+      "implication": "Priced debt and received preferred cash improve funding access. Settlement, fixed payments and returns from deployed capacity remain separate tests.",
+      "access_note": "SEC submissions metadata downloaded. Direct original and mirror HTML failed. Selected filing paragraphs and the pricing-term-sheet table were read through ordinary public search-reader mirror output; stored hashes cover reader excerpts, not original filing bytes. Linked StockTitan and StreetInsider excerpts are the accessed reproductions; they are not independent corroboration.",
+      "source_date_note": "Euro supplement filed November 4 at 11:01UTC; dollar pricing November 3 and expected settlement November 5. Preferred option exercised October 29, issued and net proceeds received November 2.",
+      "claim_type": "filed pricing and proceeds; forward settlement and preliminary euro terms distinguished; implications are inference",
+      "beneficiaries": "Meta gains financing flexibility; suppliers benefit only as equipment and services are accepted and paid for.",
+      "risks": "New interest and preferred dividends increase fixed obligations; financing does not establish utilization or a return on the buildout.",
+      "counterevidence": "Pricing and the received preferred-option cash rebut a blanket shut-financing thesis. The euro amount remains blank, and priced debt is not yet confirmed cash.",
+      "confirms": "Confirmed dollar closing/net proceeds, any final euro pricing and collections from deployed AI infrastructure.",
+      "refutes": "Settlement failure, materially worse further terms or persistent cash deficits would weaken the funding and returns case.",
+      "uncertainty": "Dollar net proceeds and closing are not verified as of November 4. Euro size/coupons/maturities are blank; common-forward settlement, ATM sales and supplier final allocations remain unverified.",
+      "publication_note": "November 4 update replaces the prior unpriced dollar-bond report in the existing story. Earlier preferred/base/common/ATM history remains dated context.",
+      "highlights": [
+        {
+          "title": "Dollar debt has priced; cash settlement is next",
+          "observation": "Five series total $15bn face principal, with coupons from 5.85% to 7.50% and maturities 2031–2056. The pricing sheet gives November 3 trade and November 5 expected settlement.",
+          "implication": "The funding stage advances beyond discussion. Do not book face value as received cash or net proceeds.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526445646/d186765dfwp.htm",
+          "source_date": "2026-11-03",
+          "claim_type": "filed pricing terms via public indexed mirror excerpt"
+        },
+        {
+          "title": "Preferred option delivers an incremental $1.869bn net",
+          "observation": "Underwriters exercised 37.5m additional depositary shares October 29; Meta issued them November 2 and reports approximately $1.869bn net proceeds received.",
+          "implication": "This is the option within the earlier preferred offering, not a new standalone raise. Base gross size and option net proceeds cannot be added as a net-cash total.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526446110/d44678d424b5.htm",
+          "source_date": "2026-11-04",
+          "claim_type": "filed completed issuance and net proceeds"
+        },
+        {
+          "title": "Euro financing is still preliminary",
+          "observation": "The November 4 supplement proposes six euro senior-note series but leaves size, coupons, maturity dates and estimated net proceeds blank. It states general corporate purposes.",
+          "implication": "Neither the earlier cross-border headline nor the new filing establishes euro cash or an AI-specific allocation.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526446110/d44678d424b5.htm",
+          "source_date": "2026-11-04",
+          "claim_type": "preliminary filed offering, not completed borrowing"
+        },
+        {
+          "title": "A negative outlook is not a rating downgrade",
+          "observation": "S&P changed Meta’s outlook from stable to negative on October 30; its AA− rating remained unchanged.",
+          "implication": "The action signals greater credit concern, not default, failed financing or a new probability estimate. Future borrowing costs depend on market terms and any later rating action.",
+          "claim_type": "rating-agency action; implication is analysis",
+          "source_url": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3652897",
+          "source_date": "2026-10-30"
+        },
+        {
+          "title": "NVIDIA's proposed $3bn is inside the offering",
+          "claim_type": "issuer proposed investment and collaboration",
+          "observation": "NVIDIA announced proposed participation and expanded hardware/model work on October 26. No completed investment, quantified shipment or realized sales figure was established.",
+          "implication": "Do not add $3bn to the offering total or to the earlier aggregate up-to-$5bn supplier indications. Equity exposure and hardware revenue are different flows.",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+          "source_date": "2026-10-26"
+        },
+        {
+          "title": "The earlier ATM remains a separate plan",
+          "claim_type": "prior proposal retained as historical context",
+          "observation": "The October 26 launch also described a future roughly $60bn Class C ATM. Establishment and completed sales have not been verified in this update.",
+          "implication": "Keep it separate from priced offerings and cash received. The earlier $95bn headline is not a current cash balance.",
+          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "source_date": "2026-10-26"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "Priced debt and received preferred cash improve funding access. Settlement, fixed payments and returns from deployed capacity remain separate tests.",
+        "worth_reading": "dig_deeper",
+        "rationale": "New priced dollar debt and completed preferred-option proceeds change the earlier proposal story. Read the settlement and gross-versus-net boundaries; the euro filing is still preliminary.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T13:48:33+00:00",
+        "content_hash": "0a116bc0835ba8fc846bdebaa27d1855569675277ca07d1deddf3d79252c7cf3"
+      }
+    },
+    {
+      "id": "amd-q3-results-20261103",
+      "title": "AMD sales accelerate; inventory and receivables absorb cash",
+      "url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+      "published_at": "2026-11-03T21:15:00Z",
+      "event_date": "2026-11-03",
+      "date_kind": "issuer_release",
+      "date_precision": "minute",
+      "source_id": "amd-q3-20261103-release",
+      "source_name": "AMD · Q3 earnings release",
+      "source_role": "primary",
+      "lens": "earnings",
+      "relevance": "material",
+      "reviewed_at": "2026-11-04T13:48:33+00:00",
+      "report_period": "Quarter ended September 26, 2026; Q4 2026 guidance",
+      "entities": [
+        "AMD",
+        "Anthropic",
+        "Meta",
+        "Microsoft",
+        "OpenAI",
+        "Oracle"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure"
+      ],
+      "rank": 2,
+      "claim_type": "Reported results; initial-workload statement and guidance are management claims; implications are analysis",
+      "observation": "Q3 revenue was $13.377bn, including $8.546bn from Data Center. Continuing operating cash was $1.202bn; company-defined free cash flow was $554m.",
+      "summary": "November 3 results provide new supplier operating evidence. Data Center includes CPUs and other products, not only AI GPUs.",
+      "implication": "Chip demand is reaching recognized sales, but the ramp consumes working capital. Accepted deliveries and collections determine cash returns.",
+      "beneficiaries": "AMD and its chip, memory, networking and systems suppliers if production is accepted and paid for.",
+      "risks": "Inventory, receivables, delivery execution and customer funding can separate revenue growth from cash returns.",
+      "counterevidence": "Quarterly free cash flow stayed positive; nine-month continuing operating cash and free cash flow increased year over year. Ramp inventory is not proof of obsolete stock or bad debts.",
+      "confirms": "Repeat workloads, accepted Helios deliveries and improving collections and inventory conversion.",
+      "refutes": "Cancellations, delayed acceptance or inventory and receivables growing without corresponding collections.",
+      "uncertainty": "No AI-only revenue, fleet deployment scale, utilization or customer profitability disclosed. Call, deck and Q3 10-Q were not reviewed.",
+      "source_date_note": "Release November 3 at 16:15 ET; reviewed November 4. Reported quarter ends September 26. Q4 guidance is prospective.",
+      "access_note": "Full issuer release and financial tables read through a public web reader. Direct download returned 403; preserved hashes describe reader text, not original HTML bytes.",
+      "highlights": [
+        {
+          "title": "Revenue growth has a cash cost",
+          "observation": "Data Center sales rose 97% year over year. Quarterly continuing operating cash fell from $2.366bn in Q2; inventory and receivables used $2.995bn and $1.928bn.",
+          "implication": "Working-capital conversion matters alongside booked sales.",
+          "claim_type": "Reported financial results; interpretation is inference",
+          "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+          "source_date": "2026-11-03"
+        },
+        {
+          "title": "Initial workloads are a limited delivery milestone",
+          "observation": "AMD says first Helios systems run customer models and workloads. Deployment scale is undisclosed.",
+          "implication": "This advances beyond a purchase announcement without establishing fleet utilization or customer returns.",
+          "claim_type": "Vendor statement, not independently measured utilization",
+          "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+          "source_date": "2026-11-03"
+        },
+        {
+          "title": "Higher sales guidance does not ensure higher margins",
+          "observation": "Q4 revenue guidance is $17bn ±3%; non-GAAP gross margin guidance is 55%, versus 56% reported in Q3.",
+          "implication": "Watch product mix and ramp costs as volume grows.",
+          "claim_type": "Management guidance versus reported non-GAAP result",
+          "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+          "source_date": "2026-11-03"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "Chip demand is reaching recognized sales, but the ramp consumes working capital. Accepted deliveries and collections determine cash returns.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Reported chip revenue and cash-flow evidence changes the supply-chain picture. Inspect working capital and distinguish initial workloads from scaled deployment.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T13:48:33+00:00",
+        "content_hash": "184b7651199ab9f92839c91db2f621acc3e73db3c0fc90678985cc4ff9b3b967"
+      }
+    },
     {
       "id": "anthropic-s1-20261026",
       "title": "Anthropic grows sales; new filing dates $895bn of commitments",
@@ -87,7 +259,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
       "source_id": "anthropic-s1a-20261102-source-1",
-      "rank": 1,
+      "rank": 3,
       "relevance": "material",
       "summary": "New September results and a source-defined obligations total update the October 26 filing story.",
       "reading_review": {
@@ -119,7 +291,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 2,
+      "rank": 4,
       "observation": "Q3 revenue rose 96% to $2.313bn. U.S. commercial revenue reached $984m, exceeding U.S. government revenue of $953m.",
       "summary": "Reported profit and cash strengthen the adoption signal; slower contract-value growth limits extrapolation.",
       "implication": "Palantir is converting enterprise software demand into sales and operating cash. AI-specific revenue and customers’ investment returns remain undisclosed.",
@@ -183,7 +355,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 3,
+      "rank": 5,
       "observation": "The companies announced a definitive all-stock acquisition agreement: 4.500 Marvell shares per Lumentum share, with approximately $115 billion implied enterprise value.",
       "summary": "Lumentum’s same-day results add an operating checkpoint: $1.2626 billion quarterly revenue and management-disclosed purchase commitments above $5 billion for a second major near-packaged/co-packaged optics win. The proposed merger still targets closing in the first half of 2028.",
       "implication": "Existing sales and purchase commitments give the optics thesis more substance. Their conversion into collected cash and delivered products matters separately from the all-stock acquisition value.",
@@ -286,7 +458,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 4,
+      "rank": 6,
       "observation": "AI data-center revenue reached $180m, up 175% year over year and 39% sequentially. Total revenue was $1.722bn.",
       "summary": "The reported AI sales line provides a measurable power-chip demand signal within a broader semiconductor business.",
       "implication": "Higher compute power requirements are converting into component sales; companywide results do not establish AI-specific profitability.",
@@ -383,7 +555,7 @@
           "source_date": "2026-11-03"
         }
       ],
-      "rank": 5,
+      "rank": 7,
       "reading_review": {
         "key_takeaway": "The Drax partnership is an early development plan using existing power infrastructure, with tenants, approvals and final investment decisions still ahead.",
         "worth_reading": "skim",
@@ -391,112 +563,6 @@
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
         "reviewed_at": "2026-11-04T05:20:12Z",
         "content_hash": "21386918e474a5bc9b8ebfcba89e5867c080d22fbacbaa77be44ffe1c5859618"
-      }
-    },
-    {
-      "id": "meta-financing-20261026",
-      "title": "Meta reportedly explores $20bn-plus bond sale",
-      "url": "https://kfgo.com/2026/11/02/meta-eyes-at-least-20-billion-from-potential-bond-offerings-bloomberg-news-reports/",
-      "published_at": "2026-11-02",
-      "event_date": "2026-11-02",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "source_id": "meta-bond-plan-20261102",
-      "source_name": "Reuters via KFGO · citing Bloomberg",
-      "source_role": "secondary",
-      "reviewed_at": "2026-11-03T14:13:02+00:00",
-      "lens": "funding",
-      "entities": [
-        "Meta",
-        "NVIDIA",
-        "AMD",
-        "Broadcom"
-      ],
-      "ai_layers": [
-        "chips",
-        "infrastructure",
-        "models"
-      ],
-      "rank": 6,
-      "relevance": "material",
-      "observation": "Reuters, citing Bloomberg, reports Meta considering at least $20bn of cross-border bonds. No final decision or pricing is established.",
-      "summary": "A new reported debt proposal follows the prior preferred closing and negative credit outlook; it establishes no additional cash.",
-      "implication": "Another debt route could support the buildout. Funding costs and cash returns depend on final terms and execution.",
-      "access_note": "Full Reuters syndication retrieved and read; Reuters cites Bloomberg unnamed sources, forming one reporting chain. The November 3 SEC prospectus body was inaccessible. Earlier S&P action was verified in official indexed records, while its full analysis was unavailable; prior filed financing retains public-mirror provenance.",
-      "source_date_note": "Debt-discussion report published November 2; reported investor calls November 2–3. Earlier preferred closing October 29 and S&P outlook action October 30 are retained context.",
-      "claim_type": "attributed report of financing discussions; prior filed terms and rating action retain their original dates",
-      "beneficiaries": "Meta has completed preferred financing; suppliers still depend on accepted equipment and paid usage.",
-      "risks": "Dilution, preferred dividends, settlement adjustments and capacity delays remain. Supplier equity adds shared exposure to customer execution.",
-      "counterevidence": "The debt decision and size remain open. Meta’s AA− rating remains unchanged, and its prior preferred offering closed; neither establishes that future spending will earn adequate returns.",
-      "confirms": "Issuer-confirmed pricing, closing and net proceeds would establish new financing; collected revenue and spending discipline would support the cash-return case.",
-      "refutes": "Withdrawal, materially worse final terms or persistent cash deficits would weaken the financing and returns case.",
-      "uncertainty": "No issuer-confirmed debt amount, coupon, allocation, close or net proceeds. Meta and the banks did not immediately respond to Reuters. Earlier option exercise, supplier allocations and ATM sales remain unverified; the November 3 prospectus body was unavailable.",
-      "publication_note": "November 3 review adds a reported unpriced debt proposal to this existing story. Prior six dated highlights are retained; no new financing-map cash edge.",
-      "highlights": [
-        {
-          "title": "New debt remains a reported proposal",
-          "observation": "Reuters, citing Bloomberg unnamed sources, reports investor calls for November 2–3 concerning at least $20bn of dollar and euro bonds. No final decision has been made; size may change.",
-          "implication": "Keep this separate from the closed preferred offering, deferred common-forward proceeds and earlier ATM plan. It is not priced borrowing or cash received.",
-          "source_url": "https://kfgo.com/2026/11/02/meta-eyes-at-least-20-billion-from-potential-bond-offerings-bloomberg-news-reports/",
-          "source_date": "2026-11-02",
-          "claim_type": "Reuters attribution to Bloomberg unnamed sources"
-        },
-        {
-          "title": "A negative outlook is not a rating downgrade",
-          "observation": "S&P changed Meta’s outlook from stable to negative on October 30; its AA− rating remained unchanged.",
-          "implication": "The action signals greater credit concern, not default, failed financing or a new probability estimate. Future borrowing costs depend on market terms and any later rating action.",
-          "claim_type": "rating-agency action; implication is analysis",
-          "source_url": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3652897",
-          "source_date": "2026-10-30"
-        },
-        {
-          "title": "Credit assessment depends on future cash returns",
-          "observation": "S&P questions how long elevated spending and negative free operating cash flow will persist. Reuters reports that Meta disputed the agency’s assessment of its AI monetization.",
-          "implication": "Follow collected revenue, spending discipline and lease-adjusted leverage. A rating agency’s scenario is not Meta guidance or proof that AI investments will fail.",
-          "claim_type": "attributed agency assessment and company response; implication is analysis",
-          "source_url": "https://uk.marketscreener.com/news/s-p-global-revises-meta-s-outlook-to-negative-on-ai-spending-cash-flow-worries-ce785fdbd081ff2c",
-          "source_date": "2026-10-30"
-        },
-        {
-          "title": "Preferred financing closes; common cash waits",
-          "claim_type": "filed closing and forward terms",
-          "observation": "The 250m depositary-share base offering closed October 29. Its previously priced gross size is $12.5bn, with a 6.5% dividend and August 2029 mandatory conversion. The $25bn common forward gives Meta no initial proceeds; future settlement is due by November 19, 2027.",
-          "implication": "Closing reduces one funding uncertainty; gross offering size is not net cash. Deferred common proceeds and productive equipment deployment remain separate milestones.",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm",
-          "source_date": "2026-10-29"
-        },
-        {
-          "title": "NVIDIA's proposed $3bn is inside the offering",
-          "claim_type": "issuer proposed investment and collaboration",
-          "observation": "NVIDIA announced proposed participation and expanded hardware/model work on October 26. No completed investment, quantified shipment or realized sales figure was established.",
-          "implication": "Do not add $3bn to the offering total or to the earlier aggregate up-to-$5bn supplier indications. Equity exposure and hardware revenue are different flows.",
-          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
-          "source_date": "2026-10-26"
-        },
-        {
-          "title": "The earlier ATM remains a separate plan",
-          "claim_type": "prior proposal retained as historical context",
-          "observation": "The October 26 launch also described a future roughly $60bn Class C ATM. Establishment and completed sales have not been verified in this update.",
-          "implication": "Keep it separate from priced offerings and cash received. The earlier $95bn headline is not a current cash balance.",
-          "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-          "source_date": "2026-10-26"
-        },
-        {
-          "title": "AMD adds a disclosed $1bn participation",
-          "observation": "AMD says it will invest $1bn. Initial Helios racks are installed and being tested, while other Instinct GPUs already run in production.",
-          "implication": "The $1bn is inside the existing offering and earlier supplier-interest aggregate. Initial testing is not a completed broad Helios rollout; no new order value is disclosed.",
-          "source_url": "https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure",
-          "source_date": "2026-10-27",
-          "claim_type": "issuer investment intention and equipment testing status"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "Meta’s reported bond proposal is another potential funding route; final terms and cash proceeds were not established in the saved review.",
-        "worth_reading": "dig_deeper",
-        "rationale": "The funding scale is material, but the report is one secondary sourcing chain. Read the distinction between a proposed issue, prior closed funding and returns on future spending.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z",
-        "content_hash": "79d60f23cecc349fc09e4cb10c3fcc230f4fe1b1e118023486e05951c3bc09f3"
       }
     },
     {
@@ -522,7 +588,7 @@
         "energy",
         "infrastructure"
       ],
-      "rank": 7,
+      "rank": 8,
       "relevance": "material",
       "observation": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
       "summary": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
@@ -588,7 +654,7 @@
       ],
       "lens": "capacity",
       "relevance": "material",
-      "rank": 8,
+      "rank": 9,
       "observation": "Google announced $160m of funding for shared water infrastructure in Negeri Sembilan and appointed Gamuda to build a reservoir and treatment plant serving its future Port Dickson campus and the public.",
       "summary": "Planned treatment capacity is 65 million liters a day. The facilities are to become state-owned upon completion; this is a development commitment, with payments and commissioning unverified.",
       "implication": "Compute expansion needs utilities before workloads can run. Google is funding enabling infrastructure, creating potential construction demand while leaving delivery timing and actual compute usage unproven.",
@@ -653,7 +719,7 @@
         "models",
         "applications"
       ],
-      "rank": 9,
+      "rank": 10,
       "relevance": "watch",
       "observation": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
       "summary": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
@@ -717,7 +783,7 @@
       ],
       "lens": "policy",
       "relevance": "material",
-      "rank": 10,
+      "rank": 11,
       "observation": "The court denied X.AI Corp. and MZX Tech LLC’s dismissal motion in the Southaven power-plant case. It rejected their mobile-source exemption argument; the claims proceed.",
       "summary": "The October 30 ruling concerns Mississippi power supplying Colossus 2 in Memphis. It is not a final liability or damages judgment.",
       "implication": "Installed turbines do not remove permitting risk. Later remedies could add cost or constrain power supply, but this order establishes no outage or lost compute revenue.",
@@ -784,7 +850,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 11,
+      "rank": 12,
       "observation": "The 10-Q confirms $50bn invested in OpenAI by September 30 and discloses up to approximately $80bn of supplier credit with draws permitted from 2027.",
       "summary": "The prior earnings story gains filed investment status and future financing terms, rather than a new earnings event.",
       "implication": "Funding customers and supplying their compute deepens shared exposure; future equipment credit helps timing but still requires cash returns.",
@@ -895,7 +961,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 12,
+      "rank": 13,
       "observation": "Reuters, citing the FT, reports OpenAI cut its fundraising target by $10bn to about $20bn. A first close was still expected below that target.",
       "summary": "The reported raise target is smaller; no closed round, funded cash or cancelled compute contract is established.",
       "implication": "A smaller raise could tighten the timing of compute spending. It does not establish cancelled contracts, lower paid usage or weaker AI demand.",
@@ -947,7 +1013,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 13,
+      "rank": 14,
       "observation": "An unnamed customer intends to cancel an A$8.8m project. DXN expects payment for completed and committed work; cancellation remains unfinalized.",
       "summary": "An unnamed US-listed neocloud changed strategy; the larger follow-on campus is unlikely.",
       "implication": "Progress-payment protections can cushion cancellations, but backlog still depends on acceptance and collection. One customer’s retreat does not establish industry-wide demand collapse.",
@@ -1012,7 +1078,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 14,
+      "rank": 15,
       "observation": "Microsoft’s October 30 filing confirms $25bn of senior unsecured notes priced October 29 across ten tranches. Delivery against payment is expected November 4; no settled cash is established today.",
       "summary": "This updates the existing earnings and funding review: an open financing option is now a priced transaction, with settlement still ahead.",
       "implication": "Borrowing can support the spending ramp once settled, but adds debt service; it does not prove new capacity is operating or that AI investment is paying back.",
@@ -1124,7 +1190,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 15,
+      "rank": 16,
       "observation": "Intel reports Data Center and AI revenue of $7.3bn, up 78%, while client revenue fell 5%. Q4 group revenue is guided below Q3 despite further expected server growth.",
       "summary": "Real server sales and profit strengthen the CPU case; memory costs, factory disruption and expansion funding limit the group-level benefit.",
       "implication": "AI infrastructure is benefiting CPUs as well as GPUs, but memory costs hurt PC demand while manufacturing and packaging constraints limit server deliveries.",
@@ -1201,7 +1267,7 @@
       "source_role": "primary",
       "lens": "earnings",
       "relevance": "material",
-      "rank": 16,
+      "rank": 17,
       "event_date": "2026-10-29",
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "report_period": "Fiscal Q1 2027, quarter ended October 2, 2026",
@@ -1282,7 +1348,7 @@
       "source_role": "primary",
       "lens": "models",
       "relevance": "material",
-      "rank": 17,
+      "rank": 18,
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "claim_type": "issuer release; vendor benchmark claims; conditional inference",
       "entities": [
@@ -1365,7 +1431,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 18,
+      "rank": 19,
       "observation": "Reuters, citing The Information, reports unsigned NVIDIA credit-support talks for Nscale’s West Virginia project serving Anthropic. Proposed support would cover power and construction; final terms remain unsettled.",
       "summary": "A financing watch item, with earlier filed contract terms as context.",
       "implication": "If agreed, supplier backing could help a project borrow before customer payments begin, while making chip sales and credit exposure more dependent on the same buildout.",
@@ -1431,7 +1497,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 19,
+      "rank": 20,
       "report_period": "Q3 ended September 30, 2026; later capacity and spending are management plans",
       "claim_type": "issuer-reported K-IFRS results before external review; management outlook; conditional analysis",
       "observation": "Revenue was KRW195.3tn and operating profit KRW107.4tn. Device Solutions generated KRW106.5tn operating profit, while Device eXperience lost KRW0.8tn.",
@@ -1510,7 +1576,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 20,
+      "rank": 21,
       "observation": "Power Generation sales rose 30% to $3.421bn. Power & Energy segment profit rose 31% to $2.143bn, with a 24.4% margin versus 21.9% a year earlier.",
       "summary": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
       "implication": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
@@ -1588,7 +1654,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 21,
+      "rank": 22,
       "observation": "Q3 revenue was $2.571bn, up 11%, with $2.442bn recurring revenue. Annualized gross bookings were $533m; these are not recognized revenue or cash.",
       "summary": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
       "implication": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
@@ -1684,7 +1750,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 22,
+      "rank": 23,
       "observation": "Oracle’s October 28 Investor Day targets positive free cash flow in fiscal H2 2028 and at least $30bn in FY2029. It expects at most $20bn in additional capital raises through FY2030, excluding refinancings.",
       "summary": "New financing and cash-flow targets qualify the earlier chip-rollout story; existing hardware milestones are retained below.",
       "implication": "Vendor financing and customer advances can lower upfront cash needs, but shift obligations rather than proving the buildout already funds itself.",
@@ -1784,7 +1850,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 23,
+      "rank": 24,
       "observation": "Q3 Cloud revenue was $30.709bn, up 103%, with $11.121bn operating profit and a 36.2% segment margin. The full third-party call transcript adds Q4 cost pressure and cash-flow context; no company-edited transcript reviewed.",
       "summary": "Release/deck figures plus prepared remarks and Q&A reproduced by StockAnalysis/Quartr. New call statements are attributed management claims.",
       "implication": "External compute can ease supply constraints, but its cost pressures near-term Cloud margins while cash awaits delivery and collection.",
@@ -1894,7 +1960,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 24,
+      "rank": 25,
       "observation": "Q3 sales reached $4.3128bn, up 61.2% (55% organic). GAAP operating profit was $983.8m; adjusted operating profit was $1,086.9m.",
       "summary": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
       "implication": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
@@ -1966,7 +2032,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 25,
+      "rank": 26,
       "observation": "C&I external sales rose 28% to about $552m. Data-center backlog is approximately $4.5bn; Amazon’s expected initial 2027–28 deliveries total $2.4bn.",
       "summary": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
       "implication": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
@@ -2085,7 +2151,7 @@
       ],
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
-      "rank": 26,
+      "rank": 27,
       "relevance": "material",
       "reading_review": {
         "key_takeaway": "SK hynix’s memory profits support the scarcity thesis, while weaker sequential operating cash and higher investment keep cash conversion in focus.",
@@ -2164,7 +2230,7 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 27,
+      "rank": 28,
       "relevance": "material",
       "reading_review": {
         "key_takeaway": "Corning’s optical growth is reaching segment earnings, but changed core-currency methodology and uneven performance elsewhere limit broad comparisons.",
@@ -2196,7 +2262,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 28,
+      "rank": 29,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -2252,7 +2318,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 29,
+      "rank": 30,
       "relevance": "material",
       "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
       "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
@@ -2374,7 +2440,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 30,
+      "rank": 31,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone.",
       "reading_review": {
@@ -2464,7 +2530,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 31,
+      "rank": 32,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement.",
       "reading_review": {
@@ -2504,7 +2570,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 32,
+      "rank": 33,
       "event_date": "2026-10-25",
       "reviewed_at": "2026-10-25T20:55:54Z",
       "claim_type": "investor opinion / executive claim; counterevidence sourced",
@@ -2575,7 +2641,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 33,
+      "rank": 34,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -2661,7 +2727,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 34,
+      "rank": 35,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -2697,7 +2763,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 35,
+      "rank": 36,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -2732,7 +2798,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 36,
+      "rank": 37,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -2769,7 +2835,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 37,
+      "rank": 38,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -2814,7 +2880,7 @@
         "models",
         "applications"
       ],
-      "rank": 38,
+      "rank": 39,
       "relevance": "watch",
       "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
       "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
@@ -4690,6 +4756,78 @@
         "funding"
       ],
       "access_note": "Full public syndication read. Latest prospectus body unavailable; its metadata supplies no economic confirmation."
+    },
+    {
+      "id": "amd-q3-20261103-release",
+      "name": "AMD · November 3 Q3 results",
+      "url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+      "role": "primary",
+      "kind": "issuer_release",
+      "source_date": "2026-11-03",
+      "reviewed_at": "2026-11-04T13:48:33+00:00",
+      "topics": [
+        "earnings",
+        "demand",
+        "capacity"
+      ],
+      "quality_note": "Reported quarter financials; management workload claims and Q4 guidance separately identified. Data Center is not AI-only revenue.",
+      "access_note": "Full issuer release and financial tables read through a public web reader. Direct download returned 403; preserved hashes describe reader text, not original HTML bytes."
+    },
+    {
+      "id": "meta-euro-prelim-20261104",
+      "name": "Meta · November4 preliminary euro prospectus",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526446110/d44678d424b5.htm",
+      "role": "primary",
+      "kind": "sec_filing",
+      "source_date": "2026-11-04",
+      "reviewed_at": "2026-11-04T13:48:33+00:00",
+      "quality_note": "Filed recent developments establish dollar pricing and preferred-option cash; euro terms remain blank.",
+      "topics": [
+        "funding"
+      ],
+      "access_note": "SEC submissions metadata downloaded. Direct original and mirror HTML failed. Selected filing paragraphs and the pricing-term-sheet table were read through ordinary public search-reader mirror output; stored hashes cover reader excerpts, not original filing bytes."
+    },
+    {
+      "id": "meta-usd-fwp-20261103",
+      "name": "Meta · November3 dollar-note pricing term sheet",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526445646/d186765dfwp.htm",
+      "role": "primary",
+      "kind": "sec_filing",
+      "source_date": "2026-11-03",
+      "reviewed_at": "2026-11-04T13:48:33+00:00",
+      "quality_note": "Priced terms and expected settlement, not settled cash.",
+      "topics": [
+        "funding"
+      ],
+      "access_note": "Pricing table read in public indexed StreetInsider mirror excerpt. Original body inaccessible; preserved reader-text hash is not an original filing hash."
+    },
+    {
+      "id": "meta-public-mirror-20261104-1",
+      "name": "StockTitan · selected Meta prospectus paragraphs",
+      "url": "https://www.stocktitan.net/sec-filings/META/424b5-meta-platforms-inc-prospectus-supplement-debt-securities-794738fc8749.html",
+      "role": "secondary",
+      "kind": "filing_reproduction",
+      "source_date": "2026-11-04",
+      "reviewed_at": "2026-11-04T13:48:33+00:00",
+      "topics": [
+        "funding"
+      ],
+      "quality_note": "Reproduction of issuer filing, not independent corroboration. Selected text accessed via public indexed reader; full body was unavailable.",
+      "access_note": "Excerpt scope. Original filing identity cross-checked with SEC submissions metadata; preserved hash covers reader output."
+    },
+    {
+      "id": "meta-public-mirror-20261104-2",
+      "name": "StreetInsider · Meta pricing term sheet excerpt",
+      "url": "https://new.streetinsider.com/SEC%2BFilings/Form%2B%2BFWP%2B%2B%2B%2B%2B%2B%2B%2BMeta%2BPlatforms%2C%2BInc.%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2BFiled%2Bby%3A%2BMeta%2BPlatforms%2C%2BInc./27283653.html",
+      "role": "secondary",
+      "kind": "filing_reproduction",
+      "source_date": "2026-11-03",
+      "reviewed_at": "2026-11-04T13:48:33+00:00",
+      "topics": [
+        "funding"
+      ],
+      "quality_note": "Reproduction of issuer filing, not independent corroboration. Selected text accessed via public indexed reader; full body was unavailable.",
+      "access_note": "Excerpt scope. Original filing identity cross-checked with SEC submissions metadata; preserved hash covers reader output."
     }
   ],
   "ledger": [
@@ -5508,28 +5646,34 @@
       "to_entity": "Meta",
       "instrument": "equity",
       "currency": "USD bn",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm",
-      "source_date": "2026-10-29",
-      "as_of": "2026-10-29",
-      "reviewed_at": "2026-10-30T12:26:30+00:00",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526446110/d44678d424b5.htm",
+      "source_date": "2026-11-04",
+      "as_of": "2026-11-04T13:46:24.433923+00:00",
+      "reviewed_at": "2026-11-04T13:46:24.433923+00:00",
       "flow_type": "money",
       "revenue_status": "Not revenue.",
       "id": "meta-convertible-preferred-20261026",
       "from_entity": "Preferred investors",
-      "amount": 12.5,
-      "status": "closed October 29; net proceeds not specified here",
-      "flow_label": "Closed preferred equity",
-      "payment_status": "Base offering closed; $12.5bn is gross base size. Net cash and option exercise not established.",
-      "note": "Closed base offering: 250m depositary shares. The $12.5bn amount retains the previously priced gross base size, not a new raise, net proceeds or assumed option exercise. The 6.5% dividend and August 2029 mandatory conversion remain.",
-      "uncertainty": "Options and net cash amount unverified.",
+      "amount": 14.375,
+      "status": "base closed October 29; option shares issued November 2",
+      "flow_label": "Closed preferred equity incl. option",
+      "payment_status": "Approximately $1.869bn net option proceeds received November 2. Combined net proceeds not established here.",
+      "note": "Calculated $14.375bn gross size: 250m base plus 37.5m additional depositary shares at the previously priced $50 each. Includes the earlier $12.5bn base and $1.875bn gross option; do not add those components again. The November 4 filing reports only the option net amount here, approximately $1.869bn.",
+      "uncertainty": "Total net cash, including the previously closed base, is not calculated from mixed gross and net values.",
       "risk": "Dividend burden and economic dilution.",
       "overlap_group": "meta-preferred-20261026",
-      "changed_at": "2026-10-29",
+      "changed_at": "2026-11-02",
       "sources": [
         {
-          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-          "title": "Prior October 26 offering launch",
-          "date": "2026-10-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm",
+          "title": "Earlier base closing and forward settlement",
+          "date": "2026-10-29",
+          "role": "primary"
+        },
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Pricing-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "title": "Earlier $50 depositary-share pricing",
+          "date": "2026-10-27",
           "role": "primary"
         }
       ]
@@ -5848,6 +5992,36 @@
       "risk": "Debt service and asset collateral remain exposed to weaker investment returns.",
       "uncertainty": "Facility signing date, lender names, exact draws and final total are not established. October 30 is the filing date, not a claimed new signing.",
       "overlap_group": "amazon-supplier-credit-facility-2026"
+    },
+    {
+      "id": "meta-usd-bonds-20261103",
+      "from_entity": "Bond investors",
+      "to_entity": "Meta",
+      "instrument": "debt",
+      "amount": 15,
+      "currency": "USD bn",
+      "status": "priced November 3; November 5 settlement pending",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526445646/d186765dfwp.htm",
+      "source_date": "2026-11-03",
+      "as_of": "2026-11-04T13:46:24.433923+00:00",
+      "reviewed_at": "2026-11-04T13:46:24.433923+00:00",
+      "changed_at": "2026-11-03",
+      "flow_type": "money",
+      "flow_label": "Priced senior notes",
+      "payment_status": "Expected settlement November 5; no received cash or net proceeds independently confirmed as of November 4.",
+      "revenue_status": "Borrowing is not revenue.",
+      "note": "Five dollar series with $15bn face principal, coupons 5.85%–7.50% and maturities 2031–2056. Separate from the preliminary euro issue, common forward and preferred equity.",
+      "risk": "Fixed interest and refinancing obligations; financing does not establish productive utilization or returns.",
+      "uncertainty": "Actual closing, net proceeds and specific use allocation remain unverified.",
+      "overlap_group": "meta-usd-notes-20261103",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526446110/d44678d424b5.htm",
+          "title": "November 4 filing confirms concurrent dollar pricing",
+          "date": "2026-11-04",
+          "role": "primary"
+        }
+      ]
     }
   ],
   "earnings": [
@@ -7441,6 +7615,75 @@
       "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
       "source_date": "2026-11-02",
       "as_of": "2026-09-30"
+    },
+    {
+      "id": "amd-q3-20261103-revenue",
+      "as_of": "2026-11-04T13:45:13+00:00",
+      "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+      "source_date": "2026-11-03",
+      "company": "AMD",
+      "period": "Q3 2026 ended September 26",
+      "metric": "Revenue",
+      "unit": "USD bn",
+      "reported": 13.377,
+      "reported_period": "Q3 2026",
+      "note": "Q4 guidance midpoint $17bn with ±3% range; prospective, not realized revenue.",
+      "guidance": 17,
+      "guidance_period": "Q4 2026"
+    },
+    {
+      "id": "amd-q3-20261103-dc-revenue",
+      "as_of": "2026-11-04T13:45:13+00:00",
+      "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+      "source_date": "2026-11-03",
+      "company": "AMD",
+      "period": "Q3 2026 ended September 26",
+      "metric": "Data Center segment revenue",
+      "unit": "USD bn",
+      "reported": 8.546,
+      "reported_period": "Q3 2026",
+      "note": "Issuer reported results; no consensus supplied."
+    },
+    {
+      "id": "amd-q3-20261103-cfo",
+      "as_of": "2026-11-04T13:45:13+00:00",
+      "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+      "source_date": "2026-11-03",
+      "company": "AMD",
+      "period": "Q3 2026 ended September 26",
+      "metric": "Continuing operating cash flow",
+      "unit": "USD bn",
+      "reported": 1.202,
+      "reported_period": "Q3 2026",
+      "note": "Issuer reported results; no consensus supplied."
+    },
+    {
+      "id": "amd-q3-20261103-fcf",
+      "as_of": "2026-11-04T13:45:13+00:00",
+      "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+      "source_date": "2026-11-03",
+      "company": "AMD",
+      "period": "Q3 2026 ended September 26",
+      "metric": "Company-defined free cash flow",
+      "unit": "USD bn",
+      "reported": 0.554,
+      "reported_period": "Q3 2026",
+      "note": "Company-defined FCF: continuing operating cash $1.202bn less cash PP&E $648m."
+    },
+    {
+      "id": "amd-q3-20261103-nongap-gm",
+      "as_of": "2026-11-04T13:45:13+00:00",
+      "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
+      "source_date": "2026-11-03",
+      "company": "AMD",
+      "period": "Q3 2026 ended September 26",
+      "metric": "Non-GAAP gross margin",
+      "unit": "percent",
+      "reported": 56,
+      "reported_period": "Q3 2026",
+      "note": "Non-GAAP accounting basis; Q4 guidance is prospective.",
+      "guidance": 55,
+      "guidance_period": "Q4 2026"
     }
   ]
 }

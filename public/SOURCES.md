@@ -1,6 +1,20 @@
+# November 4 research update
+
+## November 4 evidence and access
+
+AMD’s November 3 issuer release adds reported sales, working-capital and cash-flow evidence; its call, deck and 10-Q were not reviewed. Meta’s existing story now distinguishes priced dollar debt, received preferred-option cash and a preliminary euro offering. Original SEC body retrieval failed; the exact selected mirror excerpts are linked and identified as reproductions, not independent corroboration.
+
+- [AMD · November 3 Q3 results](https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html), 2026-11-03: Reported quarter financials; management workload claims and Q4 guidance separately identified. Data Center is not AI-only revenue.
+- [Meta · November4 preliminary euro prospectus](https://www.sec.gov/Archives/edgar/data/1326801/000119312526446110/d44678d424b5.htm), 2026-11-04: Filed recent developments establish dollar pricing and preferred-option cash; euro terms remain blank.
+- [Meta · November3 dollar-note pricing term sheet](https://www.sec.gov/Archives/edgar/data/1326801/000119312526445646/d186765dfwp.htm), 2026-11-03: Priced terms and expected settlement, not settled cash.
+- [StockTitan · selected Meta prospectus paragraphs](https://www.stocktitan.net/sec-filings/META/424b5-meta-platforms-inc-prospectus-supplement-debt-securities-794738fc8749.html), 2026-11-04: Reproduction of issuer filing, not independent corroboration. Selected text accessed via public indexed reader; full body was unavailable.
+- [StreetInsider · Meta pricing term sheet excerpt](https://new.streetinsider.com/SEC%2BFilings/Form%2B%2BFWP%2B%2B%2B%2B%2B%2B%2B%2BMeta%2BPlatforms%2C%2BInc.%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2BFiled%2Bby%3A%2BMeta%2BPlatforms%2C%2BInc./27283653.html), 2026-11-03: Reproduction of issuer filing, not independent corroboration. Selected text accessed via public indexed reader; full body was unavailable.
+
+Personal-wall review: the normal 24-item batch plus one targeted non-video F1 follow-up produced 25 current judgments, with no source exceeding four reviews. Seventeen videos were attempted, including twelve full available original YouTube transcripts. Captions and creator claims retain limitations; no footage review is implied. Fourteen eligible items were deferred untouched. All displayed cards have an access judgment; inaccessible material is labeled unavailable rather than recommended. Raw transcripts, private evidence and personal browser state are excluded.
+
 # Public snapshot provenance
 
-Latest daily review **November 3, 2026**: updated Anthropic financials and commitments, Lumentum operating evidence, reported Meta financing discussions, and new Palantir, onsemi and Drax analysis. Prior stories and historical financial periods remain retained. Selected public research only; raw source bodies and private data are excluded.
+Prior daily review **November 3, 2026**: updated Anthropic financials and commitments, Lumentum operating evidence, reported Meta financing discussions, and new Palantir, onsemi and Drax analysis. Prior stories and historical financial periods remain retained. Selected public research only; raw source bodies and private data are excluded.
 
 ## November 3 evidence and access
 
