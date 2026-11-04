@@ -8,20 +8,22 @@
   <title>AI Stock Pulse — evidence before narrative</title>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./finance.css">
+  <link rel="stylesheet" href="./wall.css">
   <script src="./finance.js" defer></script>
   <script src="./visit-state.js" defer></script>
+  <script src="./wall.js" defer></script>
   <script src="./app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="app-shell">
     <header class="masthead">
-      <a class="brand" href="#brief" aria-label="AI Stock Pulse home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>AI Stock <strong>Pulse</strong><small>Evidence before narrative.</small></span></a>
+      <a class="brand" href="#brief" aria-label="AI Stock Pulse home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Your <strong>Pulse</strong><small>Sports. Markets. Your mix.</small></span></a>
       <div class="masthead-actions"><span class="local-label"><span class="status-dot"></span><span id="mode-label">LOCAL / PUBLIC SOURCES</span></span><button id="refresh" class="button primary local-only" type="button"><span aria-hidden="true">↻</span> Refresh sources</button></div>
     </header>
     <nav class="nav primary-nav" aria-label="Main navigation">
-      <a href="#brief" data-nav="brief" class="active" aria-current="page">News</a>
-      <a href="#explore" data-nav="explore">Explore <span aria-hidden="true">↗</span></a>
+      <a href="#sports" data-nav="sports">Sports</a>
+      <a href="#brief" data-nav="brief" class="active" aria-current="page">Markets</a>
     </nav>
     <div id="publication-banner" class="publication-banner" hidden></div>
     <div id="notification" class="notification" role="status" aria-live="polite" hidden></div>
@@ -29,13 +31,24 @@
       <div id="loading" class="loading"><span class="loading-dot"></span> Opening your local research desk…</div>
       <div id="load-error" class="empty error-panel" hidden><p class="eyebrow">Connection interrupted</p><h1>The local feed could not be loaded.</h1><p id="load-error-text"></p><button type="button" id="retry" class="button">Try again</button></div>
       <div id="dashboard" hidden>
+        <nav id="market-tools" class="markets-nav nav" aria-label="Market research tools"><a href="#explore" data-nav="explore">Explore research & financing <span aria-hidden="true">↗</span></a></nav>
+        <section id="panel-sports" data-panel="sports" hidden>
+          <div class="news-header"><div><h1>Your sports desk.</h1><p class="wall-subtitle">NBA and F1, without the endless scroll. Official news first; social-source gaps stay visible.</p></div><div class="edition news-edition"><span id="sports-source-date">Source dates unavailable</span><small id="sports-updated">No sports refresh recorded</small></div></div>
+          <div class="news-tools"><div class="news-search"><label for="sports-search" class="sr-only">Search sports</label><span aria-hidden="true">⌕</span><input id="sports-search" type="search" placeholder="Search NBA, F1 or a story" autocomplete="off"></div><details class="news-filters"><summary><span>Filters</span><span class="details-mark" aria-hidden="true">+</span></summary><div class="news-filter-controls sports-tool-grid"><label><span class="filter-label">Sport</span><select id="sports-topic"><option value="all">NBA + F1</option><option value="nba">NBA</option><option value="f1">F1</option></select></label><label><span class="filter-label">Source</span><select id="sports-source"><option value="all">All sources</option></select></label><label><span class="filter-label">Format</span><select id="sports-format"><option value="all">All formats</option><option value="article">Articles</option><option value="podcast">Podcasts</option><option value="video">Videos</option><option value="instagram">Instagram</option></select></label></div></details></div>
+          <div id="wall-controls-sports" class="wall-controls"></div>
+          <div class="news-toolbar"><div class="news-order" role="group" aria-label="Sports order"><button type="button" data-sports-order="latest" class="active" aria-pressed="true">Latest</button><button type="button" data-sports-order="mix" aria-pressed="false">Your mix</button></div><p id="sports-visit" class="visit-summary" aria-live="polite"></p></div>
+          <p id="sports-count" class="news-count" aria-live="polite"></p><div id="sports-feed" class="article-list news-feed" aria-label="Sports updates"></div>
+        </section>
         <section id="panel-brief" data-panel="brief">
-          <div class="news-header"><div><p id="desk-kicker" class="eyebrow">The daily research desk</p><h1>AI stock news.</h1></div><div class="edition news-edition"><span id="edition-date">—</span><small id="edition-asof">Not refreshed yet</small></div></div>
+          <div class="news-header"><div><p id="desk-kicker" class="eyebrow">The daily research desk</p><h1>Your markets desk.</h1><p class="wall-subtitle">The market research you already follow, plus selected public sources. Evidence and opinion stay separate.</p></div><div class="edition news-edition"><span id="edition-date">—</span><small id="edition-asof">Not refreshed yet</small><small id="wall-market-updated"></small></div></div>
+
           <div id="freshness" class="freshness news-freshness" hidden></div>
-          <div class="news-tools"><div class="news-search"><label for="news-search" class="sr-only">Search news</label><span aria-hidden="true">⌕</span><input id="news-search" type="search" placeholder="Search news or companies" autocomplete="off"></div><details id="news-filters" class="news-filters"><summary><span>Filters</span><span class="details-mark" aria-hidden="true">+</span></summary><div class="news-filter-controls"><label><span class="filter-label">Signal</span><select id="news-lens"><option value="all">All signals</option><option value="demand">Demand</option><option value="capacity">Capacity</option><option value="funding">Funding</option><option value="earnings">Earnings</option><option value="models">Model economics</option><option value="policy">Policy & constraints</option><option value="other">Other</option></select></label><label><span class="filter-label">Company</span><select id="news-entity"><option value="all">All companies</option></select></label><label><span class="filter-label">AI layer</span><select id="news-layer"><option value="all">All layers</option><option value="energy">Energy</option><option value="chips">Chips</option><option value="infrastructure">Infrastructure</option><option value="models">Models</option><option value="applications">Applications</option></select></label><a class="text-link" href="#evidence">All evidence & filters <span aria-hidden="true">↗</span></a></div></details></div>
-          <div class="news-toolbar"><div class="news-order" role="group" aria-label="News order"><button type="button" data-news-order="latest" class="active" aria-pressed="true">Latest</button><button type="button" data-news-order="important" aria-pressed="false">Important</button></div><p id="visit-summary" class="visit-summary" aria-live="polite"></p></div>
+          <div class="news-tools"><div class="news-search"><label for="news-search" class="sr-only">Search news</label><span aria-hidden="true">⌕</span><input id="news-search" type="search" placeholder="Search news or companies" autocomplete="off"></div><details id="news-filters" class="news-filters"><summary><span>Filters</span><span class="details-mark" aria-hidden="true">+</span></summary><div class="news-filter-controls"><label><span class="filter-label">Signal</span><select id="news-lens"><option value="all">All signals</option><option value="demand">Demand</option><option value="capacity">Capacity</option><option value="funding">Funding</option><option value="earnings">Earnings</option><option value="models">Model economics</option><option value="policy">Policy & constraints</option><option value="other">Other</option></select></label><label><span class="filter-label">Company</span><select id="news-entity"><option value="all">All companies</option></select></label><label><span class="filter-label">AI layer</span><select id="news-layer"><option value="all">All layers</option><option value="energy">Energy</option><option value="chips">Chips</option><option value="infrastructure">Infrastructure</option><option value="models">Models</option><option value="applications">Applications</option></select></label><label><span class="filter-label">Source</span><select id="news-source"><option value="all">All sources</option></select></label><label><span class="filter-label">Format</span><select id="news-format"><option value="all">All formats</option><option value="article">Articles</option><option value="podcast">Podcasts</option><option value="video">Videos</option><option value="instagram">Instagram</option></select></label><a class="text-link" href="#evidence">All evidence & filters <span aria-hidden="true">↗</span></a></div></details></div>
+          <div id="wall-controls-markets" class="wall-controls"></div>
+          <div class="news-toolbar"><div class="news-order" role="group" aria-label="News order"><button type="button" data-news-order="latest" class="active" aria-pressed="true">Latest</button><button type="button" data-news-order="important" aria-pressed="false">Important</button><button type="button" data-news-order="mix" aria-pressed="false">Your mix</button></div><p id="visit-summary" class="visit-summary" aria-live="polite"></p></div>
           <p id="news-count" class="news-count" aria-live="polite"></p>
           <div id="brief-feed" class="article-list news-feed" aria-label="News updates"></div>
+          <button id="news-more" class="button wall-more" type="button" hidden>Show more stories</button>
           <details id="brief-context" class="brief-context"><summary><span>Brief, coverage & method</span><span class="details-mark" aria-hidden="true">+</span></summary><div class="brief-context-body">
           <div id="scope-strip" class="scope-strip" aria-label="Coverage boundary"></div>
           <div class="stats" aria-label="Feed coverage"><div><span class="stat-value" id="stat-new">—</span><span id="stat-new-label" class="stat-label">New in last refresh</span><small id="stat-changed" class="stat-sub">0 revised</small></div><div><span class="stat-value" id="stat-total">—</span><span id="stat-total-label" class="stat-label">Stored evidence items</span><small id="stat-stories" class="stat-sub">Grouped for reading</small></div><div><span class="stat-value" id="stat-sources">—</span><span id="stat-sources-label" class="stat-label">Last fetches successful</span></div><div><span class="stat-value" id="stat-review">—</span><span id="stat-review-label" class="stat-label">Priority groups to review</span><small class="stat-sub local-only">Read ≠ verified</small></div></div>
@@ -115,7 +128,7 @@
         </section>
       </div>
     </main>
-    <footer><p><strong>AI Stock Pulse</strong> · <span id="footer-desk">A local evidence desk</span></p><p>Public sources. Explicit uncertainty. No financial accounts or trading.</p></footer>
+    <footer><p><strong>Your Pulse</strong> · <span id="footer-desk">A local evidence desk</span></p><p>Public sources. Explicit uncertainty. No financial accounts or trading.</p></footer>
   </div>
 </body>
 </html>

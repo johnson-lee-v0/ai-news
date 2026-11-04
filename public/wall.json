@@ -1,0 +1,1441 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-04T02:59:12Z",
+  "source_status": [
+    {
+      "id": "f1-official",
+      "name": "Formula 1",
+      "section": "sports",
+      "kind": "rss",
+      "home_url": "https://www.formula1.com/en/latest",
+      "feed_url": "https://www.formula1.com/en/latest/all.xml",
+      "topics": [
+        "F1"
+      ],
+      "note": "Official F1 feed. Some entries have no publication date; fetch time is not an event date.",
+      "status": "ok",
+      "last_attempt_at": "2026-11-04T02:59:12Z",
+      "last_success_at": "2026-11-04T02:59:12Z",
+      "item_count": 10
+    },
+    {
+      "id": "nba-communications",
+      "name": "NBA Communications",
+      "section": "sports",
+      "kind": "rss",
+      "home_url": "https://pr.nba.com/",
+      "feed_url": "https://pr.nba.com/feed/",
+      "topics": [
+        "NBA"
+      ],
+      "note": "League announcements, including business and WNBA coverage. This is not comprehensive game or breaking-news coverage.",
+      "status": "ok",
+      "last_attempt_at": "2026-11-04T02:59:12Z",
+      "last_success_at": "2026-11-04T02:59:12Z",
+      "item_count": 10
+    },
+    {
+      "id": "wall-street-skinny",
+      "name": "The Wall Street Skinny",
+      "section": "markets",
+      "kind": "podcast_rss",
+      "home_url": "https://thewallstreetskinny.com/podcast/",
+      "feed_url": "https://feeds.megaphone.fm/TTNSE2412391117",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "note": "Publisher podcast metadata, not a transcript or independently verified analysis. Episodes without a webpage link open the podcast homepage.",
+      "status": "ok",
+      "last_attempt_at": "2026-11-04T02:59:12Z",
+      "last_success_at": "2026-11-04T02:59:12Z",
+      "item_count": 24
+    },
+    {
+      "id": "unusual-whales-blog",
+      "name": "Unusual Whales · public blog",
+      "section": "markets",
+      "kind": "rss",
+      "home_url": "https://unusualwhales.com/",
+      "feed_url": "https://unusual-whales.ghost.io/rss/",
+      "topics": [
+        "Markets"
+      ],
+      "note": "Public blog linked by Unusual Whales. Finance and AI title keywords filter broad news; relevant posts may be missed. Headlines are publisher claims, not verified conclusions. This is not its X feed.",
+      "status": "ok",
+      "last_attempt_at": "2026-11-04T02:59:12Z",
+      "last_success_at": "2026-11-04T02:59:12Z",
+      "item_count": 4
+    },
+    {
+      "id": "unusual-whales-podcast",
+      "name": "Unusual Whales · podcast",
+      "section": "markets",
+      "kind": "podcast_rss",
+      "home_url": "https://rss.com/podcasts/unusualwhales/",
+      "feed_url": "https://media.rss.com/unusualwhales/feed.xml",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "note": "Public podcast feed. Source dates may be old; no transcript is collected. Audio opens externally when its host is outside the verified embedded-player allowlist.",
+      "status": "ok",
+      "last_attempt_at": "2026-11-04T02:59:12Z",
+      "last_success_at": "2026-11-04T02:59:12Z",
+      "item_count": 24
+    },
+    {
+      "id": "polymarket-news",
+      "name": "Polymarket · news",
+      "section": "markets",
+      "kind": "rss",
+      "home_url": "https://news.polymarket.com/",
+      "feed_url": "https://news.polymarket.com/feed",
+      "topics": [
+        "Prediction markets"
+      ],
+      "note": "Official-linked publisher news and commentary. This is not a live odds API, independently verified probability forecast or trading connection.",
+      "status": "ok",
+      "last_attempt_at": "2026-11-04T02:59:12Z",
+      "last_success_at": "2026-11-04T02:59:12Z",
+      "item_count": 20
+    },
+    {
+      "id": "shams",
+      "name": "Shams Charania",
+      "section": "sports",
+      "kind": "requested",
+      "home_url": "https://x.com/ShamsCharania",
+      "feed_url": null,
+      "topics": [
+        "NBA"
+      ],
+      "note": "Identity corroborated by ESPN's biography. No automatic post feed is connected; no complete breaking-news coverage is implied.",
+      "status": "not_connected",
+      "last_attempt_at": null,
+      "last_success_at": null,
+      "item_count": 0
+    },
+    {
+      "id": "nba-central",
+      "name": "NBA Central",
+      "section": "sports",
+      "kind": "requested",
+      "home_url": "https://x.com/TheDunkCentral",
+      "feed_url": null,
+      "topics": [
+        "NBA"
+      ],
+      "note": "Account identity corroborated by its Instagram profile. It is unaffiliated with the NBA. No permitted automatic post feed is connected.",
+      "status": "not_connected",
+      "last_attempt_at": null,
+      "last_success_at": null,
+      "item_count": 0
+    },
+    {
+      "id": "unusual-whales",
+      "name": "Unusual Whales · X and live alerts",
+      "section": "markets",
+      "kind": "requested",
+      "home_url": "https://unusualwhales.com/",
+      "feed_url": null,
+      "topics": [
+        "Markets"
+      ],
+      "note": "X posts and live alerts are not connected. Separate public blog and podcast sources are listed independently.",
+      "status": "not_connected",
+      "last_attempt_at": null,
+      "last_success_at": null,
+      "item_count": 0
+    },
+    {
+      "id": "polymarket",
+      "name": "Polymarket · live odds",
+      "section": "markets",
+      "kind": "requested",
+      "home_url": "https://polymarket.com/",
+      "feed_url": null,
+      "topics": [
+        "Prediction markets"
+      ],
+      "note": "Live odds are not collected. The separate news feed is publisher commentary; market prices are not independently verified probabilities.",
+      "status": "not_connected",
+      "last_attempt_at": null,
+      "last_success_at": null,
+      "item_count": 0
+    },
+    {
+      "id": "unresolved-handle",
+      "name": "kobawaschilettwr — identity unverified",
+      "section": "markets",
+      "kind": "requested",
+      "home_url": null,
+      "feed_url": null,
+      "topics": [
+        "Markets"
+      ],
+      "note": "The supplied handle has not been identified. No account or source has been guessed.",
+      "status": "unresolved",
+      "last_attempt_at": null,
+      "last_success_at": null,
+      "item_count": 0
+    }
+  ],
+  "items": [
+    {
+      "id": "wall-b0a1cf7ab39a93cc3a02c21f",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Bill Ackman Says the Stock Market Is \"Broken,\" CNBC Reports",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/bill-ackman-stock-market-broken/",
+      "published_at": "2026-11-03T21:04:20Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-50f79a2a012354a0cc237b00",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "S&P 500 Near Record High, Yet 60% of Its Stocks Are in a Bear Market, Goldman Says",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/sp-500-near-record-60-percent-stocks-bear-market/",
+      "published_at": "2026-11-03T21:02:00Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-39bc363f18f09edfd16547c6",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Google Will Turn Off Search Entirely for Schools That Opt Out of AI, NYT Reports",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/google-search-off-schools-opt-out-ai/",
+      "published_at": "2026-11-03T20:56:37Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-5946eaef4c7d0403cdb203fb",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "Camara to make F1 debut for Haas in Sao Paulo",
+      "url": "https://www.formula1.com/en/latest/article/f2-racer-camara-to-make-f1-debut-at-sao-paulo-grand-prix-as-haas-confirm-ocon-will-not-return.12Qa0tpaMZ9kgnEuGJBKFp",
+      "published_at": "2026-11-03T20:30:00+00:00",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "Formula 1 reports that Haas will run Rafael Camara alongside Ollie Bearman in Sao Paulo and that Esteban Ocon will not return this season. Camara was already signed for 2027.",
+      "analysis": {
+        "text": "Haas brings its 2027 driver into a race seat early. That creates an earlier evaluation opportunity alongside Bearman, but this announcement establishes no result or improvement in race pace.",
+        "basis": "Full Formula1.com article; publication timestamp and team statements read. Team reasoning beyond its public statement and Camara’s race performance are unknown.",
+        "reviewed_at": "2026-11-04T03:00:18.663996+00:00",
+        "source_urls": [
+          "https://www.formula1.com/en/latest/article/f2-racer-camara-to-make-f1-debut-at-sao-paulo-grand-prix-as-haas-confirm-ocon-will-not-return.12Qa0tpaMZ9kgnEuGJBKFp"
+        ]
+      }
+    },
+    {
+      "id": "wall-9d07ce09987c4cfdbc18f71f",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "GAME TIME",
+      "url": "https://news.polymarket.com/p/game-time",
+      "published_at": "2026-11-03T16:12:12Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wss-instagram-anthropic-20261103",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "The Wall Street Skinny: Anthropic discussion",
+      "url": "https://www.instagram.com/p/DfTEHXpDmPX/",
+      "published_at": "2026-11-03",
+      "first_seen_at": "2026-11-04T03:00:18.663996+00:00",
+      "updated_at": "2026-11-04T03:00:18.663996+00:00",
+      "format": "instagram",
+      "topics": [
+        "AI",
+        "earnings"
+      ],
+      "summary": "Author, publication day and public embed verified. Media content and investment assertions not reviewed; open the original for creator commentary.",
+      "analysis": null
+    },
+    {
+      "id": "wall-e4fee4948d9a6b35d36485f9",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "97% of Homeowners With a Mortgage Now Have a Rate Below Today's Market Rate, Per the Economist",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/97-percent-homeowners-below-market-mortgage-rate-economist/",
+      "published_at": "2026-11-02T22:17:16Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-08b9e64f8ed39f180596e3b5",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "American Express, NBA and WNBA expand longstanding partnership globally",
+      "url": "https://pr.nba.com/american-express-nba-wnba-partnership/",
+      "published_at": "2026-11-02T17:01:22Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "NBA",
+        "WNBA"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-e244e7450506f6f6c70ef668",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "Hawks’ Kingston Flemings suspended",
+      "url": "https://pr.nba.com/kingston-flemings-suspended/",
+      "published_at": "2026-11-01T23:13:24+00:00",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "NBA"
+      ],
+      "summary": "The NBA announced a one-game suspension for Kingston Flemings following an October 31 incident, scheduled to be served against Indiana on November 2.",
+      "analysis": {
+        "text": "The sanction meant a short rotation adjustment rather than an indefinite absence. This is a dated November 1 disciplinary announcement, not a fresh November 4 injury or suspension update.",
+        "basis": "Full NBA Communications release; publication date, incident date and scheduled suspension date read. Feed supplies time. The release does not establish later availability or game outcome.",
+        "reviewed_at": "2026-11-04T03:00:18.663996+00:00",
+        "source_urls": [
+          "https://pr.nba.com/kingston-flemings-suspended/"
+        ]
+      }
+    },
+    {
+      "id": "wall-191fff491a70c1374a86e2ea",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "BOOTS ON THE GROUND",
+      "url": "https://news.polymarket.com/p/boots-on-the-ground",
+      "published_at": "2026-10-29T14:42:25Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-32ee8bce4474076ec7b332f3",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "WNBA Draft Lottery 2027 to take place Sunday, Nov. 15 on ESPN",
+      "url": "https://pr.nba.com/2027-wnba-draft-lottery/",
+      "published_at": "2026-10-28T19:03:11Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "WNBA"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-64ca290434a73cc5b739c358",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "Sun’s Jennifer Rizzotti wins 2026 WNBA Business Executive Leadership Award presented by Deloitte",
+      "url": "https://pr.nba.com/jennifer-rizzotti-2026-wnba-business-executive-leadership-award/",
+      "published_at": "2026-10-28T18:00:16Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "WNBA"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-0398c5bef3ffbee2df2d86bd",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "Anthropic's S-1 Explained: Everything You Need to Know",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-10-28",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE8034856537.mp3",
+      "duration": "1895"
+    },
+    {
+      "id": "wss-youtube-anthropic-s1-20261027",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "We Finally Got Anthropic’s S-1. There’s One Huge Problem.",
+      "url": "https://www.youtube.com/watch?v=hi7ikOyTHa8",
+      "published_at": "2026-10-27T23:47:40+00:00",
+      "first_seen_at": "2026-11-04T03:00:18.663996+00:00",
+      "updated_at": "2026-11-04T03:00:18.663996+00:00",
+      "format": "video",
+      "topics": [
+        "AI",
+        "earnings"
+      ],
+      "summary": "Official channel and video metadata verified; video/transcript not reviewed. Title is the creator’s framing, not a verified conclusion.",
+      "analysis": null,
+      "duration": 1895
+    },
+    {
+      "id": "wall-86b72d1c643c93b259d571d8",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "Game 6 of 2026 WNBA Finals to be played at State Farm Arena on Thursday, Oct. 29 at 12:30 p.m. ET",
+      "url": "https://pr.nba.com/2026-wnba-finals-game-6-time/",
+      "published_at": "2026-10-26T18:42:51Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "WNBA"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-bfb2f912c728cc54f145f292",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "Legends select NBA Champion Jeremy Sochan with first pick in 2026 NBA G League Draft",
+      "url": "https://pr.nba.com/2026-nba-g-league-draft-results/",
+      "published_at": "2026-10-24T22:06:03Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "NBA"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-58746fc0c796a32358740ffc",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "\"You Can See Everything\" EXPLAINED: Were We All Just Willing Participants in a Social Experiment?",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-10-24",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE2524974489.mp3",
+      "duration": "4219"
+    },
+    {
+      "id": "wall-3580c6ee22023695f5ddccda",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "SHY HILTON VOTERS",
+      "url": "https://news.polymarket.com/p/shy-hilton-voters",
+      "published_at": "2026-10-23T14:31:44Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-6f0aefad19b8768407021512",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "NBA Tip-Off on NBC and Peacock delivers most-watched opening night ever",
+      "url": "https://pr.nba.com/nba-opening-night-nbc-peacock/",
+      "published_at": "2026-10-22T22:55:38Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "NBA"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-8995ec55be7fef43b7af9ecb",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "NBA rosters feature 125 international players from record-tying 43 countries across six continents",
+      "url": "https://pr.nba.com/international-players-2026-27-nba-rosters/",
+      "published_at": "2026-10-20T12:58:26Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "NBA"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-30be028644bbd5c586521891",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "ZOOM OUT",
+      "url": "https://news.polymarket.com/p/zoom-out",
+      "published_at": "2026-10-19T19:31:17Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-645e97475f6e0ab0519ea763",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "NBA brings fans closer to live games with new digital experiences for 2026-27 season",
+      "url": "https://pr.nba.com/nba-brings-fans-closer-to-live-games-with-new-digital-experiences-for-2026-27-season/",
+      "published_at": "2026-10-19T15:00:39Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "NBA"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-c6bd09ce4221da28b991e9d3",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "Wizards’ Trae Young named NBA Cares Bob Lanier Community Assist Award offseason winner",
+      "url": "https://pr.nba.com/trae-young-nba-cares-bob-lanier-community-assist-award-offseason-winner/",
+      "published_at": "2026-10-19T14:14:40Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "NBA"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-e06f19345961a407de9bfed3",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "AI Stocks Just Tanked. Why Is Wall Street Talking About Enron?",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-10-15",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE4015551411.mp3",
+      "duration": "3704"
+    },
+    {
+      "id": "wall-2ed6ad3db02889cb6165f037",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "NEW WAYS TO LOSE",
+      "url": "https://news.polymarket.com/p/new-ways-to-lose",
+      "published_at": "2026-10-14T18:46:10Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-70baf3346906d2313c3bbfe0",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "NEOCLOUDS EXPLAINED: Your ULTIMATE Guide to AI’s Least Understood Business",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-10-11",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE9331160729.mp3",
+      "duration": "2157"
+    },
+    {
+      "id": "wall-ef2e72c389cf2f346a3d8dcd",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "HOW HIGH?",
+      "url": "https://news.polymarket.com/p/how-high",
+      "published_at": "2026-10-09T19:21:31Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-5f10acdfaa57cd54c2281b5f",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "SOURCES & METHODS",
+      "url": "https://news.polymarket.com/p/sources-and-methods-aa9",
+      "published_at": "2026-10-07T14:40:36Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-b2ee121213403398a8946065",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "JUST WIN BABY",
+      "url": "https://news.polymarket.com/p/just-win-baby",
+      "published_at": "2026-10-01T19:34:18Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-eddba2fd0fc023fedd26cdae",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "Is Anthropic's $2 Trillion IPO in Jeopardy? What We Learned from Leaked IPO Prospectus",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-10-01",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE6255484085.mp3",
+      "duration": "2791"
+    },
+    {
+      "id": "wall-a55a77ac8fad211c20c66c14",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "SECOND OPINION",
+      "url": "https://news.polymarket.com/p/second-opinion",
+      "published_at": "2026-09-28T20:03:38Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-58852bc56377f09527324487",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "How Nvidia's Recent Acquisition Changes the AI Game Feat. Morgan Stanley's Head of US Thematic Research",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-09-27",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE4657076712.mp3",
+      "duration": "3583"
+    },
+    {
+      "id": "wall-c3f2287a429840badd95b2d6",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "TEXAS IS BORDERLINE",
+      "url": "https://news.polymarket.com/p/texas-is-borderline",
+      "published_at": "2026-09-23T23:11:30Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-1ff47d0b0d0cba83733f542d",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "BOTTLENECK BOYZ",
+      "url": "https://news.polymarket.com/p/bottleneck-boyz",
+      "published_at": "2026-09-18T14:10:07Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-676921ca1ed24e1901d1a558",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "Why Stocks Could Drop 10% Before Year-End: feat. Wellington Macro Strategist Mike Medeiros",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-09-18",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE3276506978.mp3",
+      "duration": "2197"
+    },
+    {
+      "id": "wall-630b943fd0d2b539fa388602",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "First Fed Rate Hike in 3 Years: Economy, Energy, and Inflation | Unusual Whales Pod Ep. 75",
+      "url": "https://rss.com/podcasts/unusualwhales/3162540",
+      "published_at": "2026-09-17T20:18:10Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5422"
+    },
+    {
+      "id": "wall-8ec7e41572f3785ced334863",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "SLOP OF WAR",
+      "url": "https://news.polymarket.com/p/slop-of-war",
+      "published_at": "2026-09-15T19:31:11Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-04da06d0764fc12382092c32",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "HOLLYWOOD ENDING?",
+      "url": "https://news.polymarket.com/p/hollywood-ending",
+      "published_at": "2026-09-12T11:56:10Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-080a4c0941ad661a26c758f9",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "INSIDE POLYMARKET PERPS",
+      "url": "https://news.polymarket.com/p/inside-polymarket-perps",
+      "published_at": "2026-09-09T20:18:59Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-8890ecf2efb2b6f7bf0cbcaf",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "I got to ask Scott Bessent ONE QUESTION. His answer shocked me.",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-09-06",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE5182037865.mp3",
+      "duration": "3433"
+    },
+    {
+      "id": "wall-491242a86ea32a00a2eab997",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "CONVERGENCE?",
+      "url": "https://news.polymarket.com/p/convergence",
+      "published_at": "2026-09-03T20:32:28Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-ca5d50617ecfc46cc95df28e",
+      "section": "markets",
+      "source_id": "polymarket-news",
+      "title": "AMUSE",
+      "url": "https://news.polymarket.com/p/amuse",
+      "published_at": "2026-09-02T19:40:23Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "Prediction markets"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-d0515848eefd462f96ba8adf",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Tungsten Roundtable: Critical Metal Investors Are Starting to Notice | Unusual Whales Pod Ep. 74",
+      "url": "https://rss.com/podcasts/unusualwhales/3082072",
+      "published_at": "2026-08-19T19:54:20Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "4902"
+    },
+    {
+      "id": "wall-e3ba9c6fd74969382c41b075",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "Is a Private Credit scandal brewing behind the LA Lakers Sale?",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-08-19",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE2777534701.mp3",
+      "duration": "2214"
+    },
+    {
+      "id": "wall-6784eb32c26b22fb795cfc44",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "OpenAI's Lawyer: How Big Tech is Winning the AI Race in the Courts",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-08-12",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE9968040589.mp3",
+      "duration": "3070"
+    },
+    {
+      "id": "wall-91d0007ea811bd312147a6dc",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "SpaceX: Revisiting the IPO and What Comes Next",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-08-05",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE7212126387.mp3",
+      "duration": "1754"
+    },
+    {
+      "id": "wall-04bc3bba2211a239d1ff1667",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "The Biggest Hedge Fund Blow-Up of 2026 EXPLAINED: Situational Awareness",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-07-31",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE6327663242.mp3",
+      "duration": "1796"
+    },
+    {
+      "id": "wall-aed71ceb19e03196dc5743d7",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "What Just Happened to AI Stocks??",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-07-30",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE7328613609.mp3",
+      "duration": "3601"
+    },
+    {
+      "id": "wall-3845a11a33cb15c6dd08e911",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "Why Jamie Dimon Won't Buy Stocks OR Bonds Right Now",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-07-24",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": null,
+      "media_url": "https://traffic.megaphone.fm/TTNSE3948158806.mp3",
+      "duration": "989"
+    },
+    {
+      "id": "wall-153f5fc27fc76227cde67121",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Psychology of a Trader with Wayne Hoffman | Unusual Whales Pod Ep. 73",
+      "url": "https://rss.com/podcasts/unusualwhales/2985669",
+      "published_at": "2026-07-13T16:59:17Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5611"
+    },
+    {
+      "id": "wall-29ec54ed0086f167990a6b21",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 72: Tema ETFs and $NASA: The future of Space Infrastructure",
+      "url": "https://rss.com/podcasts/unusualwhales/2879531",
+      "published_at": "2026-06-02T15:14:46Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "3350"
+    },
+    {
+      "id": "wall-aeb18fcf22859fa9728a2604",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 71: Understanding the Silver Tsunami with Michael Brown of Teamshares",
+      "url": "https://rss.com/podcasts/unusualwhales/2796236",
+      "published_at": "2026-05-05T17:48:14Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "3569"
+    },
+    {
+      "id": "wall-19fdba45545578906aaf3e9e",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 70: Jerome Powell's Last FOMC as Chair? Fed Holds Rates Steady",
+      "url": "https://rss.com/podcasts/unusualwhales/2786466",
+      "published_at": "2026-05-01T19:55:59Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5147"
+    },
+    {
+      "id": "wall-b1c2de21e371ccef51df8fd9",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 69: Fed Holds Rates, Global Politics, Oil, and the Economy",
+      "url": "https://rss.com/podcasts/unusualwhales/2645904",
+      "published_at": "2026-03-20T18:16:12Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5380"
+    },
+    {
+      "id": "wall-2d8d53a0b0767a265a62a618",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 68: Future of Quantum Computing with XanaduAI",
+      "url": "https://rss.com/podcasts/unusualwhales/2633495",
+      "published_at": "2026-03-16T19:03:09Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "2667"
+    },
+    {
+      "id": "wall-1026aad17461d9d6657e1dbd",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 67: Fed HOLDS Rates at First FOMC Meeting of 2026",
+      "url": "https://rss.com/podcasts/unusualwhales/2507845",
+      "published_at": "2026-01-30T20:45:49Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5324"
+    },
+    {
+      "id": "wall-39ba22889b1649eb8d906ce3",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 66: PlusAI and the Future of Autonomous Trucking",
+      "url": "https://rss.com/podcasts/unusualwhales/2495992",
+      "published_at": "2026-01-27T18:34:38Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "2908"
+    },
+    {
+      "id": "wall-2181fc35006b1942c0abdadb",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 65: Fed To End Quantitative Tightening! Cuts Rates 25BPS",
+      "url": "https://rss.com/podcasts/unusualwhales/2299651",
+      "published_at": "2025-10-30T16:31:08Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5503"
+    },
+    {
+      "id": "wall-e1347d88b0c0d59038893d2f",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 64: Fed CUTS Rates 25BPS, FOMC, Labor, and Housing Markets",
+      "url": "https://rss.com/podcasts/unusualwhales/2221866",
+      "published_at": "2025-09-18T17:31:51Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5454"
+    },
+    {
+      "id": "wall-05bd41d24cc81623c92e1f49",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 63: FOMC Rates Unchanged, Labor Markets, and Geopolitics",
+      "url": "https://rss.com/podcasts/unusualwhales/2145694",
+      "published_at": "2025-07-31T16:38:13Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5257"
+    },
+    {
+      "id": "wall-52b1da7db600f30921898fec",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 62: FOMC Holds Rates; Tariffs, Trade, Housing, and Conflict in the Middle East",
+      "url": "https://rss.com/podcasts/unusualwhales/2081109",
+      "published_at": "2025-06-19T16:18:49Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5357"
+    },
+    {
+      "id": "wall-ed9c7d20670fbfc95571c51f",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 61: FOMC, Jerome Powell, Inflation, and the Economy in 2025",
+      "url": "https://rss.com/podcasts/unusualwhales/2020492",
+      "published_at": "2025-05-08T22:32:46Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "5340"
+    },
+    {
+      "id": "wall-acf956a674ff9d2633cd85d1",
+      "section": "markets",
+      "source_id": "unusual-whales-podcast",
+      "title": "Unusual Whales Pod Ep. 60: Tariff Developments and Potential Trade Deals sponsored by ETFs",
+      "url": "https://rss.com/podcasts/unusualwhales/2011136",
+      "published_at": "2025-05-01T22:15:32Z",
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Podcast"
+      ],
+      "summary": "",
+      "analysis": null,
+      "duration": "3425"
+    },
+    {
+      "id": "wall-e5f672f2aa9b7d263c304205",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "The inside story of Lewis Hamilton’s first F1 test",
+      "url": "https://www.formula1.com/en/latest/article/20-years-on-the-inside-story-of-lewis-hamiltons-first-f1-test-with-mclaren.52SbO6oNunu7mGcpWMV8U1",
+      "published_at": null,
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-0917b609ce926cc8cfa86a52",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "The 5 drivers most likely to win in Sao Paulo",
+      "url": "https://www.formula1.com/en/latest/article/the-5-drivers-most-likely-to-win-the-sao-paulo-grand-prix-according-to-the-betting-markets.4bzkRPAjDqrOZ9EH6cwwoB",
+      "published_at": null,
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-a32fe5947f8033015cc9be97",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "The incredible F1 legends' cars that sold at auction",
+      "url": "https://www.formula1.com/en/latest/article/f1-legends-cars-that-sold-at-auction-after-sennas-honda-sells-for-over-1m.5IOJyw63yjGPZ0sHACG9AP",
+      "published_at": null,
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-b27b04c66515d97e22defbae",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "What time is the 2026 Sao Paulo GP and how can I watch it?",
+      "url": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-sao-paulo-grand-prix-and-how-can-i-watch-it.6hpbTPt6gucIHBH8QztPjb",
+      "published_at": null,
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-ecb969c3cf864bd0e2dfc06a",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "PALMER: What impressed me most in Antonelli’s title year",
+      "url": "https://www.formula1.com/en/latest/article/the-key-moments-that-impressed-me-most-in-antonellis-title-campaign.37DKCZ2ntXn8PNuOtMFv8q",
+      "published_at": null,
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-d1305cf3b2fcc36100471897",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "Who impressed our Power Rankings judges in Mexico City?",
+      "url": "https://www.formula1.com/en/latest/article/power-rankings-who-impressed-our-judges-at-the-mexico-city-grand-prix.2qjwPGUEuzu27Gnq24ggBU",
+      "published_at": null,
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-c1706c03e079670074315163",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "Lindblad offers verdict on Piastri collision in Mexico",
+      "url": "https://www.formula1.com/en/latest/article/we-were-in-a-genuine-fight-lindblad-offers-verdict-on-piastri-collision-in-mexico-city-grand-prix.30FzCcOAR3jR8jti3SjN2e",
+      "published_at": null,
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-b868e0a34489ee8526ebf6d9",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "F1’s youngest World Champions as Antonelli smashes record",
+      "url": "https://www.formula1.com/en/latest/article/f1s-youngest-world-champions-as-antonelli-smashes-the-record.4otUr4h4wmWd6VmIEaNjzV",
+      "published_at": null,
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "",
+      "analysis": null
+    },
+    {
+      "id": "wall-1f99302e10a4bdc331b31c00",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "Russell shares emotional reflection on 2026 in candid post",
+      "url": "https://www.formula1.com/en/latest/article/russell-shares-emotional-reflection-as-he-admits-2026-was-not-meant-to-be-my-year.5WEyPpcLTknBF3ktFY4cNM",
+      "published_at": null,
+      "first_seen_at": "2026-11-04T02:59:12Z",
+      "updated_at": "2026-11-04T02:59:12Z",
+      "format": "article",
+      "topics": [
+        "F1"
+      ],
+      "summary": "",
+      "analysis": null
+    }
+  ],
+  "coverage": [
+    "Selected public feeds, not complete NBA, F1 or market coverage. A successful fetch is not a factual verification.",
+    "Dates come from publisher metadata. Missing dates stay unknown; fetched time is shown separately.",
+    "X and Instagram feeds, engagement counts, full podcast transcripts and live trading data are not connected.",
+    "Existing market research is reviewed separately. Feed items have no GPT analysis unless a dated analysis is explicitly attached.",
+    "Two selected Wall Street Skinny media links were checked separately; Instagram and YouTube timelines are not automatically collected. Audio/video assertions were not transcript-reviewed."
+  ],
+  "model_status": {
+    "mode": "external_agent",
+    "note": "The app does not call GPT. Existing Codex research can add dated, source-backed analysis; a ChatGPT subscription has not been connected as an app API."
+  }
+}

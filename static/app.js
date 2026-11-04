@@ -3,10 +3,10 @@
   const $ = (id) => document.getElementById(id);
   const isStatic = document.documentElement.dataset.mode === 'static';
   let snapshotRequest;
-  const state = { data: null, page: 'brief', limit: 40, refreshing: false, newsOrder:'latest', visit:null, visitReady:false };
+  const state = { data: null, page: 'brief', limit: 40, newsLimit:100, refreshing: false, newsOrder:window.PulseWall?.marketOrder()||'latest', visit:null, visitReady:false };
   let visitTracker;
   try { visitTracker = window.PulseVisit?.create(window.localStorage, 'pulse-news-visit-v1:'+location.pathname.replace(/index\.html$/,'')); } catch (_) { visitTracker = window.PulseVisit?.create(null); }
-  const sections = new Set(['brief', 'explore', 'evidence', 'financing', 'layers', 'earnings', 'sources']);
+  const sections = new Set(['sports', 'brief', 'explore', 'evidence', 'financing', 'layers', 'earnings', 'sources']);
   const layerNames = {energy:'Energy',chips:'Chips',infrastructure:'Infrastructure',models:'Models',applications:'Applications'};
   const labels = { demand: 'Demand', capacity: 'Capacity', funding: 'Funding', earnings: 'Earnings', models: 'Model economics', policy: 'Policy & constraints', other: 'Source update' };
   const roleLabels = { primary: 'Primary source', secondary: 'Reported news', discovery: 'Discovery lead', curated:'Curated research' };
@@ -66,7 +66,7 @@
     const discoveryOrder = $('sort').querySelector('[value="discovery"]');
     discoveryOrder.hidden = true; discoveryOrder.disabled = true;
     const replacements = {
-      'mode-label':'PUBLIC / REVIEWED SNAPSHOT', 'desk-kicker':'The public research desk',
+      'mode-label':'PUBLIC / DATED SNAPSHOT', 'desk-kicker':'The public research desk',
       'stat-new-label':'Days since review', 'stat-total-label':'Published evidence items',
       'stat-sources-label':'Linked sources', 'stat-review-label':'Topics represented',
       'brief-method':'Reviewed public snapshot', 'priority-description':'Selected research and dated evidence from this published snapshot. Source links, counterevidence and uncertainty remain available for inspection.',
@@ -76,32 +76,34 @@
       'account-description':'Public profile links offer additional viewpoints. Identity references do not certify every claim. This site does not follow accounts or capture posts.',
     };
     Object.entries(replacements).forEach(([id,value]) => {$(id).textContent = value;});
-    document.querySelector('[data-nav="brief"]').textContent = 'News';
+    document.querySelector('[data-nav="brief"]').textContent = 'Markets';
     const sourceCard = document.querySelector('[data-nav="sources"] h2'); if (sourceCard) sourceCard.textContent = 'Sources & scope';
     $('loading').textContent = 'Opening the published research snapshot…';
     $('load-error').querySelector('h1').textContent = 'The published snapshot could not be loaded.';
     $('retry').textContent = 'Reload page';
     $('refresh-explainer').innerHTML = '<div><p class="eyebrow">How this public edition works</p><h2>A dated view. A visible boundary.</h2><p>This site loads one reviewed snapshot. It does not refresh the news, check source availability, or collect posts. Search and filters explore the published evidence; they cannot find events outside it.</p></div><ol><li><strong>Read the date</strong><span>Snapshot review and source publication describe different events.</span></li><li><strong>Inspect the evidence</strong><span>Open the linked source and compare the claim with its context.</span></li><li><strong>Test the implication</strong><span>Use counterevidence and the next checks to challenge the interpretation.</span></li></ol>';
-    $('methodology').innerHTML = '<summary>How this public snapshot works <span aria-hidden="true">+</span></summary><div><p>This is a reviewed, read-only publication. It contains selected evidence and interpretation as of the displayed review date, not a complete or continuously updated market feed.</p><p>Source dates describe publication or filing. A review date records when this edition was examined; it does not establish that linked pages remain available or that claims remain current.</p><p>Search, filters and the probability illustration run in this page. This browser stores only stable item identifiers and content fingerprints to compare visits; no article text, personal notes or browsing history is sent to an application server. Clearing browser storage resets this comparison. The hosting provider may process ordinary page-request logs.</p><p>Financing and earnings comparisons keep commitments, revenue, guidance and sourced consensus separate. Missing fields mean unavailable, not zero. Conditional implications are not forecasts.</p></div>';
+    $('methodology').innerHTML = '<summary>How this public snapshot works <span aria-hidden="true">+</span></summary><div><p>This is a reviewed, read-only publication. It contains selected evidence and interpretation as of the displayed review date, not a complete or continuously updated market feed.</p><p>Source dates describe publication or filing. A review date records when this edition was examined; it does not establish that linked pages remain available or that claims remain current.</p><p>Search, filters and the probability illustration run in this page. This browser stores your source preferences, hidden story IDs, optional saved video/post links and visit fingerprints locally. No personal settings are sent to an application server. Loading an external media player contacts its platform only after you choose it. Clearing browser storage resets these controls. The hosting provider may process ordinary page-request logs.</p><p>Financing and earnings comparisons keep commitments, revenue, guidance and sourced consensus separate. Missing fields mean unavailable, not zero. Conditional implications are not forecasts.</p></div>';
   }
   function renderPublication() {
     if (!isStatic) return;
     const publication = state.data.publication || {};
     const reviewedAt = publication.reviewed_at || publication.as_of;
     $('publication-banner').hidden = false;
-    $('publication-banner').innerHTML = `${publication.draft ? '<strong class="publication-draft">Local draft · publication approval pending.</strong>' : ''}<span>Reviewed snapshot · not live</span><a href="#sources">Coverage & missing sources ↗</a>`;
+    $('publication-banner').innerHTML = `${publication.draft ? '<strong class="publication-draft">Local draft · publication approval pending.</strong>' : ''}<span>Published snapshot · not live</span><a href="#sources">Coverage & missing sources ↗</a>`;
   }
   function selectPage() {
     const hash = location.hash.slice(1).split('?')[0].split('/')[0];
-    state.page = sections.has(hash) ? hash : 'brief';
+    state.page = sections.has(hash) ? hash : (window.PulseWall?.defaultTab() || 'brief');
+    if (['sports','brief'].includes(state.page)) window.PulseWall?.rememberTab(state.page);
+    if ($('market-tools')) $('market-tools').hidden=state.page==='sports';
     document.querySelectorAll('[data-panel]').forEach((panel) => { panel.hidden = panel.dataset.panel !== state.page; });
     document.querySelectorAll('[data-nav]').forEach((item) => {
-      const active = item.dataset.nav === state.page || (item.closest('.nav') && item.dataset.nav==='explore' && !['brief','explore'].includes(state.page));
+      const active = item.dataset.nav === state.page || (item.closest('.primary-nav') && item.dataset.nav==='brief' && state.page!=='sports') || (item.dataset.nav==='explore' && !['sports','brief','explore'].includes(state.page));
       item.classList.toggle('active', active);
       if (active) item.setAttribute('aria-current', 'page'); else item.removeAttribute('aria-current');
     });
     if (state.page==='financing') window.PulseFinance?.updateRoute(location.hash); else window.PulseFinance?.closeDetails();
-    document.title = `${{ brief:'News', explore:'Explore', evidence: 'Evidence feed', financing: 'Financing map', layers:'Five AI layers', earnings: 'Earnings', sources: isStatic ? 'Sources & scope' : 'Sources & leads' }[state.page]} — AI Stock Pulse`;
+    document.title = `${{ sports:'Sports', brief:'Markets', explore:'Explore', evidence: 'Evidence feed', financing: 'Financing map', layers:'Five AI layers', earnings: 'Earnings', sources: isStatic ? 'Sources & scope' : 'Sources & leads' }[state.page]} — Your Pulse`;
   }
   function lastRefresh() {
     const refresh = list(state.data?.refreshes)[0];
@@ -154,6 +156,7 @@
       <div class="article-meta news-card-meta"><span class="badge ${lens}">${labels[lens]}</span><span class="badge source-${role}">${roleLabels[role]}</span>${claimBadge ? `<span class="badge amber">${esc(claimBadge)}</span>` : ''}${newly ? '<span class="badge new">New since visit</span>' : ''}${revised ? '<span class="badge amber">Materially revised</span>' : ''}${reviewed !== 'unreviewed' ? `<span class="badge subtle">${reviewed === 'reviewed' ? 'Read' : 'Dismissed'}</span>` : ''}<span class="source-name">${esc(article.publisher_name || article.source_name || article.source_id || 'Source')}</span><span class="meta-separator" aria-hidden="true">/</span><span>${esc(publication)}</span></div>
       <h3 class="news-card-title">${link(article.url, `${esc(article.title || 'Untitled source item')} <span class="article-link-icon" aria-hidden="true">↗</span>`)}</h3>
       <p class="news-card-implication"><strong>Why it matters:</strong> ${esc(text(article.implication, 'Interpretation not assessed. Open the source before drawing a conclusion.'))}</p>
+      <button type="button" class="wall-action curated-wall-hide" data-wall-hide="${esc(article.id)}">Hide from this browser’s news</button>
       <details class="article-details news-card-details"><summary>Evidence & caveats</summary>
       ${role === 'discovery' ? '<p class="discovery-caveat">Discovery lead: this search result is a pointer to reporting. Open the publisher and verify the claim and original publication date; the search-feed date can be later. It is not independent corroboration.</p>' : ''}
       <div class="article-body article-observation"><div class="article-block"><p class="eyebrow">${isStatic ? 'Sourced observation' : role === 'discovery' ? 'Claim to investigate · search metadata' : 'Observation · source metadata'}</p><p>${esc(text(article.observation || article.summary || article.title, 'No excerpt available. Open the original source.'))}</p></div></div>
@@ -188,18 +191,21 @@
     const saved=visitTracker.commit([...list(state.data.articles),...stories(),...items]);if(!saved.storageAvailable)state.visit.storageAvailable=false;state.visitReady=true;
   }
   function renderNews() {
-    let items=newsItems();
+    let items=[...newsItems(),...(window.PulseWall?.items('markets') || [])].filter(item => window.PulseWall?.visible(item) !== false);
     const q=($('news-search')?.value || '').trim().toLowerCase();
     const lens=$('news-lens')?.value || 'all', entity=$('news-entity')?.value || 'all', layer=$('news-layer')?.value || 'all';
-    items=items.filter(a => (!q || [a.title,a.summary,a.observation,a.implication,a.url,...list(a.entities)].join(' ').toLowerCase().includes(q)) && (lens==='all' || a.lens===lens) && (entity==='all' || list(a.entities).includes(entity)) && (layer==='all' || list(a.ai_layers).includes(layer)));
+    const wallSource=$('news-source')?.value || 'all', wallFormat=$('news-format')?.value || 'all';
+    items=items.filter(a => (!q || [a.title,a.summary,a.observation,a.implication,a.analysis?.text,a.url,a.source_name,a.publisher_name,window.PulseWall?.sourceName(a),...list(a.entities),...list(a.topics)].join(' ').toLowerCase().includes(q)) && (lens==='all' || a.lens===lens) && (entity==='all' || list(a.entities).includes(entity)) && (layer==='all' || list(a.ai_layers).includes(layer)) && (window.PulseWall?.sourceFilter(a,wallSource) !== false) && (window.PulseWall?.formatFilter(a,wallFormat) !== false));
     const sourceTime=a => a.date_precision==='future_unverified' || timestamp(a.published_at)>Date.now() ? 0 : timestamp(a.published_at);
     const important=(a,b) => isStatic ? (Number(a.editorial_rank)||999)-(Number(b.editorial_rank)||999) : (Number(b.score)||0)-(Number(a.score)||0);
-    items.sort(state.newsOrder==='important' ? (a,b)=>important(a,b)||sourceTime(b)-sourceTime(a) : (a,b)=>sourceTime(b)-sourceTime(a)||important(a,b));
-    $('brief-feed').innerHTML=items.length ? items.slice(0,isStatic ? 40 : 20).map((item,index)=>renderArticle(item,index+1)).join('') : empty('No news matches this view.', 'Try another filter or open Explore → All evidence. This is selected coverage, not proof that nothing happened.');
-    if ($('news-count')) $('news-count').textContent=`${plural(items.length,'selected story')} · ${state.newsOrder==='latest' ? 'Latest source date first; unknown dates last' : 'Important first; priority is editorial or rule-based'} · ${isStatic ? 'Review date is not publication date.' : 'Background items remain in All evidence.'}`;
+    items.sort(state.newsOrder==='mix' ? (a,b)=>(window.PulseWall?.score(b)||0)-(window.PulseWall?.score(a)||0)||sourceTime(b)-sourceTime(a) : state.newsOrder==='important' ? (a,b)=>important(a,b)||sourceTime(b)-sourceTime(a) : (a,b)=>sourceTime(b)-sourceTime(a)||important(a,b));
+    $('brief-feed').innerHTML=items.length ? items.slice(0,state.newsLimit).map((item,index)=>item.wall_item ? window.PulseWall.renderCard(item) : renderArticle(item,index+1)).join('') : empty('No news matches this view.', 'Try another filter or open Explore → All evidence. This is selected coverage, not proof that nothing happened.');
+    if ($('news-count')) $('news-count').textContent=`${items.length>state.newsLimit ? `Showing ${state.newsLimit} of ${items.length} stories` : plural(items.length,'selected story')} · ${state.newsOrder==='latest' ? 'Latest source date first; unknown dates last' : state.newsOrder==='mix' ? 'Your source preferences, then recency' : 'Important first; priority is editorial or rule-based'} · ${isStatic ? 'Review date is not publication date.' : 'Background items remain in All evidence.'}`;
     document.querySelectorAll('[data-news-order]').forEach(button=>{const selected=button.dataset.newsOrder===state.newsOrder;button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected));});
-    const visit=state.visit;
-    if ($('visit-summary')) $('visit-summary').textContent=!visit?.storageAvailable ? 'Visit comparison unavailable in this browser. Source dates still apply.' : visit.firstVisit ? 'First visit in this browser · baseline saved. Nothing is labeled new yet.' : `${plural(list(visit.newIds).length,'new story')} · ${plural(list(visit.changedIds).length,'material revision')} since your previous visit. Newly found does not mean newly published.`;
+    if ($('news-more')) {$('news-more').hidden=items.length<=state.newsLimit;$('news-more').textContent=`Show ${Math.min(40,Math.max(0,items.length-state.newsLimit))} more stories`;}
+    const visit=state.visit, wallVisit=window.PulseWall?.visit('markets');
+    const newIds=new Set([...list(visit?.newIds),...list(wallVisit?.newIds)]),changedIds=new Set([...list(visit?.changedIds),...list(wallVisit?.changedIds)]);
+    if ($('visit-summary')) $('visit-summary').textContent=!visit?.storageAvailable || (wallVisit && !wallVisit.storageAvailable) ? 'Visit comparison unavailable in this browser. Source dates still apply.' : visit.firstVisit && (!wallVisit || wallVisit.firstVisit) ? 'First visit in this browser · baseline saved. Nothing is labeled new yet.' : `${plural(newIds.size,'new story')} · ${plural(changedIds.size,'material revision')} since your previous visit. Newly found does not mean newly published.${wallVisit?.firstVisit ? ' Source-feed visit baseline starts now.' : ''}`;
     if (isStatic) hideLocalControls();
   }
   function renderBrief() {
@@ -210,7 +216,7 @@
     const latest = lastRefresh();
     const reviewedAt = data.publication?.reviewed_at || data.publication?.as_of;
     const latestTime = isStatic ? reviewedAt : latest.finished_at || (typeof stats.last_refresh === 'string' ? stats.last_refresh : stats.last_refresh?.finished_at);
-    const datedItems = newsItems().filter(a => timestamp(a.published_at)>0 && timestamp(a.published_at)<=Date.now());
+    const datedItems = [...newsItems(),...(window.PulseWall?.items('markets') || [])].filter(a => timestamp(a.published_at)>0 && timestamp(a.published_at)<=Date.now());
     const sourceDate = Math.max(0,...datedItems.map(a => timestamp(a.published_at)));
     $('edition-date').textContent = sourceDate ? `Latest source ${dateLabel(sourceDate)}` : 'Source dates unavailable';
     $('edition-asof').textContent = isStatic ? `Reviewed ${dateLabel(reviewedAt,true)} · not live` : latestTime ? `Fetched ${dateLabel(latestTime,true)} · notes reviewed separately` : 'No refresh completed';
@@ -395,7 +401,7 @@
     $('lead-count').textContent = plural(leads.length,'lead');
     $('lead-list').innerHTML = leads.length ? leads.map(lead => `<article class="lead-item"><span class="badge amber">Unverified lead</span><div>${link(lead.url,`${esc(lead.url)} ↗`)}${lead.note ? `<p>${esc(lead.note)}</p>` : ''}<p class="fine-print">Saved ${esc(dateLabel(lead.created_at,true))} · Contents not fetched or verified</p></div></article>`).join('') : empty('No X leads saved.', 'Paste a public post link above to investigate. A saved link never counts as confirmed evidence.');
   }
-  function render() { renderPublication(); populateEntities(); renderBrief(); renderEvidence(); renderLedger(); renderLayers(); renderEarnings(); renderSources(); selectPage(); if (isStatic) hideLocalControls(); }
+  function render() { window.PulseWall?.init(state.data,renderNews); renderPublication(); populateEntities(); renderBrief(); renderEvidence(); renderLedger(); renderLayers(); renderEarnings(); renderSources(); selectPage(); if (isStatic) hideLocalControls(); }
   async function load(initial = false) {
     if (initial) { $('loading').hidden = false; $('load-error').hidden = true; }
     try {
@@ -426,7 +432,11 @@
       const changed = Number(summary.changed_count ?? 0);
       const rejected = Number(summary.rejected_count ?? 0);
       const skipped = Number(summary.skip_count ?? summary.skipped_count ?? 0);
-      notify(`Refresh ${errors || skipped || rejected ? 'completed with gaps' : 'completed'}: ${plural(added,'new item')}; ${plural(changed,'revised item')}; ${plural(duplicates,'unchanged item')}.${errors ? ` ${plural(errors,'source')} failed.` : ''}${skipped ? ` ${plural(skipped,'source')} skipped.` : ''}${rejected ? ` ${plural(rejected,'unusable item')} rejected.` : ''}${errors || skipped || rejected ? ' Check Sources & leads for details.' : ' This describes configured coverage, not all market news.'}`, errors || skipped || rejected ? '' : 'success');
+      const wallSummary=summary.personal_wall || result.personal_wall;
+      const wallErrors=Number(wallSummary?.error_count || 0),wallSkipped=Number(wallSummary?.skipped_count || 0),wallRejected=Number(wallSummary?.rejected_count || 0);
+      const gaps=errors || skipped || rejected || wallErrors || wallSkipped || wallRejected || !wallSummary;
+      const wallMessage=wallSummary ? ` Personal wall: ${plural(Number(wallSummary.new_count||0),'new item')}; ${plural(Number(wallSummary.changed_count||0),'revised item')}; ${plural(Number(wallSummary.duplicate_count||0),'unchanged item')}.${wallErrors ? ` ${plural(wallErrors,'wall source')} failed.` : ''}${wallSkipped ? ` ${plural(wallSkipped,'wall source')} skipped.` : ''}${wallRejected ? ` ${plural(wallRejected,'wall item')} rejected.` : ''}` : ' Personal wall refresh status is unavailable.';
+      notify(`Refresh ${gaps ? 'completed with gaps' : 'completed'}. Markets: ${plural(added,'new item')}; ${plural(changed,'revised item')}; ${plural(duplicates,'unchanged item')}.${errors ? ` ${plural(errors,'market source')} failed.` : ''}${skipped ? ` ${plural(skipped,'market source')} skipped.` : ''}${rejected ? ` ${plural(rejected,'market item')} rejected.` : ''}${wallMessage}${gaps ? ' Check source coverage for details; existing evidence is preserved.' : ' This describes configured coverage, not all news.'}`, gaps ? 'error' : 'success');
     } catch (error) { notify(`Refresh did not complete: ${error.message} Previously stored evidence is preserved.`, 'error'); }
     finally { state.refreshing = false; button.disabled = false; button.innerHTML = '<span aria-hidden="true">↻</span> Refresh sources'; }
   });
@@ -480,10 +490,11 @@
       notify(scope + (status === 'dismissed' ? 'Dismissed from the active reading queue. Use the Dismissed filter to restore it.' : status === 'reviewed' ? 'Marked read. This changes your queue, not the verification status of the claim.' : 'Returned to the unread queue.'),'success');
     } catch(error) { button.disabled = false; notify(`Reading state was not saved: ${error.message}`,'error'); }
   });
+  $('news-more')?.addEventListener('click',()=>{state.newsLimit+=40;renderNews();});
   $('show-more').addEventListener('click', () => { state.limit += 40; renderEvidence(); });
   $('retry').addEventListener('click', () => { if (isStatic) location.reload(); else load(true).catch(() => {}); });
   window.addEventListener('hashchange', selectPage);
-  document.querySelectorAll('[data-news-order]').forEach(button=>button.addEventListener('click',()=>{state.newsOrder=button.dataset.newsOrder==='important'?'important':'latest';renderNews();}));
-  ['news-search','news-lens','news-entity','news-layer'].forEach(id=>$(id)?.addEventListener(id==='news-search'?'input':'change',()=>{if(state.data)renderNews();}));
+  document.querySelectorAll('[data-news-order]').forEach(button=>button.addEventListener('click',()=>{state.newsOrder=['important','mix'].includes(button.dataset.newsOrder)?button.dataset.newsOrder:'latest';window.PulseWall?.setMarketOrder(state.newsOrder);renderNews();}));
+  ['news-search','news-lens','news-entity','news-layer','news-source','news-format'].forEach(id=>$(id)?.addEventListener(id==='news-search'?'input':'change',()=>{if(state.data)renderNews();}));
   configureStaticMode(); selectPage(); load(true).catch(() => {});
 })();

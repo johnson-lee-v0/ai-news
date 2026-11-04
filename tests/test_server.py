@@ -81,7 +81,7 @@ class SnapshotTests(unittest.TestCase):
     def test_refresh_saves_daily_receipt_without_network(self):
         with tempfile.TemporaryDirectory() as temp:
             db = Path(temp) / 'pulse.sqlite3'
-            with patch('pulse.server.ingest.refresh', return_value={'new_count':0,'error_count':0}):
+            with patch('pulse.server.ingest.refresh', return_value={'new_count':0,'error_count':0}), patch('pulse.server.wall.refresh_file', return_value={'new_count':0,'error_count':0,'public_written':False}):
                 refresh(db)
             files = list(Path(temp).glob('daily/*/*.json'))
             self.assertEqual(len(files), 1)

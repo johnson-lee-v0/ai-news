@@ -27,7 +27,7 @@ def main():
         elif args.command == "refresh":
             result = refresh(db_path)
             print(json.dumps(result, indent=2))
-            if result.get("error_count", 0) or result.get("skipped_count", 0):
+            if result.get("error_count", 0) or result.get("skipped_count", 0) or result.get("personal_wall", {}).get("error_count", 0) or result.get("personal_wall", {}).get("skipped_count", 0):
                 return 2
         elif args.command == "export":
             print(json.dumps(dashboard(db_path), indent=2, ensure_ascii=False))

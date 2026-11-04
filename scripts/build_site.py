@@ -14,8 +14,9 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path: sys.path.insert(0, str(ROOT))
 from pulse.layers import LAYER_IDS, annotate as annotate_layers, tracking as layer_tracking
+from pulse import wall
 FORMAT = 'ai-stock-pulse-static-v1'
-OUTPUTS = {'index.html', 'app.js', 'styles.css', 'finance.js', 'finance.css', 'visit-state.js', 'favicon.svg', 'data/dashboard.json', 'build.json', '.nojekyll'}
+OUTPUTS = {'index.html', 'app.js', 'styles.css', 'finance.js', 'finance.css', 'visit-state.js', 'wall.js', 'wall.css', 'favicon.svg', 'data/dashboard.json', 'build.json', '.nojekyll'}
 TOP_FIELDS = {'reviewed_at', 'headline', 'bullets', 'notice', 'articles', 'sources', 'ledger', 'earnings'}
 ARTICLE_FIELDS = {'id','title','url','published_at','date_kind','date_precision','source_id','source_name','source_role','lens','relevance','observation','summary','implication','beneficiaries','risks','counterevidence','confirms','refutes','uncertainty','entities','rank','event_date','event_start','event_end','reviewed_at','report_period','publication_note','claim_type','access_note','source_date_note','methodology_url','republished_at','quote_as_of','highlights','ai_layers'}
 HIGHLIGHT_FIELDS = {'title','observation','claim_type','implication','source_url','source_date'}
@@ -169,13 +170,17 @@ def build(output, source=None):
     accounts=account_data['accounts'] if isinstance(account_data,dict) else account_data
     commit=revision()
     payload=dashboard(raw,accounts,commit)
+    # The independently maintained wall survives market-only editorial updates.
+    wall_path=ROOT/'public/wall.json'
+    payload['personal_wall']=wall.validate_public(json.loads(wall_path.read_text(encoding='utf-8')))
+    safe_text(payload['personal_wall'])
     (output/'data/dashboard.json').write_text(json.dumps(payload,indent=2,ensure_ascii=False,sort_keys=True)+'\n')
     html=(ROOT/'static/index.html').read_text().replace('<html lang="en">','<html lang="en" data-mode="static">')
     html=html.replace('href="/styles.css"','href="./styles.css"').replace('src="/app.js"','src="./app.js"')
-    html=html.replace('</head>', '<link rel="icon" type="image/svg+xml" href="./favicon.svg">\n<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; style-src \'self\'; img-src \'self\' data:; connect-src \'self\'; base-uri \'none\'; form-action \'none\'">\n</head>')
+    html=html.replace('</head>', '<link rel="icon" type="image/svg+xml" href="./favicon.svg">\n<meta http-equiv="Content-Security-Policy" content="'+wall.content_security_policy(static=True)+'">\n</head>')
     if 'data-mode="static"' not in html: raise ValueError('Static HTML marker missing')
     (output/'index.html').write_text(html)
-    for name in ('app.js','styles.css','finance.js','finance.css','visit-state.js'): (output/name).write_bytes((ROOT/'static'/name).read_bytes())
+    for name in ('app.js','styles.css','finance.js','finance.css','visit-state.js','wall.js','wall.css'): (output/name).write_bytes((ROOT/'static'/name).read_bytes())
     (output/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#f5f4ee"/><path stroke="#226d60" stroke-width="4" stroke-linecap="round" d="M8 20V13M16 24V8M24 27V5"/></svg>\n')
     (output/'.nojekyll').write_text('')
     files={str(p.relative_to(output)):hashlib.sha256(p.read_bytes()).hexdigest() for p in output.rglob('*') if p.is_file() and p.name!='build.json'}

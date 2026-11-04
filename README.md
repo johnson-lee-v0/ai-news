@@ -1,14 +1,14 @@
-# AI Stock Pulse
+# Pulse — Sports & Markets
 
-A local research inbox for AI economics: what changed in funding, paid demand, capacity delivery, earnings, models and policy; why it could matter; and what evidence would confirm or refute the implication.
+A personally controlled news wall with **Sports** and **Markets** tabs. Sports covers selected NBA and F1 sources; Markets preserves AI Stock Pulse research alongside selected investing articles and podcasts. Source preferences and reading controls stay in your browser. See [News wall V1](docs/NEWS_WALL.md) for actual coverage and limitations.
 
 The app combines selected public feeds, SEC filing metadata and news discovery searches. It runs on macOS or Linux with Python 3.9+, using only the standard library, SQLite and a small HTML/CSS/JavaScript interface. No API keys, paid services or sign-ins are required for its public-source workflow.
 
 ## Public GitHub Pages dashboard
 
-The public site is served at **https://johnson-lee-v0.github.io/ai-news/**. It is a read-only, manually reviewed snapshot with source dates and a separate review timestamp. It is not the live Python application: refresh, saved leads and server reading-state controls are unavailable. News, Explore, company/topic filters, an interactive financing network, source links, expandable implications and the illustrative calculator work in the browser. A browser-local comparison remembers only stable IDs and content fingerprints; it never marks every story new on the first visit.
+The public site is served at **https://johnson-lee-v0.github.io/ai-news/**. It is a read-only, manually reviewed snapshot with source dates and a separate review timestamp. It is not the live Python application: refresh, saved leads and server reading-state controls are unavailable. Sports and Markets, source/format controls, browser-local preferences, the Markets Explore tools, source links, full visible implications and financing details work in the browser. A browser-local comparison remembers only stable IDs and content fingerprints; it never marks every story new on the first visit.
 
-Only `public/brief.json`, the public account catalog and selected static assets enter the site build. Local databases, fetched article bodies and private research are never exported. Publication review timestamps are not replaced with build timestamps; historical reports remain historical.
+Only reviewed market research in `public/brief.json`, separately validated feed metadata in `public/wall.json`, the public account catalog and selected static assets enter the site build. Local databases, fetched article bodies and private research are never exported. Publication review timestamps are not replaced with build timestamps; historical reports remain historical.
 
 Build the exact static artifact locally:
 
@@ -16,7 +16,7 @@ Build the exact static artifact locally:
 python3 scripts/build_site.py
 ```
 
-The ten-file artifact is written to ignored `_site/`. Use `node tests/pages_smoke.cjs` with an existing Playwright installation to test it under the `/ai-news/` repository prefix. The GitHub Pages workflow uses an explicit dispatch trigger, with no repository cron. The separately approved daily automation may review and publish material verified updates without another confirmation, using the same tests and publication audit. Raw refresh output is never published directly. See [Pages deployment](docs/PAGES.md).
+The twelve-file artifact is written to ignored `_site/`. Use `node tests/pages_smoke.cjs` with an existing Playwright installation to test it under the `/ai-news/` repository prefix. The GitHub Pages workflow uses an explicit dispatch trigger, with no repository cron. The separately approved daily automation may review and publish material verified updates without another confirmation, using the same tests and publication audit. Raw refresh output is never published directly. See [Pages deployment](docs/PAGES.md).
 
 ## Run locally
 
@@ -86,7 +86,7 @@ Set `PLAYWRIGHT_MODULE` to an existing module path if needed and `PYTHON` to a P
 
 ## Daily operation
 
-`python3 -m pulse refresh` can be run manually or by a separately configured scheduler while the machine is awake and online. This repository installs no background service and configures no recurring schedule. Each completed refresh persists a dated snapshot. Failed sources retain previous evidence and remain visibly failed; stale data is not treated as a successful current update.
+`python3 -m pulse refresh` can be run manually or by a separately configured scheduler while the machine is awake and online. This repository installs no background service and configures no recurring schedule. Each completed refresh persists a dated snapshot and updates a separate local wall store. The existing publishing task must project the wall metadata as documented in `docs/NEWS_WALL.md`, then build both datasets; a market-only editorial update must not erase Sports. Failed sources retain previous evidence and remain visibly failed; stale data is not treated as a successful current update.
 
 ## Publication boundaries
 

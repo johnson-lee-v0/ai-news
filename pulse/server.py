@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from urllib.parse import urlsplit
 
-from . import analysis, research, storage, ingest
+from . import analysis, research, storage, ingest, wall
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -17,7 +17,9 @@ def dashboard(db_path):
     access_path = ROOT / "config" / "x_access.json"
     accounts = json.loads(account_path.read_text(encoding="utf-8")) if account_path.exists() else {}
     x_access = json.loads(access_path.read_text(encoding="utf-8")) if access_path.exists() else {"status": "not_checked", "automatic": False, "can_capture": True, "detail": "Browser X access has not been checked."}
-    return analysis.compose({**storage.dashboard_data(db_path), **research.read(db_path), "accounts": accounts.get("accounts", []) if isinstance(accounts, dict) else accounts, "x_access": x_access})
+    payload = analysis.compose({**storage.dashboard_data(db_path), **research.read(db_path), "accounts": accounts.get("accounts", []) if isinstance(accounts, dict) else accounts, "x_access": x_access})
+    payload["personal_wall"] = wall.read_file(Path(db_path).parent / "wall.json")
+    return payload
 
 
 def refresh(db_path):
@@ -29,6 +31,13 @@ def refresh(db_path):
         except BlockingIOError:
             raise RuntimeError("A refresh is already running; wait for it to finish")
         result = ingest.refresh(db_path)
+        # The existing schedule already invokes this command. Its separate wall
+        # store is refreshed under the same lock; market counts remain unchanged.
+        # Normal local refresh never writes the public publication dataset.
+        try:
+            result["personal_wall"] = wall.refresh_file(db_path.parent / "wall.json")
+        except (ValueError, OSError, RuntimeError):
+            result["personal_wall"] = {"error_count": 1, "error": "Personal wall store could not be updated; existing files were preserved", "public_written": False}
         snapshot = dashboard(db_path)
         day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         stamp = datetime.now(timezone.utc).strftime("%H%M%S-%f")
@@ -56,7 +65,7 @@ def make_handler(db_path):
             self.send_header("Cache-Control", "no-store")
             self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Referrer-Policy", "no-referrer")
-            self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'")
+            self.send_header("Content-Security-Policy", wall.content_security_policy())
             self.end_headers()
             self.wfile.write(body)
 
@@ -70,7 +79,7 @@ def make_handler(db_path):
                 if path == "/api/dashboard":
                     return self.respond(200, dashboard(db_path))
                 routes = {"/": ("index.html", "text/html"), "/index.html": ("index.html", "text/html"), "/app.js": ("app.js", "text/javascript"), "/styles.css": ("styles.css", "text/css")}
-                routes.update({"/"+name:(name,"text/javascript" if name.endswith(".js") else "text/css") for name in ("finance.js","finance.css","visit-state.js")})
+                routes.update({"/"+name:(name,"text/javascript" if name.endswith(".js") else "text/css") for name in ("finance.js","finance.css","visit-state.js","wall.js","wall.css")})
                 if path in routes:
                     name, mime = routes[path]
                     return self.respond(200, (ROOT / "static" / name).read_bytes(), mime + "; charset=utf-8")
