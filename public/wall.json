@@ -1425,6 +1425,22 @@
       ],
       "summary": "",
       "analysis": null
+    },
+    {
+      "id": "f1-instagram-camara-haas-20261103",
+      "section": "sports",
+      "source_id": "f1-official",
+      "title": "Formula 1: Camara’s Haas debut announcement",
+      "url": "https://www.instagram.com/p/DfSv5lriAen/",
+      "published_at": "2026-11-03",
+      "first_seen_at": "2026-11-04T04:53:35.392610+00:00",
+      "updated_at": "2026-11-04T04:53:35.392610+00:00",
+      "format": "instagram",
+      "topics": [
+        "f1"
+      ],
+      "summary": "Official F1 post about Camara’s Sao Paulo debut. Another format of the November 3 announcement already covered here, not a new event. Author, publication day and public embed verified.",
+      "analysis": null
     }
   ],
   "coverage": [

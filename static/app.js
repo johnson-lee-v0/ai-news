@@ -191,6 +191,7 @@
     const saved=visitTracker.commit([...list(state.data.articles),...stories(),...items]);if(!saved.storageAvailable)state.visit.storageAvailable=false;state.visitReady=true;
   }
   function renderNews() {
+    window.PulseWall?.renderFormats('markets');
     let items=[...newsItems(),...(window.PulseWall?.items('markets') || [])].filter(item => window.PulseWall?.visible(item) !== false);
     const q=($('news-search')?.value || '').trim().toLowerCase();
     const lens=$('news-lens')?.value || 'all', entity=$('news-entity')?.value || 'all', layer=$('news-layer')?.value || 'all';

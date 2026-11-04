@@ -14,6 +14,8 @@ The existing external Codex research task can read originals and add short sourc
 
 ## Media and social sources
 
+Visible format shortcuts show the available Instagram, video and podcast counts above each feed. Tapping Instagram filters to those posts and loads the first three public embeds; each remaining post has its own prominent load button. Source mutes and hidden posts still apply. Other filters are cleared by a format shortcut so available posts are not accidentally concealed.
+
 Podcast audio and supported Instagram/YouTube embeds load only after an explicit play/load click. Opening third-party media contacts that provider and is subject to its availability, embed permissions and policies. Every media card retains an original link. An unavailable embed is not silently represented as successfully viewed. A manually added URL is a personal unverified lead, not verified creator content.
 
 Only canonical public Instagram post/reel and YouTube video links are accepted for browser-local additions. No login session, private account, arbitrary iframe HTML, engagement scraping or comprehensive X timeline is used. Shams and NBA Central require separately accessible verified material; profile links alone do not connect their feeds. The supplied unresolved account string stays unresolved until identified by the user. Polymarket links or source data are read-only; no trading or account integration is included. No Kalshi requests are made.

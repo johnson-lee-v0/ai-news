@@ -11,3 +11,7 @@
 .news-card-details:not([open]){clear:none}.news-card-details[open]{clear:both}
 
 .wall-more{margin:18px 0}.wall-more[hidden]{display:none!important}
+
+/* Public media is discoverable before the long feed; loading still needs a tap. */
+.wall-formats{margin:0 0 14px}.wall-format-buttons{display:flex;gap:7px;flex-wrap:wrap}.wall-format-buttons button{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:4px;padding:9px 13px;min-height:40px;font:inherit;font-size:11px;cursor:pointer}.wall-format-buttons button[aria-pressed="true"]{border-color:var(--teal);color:var(--teal);font-weight:600}.wall-format-buttons button:disabled{opacity:.55;cursor:default}.wall-format-buttons span{margin-left:4px;color:var(--muted)}.wall-format-note{font-size:10px;line-height:1.6;color:var(--muted);margin:7px 0 0}.wall-embed-launch{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:17px;margin:14px 0}.wall-embed-launch>span{font-size:12px;line-height:1.6;flex-basis:100%;color:var(--muted)}.wall-embed-launch .button{font-size:12px;min-height:44px}.wall-embed-launch small{font-size:10px;line-height:1.6;color:var(--muted)}.wall-embed-launch[hidden]{display:none!important}
+@media(max-width:760px){.wall-format-buttons{gap:6px}.wall-format-buttons button{font-size:11px;padding:8px 10px;min-height:44px}.wall-embed-launch{padding:14px}.wall-embed-launch .button{width:100%;justify-content:center}.wall-format-note{font-size:10px}}
