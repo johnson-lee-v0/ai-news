@@ -1,10 +1,11 @@
 """Publication boundaries use reviewed public JSON and temporary build directories."""
 from copy import deepcopy
+from datetime import datetime, timezone
 import json
 from pathlib import Path
 import tempfile
 import unittest
-from scripts.build_site import ROOT, OUTPUTS, build, dashboard, validate_public
+from scripts.build_site import ROOT, OUTPUTS, READING_REVIEW_BASIS, build, dashboard, validate_public
 
 
 class PublicBuildTests(unittest.TestCase):
@@ -116,5 +117,40 @@ class PublicBuildTests(unittest.TestCase):
         with self.assertRaises(ValueError): validate_public(raw)
         raw=deepcopy(self.raw);raw['ledger'][0]['sources']=[{'url':raw['sources'][0]['url'],'date':'2026-01-01','title':'Synthetic source','private_note':'excluded'}]
         with self.assertRaises(ValueError): validate_public(raw)
+
+    def reading_review(self):
+        return {'key_takeaway':'Synthetic concise reading takeaway.',
+                'worth_reading':'skim','rationale':'Synthetic reading rationale.',
+                'basis':READING_REVIEW_BASIS,
+                'reviewed_at':datetime.now(timezone.utc).isoformat()}
+
+    def test_reading_review_preserves_evidence_and_its_older_review_date(self):
+        raw=deepcopy(self.raw)
+        raw['articles'][0]['reading_review']=self.reading_review()
+        before=deepcopy(raw)
+        validate_public(raw)
+        output=dashboard(raw,[],'a'*40)
+        self.assertEqual(raw,before)
+        self.assertEqual(output['publication']['reviewed_at'],before['reviewed_at'])
+        for item in output['articles']:
+            original=next(a for a in before['articles'] if a['id']==item['id'])
+            for field in ('reading_review','reviewed_at','published_at','observation','implication','uncertainty'):
+                self.assertEqual(item.get(field),original.get(field))
+
+    def test_reading_review_requires_exact_bounded_and_honest_fields(self):
+        for field,value in [('worth_reading','buy'),('key_takeaway',''),('key_takeaway','x'*351),
+                            ('rationale','x'*501),('basis','All originals newly verified'),
+                            ('reviewed_at','2099-01-01T00:00:00Z'),('reviewed_at','2020-01-01T00:00:00Z'),
+                            ('reviewed_at','2026-11-03'),('reviewed_at','invalid')]:
+            with self.subTest(field=field,value=value):
+                raw=deepcopy(self.raw);review=self.reading_review();review[field]=value
+                raw['articles'][0]['reading_review']=review
+                with self.assertRaises(ValueError): validate_public(raw)
+        for mode in ('extra','missing'):
+            raw=deepcopy(self.raw);review=self.reading_review()
+            if mode=='extra': review['private_note']='Synthetic excluded field'
+            else: review.pop('basis')
+            raw['articles'][0]['reading_review']=review
+            with self.assertRaises(ValueError): validate_public(raw)
 
 if __name__=='__main__': unittest.main()

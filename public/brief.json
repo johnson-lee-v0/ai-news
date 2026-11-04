@@ -89,7 +89,14 @@
       "source_id": "anthropic-s1a-20261102-source-1",
       "rank": 1,
       "relevance": "material",
-      "summary": "New September results and a source-defined obligations total update the October 26 filing story."
+      "summary": "New September results and a source-defined obligations total update the October 26 filing story.",
+      "reading_review": {
+        "key_takeaway": "Anthropic’s updated filing pairs strong revenue and positive operating cash with very large future compute obligations; financing and cash conversion still matter.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The newest reviewed filing changes the scale and timing of the funding question. Read the obligation terms and cash limitations rather than equating commitments with spending already paid.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "palantir-q3-results-20261102",
@@ -143,7 +150,14 @@
           "source_date": "2026-11-02"
         }
       ],
-      "report_period": "the quarter ended September 30, 2026"
+      "report_period": "the quarter ended September 30, 2026",
+      "reading_review": {
+        "key_takeaway": "Palantir’s commercial growth is reaching revenue and cash, but slower contract-value growth limits extrapolation and AI-specific customer returns remain undisclosed.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Strong operating evidence makes this more useful than an AI adoption headline. The contrast between sales, cash and contract growth is the main detail to inspect.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "marvell-lumentum-agreement-20261102",
@@ -239,7 +253,14 @@
           "source_date": "2026-11-02"
         }
       ],
-      "report_period": "Lumentum fiscal Q1 2027, ended September 26, 2026; fiscal Q2 2027 guidance"
+      "report_period": "Lumentum fiscal Q1 2027, ended September 26, 2026; fiscal Q2 2027 guidance",
+      "reading_review": {
+        "key_takeaway": "Lumentum’s sales and optics commitments strengthen the operating case, while the proposed Marvell merger and future commitments remain separate from cash receipts.",
+        "worth_reading": "dig_deeper",
+        "rationale": "A material transaction plus fresh results deserve attention. Read delivery, cancellation and cash-conversion limits before treating the announced value as incremental demand.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "onsemi-q3-results-20261102",
@@ -294,7 +315,14 @@
           "source_date": "2026-11-02"
         }
       ],
-      "report_period": "Q3 ended October 2, 2026"
+      "report_period": "Q3 ended October 2, 2026",
+      "reading_review": {
+        "key_takeaway": "AI data-center power-chip demand is reaching onsemi sales, but it is still a minority of the business and its separate profitability is undisclosed.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The disclosed AI sales line is a useful operating checkpoint. Read how low capital spending and the weaker automotive segment affect the companywide cash picture.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "drax-brookfield-campus-agreement-20261103",
@@ -351,7 +379,14 @@
           "source_date": "2026-11-03"
         }
       ],
-      "rank": 5
+      "rank": 5,
+      "reading_review": {
+        "key_takeaway": "The Drax partnership is an early development plan using existing power infrastructure, with tenants, approvals and final investment decisions still ahead.",
+        "worth_reading": "skim",
+        "rationale": "The proposal could matter for future capacity, but it supplies no operating compute or committed tenant evidence yet. The milestones matter more than the investment headline.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "meta-financing-20261026",
@@ -449,7 +484,14 @@
           "source_date": "2026-10-27",
           "claim_type": "issuer investment intention and equipment testing status"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Meta’s reported bond proposal is another potential funding route; final terms and cash proceeds were not established in the saved review.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The funding scale is material, but the report is one secondary sourcing chain. Read the distinction between a proposed issue, prior closed funding and returns on future spending.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "lgcns-jakarta-completion-20261102",
@@ -505,7 +547,14 @@
           "source_url": "https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1",
           "source_date": "2026-11-02"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "LG CNS reports a completed, fully contracted Jakarta phase, which reduces construction uncertainty without establishing active GPU use or financial returns.",
+        "worth_reading": "skim",
+        "rationale": "A useful delivery milestone. Further detail has limited economic value until energization, customer workloads or cash generation are disclosed.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "google-malaysia-water-20261102",
@@ -563,7 +612,14 @@
           "source_url": "https://www.googlecloudpresscorner.com/2026-11-1-Google-Funds-US-160-Million-in-Shared-Water-Infrastructure-Alongside-Digital-Infrastructure-Development-in-Negeri-Sembilan",
           "source_date": "2026-11-02"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Google’s water-infrastructure commitment illustrates the utility work needed before a future campus can run; it does not establish a current water shortage or AI-only demand.",
+        "worth_reading": "skim",
+        "rationale": "Useful context on enabling infrastructure. The missing completion date, campus capacity and paid-cash figures limit a deeper financial conclusion.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "openai-uae-deployment-20261102",
@@ -620,7 +676,14 @@
           "source_url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
           "source_date": "2026-11-02"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "One UAE government pilot is already in production, while broader OpenAI agreements still lack disclosed paid use, contract values or measured savings.",
+        "worth_reading": "skim",
+        "rationale": "The production pilot is more informative than the agreement count. Read further mainly for workflow details, not as established evidence of profitable adoption.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "xai-power-lawsuit-20261030",
@@ -676,7 +739,14 @@
           "source_url": "https://earthjustice.org/press/2026/court-denies-xais-motion-to-dismiss-air-pollution-lawsuit-against-elon-musks-company",
           "source_date": "2026-10-30"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "The court allowed the xAI power case to proceed; the reviewed order did not impose a shutdown or establish lost compute revenue.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The distinction between permitting risk and an actual operating restriction is essential. Read the order’s scope and dated procedural limits before drawing a capacity conclusion.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "amazon-q3-20261029",
@@ -784,7 +854,14 @@
           "claim_type": "company-reported usage and management guidance; implication is analysis"
         }
       ],
-      "publication_note": "October 31 review recovers selected October 30 filing notes and updates existing financing statuses. Prior earnings/call analysis remains below."
+      "publication_note": "October 31 review recovers selected October 30 filing notes and updates existing financing statuses. Prior earnings/call analysis remains below.",
+      "reading_review": {
+        "key_takeaway": "Amazon’s filing separates capital already invested in an AI customer from future supplier-credit availability; neither alone proves the buildout’s returns.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The disclosed funding relationships materially affect exposure. Read timing and cash-versus-credit distinctions alongside AWS operating strength.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "openai-price-talks",
@@ -830,7 +907,14 @@
           "source_url": "https://kelo.com/2026/10/30/openai-cuts-funding-target-by-10-billion-ft-reports/",
           "source_date": "2026-10-31"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "A reported lower fundraising target could affect OpenAI’s spending timetable, but no closed amount, cancelled compute contract or new valuation cut was established.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The potential financing change is important. The details prevent a target revision from being confused with lost demand or cash already withheld.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "dxn-neocloud-contract-20261030",
@@ -882,7 +966,14 @@
           "source_url": "https://newswire.iguana2.com/2fee0049d633f441/announcements/dxn.asx/3A705372/DXN_Quarterly_Activities_Appendix_4C_Cash_Flow_Report.pdf",
           "source_date": "2026-10-30"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "DXN’s intended customer cancellation tests whether progress-payment protections become collected cash; one project does not establish a sector-wide demand collapse.",
+        "worth_reading": "dig_deeper",
+        "rationale": "This is a concrete test of backlog quality. Read the unfinalized cancellation and payment status instead of treating the contract value as a known loss.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "microsoft-fy27q1-20261028",
@@ -987,7 +1078,14 @@
           "source_date": "2026-10-28",
           "claim_type": "management statement; implication is analysis"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Microsoft had priced bonds at the saved review, with settlement expected November 4; pricing established funding access, not settled proceeds or AI returns.",
+        "worth_reading": "dig_deeper",
+        "rationale": "A substantial financing event with useful operating context. The saved review predates the expected settlement, so do not infer completion from the calendar alone.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "intel-q3-20261029",
@@ -1067,7 +1165,14 @@
           "source_date": "2026-10-29",
           "claim_type": "management operating milestones and guidance; implication is analysis"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Intel’s server segment shows real growth and profit, while PC weakness and manufacturing constraints prevent that strength from describing the whole company.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Useful evidence that AI infrastructure demand extends beyond GPUs. Read segment results and delivery constraints together, with no AI-only revenue claim.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "sandisk-fq1-20261029",
@@ -1139,7 +1244,14 @@
           "source_date": "2026-10-29",
           "claim_type": "management guidance; product timing in presentation"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Sandisk reports strong data-center sales and profit, but weaker consumer sales and mixed cash movements complicate a uniform growth story.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Operating results are more informative than contract headlines. The cash-flow and customer-advance details help assess the durability of supplier gains.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "mistral-large4-weights-20261029",
@@ -1202,7 +1314,14 @@
           "source_date": "2026-10-29",
           "claim_type": "vendor benchmark comparison; inference"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Mistral’s released weights expand self-hosting choices; hardware costs, security and real adoption still determine whether that choice improves economics.",
+        "worth_reading": "skim",
+        "rationale": "Useful if following enterprise model options. Independent performance and customer-return evidence are absent, so the release alone supports a limited conclusion.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "nscale-credit-talks-20261030",
@@ -1260,7 +1379,14 @@
           "source_url": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
           "source_date": "2026-09-25"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Reported Nvidia support for Nscale remained unsigned; potential financing would link supplier credit exposure more closely to the same AI project.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Relevant to how the buildout is funded. Read what is proposed versus already closed, and keep supplier support distinct from delivered capacity or revenue.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "samsung-q3-20261029",
@@ -1334,7 +1460,14 @@
           "source_date": "2026-10-29",
           "claim_type": "management guidance and future milestones; implication is analysis"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Samsung’s memory-led earnings strength coexists with consumer losses; higher component prices can benefit suppliers while increasing costs for their customers.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The segment split is the important detail. Read the limits on AI attribution and cash conversion before extending memory profits into a broad AI-return conclusion.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "caterpillar-q3-20261029",
@@ -1405,7 +1538,14 @@
           "source_date": "2026-10-29",
           "claim_type": "issuer-reported results; implication is analysis"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Data-center power demand is reaching Caterpillar sales and segment profit, but these results do not establish energized sites or profitable compute use.",
+        "worth_reading": "skim",
+        "rationale": "A solid supplier checkpoint. The release-only review and lack of AI-only sales make it most useful as corroborating buildout evidence.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "equinix-q3-20261028",
@@ -1491,7 +1631,14 @@
           "source_date": "2026-10-28",
           "claim_type": "management guidance and reconciliation; implication is analysis"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Equinix’s recurring revenue strengthens the demand case, while expansion funding needs and a one-time fee complicate the earnings headline.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The recurring-versus-nonrecurring split merits reading. Keep bookings, recognized revenue, cabinet utilization and GPU usage separate.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "oracle-chip-options-20261027",
@@ -1580,7 +1727,14 @@
           "source_date": "2026-10-27"
         }
       ],
-      "publication_note": "Original chip-availability story dated October 27; this same story now links the October 28 Investor Day release. Earlier source and event dates remain in the retained highlights."
+      "publication_note": "Original chip-availability story dated October 27; this same story now links the October 28 Investor Day release. Earlier source and event dates remain in the retained highlights.",
+      "reading_review": {
+        "key_takeaway": "Oracle’s cash plan depends on later delivery, vendor financing and customer advances; the targets do not establish cash self-sufficiency today.",
+        "worth_reading": "dig_deeper",
+        "rationale": "A central funding-and-execution question. Read the forecast dates and missing obligation reconciliation before treating financing arrangements as cash returns.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "alphabet-q3-20261028",
@@ -1687,7 +1841,14 @@
           "source_date": "2026-10-28",
           "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Alphabet’s Cloud growth and profit show monetization, while external compute costs and delivery timing still pressure near-term margins and cash conversion.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The call adds material qualifications to the headline. Read those cash and margin details with the third-party transcript provenance in mind.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "vertiv-q3-20261028",
@@ -1749,7 +1910,14 @@
           "source_date": "2026-10-28",
           "claim_type": "issuer example and modeled efficiency comparison"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Vertiv’s sales and profit show infrastructure demand reaching suppliers, but customer advances and working-capital needs qualify the cash picture.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Useful operating evidence with a meaningful cash distinction. The saved review did not cover the full call or quarterly filing.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "generac-q3-20261028",
@@ -1813,7 +1981,14 @@
           "source_date": "2026-10-28",
           "claim_type": "management guidance, not reported margin"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Generac has growing power-equipment sales, but much of the highlighted data-center pipeline still requires future manufacturing, acceptance and payment.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The backlog-to-delivery gap is financially important. Read the dates and lack of verified unconditional purchase minimums before counting orders as cash.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "sk-hynix-q3-20261028",
@@ -1886,7 +2061,14 @@
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
       "rank": 26,
-      "relevance": "material"
+      "relevance": "material",
+      "reading_review": {
+        "key_takeaway": "SK hynix’s memory profits support the scarcity thesis, while weaker sequential operating cash and higher investment keep cash conversion in focus.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The profit-versus-cash contrast is worth the detail. Supplier pricing strength does not establish returns for compute buyers.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "corning-q3-ai-buildout-20261027",
@@ -1957,7 +2139,14 @@
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
       "rank": 27,
-      "relevance": "material"
+      "relevance": "material",
+      "reading_review": {
+        "key_takeaway": "Corning’s optical growth is reaching segment earnings, but changed core-currency methodology and uneven performance elsewhere limit broad comparisons.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Read the methodology and cash limitations alongside optics. This is an operating-results review, not a stock-price or valuation judgment.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "spacex-lease-commitment-20261026",
@@ -2003,7 +2192,14 @@
           "source_url": "https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm",
           "source_date": "2026-10-26"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "SpaceX’s binding equipment-lease letter supports financing access, with pricing, closing and delivery still conditional in the reviewed disclosure.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The commitment is material, but double counting it with earlier debt would distort exposure. Read the unestablished collateral and closing details.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "coreweave-denmark-online-20261027",
@@ -2051,7 +2247,14 @@
           "source_url": "https://www.coreweave.com/news/coreweave-expands-global-ai-cloud-platform-with-new-capacity-in-denmark-and-first-ai-network-backbone",
           "source_date": "2026-10-27"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "CoreWeave reports most planned Copenhagen capacity online, while exact active capacity, paid utilization and site economics remain undisclosed.",
+        "worth_reading": "skim",
+        "rationale": "A useful supply milestone with limited detail on returns. Avoid treating the entire planned capacity as operating or earning revenue.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "spacex-q3-filing-neocloud-20261025",
@@ -2144,7 +2347,14 @@
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
       "rank": 30,
       "relevance": "material",
-      "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone."
+      "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone.",
+      "reading_review": {
+        "key_takeaway": "SpaceX combines external compute rentals with its own AI workloads, so funding and returns need a group-wide view rather than an AI-segment-only story.",
+        "worth_reading": "dig_deeper",
+        "rationale": "This fuller filing-and-call review explains the business structure behind later financing headlines. Cash conversion and external-versus-internal use are the key details.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "php2shell-agentic-security-update-20261023",
@@ -2226,7 +2436,14 @@
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
       "rank": 31,
       "relevance": "material",
-      "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement."
+      "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement.",
+      "reading_review": {
+        "key_takeaway": "Patched PHP flaws and suspected AI-assisted intrusion activity are an operational security issue; they do not establish incremental AI revenue or security spending.",
+        "worth_reading": "skim",
+        "rationale": "Useful if following AI’s operational effects. The attribution remains qualified, and the spending implication is conditional.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "ai-credit-selectivity-20261025",
@@ -2301,7 +2518,14 @@
           "source_url": "https://www.crusoe.ai/resources/newsroom/neuberger-and-crusoe-announce-700-million-facility",
           "source_date": "2026-10-22"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Investor warnings and documented new facilities together suggest selective AI credit access, rather than proof of a universal lending shutdown.",
+        "worth_reading": "skim",
+        "rationale": "Useful framing, but newer filed financing is more authoritative than the original social commentary. Preserve the unverified closing and rumor limitations.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "nvidia-gtc-berlin-20261021",
@@ -2381,7 +2605,14 @@
           "source_url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/",
           "source_date": "2026-10-21"
         }
-      ]
+      ],
+      "reading_review": {
+        "key_takeaway": "Nvidia’s announcements identify potential efficiency and deployment improvements; plans and demonstrations still need shipments, adoption and operating evidence.",
+        "worth_reading": "skim",
+        "rationale": "A concise technology roadmap reference. The delivery tests are more useful than treating issuer claims as realized sales.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "anthropic-ipo-expectations",
@@ -2411,7 +2642,14 @@
       "source_name": "Reuters via Euronext",
       "source_role": "secondary",
       "date_kind": "publication_date",
-      "reviewed_at": "2026-10-25T07:20:41Z"
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "reading_review": {
+        "key_takeaway": "The October report described changing investor expectations, not executed IPO pricing or cash proceeds.",
+        "worth_reading": "skip",
+        "rationale": "The newer Anthropic filing review provides more substantial evidence. Keep this older expectations story only as historical context.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "meta-capex-floor",
@@ -2439,7 +2677,14 @@
       "source_name": "Meta Investor Relations",
       "source_role": "primary",
       "date_kind": "publication_date",
-      "reviewed_at": "2026-10-25T07:20:41Z"
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "reading_review": {
+        "key_takeaway": "Meta raised the lower bound of its capex range while leaving the ceiling unchanged; guidance does not establish supplier revenue or operating capacity.",
+        "worth_reading": "skim",
+        "rationale": "The floor-versus-ceiling distinction is useful, but the short guidance update adds less detail than later funding and earnings research.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "amazon-gwu-withdrawal",
@@ -2466,7 +2711,14 @@
       "source_name": "Data Center Dynamics",
       "source_role": "secondary",
       "date_kind": "publication_date",
-      "reviewed_at": "2026-10-25T07:20:41Z"
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "reading_review": {
+        "key_takeaway": "Amazon withdrew a proposed campus application, not an operating data center; a local permitting setback does not establish broad demand weakness.",
+        "worth_reading": "skim",
+        "rationale": "Useful as a delivery-constraint example. The secondary sourcing and single-site scope limit broader conclusions.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "coreweave-historical-cds",
@@ -2495,7 +2747,14 @@
       "source_name": "Bloomberg News via Bloomberg Law",
       "source_role": "secondary",
       "date_kind": "publication_date",
-      "reviewed_at": "2026-10-25T07:20:41Z"
+      "reviewed_at": "2026-10-25T07:20:41Z",
+      "reading_review": {
+        "key_takeaway": "The cited CoreWeave CDS estimate came from October 15 pricing and covered five years; it is neither a current quote nor a next-year default forecast.",
+        "worth_reading": "skim",
+        "rationale": "Read for the horizon and risk-neutral-pricing distinction. The recovery/model assumptions remain unverified, and no live CDS feed is connected.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     },
     {
       "id": "fanatics-ai-engagement-20261026",
@@ -2531,7 +2790,14 @@
       "counterevidence": "The live application is stronger evidence of use than a demo, but no sales, conversion, gross-profit or net-return measure is provided.",
       "confirms": "Comparable-control results for purchase conversion, revenue per visit, retention and contribution after AI costs.",
       "refutes": "No incremental purchases, cannibalized orders or costs exceeding gains would weaken the economic case.",
-      "uncertainty": "The roughly 30,000 MLB products describe test coverage, not customers or purchases. Test period and full study design are unspecified; results are not independently replicated."
+      "uncertainty": "The roughly 30,000 MLB products describe test coverage, not customers or purchases. Test period and full study design are unspecified; results are not independently replicated.",
+      "reading_review": {
+        "key_takeaway": "Fanatics’ live AI shopping feature reports higher engagement, but the case study discloses no sales or profit improvement.",
+        "worth_reading": "skim",
+        "rationale": "A useful adoption example that illustrates the gap between engagement and returns. Deeper financial conclusions need conversion, costs and controlled results.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-04T05:20:12Z"
+      }
     }
   ],
   "sources": [

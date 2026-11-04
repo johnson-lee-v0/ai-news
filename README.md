@@ -90,6 +90,16 @@ Set `PLAYWRIGHT_MODULE` to an existing module path if needed and `PYTHON` to a P
 
 ## Publication boundaries
 
+The personal wall has Sports and Markets tabs, source-grounded GPT takeaways,
+reading-priority judgments and explicit access limits. Six public RSS feeds and
+three verified public YouTube channel pages supply metadata; selected public X
+posts can be reviewed through the existing external research task. Sixers and
+Knicks highlights have direct shortcuts. Hidden stories can be restored, and
+opened or explicitly seen stories move below unseen items in this browser.
+The existing daily task reviews new items before publication; the website calls
+no model API. See [News wall workflow](docs/NEWS_WALL.md) for review commands,
+source limitations and the publication completeness gate.
+
 Source, safe documentation, public account references, tests and an explicitly reviewed public snapshot are published. Local data, article archives, research packets, credentials, environment files, screenshots, logs and caches are excluded. [Publication notes](docs/PUBLICATION.md) describe the audit and its limits.
 
 See [News and network behavior](docs/NEWS_AND_NETWORK.md) for visit comparisons, source-date ordering, map directions, and their limitations.

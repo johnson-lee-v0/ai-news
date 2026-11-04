@@ -24,22 +24,31 @@ MAX_BYTES = 3_000_000
 TIMEOUT = 15
 MAX_FEED_ITEMS = 24
 MAX_PUBLIC_ITEMS_PER_SOURCE = 16
+MAX_CHANNEL_ITEMS = 8
+YOUTUBE_CHANNEL_IDS = {"tevis-investing": "UChvd7RCRJS50RWlwbfcwr3A", "sixers-highlights": "UC5qJUyng_ezl0TVjVJFqtfQ", "knicks-highlights": "UC0hb8f0OXHEzDrJDUq-YVVw"}
 MEDIA_HOSTS = ("traffic.megaphone.fm", "dcs-cached.megaphone.fm")
 TOP_FIELDS = {"version", "updated_at", "source_status", "items", "coverage", "model_status"}
 SOURCE_FIELDS = {"id", "name", "section", "kind", "status", "home_url", "feed_url", "last_attempt_at", "last_success_at", "item_count", "note", "topics", "cooldown_until"}
-ITEM_FIELDS = {"id", "section", "source_id", "title", "url", "published_at", "first_seen_at", "updated_at", "format", "topics", "summary", "media_url", "duration", "analysis"}
+ITEM_FIELDS = {"id", "section", "source_id", "title", "url", "published_at", "first_seen_at", "updated_at", "format", "topics", "summary", "media_url", "duration", "analysis", "content_hash", "provenance_hash"}
 ANALYSIS_FIELDS = {"text", "basis", "reviewed_at", "source_urls"}
+REVIEW_FIELDS = {"key_takeaway", "worth_reading", "rationale", "scope", "confidence", "content_hash"}
+EVIDENCE_FIELDS = {"url", "published_at", "retrieved_at", "content_hash", "scope"}
+REVIEW_SCOPES = {"full_text", "excerpt", "metadata", "unavailable"}
 SOURCES = [
     {"id": "f1-official", "name": "Formula 1", "section": "sports", "kind": "rss", "home_url": "https://www.formula1.com/en/latest", "feed_url": "https://www.formula1.com/en/latest/all.xml", "topics": ["F1"], "note": "Official F1 feed. Some entries have no publication date; fetch time is not an event date."},
     {"id": "nba-communications", "name": "NBA Communications", "section": "sports", "kind": "rss", "home_url": "https://pr.nba.com/", "feed_url": "https://pr.nba.com/feed/", "topics": ["NBA"], "note": "League announcements, including business and WNBA coverage. This is not comprehensive game or breaking-news coverage."},
     {"id": "wall-street-skinny", "name": "The Wall Street Skinny", "section": "markets", "kind": "podcast_rss", "home_url": "https://thewallstreetskinny.com/podcast/", "feed_url": "https://feeds.megaphone.fm/TTNSE2412391117", "topics": ["Markets", "Finance education"], "note": "Publisher podcast metadata, not a transcript or independently verified analysis. Episodes without a webpage link open the podcast homepage."},
     {"id": "unusual-whales-blog", "name": "Unusual Whales · public blog", "section": "markets", "kind": "rss", "home_url": "https://unusualwhales.com/", "feed_url": "https://unusual-whales.ghost.io/rss/", "topics": ["Markets"], "note": "Public blog linked by Unusual Whales. Finance and AI title keywords filter broad news; relevant posts may be missed. Headlines are publisher claims, not verified conclusions. This is not its X feed."},
     {"id": "unusual-whales-podcast", "name": "Unusual Whales · podcast", "section": "markets", "kind": "podcast_rss", "home_url": "https://rss.com/podcasts/unusualwhales/", "feed_url": "https://media.rss.com/unusualwhales/feed.xml", "topics": ["Markets", "Podcast"], "note": "Public podcast feed. Source dates may be old; no transcript is collected. Audio opens externally when its host is outside the verified embedded-player allowlist."},
-    {"id": "polymarket-news", "name": "Polymarket · news", "section": "markets", "kind": "rss", "home_url": "https://news.polymarket.com/", "feed_url": "https://news.polymarket.com/feed", "topics": ["Prediction markets"], "note": "Official-linked publisher news and commentary. This is not a live odds API, independently verified probability forecast or trading connection."},
+    {"id": "polymarket-news", "name": "Polymarket · news", "section": "markets", "kind": "rss", "home_url": "https://news.polymarket.com/", "feed_url": "https://news.polymarket.com/feed", "topics": ["Prediction markets"], "note": "Newsletter news and commentary. Cards use its descriptive subtitle instead of a teaser headline when available. Publisher forecasts are attributed claims, not verified probabilities or live odds."},
+    {"id": "tevis-investing", "name": "Tevis · Fundamentals of Investing", "section": "markets", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@Funofinvesting", "feed_url": "https://www.youtube.com/@Funofinvesting/videos", "topics": ["Markets", "Company analysis"], "note": "Tevis Shkodra's official site identifies this channel. Public Videos-page metadata, at most eight videos per refresh; RSS returned 404. No transcript is collected, and relative dates remain unknown unless separately verified."},
+    {"id": "sixers-highlights", "name": "Philadelphia 76ers · highlights", "section": "sports", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@sixers", "feed_url": "https://www.youtube.com/@sixers/videos", "topics": ["NBA", "Sixers", "Highlights"], "note": "Official team Videos-page metadata. Up to eight highlight/game-recap titles per refresh; not every game or the full channel. Dates and video content require separate review; RSS returned 404."},
+    {"id": "knicks-highlights", "name": "New York Knicks · highlights", "section": "sports", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@NYKnicks", "feed_url": "https://www.youtube.com/@NYKnicks/videos", "topics": ["NBA", "Knicks", "Highlights"], "note": "Official team Videos-page metadata. Up to eight highlight/game-recap titles per refresh; not every game or the full channel. Dates and video content require separate review; RSS returned 404."},
 ]
 GAPS = [
+    {"id": "kobeissi-letter", "name": "The Kobeissi Letter", "section": "markets", "kind": "requested", "home_url": "https://www.thekobeissiletter.com/about/feed", "feed_url": None, "topics": ["Markets", "Macro"], "note": "Official site confirms @KobeissiLetter. Selected public posts can be reviewed through the existing external research task's supported browser access. Direct HTTP access is restricted; no automatic timeline API, complete X coverage or paid newsletter is connected."},
     {"id": "shams", "name": "Shams Charania", "section": "sports", "kind": "requested", "home_url": "https://x.com/ShamsCharania", "feed_url": None, "topics": ["NBA"], "note": "Identity corroborated by ESPN's biography. No automatic post feed is connected; no complete breaking-news coverage is implied."},
-    {"id": "nba-central", "name": "NBA Central", "section": "sports", "kind": "requested", "home_url": "https://x.com/TheDunkCentral", "feed_url": None, "topics": ["NBA"], "note": "Account identity corroborated by its Instagram profile. It is unaffiliated with the NBA. No permitted automatic post feed is connected."},
+    {"id": "nba-central", "name": "NBA Central", "section": "sports", "kind": "requested", "home_url": "https://x.com/TheDunkCentral", "feed_url": None, "topics": ["NBA"], "note": "Account identity corroborated by its Instagram profile. It is unaffiliated with the NBA. The existing external research task can review selected public posts through supported browser access; no automatic timeline API or full NBA Central coverage is connected."},
     {"id": "unusual-whales", "name": "Unusual Whales · X and live alerts", "section": "markets", "kind": "requested", "home_url": "https://unusualwhales.com/", "feed_url": None, "topics": ["Markets"], "note": "X posts and live alerts are not connected. Separate public blog and podcast sources are listed independently."},
     {"id": "polymarket", "name": "Polymarket · live odds", "section": "markets", "kind": "requested", "home_url": "https://polymarket.com/", "feed_url": None, "topics": ["Prediction markets"], "note": "Live odds are not collected. The separate news feed is publisher commentary; market prices are not independently verified probabilities."},
     {"id": "unresolved-handle", "name": "kobawaschilettwr — identity unverified", "section": "markets", "kind": "requested", "home_url": None, "feed_url": None, "topics": ["Markets"], "note": "The supplied handle has not been identified. No account or source has been guessed."},
@@ -54,6 +63,23 @@ COVERAGE = [
 
 def now_iso():
     return datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def item_content_hash(item):
+    """Bind a review to public item metadata, not a mutable fetch timestamp.
+
+    This is not a claim to have hashed or reviewed the original article. The
+    separate evidence records describe exactly what the external reviewer read.
+    """
+    fields = ("source_id", "section", "title", "url", "published_at", "format",
+              "topics", "summary", "media_url", "duration")
+    value = {key: item.get(key) for key in fields}
+    return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True,
+                                     separators=(",", ":")).encode("utf-8")).hexdigest()
+
+
+def valid_hash(value):
+    return isinstance(value, str) and re.fullmatch(r"[0-9a-f]{64}", value) is not None
 
 
 def date_value(value):
@@ -131,7 +157,7 @@ def validate_public(payload):
         required = SOURCE_FIELDS - {"cooldown_until"}
         if not isinstance(source, dict) or set(source) - SOURCE_FIELDS or not required <= set(source):
             raise ValueError("Unexpected or missing wall source fields")
-        if not isinstance(source["id"], str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._:-]{0,100}", source["id"]) or source["id"] in ids or source["section"] not in ("sports", "markets") or source["status"] not in ("pending", "ok", "empty", "error", "cooldown", "not_connected", "unresolved"):
+        if not isinstance(source["id"], str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._:-]{0,100}", source["id"]) or source["id"] in ids or source["section"] not in ("sports", "markets") or source["status"] not in ("pending", "ok", "empty", "error", "cooldown", "not_connected", "unresolved", "selected_posts"):
             raise ValueError("Invalid source identity or status")
         ids.add(source["id"])
         if not isinstance(source["topics"], list) or not all(isinstance(t, str) for t in source["topics"]) or not isinstance(source["item_count"], int) or source["item_count"] < 0:
@@ -143,7 +169,7 @@ def validate_public(payload):
             if source.get(field) is not None:
                 date_value(source[field]) if field == "cooldown_until" else valid_date(source[field])
     item_ids = set()
-    required = ITEM_FIELDS - {"media_url", "duration"}
+    required = ITEM_FIELDS - {"media_url", "duration", "content_hash", "provenance_hash"}
     for item in payload["items"]:
         if not isinstance(item, dict) or set(item) - ITEM_FIELDS or not required <= set(item):
             raise ValueError("Unexpected or missing wall item fields")
@@ -166,15 +192,64 @@ def validate_public(payload):
         for field in ("published_at", "first_seen_at", "updated_at"):
             if item[field] is not None:
                 valid_date(item[field], day_only=field == "published_at")
+        for field in ("content_hash", "provenance_hash"):
+            if field in item and not valid_hash(item[field]):
+                raise ValueError("Item provenance requires a SHA256 hash")
+        if "content_hash" in item and item["content_hash"] != item_content_hash(item):
+            raise ValueError("Item content hash does not match its current metadata")
         analysis = item["analysis"]
         if analysis is not None:
-            if not isinstance(analysis, dict) or set(analysis) != ANALYSIS_FIELDS or not isinstance(analysis["text"], str) or not analysis["text"].strip() or len(analysis["text"]) > 1200:
+            if not isinstance(analysis, dict) or set(analysis) - (ANALYSIS_FIELDS | REVIEW_FIELDS | {"evidence"}) or not ANALYSIS_FIELDS <= set(analysis) or not isinstance(analysis["text"], str) or not analysis["text"].strip() or len(analysis["text"]) > 1200:
                 raise ValueError("Analysis requires explicit text, basis and dated sources")
             if not isinstance(analysis["basis"], str) or not analysis["basis"].strip() or not isinstance(analysis["source_urls"], list) or not 1 <= len(analysis["source_urls"]) <= 10:
                 raise ValueError("Analysis provenance is missing")
             valid_date(analysis["reviewed_at"])
             for url in analysis["source_urls"]:
                 public_url(url)
+            if set(analysis) & (REVIEW_FIELDS | {"evidence"}):
+                if not REVIEW_FIELDS | {"evidence"} <= set(analysis):
+                    raise ValueError("Reading judgments require complete review fields and evidence")
+                for field, maximum in (("key_takeaway", 350), ("rationale", 500), ("basis", 800)):
+                    if not isinstance(analysis[field], str) or not analysis[field].strip() or len(analysis[field]) > maximum:
+                        raise ValueError("Review takeaway, rationale and basis must be short and explicit")
+                if analysis["worth_reading"] not in {"dig_deeper", "skim", "skip", "unavailable"} or analysis["scope"] not in REVIEW_SCOPES or analysis["confidence"] not in {"low", "medium", "high"}:
+                    raise ValueError("Invalid reading judgment, access scope or confidence")
+                if not valid_hash(analysis["content_hash"]) or analysis["content_hash"] != item_content_hash(item):
+                    raise ValueError("Review does not match the current item content")
+                if analysis["scope"] in {"metadata", "unavailable"} and analysis["confidence"] == "high":
+                    raise ValueError("Limited source access cannot support a high-confidence judgment")
+                if analysis["scope"] == "unavailable" and (analysis["worth_reading"] != "unavailable" or analysis["confidence"] != "low"):
+                    raise ValueError("Unavailable content cannot support a reading judgment")
+                evidence = analysis["evidence"]
+                if not isinstance(evidence, list) or not 1 <= len(evidence) <= 10:
+                    raise ValueError("Review requires one to ten source evidence records")
+                for record in evidence:
+                    if not isinstance(record, dict) or set(record) != EVIDENCE_FIELDS or record["scope"] not in REVIEW_SCOPES:
+                        raise ValueError("Invalid review evidence fields")
+                    public_url(record["url"])
+                    valid_date(record["retrieved_at"])
+                    if date_value(record["retrieved_at"]) > date_value(analysis["reviewed_at"]):
+                        raise ValueError("Evidence retrieval cannot be later than its review")
+                    if record["published_at"] is not None:
+                        valid_date(record["published_at"], day_only=True)
+                        published = record["published_at"]
+                        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", published):
+                            published = published + "T00:00:00Z"
+                        if date_value(published) > date_value(record["retrieved_at"]):
+                            raise ValueError("Evidence publication cannot be later than retrieval")
+                    if record["scope"] == "unavailable":
+                        if record["content_hash"] is not None:
+                            raise ValueError("Unavailable content must not claim a content hash")
+                    elif not valid_hash(record["content_hash"]):
+                        raise ValueError("Accessed evidence requires a SHA256 content hash")
+                if not set(analysis["source_urls"]) <= {record["url"] for record in evidence}:
+                    raise ValueError("Every analysis source must have an evidence receipt")
+                # An uncited supplemental receipt cannot upgrade the access
+                # claimed for the sources the reader is actually given.
+                scopes = {record["scope"] for record in evidence if record["url"] in analysis["source_urls"]}
+                supported = {"full_text": {"full_text"}, "excerpt": {"full_text", "excerpt"}, "metadata": {"full_text", "excerpt", "metadata"}, "unavailable": {"unavailable"}}
+                if not scopes & supported[analysis["scope"]] or (analysis["scope"] == "unavailable" and scopes != {"unavailable"}):
+                    raise ValueError("Review scope exceeds its recorded source access")
     return deepcopy(payload)
 
 
@@ -232,7 +307,8 @@ class _FeedRedirects(urllib.request.HTTPRedirectHandler):
 
 def fetch_feed(source):
     url = public_url(source["feed_url"])
-    request = urllib.request.Request(url, headers={"User-Agent": "AIStockPulse/0.3 personal public-feed reader", "Accept": "application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9", "Accept-Encoding": "identity"})
+    accept = "text/html" if source["kind"] == "public_youtube_channel" else "application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9"
+    request = urllib.request.Request(url, headers={"User-Agent": "AIStockPulse/0.3 personal public-feed reader", "Accept": accept, "Accept-Encoding": "identity", "Accept-Language": "en-US,en;q=0.9"})
     opener = urllib.request.build_opener(_FeedRedirects(urllib.parse.urlsplit(url).hostname))
     with opener.open(request, timeout=TIMEOUT) as response:
         if response.status != 200:
@@ -243,7 +319,87 @@ def fetch_feed(source):
         return result
 
 
+def _youtube_url(value):
+    url = urllib.parse.urlsplit(public_url(value))
+    video = urllib.parse.parse_qs(url.query).get("v", [""])[0]
+    if url.hostname not in ("www.youtube.com", "youtube.com") or url.path != "/watch" or not re.fullmatch(r"[A-Za-z0-9_-]{11}", video):
+        raise ValueError("A canonical public YouTube video is required")
+    return "https://www.youtube.com/watch?v=" + video
+
+
+def _parse_youtube_channel(payload, source, observed_at):
+    """Use only the ordinary public page's displayed Videos-tab metadata.
+
+    No continuation requests, internal API calls, cookies or session data are
+    used. Unrecognized layouts fail closed and retain the prior collected rows.
+    """
+    if len(payload) > MAX_BYTES:
+        raise ValueError("Public channel page exceeded the size limit")
+    text = payload.decode("utf-8")
+    marker = re.search(r"(?:var\s+)?ytInitialData\s*=\s*", text)
+    if not marker:
+        raise ValueError("Public channel video metadata unavailable")
+    data = json.JSONDecoder().raw_decode(text[marker.end():])[0]
+    identity = data.get("metadata", {}).get("channelMetadataRenderer", {}).get("externalId")
+    if not YOUTUBE_CHANNEL_IDS.get(source["id"]) or identity != YOUTUBE_CHANNEL_IDS[source["id"]]:
+        raise ValueError("Public channel identity did not match the verified source")
+    tabs = data.get("contents", {}).get("twoColumnBrowseResultsRenderer", {}).get("tabs", [])
+    selected = [t.get("tabRenderer", {}) for t in tabs if t.get("tabRenderer", {}).get("selected")]
+    if len(selected) != 1 or selected[0].get("title") != "Videos":
+        raise ValueError("Public Videos tab unavailable")
+    entries = []
+    def walk(value):
+        if isinstance(value, dict):
+            if "lockupViewModel" in value:
+                node = value["lockupViewModel"]
+                entries.append((node.get("contentId"), node.get("metadata", {}).get("lockupMetadataViewModel", {}).get("title", {}).get("content", "")))
+                return
+            if "videoRenderer" in value:
+                node = value["videoRenderer"]
+                title = node.get("title", {})
+                entries.append((node.get("videoId"), title.get("simpleText") or "".join(r.get("text", "") for r in title.get("runs", []))))
+                return
+            for child in value.values():
+                walk(child)
+        elif isinstance(value, list):
+            for child in value:
+                walk(child)
+    walk(selected[0].get("content", {}))
+    if not entries:
+        raise ValueError("No displayed video cards found")
+    rows, seen, rejected, filtered = [], set(), 0, 0
+    for video, title in entries[:MAX_FEED_ITEMS]:
+        if not isinstance(video, str) or not re.fullmatch(r"[A-Za-z0-9_-]{11}", video) or not isinstance(title, str) or not title.strip():
+            rejected += 1
+            continue
+        title = re.sub(r"\s+", " ", title).strip()[:500]
+        if source["id"] in ("sixers-highlights", "knicks-highlights") and not re.search(r"\b(highlights?|game recap|defeat(?:s|ed)?|take on|takes on)\b", title, re.I):
+            filtered += 1
+            continue
+        if video in seen:
+            continue
+        seen.add(video)
+        url = "https://www.youtube.com/watch?v=" + video
+        row = {"id": "wall-" + hashlib.sha256((source["id"] + "|" + url).encode()).hexdigest()[:24],
+               "section": source["section"], "source_id": source["id"], "title": title, "url": url,
+               "published_at": None, "first_seen_at": observed_at, "updated_at": observed_at,
+               "format": "video", "topics": list(source["topics"]),
+               "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
+               "analysis": None, "provenance_hash": hashlib.sha256(payload).hexdigest()}
+        row["content_hash"] = item_content_hash(row)
+        rows.append(row)
+    if not rows and rejected and not filtered:
+        raise ValueError("Public channel video cards were invalid")
+    return rows[:MAX_CHANNEL_ITEMS], {"rejected_count": rejected, "filtered_count": filtered,
+                                     "window_truncated_count": max(0, len(entries) - MAX_FEED_ITEMS) + max(0, len(rows) - MAX_CHANNEL_ITEMS)}
+
+
 def parse_feed(payload, source, observed_at):
+    if source["kind"] == "public_youtube_channel":
+        try:
+            return _parse_youtube_channel(payload, source, observed_at)
+        except (AttributeError, TypeError, KeyError, IndexError, RecursionError) as exc:
+            raise ValueError("Public channel metadata schema changed") from exc
     if len(payload) > MAX_BYTES or re.search(br"<!\s*(DOCTYPE|ENTITY)\b", payload, re.I):
         raise ValueError("Unsupported or oversized XML")
     root = ET.fromstring(payload)
@@ -277,6 +433,8 @@ def parse_feed(payload, source, observed_at):
             if not url and source["kind"] == "podcast_rss" and guid:
                 url = source["home_url"]
             url = public_url(url)
+            if source["kind"] == "youtube_rss":
+                url = _youtube_url(url)
             raw_date = fields.get("pubDate") or fields.get("published") or fields.get("date")
             date, precision = parse_date(raw_date, now=date_value(observed_at))
             # Python treats RFC -0000 as a naive timestamp. Preserve the
@@ -297,8 +455,17 @@ def parse_feed(payload, source, observed_at):
             seen.add(item_id)
             row = {"id": item_id, "section": source["section"], "source_id": source["id"], "title": title, "url": url,
                    "published_at": date, "first_seen_at": observed_at, "updated_at": observed_at,
-                   "format": "podcast" if source["kind"] == "podcast_rss" else "article", "topics": list(source["topics"]),
-                   "summary": "", "analysis": None}
+                   "format": "podcast" if source["kind"] == "podcast_rss" else "video" if source["kind"] == "youtube_rss" else "article", "topics": list(source["topics"]),
+                   "summary": "", "analysis": None, "provenance_hash": hashlib.sha256(payload).hexdigest()}
+            if source["id"] == "polymarket-news":
+                # This source's short RSS description is a subtitle, not its
+                # content:encoded article body. Never project that raw body.
+                subtitle = plain_text(fields.get("description", ""))
+                if 4 <= len(subtitle.split()) <= 45 and len(subtitle) <= 300:
+                    row["title"] = subtitle
+                    row["summary"] = ("Polymarket newsletter: " + title + ". Publisher commentary; forecasts are attributed claims, not verified probabilities.")[:350]
+                else:
+                    row["summary"] = "Polymarket newsletter commentary. The publisher supplied no descriptive subtitle; open the source for context. Forecasts are not verified probabilities."
             if source["id"] == "nba-communications" and re.search(r"\bWNBA\b", title, re.I):
                 row["topics"] = (["NBA"] if re.search(r"\bNBA\b", title, re.I) else []) + ["WNBA"]
             if media:
@@ -312,6 +479,7 @@ def parse_feed(payload, source, observed_at):
                     row["media_url"] = media
             if fields.get("duration") and re.fullmatch(r"[\d:]{1,20}", fields["duration"]):
                 row["duration"] = fields["duration"]
+            row["content_hash"] = item_content_hash(row)
             result.append(row)
         except (ValueError, TypeError):
             rejected += 1
@@ -366,12 +534,18 @@ def _refresh_file(path, fetcher=None, now=None):
                     if source["kind"] == "podcast_rss" and item["url"] == source["home_url"] and old["url"] != source["home_url"]:
                         item["url"] = old["url"]
                     same_title = re.sub(r"\s+", " ", item["title"]).casefold() == re.sub(r"\s+", " ", old["title"]).casefold()
-                    item["analysis"] = old["analysis"] if same_title else None
-                    item["summary"] = old["summary"]
-                    material = {k: v for k, v in item.items() if k not in ("updated_at", "first_seen_at", "analysis", "summary")}
-                    before = {k: v for k, v in old.items() if k not in ("updated_at", "first_seen_at", "analysis", "summary")}
+                    if not item["summary"] and same_title:
+                        item["summary"] = old["summary"]
+                    item["content_hash"] = item_content_hash(item)
+                    same_content = item["content_hash"] == item_content_hash(old)
+                    item["analysis"] = old["analysis"] if same_content else None
+                    ignored = ("updated_at", "first_seen_at", "analysis", "content_hash", "provenance_hash")
+                    material = {k: v for k, v in item.items() if k not in ignored}
+                    before = {k: v for k, v in old.items() if k not in ignored}
                     if material == before:
                         item["updated_at"] = old["updated_at"]
+                        if old.get("provenance_hash"):
+                            item["provenance_hash"] = old["provenance_hash"]
                         counts["duplicate_count"] += 1
                     else:
                         _write(Path(path).parent / "wall-history" / old["id"] / (stamp.replace(":", "-") + ".json"), old)

@@ -15,7 +15,7 @@ class WallPublicationTests(unittest.TestCase):
             p=Path(temp); source=p/'brief.json'; raw['headline']='Updated synthetic editorial headline'; source.write_text(json.dumps(raw))
             build(p/'site',source=source)
             data=json.loads((p/'site/data/dashboard.json').read_text())
-            self.assertEqual(data['personal_wall'],wall.validate_public(personal))
+            self.assertEqual(data['personal_wall'],wall.public_projection(personal))
             self.assertEqual(len(data['articles']),len(raw['articles']))
             self.assertEqual(data['ledger'],raw['ledger'])
             self.assertEqual(data['earnings'],raw['earnings'])

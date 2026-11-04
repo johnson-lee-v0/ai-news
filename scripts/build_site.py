@@ -14,11 +14,13 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path: sys.path.insert(0, str(ROOT))
 from pulse.layers import LAYER_IDS, annotate as annotate_layers, tracking as layer_tracking
-from pulse import wall
+from pulse import wall, wall_review
 FORMAT = 'ai-stock-pulse-static-v1'
 OUTPUTS = {'index.html', 'app.js', 'styles.css', 'finance.js', 'finance.css', 'visit-state.js', 'wall.js', 'wall.css', 'favicon.svg', 'data/dashboard.json', 'build.json', '.nojekyll'}
 TOP_FIELDS = {'reviewed_at', 'headline', 'bullets', 'notice', 'articles', 'sources', 'ledger', 'earnings'}
-ARTICLE_FIELDS = {'id','title','url','published_at','date_kind','date_precision','source_id','source_name','source_role','lens','relevance','observation','summary','implication','beneficiaries','risks','counterevidence','confirms','refutes','uncertainty','entities','rank','event_date','event_start','event_end','reviewed_at','report_period','publication_note','claim_type','access_note','source_date_note','methodology_url','republished_at','quote_as_of','highlights','ai_layers'}
+ARTICLE_FIELDS = {'id','title','url','published_at','date_kind','date_precision','source_id','source_name','source_role','lens','relevance','observation','summary','implication','beneficiaries','risks','counterevidence','confirms','refutes','uncertainty','entities','rank','event_date','event_start','event_end','reviewed_at','report_period','publication_note','claim_type','access_note','source_date_note','methodology_url','republished_at','quote_as_of','highlights','ai_layers','reading_review'}
+READING_REVIEW_FIELDS = {'key_takeaway','worth_reading','rationale','basis','reviewed_at'}
+READING_REVIEW_BASIS = 'GPT triage of the existing reviewed research snapshot; original sources were not newly verified.'
 HIGHLIGHT_FIELDS = {'title','observation','claim_type','implication','source_url','source_date'}
 RECORD_FIELDS = {'ledger':{'id','as_of','source_url','source_date','from_entity','to_entity','instrument','status','amount','currency','note','overlap_group','risk','payment_status','revenue_status','reviewed_at','flow_type','flow_label','uncertainty','sources','changed_at'},'earnings':{'id','as_of','source_url','source_date','company','period','metric','unit','reported','reported_period','guidance','guidance_period','consensus','consensus_source_url','consensus_as_of','consensus_period','note'}}
 SOURCE_FIELDS = {'id','name','url','role','kind','reviewed_at','quality_note','topics','access_note','source_date','publication_note'}
@@ -56,6 +58,28 @@ def public_url(value):
         raise ValueError('Public evidence requires a plain HTTPS URL')
 
 
+def validate_reading_review(value, source_reviewed_at):
+    """Reading priority is dated separately from the original evidence review."""
+    if not isinstance(value, dict) or set(value) != READING_REVIEW_FIELDS:
+        raise ValueError('Reading review requires exactly the public triage fields')
+    for field, limit in (('key_takeaway',350),('rationale',500)):
+        if not isinstance(value[field], str) or not value[field].strip() or len(value[field]) > limit:
+            raise ValueError('Reading review requires concise takeaway and rationale')
+    if value['worth_reading'] not in ('dig_deeper','skim','skip','unavailable'):
+        raise ValueError('Reading review judgment must use an explicit reading priority')
+    if value['basis'] != READING_REVIEW_BASIS:
+        raise ValueError('Reading review must disclose its existing-snapshot basis')
+    stamp = value['reviewed_at']
+    if not isinstance(stamp, str):
+        raise ValueError('Reading review requires a dated timestamp')
+    try:
+        parsed = datetime.fromisoformat(stamp.replace('Z','+00:00'))
+    except ValueError:
+        raise ValueError('Reading review requires a dated timestamp')
+    if parsed.tzinfo is None or parsed > datetime.now(timezone.utc) or parsed < iso(source_reviewed_at):
+        raise ValueError('Reading review timestamp must follow the source review and cannot be future or undated')
+
+
 def validate_public(raw):
     if not isinstance(raw, dict) or set(raw) != TOP_FIELDS: raise ValueError('Public brief must use the explicit reviewed schema')
     safe_text(raw)
@@ -85,6 +109,8 @@ def validate_public(raw):
         if item.get('event_start') and item.get('event_end') and iso(item['event_start']) > iso(item['event_end']):
             raise ValueError('Event date range is reversed')
         if item.get('methodology_url'): public_url(item['methodology_url'])
+        if 'reading_review' in item:
+            validate_reading_review(item['reading_review'], item.get('reviewed_at') or raw['reviewed_at'])
         if 'ai_layers' in item:
             if not isinstance(item['ai_layers'], list) or any(key not in LAYER_IDS for key in item['ai_layers']) or len(set(item['ai_layers'])) != len(item['ai_layers']):
                 raise ValueError('Public layer mappings must use unique framework IDs')
@@ -160,6 +186,13 @@ def build(output, source=None):
     output=Path(output)
     source=Path(source) if source else ROOT/'public/brief.json'
     raw=validate_public(json.loads(source.read_text(encoding='utf-8')))
+    # Apply the same bounded projection that the reviewer queues. A raw refresh
+    # may retain unreviewed local records, but none may enter this public build.
+    wall_path=ROOT/'public/wall.json'
+    personal_wall=wall.public_projection(json.loads(wall_path.read_text(encoding='utf-8')))
+    review_coverage=wall_review.coverage(personal_wall)
+    if not review_coverage['complete']:
+        raise ValueError('Public wall publication blocked: '+str(review_coverage['missing_reviews'])+' displayed item(s) lack a current structured takeaway/access judgment. Complete scripts/review_wall.py queue, import and check before building; inaccessible content must be explicitly marked unavailable.')
     if output.exists():
         existing={str(p.relative_to(output)) for p in output.rglob('*') if p.is_file()}
         if existing-OUTPUTS or any(p.is_symlink() for p in output.rglob('*')): raise ValueError('Build output contains unexpected files; refusing to publish or remove them')
@@ -171,8 +204,7 @@ def build(output, source=None):
     commit=revision()
     payload=dashboard(raw,accounts,commit)
     # The independently maintained wall survives market-only editorial updates.
-    wall_path=ROOT/'public/wall.json'
-    payload['personal_wall']=wall.validate_public(json.loads(wall_path.read_text(encoding='utf-8')))
+    payload['personal_wall']=personal_wall
     safe_text(payload['personal_wall'])
     (output/'data/dashboard.json').write_text(json.dumps(payload,indent=2,ensure_ascii=False,sort_keys=True)+'\n')
     html=(ROOT/'static/index.html').read_text().replace('<html lang="en">','<html lang="en" data-mode="static">')

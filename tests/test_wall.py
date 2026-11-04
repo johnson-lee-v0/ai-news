@@ -155,6 +155,7 @@ class WallTests(unittest.TestCase):
         original = value["items"][0]
         value["items"] = [{**original, "id": "fixture-" + str(i)} for i in range(20)]
         manual = {**original, "id": "manual-instagram", "format": "instagram", "published_at": None, "url": "https://www.instagram.com/p/FixtureCode/"}
+        manual["content_hash"] = wall.item_content_hash(manual)
         value["items"].append(manual)
         result = wall.public_projection(value)
         self.assertIn(manual, result["items"])
