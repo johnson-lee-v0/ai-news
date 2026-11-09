@@ -313,3 +313,13 @@ Two same-ID updates preserve prior financial evidence: attributed Reuters/FT gen
 
 - [Reuters via CNA · reporting an FT account](https://www.channelnewsasia.com/business/anthropic-secures-34-billion-generator-deal-ai-data-centers-ft-reports-6534256) — source 2026-11-08T12:53:57Z. CNA original HTML retrieved HTTP 200 and full short Reuters article read. Direct Reuters returned 401 and FT 403; no retries or access-control bypass. Exact CNA publication metadata verifies 12:53:57 UTC on November 8.
 - [ABC · Cooks River data-centre proposal withdrawn](https://www.abc.net.au/news/2026-11-08/sydney-ai-data-centre-scrapped-after-community-backlash/107360592) — source 2026-11-08T03:26:43+00:00. Full original ABC HTML retrieved HTTP200 and article read; datePublished verified in page metadata. Stockland’s public planning page and NSW portal were checked for context but did not independently document the new withdrawal.
+
+
+## November 9, 2026 reviewed update
+
+Four same-ID updates preserve prior evidence: NVIDIA governance review, Telekom operating-use claims and planned expansion, Google TPU system announcements, and attributed Reuters credit reporting. No new financing edge or realized cash is inferred. Prior dates and source access remain explicit; the complete wall gate passed.
+
+- [Deutsche Telekom · Munich Industrial AI Cloud update](https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/11/ai-demand-rises-deutsche-telekom-expands-ai-factory-in-munich) — source 2026-11-09. Original English HTML downloaded successfully and read; linked German version checked for wording. Publication is day precision; page modification metadata is not treated as publication time.
+- [NVIDIA · Board announces independent review](https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors) — source 2026-11-08. Full original issuer HTML retrieved HTTP200 and read. Publication day checked in page body and embedded PublishDate metadata.
+- [Google · TPU 8tx and 8i Max systems](https://cloud.google.com/blog/topics/ai-infrastructure/tpu-8tx-and-tpu-8i-max) — source 2026-11-09. Full original Google Cloud HTML downloaded and read. Product broadcast was not reviewed; no new earnings or call review claimed.
+- [Reuters via Investing.com · AI credit scrutiny](https://www.investing.com/news/stock-market-news/banks-investors-grow-wary-of-ai-debt-spooked-by-marketselloff-5011246) — source 2026-11-09. Full Reuters syndication text read through the public web reader. Direct Reuters returned 401 and Investing.com HTML returned 403; no bypass or direct-HTML verification claimed. Reader text provenance retained privately.

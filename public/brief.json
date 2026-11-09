@@ -1,13 +1,438 @@
 {
-  "reviewed_at": "2026-11-08T14:05:11.173581+00:00",
-  "headline": "Power equipment and site approval are separate delivery tests",
+  "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+  "headline": "Demand, governance and credit need separate evidence",
   "bullets": [
-    "Reuters relays an unconfirmed $3.4bn Anthropic generator-commitment report; it does not establish delivered electricity or financing received.",
-    "Stockland’s quoted statement removes a proposed Cooks River data-centre use; the logistics precinct continues. This is not an operating closure.",
-    "Existing earnings, debt closings and capacity milestones retain their earlier dates. No new verified SEC filing or GTC delivery milestone was found in this refresh."
+    "NVIDIA announces an independent inquiry; allegations are not findings and operating disruption is not disclosed.",
+    "Telekom reports its initial Munich stage fully booked; the announced 20MW expansion is still prospective.",
+    "Google adds specialized TPU systems; Reuters reports more selective lending. Product claims and contractual safeguards still need delivery and cash evidence."
   ],
-  "notice": "Reviewed public snapshot, November 8; not live or exhaustive. Anthropic transaction reporting remains unconfirmed. Publication, reported event and review dates differ. Wall dispositions identify inaccessible content; X trends, live CDS and consensus are not connected.",
+  "notice": "Reviewed public snapshot, November 9; not live or exhaustive. Company claims, reported financing sentiment and inference are distinct. Prior source dates remain visible. X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "nvidia-gtc-berlin-20261021",
+      "title": "NVIDIA opens independent review; findings remain pending",
+      "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+      "published_at": "2026-11-08",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+      "source_id": "nvidia-board-20261108",
+      "source_name": "NVIDIA · Board announces independent review",
+      "source_role": "primary",
+      "lens": "capacity",
+      "relevance": "material",
+      "rank": 1,
+      "entities": [
+        "NVIDIA",
+        "KYEC"
+      ],
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "observation": "NVIDIA announced an independent-director committee, supported by outside independent counsel, to review reported foreign-intelligence concerns. The board retains confidence in its leadership and says Huang will cooperate.",
+      "summary": "The review is announced; no finding of compromised secrets or operational disruption is disclosed. Earlier GTC plans remain dated context.",
+      "implication": "The inquiry adds governance uncertainty around a key AI supplier. Track its findings and any customer or delivery effects; neither lost sales nor a roadmap delay is established.",
+      "beneficiaries": "Customers and shareholders can assess the independent review and continuity disclosures. No commercial beneficiary is established.",
+      "risks": "A prolonged inquiry could distract management or intensify scrutiny; resulting customer, compliance or delivery effects remain uncertain.",
+      "counterevidence": "The board says it has no reason to believe national security or NVIDIA secrets were compromised and retains confidence in Huang and his team. Huang supports the review; these are statements, not completed findings.",
+      "confirms": "Published inquiry findings, formal regulatory actions, disclosed leadership changes or documented customer and delivery effects would clarify the risk.",
+      "refutes": "A completed review finding no compromise and continuing documented delivery would weaken a business-disruption thesis.",
+      "uncertainty": "No investigation deadline, conclusion, financial impact or operational interruption is disclosed. Allegations are not established facts.",
+      "highlights": [
+        {
+          "title": "Independent review is an action, not a finding",
+          "observation": "An independent-director committee and outside counsel will oversee the inquiry. The board states it has no reason to believe secrets or national security were compromised, while still examining the available information.",
+          "implication": "Separate announced oversight from the unproven allegations; watch actual findings and business consequences.",
+          "claim_type": "issuer_governance_disclosure_and_attributed_board_assessment",
+          "source_url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+          "source_date": "2026-11-08"
+        },
+        {
+          "title": "DSX POD: installation, not site development",
+          "observation": "NVIDIA claims prepared-site deployment can fall from six months to as little as 14 days; partner deliveries target early 2027.",
+          "claim_type": "issuer_performance_claim_and_forward_plan",
+          "implication": "Site power, cooling and networking must already be ready.",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "Efficiency: separate power from cooling water",
+          "observation": "MaxLPS claims up to 30% less power for equal token output. Separately, closed-loop/dry-cooler designs target near-zero facility cooling water; climate matters.",
+          "claim_type": "conditional_issuer_performance_claim",
+          "implication": "Check workload and climate conditions; facility cooling water is not the total water footprint.",
+          "source_url": "https://nvidianews.nvidia.com/news/european-ecosystem-builds-worlds-most-efficient-ai-factories-with-nvidia-dsx",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "OpenShell: an architecture for agents",
+          "observation": "The available reference architecture combines Rubin inference, Vera CPUs and BlueField/Sentry controls for agents.",
+          "claim_type": "issuer_product_announcement",
+          "implication": "Available architecture proves neither material sales nor perfect security; test production adoption and controls.",
+          "source_url": "https://nvidianews.nvidia.com/news/openshell-reference-architecture",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "Manufacturing: commitments precede output",
+          "observation": "NVIDIA announced a $1.1bn KYEC reservation advance, with U.S. testing targeted for April 2027. Other plans: 2.5x substrate capacity over three years; Amkor advanced packaging more than 300% higher by end-2028; SPIL optical-engine capacity 15x by mid-2027.",
+          "claim_type": "announced_advance_and_forward_capacity_target",
+          "implication": "Future capacity is not delivered output or sales. Advance disbursement and KYEC revenue recognition remain unverified.",
+          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout",
+          "source_date": "2026-10-21"
+        },
+        {
+          "title": "Physical AI: demonstrations precede adoption",
+          "observation": "The keynote showed industrial, healthcare and robotics uses and announced the Isaac GR00T-based Agile ONE SN humanoid, expected in 2027.",
+          "claim_type": "issuer_demonstration",
+          "implication": "Scaled deployment, reliability and customer economics need evidence.",
+          "source_url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/",
+          "source_date": "2026-10-21"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "The inquiry adds governance uncertainty around a key AI supplier. Track its findings and any customer or delivery effects; neither lost sales nor a roadmap delay is established.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The new evidence changes the company or financing assessment; dated details distinguish claims, delivery and cash.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+        "content_hash": "35fdd85203d15d06267f457d4e68879c68c95582fa9e3b88f52cdf499f0e1455"
+      },
+      "source_date_note": "The issuer board statement is dated November 8, reviewed November 9. Earlier GTC announcements remain October 21, reviewed October 25; no new GTC delivery milestone is asserted.",
+      "access_note": "Full original NVIDIA board statement read November 9. Earlier GTC source reviews are retained as historical context and were not newly reverified.",
+      "claim_type": "Announced independent review and attributed board statements; earlier forward product plans retained as historical context",
+      "publication_note": "Same-ID NVIDIA research update preserving all five earlier GTC highlights and their exact dated source links. No new financial or capacity edge is asserted."
+    },
+    {
+      "id": "ai-buildout-delivery-cash-20261107",
+      "title": "Telekom says Munich is booked; expansion is the next delivery test",
+      "url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/11/ai-demand-rises-deutsche-telekom-expands-ai-factory-in-munich",
+      "published_at": "2026-11-09",
+      "date_kind": "issuer_publication_date",
+      "date_precision": "day",
+      "source_id": "telekom-munich-expansion-20261109",
+      "source_name": "Deutsche Telekom · Munich Industrial AI Cloud update",
+      "source_role": "primary",
+      "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+      "lens": "capacity",
+      "relevance": "material",
+      "rank": 2,
+      "entities": [
+        "Deutsche Telekom",
+        "T-Systems",
+        "NVIDIA",
+        "Siemens",
+        "Daimler Truck",
+        "Soofi",
+        "IREN",
+        "Microsoft",
+        "Google",
+        "Alphabet",
+        "Crusoe",
+        "PPL",
+        "Invitium Energy",
+        "QTS",
+        "Equinix",
+        "Stockland",
+        "John Boyd Properties"
+      ],
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "observation": "Telekom says Munich’s first stage was fully booked seven months after its February launch and names industrial users. Its newly announced B300 expansion targets 20MW. Earlier November 8 ABC reporting: Stockland removed the proposed Cooks River data-centre use while retaining the logistics precinct.",
+      "summary": "A company-reported demand signal from an operating site, followed by a planned expansion. No utilization percentage, revenue, payment or commissioning date is disclosed. The prior Sydney proposal withdrawal and earlier IREN, Google, PPL and SG6 evidence remain dated context.",
+      "implication": "Company-reported bookings and named users support local demand; the next test is commissioned B300 capacity, paid usage and returns.",
+      "beneficiaries": "NVIDIA and infrastructure suppliers may benefit from accepted deliveries; industrial customers may gain usable local compute. Neither supplier revenue nor customer returns is quantified.",
+      "risks": "Chip delivery, power readiness, financing, pricing and customer adoption can still limit returns on expansion spending.",
+      "counterevidence": "The initial site is operating and management identifies users. However, booked capacity need not equal sustained utilization, paid collections or profitable customer applications. The wider Bavaria proposal remains conditional. Earlier ABC reporting separates residents’ opposition claims from Stockland’s logistics rationale; one cancelled proposal does not establish aggregate demand collapse.",
+      "confirms": "Commissioned B300 systems, dated energized capacity, disclosed billed usage/collections and customer renewal or productivity evidence would strengthen the case.",
+      "refutes": "Expansion delays, cancellations, price concessions or weak paid utilization would weaken the inference that bookings convert into durable returns.",
+      "uncertainty": "The release supplies no numeric utilization, contract duration, customer concentration, revenue, margin, collected cash or commissioning timetable. The first-stage sold-out claim has no independently measured denominator. Munich’s 20MW target is not current delivered capacity. Separate Bavaria expansion has no final investment decision. Prior Sydney context: exact withdrawal date and data-centre-only cost remain unknown; A$3.5bn describes the whole precinct. Earlier IREN margin excludes depreciation and site costs.",
+      "report_period": "IREN quarter ended September 30, 2026; cross-company announcements November 5-6, 2026",
+      "source_date_note": "Issuer announcement and press conference: November 9, 2026; publication time unavailable. Historical launch: February 2026; fully booked seven months later per issuer, with no exact date. Review date is separate. Prior context: ABC published November 8 at 03:26:43 UTC; the exact decision date is unknown. Earlier IREN/Google sources remain November 5 and Crusoe/PPL/Equinix November 6, reviewed November 7; these are not new November 8 events.",
+      "access_note": "November 9: Original English HTML downloaded successfully and read; linked German version checked for wording. Publication is day precision; page modification metadata is not treated as publication time. Earlier reviews retained without new verification: November 8: full original ABC article read, including the attributed Stockland statement. Company/NSW planning pages provided context but not separate confirmation of the new withdrawal. Earlier November 7 review: IREN release read through a public PDF reader after direct download failed; call, deck and 10-Q were not reviewed. Other original issuer webpages were downloaded and read. No independent site inspection or operating telemetry.",
+      "claim_type": "Issuer operating-use claims and forward capacity plans; implications are inference",
+      "highlights": [
+        {
+          "title": "Revenue is real; its mix matters",
+          "observation": "IREN reports $200m AI Cloud revenue: $135m services and $65m leases.",
+          "implication": "This is recognized revenue, not wholly GPU-service consumption.",
+          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
+          "source_date": "2026-11-05",
+          "claim_type": "Reported quarterly revenue"
+        },
+        {
+          "title": "Contracted ARR still needs delivery",
+          "observation": "The greater-than-$4bn ARR target moved to January 31, 2027, possibly end-February.",
+          "implication": "Commissioning and customer acceptance govern the ramp; ARR is not GAAP revenue.",
+          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
+          "source_date": "2026-11-05",
+          "claim_type": "Management target, not realized revenue"
+        },
+        {
+          "title": "Prepayments support cash flow",
+          "observation": "$529m operating cash includes $645m from deferred revenue, versus $4.824bn PP&E/hardware payments.",
+          "implication": "Their calculated difference is -$4.295bn, not company-defined FCF. Customer advances do not establish earned cash returns.",
+          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
+          "source_date": "2026-11-05",
+          "claim_type": "Reported cash flows; explicitly labeled calculation"
+        },
+        {
+          "title": "Funding coverage is narrower than expansion",
+          "observation": "Management calls remaining capex for its 0.3 GW program funded, using $9bn of mixed cash, restricted cash, facilities and unreceived prepayments. Remaining FY27 capex is $15bn; another $6bn is targeted.",
+          "implication": "Facility, escrow and availability conditions apply; this does not establish that all expansion is funded.",
+          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
+          "source_date": "2026-11-05",
+          "claim_type": "Management funding scope and conditional plan"
+        },
+        {
+          "title": "Wyoming ownership changes, not operating status",
+          "observation": "Crusoe announced November 6 that Google acquired the site, completing Crusoe predevelopment.",
+          "implication": "This advances construction preparation; it establishes no operating capacity or utilization.",
+          "source_url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
+          "source_date": "2026-11-06",
+          "claim_type": "Company-reported acquisition; closing date unspecified"
+        },
+        {
+          "title": "The $17bn belongs to an earlier plan",
+          "observation": "Google announced its long-term Wyoming investment on November 5.",
+          "implication": "Do not count it again as a new November 6 commitment, acquisition price or cash received by Crusoe.",
+          "source_url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/",
+          "source_date": "2026-11-05",
+          "claim_type": "Announced long-term investment, not realized spending"
+        },
+        {
+          "title": "QTS power is conditional and years away",
+          "observation": "PPL describes nonbinding 2 GW terms and separate specified-cost reimbursement. Fuel cells/storage could start in 2029; gas units in 2032-2033.",
+          "implication": "Some development risk is allocated, but this is neither final generation commitment nor delivered power.",
+          "source_url": "https://investors.pplweb.com/2026-11-06-PPL-Corporation-Delivers-Strong-Third-Quarter-2026-Earnings-Raises-Long-Term-EPS-Growth-Outlook",
+          "source_date": "2026-11-06",
+          "claim_type": "Nonbinding terms, executed cost protection and prospective dates"
+        },
+        {
+          "title": "SG6 reaches opening, with utilization still unknown",
+          "observation": "Equinix announced SG6 opening: about 1,550 Phase 1 cabinets and $290m initial investment. Up to 20 MW is full build-out.",
+          "implication": "Opened colocation supply is further along than a site plan; cabinet occupancy and cash returns still need evidence.",
+          "source_url": "https://newsroom.equinix.com/2026-11-06-Equinix-Opens-SG6-to-Support-Singapores-Digital-Future-and-Strengthen-Its-Role-as-a-Global-Innovation-Hub",
+          "source_date": "2026-11-06",
+          "claim_type": "Issuer opening milestone; full-buildout capacity separate"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "Company-reported bookings and named users support local demand; the next test is commissioned B300 capacity, paid usage and returns.",
+        "worth_reading": "skim",
+        "rationale": "The new evidence changes the company or financing assessment; dated details distinguish claims, delivery and cash.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+        "content_hash": "97019967f5b26f5b65e68b13a523e23ca03e9d93640b4e3033449dbbf0d57379"
+      },
+      "publication_note": "New local demand evidence, not proof that GTC Berlin DSX/Rubin milestones have been delivered. Investment amount omitted from the compact public account because the release describes nearly another quarter of a billion without explicitly naming currency."
+    },
+    {
+      "id": "alphabet-q3-20261028",
+      "title": "Google adds TPU systems; deployment and customer economics remain the test",
+      "url": "https://cloud.google.com/blog/topics/ai-infrastructure/tpu-8tx-and-tpu-8i-max",
+      "source_id": "google-tpu-systems-20261109",
+      "source_name": "Google · TPU 8tx and 8i Max systems",
+      "source_role": "primary",
+      "published_at": "2026-11-09",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+      "entities": [
+        "Alphabet",
+        "Google",
+        "GOOGL",
+        "GOOG",
+        "AMD"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "lens": "capacity",
+      "relevance": "material",
+      "rank": 3,
+      "observation": "Google announced TPU 8tx for confidential inference and 8i Max for larger-context workloads. These are systems built from existing eighth-generation silicon, not a ninth chip generation.",
+      "summary": "Google pairs 8tx with AMD CPU hosts; 8i Max packages two 8i chips. Earlier Q3 Cloud revenue was $30.709bn, up 103%, with $11.121bn operating profit and a 36.2% margin.",
+      "implication": "More hardware choices may reduce customer dependence on one accelerator stack. Adoption, delivered systems and realized cost per task determine whether that choice produces returns.",
+      "report_period": "Q3 2026, quarter ended September 30, 2026",
+      "claim_type": "Issuer product and performance claims; earlier reported results and attributed call statements retained",
+      "beneficiaries": "Google and AMD may benefit from accepted deployments; customer savings remain workload-dependent and unquantified.",
+      "risks": "Migration effort, availability, pricing and workload fit can limit adoption; vendor benchmarks are not fleet returns.",
+      "counterevidence": "Google reports nearly 100 TPU customers, supporting an existing business. New-system shipment scale, paid adoption and margins remain undisclosed. Earlier group operating profit was $40.576bn and TTM FCF $19.747bn.",
+      "confirms": "Customer deployments, acceptance, collections and independent workload comparisons would strengthen the commercial case.",
+      "refutes": "Delivery delays, migration friction or weak realized economics would weaken the inference.",
+      "uncertainty": "The announcement does not quantify new-system revenue, utilization or returns, or establish general availability for the two new systems. Full prepared remarks and Q&A reviewed in StockAnalysis/Quartr, not company-edited text. Official webcast metadata was accessible but caption downloads were empty. TPU revenue/margins, utilization and AI-only returns remain undisclosed. No analyst revenue-per-GW assumption is treated as management guidance.",
+      "source_date_note": "New product announcement: November 9, day precision. Earlier financial and full-call review: Results and call dated October 28 for quarter ended September 30. This materially updates the same story; it is not a new earnings event. The secondary transcript supplies call detail; release and deck remain the financial-statement sources.",
+      "access_note": "Full original Google Cloud HTML downloaded and read. Product broadcast was not reviewed; no new earnings or call review claimed. Prior review retained: Original issuer release/deck plus full public StockAnalysis/Quartr transcript reviewed. Official webcast linked for reference; no independent caption verification or company-edited written transcript claimed.",
+      "highlights": [
+        {
+          "title": "Q4 rentals change the margin outlook",
+          "observation": "Management says third-party bridging compute arrived only at the end of Q3 and ramps in Q4, creating near-term Cloud margin headwinds.",
+          "implication": "The reported 36.2% margin is not forward guidance. It also excludes certain shared AI costs; supplier revenue can grow while operator margins tighten.",
+          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+          "source_date": "2026-10-28",
+          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
+        },
+        {
+          "title": "Cash pressure includes inventory and a fine",
+          "observation": "Q3 CFO was $42.290bn, cash capex $51.355bn and company-defined FCF −$9.065bn. The CFO also identifies TPU inventory and a $5.2bn EC fine payment as cash headwinds.",
+          "implication": "Do not attribute the entire cash deficit to AI investment or call adding back one item a normalized FCF measure.",
+          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+          "source_date": "2026-10-28",
+          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
+        },
+        {
+          "title": "Signed TPU orders still need delivery and payment",
+          "observation": "Management says TPU inventory follows signed contracts. Product sales contributed meaningfully to Cloud growth; TPU-specific revenue and margins were not disclosed.",
+          "implication": "Contracts reduce speculative-inventory risk but do not prove customer acceptance, collected cash or utilization. An analyst’s $35bn/GW premise was not endorsed.",
+          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+          "source_date": "2026-10-28",
+          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
+        },
+        {
+          "title": "Backlog converts over multiple periods",
+          "observation": "Management reports $561bn Cloud backlog and expects just over 55% to become revenue within 24 months.",
+          "implication": "This supports demand visibility, not immediate revenue or cash. Track conversion timing and collections instead of treating the whole balance as near-term sales.",
+          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+          "source_date": "2026-10-28",
+          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
+        },
+        {
+          "title": "Contract ceilings differ from annual capex",
+          "observation": "CFO remarks describe $924bn future purchase commitments and $152bn pre-commencement leases/other obligations as multiyear maximum contractual amounts, with pricing and volume flexibility in some agreements.",
+          "implication": "These are not current debt or next-year capex. Do not add them to annual investment guidance or existing overlapping relationship totals.",
+          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+          "source_date": "2026-10-28",
+          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
+        },
+        {
+          "title": "The investment outlook remains elevated",
+          "observation": "FY2026 capex guidance remains $195–205bn. Management expects a significant 2027 increase but supplies no range in these remarks.",
+          "implication": "The unchanged 2026 range is not a new raise. Future investment remains a plan, not delivered or utilized capacity.",
+          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+          "source_date": "2026-10-28",
+          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
+        },
+        {
+          "title": "AI adoption and monetization can diverge",
+          "observation": "Management says lower AI Mode monetization affected Search growth; FX was the largest sequential deceleration factor. More than 100m knowledge-work seats were sold across all AI services, not Gemini Enterprise alone.",
+          "implication": "Query growth and seat counts do not establish unit profit. Prior deck metrics—1bn+ Gemini active users and about 32bn API tokens/minute—measure different populations and must not be added.",
+          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+          "source_date": "2026-10-28",
+          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
+        },
+        {
+          "title": "Liquidity includes market exposure",
+          "observation": "The CFO says $90.4bn of the rounded $265.1bn cash/marketable-securities balance is marketable equities. The release separately reports $12.371bn equity proceeds and $28.7bn senior-note proceeds.",
+          "implication": "Marketable equities carry price risk. Financing adds flexibility and obligations, not revenue; note proceeds are included within broader debt proceeds and are not all allocated to AI.",
+          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+          "source_date": "2026-10-28",
+          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "More hardware choices may reduce customer dependence on one accelerator stack. Adoption, delivered systems and realized cost per task determine whether that choice produces returns.",
+        "worth_reading": "skim",
+        "rationale": "The new evidence changes the company or financing assessment; dated details distinguish claims, delivery and cash.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+        "content_hash": "c96814db695710c5457043c56d3aaab3ca8ea869cbccca131ed8986dfd8a3214"
+      },
+      "publication_note": "Same-ID Alphabet update; all eight earlier financial/call highlights and dates preserved. Product performance remains attributed to Google."
+    },
+    {
+      "id": "ai-credit-selectivity-20261025",
+      "title": "AI lenders scrutinize contracts; credit is selective, not universally closed",
+      "url": "https://www.investing.com/news/stock-market-news/banks-investors-grow-wary-of-ai-debt-spooked-by-marketselloff-5011246",
+      "published_at": "2026-11-09",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "source_id": "reuters-ai-credit-20261109",
+      "source_name": "Reuters via Investing.com · AI credit scrutiny",
+      "source_role": "secondary",
+      "lens": "funding",
+      "relevance": "material",
+      "observation": "Reuters reports some lenders are reluctant to add AI exposure and are scrutinizing cash flows, delivery deadlines and customer termination rights. Some accounts rely on unnamed sources.",
+      "summary": "New reporting adds evidence of selective tightening to the earlier investor warnings and documented facilities.",
+      "implication": "A prominent customer or backstop alone may not secure financing. Projects must show cash generation and contract protections that survive delays.",
+      "beneficiaries": "Borrowers with dependable collections and stronger contract protections may retain an advantage; no new financing award is established.",
+      "risks": "Tighter terms or delayed financing can compound construction and customer-delivery risk.",
+      "counterevidence": "Nebius announced a $3.5 billion Citi secured facility on October 22; Crusoe announced a $700 million equipment-secured power facility the same day. Those transactions contradict a universal credit shutdown, but do not establish easy funding for all operators.",
+      "confirms": "Completed financings, revised terms, disclosed cancellations and actual contract cash flows would test the reported tightening.",
+      "refutes": "Broadly available new facilities on unchanged terms would weaken a general tightening thesis.",
+      "uncertainty": "Unnamed lenders are not individually verified; the report does not establish a sector-wide freeze. Prior October 25 commentary remains dated below. A later October 26 SpaceX filing disclosed a conditional lease agreement, not proof of the earlier claimed closing; do not add overlapping amounts.",
+      "entities": [
+        "OpenAI",
+        "Anthropic",
+        "SpaceX",
+        "Nebius",
+        "Crusoe"
+      ],
+      "rank": 4,
+      "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+      "claim_type": "Attributed Reuters reporting, partly anonymous sources; historical opinions and company announcements remain separately labeled",
+      "source_date_note": "Reuters report published November 9; current card ordering uses this source date. Earlier sources: Chamath’s post approximately 16:13 UTC; Musk’s reply approximately 19:11 UTC, October 25. Counterevidence releases are October 22, not new October 25 financing.",
+      "access_note": "Full Reuters syndication text read through the public web reader. Direct Reuters returned 401 and Investing.com HTML returned 403; no bypass or direct-HTML verification claimed. Reader text provenance retained privately. Earlier commentary access: Original posts inspected publicly by the coordinating researcher on October 25; the local text reader could not fetch X. No live X feed or account access is implied.",
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure",
+        "models"
+      ],
+      "highlights": [
+        {
+          "title": "Investor warning: GPUs can arrive before power and customers",
+          "observation": "Chamath links capitalization, customer-contract timing and power delays to possible idle GPUs, weak returns and consolidation. Forecasts and conditional rumors remain attributed to him.",
+          "claim_type": "investor opinion",
+          "implication": "Check energized MW and contracted paying demand against GPU deliveries and financing costs.",
+          "source_url": "https://x.com/chamath/status/2114389987563381004",
+          "source_date": "2026-10-25"
+        },
+        {
+          "title": "Executive claim: SpaceX’s broader revenue supports credit",
+          "observation": "Musk says SpaceX closed $40 billion of GPU debt using its investment-grade, Starlink and launch credit profile. A closing document was not independently verified.",
+          "claim_type": "unconfirmed executive financing claim",
+          "implication": "Do not count the claimed facility as confirmed incremental debt or add it to previously reported obligations.",
+          "source_url": "https://x.com/elonmusk/status/2114434646914068862",
+          "source_date": "2026-10-25"
+        },
+        {
+          "title": "Counterevidence: Nebius secured a short-term facility",
+          "observation": "Nebius announced a $3.5 billion Citi facility with 364-day maturity. The margin starts at SOFR plus 2.75% and can rise to 3.50%; the company cites over $40 billion of investment-grade customer contracts.",
+          "claim_type": "company financing announcement",
+          "implication": "Credit is available to at least some operators, while refinancing and contract-to-cash risks remain.",
+          "source_url": "https://nebius.com/newsroom/nebius-secures-3-5-billion-financing-facility-with-citi",
+          "source_date": "2026-10-22"
+        },
+        {
+          "title": "Counterevidence: Crusoe financed power equipment",
+          "observation": "Crusoe and Neuberger announced a $700 million facility secured by ordered generation equipment for AI factories.",
+          "claim_type": "company financing announcement",
+          "implication": "Collateral and power assets can unlock credit without proving energized capacity, utilization or profitability.",
+          "source_url": "https://www.crusoe.ai/resources/newsroom/neuberger-and-crusoe-announce-700-million-facility",
+          "source_date": "2026-10-22"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "A prominent customer or backstop alone may not secure financing. Projects must show cash generation and contract protections that survive delays.",
+        "worth_reading": "skim",
+        "rationale": "The new evidence changes the company or financing assessment; dated details distinguish claims, delivery and cash.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+        "content_hash": "5a6037444ec992a7829f9e722bfaa963fa50857e63acb43efd9a9d59696fae4c"
+      },
+      "publication_note": "Same-ID credit update; historical comments and all four earlier highlights preserved, without reclassifying them as current or confirmed transactions."
+    },
     {
       "id": "anthropic-s1-20261026",
       "title": "Anthropic reportedly secures generators; delivery still matters",
@@ -111,7 +536,7 @@
       ],
       "url": "https://www.channelnewsasia.com/business/anthropic-secures-34-billion-generator-deal-ai-data-centers-ft-reports-6534256",
       "source_id": "anthropic-generator-reuters-20261108",
-      "rank": 1,
+      "rank": 5,
       "relevance": "material",
       "summary": "New reporting concerns equipment commitments, not delivered electricity or newly raised financing. The November 2 filing findings remain dated context.",
       "reading_review": {
@@ -122,127 +547,6 @@
         "reviewed_at": "2026-11-08T14:05:11.173581+00:00",
         "content_hash": "e7e20db13c99f740a9e71e79256071950d0b0b7ce3c11b26fa505484bb76931a"
       }
-    },
-    {
-      "id": "ai-buildout-delivery-cash-20261107",
-      "title": "Sydney drops one proposed AI site; delivery remains a local test",
-      "url": "https://www.abc.net.au/news/2026-11-08/sydney-ai-data-centre-scrapped-after-community-backlash/107360592",
-      "published_at": "2026-11-08T03:26:43+00:00",
-      "date_kind": "publication_date",
-      "date_precision": "second",
-      "source_id": "abc-cooks-river-withdrawal-20261108",
-      "source_name": "ABC · Cooks River data-centre proposal withdrawn",
-      "source_role": "secondary",
-      "reviewed_at": "2026-11-08T14:05:11.173581+00:00",
-      "lens": "capacity",
-      "relevance": "material",
-      "rank": 2,
-      "entities": [
-        "IREN",
-        "Microsoft",
-        "Google",
-        "Alphabet",
-        "Crusoe",
-        "PPL",
-        "Invitium Energy",
-        "QTS",
-        "Equinix",
-        "Stockland",
-        "John Boyd Properties"
-      ],
-      "ai_layers": [
-        "energy",
-        "chips",
-        "infrastructure"
-      ],
-      "observation": "ABC quotes Stockland confirming that the amended Cooks River masterplan excludes a data centre. The broader logistics project continues.",
-      "summary": "A withdrawn proposed use joins the existing comparison of revenue, site ownership, future power and opened capacity.",
-      "implication": "Local planning and site choices can remove future supply without proving weaker overall compute demand. Approved, powered sites gain an advantage only if customers use and pay for them.",
-      "beneficiaries": "Operators with suitable approved sites may gain a relative delivery advantage. Logistics users may benefit from the revised plan; no new supplier revenue is established.",
-      "risks": "Approvals, community acceptance, power and customer ramp timing can separate proposed demand from delivered returns.",
-      "counterevidence": "Stockland cites logistics suitability; residents credit opposition. One withdrawn proposal does not establish a broad demand collapse. Earlier IREN revenue and SG6 opening remain evidence of progress.",
-      "confirms": "A filed revised masterplan and subsequent planning status would corroborate removal. Repeated cancellations and delayed powered deliveries would strengthen a broader supply-friction thesis.",
-      "refutes": "Reinstatement, revised approvals or timely delivery elsewhere would limit the broader supply-loss inference.",
-      "uncertainty": "Exact withdrawal date and data-centre-only cost are not established. A$3.5bn describes the whole precinct. Earlier IREN margin excludes depreciation and site costs; utilization and downstream returns remain undisclosed.",
-      "report_period": "IREN quarter ended September 30, 2026; cross-company announcements November 5-6, 2026",
-      "source_date_note": "ABC published November 8 at 03:26:43 UTC; the exact decision date is unknown. Earlier IREN/Google sources remain November 5 and Crusoe/PPL/Equinix November 6, reviewed November 7; these are not new November 8 events.",
-      "access_note": "November 8: full original ABC article read, including the attributed Stockland statement. Company/NSW planning pages provided context but not separate confirmation of the new withdrawal. Earlier November 7 review: IREN release read through a public PDF reader after direct download failed; call, deck and 10-Q were not reviewed. Other original issuer webpages were downloaded and read. No independent site inspection or operating telemetry.",
-      "claim_type": "Reported proposal withdrawal with attributed company statement; earlier results, issuer milestones and plans retained as dated context",
-      "highlights": [
-        {
-          "title": "Revenue is real; its mix matters",
-          "observation": "IREN reports $200m AI Cloud revenue: $135m services and $65m leases.",
-          "implication": "This is recognized revenue, not wholly GPU-service consumption.",
-          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
-          "source_date": "2026-11-05",
-          "claim_type": "Reported quarterly revenue"
-        },
-        {
-          "title": "Contracted ARR still needs delivery",
-          "observation": "The greater-than-$4bn ARR target moved to January 31, 2027, possibly end-February.",
-          "implication": "Commissioning and customer acceptance govern the ramp; ARR is not GAAP revenue.",
-          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
-          "source_date": "2026-11-05",
-          "claim_type": "Management target, not realized revenue"
-        },
-        {
-          "title": "Prepayments support cash flow",
-          "observation": "$529m operating cash includes $645m from deferred revenue, versus $4.824bn PP&E/hardware payments.",
-          "implication": "Their calculated difference is -$4.295bn, not company-defined FCF. Customer advances do not establish earned cash returns.",
-          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
-          "source_date": "2026-11-05",
-          "claim_type": "Reported cash flows; explicitly labeled calculation"
-        },
-        {
-          "title": "Funding coverage is narrower than expansion",
-          "observation": "Management calls remaining capex for its 0.3 GW program funded, using $9bn of mixed cash, restricted cash, facilities and unreceived prepayments. Remaining FY27 capex is $15bn; another $6bn is targeted.",
-          "implication": "Facility, escrow and availability conditions apply; this does not establish that all expansion is funded.",
-          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
-          "source_date": "2026-11-05",
-          "claim_type": "Management funding scope and conditional plan"
-        },
-        {
-          "title": "Wyoming ownership changes, not operating status",
-          "observation": "Crusoe announced November 6 that Google acquired the site, completing Crusoe predevelopment.",
-          "implication": "This advances construction preparation; it establishes no operating capacity or utilization.",
-          "source_url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
-          "source_date": "2026-11-06",
-          "claim_type": "Company-reported acquisition; closing date unspecified"
-        },
-        {
-          "title": "The $17bn belongs to an earlier plan",
-          "observation": "Google announced its long-term Wyoming investment on November 5.",
-          "implication": "Do not count it again as a new November 6 commitment, acquisition price or cash received by Crusoe.",
-          "source_url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/",
-          "source_date": "2026-11-05",
-          "claim_type": "Announced long-term investment, not realized spending"
-        },
-        {
-          "title": "QTS power is conditional and years away",
-          "observation": "PPL describes nonbinding 2 GW terms and separate specified-cost reimbursement. Fuel cells/storage could start in 2029; gas units in 2032-2033.",
-          "implication": "Some development risk is allocated, but this is neither final generation commitment nor delivered power.",
-          "source_url": "https://investors.pplweb.com/2026-11-06-PPL-Corporation-Delivers-Strong-Third-Quarter-2026-Earnings-Raises-Long-Term-EPS-Growth-Outlook",
-          "source_date": "2026-11-06",
-          "claim_type": "Nonbinding terms, executed cost protection and prospective dates"
-        },
-        {
-          "title": "SG6 reaches opening, with utilization still unknown",
-          "observation": "Equinix announced SG6 opening: about 1,550 Phase 1 cabinets and $290m initial investment. Up to 20 MW is full build-out.",
-          "implication": "Opened colocation supply is further along than a site plan; cabinet occupancy and cash returns still need evidence.",
-          "source_url": "https://newsroom.equinix.com/2026-11-06-Equinix-Opens-SG6-to-Support-Singapores-Digital-Future-and-Strengthen-Its-Role-as-a-Global-Innovation-Hub",
-          "source_date": "2026-11-06",
-          "claim_type": "Issuer opening milestone; full-buildout capacity separate"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "Local planning and site choices can remove future supply without proving weaker overall compute demand. Approved, powered sites gain an advantage only if customers use and pay for them.",
-        "worth_reading": "skim",
-        "rationale": "A material reported procurement or planning-stage change; the details distinguish source confirmation, timing and operating implications.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-08T14:05:11.173581+00:00",
-        "content_hash": "25fc1deee56bd94d30511434f4cd5ab93fe9a52992be7e6e5cef13d68c634a77"
-      },
-      "publication_note": "Same-ID capacity-stage update. Prior Google November 5 plan remains linked in the reviewed references; its $17bn is not a purchase price or a new commitment."
     },
     {
       "access_note": "Official prepared-remarks DOCX retrieved and read in full. Third-party Q&A reviewed by coordinating research, not company-edited text; local re-download unavailable. Outlook deck reviewed by coordinating research; guidance independently corroborated in the official remarks. Original 10-Q downloaded; selected related-party, lease and cash sections checked. Original SEC pricing term sheet and preliminary prospectus retrieved; ten tranche amounts and dates checked against the original text. November 7 financing follow-up: Relevant original SEC filing body read through the ordinary public web reader. Direct original HTML retrieval returned HTTP 403; preserved hashes cover reader outputs, not original filing bytes. No alternate authenticated access was used.",
@@ -347,7 +651,7 @@
       "title": "Microsoft confirms $25bn bond issuance; returns still depend on delivery",
       "uncertainty": "No fleet-wide utilization, energized MW or AI-only return is disclosed here. No updated total paid Copilot seat count was given. Official written material contains prepared remarks only. Full Q&A and deck were reviewed by coordinating research; this publication check could not independently retrieve those files and verified numerical guidance in the official remarks. OpenAI revenue is not all Azure or GPU rental. Receivable aging and cash/credit composition of funded commitments are not established; no default inference. The filing confirms principal issuance but does not state actual net cash received. No AI-only use-of-proceeds allocation or net debt increase after refinancing is established.",
       "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557d8k.htm",
-      "rank": 3,
+      "rank": 6,
       "reading_review": {
         "key_takeaway": "Bond issuance strengthens evidence that the spending ramp can be financed, while adding debt service. It does not establish operating capacity, paid usage or AI investment returns.",
         "worth_reading": "skim",
@@ -453,7 +757,7 @@
       "title": "Meta completes $15bn dollar debt; €9bn euro issue awaits delivery",
       "uncertainty": "Dollar completion is verified but actual net cash received is not stated in the reviewed closing filing; approximately $14.9bn net is a prospectus estimate. Euro approximately €8.96bn net is also estimated, with delivery still expected. Common-forward cash settlement, ATM sales and supplier final allocations remain unverified. The additional forward maturity schedules were not available in the reader body; do not assign a newly verified option maturity.",
       "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450754/d44678d424b5.htm",
-      "rank": 4,
+      "rank": 7,
       "reading_review": {
         "key_takeaway": "Funding access has advanced, while interest, preferred dividends and future equity settlement remain separate obligations. Financing execution does not establish utilization or returns from the AI buildout.",
         "worth_reading": "skim",
@@ -490,7 +794,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 5,
+      "rank": 8,
       "claim_type": "Reported results; initial-workload statement and guidance are management claims; implications are analysis",
       "observation": "Q3 revenue was $13.377bn, including $8.546bn from Data Center. Continuing operating cash was $1.202bn; company-defined free cash flow was $554m.",
       "summary": "November 3 results provide new supplier operating evidence. Data Center includes CPUs and other products, not only AI GPUs.",
@@ -558,7 +862,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 6,
+      "rank": 9,
       "observation": "Q3 revenue rose 96% to $2.313bn. U.S. commercial revenue reached $984m, exceeding U.S. government revenue of $953m.",
       "summary": "Reported profit and cash strengthen the adoption signal; slower contract-value growth limits extrapolation.",
       "implication": "Palantir is converting enterprise software demand into sales and operating cash. AI-specific revenue and customers’ investment returns remain undisclosed.",
@@ -622,7 +926,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 7,
+      "rank": 10,
       "observation": "The companies announced a definitive all-stock acquisition agreement: 4.500 Marvell shares per Lumentum share, with approximately $115 billion implied enterprise value.",
       "summary": "Lumentum’s same-day results add an operating checkpoint: $1.2626 billion quarterly revenue and management-disclosed purchase commitments above $5 billion for a second major near-packaged/co-packaged optics win. The proposed merger still targets closing in the first half of 2028.",
       "implication": "Existing sales and purchase commitments give the optics thesis more substance. Their conversion into collected cash and delivered products matters separately from the all-stock acquisition value.",
@@ -725,7 +1029,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 8,
+      "rank": 11,
       "observation": "AI data-center revenue reached $180m, up 175% year over year and 39% sequentially. Total revenue was $1.722bn.",
       "summary": "The reported AI sales line provides a measurable power-chip demand signal within a broader semiconductor business.",
       "implication": "Higher compute power requirements are converting into component sales; companywide results do not establish AI-specific profitability.",
@@ -822,7 +1126,7 @@
           "source_date": "2026-11-03"
         }
       ],
-      "rank": 9,
+      "rank": 12,
       "reading_review": {
         "key_takeaway": "The Drax partnership is an early development plan using existing power infrastructure, with tenants, approvals and final investment decisions still ahead.",
         "worth_reading": "skim",
@@ -855,7 +1159,7 @@
         "energy",
         "infrastructure"
       ],
-      "rank": 10,
+      "rank": 13,
       "relevance": "material",
       "observation": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
       "summary": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
@@ -921,7 +1225,7 @@
       ],
       "lens": "capacity",
       "relevance": "material",
-      "rank": 11,
+      "rank": 14,
       "observation": "Google announced $160m of funding for shared water infrastructure in Negeri Sembilan and appointed Gamuda to build a reservoir and treatment plant serving its future Port Dickson campus and the public.",
       "summary": "Planned treatment capacity is 65 million liters a day. The facilities are to become state-owned upon completion; this is a development commitment, with payments and commissioning unverified.",
       "implication": "Compute expansion needs utilities before workloads can run. Google is funding enabling infrastructure, creating potential construction demand while leaving delivery timing and actual compute usage unproven.",
@@ -986,7 +1290,7 @@
         "models",
         "applications"
       ],
-      "rank": 12,
+      "rank": 15,
       "relevance": "watch",
       "observation": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
       "summary": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
@@ -1050,7 +1354,7 @@
       ],
       "lens": "policy",
       "relevance": "material",
-      "rank": 13,
+      "rank": 16,
       "observation": "The court denied X.AI Corp. and MZX Tech LLC’s dismissal motion in the Southaven power-plant case. It rejected their mobile-source exemption argument; the claims proceed.",
       "summary": "The October 30 ruling concerns Mississippi power supplying Colossus 2 in Memphis. It is not a final liability or damages judgment.",
       "implication": "Installed turbines do not remove permitting risk. Later remedies could add cost or constrain power supply, but this order establishes no outage or lost compute revenue.",
@@ -1117,7 +1421,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 14,
+      "rank": 17,
       "observation": "The 10-Q confirms $50bn invested in OpenAI by September 30 and discloses up to approximately $80bn of supplier credit with draws permitted from 2027.",
       "summary": "The prior earnings story gains filed investment status and future financing terms, rather than a new earnings event.",
       "implication": "Funding customers and supplying their compute deepens shared exposure; future equipment credit helps timing but still requires cash returns.",
@@ -1228,7 +1532,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 15,
+      "rank": 18,
       "observation": "Reuters, citing the FT, reports OpenAI cut its fundraising target by $10bn to about $20bn. A first close was still expected below that target.",
       "summary": "The reported raise target is smaller; no closed round, funded cash or cancelled compute contract is established.",
       "implication": "A smaller raise could tighten the timing of compute spending. It does not establish cancelled contracts, lower paid usage or weaker AI demand.",
@@ -1280,7 +1584,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 16,
+      "rank": 19,
       "observation": "An unnamed customer intends to cancel an A$8.8m project. DXN expects payment for completed and committed work; cancellation remains unfinalized.",
       "summary": "An unnamed US-listed neocloud changed strategy; the larger follow-on campus is unlikely.",
       "implication": "Progress-payment protections can cushion cancellations, but backlog still depends on acceptance and collection. One customer’s retreat does not establish industry-wide demand collapse.",
@@ -1344,7 +1648,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 17,
+      "rank": 20,
       "observation": "Intel reports Data Center and AI revenue of $7.3bn, up 78%, while client revenue fell 5%. Q4 group revenue is guided below Q3 despite further expected server growth.",
       "summary": "Real server sales and profit strengthen the CPU case; memory costs, factory disruption and expansion funding limit the group-level benefit.",
       "implication": "AI infrastructure is benefiting CPUs as well as GPUs, but memory costs hurt PC demand while manufacturing and packaging constraints limit server deliveries.",
@@ -1421,7 +1725,7 @@
       "source_role": "primary",
       "lens": "earnings",
       "relevance": "material",
-      "rank": 18,
+      "rank": 21,
       "event_date": "2026-10-29",
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "report_period": "Fiscal Q1 2027, quarter ended October 2, 2026",
@@ -1502,7 +1806,7 @@
       "source_role": "primary",
       "lens": "models",
       "relevance": "material",
-      "rank": 19,
+      "rank": 22,
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "claim_type": "issuer release; vendor benchmark claims; conditional inference",
       "entities": [
@@ -1585,7 +1889,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 20,
+      "rank": 23,
       "observation": "Reuters, citing The Information, reports unsigned NVIDIA credit-support talks for Nscale’s West Virginia project serving Anthropic. Proposed support would cover power and construction; final terms remain unsettled.",
       "summary": "A financing watch item, with earlier filed contract terms as context.",
       "implication": "If agreed, supplier backing could help a project borrow before customer payments begin, while making chip sales and credit exposure more dependent on the same buildout.",
@@ -1651,7 +1955,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 21,
+      "rank": 24,
       "report_period": "Q3 ended September 30, 2026; later capacity and spending are management plans",
       "claim_type": "issuer-reported K-IFRS results before external review; management outlook; conditional analysis",
       "observation": "Revenue was KRW195.3tn and operating profit KRW107.4tn. Device Solutions generated KRW106.5tn operating profit, while Device eXperience lost KRW0.8tn.",
@@ -1730,7 +2034,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 22,
+      "rank": 25,
       "observation": "Power Generation sales rose 30% to $3.421bn. Power & Energy segment profit rose 31% to $2.143bn, with a 24.4% margin versus 21.9% a year earlier.",
       "summary": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
       "implication": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
@@ -1808,7 +2112,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 23,
+      "rank": 26,
       "observation": "Q3 revenue was $2.571bn, up 11%, with $2.442bn recurring revenue. Annualized gross bookings were $533m; these are not recognized revenue or cash.",
       "summary": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
       "implication": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
@@ -1904,7 +2208,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 24,
+      "rank": 27,
       "observation": "Oracle’s October 28 Investor Day targets positive free cash flow in fiscal H2 2028 and at least $30bn in FY2029. It expects at most $20bn in additional capital raises through FY2030, excluding refinancings.",
       "summary": "New financing and cash-flow targets qualify the earlier chip-rollout story; existing hardware milestones are retained below.",
       "implication": "Vendor financing and customer advances can lower upfront cash needs, but shift obligations rather than proving the buildout already funds itself.",
@@ -1979,121 +2283,6 @@
       }
     },
     {
-      "id": "alphabet-q3-20261028",
-      "title": "Alphabet’s Cloud doubles; the call flags near-term margin pressure",
-      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
-      "source_id": "alphabet-q3-20261028",
-      "source_name": "Alphabet · Q3 release",
-      "source_role": "primary",
-      "published_at": "2026-10-28",
-      "event_date": "2026-10-28",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "reviewed_at": "2026-10-28T22:13:12+00:00",
-      "entities": [
-        "Alphabet",
-        "Google",
-        "GOOGL",
-        "GOOG"
-      ],
-      "ai_layers": [
-        "chips",
-        "infrastructure",
-        "models",
-        "applications"
-      ],
-      "lens": "earnings",
-      "relevance": "material",
-      "rank": 25,
-      "observation": "Q3 Cloud revenue was $30.709bn, up 103%, with $11.121bn operating profit and a 36.2% segment margin. The full third-party call transcript adds Q4 cost pressure and cash-flow context; no company-edited transcript reviewed.",
-      "summary": "Release/deck figures plus prepared remarks and Q&A reproduced by StockAnalysis/Quartr. New call statements are attributed management claims.",
-      "implication": "External compute can ease supply constraints, but its cost pressures near-term Cloud margins while cash awaits delivery and collection.",
-      "report_period": "Q3 2026, quarter ended September 30, 2026",
-      "claim_type": "reported results; management statements in third-party call transcript",
-      "beneficiaries": "External compute providers with documented delivered contracts and TPU component suppliers may benefit. No specific rental supplier or incremental revenue is established here.",
-      "risks": "Rented capacity and depreciation can pressure margins. Inventory and long-term obligations tie up capital; AI Mode adoption can outrun ad monetization.",
-      "counterevidence": "Q3 group operating profit was $40.576bn and TTM FCF remained positive at $19.747bn. Management describes contracted TPU inventory and expected backlog conversion. The $265.1bn cash/securities total includes $90.4bn marketable equities, so it is not all cash.",
-      "confirms": "Accepted TPU deliveries and cash collection, backlog conversion, repeat paid usage and Cloud margins after the rental ramp would strengthen durable returns.",
-      "refutes": "Longer inventory cycles, slower collections, persistent rental-cost pressure or weaker monetization despite growing queries would weaken conversion.",
-      "uncertainty": "Full prepared remarks and Q&A reviewed in StockAnalysis/Quartr, not company-edited text. Official webcast metadata was accessible but caption downloads were empty. TPU revenue/margins, utilization and AI-only returns remain undisclosed. No analyst revenue-per-GW assumption is treated as management guidance.",
-      "source_date_note": "Results and call dated October 28 for quarter ended September 30. This materially updates the same story; it is not a new earnings event. The secondary transcript supplies call detail; release and deck remain the financial-statement sources.",
-      "access_note": "Original issuer release/deck plus full public StockAnalysis/Quartr transcript reviewed. Official webcast linked for reference; no independent caption verification or company-edited written transcript claimed.",
-      "highlights": [
-        {
-          "title": "Q4 rentals change the margin outlook",
-          "observation": "Management says third-party bridging compute arrived only at the end of Q3 and ramps in Q4, creating near-term Cloud margin headwinds.",
-          "implication": "The reported 36.2% margin is not forward guidance. It also excludes certain shared AI costs; supplier revenue can grow while operator margins tighten.",
-          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
-          "source_date": "2026-10-28",
-          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
-        },
-        {
-          "title": "Cash pressure includes inventory and a fine",
-          "observation": "Q3 CFO was $42.290bn, cash capex $51.355bn and company-defined FCF −$9.065bn. The CFO also identifies TPU inventory and a $5.2bn EC fine payment as cash headwinds.",
-          "implication": "Do not attribute the entire cash deficit to AI investment or call adding back one item a normalized FCF measure.",
-          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
-          "source_date": "2026-10-28",
-          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
-        },
-        {
-          "title": "Signed TPU orders still need delivery and payment",
-          "observation": "Management says TPU inventory follows signed contracts. Product sales contributed meaningfully to Cloud growth; TPU-specific revenue and margins were not disclosed.",
-          "implication": "Contracts reduce speculative-inventory risk but do not prove customer acceptance, collected cash or utilization. An analyst’s $35bn/GW premise was not endorsed.",
-          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
-          "source_date": "2026-10-28",
-          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
-        },
-        {
-          "title": "Backlog converts over multiple periods",
-          "observation": "Management reports $561bn Cloud backlog and expects just over 55% to become revenue within 24 months.",
-          "implication": "This supports demand visibility, not immediate revenue or cash. Track conversion timing and collections instead of treating the whole balance as near-term sales.",
-          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
-          "source_date": "2026-10-28",
-          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
-        },
-        {
-          "title": "Contract ceilings differ from annual capex",
-          "observation": "CFO remarks describe $924bn future purchase commitments and $152bn pre-commencement leases/other obligations as multiyear maximum contractual amounts, with pricing and volume flexibility in some agreements.",
-          "implication": "These are not current debt or next-year capex. Do not add them to annual investment guidance or existing overlapping relationship totals.",
-          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
-          "source_date": "2026-10-28",
-          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
-        },
-        {
-          "title": "The investment outlook remains elevated",
-          "observation": "FY2026 capex guidance remains $195–205bn. Management expects a significant 2027 increase but supplies no range in these remarks.",
-          "implication": "The unchanged 2026 range is not a new raise. Future investment remains a plan, not delivered or utilized capacity.",
-          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
-          "source_date": "2026-10-28",
-          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
-        },
-        {
-          "title": "AI adoption and monetization can diverge",
-          "observation": "Management says lower AI Mode monetization affected Search growth; FX was the largest sequential deceleration factor. More than 100m knowledge-work seats were sold across all AI services, not Gemini Enterprise alone.",
-          "implication": "Query growth and seat counts do not establish unit profit. Prior deck metrics—1bn+ Gemini active users and about 32bn API tokens/minute—measure different populations and must not be added.",
-          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
-          "source_date": "2026-10-28",
-          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
-        },
-        {
-          "title": "Liquidity includes market exposure",
-          "observation": "The CFO says $90.4bn of the rounded $265.1bn cash/marketable-securities balance is marketable equities. The release separately reports $12.371bn equity proceeds and $28.7bn senior-note proceeds.",
-          "implication": "Marketable equities carry price risk. Financing adds flexibility and obligations, not revenue; note proceeds are included within broader debt proceeds and are not all allocated to AI.",
-          "source_url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
-          "source_date": "2026-10-28",
-          "claim_type": "management statement reproduced in third-party transcript; implication is analysis"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "Alphabet’s Cloud growth and profit show monetization, while external compute costs and delivery timing still pressure near-term margins and cash conversion.",
-        "worth_reading": "dig_deeper",
-        "rationale": "The call adds material qualifications to the headline. Read those cash and margin details with the third-party transcript provenance in mind.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z",
-        "content_hash": "165c20cba270726be6e5d79b7bef5528aa160e217b4689eab2b56b913f2d70d0"
-      }
-    },
-    {
       "id": "vertiv-q3-20261028",
       "title": "Vertiv turns infrastructure demand into sales; inspect the cash support",
       "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
@@ -2114,7 +2303,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 26,
+      "rank": 28,
       "observation": "Q3 sales reached $4.3128bn, up 61.2% (55% organic). GAAP operating profit was $983.8m; adjusted operating profit was $1,086.9m.",
       "summary": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
       "implication": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
@@ -2186,7 +2375,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 27,
+      "rank": 29,
       "observation": "C&I external sales rose 28% to about $552m. Data-center backlog is approximately $4.5bn; Amazon’s expected initial 2027–28 deliveries total $2.4bn.",
       "summary": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
       "implication": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
@@ -2305,7 +2494,7 @@
       ],
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
-      "rank": 28,
+      "rank": 30,
       "relevance": "material",
       "reading_review": {
         "key_takeaway": "SK hynix’s memory profits support the scarcity thesis, while weaker sequential operating cash and higher investment keep cash conversion in focus.",
@@ -2384,7 +2573,7 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 29,
+      "rank": 31,
       "relevance": "material",
       "reading_review": {
         "key_takeaway": "Corning’s optical growth is reaching segment earnings, but changed core-currency methodology and uneven performance elsewhere limit broad comparisons.",
@@ -2416,7 +2605,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 30,
+      "rank": 32,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -2472,7 +2661,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 31,
+      "rank": 33,
       "relevance": "material",
       "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
       "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
@@ -2594,7 +2783,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 32,
+      "rank": 34,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone.",
       "reading_review": {
@@ -2684,7 +2873,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 33,
+      "rank": 35,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement.",
       "reading_review": {
@@ -2694,177 +2883,6 @@
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
         "reviewed_at": "2026-11-04T05:20:12Z",
         "content_hash": "c9f2b69c358145c510423904c9cee585acca78aa4437dac9b312769ad33b9b0e"
-      }
-    },
-    {
-      "id": "ai-credit-selectivity-20261025",
-      "title": "Chamath and Musk warn on AI credit; new loans complicate the claim",
-      "url": "https://x.com/chamath/status/2114389987563381004",
-      "published_at": "2026-10-25T19:11:00Z",
-      "date_kind": "publication_date",
-      "date_precision": "approximate_minute",
-      "source_id": "chamath-ai-credit-20261025",
-      "source_name": "Chamath / Musk · checked against company releases",
-      "source_role": "primary",
-      "lens": "funding",
-      "relevance": "material",
-      "observation": "Chamath argues that weak neocloud capitalization, slow customer contracting and power delays could leave purchased GPUs underused. Musk replies that debt access is severely constrained without non-AI-data-center revenue and says SpaceX closed $40 billion of GPU debt using its broader credit profile. These are investor and executive statements, not verified market-wide findings.",
-      "summary": "Original commentary and a management claim, compared with dated financing announcements. The risk is the gap between financing, energized capacity, utilization and collected cash.",
-      "implication": "Credit appears selective: a funded project still needs power, paying workloads and cash collection to service debt.",
-      "beneficiaries": "Operators with creditworthy customers, credible power-delivery schedules and diversified collateral may be better placed to secure financing. This is an inference, not a return forecast.",
-      "risks": "Power delays can leave GPUs idle while debt service continues. Uptime failures can trigger contract penalties or termination and weaken financing support.",
-      "counterevidence": "Nebius announced a $3.5 billion Citi secured facility on October 22; Crusoe announced a $700 million equipment-secured power facility the same day. Those transactions contradict a universal credit shutdown, but do not establish easy funding for all operators.",
-      "confirms": "Broader evidence of widening spreads, rejected facilities, delayed draws, project cancellations, weak utilization or customer-payment stress would strengthen the tightening thesis.",
-      "refutes": "Additional independently documented closings on durable terms, on-time power delivery, utilized capacity and cash-positive contracts would weaken a broad shutdown thesis.",
-      "uncertainty": "The $40 billion SpaceX statement lacks an independently verified closing document here. It must not be added to reported debt. Chamath’s suggestion about Anthropic compute denial is an unverified conditional rumor; no such denial is established. His unnamed exceptional company remains unnamed.",
-      "entities": [
-        "OpenAI",
-        "Anthropic",
-        "SpaceX",
-        "Nebius",
-        "Crusoe"
-      ],
-      "rank": 34,
-      "event_date": "2026-10-25",
-      "reviewed_at": "2026-10-25T20:55:54Z",
-      "claim_type": "investor opinion / executive claim; counterevidence sourced",
-      "source_date_note": "Chamath’s post approximately 16:13 UTC; Musk’s reply approximately 19:11 UTC, October 25. Card ordering uses the later reply time. Counterevidence releases are October 22, not new October 25 financing.",
-      "access_note": "Original posts inspected publicly by the coordinating researcher on October 25; the local text reader could not fetch X. No live X feed or account access is implied.",
-      "ai_layers": [
-        "energy",
-        "chips",
-        "infrastructure",
-        "models"
-      ],
-      "highlights": [
-        {
-          "title": "Investor warning: GPUs can arrive before power and customers",
-          "observation": "Chamath links capitalization, customer-contract timing and power delays to possible idle GPUs, weak returns and consolidation. Forecasts and conditional rumors remain attributed to him.",
-          "claim_type": "investor opinion",
-          "implication": "Check energized MW and contracted paying demand against GPU deliveries and financing costs.",
-          "source_url": "https://x.com/chamath/status/2114389987563381004",
-          "source_date": "2026-10-25"
-        },
-        {
-          "title": "Executive claim: SpaceX’s broader revenue supports credit",
-          "observation": "Musk says SpaceX closed $40 billion of GPU debt using its investment-grade, Starlink and launch credit profile. A closing document was not independently verified.",
-          "claim_type": "unconfirmed executive financing claim",
-          "implication": "Do not count the claimed facility as confirmed incremental debt or add it to previously reported obligations.",
-          "source_url": "https://x.com/elonmusk/status/2114434646914068862",
-          "source_date": "2026-10-25"
-        },
-        {
-          "title": "Counterevidence: Nebius secured a short-term facility",
-          "observation": "Nebius announced a $3.5 billion Citi facility with 364-day maturity. The margin starts at SOFR plus 2.75% and can rise to 3.50%; the company cites over $40 billion of investment-grade customer contracts.",
-          "claim_type": "company financing announcement",
-          "implication": "Credit is available to at least some operators, while refinancing and contract-to-cash risks remain.",
-          "source_url": "https://nebius.com/newsroom/nebius-secures-3-5-billion-financing-facility-with-citi",
-          "source_date": "2026-10-22"
-        },
-        {
-          "title": "Counterevidence: Crusoe financed power equipment",
-          "observation": "Crusoe and Neuberger announced a $700 million facility secured by ordered generation equipment for AI factories.",
-          "claim_type": "company financing announcement",
-          "implication": "Collateral and power assets can unlock credit without proving energized capacity, utilization or profitability.",
-          "source_url": "https://www.crusoe.ai/resources/newsroom/neuberger-and-crusoe-announce-700-million-facility",
-          "source_date": "2026-10-22"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "Investor warnings and documented new facilities together suggest selective AI credit access, rather than proof of a universal lending shutdown.",
-        "worth_reading": "skim",
-        "rationale": "Useful framing, but newer filed financing is more authoritative than the original social commentary. Preserve the unverified closing and rumor limitations.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z",
-        "content_hash": "fc7719db190f1e9c66c20276ecb60afcd25bcd1cb6cf9b33f9b373e88dd34d22"
-      }
-    },
-    {
-      "id": "nvidia-gtc-berlin-20261021",
-      "title": "GTC Berlin: five highlights, five tests of delivery",
-      "url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/",
-      "published_at": "2026-10-21",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "event_date": "2026-10-21",
-      "event_start": "2026-10-20",
-      "event_end": "2026-10-22",
-      "reviewed_at": "2026-10-25T15:28:13Z",
-      "source_id": "nvidia-gtc-berlin",
-      "source_name": "NVIDIA Blog",
-      "source_role": "primary",
-      "lens": "capacity",
-      "relevance": "material",
-      "rank": 35,
-      "entities": [
-        "NVIDIA",
-        "KYEC"
-      ],
-      "ai_layers": [
-        "energy",
-        "chips",
-        "infrastructure",
-        "models",
-        "applications"
-      ],
-      "observation": "NVIDIA presented deployment, efficiency, agent-security and manufacturing plans on October 21; GTC ran October 20–22, including workshops.",
-      "summary": "Five highlights below separate issuer claims from realized adoption.",
-      "implication": "If execution follows, faster deployment and efficiency could improve economics; customer utilization still determines returns.",
-      "beneficiaries": "Suppliers and operators delivering accepted capacity.",
-      "risks": "Site readiness, production delays and weak utilization.",
-      "counterevidence": "Plans, reference designs and demonstrations do not establish sales.",
-      "confirms": "Independent operating metrics, shipments and paid deployments.",
-      "refutes": "Slippage, missed efficiency targets or weak adoption.",
-      "uncertainty": "Issuer announcements reviewed October 25; outcomes are not independently verified.",
-      "highlights": [
-        {
-          "title": "DSX POD: installation, not site development",
-          "observation": "NVIDIA claims prepared-site deployment can fall from six months to as little as 14 days; partner deliveries target early 2027.",
-          "claim_type": "issuer_performance_claim_and_forward_plan",
-          "implication": "Site power, cooling and networking must already be ready.",
-          "source_url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment",
-          "source_date": "2026-10-21"
-        },
-        {
-          "title": "Efficiency: separate power from cooling water",
-          "observation": "MaxLPS claims up to 30% less power for equal token output. Separately, closed-loop/dry-cooler designs target near-zero facility cooling water; climate matters.",
-          "claim_type": "conditional_issuer_performance_claim",
-          "implication": "Check workload and climate conditions; facility cooling water is not the total water footprint.",
-          "source_url": "https://nvidianews.nvidia.com/news/european-ecosystem-builds-worlds-most-efficient-ai-factories-with-nvidia-dsx",
-          "source_date": "2026-10-21"
-        },
-        {
-          "title": "OpenShell: an architecture for agents",
-          "observation": "The available reference architecture combines Rubin inference, Vera CPUs and BlueField/Sentry controls for agents.",
-          "claim_type": "issuer_product_announcement",
-          "implication": "Available architecture proves neither material sales nor perfect security; test production adoption and controls.",
-          "source_url": "https://nvidianews.nvidia.com/news/openshell-reference-architecture",
-          "source_date": "2026-10-21"
-        },
-        {
-          "title": "Manufacturing: commitments precede output",
-          "observation": "NVIDIA announced a $1.1bn KYEC reservation advance, with U.S. testing targeted for April 2027. Other plans: 2.5x substrate capacity over three years; Amkor advanced packaging more than 300% higher by end-2028; SPIL optical-engine capacity 15x by mid-2027.",
-          "claim_type": "announced_advance_and_forward_capacity_target",
-          "implication": "Future capacity is not delivered output or sales. Advance disbursement and KYEC revenue recognition remain unverified.",
-          "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout",
-          "source_date": "2026-10-21"
-        },
-        {
-          "title": "Physical AI: demonstrations precede adoption",
-          "observation": "The keynote showed industrial, healthcare and robotics uses and announced the Isaac GR00T-based Agile ONE SN humanoid, expected in 2027.",
-          "claim_type": "issuer_demonstration",
-          "implication": "Scaled deployment, reliability and customer economics need evidence.",
-          "source_url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/",
-          "source_date": "2026-10-21"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "Nvidia’s announcements identify potential efficiency and deployment improvements; plans and demonstrations still need shipments, adoption and operating evidence.",
-        "worth_reading": "skim",
-        "rationale": "A concise technology roadmap reference. The delivery tests are more useful than treating issuer claims as realized sales.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z",
-        "content_hash": "fda317a602135a0c8ccbff4420b50b2e96cf77f49a515ac3821740eb69ecdcfa"
       }
     },
     {
@@ -5173,6 +5191,70 @@
       "quality_note": "Original ABC report quotes Stockland on the revised masterplan. Residents’ causal claims are separate from the company’s logistics rationale; no operating closure or cancelled data-centre capex is established.",
       "access_note": "Full original ABC HTML retrieved HTTP200 and article read; datePublished verified in page metadata. Stockland’s public planning page and NSW portal were checked for context but did not independently document the new withdrawal.",
       "publication_note": "Published November 8 at03:26:43UTC; exact decision/withdrawal event date is not established by the ABC article."
+    },
+    {
+      "id": "telekom-munich-expansion-20261109",
+      "name": "Deutsche Telekom · Munich Industrial AI Cloud update",
+      "url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/11/ai-demand-rises-deutsche-telekom-expands-ai-factory-in-munich",
+      "role": "primary",
+      "kind": "issuer_announcement",
+      "topics": [
+        "capacity",
+        "chips",
+        "industrial adoption"
+      ],
+      "reviewed_at": "2026-11-09T14:02:18.101642+00:00",
+      "source_date": "2026-11-09",
+      "quality_note": "Full issuer announcement reviewed. Booked capacity and customer use are company claims, not independently measured utilization or cash. B300/20MW expansion is prospective.",
+      "access_note": "Original English HTML downloaded successfully and read; linked German version checked for wording. Publication is day precision; page modification metadata is not treated as publication time."
+    },
+    {
+      "id": "nvidia-board-20261108",
+      "name": "NVIDIA · Board announces independent review",
+      "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+      "role": "primary",
+      "kind": "issuer_release",
+      "source_date": "2026-11-08",
+      "reviewed_at": "2026-11-09T14:02:17.676468+00:00",
+      "topics": [
+        "policy",
+        "chips",
+        "capacity"
+      ],
+      "quality_note": "Issuer disclosure verifies an announced independent review. The board’s confidence and its statement about no reason to believe compromise are attributed statements, not completed investigative findings.",
+      "access_note": "Full original issuer HTML retrieved HTTP200 and read. Publication day checked in page body and embedded PublishDate metadata.",
+      "publication_note": "Issuer page dated November8; reviewed November9. No exact publication time inferred from page."
+    },
+    {
+      "id": "google-tpu-systems-20261109",
+      "name": "Google · TPU 8tx and 8i Max systems",
+      "url": "https://cloud.google.com/blog/topics/ai-infrastructure/tpu-8tx-and-tpu-8i-max",
+      "role": "primary",
+      "kind": "issuer_product_announcement",
+      "source_date": "2026-11-09",
+      "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+      "topics": [
+        "chips",
+        "capacity",
+        "applications"
+      ],
+      "quality_note": "Issuer product and performance claims; no independently measured fleet utilization, new-system revenue or shipment scale.",
+      "access_note": "Full original Google Cloud HTML downloaded and read. Product broadcast was not reviewed; no new earnings or call review claimed."
+    },
+    {
+      "id": "reuters-ai-credit-20261109",
+      "name": "Reuters via Investing.com · AI credit scrutiny",
+      "url": "https://www.investing.com/news/stock-market-news/banks-investors-grow-wary-of-ai-debt-spooked-by-marketselloff-5011246",
+      "role": "secondary",
+      "kind": "reported_news",
+      "source_date": "2026-11-09",
+      "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
+      "topics": [
+        "funding",
+        "capacity"
+      ],
+      "quality_note": "Reuters reporting partly relies on unnamed sources. It supports attributed selective tightening, not a universal financing freeze or a confirmed new transaction.",
+      "access_note": "Full Reuters syndication text read through the public web reader. Direct Reuters returned 401 and Investing.com HTML returned 403; no bypass or direct-HTML verification claimed. Reader text provenance retained privately."
     }
   ],
   "ledger": [
