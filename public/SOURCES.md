@@ -323,3 +323,13 @@ Four same-ID updates preserve prior evidence: NVIDIA governance review, Telekom 
 - [NVIDIA · Board announces independent review](https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors) — source 2026-11-08. Full original issuer HTML retrieved HTTP200 and read. Publication day checked in page body and embedded PublishDate metadata.
 - [Google · TPU 8tx and 8i Max systems](https://cloud.google.com/blog/topics/ai-infrastructure/tpu-8tx-and-tpu-8i-max) — source 2026-11-09. Full original Google Cloud HTML downloaded and read. Product broadcast was not reviewed; no new earnings or call review claimed.
 - [Reuters via Investing.com · AI credit scrutiny](https://www.investing.com/news/stock-market-news/banks-investors-grow-wary-of-ai-debt-spooked-by-marketselloff-5011246) — source 2026-11-09. Full Reuters syndication text read through the public web reader. Direct Reuters returned 401 and Investing.com HTML returned 403; no bypass or direct-HTML verification claimed. Reader text provenance retained privately.
+
+
+## November 10, 2026 reviewed update
+
+Two new research stories and a same-ID Anthropic update preserve all earlier articles and citations. Recognized sales, customer advances, proposed financing and delivered capacity remain distinct. The full wall disposition gate passed; inaccessible originals remain explicitly unavailable.
+
+- [Anthropic · proposed IPO roadshow](https://www.anthropic.com/news/roadshow-launch) — source 2026-11-10. Complete public issuer HTML downloaded HTTP 200 and read. Original source bytes and hash retained privately.
+- [Bitdeer · Q3 2026 unaudited results](https://ir.bitdeer.com/news-releases/news-release-details/bitdeer-reports-unaudited-third-quarter-2026-results-record) — source 2026-11-10. Full issuer release read through ordinary public web reader; direct HTTP403. Reader-output provenance retained privately.
+- [Bitdeer · September operations SEC exhibit](https://www.sec.gov/Archives/edgar/data/1899123/000121390026110703/ea030767901ex99-1.htm) — source 2026-10-19. SEC exhibit read through ordinary public web reader; direct HTTP403. Reader-output provenance retained privately.
+- [TSMC · October 2026 revenue report](https://pr.tsmc.com/english/news/3349) — source 2026-11-10. Read the issuer release paragraph returned by public search, cross-checked against its indexed official PDF. Direct issuer HTML returned 403; full page/PDF access failed. No full-document review claimed.

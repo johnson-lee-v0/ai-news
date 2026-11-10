@@ -1,13 +1,260 @@
 {
-  "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
-  "headline": "Demand, governance and credit need separate evidence",
+  "reviewed_at": "2026-11-10T13:22:33.011187+00:00",
+  "headline": "Sales, advance payments and proposed funding are different signals",
   "bullets": [
-    "NVIDIA announces an independent inquiry; allegations are not findings and operating disruption is not disclosed.",
-    "Telekom reports its initial Munich stage fully booked; the announced 20MW expansion is still prospective.",
-    "Google adds specialized TPU systems; Reuters reports more selective lending. Product claims and contractual safeguards still need delivery and cash evidence."
+    "Bitdeer reports $20.4m AI Cloud sales; group operating cash benefited from customer advances while construction spending remained much larger.",
+    "Anthropic markets an IPO range; primary proceeds could fund compute, but proposed sales are not received cash.",
+    "TSMC reports October foundry revenue growth in New Taiwan dollars; AI-specific sales and downstream returns are not isolated."
   ],
-  "notice": "Reviewed public snapshot, November 9; not live or exhaustive. Company claims, reported financing sentiment and inference are distinct. Prior source dates remain visible. X trends, live CDS and consensus are not connected.",
+  "notice": "Reviewed November 10 public snapshot, not live or exhaustive. Periods, source access, reported results, proposals and inference remain distinct. X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "anthropic-s1-20261026",
+      "title": "Anthropic sets an IPO range; proposed proceeds are not cash received",
+      "published_at": "2026-11-10",
+      "date_kind": "issuer_publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-10T13:22:33.011187+00:00",
+      "source_name": "Anthropic · proposed IPO roadshow",
+      "source_role": "primary",
+      "lens": "funding",
+      "claim_type": "Issuer-announced proposed offering; prior filed results remain dated context; conditional implications",
+      "report_period": "November 10 proposed offering. Earlier November 2 filing reports through September 30, 2026.",
+      "publication_note": "Same-ID material update. Proposed offering terms now replace the earlier absence of an indicative price range; no final pricing, effectiveness or completion is established. Prior dated filing and reported generator findings remain below.",
+      "entities": [
+        "Anthropic",
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Broadcom",
+        "NVIDIA",
+        "AMD",
+        "SpaceX",
+        "Nscale",
+        "Lambda",
+        "OnePWR Solutions"
+      ],
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "observation": "Anthropic launched a roadshow for 825m shares at an indicative $70–78 each: 801.351m primary shares and 23.649m secondary shares. The registration was not effective at announcement.",
+      "implication": "A completed primary sale could strengthen funding for compute commitments. A marketed price range creates no cash yet, and proceeds from existing holders’ shares would not fund Anthropic.",
+      "beneficiaries": "Compute, power and chip suppliers may gain stronger customer funding if primary issuance closes and contractual payments follow.",
+      "risks": "Final price, execution and dilution remain uncertain. Financing alone does not resolve supplier timing, power availability, customer collections or profitable utilization.",
+      "counterevidence": "The prior November 2 filing reports positive operating cash and Q3 adjusted operating income. Fresh equity would supplement that dated operating evidence; the proposed offering alone neither proves a cash shortfall nor resolves future delivery obligations.",
+      "confirms": "A final prospectus, effectiveness and closing proceeds would establish financing beyond the roadshow. Supplier payments, delivery and customer collections would test how funding becomes operating returns.",
+      "refutes": "A withdrawn or reduced offering, supplier delays, or weak margin and collection conversion would weaken the funding-to-delivery implication.",
+      "uncertainty": "The $70–78 range is an offering indication, not a traded share price. No final valuation is inferred from conflicting press estimates or without the full share denominator. No new filing financials were reviewed today; future proceeds and delivery remain unestablished.",
+      "source_date_note": "Roadshow published November 10 with day-level date; review November 10. Historical filing published November 2 and reported generator deal in late September remain explicitly dated context.",
+      "access_note": "November 10: complete issuer roadshow HTML retrieved HTTP 200 and read; original-byte hash retained privately. The web-reader direct open failed, but ordinary direct issuer retrieval succeeded. Prior filing and generator evidence retains its earlier access limitations; no new full SEC amendment review is claimed.",
+      "highlights": [
+        {
+          "title": "Primary issuance and secondary sales have different cash destinations",
+          "observation": "Calculated from issuer terms, the 825m-share base offering implies $57.75–64.35bn gross; the 801,351,354 company-issued shares imply $56.095–62.505bn before fees. A separate 123.75m-share option is proposed.",
+          "implication": "Only primary-sale proceeds would reach Anthropic. Do not treat either range as raised cash or add the secondary sale to its funding.",
+          "claim_type": "Issuer proposal; arithmetic calculated from indicative terms, excluding option and fees",
+          "source_url": "https://www.anthropic.com/news/roadshow-launch",
+          "source_date": "2026-11-10"
+        },
+        {
+          "title": "Reported equipment commitment, not operating power",
+          "observation": "Reuters attributes to FT a late-September purchase of about $3.4bn of commitments for 1.7 GW of generators from OnePWR Solutions, plus installation capabilities. Reuters could not verify it.",
+          "implication": "Treat the account as reported procurement. Actual capacity requires delivered equipment, site readiness and commissioning.",
+          "claim_type": "Unconfirmed FT report relayed by Reuters; inference conditional",
+          "source_url": "https://www.channelnewsasia.com/business/anthropic-secures-34-billion-generator-deal-ai-data-centers-ft-reports-6534256",
+          "source_date": "2026-11-08"
+        },
+        {
+          "title": "No company acquisition or new financing established",
+          "observation": "The report says Anthropic did not acquire OnePWR or transfer its employees. Neither company responded to Reuters.",
+          "implication": "Do not count the figure as financing received, spent cash or an addition to overlapping filed obligations.",
+          "claim_type": "Attributed secondary reporting; overlap and payment status unknown",
+          "source_url": "https://www.channelnewsasia.com/business/anthropic-secures-34-billion-generator-deal-ai-data-centers-ft-reports-6534256",
+          "source_date": "2026-11-08"
+        },
+        {
+          "title": "Earlier filing remains the financial baseline",
+          "observation": "The November 2 amendment reports Q3 revenue of $16.956bn and $895.4bn of contractual obligations, substantially all for compute and infrastructure.",
+          "implication": "Positive operating cash supports expansion, but supplier returns still require financed, delivered capacity and customer collections.",
+          "claim_type": "Prior November 3 review of filed results; not a new November 8 filing review",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+          "source_date": "2026-11-02"
+        },
+        {
+          "title": "Growth and margin move differently",
+          "observation": "Q3 revenue rose from $11.555bn in Q2. Its $567m GAAP operating loss includes a $1.960bn noncash donation charge. Adjusted operating income reached $2.463bn; adjusted margin fell from 19% to 15%.",
+          "implication": "Short-term compute costs and price reductions constrained profit conversion.",
+          "claim_type": "filed disclosure; implication is analysis",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+          "source_date": "2026-11-02"
+        },
+        {
+          "title": "Accounting loss is not cash burn",
+          "observation": "Nine-month operating cash inflow was $6.569bn. The $104.039bn net loss includes large noncash financing and financial-instrument revaluations.",
+          "implication": "Vendor-payment timing and collections affect cash flow.",
+          "claim_type": "filed disclosure; implication is analysis",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+          "source_date": "2026-11-02"
+        },
+        {
+          "title": "Conditions and dates qualify the total",
+          "observation": "About $69.8bn is expected in the 12 months after September 30, 2026. Of the aggregate, $213.8bn has exercisable termination rights or conditions before commencement.",
+          "implication": "Do not add older June note amounts. Estimated $150–175bn of arrangements without fixed dollar commitments is excluded.",
+          "claim_type": "filed disclosure; implication is analysis",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+          "source_date": "2026-11-02"
+        },
+        {
+          "title": "Funding and delivery remain separate",
+          "observation": "September cash plus short-term investments totaled $131.845bn, excluding restricted cash. The IPO remains unpriced; Nscale’s up-to-$44.6bn agreements accrues fees after delivery and acceptance.",
+          "implication": "Unused credit and promised funding are not additional cash received.",
+          "claim_type": "filed disclosure; implication is analysis",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+          "source_date": "2026-11-02"
+        }
+      ],
+      "url": "https://www.anthropic.com/news/roadshow-launch",
+      "source_id": "anthropic-roadshow-20261110",
+      "rank": 1,
+      "relevance": "material",
+      "summary": "Anthropic has moved from an unpriced IPO intention to an indicative offering range, but final pricing, effectiveness and cash proceeds remain unestablished.",
+      "reading_review": {
+        "key_takeaway": "A completed primary sale could strengthen funding for compute commitments. A marketed price range creates no cash yet, and proceeds from existing holders’ shares would not fund Anthropic.",
+        "worth_reading": "skim",
+        "rationale": "New sourced terms or results distinguish financing and recognized sales from delivered capacity, cash and returns.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-10T13:22:33.011187+00:00",
+        "content_hash": "9634c16f733a6d5ba0ffbaa1fce394127571668234c72fe579e615e17ee4c0af"
+      }
+    },
+    {
+      "id": "bitdeer-q3-20261110",
+      "title": "Bitdeer earns AI revenue; advances still fund the buildout",
+      "url": "https://ir.bitdeer.com/news-releases/news-release-details/bitdeer-reports-unaudited-third-quarter-2026-results-record",
+      "published_at": "2026-11-10",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-10T13:22:33.011187+00:00",
+      "source_id": "bitdeer-q3-20261110",
+      "source_name": "Bitdeer · Q3 results and infrastructure update",
+      "source_role": "primary",
+      "lens": "funding",
+      "relevance": "material",
+      "rank": 2,
+      "entities": [
+        "Bitdeer",
+        "NVIDIA",
+        "Volta"
+      ],
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure"
+      ],
+      "observation": "Q3 AI Cloud revenue reached $20.4m, with $3.1m gross profit. Group operating cash was $6.0m, supported by $263.8m growth in deferred revenue chiefly from customer advances.",
+      "summary": "Reported AI sales are growing; prepaid contracts and project financing still bridge the construction bill.",
+      "implication": "Customer advances can finance deployment before service begins, but create delivery obligations. Paid usage and cash after construction determine whether the expansion earns its cost.",
+      "beneficiaries": "GPU and infrastructure suppliers may benefit as funded sites deploy; operator returns depend on delivery and collections.",
+      "risks": "Equipment delays, customer performance and financing completion can interrupt conversion of contracts into service revenue.",
+      "counterevidence": "AI Cloud already generates revenue and gross profit; management says Tydal remains on target. These do not establish group self-funding.",
+      "confirms": "Commissioned Tydal and Malaysian capacity, rising AI service collections and cash after capex would support conversion.",
+      "refutes": "Further delivery slippage, failed financing or weakening cash collections would undermine it.",
+      "uncertainty": "Release reviewed; call transcript and new SEC filing not verified. Backlog depends on energization, GPUs and customer performance. No incremental backlog gain since October 19 is established.",
+      "source_date_note": "Results cover Q3 ended September 30; infrastructure table is as of October 31. November 10 publication and review are separate from these periods.",
+      "access_note": "Issuer release and October 19 SEC exhibit read through the ordinary public web reader. Direct HTTP returned 403; reader output hashes retained privately. No bypass or direct-HTML verification claimed.",
+      "claim_type": "Unaudited reported results, management delivery targets and explicit inference",
+      "highlights": [
+        {
+          "title": "Customer cash arrives before service revenue",
+          "observation": "Group Q3 operating cash was $5.950m. Purchases of PP&E and intangible assets were $477.980m; investing cash outflow was smaller because digital-asset sales generated $221.469m.",
+          "implication": "Operating cash is not recurring AI profit; investments and customer advances need separate tracking.",
+          "claim_type": "Reported quarterly cash flows",
+          "source_url": "https://ir.bitdeer.com/news-releases/news-release-details/bitdeer-reports-unaudited-third-quarter-2026-results-record",
+          "source_date": "2026-11-10"
+        },
+        {
+          "title": "Backlog is dated contracted demand",
+          "observation": "The $2.9bn backlog was already disclosed October 19. November 10 gives Knoxville Q4 2027 because of power/equipment delays; the October 19 A601 schedule already said October 2027.",
+          "implication": "Do not recast existing backlog or the latest timetable as a fresh order or a newly established slip. Ready-for-service is independent of tenant equipment delivery.",
+          "claim_type": "Reported backlog and forward delivery target with historical comparison",
+          "source_url": "https://ir.bitdeer.com/news-releases/news-release-details/bitdeer-reports-unaudited-third-quarter-2026-results-record",
+          "source_date": "2026-11-10"
+        },
+        {
+          "title": "Keep the operating scale in proportion",
+          "observation": "Group revenue was $320.7m and net loss $125.5m. September cash and equivalents were $163.743m; $213.698m includes restricted cash.",
+          "implication": "AI sales remain a minority of this mining-heavy business, and restricted funds are not freely available liquidity.",
+          "claim_type": "Reported unaudited financials",
+          "source_url": "https://ir.bitdeer.com/news-releases/news-release-details/bitdeer-reports-unaudited-third-quarter-2026-results-record",
+          "source_date": "2026-11-10"
+        }
+      ],
+      "report_period": "Quarter ended September 30, 2026; site table as of October 31, 2026",
+      "reading_review": {
+        "key_takeaway": "Customer advances can finance deployment before service begins, but create delivery obligations. Paid usage and cash after construction determine whether the expansion earns its cost.",
+        "worth_reading": "dig_deeper",
+        "rationale": "New sourced terms or results distinguish financing and recognized sales from delivered capacity, cash and returns.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-10T13:22:33.011187+00:00",
+        "content_hash": "a6469bd27529f58bf4ce1686040aa19fecd73881a3e0fa599ef5813a5fd91970"
+      }
+    },
+    {
+      "id": "tsmc-october-revenue-20261110",
+      "title": "TSMC October sales rise; AI contribution is not isolated",
+      "url": "https://pr.tsmc.com/english/news/3349",
+      "published_at": "2026-11-10",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-10T13:22:33.011187+00:00",
+      "source_id": "tsmc-october-20261110",
+      "source_name": "TSMC · October consolidated revenue",
+      "source_role": "primary",
+      "lens": "earnings",
+      "relevance": "material",
+      "rank": 3,
+      "entities": [
+        "TSMC"
+      ],
+      "ai_layers": [
+        "chips"
+      ],
+      "report_period": "October 2026",
+      "observation": "October consolidated revenue was NT$586.89bn, up 14.7% from September and 59.7% year over year.",
+      "summary": "Recognized foundry sales increased; these monthly figures do not isolate AI revenue.",
+      "implication": "Chip production is reaching recognized supplier sales. The release does not show how much came from AI, or whether downstream compute operators earn adequate returns.",
+      "beneficiaries": "TSMC records the sales; downstream customer profitability is not established.",
+      "risks": "Monthly sales can reflect shipment timing and product mix; revenue alone does not measure margins or cash conversion.",
+      "counterevidence": "The accessible issuer paragraph does not isolate AI sales, profitability or utilization.",
+      "confirms": "Subsequent sales, margins, collections and disclosed AI mix would clarify persistence and economics.",
+      "refutes": "Reversing sales or weak profit and cash conversion would weaken the inference.",
+      "uncertainty": "Amounts are New Taiwan dollars, not US dollars. No AI-only growth attribution or live share-price claim.",
+      "claim_type": "Issuer-reported monthly revenue; cross-layer implication is inference",
+      "source_date_note": "Published November 10; reporting period October 2026. Review date is separate.",
+      "access_note": "Read the issuer release paragraph returned by public search, cross-checked against its indexed official PDF. Direct issuer HTML returned 403; full page/PDF access failed. No full-document review claimed.",
+      "highlights": [
+        {
+          "title": "Supplier sales are not customer returns",
+          "observation": "January–October revenue reached NT$4,485.62bn, up 43.3% year over year.",
+          "implication": "The broader foundry sales trend does not establish AI-only demand or customer utilization.",
+          "claim_type": "Issuer-reported cumulative revenue; limitation is analysis",
+          "source_url": "https://pr.tsmc.com/english/news/3349",
+          "source_date": "2026-11-10"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "Chip production is reaching recognized supplier sales. The release does not show how much came from AI, or whether downstream compute operators earn adequate returns.",
+        "worth_reading": "skim",
+        "rationale": "New sourced terms or results distinguish financing and recognized sales from delivered capacity, cash and returns.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-10T13:22:33.011187+00:00",
+        "content_hash": "e95006932ef9adb85bb31fb3fa15ec9e3791d59fbb1a1e423da881d4edac7cb9"
+      }
+    },
     {
       "id": "nvidia-gtc-berlin-20261021",
       "title": "NVIDIA opens independent review; findings remain pending",
@@ -21,7 +268,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 1,
+      "rank": 4,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -118,7 +365,7 @@
       "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 2,
+      "rank": 5,
       "entities": [
         "Deutsche Telekom",
         "T-Systems",
@@ -260,7 +507,7 @@
       ],
       "lens": "capacity",
       "relevance": "material",
-      "rank": 3,
+      "rank": 6,
       "observation": "Google announced TPU 8tx for confidential inference and 8i Max for larger-context workloads. These are systems built from existing eighth-generation silicon, not a ninth chip generation.",
       "summary": "Google pairs 8tx with AMD CPU hosts; 8i Max packages two 8i chips. Earlier Q3 Cloud revenue was $30.709bn, up 103%, with $11.121bn operating profit and a 36.2% margin.",
       "implication": "More hardware choices may reduce customer dependence on one accelerator stack. Adoption, delivered systems and realized cost per task determine whether that choice produces returns.",
@@ -378,7 +625,7 @@
         "Nebius",
         "Crusoe"
       ],
-      "rank": 4,
+      "rank": 7,
       "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
       "claim_type": "Attributed Reuters reporting, partly anonymous sources; historical opinions and company announcements remain separately labeled",
       "source_date_note": "Reuters report published November 9; current card ordering uses this source date. Earlier sources: Chamath’s post approximately 16:13 UTC; Musk’s reply approximately 19:11 UTC, October 25. Counterevidence releases are October 22, not new October 25 financing.",
@@ -432,121 +679,6 @@
         "content_hash": "5a6037444ec992a7829f9e722bfaa963fa50857e63acb43efd9a9d59696fae4c"
       },
       "publication_note": "Same-ID credit update; historical comments and all four earlier highlights preserved, without reclassifying them as current or confirmed transactions."
-    },
-    {
-      "id": "anthropic-s1-20261026",
-      "title": "Anthropic reportedly secures generators; delivery still matters",
-      "published_at": "2026-11-08T12:53:57Z",
-      "date_kind": "syndication_publication_date",
-      "date_precision": "second",
-      "reviewed_at": "2026-11-08T14:05:11.173581+00:00",
-      "source_name": "Reuters via CNA · reporting an FT account",
-      "source_role": "secondary",
-      "lens": "capacity",
-      "claim_type": "Unconfirmed FT transaction report relayed by Reuters; prior filed results remain dated context; implications conditional",
-      "report_period": "Q3 and nine months ended September 30, 2026; commitments as of and subsequent to September 30; June history labeled",
-      "publication_note": "This same-ID update adds attributed reporting without changing previously reviewed filing figures or summing the equipment amount with contractual obligations.",
-      "entities": [
-        "Anthropic",
-        "Amazon",
-        "Google",
-        "Microsoft",
-        "Broadcom",
-        "NVIDIA",
-        "AMD",
-        "SpaceX",
-        "Nscale",
-        "Lambda",
-        "OnePWR Solutions"
-      ],
-      "ai_layers": [
-        "energy",
-        "chips",
-        "infrastructure",
-        "models",
-        "applications"
-      ],
-      "observation": "Reuters relays an FT report of a late-September deal for about $3.4bn of generator commitments totaling 1.7 GW. Reuters could not verify it; neither company responded.",
-      "implication": "If confirmed, direct procurement gives Anthropic more control over power equipment and more execution responsibility. Installation and commissioning still stand between commitments and usable electricity.",
-      "beneficiaries": "Power-equipment and installation suppliers may benefit if reported commitments become accepted deliveries and payments; Anthropic may gain procurement control.",
-      "risks": "Equipment sourcing does not resolve site approvals, fuel availability, installation, commissioning or operating costs. The transaction and payment terms remain unconfirmed here.",
-      "counterevidence": "The prior November 2 filing reports positive operating cash and Q3 adjusted operating income. This provides dated financing context, while a generator order alone neither establishes near-term power nor proves a funding shortfall.",
-      "confirms": "Issuer or supplier confirmation, binding terms, equipment deliveries, permits and commissioning evidence would strengthen the reported procurement and power-delivery case.",
-      "refutes": "Corrections to the report, changed orders, installation delays or inadequate fuel/site readiness would weaken the inference of additional usable capacity.",
-      "uncertainty": "FT reporting is not issuer-confirmed evidence. Reuters could not verify it. No payment status, site locations, delivery schedule, operating MW or incremental financing is established. Overlap with the filed obligations total is unknown; do not add $3.4bn to it. IPO terms and prior cash balances remain dated as described in the November 2 filing review.",
-      "source_date_note": "Reuters syndication published November 8 at 12:53:57 UTC. The reported transaction occurred in late September; exact event day is unknown. Prior S-1/A filed November 2, reporting through September 30. Review is November 8, not the transaction date.",
-      "access_note": "Earlier filing review (November 3): SEC submissions metadata and a complete Reuters syndication were downloaded. The original SEC HTML returned HTTP 403 and was not retried. Selected financial, liquidity and commitment sections of the full public SEC web-reader document were read; hashes cover preserved reader outputs, not original filing bytes. November 8: full Reuters syndication downloaded from CNA and read. Direct Reuters returned 401 and FT 403; neither was retried. FT original was not read. This is one reported account, not independent corroboration.",
-      "highlights": [
-        {
-          "title": "Reported equipment commitment, not operating power",
-          "observation": "Reuters attributes to FT a late-September purchase of about $3.4bn of commitments for 1.7 GW of generators from OnePWR Solutions, plus installation capabilities. Reuters could not verify it.",
-          "implication": "Treat the account as reported procurement. Actual capacity requires delivered equipment, site readiness and commissioning.",
-          "claim_type": "Unconfirmed FT report relayed by Reuters; inference conditional",
-          "source_url": "https://www.channelnewsasia.com/business/anthropic-secures-34-billion-generator-deal-ai-data-centers-ft-reports-6534256",
-          "source_date": "2026-11-08"
-        },
-        {
-          "title": "No company acquisition or new financing established",
-          "observation": "The report says Anthropic did not acquire OnePWR or transfer its employees. Neither company responded to Reuters.",
-          "implication": "Do not count the figure as financing received, spent cash or an addition to overlapping filed obligations.",
-          "claim_type": "Attributed secondary reporting; overlap and payment status unknown",
-          "source_url": "https://www.channelnewsasia.com/business/anthropic-secures-34-billion-generator-deal-ai-data-centers-ft-reports-6534256",
-          "source_date": "2026-11-08"
-        },
-        {
-          "title": "Earlier filing remains the financial baseline",
-          "observation": "The November 2 amendment reports Q3 revenue of $16.956bn and $895.4bn of contractual obligations, substantially all for compute and infrastructure.",
-          "implication": "Positive operating cash supports expansion, but supplier returns still require financed, delivered capacity and customer collections.",
-          "claim_type": "Prior November 3 review of filed results; not a new November 8 filing review",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Growth and margin move differently",
-          "observation": "Q3 revenue rose from $11.555bn in Q2. Its $567m GAAP operating loss includes a $1.960bn noncash donation charge. Adjusted operating income reached $2.463bn; adjusted margin fell from 19% to 15%.",
-          "implication": "Short-term compute costs and price reductions constrained profit conversion.",
-          "claim_type": "filed disclosure; implication is analysis",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Accounting loss is not cash burn",
-          "observation": "Nine-month operating cash inflow was $6.569bn. The $104.039bn net loss includes large noncash financing and financial-instrument revaluations.",
-          "implication": "Vendor-payment timing and collections affect cash flow.",
-          "claim_type": "filed disclosure; implication is analysis",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Conditions and dates qualify the total",
-          "observation": "About $69.8bn is expected in the 12 months after September 30, 2026. Of the aggregate, $213.8bn has exercisable termination rights or conditions before commencement.",
-          "implication": "Do not add older June note amounts. Estimated $150–175bn of arrangements without fixed dollar commitments is excluded.",
-          "claim_type": "filed disclosure; implication is analysis",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Funding and delivery remain separate",
-          "observation": "September cash plus short-term investments totaled $131.845bn, excluding restricted cash. The IPO remains unpriced; Nscale’s up-to-$44.6bn agreements accrues fees after delivery and acceptance.",
-          "implication": "Unused credit and promised funding are not additional cash received.",
-          "claim_type": "filed disclosure; implication is analysis",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
-          "source_date": "2026-11-02"
-        }
-      ],
-      "url": "https://www.channelnewsasia.com/business/anthropic-secures-34-billion-generator-deal-ai-data-centers-ft-reports-6534256",
-      "source_id": "anthropic-generator-reuters-20261108",
-      "rank": 5,
-      "relevance": "material",
-      "summary": "New reporting concerns equipment commitments, not delivered electricity or newly raised financing. The November 2 filing findings remain dated context.",
-      "reading_review": {
-        "key_takeaway": "If confirmed, direct procurement gives Anthropic more control over power equipment and more execution responsibility. Installation and commissioning still stand between commitments and usable electricity.",
-        "worth_reading": "skim",
-        "rationale": "A material reported procurement or planning-stage change; the details distinguish source confirmation, timing and operating implications.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-08T14:05:11.173581+00:00",
-        "content_hash": "e7e20db13c99f740a9e71e79256071950d0b0b7ce3c11b26fa505484bb76931a"
-      }
     },
     {
       "access_note": "Official prepared-remarks DOCX retrieved and read in full. Third-party Q&A reviewed by coordinating research, not company-edited text; local re-download unavailable. Outlook deck reviewed by coordinating research; guidance independently corroborated in the official remarks. Original 10-Q downloaded; selected related-party, lease and cash sections checked. Original SEC pricing term sheet and preliminary prospectus retrieved; ten tranche amounts and dates checked against the original text. November 7 financing follow-up: Relevant original SEC filing body read through the ordinary public web reader. Direct original HTML retrieval returned HTTP 403; preserved hashes cover reader outputs, not original filing bytes. No alternate authenticated access was used.",
@@ -651,7 +783,7 @@
       "title": "Microsoft confirms $25bn bond issuance; returns still depend on delivery",
       "uncertainty": "No fleet-wide utilization, energized MW or AI-only return is disclosed here. No updated total paid Copilot seat count was given. Official written material contains prepared remarks only. Full Q&A and deck were reviewed by coordinating research; this publication check could not independently retrieve those files and verified numerical guidance in the official remarks. OpenAI revenue is not all Azure or GPU rental. Receivable aging and cash/credit composition of funded commitments are not established; no default inference. The filing confirms principal issuance but does not state actual net cash received. No AI-only use-of-proceeds allocation or net debt increase after refinancing is established.",
       "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557d8k.htm",
-      "rank": 6,
+      "rank": 8,
       "reading_review": {
         "key_takeaway": "Bond issuance strengthens evidence that the spending ramp can be financed, while adding debt service. It does not establish operating capacity, paid usage or AI investment returns.",
         "worth_reading": "skim",
@@ -757,7 +889,7 @@
       "title": "Meta completes $15bn dollar debt; €9bn euro issue awaits delivery",
       "uncertainty": "Dollar completion is verified but actual net cash received is not stated in the reviewed closing filing; approximately $14.9bn net is a prospectus estimate. Euro approximately €8.96bn net is also estimated, with delivery still expected. Common-forward cash settlement, ATM sales and supplier final allocations remain unverified. The additional forward maturity schedules were not available in the reader body; do not assign a newly verified option maturity.",
       "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450754/d44678d424b5.htm",
-      "rank": 7,
+      "rank": 9,
       "reading_review": {
         "key_takeaway": "Funding access has advanced, while interest, preferred dividends and future equity settlement remain separate obligations. Financing execution does not establish utilization or returns from the AI buildout.",
         "worth_reading": "skim",
@@ -794,7 +926,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 8,
+      "rank": 10,
       "claim_type": "Reported results; initial-workload statement and guidance are management claims; implications are analysis",
       "observation": "Q3 revenue was $13.377bn, including $8.546bn from Data Center. Continuing operating cash was $1.202bn; company-defined free cash flow was $554m.",
       "summary": "November 3 results provide new supplier operating evidence. Data Center includes CPUs and other products, not only AI GPUs.",
@@ -862,7 +994,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 9,
+      "rank": 11,
       "observation": "Q3 revenue rose 96% to $2.313bn. U.S. commercial revenue reached $984m, exceeding U.S. government revenue of $953m.",
       "summary": "Reported profit and cash strengthen the adoption signal; slower contract-value growth limits extrapolation.",
       "implication": "Palantir is converting enterprise software demand into sales and operating cash. AI-specific revenue and customers’ investment returns remain undisclosed.",
@@ -926,7 +1058,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 10,
+      "rank": 12,
       "observation": "The companies announced a definitive all-stock acquisition agreement: 4.500 Marvell shares per Lumentum share, with approximately $115 billion implied enterprise value.",
       "summary": "Lumentum’s same-day results add an operating checkpoint: $1.2626 billion quarterly revenue and management-disclosed purchase commitments above $5 billion for a second major near-packaged/co-packaged optics win. The proposed merger still targets closing in the first half of 2028.",
       "implication": "Existing sales and purchase commitments give the optics thesis more substance. Their conversion into collected cash and delivered products matters separately from the all-stock acquisition value.",
@@ -1029,7 +1161,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 11,
+      "rank": 13,
       "observation": "AI data-center revenue reached $180m, up 175% year over year and 39% sequentially. Total revenue was $1.722bn.",
       "summary": "The reported AI sales line provides a measurable power-chip demand signal within a broader semiconductor business.",
       "implication": "Higher compute power requirements are converting into component sales; companywide results do not establish AI-specific profitability.",
@@ -1126,7 +1258,7 @@
           "source_date": "2026-11-03"
         }
       ],
-      "rank": 12,
+      "rank": 14,
       "reading_review": {
         "key_takeaway": "The Drax partnership is an early development plan using existing power infrastructure, with tenants, approvals and final investment decisions still ahead.",
         "worth_reading": "skim",
@@ -1159,7 +1291,7 @@
         "energy",
         "infrastructure"
       ],
-      "rank": 13,
+      "rank": 15,
       "relevance": "material",
       "observation": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
       "summary": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
@@ -1225,7 +1357,7 @@
       ],
       "lens": "capacity",
       "relevance": "material",
-      "rank": 14,
+      "rank": 16,
       "observation": "Google announced $160m of funding for shared water infrastructure in Negeri Sembilan and appointed Gamuda to build a reservoir and treatment plant serving its future Port Dickson campus and the public.",
       "summary": "Planned treatment capacity is 65 million liters a day. The facilities are to become state-owned upon completion; this is a development commitment, with payments and commissioning unverified.",
       "implication": "Compute expansion needs utilities before workloads can run. Google is funding enabling infrastructure, creating potential construction demand while leaving delivery timing and actual compute usage unproven.",
@@ -1290,7 +1422,7 @@
         "models",
         "applications"
       ],
-      "rank": 15,
+      "rank": 17,
       "relevance": "watch",
       "observation": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
       "summary": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
@@ -1354,7 +1486,7 @@
       ],
       "lens": "policy",
       "relevance": "material",
-      "rank": 16,
+      "rank": 18,
       "observation": "The court denied X.AI Corp. and MZX Tech LLC’s dismissal motion in the Southaven power-plant case. It rejected their mobile-source exemption argument; the claims proceed.",
       "summary": "The October 30 ruling concerns Mississippi power supplying Colossus 2 in Memphis. It is not a final liability or damages judgment.",
       "implication": "Installed turbines do not remove permitting risk. Later remedies could add cost or constrain power supply, but this order establishes no outage or lost compute revenue.",
@@ -1421,7 +1553,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 17,
+      "rank": 19,
       "observation": "The 10-Q confirms $50bn invested in OpenAI by September 30 and discloses up to approximately $80bn of supplier credit with draws permitted from 2027.",
       "summary": "The prior earnings story gains filed investment status and future financing terms, rather than a new earnings event.",
       "implication": "Funding customers and supplying their compute deepens shared exposure; future equipment credit helps timing but still requires cash returns.",
@@ -1532,7 +1664,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 18,
+      "rank": 20,
       "observation": "Reuters, citing the FT, reports OpenAI cut its fundraising target by $10bn to about $20bn. A first close was still expected below that target.",
       "summary": "The reported raise target is smaller; no closed round, funded cash or cancelled compute contract is established.",
       "implication": "A smaller raise could tighten the timing of compute spending. It does not establish cancelled contracts, lower paid usage or weaker AI demand.",
@@ -1584,7 +1716,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 19,
+      "rank": 21,
       "observation": "An unnamed customer intends to cancel an A$8.8m project. DXN expects payment for completed and committed work; cancellation remains unfinalized.",
       "summary": "An unnamed US-listed neocloud changed strategy; the larger follow-on campus is unlikely.",
       "implication": "Progress-payment protections can cushion cancellations, but backlog still depends on acceptance and collection. One customer’s retreat does not establish industry-wide demand collapse.",
@@ -1648,7 +1780,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 20,
+      "rank": 22,
       "observation": "Intel reports Data Center and AI revenue of $7.3bn, up 78%, while client revenue fell 5%. Q4 group revenue is guided below Q3 despite further expected server growth.",
       "summary": "Real server sales and profit strengthen the CPU case; memory costs, factory disruption and expansion funding limit the group-level benefit.",
       "implication": "AI infrastructure is benefiting CPUs as well as GPUs, but memory costs hurt PC demand while manufacturing and packaging constraints limit server deliveries.",
@@ -1725,7 +1857,7 @@
       "source_role": "primary",
       "lens": "earnings",
       "relevance": "material",
-      "rank": 21,
+      "rank": 23,
       "event_date": "2026-10-29",
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "report_period": "Fiscal Q1 2027, quarter ended October 2, 2026",
@@ -1806,7 +1938,7 @@
       "source_role": "primary",
       "lens": "models",
       "relevance": "material",
-      "rank": 22,
+      "rank": 24,
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "claim_type": "issuer release; vendor benchmark claims; conditional inference",
       "entities": [
@@ -1889,7 +2021,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 23,
+      "rank": 25,
       "observation": "Reuters, citing The Information, reports unsigned NVIDIA credit-support talks for Nscale’s West Virginia project serving Anthropic. Proposed support would cover power and construction; final terms remain unsettled.",
       "summary": "A financing watch item, with earlier filed contract terms as context.",
       "implication": "If agreed, supplier backing could help a project borrow before customer payments begin, while making chip sales and credit exposure more dependent on the same buildout.",
@@ -1955,7 +2087,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 24,
+      "rank": 26,
       "report_period": "Q3 ended September 30, 2026; later capacity and spending are management plans",
       "claim_type": "issuer-reported K-IFRS results before external review; management outlook; conditional analysis",
       "observation": "Revenue was KRW195.3tn and operating profit KRW107.4tn. Device Solutions generated KRW106.5tn operating profit, while Device eXperience lost KRW0.8tn.",
@@ -2034,7 +2166,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 25,
+      "rank": 27,
       "observation": "Power Generation sales rose 30% to $3.421bn. Power & Energy segment profit rose 31% to $2.143bn, with a 24.4% margin versus 21.9% a year earlier.",
       "summary": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
       "implication": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
@@ -2112,7 +2244,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 26,
+      "rank": 28,
       "observation": "Q3 revenue was $2.571bn, up 11%, with $2.442bn recurring revenue. Annualized gross bookings were $533m; these are not recognized revenue or cash.",
       "summary": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
       "implication": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
@@ -2208,7 +2340,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 27,
+      "rank": 29,
       "observation": "Oracle’s October 28 Investor Day targets positive free cash flow in fiscal H2 2028 and at least $30bn in FY2029. It expects at most $20bn in additional capital raises through FY2030, excluding refinancings.",
       "summary": "New financing and cash-flow targets qualify the earlier chip-rollout story; existing hardware milestones are retained below.",
       "implication": "Vendor financing and customer advances can lower upfront cash needs, but shift obligations rather than proving the buildout already funds itself.",
@@ -2303,7 +2435,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 28,
+      "rank": 30,
       "observation": "Q3 sales reached $4.3128bn, up 61.2% (55% organic). GAAP operating profit was $983.8m; adjusted operating profit was $1,086.9m.",
       "summary": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
       "implication": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
@@ -2375,7 +2507,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 29,
+      "rank": 31,
       "observation": "C&I external sales rose 28% to about $552m. Data-center backlog is approximately $4.5bn; Amazon’s expected initial 2027–28 deliveries total $2.4bn.",
       "summary": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
       "implication": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
@@ -2494,7 +2626,7 @@
       ],
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
-      "rank": 30,
+      "rank": 32,
       "relevance": "material",
       "reading_review": {
         "key_takeaway": "SK hynix’s memory profits support the scarcity thesis, while weaker sequential operating cash and higher investment keep cash conversion in focus.",
@@ -2573,7 +2705,7 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 31,
+      "rank": 33,
       "relevance": "material",
       "reading_review": {
         "key_takeaway": "Corning’s optical growth is reaching segment earnings, but changed core-currency methodology and uneven performance elsewhere limit broad comparisons.",
@@ -2605,7 +2737,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 32,
+      "rank": 34,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -2661,7 +2793,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 33,
+      "rank": 35,
       "relevance": "material",
       "observation": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
       "summary": "CoreWeave says most of its planned 22.5MW IT capacity in Copenhagen is online. Exact operational MW, utilization and revenue remain undisclosed.",
@@ -2783,7 +2915,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 34,
+      "rank": 36,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone.",
       "reading_review": {
@@ -2873,7 +3005,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 35,
+      "rank": 37,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement.",
       "reading_review": {
@@ -2899,7 +3031,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 36,
+      "rank": 38,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -2935,7 +3067,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 37,
+      "rank": 39,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -2970,7 +3102,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 38,
+      "rank": 40,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -3007,7 +3139,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 39,
+      "rank": 41,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -3052,7 +3184,7 @@
         "models",
         "applications"
       ],
-      "rank": 40,
+      "rank": 42,
       "relevance": "watch",
       "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
       "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
@@ -5255,6 +5387,66 @@
       ],
       "quality_note": "Reuters reporting partly relies on unnamed sources. It supports attributed selective tightening, not a universal financing freeze or a confirmed new transaction.",
       "access_note": "Full Reuters syndication text read through the public web reader. Direct Reuters returned 401 and Investing.com HTML returned 403; no bypass or direct-HTML verification claimed. Reader text provenance retained privately."
+    },
+    {
+      "id": "anthropic-roadshow-20261110",
+      "name": "Anthropic · proposed IPO roadshow",
+      "url": "https://www.anthropic.com/news/roadshow-launch",
+      "role": "primary",
+      "kind": "company_disclosure",
+      "source_date": "2026-11-10",
+      "reviewed_at": "2026-11-10T13:20:06.634054+00:00",
+      "topics": [
+        "funding"
+      ],
+      "quality_note": "Issuer disclosure. Proposed financing, pricing and availability are distinguished from closed financing, realized revenue and independent operating outcomes.",
+      "access_note": "Complete public issuer HTML downloaded HTTP 200 and read. Original source bytes and hash retained privately."
+    },
+    {
+      "id": "bitdeer-q3-20261110",
+      "name": "Bitdeer · Q3 2026 unaudited results",
+      "url": "https://ir.bitdeer.com/news-releases/news-release-details/bitdeer-reports-unaudited-third-quarter-2026-results-record",
+      "role": "primary",
+      "kind": "earnings_release",
+      "source_date": "2026-11-10",
+      "reviewed_at": "2026-11-10T13:18:41.217298+00:00",
+      "topics": [
+        "funding",
+        "capacity",
+        "earnings"
+      ],
+      "quality_note": "Unaudited results; targets and expected revenue are not delivered capacity or realized cash.",
+      "access_note": "Full issuer release read through ordinary public web reader; direct HTTP403. Reader-output provenance retained privately."
+    },
+    {
+      "id": "bitdeer-operations-20261019",
+      "name": "Bitdeer · September operations SEC exhibit",
+      "url": "https://www.sec.gov/Archives/edgar/data/1899123/000121390026110703/ea030767901ex99-1.htm",
+      "role": "primary",
+      "kind": "sec_exhibit",
+      "source_date": "2026-10-19",
+      "reviewed_at": "2026-11-10T13:18:41.217298+00:00",
+      "topics": [
+        "capacity",
+        "funding"
+      ],
+      "quality_note": "Historical comparison: $2.9bn backlog and October2027 Knoxville A601 timing were already disclosed.",
+      "access_note": "SEC exhibit read through ordinary public web reader; direct HTTP403. Reader-output provenance retained privately."
+    },
+    {
+      "id": "tsmc-october-20261110",
+      "name": "TSMC · October 2026 revenue report",
+      "url": "https://pr.tsmc.com/english/news/3349",
+      "role": "primary",
+      "kind": "monthly_revenue_release",
+      "source_date": "2026-11-10",
+      "reviewed_at": "2026-11-10T13:22:33.011187+00:00",
+      "topics": [
+        "earnings",
+        "demand"
+      ],
+      "quality_note": "Consolidated New Taiwan dollar revenue, not isolated AI sales, profit or collected cash.",
+      "access_note": "Read the issuer release paragraph returned by public search, cross-checked against its indexed official PDF. Direct issuer HTML returned 403; full page/PDF access failed. No full-document review claimed."
     }
   ],
   "ledger": [

@@ -55,6 +55,29 @@ class PublicBuildTests(unittest.TestCase):
         raw=deepcopy(self.raw);raw['articles'][1]['id']=raw['articles'][0]['id']
         with self.assertRaises(ValueError): validate_public(raw)
 
+    def test_snapshot_capacity_keeps_finite_bounds_and_evidence_checks(self):
+        raw=deepcopy(self.raw)
+        for index in range(len(raw['articles']),42):
+            item=deepcopy(raw['articles'][0]);item['id']='synthetic-capacity-article-'+str(index)
+            item['rank']=index+1;raw['articles'].append(item)
+        for index in range(len(raw['sources']),148):
+            source=deepcopy(raw['sources'][0]);source['id']='synthetic-capacity-source-'+str(index)
+            raw['sources'].append(source)
+        validate_public(raw)
+        self.assertEqual((len(raw['articles']),len(raw['sources'])),(42,148))
+        for section in ('articles','sources'):
+            oversized=deepcopy(raw)
+            extra=deepcopy(oversized[section][0]);extra['id']='synthetic-over-limit'
+            oversized[section].append(extra)
+            with self.assertRaisesRegex(ValueError,'small and populated'):
+                validate_public(oversized)
+        invalid=deepcopy(raw);invalid['articles'][0]['source_id']='synthetic-unreviewed-source'
+        with self.assertRaisesRegex(ValueError,'unknown public source'):
+            validate_public(invalid)
+        stale=deepcopy(raw);stale['articles'][0]['observation']='Changed synthetic observation'
+        with self.assertRaisesRegex(ValueError,'does not match the current research content'):
+            validate_public(stale)
+
     def test_existing_unexpected_file_is_not_deleted_or_published(self):
         with tempfile.TemporaryDirectory() as temp:
             target=Path(temp)/'site';target.mkdir();private=target/'private.db';private.write_text('synthetic sentinel')
