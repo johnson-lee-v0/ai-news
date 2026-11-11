@@ -60,11 +60,11 @@ class PublicBuildTests(unittest.TestCase):
         for index in range(len(raw['articles']),42):
             item=deepcopy(raw['articles'][0]);item['id']='synthetic-capacity-article-'+str(index)
             item['rank']=index+1;raw['articles'].append(item)
-        for index in range(len(raw['sources']),148):
+        for index in range(len(raw['sources']),151):
             source=deepcopy(raw['sources'][0]);source['id']='synthetic-capacity-source-'+str(index)
             raw['sources'].append(source)
         validate_public(raw)
-        self.assertEqual((len(raw['articles']),len(raw['sources'])),(42,148))
+        self.assertEqual((len(raw['articles']),len(raw['sources'])),(42,151))
         for section in ('articles','sources'):
             oversized=deepcopy(raw)
             extra=deepcopy(oversized[section][0]);extra['id']='synthetic-over-limit'

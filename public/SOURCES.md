@@ -333,3 +333,12 @@ Two new research stories and a same-ID Anthropic update preserve all earlier art
 - [Bitdeer · Q3 2026 unaudited results](https://ir.bitdeer.com/news-releases/news-release-details/bitdeer-reports-unaudited-third-quarter-2026-results-record) — source 2026-11-10. Full issuer release read through ordinary public web reader; direct HTTP403. Reader-output provenance retained privately.
 - [Bitdeer · September operations SEC exhibit](https://www.sec.gov/Archives/edgar/data/1899123/000121390026110703/ea030767901ex99-1.htm) — source 2026-10-19. SEC exhibit read through ordinary public web reader; direct HTTP403. Reader-output provenance retained privately.
 - [TSMC · October 2026 revenue report](https://pr.tsmc.com/english/news/3349) — source 2026-11-10. Read the issuer release paragraph returned by public search, cross-checked against its indexed official PDF. Direct issuer HTML returned 403; full page/PDF access failed. No full-document review claimed.
+
+
+## November 11, 2026 reviewed update
+
+Three same-ID research revisions and two existing financing-edge updates preserve all earlier stories and dated highlights. Quarterly cash flows, conditional commitments, investigations and delivered capacity remain distinct. The full wall disposition gate passed; inaccessible originals remain explicitly unavailable.
+
+- [CoreWeave · Q3 earnings release filed with SEC](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm) — source 2026-11-10. SEC earnings exhibit reviewed through the public text reader, including financial tables. Direct SEC download returned 403; no original HTML archive, full earnings-call or 10-Q review is claimed.
+- [Anthropic · November 10 SEC S-1/A-2, pp.178–181](https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm) — source 2026-11-10. Selected commitment and contract sections read via public SEC web reader and compared with November 2 sections. Direct original HTML returned 403; retained hashes identify reader output, not original HTML. Full financial statements were not re-reviewed.
+- [NVIDIA · Independent directors retain investigation counsel](https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board) — source 2026-11-10. Full statement read through public text reader. Direct original HTML download failed DNS resolution; retained reader output is not original HTML bytes.
