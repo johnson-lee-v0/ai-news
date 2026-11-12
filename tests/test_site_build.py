@@ -57,14 +57,14 @@ class PublicBuildTests(unittest.TestCase):
 
     def test_snapshot_capacity_keeps_finite_bounds_and_evidence_checks(self):
         raw=deepcopy(self.raw)
-        for index in range(len(raw['articles']),42):
+        for index in range(len(raw['articles']),43):
             item=deepcopy(raw['articles'][0]);item['id']='synthetic-capacity-article-'+str(index)
             item['rank']=index+1;raw['articles'].append(item)
-        for index in range(len(raw['sources']),151):
+        for index in range(len(raw['sources']),154):
             source=deepcopy(raw['sources'][0]);source['id']='synthetic-capacity-source-'+str(index)
             raw['sources'].append(source)
         validate_public(raw)
-        self.assertEqual((len(raw['articles']),len(raw['sources'])),(42,151))
+        self.assertEqual((len(raw['articles']),len(raw['sources'])),(43,154))
         for section in ('articles','sources'):
             oversized=deepcopy(raw)
             extra=deepcopy(oversized[section][0]);extra['id']='synthetic-over-limit'
