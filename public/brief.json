@@ -1,14 +1,367 @@
 {
-  "reviewed_at": "2026-11-13T14:00:27.537204+00:00",
-  "headline": "AI suppliers earn cash; cloud commitments still face delivery and funding tests",
+  "reviewed_at": "2026-11-16T15:04:43.937010+00:00",
+  "headline": "Contracts attract capital; delivered compute and cash still need proof",
   "bullets": [
-    "NVIDIA confirms its leadership transition; business consequences require delivery and financing evidence.",
-    "CoreWeave and Nscale filings show why customer contracts and advances are not unconditional funding.",
-    "Cisco reports cash-generating networking growth; Cerebras separates revenue growth from investment and delivery obligations.",
-    "Meta completes its previously priced euro offering; borrowing is not operating revenue or AI returns."
+    "AWS’s signed property transaction transfers capital and property risk; closing and productive compute usage remain separate.",
+    "Corvex links take-or-pay terms to a deployment financing package; funds received, acceptance and collections still need confirmation.",
+    "Fermi’s amended triggers leave separate land, customer-contract and project-financing deadlines; no new default is inferred.",
+    "The Fed’s financing-risk assessment and OpenAI’s limited checkout rollout retain their November 13 source dates."
   ],
-  "notice": "Reviewed November 13 public snapshot, not live or exhaustive. Source dates, reported results, management claims and inference remain distinct. X trends, live CDS and consensus remain disconnected.",
+  "notice": "Reviewed November 16 snapshot, not live or exhaustive. Source reviews from November 14–16 retain their original dates. Contracts, cash, delivered capacity and usage remain distinct; X trends, live CDS and consensus are not connected.",
   "articles": [
+    {
+      "id": "bdit-aws-jv-20261116",
+      "title": "AWS plans a property-capital transfer while keeping the lease obligation",
+      "url": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526461954/d115778dex991.htm",
+      "published_at": "2026-11-16",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-16T15:01:17.001575+00:00",
+      "source_id": "bdit-aws-jv-20261116",
+      "source_name": "Blackstone Digital Infrastructure Trust · AWS portfolio agreement",
+      "source_role": "primary",
+      "lens": "funding",
+      "relevance": "material",
+      "rank": 1,
+      "entities": [
+        "Blackstone Digital Infrastructure Trust",
+        "Amazon",
+        "AWS"
+      ],
+      "ai_layers": [
+        "infrastructure"
+      ],
+      "observation": "BXDC signed to acquire 75% of two AWS joint ventures in a transaction valued around $5bn. The ventures cover 13 newly built powered shells.",
+      "summary": "AWS retains 25% and leases the full portfolio; closing is expected in Q4, subject to conditions.",
+      "implication": "Property investors gain contracted rent exposure; AWS can release property capital but retains payment obligations. Neither proves end-customer compute usage.",
+      "beneficiaries": "Inference: AWS gains capital flexibility if closing occurs; BXDC gains a long-term tenant.",
+      "risks": "Investors retain property, residual-value and tenant-credit exposure; AWS still must earn returns above lease and computing costs.",
+      "counterevidence": "An identified hyperscaler tenant and newly built assets offer stronger contractual support than an unleased development plan.",
+      "confirms": "Closing, rent collection and demonstrated productive occupancy would strengthen the financing-to-returns case.",
+      "refutes": "Closing failure, rent stress or weak use of the facilities would weaken it.",
+      "uncertainty": "The announcement establishes no completed sale, cash proceeds or utilization. The reported transaction value is not a verified cash payment.",
+      "source_date_note": "November 16 announcement and review. Q4 2026 closing remains prospective; no market quote used.",
+      "access_note": "Full original SEC exhibit read, including closing conditions; underlying purchase and lease contracts not reviewed.",
+      "claim_type": "Issuer-disclosed signed transaction and planned leases; implications are inference",
+      "highlights": [
+        {
+          "title": "Lease duration is not usage",
+          "observation": "The triple-net lease has a 12-year initial term and 32-year fully extended term. The longer term includes extensions.",
+          "implication": "Contracted property income and future renewals are distinct from measured compute demand.",
+          "claim_type": "issuer lease terms",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526461954/d115778dex991.htm",
+          "source_date": "2026-11-16"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "Property investors gain contracted rent exposure; AWS can release property capital but retains payment obligations. Neither proves end-customer compute usage.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Read the contract stages, who bears the obligations and the evidence needed before assuming delivered capacity or durable returns.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-16T15:04:43.937010+00:00",
+        "content_hash": "6250097eb0f650b63a05bf9b21ef03776807ad8933fce653df550099769e07f7"
+      }
+    },
+    {
+      "id": "corvex-take-or-pay-20261116",
+      "title": "Corvex links a customer contract to deployment financing; delivery remains ahead",
+      "url": "https://www.sec.gov/Archives/edgar/data/1734750/000121390026120168/ea031185401ex99-1.htm",
+      "published_at": "2026-11-16",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-16T15:01:17.001575+00:00",
+      "source_id": "corvex-take-or-pay-20261116",
+      "source_name": "Corvex · customer agreement and proposed deployment financing",
+      "source_role": "primary",
+      "lens": "funding",
+      "relevance": "material",
+      "rank": 2,
+      "entities": [
+        "Corvex",
+        "USD.AI",
+        "NVIDIA"
+      ],
+      "ai_layers": [
+        "chips",
+        "infrastructure",
+        "models"
+      ],
+      "observation": "Corvex announced a $103m, three-year take-or-pay contract with an unnamed inference platform and a planned $78m deployment.",
+      "summary": "The announced package includes $26m customer prepayment and $38m committed debt; service is expected by Q1 2027’s end.",
+      "implication": "Contract protections can attract financing before usage is proven. Corvex still bears delivery risk, while the customer owes for reserved capacity under the stated terms.",
+      "beneficiaries": "Inference: Corvex and equipment suppliers benefit if funding closes and accepted capacity starts billing.",
+      "risks": "Customer credit, contract rights, equipment delivery and acceptance can interrupt collections; project lenders rely on collateral and cash generation.",
+      "counterevidence": "Take-or-pay terms and a financing commitment provide more support than an uncontracted capacity proposal.",
+      "confirms": "Verified funds received, accepted deployment and sustained collections would support the financing model.",
+      "refutes": "Failed financing, delayed acceptance or contract reductions would weaken it.",
+      "uncertainty": "The release does not establish prepayment receipt or debt funding. Take-or-pay is subject to performance and contract rights, not guaranteed realized revenue.",
+      "source_date_note": "November 16 announcement and review; Q1 2027 service timing is management’s expectation.",
+      "access_note": "Full original SEC exhibit and financing/acceptance cautions read. Underlying customer and loan contracts not reviewed.",
+      "claim_type": "Issuer contract disclosure, financing commitment and forward deployment target; implications are inference",
+      "highlights": [
+        {
+          "title": "The financing package is not collected revenue",
+          "observation": "USD.AI’s three-year asset-backed debt commitment is nonrecourse to Corvex Inc.; Corvex intends to provide the remaining $14m deployment cost.",
+          "implication": "Nonrecourse limits parent exposure under the stated structure; it does not remove execution risk or establish completed funding.",
+          "claim_type": "issuer financing terms and plan",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1734750/000121390026120168/ea031185401ex99-1.htm",
+          "source_date": "2026-11-16"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "Contract protections can attract financing before usage is proven. Corvex still bears delivery risk, while the customer owes for reserved capacity under the stated terms.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Read the contract stages, who bears the obligations and the evidence needed before assuming delivered capacity or durable returns.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-16T15:04:43.937010+00:00",
+        "content_hash": "b6bb207b2e04a2165078d932669b6e8f32de11e70deabcc333893e34764ecc1a"
+      }
+    },
+    {
+      "id": "fermi-tenant-funding-20261112",
+      "title": "Fermi’s customer LOI does not clear its land and financing deadlines",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000058/frmi-20260930.htm",
+      "published_at": "2026-11-12",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "source_id": "fermi-10q-20261112",
+      "source_name": "Fermi · November 12 Form 10-Q",
+      "source_role": "primary",
+      "reviewed_at": "2026-11-15T13:17:33.826111+00:00",
+      "lens": "funding",
+      "relevance": "material",
+      "entities": [
+        "Fermi",
+        "TensorWave",
+        "AMD"
+      ],
+      "ai_layers": [
+        "energy",
+        "infrastructure"
+      ],
+      "observation": "The filing identifies a nonbinding 600 MW customer LOI dated November 10 and confirms TensorWave’s lease ended that day.",
+      "summary": "An amendment removed one trigger; distinct land, customer-contract and project-financing conditions remain.",
+      "implication": "A proposed customer can support fundraising without satisfying the contracts that keep land and equipment available. Follow each condition through binding documents and cash.",
+      "beneficiaries": "Inference: Fermi and suppliers benefit if definitive agreements and financing support construction.",
+      "risks": "Losing land rights, accelerated repayment or collateral remedies could interrupt delivery before customer revenue begins.",
+      "counterevidence": "No payment default occurred and no turbine-facility default continued as of November 12. The October amendment eased one trigger; new customer agreements show continued interest.",
+      "confirms": "Unsatisfied conditions, demanded prepayment or lost site rights would confirm the risk to delivery.",
+      "refutes": "Executed tenant agreements, granted notice to proceed and completed phase-one financing would reduce that risk.",
+      "uncertainty": "Terms are as disclosed November 12, not a prediction of default. New customer cash receipt remains unverified. Standalone executed amendment exhibits and a full earnings call were not reviewed.",
+      "report_period": "Quarter ended September 30, 2026; subsequent events disclosed through November 12.",
+      "claim_type": "Issuer-disclosed contractual conditions and amendments; implications are analysis",
+      "access_note": "Direct original SEC HTML and current public submissions metadata retrieved successfully. Targeted review of Notes 5, 6 and 9; related MD&A, risk factors, defaults and exhibit index. No full-filing, full-call or standalone amendment-exhibit review claimed.",
+      "source_date_note": "Filed November 12; October 9 and November 6 amendments, November 10 customer events; reviewed November 15. This is additional review of prior events.",
+      "highlights": [
+        {
+          "title": "Three stages, not one cash total",
+          "claim_type": "issuer agreement status",
+          "observation": "The $200m prepayment and $15m development agreements are signed; a $90m materials agreement and definitive long-term lease remain unfinished.",
+          "implication": "Do not sum these as received cash or recognized revenue.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026118351/ea031197701ex99-1.htm",
+          "source_date": "2026-11-12"
+        },
+        {
+          "title": "Power remains a delivery milestone",
+          "claim_type": "issuer development plan",
+          "observation": "The initial 600 MW is planned for development beginning in 2027; land-lease conditions precede vertical construction.",
+          "implication": "Planned capacity does not demonstrate energized power or paying compute usage.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026118351/ea031197701ex99-1.htm",
+          "source_date": "2026-11-12"
+        },
+        {
+          "title": "One trigger removed; project financing still required",
+          "claim_type": "amended contractual condition",
+          "observation": "The October 9 amendment removed the November 10 lease/offtake trigger. Fully committed phase-one financing sufficient with equity for at least 400 MW remains due February 10, 2027.",
+          "implication": "Removing a near-term trigger does not finance the project.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000058/frmi-20260930.htm",
+          "source_date": "2026-11-12"
+        },
+        {
+          "title": "Two separate December 31 conditions",
+          "claim_type": "contractual conditions",
+          "observation": "Keystone requires an approved customer agreement or prepayment. TTU requires notice to proceed, including a tenant lease of at least 200 MW; that lease condition remained unsatisfied.",
+          "implication": "Customer approval and land permission are distinct. An LOI does not establish either.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000058/frmi-20260930.htm",
+          "source_date": "2026-11-12"
+        },
+        {
+          "title": "Hillcore deadline was extended",
+          "claim_type": "amended framework agreement",
+          "observation": "A November 6 amendment moved Hillcore definitive-documentation timing to December 18, 2026, subject to further mutual written extension.",
+          "implication": "The framework remains conditional; do not treat the older deadline as a current breach or planned power as delivered.",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000058/frmi-20260930.htm",
+          "source_date": "2026-11-12"
+        }
+      ],
+      "publication_note": "November 12 release and filed subsequent-event terms reviewed November 14–15; retained dates distinguish discovery from event timing.",
+      "rank": 3,
+      "reading_review": {
+        "key_takeaway": "A proposed customer can support fundraising without satisfying the contracts that keep land and equipment available. Follow each condition through binding documents and cash.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Read the contract stages, who bears the obligations and the evidence needed before assuming delivered capacity or durable returns.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-16T15:04:43.937010+00:00",
+        "content_hash": "a4f6293b5c5f9586ca52a0109039a9a7c6c808df77ed9638680a2b55e93a2599"
+      }
+    },
+    {
+      "id": "ai-credit-selectivity-20261025",
+      "title": "The Fed flags AI financing exposure beyond reported debt",
+      "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+      "published_at": "2026-11-13",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "source_id": "fed-financial-stability-20261113",
+      "source_name": "Federal Reserve · November Financial Stability Report",
+      "source_role": "primary",
+      "lens": "funding",
+      "relevance": "material",
+      "observation": "The Fed highlights growing lease, guarantee and project-finance links between large technology firms and weaker-credit developers.",
+      "summary": "A new official assessment adds contingent obligations to the earlier evidence of selective credit tightening.",
+      "implication": "Follow who must pay when a project disappoints. A guarantor may absorb losses that are not obvious in its reported debt.",
+      "beneficiaries": "Inference: operators with reliable collections and clearly funded obligations remain better placed to finance delivery.",
+      "risks": "Correlated customer, developer and supplier obligations can transmit a project failure across the network.",
+      "counterevidence": "The Fed also says stronger technology firms may absorb losses and cushion the wider financial system. Its overall banking assessment remains sound and resilient; this is not a forecast of an AI-sector default wave.",
+      "confirms": "Activated guarantees, troubled leases or larger disclosed contingent obligations would support the transmission-risk concern.",
+      "refutes": "Strong cash generation and delivery without recourse claims would weaken the adverse scenario.",
+      "uncertainty": "The report assesses vulnerabilities, not default probabilities or a current financing freeze. Undiscounted commitments are not comparable to discounted debt and must not be summed as one cash bill.",
+      "entities": [
+        "OpenAI",
+        "Anthropic",
+        "SpaceX",
+        "Nebius",
+        "Crusoe"
+      ],
+      "rank": 4,
+      "reviewed_at": "2026-11-14T13:26:26.885646+00:00",
+      "claim_type": "Federal Reserve financial-stability assessment; implications are analysis",
+      "source_date_note": "Published November 13; report information generally through October 28. Box 2.2 obligations chart ends at Q2 2026. Review November 14; historical October/November sources remain dated below.",
+      "access_note": "Targeted primary PDF reader review of overview and Box 2.2, printed pages 23–25, including footnotes. Direct PDF download returned 403; the original report remained accessible through the ordinary public reader. No full-report or visual chart review claimed.",
+      "ai_layers": [
+        "energy",
+        "chips",
+        "infrastructure",
+        "models"
+      ],
+      "highlights": [
+        {
+          "title": "Investor warning: GPUs can arrive before power and customers",
+          "observation": "Chamath links capitalization, customer-contract timing and power delays to possible idle GPUs, weak returns and consolidation. Forecasts and conditional rumors remain attributed to him.",
+          "claim_type": "investor opinion",
+          "implication": "Check energized MW and contracted paying demand against GPU deliveries and financing costs.",
+          "source_url": "https://x.com/chamath/status/2114389987563381004",
+          "source_date": "2026-10-25"
+        },
+        {
+          "title": "Executive claim: SpaceX’s broader revenue supports credit",
+          "observation": "Musk says SpaceX closed $40 billion of GPU debt using its investment-grade, Starlink and launch credit profile. A closing document was not independently verified.",
+          "claim_type": "unconfirmed executive financing claim",
+          "implication": "Do not count the claimed facility as confirmed incremental debt or add it to previously reported obligations.",
+          "source_url": "https://x.com/elonmusk/status/2114434646914068862",
+          "source_date": "2026-10-25"
+        },
+        {
+          "title": "Counterevidence: Nebius secured a short-term facility",
+          "observation": "Nebius announced a $3.5 billion Citi facility with 364-day maturity. The margin starts at SOFR plus 2.75% and can rise to 3.50%; the company cites over $40 billion of investment-grade customer contracts.",
+          "claim_type": "company financing announcement",
+          "implication": "Credit is available to at least some operators, while refinancing and contract-to-cash risks remain.",
+          "source_url": "https://nebius.com/newsroom/nebius-secures-3-5-billion-financing-facility-with-citi",
+          "source_date": "2026-10-22"
+        },
+        {
+          "title": "Counterevidence: Crusoe financed power equipment",
+          "observation": "Crusoe and Neuberger announced a $700 million facility secured by ordered generation equipment for AI factories.",
+          "claim_type": "company financing announcement",
+          "implication": "Collateral and power assets can unlock credit without proving energized capacity, utilization or profitability.",
+          "source_url": "https://www.crusoe.ai/resources/newsroom/neuberger-and-crusoe-announce-700-million-facility",
+          "source_date": "2026-10-22"
+        },
+        {
+          "title": "November 9: lenders scrutinize contract protections",
+          "claim_type": "Attributed Reuters reporting, partly anonymous sources; historical opinions and company announcements remain separately labeled",
+          "observation": "Reuters reports some lenders are reluctant to add AI exposure and are scrutinizing cash flows, delivery deadlines and customer termination rights. Some accounts rely on unnamed sources.",
+          "implication": "A prominent customer or backstop alone may not secure financing. Projects must show cash generation and contract protections that survive delays.",
+          "source_url": "https://www.investing.com/news/stock-market-news/banks-investors-grow-wary-of-ai-debt-spooked-by-marketselloff-5011246",
+          "source_date": "2026-11-09"
+        },
+        {
+          "title": "November 13: support can shift losses to stronger firms",
+          "claim_type": "Federal Reserve assessment",
+          "observation": "The report describes leases, residual-value guarantees and equity links that help weaker developers obtain financing while exposing stronger counterparties to losses.",
+          "implication": "Track enforceable obligations and cash coverage; circular relationships alone do not establish fictitious revenue.",
+          "source_url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+          "source_date": "2026-11-13"
+        }
+      ],
+      "publication_note": "Same-ID credit update. All four original dated highlights retained; November 9 Reuters evidence added as a dated highlight before the new Fed assessment.",
+      "reading_review": {
+        "key_takeaway": "Follow who must pay when a project disappoints. A guarantor may absorb losses that are not obvious in its reported debt.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Read the contract stages, who bears the obligations and the evidence needed before assuming delivered capacity or durable returns.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-16T15:04:43.937010+00:00",
+        "content_hash": "80db14b0f4b49d5297f606d86d671a5dfe71e7d586b8da9b5f775d8a0e2914ec"
+      }
+    },
+    {
+      "id": "openai-wallet-rollout-20261113",
+      "title": "OpenAI adds agent checkout; transaction economics remain unmeasured",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet/",
+      "published_at": "2026-11-13",
+      "event_date": "2026-11-13",
+      "report_period": null,
+      "quote_as_of": null,
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-14T13:24:01.789134+00:00",
+      "source_name": "OpenAI · ChatGPT Wallet announcement",
+      "source_role": "primary",
+      "lens": "applications",
+      "entities": [
+        "OpenAI",
+        "Visa",
+        "Mastercard",
+        "American Express"
+      ],
+      "ai_layers": [
+        "applications",
+        "models"
+      ],
+      "claim_type": "issuer-reported product rollout; implications are inference",
+      "observation": "OpenAI says Wallet began rolling out November 13 through dots for US Pro subscribers aged 18+ with eligible US cards. Each purchase requires approval; agents receive payment tokens rather than actual card details.",
+      "implication": "Agent checkout creates a potential route from recommendations to purchases. Payment networks and merchants may benefit if completed transactions increase; no incremental revenue is established.",
+      "counterevidence": "The issuer says website access and payment-risk systems can still block transactions. Fully delegated purchasing remains a future expectation.",
+      "uncertainty": "No Wallet transaction volume, conversion rate, take rate, revenue or ROI disclosed. Security claims are issuer statements, not an independent audit.",
+      "beneficiaries": "Inference: participating payment networks, compatible merchants and payment-risk providers if adoption converts into incremental transactions.",
+      "risks": "Failed checkouts, fraud controls, cancellations and limited availability could constrain adoption.",
+      "confirms": "Disclosed completed purchases, repeat use and incremental merchant economics would support commercial significance.",
+      "refutes": "Persistently weak completion, high declines or negligible repeat use would weaken it.",
+      "source_date_note": "Announcement and initial rollout November 13; reviewed November 14. No financial reporting period or market quote used.",
+      "access_note": "Issuer article body and availability section read through supported public web reader. Direct urllib HTML returned HTTP 403 once; no retry/bypass. No payment, account or purchase action.",
+      "source_id": "openai-wallet-release-20261113",
+      "rank": 5,
+      "relevance": "material",
+      "summary": "A limited rollout connects agent recommendations with approved purchases; commercial performance remains undisclosed.",
+      "highlights": [
+        {
+          "title": "Checkout access is not demonstrated adoption",
+          "claim_type": "issuer product rollout and availability",
+          "observation": "OpenAI says Wallet began rolling out November 13 through dots for US Pro subscribers aged 18+ with eligible US cards. Each purchase requires approval; agents receive payment tokens rather than actual card details.",
+          "implication": "A new purchase route may help merchants and payment providers only if users complete and repeat transactions.",
+          "source_url": "https://openai.com/index/introducing-chatgpt-wallet/",
+          "source_date": "2026-11-13"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "Agent checkout creates a potential route from recommendations to purchases. Payment networks and merchants may benefit if completed transactions increase; no incremental revenue is established.",
+        "worth_reading": "skim",
+        "rationale": "Skim the rollout boundaries; transaction adoption and economics are not yet disclosed.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-16T15:04:43.937010+00:00",
+        "content_hash": "07cb83a78ece1fb0261c63c2428a3657cab698cae434a5e8e52c0d832c049c21"
+      }
+    },
     {
       "id": "nvidia-gtc-berlin-20261021",
       "title": "NVIDIA changes CEO; operating continuity remains a test",
@@ -22,7 +375,7 @@
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 1,
+      "rank": 6,
       "entities": [
         "NVIDIA",
         "KYEC"
@@ -146,7 +499,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 2,
+      "rank": 7,
       "relevance": "material",
       "observation": "The November12 filing says $1.9bn of beginning deferred revenue moved to customer liabilities during Q3 as contracts became cancellable.",
       "summary": "The retained November 10 call explains funding priorities. Retained Q3 context: for the three months ended September30, revenue was $3.661bn, operating cash $1.975bn and cash PP&E $9.441bn including capitalized software. On November10, management said it would avoid unsecured debt at current yields and rely on secured lending, customer advances and operating cash. At September30, reported $9.837bn liquidity comprised $4.122bn cash, $62m marketable securities and $5.653bn available facilities; the latter is not cash.",
@@ -248,7 +601,7 @@
       "source_name": "Cerebras · Q3 filing and issuer earnings release",
       "source_role": "primary",
       "reviewed_at": "2026-11-13T13:57:17.686075+00:00",
-      "rank": 3,
+      "rank": 8,
       "lens": "capacity",
       "relevance": "material",
       "entities": [
@@ -363,7 +716,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 4,
+      "rank": 9,
       "relevance": "material",
       "observation": "Quarterly revenue rose 24% to $18.517bn; networking sales reached $11.132bn, up 43%.",
       "summary": "Reported supplier sales and cash provide operating evidence; downstream AI returns remain unmeasured.",
@@ -446,7 +799,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 5,
+      "rank": 10,
       "observation": "Nscale says financing for its Anthropic agreements lacks binding commitments. A $3.22bn Microsoft statement of work was terminated after a power allocation was withdrawn.",
       "summary": "Newly reviewed November 12 filing; exact termination date is unspecified.",
       "implication": "A signed customer contract still needs financing and reliable power before it becomes revenue.",
@@ -607,7 +960,7 @@
       "title": "Meta completes its €9bn euro bond offering",
       "uncertainty": "The closing filing does not state actual net cash received. Approximately €8.96bn net remains a prior prospectus estimate; common-forward settlement, ATM sales and final supplier allocations remain unverified.",
       "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526458525/d177728d8k.htm",
-      "rank": 6,
+      "rank": 11,
       "reading_review": {
         "key_takeaway": "Funding execution has advanced, adding fixed interest obligations; it does not demonstrate productive AI capacity or investment returns.",
         "worth_reading": "skim",
@@ -640,7 +993,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 7,
+      "rank": 12,
       "relevance": "material",
       "observation": "For the quarter ended September 30, revenue rose 571% to $980.8m. Approximately $325m came from nonrecurring initial work deploying Nebius technology on partners’ funded capacity.",
       "summary": "For the quarter ended September 30, revenue rose 571% to $980.8m. Approximately $325m came from nonrecurring initial work deploying Nebius technology on partners’ funded capacity.",
@@ -825,7 +1178,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
       "source_id": "anthropic-s1a2-20261110",
-      "rank": 8,
+      "rank": 13,
       "relevance": "material",
       "summary": "The amended Azure minimum rises while a Lambda contract becomes terminable; neither development establishes cash received or delivered compute.",
       "reading_review": {
@@ -850,7 +1203,7 @@
       "source_role": "primary",
       "lens": "funding",
       "relevance": "material",
-      "rank": 9,
+      "rank": 14,
       "entities": [
         "Bitdeer",
         "NVIDIA",
@@ -922,7 +1275,7 @@
       "source_role": "primary",
       "lens": "earnings",
       "relevance": "material",
-      "rank": 10,
+      "rank": 15,
       "entities": [
         "TSMC"
       ],
@@ -974,7 +1327,7 @@
       "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
       "lens": "capacity",
       "relevance": "material",
-      "rank": 11,
+      "rank": 16,
       "entities": [
         "Deutsche Telekom",
         "T-Systems",
@@ -1116,7 +1469,7 @@
       ],
       "lens": "capacity",
       "relevance": "material",
-      "rank": 12,
+      "rank": 17,
       "observation": "Google announced TPU 8tx for confidential inference and 8i Max for larger-context workloads. These are systems built from existing eighth-generation silicon, not a ninth chip generation.",
       "summary": "Google pairs 8tx with AMD CPU hosts; 8i Max packages two 8i chips. Earlier Q3 Cloud revenue was $30.709bn, up 103%, with $11.121bn operating profit and a 36.2% margin.",
       "implication": "More hardware choices may reduce customer dependence on one accelerator stack. Adoption, delivered systems and realized cost per task determine whether that choice produces returns.",
@@ -1205,89 +1558,6 @@
         "content_hash": "c96814db695710c5457043c56d3aaab3ca8ea869cbccca131ed8986dfd8a3214"
       },
       "publication_note": "Same-ID Alphabet update; all eight earlier financial/call highlights and dates preserved. Product performance remains attributed to Google."
-    },
-    {
-      "id": "ai-credit-selectivity-20261025",
-      "title": "AI lenders scrutinize contracts; credit is selective, not universally closed",
-      "url": "https://www.investing.com/news/stock-market-news/banks-investors-grow-wary-of-ai-debt-spooked-by-marketselloff-5011246",
-      "published_at": "2026-11-09",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "source_id": "reuters-ai-credit-20261109",
-      "source_name": "Reuters via Investing.com · AI credit scrutiny",
-      "source_role": "secondary",
-      "lens": "funding",
-      "relevance": "material",
-      "observation": "Reuters reports some lenders are reluctant to add AI exposure and are scrutinizing cash flows, delivery deadlines and customer termination rights. Some accounts rely on unnamed sources.",
-      "summary": "New reporting adds evidence of selective tightening to the earlier investor warnings and documented facilities.",
-      "implication": "A prominent customer or backstop alone may not secure financing. Projects must show cash generation and contract protections that survive delays.",
-      "beneficiaries": "Borrowers with dependable collections and stronger contract protections may retain an advantage; no new financing award is established.",
-      "risks": "Tighter terms or delayed financing can compound construction and customer-delivery risk.",
-      "counterevidence": "Nebius announced a $3.5 billion Citi secured facility on October 22; Crusoe announced a $700 million equipment-secured power facility the same day. Those transactions contradict a universal credit shutdown, but do not establish easy funding for all operators.",
-      "confirms": "Completed financings, revised terms, disclosed cancellations and actual contract cash flows would test the reported tightening.",
-      "refutes": "Broadly available new facilities on unchanged terms would weaken a general tightening thesis.",
-      "uncertainty": "Unnamed lenders are not individually verified; the report does not establish a sector-wide freeze. Prior October 25 commentary remains dated below. A later October 26 SpaceX filing disclosed a conditional lease agreement, not proof of the earlier claimed closing; do not add overlapping amounts.",
-      "entities": [
-        "OpenAI",
-        "Anthropic",
-        "SpaceX",
-        "Nebius",
-        "Crusoe"
-      ],
-      "rank": 13,
-      "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
-      "claim_type": "Attributed Reuters reporting, partly anonymous sources; historical opinions and company announcements remain separately labeled",
-      "source_date_note": "Reuters report published November 9; current card ordering uses this source date. Earlier sources: Chamath’s post approximately 16:13 UTC; Musk’s reply approximately 19:11 UTC, October 25. Counterevidence releases are October 22, not new October 25 financing.",
-      "access_note": "Full Reuters syndication text read through the public web reader. Direct Reuters returned 401 and Investing.com HTML returned 403; no bypass or direct-HTML verification claimed. Reader text provenance retained privately. Earlier commentary access: Original posts inspected publicly by the coordinating researcher on October 25; the local text reader could not fetch X. No live X feed or account access is implied.",
-      "ai_layers": [
-        "energy",
-        "chips",
-        "infrastructure",
-        "models"
-      ],
-      "highlights": [
-        {
-          "title": "Investor warning: GPUs can arrive before power and customers",
-          "observation": "Chamath links capitalization, customer-contract timing and power delays to possible idle GPUs, weak returns and consolidation. Forecasts and conditional rumors remain attributed to him.",
-          "claim_type": "investor opinion",
-          "implication": "Check energized MW and contracted paying demand against GPU deliveries and financing costs.",
-          "source_url": "https://x.com/chamath/status/2114389987563381004",
-          "source_date": "2026-10-25"
-        },
-        {
-          "title": "Executive claim: SpaceX’s broader revenue supports credit",
-          "observation": "Musk says SpaceX closed $40 billion of GPU debt using its investment-grade, Starlink and launch credit profile. A closing document was not independently verified.",
-          "claim_type": "unconfirmed executive financing claim",
-          "implication": "Do not count the claimed facility as confirmed incremental debt or add it to previously reported obligations.",
-          "source_url": "https://x.com/elonmusk/status/2114434646914068862",
-          "source_date": "2026-10-25"
-        },
-        {
-          "title": "Counterevidence: Nebius secured a short-term facility",
-          "observation": "Nebius announced a $3.5 billion Citi facility with 364-day maturity. The margin starts at SOFR plus 2.75% and can rise to 3.50%; the company cites over $40 billion of investment-grade customer contracts.",
-          "claim_type": "company financing announcement",
-          "implication": "Credit is available to at least some operators, while refinancing and contract-to-cash risks remain.",
-          "source_url": "https://nebius.com/newsroom/nebius-secures-3-5-billion-financing-facility-with-citi",
-          "source_date": "2026-10-22"
-        },
-        {
-          "title": "Counterevidence: Crusoe financed power equipment",
-          "observation": "Crusoe and Neuberger announced a $700 million facility secured by ordered generation equipment for AI factories.",
-          "claim_type": "company financing announcement",
-          "implication": "Collateral and power assets can unlock credit without proving energized capacity, utilization or profitability.",
-          "source_url": "https://www.crusoe.ai/resources/newsroom/neuberger-and-crusoe-announce-700-million-facility",
-          "source_date": "2026-10-22"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "A prominent customer or backstop alone may not secure financing. Projects must show cash generation and contract protections that survive delays.",
-        "worth_reading": "skim",
-        "rationale": "The new evidence changes the company or financing assessment; dated details distinguish claims, delivery and cash.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
-        "content_hash": "5a6037444ec992a7829f9e722bfaa963fa50857e63acb43efd9a9d59696fae4c"
-      },
-      "publication_note": "Same-ID credit update; historical comments and all four earlier highlights preserved, without reclassifying them as current or confirmed transactions."
     },
     {
       "access_note": "Official prepared-remarks DOCX retrieved and read in full. Third-party Q&A reviewed by coordinating research, not company-edited text; local re-download unavailable. Outlook deck reviewed by coordinating research; guidance independently corroborated in the official remarks. Original 10-Q downloaded; selected related-party, lease and cash sections checked. Original SEC pricing term sheet and preliminary prospectus retrieved; ten tranche amounts and dates checked against the original text. November 7 financing follow-up: Relevant original SEC filing body read through the ordinary public web reader. Direct original HTML retrieval returned HTTP 403; preserved hashes cover reader outputs, not original filing bytes. No alternate authenticated access was used.",
@@ -1392,7 +1662,7 @@
       "title": "Microsoft confirms $25bn bond issuance; returns still depend on delivery",
       "uncertainty": "No fleet-wide utilization, energized MW or AI-only return is disclosed here. No updated total paid Copilot seat count was given. Official written material contains prepared remarks only. Full Q&A and deck were reviewed by coordinating research; this publication check could not independently retrieve those files and verified numerical guidance in the official remarks. OpenAI revenue is not all Azure or GPU rental. Receivable aging and cash/credit composition of funded commitments are not established; no default inference. The filing confirms principal issuance but does not state actual net cash received. No AI-only use-of-proceeds allocation or net debt increase after refinancing is established.",
       "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557d8k.htm",
-      "rank": 14,
+      "rank": 18,
       "reading_review": {
         "key_takeaway": "Bond issuance strengthens evidence that the spending ramp can be financed, while adding debt service. It does not establish operating capacity, paid usage or AI investment returns.",
         "worth_reading": "skim",
@@ -1429,7 +1699,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 15,
+      "rank": 19,
       "claim_type": "Reported results; initial-workload statement and guidance are management claims; implications are analysis",
       "observation": "Q3 revenue was $13.377bn, including $8.546bn from Data Center. Continuing operating cash was $1.202bn; company-defined free cash flow was $554m.",
       "summary": "November 3 results provide new supplier operating evidence. Data Center includes CPUs and other products, not only AI GPUs.",
@@ -1497,7 +1767,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 16,
+      "rank": 20,
       "observation": "Q3 revenue rose 96% to $2.313bn. U.S. commercial revenue reached $984m, exceeding U.S. government revenue of $953m.",
       "summary": "Reported profit and cash strengthen the adoption signal; slower contract-value growth limits extrapolation.",
       "implication": "Palantir is converting enterprise software demand into sales and operating cash. AI-specific revenue and customers’ investment returns remain undisclosed.",
@@ -1561,7 +1831,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 17,
+      "rank": 21,
       "observation": "The companies announced a definitive all-stock acquisition agreement: 4.500 Marvell shares per Lumentum share, with approximately $115 billion implied enterprise value.",
       "summary": "Lumentum’s same-day results add an operating checkpoint: $1.2626 billion quarterly revenue and management-disclosed purchase commitments above $5 billion for a second major near-packaged/co-packaged optics win. The proposed merger still targets closing in the first half of 2028.",
       "implication": "Existing sales and purchase commitments give the optics thesis more substance. Their conversion into collected cash and delivered products matters separately from the all-stock acquisition value.",
@@ -1664,7 +1934,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 18,
+      "rank": 22,
       "observation": "AI data-center revenue reached $180m, up 175% year over year and 39% sequentially. Total revenue was $1.722bn.",
       "summary": "The reported AI sales line provides a measurable power-chip demand signal within a broader semiconductor business.",
       "implication": "Higher compute power requirements are converting into component sales; companywide results do not establish AI-specific profitability.",
@@ -1761,7 +2031,7 @@
           "source_date": "2026-11-03"
         }
       ],
-      "rank": 19,
+      "rank": 23,
       "reading_review": {
         "key_takeaway": "The Drax partnership is an early development plan using existing power infrastructure, with tenants, approvals and final investment decisions still ahead.",
         "worth_reading": "skim",
@@ -1794,7 +2064,7 @@
         "energy",
         "infrastructure"
       ],
-      "rank": 20,
+      "rank": 24,
       "relevance": "material",
       "observation": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
       "summary": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
@@ -1860,7 +2130,7 @@
       ],
       "lens": "capacity",
       "relevance": "material",
-      "rank": 21,
+      "rank": 25,
       "observation": "Google announced $160m of funding for shared water infrastructure in Negeri Sembilan and appointed Gamuda to build a reservoir and treatment plant serving its future Port Dickson campus and the public.",
       "summary": "Planned treatment capacity is 65 million liters a day. The facilities are to become state-owned upon completion; this is a development commitment, with payments and commissioning unverified.",
       "implication": "Compute expansion needs utilities before workloads can run. Google is funding enabling infrastructure, creating potential construction demand while leaving delivery timing and actual compute usage unproven.",
@@ -1925,7 +2195,7 @@
         "models",
         "applications"
       ],
-      "rank": 22,
+      "rank": 26,
       "relevance": "watch",
       "observation": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
       "summary": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
@@ -1989,7 +2259,7 @@
       ],
       "lens": "policy",
       "relevance": "material",
-      "rank": 23,
+      "rank": 27,
       "observation": "The court denied X.AI Corp. and MZX Tech LLC’s dismissal motion in the Southaven power-plant case. It rejected their mobile-source exemption argument; the claims proceed.",
       "summary": "The October 30 ruling concerns Mississippi power supplying Colossus 2 in Memphis. It is not a final liability or damages judgment.",
       "implication": "Installed turbines do not remove permitting risk. Later remedies could add cost or constrain power supply, but this order establishes no outage or lost compute revenue.",
@@ -2056,7 +2326,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 24,
+      "rank": 28,
       "observation": "The 10-Q confirms $50bn invested in OpenAI by September 30 and discloses up to approximately $80bn of supplier credit with draws permitted from 2027.",
       "summary": "The prior earnings story gains filed investment status and future financing terms, rather than a new earnings event.",
       "implication": "Funding customers and supplying their compute deepens shared exposure; future equipment credit helps timing but still requires cash returns.",
@@ -2167,7 +2437,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 25,
+      "rank": 29,
       "observation": "Reuters, citing the FT, reports OpenAI cut its fundraising target by $10bn to about $20bn. A first close was still expected below that target.",
       "summary": "The reported raise target is smaller; no closed round, funded cash or cancelled compute contract is established.",
       "implication": "A smaller raise could tighten the timing of compute spending. It does not establish cancelled contracts, lower paid usage or weaker AI demand.",
@@ -2219,7 +2489,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 26,
+      "rank": 30,
       "observation": "An unnamed customer intends to cancel an A$8.8m project. DXN expects payment for completed and committed work; cancellation remains unfinalized.",
       "summary": "An unnamed US-listed neocloud changed strategy; the larger follow-on campus is unlikely.",
       "implication": "Progress-payment protections can cushion cancellations, but backlog still depends on acceptance and collection. One customer’s retreat does not establish industry-wide demand collapse.",
@@ -2283,7 +2553,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 27,
+      "rank": 31,
       "observation": "Intel reports Data Center and AI revenue of $7.3bn, up 78%, while client revenue fell 5%. Q4 group revenue is guided below Q3 despite further expected server growth.",
       "summary": "Real server sales and profit strengthen the CPU case; memory costs, factory disruption and expansion funding limit the group-level benefit.",
       "implication": "AI infrastructure is benefiting CPUs as well as GPUs, but memory costs hurt PC demand while manufacturing and packaging constraints limit server deliveries.",
@@ -2360,7 +2630,7 @@
       "source_role": "primary",
       "lens": "earnings",
       "relevance": "material",
-      "rank": 28,
+      "rank": 32,
       "event_date": "2026-10-29",
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "report_period": "Fiscal Q1 2027, quarter ended October 2, 2026",
@@ -2441,7 +2711,7 @@
       "source_role": "primary",
       "lens": "models",
       "relevance": "material",
-      "rank": 29,
+      "rank": 33,
       "reviewed_at": "2026-10-30T12:26:30+00:00",
       "claim_type": "issuer release; vendor benchmark claims; conditional inference",
       "entities": [
@@ -2524,7 +2794,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 30,
+      "rank": 34,
       "report_period": "Q3 ended September 30, 2026; later capacity and spending are management plans",
       "claim_type": "issuer-reported K-IFRS results before external review; management outlook; conditional analysis",
       "observation": "Revenue was KRW195.3tn and operating profit KRW107.4tn. Device Solutions generated KRW106.5tn operating profit, while Device eXperience lost KRW0.8tn.",
@@ -2603,7 +2873,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 31,
+      "rank": 35,
       "observation": "Power Generation sales rose 30% to $3.421bn. Power & Energy segment profit rose 31% to $2.143bn, with a 24.4% margin versus 21.9% a year earlier.",
       "summary": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
       "implication": "Power equipment sales show buildout spending reaching suppliers; they do not establish energized sites or profitable compute use.",
@@ -2681,7 +2951,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 32,
+      "rank": 36,
       "observation": "Q3 revenue was $2.571bn, up 11%, with $2.442bn recurring revenue. Annualized gross bookings were $533m; these are not recognized revenue or cash.",
       "summary": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
       "implication": "Recurring infrastructure revenue supports demand, but expansion cash needs and a one-time fee temper the earnings headline.",
@@ -2777,7 +3047,7 @@
       ],
       "lens": "funding",
       "relevance": "material",
-      "rank": 33,
+      "rank": 37,
       "observation": "Oracle’s October 28 Investor Day targets positive free cash flow in fiscal H2 2028 and at least $30bn in FY2029. It expects at most $20bn in additional capital raises through FY2030, excluding refinancings.",
       "summary": "New financing and cash-flow targets qualify the earlier chip-rollout story; existing hardware milestones are retained below.",
       "implication": "Vendor financing and customer advances can lower upfront cash needs, but shift obligations rather than proving the buildout already funds itself.",
@@ -2872,7 +3142,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 34,
+      "rank": 38,
       "observation": "Q3 sales reached $4.3128bn, up 61.2% (55% organic). GAAP operating profit was $983.8m; adjusted operating profit was $1,086.9m.",
       "summary": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
       "implication": "Supplier earnings support the buildout thesis; customer advances and delivery obligations still matter.",
@@ -2944,7 +3214,7 @@
       ],
       "lens": "earnings",
       "relevance": "material",
-      "rank": 35,
+      "rank": 39,
       "observation": "C&I external sales rose 28% to about $552m. Data-center backlog is approximately $4.5bn; Amazon’s expected initial 2027–28 deliveries total $2.4bn.",
       "summary": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
       "implication": "Backup-power demand reaches supplier sales and cash; future orders still need manufacturing, delivery and payment.",
@@ -3063,7 +3333,7 @@
       ],
       "url": "https://news.skhynix.com/en/q3-2026-business-results/",
       "source_id": "sk-hynix-q3-release-20261028",
-      "rank": 36,
+      "rank": 40,
       "relevance": "material",
       "reading_review": {
         "key_takeaway": "SK hynix’s memory profits support the scarcity thesis, while weaker sequential operating cash and higher investment keep cash conversion in focus.",
@@ -3142,7 +3412,7 @@
       ],
       "url": "https://investor.corning.com/news-and-events/news/news-details/2026/Corning-Delivers-Outstanding-Third-Quarter-Results1/default.aspx",
       "source_id": "corning-q3-20261027",
-      "rank": 37,
+      "rank": 41,
       "relevance": "material",
       "reading_review": {
         "key_takeaway": "Corning’s optical growth is reaching segment earnings, but changed core-currency methodology and uneven performance elsewhere limit broad comparisons.",
@@ -3174,7 +3444,7 @@
         "chips",
         "infrastructure"
       ],
-      "rank": 38,
+      "rank": 42,
       "relevance": "material",
       "observation": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
       "summary": "SpaceX disclosed a binding letter for equipment leases with about $40bn expected principal. Pricing, closing and delivery remain ahead.",
@@ -3296,7 +3566,7 @@
       ],
       "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "source_id": "spacex-q3-filing-neocloud-20261025-source-1",
-      "rank": 39,
+      "rank": 43,
       "relevance": "material",
       "summary": "The October 22 filing and October 20 call show a hybrid neocloud: SpaceX rents compute to outside customers while also running Grok and Cursor. Its funding position needs to be assessed across the group, not from AI segment earnings alone.",
       "reading_review": {
@@ -3386,7 +3656,7 @@
       ],
       "url": "https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/",
       "source_id": "php2shell-agentic-security-update-20261023-source-1",
-      "rank": 40,
+      "rank": 44,
       "relevance": "material",
       "summary": "October 21 patches address two core PHP vulnerabilities. An October 23 Unit 42 update reports suspected agentic post-exploitation, distinct from Wiz’s defensive AI research. This is an application-security development, not an AI demand or revenue announcement.",
       "reading_review": {
@@ -3412,7 +3682,7 @@
       "entities": [
         "Anthropic"
       ],
-      "rank": 41,
+      "rank": 45,
       "observation": "Reuters reports some investors discussing ~$1.5tn versus earlier ~$2tn expectations.",
       "summary": "Investor expectations changed; no executed IPO price was established.",
       "implication": "If fundraising disappoints, financing long-term cloud commitments could become harder.",
@@ -3448,7 +3718,7 @@
       "entities": [
         "Meta"
       ],
-      "rank": 42,
+      "rank": 46,
       "observation": "Meta narrowed FY2026 capex guidance to $135–145bn from $130–145bn, including finance-lease principal.",
       "summary": "Only the floor rose; the ceiling stayed unchanged.",
       "implication": "If executed, spending supports equipment orders; guidance alone does not establish utilization.",
@@ -3483,7 +3753,7 @@
       "entities": [
         "Amazon"
       ],
-      "rank": 43,
+      "rank": 47,
       "observation": "DCD reports Amazon withdrew the proposed GWU Ashburn campus application after local opposition.",
       "summary": "This concerns proposed development, not closure of an operating data center.",
       "implication": "Local delivery constraints can coexist with demand; alternative permitted sites could gain value.",
@@ -3520,7 +3790,7 @@
       "entities": [
         "CoreWeave"
       ],
-      "rank": 44,
+      "rank": 48,
       "observation": "Bloomberg cited ICE five-year CDS at 1,194.5bp and implied default odds above 60%.",
       "summary": "Historical Oct 15 pricing, not a current or next-year forecast.",
       "implication": "If financing remains expensive, converting demand into funded capacity becomes harder.",
@@ -3565,7 +3835,7 @@
         "models",
         "applications"
       ],
-      "rank": 45,
+      "rank": 49,
       "relevance": "watch",
       "observation": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
       "summary": "An OpenAI case study says Fanatics' Shop the Look is live and reports 10% higher engagement. Sales and profit effects are not disclosed.",
@@ -6046,6 +6316,94 @@
         "energy"
       ],
       "quality_note": "Targeted SEC-reader review of cover and customer-contract/financing sections. No full-prospectus review, actual draw, new guarantee or realized utilization inferred."
+    },
+    {
+      "id": "fermi-q3-release-20261112",
+      "name": "Fermi · November 12 Q3 earnings exhibit",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026118351/ea031197701ex99-1.htm",
+      "role": "primary",
+      "kind": "company_release",
+      "source_date": "2026-11-12",
+      "reviewed_at": "2026-11-14T13:26:26.885646+00:00",
+      "topics": [
+        "funding",
+        "capacity",
+        "energy"
+      ],
+      "quality_note": "SEC-furnished issuer release read through public reader; confirms termination and signed versus unfinished agreements. Unnamed customer stays unnamed; funding receipt, full call and 10-Q not verified."
+    },
+    {
+      "id": "fed-financial-stability-20261113",
+      "name": "Federal Reserve · November 2026 Financial Stability Report",
+      "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+      "role": "primary",
+      "kind": "public_report",
+      "source_date": "2026-11-13",
+      "reviewed_at": "2026-11-14T13:26:26.885646+00:00",
+      "topics": [
+        "funding",
+        "capacity"
+      ],
+      "quality_note": "Overview and Box 2.2 printed pp23–25 reviewed through primary PDF reader, including footnotes. Report generally reflects October 28 information; obligations chart ends Q2 2026. Assessment is not a default forecast; no additive debt/commitment total."
+    },
+    {
+      "id": "fermi-10q-20261112",
+      "name": "Fermi · November 12 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000058/frmi-20260930.htm",
+      "role": "primary",
+      "kind": "sec_filing",
+      "source_date": "2026-11-12",
+      "reviewed_at": "2026-11-15T13:17:33.826111+00:00",
+      "topics": [
+        "funding",
+        "capacity",
+        "energy"
+      ],
+      "quality_note": "Direct original SEC HTML and current public submissions metadata retrieved successfully. Targeted review of Notes 5, 6 and 9; related MD&A, risk factors, defaults and exhibit index. No full-filing, full-call or standalone amendment-exhibit review claimed."
+    },
+    {
+      "id": "openai-wallet-release-20261113",
+      "name": "OpenAI · ChatGPT Wallet announcement",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet/",
+      "source_date": "2026-11-13",
+      "reviewed_at": "2026-11-14T13:24:01.789134+00:00",
+      "access_note": "Issuer article body and availability section read through supported public web reader. Direct urllib HTML returned HTTP 403 once; no retry/bypass. No payment, account or purchase action.",
+      "quality_note": "Issuer product claims and limited rollout; no independent security audit or commercial performance metrics.",
+      "role": "primary",
+      "kind": "company_release",
+      "topics": [
+        "applications",
+        "models"
+      ]
+    },
+    {
+      "id": "bdit-aws-jv-20261116",
+      "name": "Blackstone Digital Infrastructure Trust · AWS portfolio agreement",
+      "url": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526461954/d115778dex991.htm",
+      "role": "primary",
+      "kind": "sec_filing",
+      "source_date": "2026-11-16",
+      "reviewed_at": "2026-11-16T15:01:17.001575+00:00",
+      "topics": [
+        "funding",
+        "capacity"
+      ],
+      "quality_note": "Full original SEC-furnished issuer release read. Signed agreement; expected Q4 closing is conditional. Powered shells do not establish occupied compute or AI-only demand."
+    },
+    {
+      "id": "corvex-take-or-pay-20261116",
+      "name": "Corvex · customer agreement and proposed deployment financing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1734750/000121390026120168/ea031185401ex99-1.htm",
+      "role": "primary",
+      "kind": "sec_filing",
+      "source_date": "2026-11-16",
+      "reviewed_at": "2026-11-16T15:01:17.001575+00:00",
+      "topics": [
+        "funding",
+        "capacity",
+        "demand"
+      ],
+      "quality_note": "Full original SEC-furnished issuer release read, including explicit financing, payment and acceptance cautions. Customer is unnamed; cash receipt, debt closing and service commencement not established."
     }
   ],
   "ledger": [
@@ -7337,6 +7695,116 @@
       "flow_label": "Customer loan: remaining principal",
       "uncertainty": "Specific future cash versus noncash settlement depends on contract performance and permitted credits. This is a September 30 balance, newly reviewed from the November 12 filing.",
       "changed_at": "2026-11-12"
+    },
+    {
+      "id": "keystone-fermi-equipment-20260930",
+      "as_of": "2026-09-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000058/frmi-20260930.htm",
+      "source_date": "2026-11-12",
+      "from_entity": "Keystone-led equipment lenders",
+      "to_entity": "Fermi",
+      "instrument": "debt",
+      "status": "Outstanding at September 30; customer-agreement prepayment condition remains",
+      "amount": 91.535,
+      "currency": "USD million",
+      "note": "Borrower: Fermi High Voltage Warehouse LLC. Outstanding principal, not new November funding. The agent must receive an approved customer agreement by December 31, 2026 or prepayment is required.",
+      "overlap_group": "fermi-high-voltage-equipment-2026",
+      "risk": "Equipment collateral and limited parent guaranty; the customer deadline can constrain project liquidity.",
+      "payment_status": "Historical funded balance after repayments; not a new cash receipt.",
+      "revenue_status": "Borrowing is not revenue or proof of operating capacity.",
+      "reviewed_at": "2026-11-15T13:17:33.826111+00:00",
+      "flow_type": "money",
+      "flow_label": "Equipment debt: remaining principal",
+      "uncertainty": "Lenders are represented collectively; Keystone is the disclosed agent and initial lender is Keystone Private Income Fund. Amount is the September 30 balance, not current cash.",
+      "changed_at": "2026-11-12"
+    },
+    {
+      "as_of": "2026-11-16",
+      "source_date": "2026-11-16",
+      "reviewed_at": "2026-11-16T15:01:17.001575+00:00",
+      "changed_at": "2026-11-16",
+      "id": "bdit-aws-jv-investment-20261116",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526461954/d115778dex991.htm",
+      "from_entity": "Blackstone Digital Infrastructure Trust",
+      "to_entity": "AWS property joint ventures",
+      "instrument": "investment",
+      "flow_type": "ownership",
+      "flow_label": "Agreed 75% property interest",
+      "amount": null,
+      "currency": null,
+      "status": "Definitive agreement signed; closing conditional",
+      "note": "A transaction valued around $5bn acquires a 75% interest in two ventures. Amount omitted from the payment arrow because the release does not establish actual proceeds, funding or a 100% equity valuation. AWS retains 25%.",
+      "payment_status": "Not closed; Q4 closing expected subject to conditions.",
+      "revenue_status": "Property acquisition is not AI revenue or measured utilization.",
+      "risk": "Buyer bears property/residual and tenant-credit exposure after closing; allocation also depends on unreviewed contracts.",
+      "uncertainty": "Exact actual cash payment and final financing structure not established.",
+      "overlap_group": "aws-bdit-property-jv-2026"
+    },
+    {
+      "as_of": "2026-11-16",
+      "source_date": "2026-11-16",
+      "reviewed_at": "2026-11-16T15:01:17.001575+00:00",
+      "changed_at": "2026-11-16",
+      "id": "aws-property-jv-lease-20261116",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526461954/d115778dex991.htm",
+      "from_entity": "Amazon",
+      "to_entity": "AWS property joint ventures",
+      "instrument": "customer_contract",
+      "flow_type": "money",
+      "flow_label": "Planned property rent",
+      "amount": null,
+      "currency": null,
+      "status": "Leaseback announced with pending acquisition",
+      "note": "AWS will lease 100% of the powered-shell portfolio triple net for 12 years initially; 32 years only if fully extended. No rent-dollar total disclosed. Amazon’s AWS business is the announced tenant; exact legal obligor and parent recourse were not independently reviewed. Amazon is the existing company-group map label, not an asserted parent guarantee.",
+      "payment_status": "Lease commencement and rent collections not established.",
+      "revenue_status": "Rent is separate from AWS customer compute revenue and occupancy.",
+      "risk": "Tenant-payment and residual-value exposure persists; contracts not independently reviewed.",
+      "uncertainty": "Extensions and actual lease payments should not be counted as current received cash.",
+      "overlap_group": "aws-bdit-property-jv-2026"
+    },
+    {
+      "as_of": "2026-11-16",
+      "source_date": "2026-11-16",
+      "reviewed_at": "2026-11-16T15:01:17.001575+00:00",
+      "changed_at": "2026-11-16",
+      "id": "unnamed-inference-corvex-compute-20261116",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1734750/000121390026120168/ea031185401ex99-1.htm",
+      "from_entity": "Unnamed inference platform customer",
+      "to_entity": "Corvex",
+      "instrument": "compute_purchase",
+      "flow_type": "money",
+      "flow_label": "Three-year take-or-pay compute",
+      "amount": 103,
+      "currency": "USD million",
+      "status": "Contract announced; deployment pending",
+      "note": "The customer identity is undisclosed. The $26m stated prepayment is part of this same customer relationship, not a separate additive revenue contract. Terms require payment regardless of utilization, subject to disclosed performance and contract-right risks.",
+      "payment_status": "Receipt of the stated prepayment not verified; revenue commencement expected by end Q1 2027.",
+      "revenue_status": "Contract value is not recognized revenue or completed collections.",
+      "risk": "Customer payment, commissioning and acceptance; termination/modification rights remain relevant.",
+      "uncertainty": "Underlying agreement not reviewed; no actual utilization supplied.",
+      "overlap_group": "corvex-midatlantic-deployment-2026"
+    },
+    {
+      "as_of": "2026-11-16",
+      "source_date": "2026-11-16",
+      "reviewed_at": "2026-11-16T15:01:17.001575+00:00",
+      "changed_at": "2026-11-16",
+      "id": "usdai-corvex-debt-20261116",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1734750/000121390026120168/ea031185401ex99-1.htm",
+      "from_entity": "USD.AI",
+      "to_entity": "Corvex",
+      "instrument": "debt",
+      "flow_type": "money",
+      "flow_label": "Committed equipment financing",
+      "amount": 38,
+      "currency": "USD million",
+      "status": "Debt committed; closing and funding not established",
+      "note": "Three-year asset-backed commitment described as nonrecourse to Corvex Inc. A project-level borrower is not named in the release. Debt and customer prepayment together form a planned $64m package toward approximately $78m deployment cost; no cash total is treated as received.",
+      "payment_status": "Financing closing conditions remain; funded amount not established.",
+      "revenue_status": "Debt is financing, not compute revenue.",
+      "risk": "Project collateral value, customer collections and execution; nonrecourse does not eliminate project risk.",
+      "uncertainty": "Underlying loan documentation and final recourse/collateral terms not reviewed.",
+      "overlap_group": "corvex-midatlantic-deployment-2026"
     }
   ],
   "earnings": [
