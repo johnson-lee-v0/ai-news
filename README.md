@@ -32,7 +32,7 @@ A fresh checkout starts empty. Use **Refresh sources** in the dashboard or run:
 python3 -m pulse refresh
 ```
 
-The project-local `data/` directory is created at runtime. It is ignored by Git and contains the database, bounded raw-response archives and daily snapshots. It is not included in this repository. A separate data directory is supported:
+The project-local `data/` directory is created at runtime. It is ignored by Git and contains the database, bounded raw-response archives and daily snapshots. It is not included in this repository. Public market posts rotate oldest-first only as needed to fit 49 posts and 168 sources; full reviewed inputs remain in the private archive. The preparation command and normal static build use the same selection and evidence gates; see [the daily publication workflow](docs/NEWS_WALL.md#existing-daily-workflow). A separate data directory is supported:
 
 ```sh
 python3 -m pulse --data-dir /tmp/pulse-scratch serve

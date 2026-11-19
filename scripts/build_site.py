@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path: sys.path.insert(0, str(ROOT))
 from pulse.layers import LAYER_IDS, annotate as annotate_layers, tracking as layer_tracking
 from pulse import wall, wall_review
+from scripts.public_rotation import MAX_ARTICLES, MAX_SOURCES, rotate_snapshot
 FORMAT = 'ai-stock-pulse-static-v1'
 OUTPUTS = {'index.html', 'app.js', 'styles.css', 'finance.js', 'finance.css', 'visit-state.js', 'wall.js', 'wall.css', 'favicon.svg', 'data/dashboard.json', 'build.json', '.nojekyll'}
 TOP_FIELDS = {'reviewed_at', 'headline', 'bullets', 'notice', 'articles', 'sources', 'ledger', 'earnings'}
@@ -94,12 +95,13 @@ def validate_reading_review(value, source_reviewed_at, item):
         raise ValueError('Reading review timestamp must follow the source review and cannot be future or undated')
 
 
-def validate_public(raw):
+def validate_content(raw):
+    """Validate all candidate evidence before public-view rotation can remove rows."""
     if not isinstance(raw, dict) or set(raw) != TOP_FIELDS: raise ValueError('Public brief must use the explicit reviewed schema')
     safe_text(raw)
     reviewed = iso(raw['reviewed_at'])
     if reviewed > datetime.now(timezone.utc): raise ValueError('Review date cannot be in the future')
-    if not 1 <= len(raw['articles']) <= 49 or not 1 <= len(raw['sources']) <= 168: raise ValueError('Public snapshot must be small and populated')
+    if not len(raw['articles']) or not len(raw['sources']): raise ValueError('Public snapshot must be populated')
     ids = set()
     for source in raw['sources']:
         if set(source) - SOURCE_FIELDS: raise ValueError('Unexpected public source field')
@@ -158,6 +160,26 @@ def validate_public(raw):
     return raw
 
 
+def validate_public(raw):
+    # This public boundary keeps the existing finite limits. Oversized catalogs
+    # are accepted only by the separate preparation path, never by this validator.
+    if not isinstance(raw, dict) or set(raw) != TOP_FIELDS:
+        raise ValueError('Public brief must use the explicit reviewed schema')
+    if not 1 <= len(raw['articles']) <= MAX_ARTICLES or not 1 <= len(raw['sources']) <= MAX_SOURCES:
+        raise ValueError('Public snapshot must be small and populated')
+    return validate_content(raw)
+
+
+def prepare_snapshot(raw):
+    validate_content(raw)
+    missing = sum('reading_review' not in item for item in raw['articles'])
+    if missing:
+        raise ValueError('Curated research publication blocked: '+str(missing)+' article(s) lack a structured reading review. Add a key takeaway and worth-reading assessment before building.')
+    selected, report = rotate_snapshot(raw)
+    validate_public(selected)
+    return selected, report
+
+
 def dashboard(raw, accounts, commit):
     stamp=raw['reviewed_at']
     articles=[]
@@ -199,10 +221,7 @@ def revision():
 def build(output, source=None):
     output=Path(output)
     source=Path(source) if source else ROOT/'public/brief.json'
-    raw=validate_public(json.loads(source.read_text(encoding='utf-8')))
-    missing_reading_reviews=sum('reading_review' not in item for item in raw['articles'])
-    if missing_reading_reviews:
-        raise ValueError('Curated research publication blocked: '+str(missing_reading_reviews)+' article(s) lack a structured reading review. Add a key takeaway and worth-reading assessment before building.')
+    raw,rotation=prepare_snapshot(json.loads(source.read_text(encoding='utf-8')))
     # Apply the same bounded projection that the reviewer queues. A raw refresh
     # may retain unreviewed local records, but none may enter this public build.
     wall_path=ROOT/'public/wall.json'
@@ -233,7 +252,9 @@ def build(output, source=None):
     (output/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#f5f4ee"/><path stroke="#226d60" stroke-width="4" stroke-linecap="round" d="M8 20V13M16 24V8M24 27V5"/></svg>\n')
     (output/'.nojekyll').write_text('')
     files={str(p.relative_to(output)):hashlib.sha256(p.read_bytes()).hexdigest() for p in output.rglob('*') if p.is_file() and p.name!='build.json'}
-    manifest={'format':FORMAT,'commit':commit,'reviewed_at':raw['reviewed_at'],'files':files}
+    manifest={'format':FORMAT,'commit':commit,'reviewed_at':raw['reviewed_at'],'files':files,
+              'rotation':{'policy':rotation['policy'],'input_counts':rotation['input_counts'],
+                          'retained_counts':rotation['retained_counts']}}
     (output/'build.json').write_text(json.dumps(manifest,indent=2,sort_keys=True)+'\n')
     return manifest
 

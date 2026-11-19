@@ -1,6 +1,6 @@
 # Sports and Markets — V1
 
-The two main tabs share an inspectable feed, not a popularity or advertising algorithm. Existing dated market research, earnings and financing records remain available. `public/brief.json` owns reviewed market research; `public/wall.json` owns the separate public feed snapshot. Rebuilding one must preserve the other.
+The two main tabs share an inspectable feed, not a popularity or advertising algorithm. Full dated market research stays in the private reviewed archive; the public market view rotates older posts only when its fixed limits require it. Earnings and financing records remain intact. `public/brief.json` owns the bounded reviewed market view; `public/wall.json` owns the separate public feed snapshot. Rebuilding one must preserve the other.
 
 ## Controls and reading
 
@@ -61,7 +61,18 @@ Only canonical public Instagram post/reel and YouTube video links are accepted f
 
 Run the established `python3 -m pulse refresh` command. It updates the existing market collection and the separate local wall state under `data/wall.json`, recording independent source results. It does not publish. For a standalone wall refresh, run `python3 scripts/refresh_wall.py`. After the established refresh has already run, project the existing state without a second fetch: `python3 scripts/refresh_wall.py --export-only --data-file path/to/data/wall.json --public-output public/wall.json`. Only that explicit public-output option writes a sanitized wall file. Use the existing local store path; do not replace it with the empty public checkout data directory. Do not export the market SQLite database, private notes, raw response bodies or browser preferences.
 
-The already authorized daily research task continues to curate material changes and publish through the existing workflow. Before committing, update the safe wall snapshot, preserve all reviewed research and manual source-backed wall items, run unit/browser tests, inspect the exact publication inventory and scan source/history/artifact. Build with `python3 scripts/build_site.py`, push the reviewed commit, dispatch the existing Pages workflow, and verify that exact live commit and both tabs. No additional schedule, background service, credentials or paid dependency is installed.
+The already authorized daily research task continues to curate material changes and publish through the existing workflow. After completing the source-bound wall review, prepare both snapshots from the full reviewed candidate and real local wall:
+
+```sh
+python3 scripts/prepare_public.py --source FULL_REVIEWED_CANDIDATE --wall-source LOCAL_WALL --archive-dir PRIVATE_ARCHIVE --dry-run
+python3 scripts/prepare_public.py --source FULL_REVIEWED_CANDIDATE --wall-source LOCAL_WALL --archive-dir PRIVATE_ARCHIVE
+```
+
+Replace placeholders with actual paths. The archive must be outside the public checkout and output directory. Preparation checks every candidate's evidence and reading review before selecting anything, then checks the entire displayed wall. Failed gates leave both existing snapshots unchanged. A successful write first archives the exact full candidate, full local wall and previous public snapshots by content hash. Never use a bounded public file as the only historical research store; continue the next candidate from the full private reviewed archive and supported research notes.
+
+Public market rotation keeps the existing maximum of 49 posts and 168 source entries. It retires the oldest prefix only as needed for both limits, using original publication date, then event date/start as fallback, then stable ID for ties or undated entries. Review/fetch timestamps and editorial rank do not make a post newer. It removes a source only if all of its article owners retire and no retained article, financial record or global context references it. Sources with no article owner remain intentional roster/coverage entries. Source ownership is calculated from the full candidate before selection. Shared sources, source-context citations, financial records and their evidence remain intact. If keeper sources prevent a fit, preparation fails rather than truncating citations. The same selection runs in the normal `build_site.py` path used by Pages CI, so later oversized reviewed inputs cannot bypass rotation or the unchanged final limits. Rotation does not change wall selection or browser-local state.
+
+Before committing, run unit/browser tests, inspect the exact publication inventory and scan source/history/artifact. Build with `python3 scripts/build_site.py`, push the reviewed commit, dispatch the existing Pages workflow, and verify that exact live commit and both tabs. No additional schedule, background service, credentials or paid dependency is installed.
 
 ## Publication boundary
 
