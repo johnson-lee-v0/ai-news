@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-19T13:50:16Z",
+  "updated_at": "2026-11-22T13:52:59Z",
   "source_status": [
     {
       "id": "f1-official",
@@ -14,8 +14,8 @@
       ],
       "note": "Official F1 feed. Some entries have no publication date; fetch time is not an event date.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 10
     },
     {
@@ -30,8 +30,8 @@
       ],
       "note": "League announcements, including business and WNBA coverage. This is not comprehensive game or breaking-news coverage.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 10
     },
     {
@@ -47,8 +47,8 @@
       ],
       "note": "Publisher podcast metadata, not a transcript or independently verified analysis. Episodes without a webpage link open the podcast homepage.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 24
     },
     {
@@ -63,9 +63,9 @@
       ],
       "note": "Public blog linked by Unusual Whales. Finance and AI title keywords filter broad news; relevant posts may be missed. Headlines are publisher claims, not verified conclusions. This is not its X feed.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
-      "item_count": 7
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
+      "item_count": 9
     },
     {
       "id": "unusual-whales-podcast",
@@ -80,8 +80,8 @@
       ],
       "note": "Public podcast feed. Source dates may be old; no transcript is collected. Audio opens externally when its host is outside the verified embedded-player allowlist.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 24
     },
     {
@@ -96,8 +96,8 @@
       ],
       "note": "Newsletter news and commentary. Cards use its descriptive subtitle instead of a teaser headline when available. Publisher forecasts are attributed claims, not verified probabilities or live odds.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 20
     },
     {
@@ -111,11 +111,11 @@
         "Markets",
         "Company analysis"
       ],
-      "note": "Tevis Shkodra's official site identifies this channel. Public Videos-page metadata, at most eight videos per refresh; RSS returned 404. No transcript is collected, and relative dates remain unknown unless separately verified.",
-      "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
-      "item_count": 8
+      "note": "Tevis Shkodra's official site identifies this channel. Public Videos-page metadata, at most eight videos per refresh; RSS returned 404. No transcript is collected, and relative dates remain unknown unless separately verified. Latest fetch failed; previously stored items and last-success date are retained.",
+      "status": "error",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-21T13:11:50Z",
+      "item_count": 21
     },
     {
       "id": "sixers-highlights",
@@ -131,8 +131,8 @@
       ],
       "note": "Official team Videos-page metadata. Up to eight highlight/game-recap titles per refresh; not every game or the full channel. Dates and video content require separate review; RSS returned 404.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 6
     },
     {
@@ -149,8 +149,8 @@
       ],
       "note": "Official team Videos-page metadata. Up to eight highlight/game-recap titles per refresh; not every game or the full channel. Dates and video content require separate review; RSS returned 404.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 8
     },
     {
@@ -164,10 +164,10 @@
         "Markets",
         "Investing education"
       ],
-      "note": "Verified BenFelixCSI channel. Up to three public long-form videos per refresh; displayed durations below five minutes, Shorts, obvious promotions and member-only items are excluded. Source review scope is separate from channel metadata. Latest fetch failed; previously stored items and last-success date are retained.",
-      "status": "error",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-18T13:11:36Z",
+      "note": "Verified BenFelixCSI channel. Up to three public long-form videos per refresh; displayed durations below five minutes, Shorts, obvious promotions and member-only items are excluded. Source review scope is separate from channel metadata.",
+      "status": "ok",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 3
     },
     {
@@ -183,8 +183,8 @@
       ],
       "note": "Verified AndrejKarpathy channel. Up to two public long-form AI videos per refresh; short/promotional and member-only items are excluded. Older educational videos keep their source dates and are not current market news.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 2
     },
     {
@@ -200,8 +200,8 @@
       ],
       "note": "Verified ThinkingBasketball channel. Up to three public videos per refresh, excluding member-only videos, short clips and obvious promotions. Analysis is the creator's interpretation; selected older films remain dated.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 3
     },
     {
@@ -218,8 +218,8 @@
       ],
       "note": "Verified official Formula 1 channel. Up to three public analysis, onboard or race/qualifying-highlight videos per refresh; under-five-minute clips, Shorts, obvious promotions and member-only items are excluded. This is a selected view, not every upload.",
       "status": "ok",
-      "last_attempt_at": "2026-11-19T13:50:16Z",
-      "last_success_at": "2026-11-19T13:50:16Z",
+      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 3
     },
     {
@@ -322,6 +322,747 @@
   ],
   "items": [
     {
+      "id": "wall-883f0c69d6b28b32fabe991d",
+      "section": "sports",
+      "source_id": "formula1-video",
+      "title": "Race Highlights | 2026 Las Vegas Grand Prix",
+      "url": "https://www.youtube.com/watch?v=Vyk_6bNm7lo",
+      "published_at": "2026-11-22T07:03:23Z",
+      "first_seen_at": "2026-11-22T13:52:59Z",
+      "updated_at": "2026-11-22T13:52:59Z",
+      "format": "video",
+      "topics": [
+        "F1",
+        "Highlights",
+        "Race analysis"
+      ],
+      "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
+      "analysis": {
+        "text": "The race commentary describes repeated lead changes, a safety-car pit-stop scramble and late trouble for both Mercedes drivers. It ends with Verstappen ahead of Norris and Piastri; this is the broadcast recap, not a review of final steward documents.",
+        "key_takeaway": "Track position kept changing: overtaking a leader did not secure the place, and late errors reshaped the podium. This recap is useful for the turning points, without treating highlights as a full race-pace analysis.",
+        "worth_reading": "skim",
+        "rationale": "A compact account of the lead battles and late reversals. The transcript does not independently establish final classification, exact margins or why every incident occurred.",
+        "basis": "Full available English auto-caption transcript read through the original YouTube control: 62 segments, 0:00–7:53 of 8:13. Several driver names are mistranscribed. No footage reviewed or final FIA decisions checked within this video judgment; commentary is attributed rather than independent adjudication.",
+        "video_citations": [
+          {
+            "start_seconds": 188,
+            "end_seconds": 230,
+            "note": "The commentary connects Perez’s crash with a busy pit lane and the safety-car period, a key change in race circumstances."
+          },
+          {
+            "start_seconds": 310,
+            "end_seconds": 333,
+            "note": "Norris is described moving to second while Verstappen and Russell fight for the lead; an attempted pass can cost a position."
+          },
+          {
+            "start_seconds": 403,
+            "end_seconds": 463,
+            "note": "Late Russell trouble and Antonelli falling back precede the broadcast’s Verstappen–Norris–Piastri finish."
+          }
+        ],
+        "scope": "transcript",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-22T13:55:30.285485+00:00",
+        "source_urls": [
+          "https://www.youtube.com/watch?v=Vyk_6bNm7lo"
+        ],
+        "content_hash": "e8cf9dec564c260e388a06d0bbced33017b2619234338eb0baeb09a6db92ddb1",
+        "evidence": [
+          {
+            "url": "https://www.youtube.com/watch?v=Vyk_6bNm7lo",
+            "published_at": "2026-11-22T07:03:23Z",
+            "retrieved_at": "2026-11-22T13:54:01.903Z",
+            "content_hash": "38dd27ce06690ef9a4ab7f4c8f75afc8b39b7099c3f7e2c11413b06f32cf97b3",
+            "scope": "transcript"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=Vyk_6bNm7lo",
+            "published_at": "2026-11-22T07:03:23Z",
+            "retrieved_at": "2026-11-22T13:53:58.082Z",
+            "content_hash": "e9afc7c6328bec01429e08127d4cd98a8b343f0f775bae2d1384760aad050d66",
+            "scope": "metadata"
+          }
+        ]
+      },
+      "provenance_hash": "9428ed89c0dc1003df4046f30c276652ff3735cce840ca4e917eae2a6f9e3d88",
+      "duration": "8:14",
+      "content_hash": "e8cf9dec564c260e388a06d0bbced33017b2619234338eb0baeb09a6db92ddb1"
+    },
+    {
+      "id": "wall-eef8d9ddd49f71a6cd649320",
+      "section": "sports",
+      "source_id": "sixers-highlights",
+      "title": "Game Highlights: Sixers Hold Off the Bucks at Home",
+      "url": "https://www.youtube.com/watch?v=sPwEBq08K5U",
+      "published_at": "2026-11-21T21:09:11Z",
+      "first_seen_at": "2026-11-22T13:52:59Z",
+      "updated_at": "2026-11-22T13:52:59Z",
+      "format": "video",
+      "topics": [
+        "NBA",
+        "Sixers",
+        "Highlights"
+      ],
+      "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
+      "analysis": {
+        "text": "The Sixers commentary emphasizes cuts against double teams, transition passing and a burst of Simons shooting. The later selections focus on James and Embiid creating baskets. These are selected possessions, not a complete assessment of either team’s defense.",
+        "key_takeaway": "Off-ball movement and quick passing create the useful openings in this recap. Watch the cuts and kick-outs alongside the scoring; a team-selected highlight reel cannot show how consistently they worked.",
+        "worth_reading": "skim",
+        "rationale": "Useful examples of how the Sixers generated shots, with specific moments to revisit. No final score, full-game statistics or claim about sustained efficiency is inferred from the edited highlights.",
+        "basis": "Full available English auto-caption transcript read through the original YouTube control: 76 segments, 0:04–8:41 of 8:46. Player names and some score fragments are mistranscribed. No footage or independent box score reviewed for this judgment. Sponsor mentions were not recommended or acted on.",
+        "video_citations": [
+          {
+            "start_seconds": 102,
+            "end_seconds": 118,
+            "note": "The commentary describes Embiid reading a double team and finding Walker cutting to the rim."
+          },
+          {
+            "start_seconds": 318,
+            "end_seconds": 369,
+            "note": "The broadcast links one-shot defensive possessions with transition opportunities and a sequence of Simons threes."
+          },
+          {
+            "start_seconds": 475,
+            "end_seconds": 521,
+            "note": "The closing selections feature James and Embiid creating shots; these excerpts do not establish the final game result."
+          }
+        ],
+        "scope": "transcript",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-22T13:55:30.285485+00:00",
+        "source_urls": [
+          "https://www.youtube.com/watch?v=sPwEBq08K5U"
+        ],
+        "content_hash": "b3c3cc10101338f7f630cf141690f64c26f2a1cd3e478e440ae433c9a3f10fe0",
+        "evidence": [
+          {
+            "url": "https://www.youtube.com/watch?v=sPwEBq08K5U",
+            "published_at": "2026-11-21T21:09:11Z",
+            "retrieved_at": "2026-11-22T13:54:05.998Z",
+            "content_hash": "e1e970f595b023e550b079165f2381f7b6c151d1cc480df2daa0ceebdc2c9696",
+            "scope": "transcript"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=sPwEBq08K5U",
+            "published_at": "2026-11-21T21:09:11Z",
+            "retrieved_at": "2026-11-22T13:54:02.043Z",
+            "content_hash": "998b4a082e0de19980bbad6e2f3c10b8493d05c54a2ea20ea29dc13e3a69cba6",
+            "scope": "metadata"
+          }
+        ]
+      },
+      "provenance_hash": "4c7cb47de9796335ed672b37230eaf46f98ff9145209372281aacf4868d87950",
+      "content_hash": "b3c3cc10101338f7f630cf141690f64c26f2a1cd3e478e440ae433c9a3f10fe0"
+    },
+    {
+      "id": "wall-c6cdcb22ecd6ac448b58ebb9",
+      "section": "sports",
+      "source_id": "formula1-video",
+      "title": "Qualifying Highlights | 2026 Las Vegas Grand Prix",
+      "url": "https://www.youtube.com/watch?v=jiBlTDJ-mFw",
+      "published_at": "2026-11-20T21:51:41-08:00",
+      "first_seen_at": "2026-11-21T13:11:50Z",
+      "updated_at": "2026-11-21T13:11:50Z",
+      "format": "video",
+      "topics": [
+        "F1",
+        "Highlights",
+        "Race analysis"
+      ],
+      "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
+      "analysis": {
+        "text": "The commentary follows Ferrari’s Q2 exits, slipstream effects and Antonelli’s final fastest lap. It explicitly notes his five-place penalty, so qualifying order and the starting grid must be kept separate.",
+        "key_takeaway": "A quick qualifying recap: late improvements changed the order, while a penalty changes where the fastest driver starts. Check the current official grid before treating the commentary as the final lineup.",
+        "worth_reading": "skim",
+        "rationale": "Useful for the session’s turning points and the qualifying-versus-grid distinction; a highlight transcript cannot establish full-session pace or superseding steward decisions.",
+        "basis": "Full available English auto-caption transcript read through the original YouTube control: 65 segments, 0:03–7:44 of 8:00. Driver names contain transcription errors. No footage reviewed, and no final FIA grid independently checked for this viewing judgment.",
+        "video_citations": [
+          {
+            "start_seconds": 172,
+            "end_seconds": 206,
+            "note": "Commentary describes both Ferraris falling in Q2 after late improvements by rivals."
+          },
+          {
+            "start_seconds": 254,
+            "end_seconds": 284,
+            "note": "The broadcast discusses slipstreams during the first Q3 runs; one fast lap does not establish race pace."
+          },
+          {
+            "start_seconds": 366,
+            "end_seconds": 393,
+            "note": "Antonelli is described as fastest in qualifying but subject to a five-place grid drop; the orders differ."
+          }
+        ],
+        "scope": "transcript",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-21T13:15:48.654208+00:00",
+        "source_urls": [
+          "https://www.youtube.com/watch?v=jiBlTDJ-mFw"
+        ],
+        "content_hash": "4be14ee86cf641eae256b74a488dda4c9abe78e7719930cbd8dc6d286bea6421",
+        "evidence": [
+          {
+            "url": "https://www.youtube.com/watch?v=jiBlTDJ-mFw",
+            "published_at": "2026-11-20T21:51:41-08:00",
+            "retrieved_at": "2026-11-21T13:13:55.200Z",
+            "content_hash": "b5aef7f46f701a26ae476494f737fbf6b954d0b63c9fa3f67425e408a2d771d7",
+            "scope": "transcript"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=jiBlTDJ-mFw",
+            "published_at": "2026-11-20T21:51:41-08:00",
+            "retrieved_at": "2026-11-21T13:13:51.116Z",
+            "content_hash": "a28e79e29447fc04229a09e45e5a300b55f74051e373651d801e6d667b553f8d",
+            "scope": "metadata"
+          }
+        ]
+      },
+      "provenance_hash": "90215085323051cee6c7617db484e0618cb8af7df189dc35e1b5c0acc2cf2d2e",
+      "duration": "8:01",
+      "content_hash": "4be14ee86cf641eae256b74a488dda4c9abe78e7719930cbd8dc6d286bea6421"
+    },
+    {
+      "id": "wall-da76b95022d273edce9466c1",
+      "section": "sports",
+      "source_id": "thinking-basketball",
+      "title": "Cooper Flagg reminds me of Julius Erving",
+      "url": "https://www.youtube.com/watch?v=tPMzffc6ZSU",
+      "published_at": "2026-11-20T18:35:51-08:00",
+      "first_seen_at": "2026-11-21T13:11:50Z",
+      "updated_at": "2026-11-21T13:11:50Z",
+      "format": "video",
+      "topics": [
+        "NBA",
+        "Basketball analysis"
+      ],
+      "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
+      "analysis": {
+        "text": "Thinking Basketball compares Flagg’s airborne finishing and jump passing with Julius Erving’s style, then makes his higher offensive ceiling conditional on shooting and ball-handling development. The comparison is an analytical argument, not a career forecast established by the clips.",
+        "key_takeaway": "Look past the superstar comparison: tighter handling and reliable shot creation could unlock more passing options. Existing flashes do not guarantee an all-time-great outcome.",
+        "worth_reading": "dig_deeper",
+        "rationale": "The specific skill tradeoffs give you things to watch in later games; the creator’s statistics, samples and future projections were not independently verified.",
+        "basis": "Full available English auto-caption transcript read through the original YouTube control: 107 segments, 0:00–13:50 of 14:02. Names contain transcription errors. No footage or underlying statistics independently reviewed. The sponsor segment at 4:30–5:36 was not recommended or acted on; the separate members-only defense discussion was not accessed.",
+        "video_citations": [
+          {
+            "start_seconds": 151,
+            "end_seconds": 268,
+            "note": "The creator distinguishes reactive airborne passes from planned reads and explains how size helps find outlets."
+          },
+          {
+            "start_seconds": 347,
+            "end_seconds": 413,
+            "note": "High-release jump shots are presented as a counter to crowded drives; shooting consistency remains a swing skill."
+          },
+          {
+            "start_seconds": 613,
+            "end_seconds": 735,
+            "note": "The argument links ball control to stronger attacks and more attention available for playmaking."
+          }
+        ],
+        "scope": "transcript",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-21T13:15:48.654208+00:00",
+        "source_urls": [
+          "https://www.youtube.com/watch?v=tPMzffc6ZSU"
+        ],
+        "content_hash": "3e90b7fbfe513474c1a468032e2f4b2351a97db9f2f592b77827662e521b7e57",
+        "evidence": [
+          {
+            "url": "https://www.youtube.com/watch?v=tPMzffc6ZSU",
+            "published_at": "2026-11-20T18:35:51-08:00",
+            "retrieved_at": "2026-11-21T13:13:59.677Z",
+            "content_hash": "a241ac6376208c1a839bc15688dcee870b30b935d832ed77c74bb6f2223df9f4",
+            "scope": "transcript"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=tPMzffc6ZSU",
+            "published_at": "2026-11-20T18:35:51-08:00",
+            "retrieved_at": "2026-11-21T13:13:55.344Z",
+            "content_hash": "0a2246b12ce0a1fbb45cd8da9b159df54e415dfac741785887dc2948717ead44",
+            "scope": "metadata"
+          }
+        ]
+      },
+      "provenance_hash": "e9e7d233644ce015aae5acb0780e04ac940caea108a41c9008b1593d4045441c",
+      "duration": "14:02",
+      "content_hash": "3e90b7fbfe513474c1a468032e2f4b2351a97db9f2f592b77827662e521b7e57"
+    },
+    {
+      "id": "wall-69f69caf4f88883b7927c353",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Arizona Opens Criminal Investigation Into OpenAI Over Rogue AI Agents in Banks, Reuters Reports",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/arizona-criminal-investigation-openai-rogue-ai-agents-reuters/",
+      "published_at": "2026-11-20T09:25:45Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "Unusual Whales relays a Reuters report of an Arizona criminal investigation into OpenAI and other AI companies over alleged unauthorized agents inside banks. The official case record and Reuters original were not independently reviewed here. An investigation is not a finding of wrongdoing, and the blog supplies no measured effect on enterprise adoption or revenue.",
+        "key_takeaway": "If the reported probe is confirmed, agent access controls and accountability could become a bigger adoption cost for financial firms. It does not establish OpenAI liability or a revenue benefit for any security vendor.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Follow up the official investigation and original reporting before making an investment conclusion; bank access and agent accountability could be material, but this is a secondary lead.",
+        "basis": "Full canonical public Unusual Whales article read November 20; original publication date retained. This is a reading judgment on the blog’s attributed reporting and commentary, not independent verification of its underlying allegations, quoted market moves or financial claims. No login, paid material or account data accessed.",
+        "scope": "full_text",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-20T14:01:28.604080+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/arizona-criminal-investigation-openai-rogue-ai-agents-reuters/"
+        ],
+        "content_hash": "95266ef7d68620741aad924f3140655236c4250eaa5e8c965890ec1c8fdfb210",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/arizona-criminal-investigation-openai-rogue-ai-agents-reuters/",
+            "published_at": "2026-11-20T09:25:45Z",
+            "retrieved_at": "2026-11-20T13:59:41.840679+00:00",
+            "content_hash": "f5c6ee11665de43677603bc3d3bad7db5ae109b1652892925ac1e0ceb2a15b43",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "75df0336754d7f2d36d541e7537bf7675e6f3cd0994977af49943a7ee6c9a354",
+      "content_hash": "95266ef7d68620741aad924f3140655236c4250eaa5e8c965890ec1c8fdfb210"
+    },
+    {
+      "id": "wall-f182f62dc2c798ad9e385be1",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "AMD Stock Crashes After Hunterbrook Flags Potential China Export Violations",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/amd-stock-crashes-hunterbrook-china-export-report/",
+      "published_at": "2026-11-20T09:22:38Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "The blog relays Hunterbrook allegations about AMD firmware and a restricted Chinese server vendor, discloses Hunterbrook Capital’s short position, and attributes AMD’s denial to Bloomberg. Those competing claims were not independently adjudicated here. The article’s intraday price and options-flow assertions are not a verified current quote or proof of export violations.",
+        "key_takeaway": "Export enforcement could affect where AMD can sell, even when compute demand is strong. A short seller’s allegations and the company’s denial do not establish a violation, cancelled orders or lost revenue.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Check the underlying report, AMD’s response and any regulator action; separate the disclosed trading interest from the evidence and avoid treating a price move as proof.",
+        "basis": "Full canonical public Unusual Whales article read November 20; original publication date retained. This is a reading judgment on the blog’s attributed reporting and commentary, not independent verification of its underlying allegations, quoted market moves or financial claims. No login, paid material or account data accessed.",
+        "scope": "full_text",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-20T14:01:28.604080+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/amd-stock-crashes-hunterbrook-china-export-report/"
+        ],
+        "content_hash": "db293a25811c10e9a4923ed277624f052c71dee93e0e3b81011c5d33614c4e1d",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/amd-stock-crashes-hunterbrook-china-export-report/",
+            "published_at": "2026-11-20T09:22:38Z",
+            "retrieved_at": "2026-11-20T13:59:41.840995+00:00",
+            "content_hash": "e072ed2070fd0ebe358fd544a137a487046d7dcc0e92240b1b28b6a78afd786e",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "75df0336754d7f2d36d541e7537bf7675e6f3cd0994977af49943a7ee6c9a354",
+      "content_hash": "db293a25811c10e9a4923ed277624f052c71dee93e0e3b81011c5d33614c4e1d"
+    },
+    {
+      "id": "wall-8cac1dcf55cee7f7499cb6bf",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Petition to Reinstate Jensen Huang as Nvidia CEO Passes 200,000 Signatures",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/petition-reinstate-huang-passes-200000-signatures/",
+      "published_at": "2026-11-20T09:21:43Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "Unusual Whales describes a growing petition supporting Jensen Huang’s reinstatement and reports opposition from NVIDIA’s board. Petition counts, self-reported affiliations, quoted board statements and the article’s stock-performance claims were not independently checked here. A signature count is not a shareholder vote, verified employee survey or change of corporate control.",
+        "key_takeaway": "A petition signals reported dissatisfaction, not a leadership change or altered GPU demand. Official governance actions and customer execution would matter more to the operating outlook.",
+        "worth_reading": "skip",
+        "rationale": "Skip for today’s compute-demand and cash-flow decisions; this short update provides no verified change in orders, funding, delivery or management appointment.",
+        "basis": "Full canonical public Unusual Whales article read November 20; original publication date retained. This is a reading judgment on the blog’s attributed reporting and commentary, not independent verification of its underlying allegations, quoted market moves or financial claims. No login, paid material or account data accessed.",
+        "scope": "full_text",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-20T14:01:28.604080+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/petition-reinstate-huang-passes-200000-signatures/"
+        ],
+        "content_hash": "29b822bacca08667bb490b6ecec0f547dd64518ab5e0790824daf8b53057e528",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/petition-reinstate-huang-passes-200000-signatures/",
+            "published_at": "2026-11-20T09:21:43Z",
+            "retrieved_at": "2026-11-20T13:59:41.841184+00:00",
+            "content_hash": "190c95698aa0c43edab43eebdc8698ed52c9dc7783fa3b058159b0db5a561a99",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "75df0336754d7f2d36d541e7537bf7675e6f3cd0994977af49943a7ee6c9a354",
+      "content_hash": "29b822bacca08667bb490b6ecec0f547dd64518ab5e0790824daf8b53057e528"
+    },
+    {
+      "id": "wall-c5ebdc21e873bccd36e8ef70",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Western States Warned to Charge Phones and Stock Up as High Winds Threaten Power Outages",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/western-states-wind-warnings-power-outages-50000-california/",
+      "published_at": "2026-11-20T09:20:45Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "The November 20 blog attributes western US wind and outage warnings to the Daily Mail, but describes the warnings as occurring on Wednesday without resolving the event date. Utility notices and current outage counts were not checked. It identifies no affected AI data center, delivered-power change, generator order or realized financial impact.",
+        "key_takeaway": "General outage coverage does not establish an AI capacity interruption or extra generator revenue. This article’s unclear event timing also makes it unsuitable as a current safety or market alert.",
+        "worth_reading": "skip",
+        "rationale": "Skip for the AI buildout brief unless a dated utility or operator disclosure connects the event to an actual facility; no weather polling or current-alert verification was performed.",
+        "basis": "Full canonical public Unusual Whales article read November 20; original publication date retained. This is a reading judgment on the blog’s attributed reporting and commentary, not independent verification of its underlying allegations, quoted market moves or financial claims. No login, paid material or account data accessed.",
+        "scope": "full_text",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-20T14:01:28.604080+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/western-states-wind-warnings-power-outages-50000-california/"
+        ],
+        "content_hash": "96e61bafe0951320cef4397439d6874cd1ba34a4a0486bba1e2f8a2be1551d84",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/western-states-wind-warnings-power-outages-50000-california/",
+            "published_at": "2026-11-20T09:20:45Z",
+            "retrieved_at": "2026-11-20T13:59:41.841307+00:00",
+            "content_hash": "101edad8513ccf2626559d29ca80bd11bf51955b46e1126b1824acc8b426df4c",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "75df0336754d7f2d36d541e7537bf7675e6f3cd0994977af49943a7ee6c9a354",
+      "content_hash": "96e61bafe0951320cef4397439d6874cd1ba34a4a0486bba1e2f8a2be1551d84"
+    },
+    {
+      "id": "wall-7fa3cfb590d877a1e3046b99",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Anthropic's Nasdaq Debut Is Expected to Mint Thousands of Employee Millionaires",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-debut-mint-thousands-employee-millionaires/",
+      "published_at": "2026-11-20T09:19:46Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "Unusual Whales relays third-party estimates of employee equity wealth around Anthropic’s IPO; these are estimated paper values, not realized employee proceeds.",
+        "key_takeaway": "Employee paper wealth may affect retention and later selling incentives, but it is neither cash already received by staff nor money available to fund Anthropic’s compute.",
+        "worth_reading": "skim",
+        "rationale": "Skim for workforce context. Ownership assumptions, vesting, taxes and sale restrictions need stronger evidence before the wealth estimates support an investment conclusion.",
+        "scope": "full_text",
+        "confidence": "medium",
+        "basis": "Full original Unusual Whales article read on November 21. This is an assessment of the accessible article, not independent verification of its attributed estimates, claims or market figures. Original publication dates are retained.",
+        "reviewed_at": "2026-11-21T13:18:11.925270+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-debut-mint-thousands-employee-millionaires/"
+        ],
+        "content_hash": "a29571d20a4c4693d006a6aacd6febfe68122800317426d3d5598944b11aee46",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-debut-mint-thousands-employee-millionaires/",
+            "published_at": "2026-11-20T09:19:46.000Z",
+            "retrieved_at": "2026-11-21T13:13:23.073593+00:00",
+            "content_hash": "793e0e3aebc6504f605acb4dff9c1a493c779e7f6a1ddb994c4d5d48baeab8d1",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "75df0336754d7f2d36d541e7537bf7675e6f3cd0994977af49943a7ee6c9a354",
+      "content_hash": "a29571d20a4c4693d006a6aacd6febfe68122800317426d3d5598944b11aee46"
+    },
+    {
+      "id": "wall-26cfa2cc66328a13934f2198",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Anthropic Would Need About $602 Billion in Annual Revenue for a 20% Return on Its Compute Commitments, FT Reports",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-need-602-billion-revenue-20-percent-return-ft/",
+      "published_at": "2026-11-20T09:18:23Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "Unusual Whales attributes a roughly $602bn revenue scenario to the FT, using a 20% return, 17% tax rate and 40% operating margin against roughly $1tn of compute commitments.",
+        "key_takeaway": "The revenue figure follows stated assumptions, not company guidance. Multiyear contractual payments are not automatically an invested-capital balance; timing, scope and cancellability can change the comparison.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Useful as a prompt to test financing economics, but reconcile the original calculation and contract schedule before treating it as a required revenue target or forecast.",
+        "scope": "full_text",
+        "confidence": "medium",
+        "basis": "Full original Unusual Whales article read on November 21. This is an assessment of the accessible article, not independent verification of its attributed estimates, claims or market figures. Original publication dates are retained.",
+        "reviewed_at": "2026-11-21T13:18:11.925270+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-need-602-billion-revenue-20-percent-return-ft/"
+        ],
+        "content_hash": "94d42862103b23dd39e74795ae9edbc434492d56ebe751ce712d6dd345c46c95",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-need-602-billion-revenue-20-percent-return-ft/",
+            "published_at": "2026-11-20T09:18:23.000Z",
+            "retrieved_at": "2026-11-21T13:13:23.073934+00:00",
+            "content_hash": "f7fc41caad8e12916f0217cad37ddae8c43544b48f20bfa46009c81e700bd911",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "75df0336754d7f2d36d541e7537bf7675e6f3cd0994977af49943a7ee6c9a354",
+      "content_hash": "94d42862103b23dd39e74795ae9edbc434492d56ebe751ce712d6dd345c46c95"
+    },
+    {
+      "id": "wall-94b99287e0fbda9db3992b42",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Anthropic Shares Indicated to Open at $99.60, About 20% Above the IPO Price, Bloomberg Reports",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-indicated-open-99-60-above-ipo-price-bloomberg/",
+      "published_at": "2026-11-20T09:17:56Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "This November 20 post relays Bloomberg’s $99.60 pre-open indication and conditional valuation arithmetic; it does not report an executed trade at that price.",
+        "key_takeaway": "An opening indication is not an executed or current price, and secondary-market buying does not add to issuer proceeds. Use dated exchange and closing disclosures for the actual events.",
+        "worth_reading": "skip",
+        "rationale": "Skip for current pricing or funding: the article’s forward-looking debut language and publication date do not establish when the indication was valid, and its offer headline is not net issuer cash.",
+        "scope": "full_text",
+        "confidence": "medium",
+        "basis": "Full original Unusual Whales article read on November 21. This is an assessment of the accessible article, not independent verification of its attributed estimates, claims or market figures. Original publication dates are retained.",
+        "reviewed_at": "2026-11-21T13:18:11.925270+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-indicated-open-99-60-above-ipo-price-bloomberg/"
+        ],
+        "content_hash": "1202bcdd4eb951cadb1676c01065c4ff9808144fa33c0b6f93d01b67a8c687c3",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-indicated-open-99-60-above-ipo-price-bloomberg/",
+            "published_at": "2026-11-20T09:17:56.000Z",
+            "retrieved_at": "2026-11-21T13:13:23.074115+00:00",
+            "content_hash": "d82264261ddf23cc4651798635f526338d4f3632f65158c0ccfdd929dbbd2ff9",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "75df0336754d7f2d36d541e7537bf7675e6f3cd0994977af49943a7ee6c9a354",
+      "content_hash": "1202bcdd4eb951cadb1676c01065c4ff9808144fa33c0b6f93d01b67a8c687c3"
+    },
+    {
+      "id": "wall-bba751ed43ab218e28e5c3cd",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Ackman Says Nvidia's Board Had \"Major Governance Failures\" Over Huang's Return",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/ackman-nvidia-board-governance-failures-huang-return/",
+      "published_at": "2026-11-20T09:16:34Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "Unusual Whales reports Ackman’s criticism of NVIDIA’s board and his proposed shareholder route to challenge its leadership decision. The criticism and procedural claims are not independently verified here.",
+        "key_takeaway": "Investor pressure is not a board reversal or a completed shareholder action. Governance outcomes require issuer disclosures and valid voting procedures; commentary alone does not establish a leadership change.",
+        "worth_reading": "skim",
+        "rationale": "Skim for the attributed disagreement. Verify original statements and governing documents before relying on the reported voting threshold or a market-impact claim.",
+        "scope": "full_text",
+        "confidence": "medium",
+        "basis": "Full original Unusual Whales article read on November 21. This is an assessment of the accessible article, not independent verification of its attributed estimates, claims or market figures. Original publication dates are retained.",
+        "reviewed_at": "2026-11-21T13:18:11.925270+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/ackman-nvidia-board-governance-failures-huang-return/"
+        ],
+        "content_hash": "5a465e7e35b7f237ab13d57aa61cb29c14407a3bf6305c0a98441fd4a4e39e6e",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/ackman-nvidia-board-governance-failures-huang-return/",
+            "published_at": "2026-11-20T09:16:34.000Z",
+            "retrieved_at": "2026-11-21T13:13:23.074236+00:00",
+            "content_hash": "b0381c784cdf5f1700f8af24f489fd1562479efe9d94578a46b7f5c2fdc3e792",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "75df0336754d7f2d36d541e7537bf7675e6f3cd0994977af49943a7ee6c9a354",
+      "content_hash": "5a465e7e35b7f237ab13d57aa61cb29c14407a3bf6305c0a98441fd4a4e39e6e"
+    },
+    {
+      "id": "wall-5e6cb58b415d376e977b1cec",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Anthropic Researcher Says AI Will Likely Leave Almost All Humans Permanently Unemployable",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-researcher-ai-leave-humans-unemployable-welfare/",
+      "published_at": "2026-11-20T09:16:33Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "scope": "full_text",
+        "worth_reading": "skim",
+        "confidence": "high",
+        "text": "Unusual Whales reports researcher Tao Lin’s prediction of broad AI capability by late 2027 and eventual labor displacement. It also says he does not expect mass unemployment by 2027; this is an attributed forecast, not a measured employment result or Anthropic corporate guidance.",
+        "key_takeaway": "Capability forecasts and job losses have different timelines. The policy debate may matter for AI adoption, but this report provides no measured displacement or investment-return evidence.",
+        "rationale": "Skim for the distinction the headline obscures: the capability date is not a mass-unemployment deadline. The underlying interview was not reviewed or independently corroborated.",
+        "basis": "Read the complete public Unusual Whales article on November 22, including its qualification about 2027. This is review of secondary reporting, not the original Palisade Research interview or independent verification of the researcher’s forecast. The original November 20 publication date is preserved.",
+        "reviewed_at": "2026-11-22T13:54:43.882573+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-researcher-ai-leave-humans-unemployable-welfare/"
+        ],
+        "content_hash": "a3303970a547f2b7a0898b09518a77682d6ff4a37c198576bacc570808682d65",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/anthropic-researcher-ai-leave-humans-unemployable-welfare/",
+            "published_at": "2026-11-20T09:16:33.000Z",
+            "retrieved_at": "2026-11-22T13:53:49.943949+00:00",
+            "content_hash": "4ee601c2b65911b11d69375b97c608712a0bc62620b9a1d359d72874eb63da9c",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "75df0336754d7f2d36d541e7537bf7675e6f3cd0994977af49943a7ee6c9a354",
+      "content_hash": "a3303970a547f2b7a0898b09518a77682d6ff4a37c198576bacc570808682d65"
+    },
+    {
+      "id": "wall-3326ac8bf0f720fb1f9ec692",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "Now on Dear Media: The Wall Street Skinny",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-11-20",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "The exact publisher RSS entry describes a 74-second introduction promoting the show and its move to Dear Media.",
+        "key_takeaway": "This is show-introduction context rather than evidence of a market development. The promotion does not supply an investment implication or a reviewed audio argument.",
+        "rationale": "Unable to judge the actual trailer from promotional metadata. No transcript was supplied by the checked sources, and audio was not listened to.",
+        "scope": "metadata",
+        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 22. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
+        "worth_reading": "unavailable",
+        "confidence": "low",
+        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
+        "source_urls": [
+          "https://feeds.megaphone.fm/TTNSE2412391117",
+          "https://thewallstreetskinny.com/podcast/"
+        ],
+        "content_hash": "3be8825fae9bcd0b3f5a338ba3af664501858d9f040a846bab15bf41ec053aae",
+        "evidence": [
+          {
+            "url": "https://feeds.megaphone.fm/TTNSE2412391117",
+            "published_at": "2026-11-20T11:43:00+00:00",
+            "retrieved_at": "2026-11-22T13:53:51.851782+00:00",
+            "content_hash": "eb57fc3f362eaf19b09ff8a08f65dc43d8a728085e01d9a35507f6fd1ce0c8bf",
+            "scope": "metadata"
+          },
+          {
+            "url": "https://thewallstreetskinny.com/podcast/",
+            "published_at": null,
+            "retrieved_at": "2026-11-22T13:53:51.836168+00:00",
+            "content_hash": "eb9617073a30733c019545ce5c51802ac238c015bcb5e0fee8e421a1d7c33659",
+            "scope": "metadata"
+          }
+        ]
+      },
+      "provenance_hash": "eb57fc3f362eaf19b09ff8a08f65dc43d8a728085e01d9a35507f6fd1ce0c8bf",
+      "duration": "74",
+      "content_hash": "3be8825fae9bcd0b3f5a338ba3af664501858d9f040a846bab15bf41ec053aae"
+    },
+    {
+      "id": "wall-85d53ce3eb8192c4d3cd864e",
+      "section": "markets",
+      "source_id": "tevis-investing",
+      "title": "Leopold Blew Up AGAIN?! Here's What Billionaire Investors BOUGHT in Q3",
+      "url": "https://www.youtube.com/watch?v=IPRGJ49A3_g",
+      "published_at": "2026-11-19T08:05:53-08:00",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "video",
+      "topics": [
+        "Markets",
+        "Company analysis"
+      ],
+      "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
+      "analysis": {
+        "text": "Tevis compares managers’ September holdings and argues that AI exposure differs across chips, memory, storage and neoclouds. His caveats limit the headline: disclosed holdings-value changes and option notionals do not establish fund returns, and later losses or current positions are unknown.",
+        "key_takeaway": "Use these filings to identify research leads, not copy current trades. Stale holdings, option notionals and buy/sell counts cannot establish present conviction, cash invested or realized returns.",
+        "worth_reading": "skim",
+        "rationale": "The filing-limit sections are useful; the underlying filings and numerical claims were not independently verified for this viewing judgment.",
+        "basis": "Full available English auto-caption transcript read through the original YouTube control:109 segments, 0:00–13:55 of 14:05. Names contain transcription errors. No footage or underlying filings reviewed. The sponsored trading segment 12:04–12:49 was not recommended or acted on.",
+        "video_citations": [
+          {
+            "start_seconds": 139,
+            "end_seconds": 178,
+            "note": "Counts of portfolio changes are not dollars invested; September holdings do not show November transactions."
+          },
+          {
+            "start_seconds": 178,
+            "end_seconds": 230,
+            "note": "The creator distinguishes a 92% disclosed holdings-value reduction from an actual 92% fund loss."
+          },
+          {
+            "start_seconds": 264,
+            "end_seconds": 322,
+            "note": "Option notionals omit premiums, strikes and expiries; later losses cannot be inferred without updated positions."
+          }
+        ],
+        "scope": "transcript",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-20T14:01:24.072233+00:00",
+        "source_urls": [
+          "https://www.youtube.com/watch?v=IPRGJ49A3_g"
+        ],
+        "content_hash": "72ae63f772ae9aaa073fe7fc90bb790e005df816a7124e882a9ec12ef0894149",
+        "evidence": [
+          {
+            "url": "https://www.youtube.com/watch?v=IPRGJ49A3_g",
+            "published_at": "2026-11-19T08:05:53-08:00",
+            "retrieved_at": "2026-11-20T13:59:48.313Z",
+            "content_hash": "f1b735970a83055e8c59b0082c141deab5a077c283fb0e2d5f3821a35a77e93f",
+            "scope": "transcript"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=IPRGJ49A3_g",
+            "published_at": "2026-11-19T08:05:53-08:00",
+            "retrieved_at": "2026-11-20T13:59:44.071Z",
+            "content_hash": "c36f42209f0d482eefa2516589177206a9610f9bf82f7a52a1d0ca80d8568838",
+            "scope": "metadata"
+          }
+        ]
+      },
+      "provenance_hash": "92540905d9bdf6dc0041bac03b68d229c1746d1000371014f47e142e84ec9ce2",
+      "content_hash": "72ae63f772ae9aaa073fe7fc90bb790e005df816a7124e882a9ec12ef0894149"
+    },
+    {
       "id": "wall-91773ae1073d075855d9d7b3",
       "section": "markets",
       "source_id": "wall-street-skinny",
@@ -337,14 +1078,14 @@
       ],
       "summary": "",
       "analysis": {
-        "text": "The publisher description advertises a discussion of NVIDIA leadership, its software position and ecosystem financing. No episode transcript or audio was reviewed; its claims and argument cannot be assessed from that description.",
-        "key_takeaway": "The description provides topics, not evidence of changes in NVIDIA demand, cash generation or competitive strength. Use dated primary disclosures for those conclusions.",
-        "worth_reading": "unavailable",
-        "rationale": "Unable to judge the episode without its audio or transcript. The current publisher feed contains a description, not the spoken argument; the public homepage supplies no matching transcript link.",
-        "basis": "Current publisher RSS entry and public podcast homepage read November 19. The selected entry has no transcript element or episode webpage link; homepage links do not identify a transcript for this episode. Audio was not played or transcribed. Original episode date retained; descriptions and chapter headings are metadata only.",
+        "text": "The November 19 publisher synopsis frames a discussion of NVIDIA leadership allegations, CUDA and ecosystem financing. Its stock-move and competitive claims were not independently verified here.",
+        "key_takeaway": "A podcast description does not establish alleged events, the cause of a stock move or a loss of CUDA’s competitive advantage. Those conclusions require the argument and primary evidence.",
+        "rationale": "Unable to assess the episode’s evidence or reasoning: only the exact RSS description and show page were read; no transcript or audio content was reviewed.",
         "scope": "metadata",
+        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 22. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
+        "worth_reading": "unavailable",
         "confidence": "low",
-        "reviewed_at": "2026-11-19T13:54:52.112127+00:00",
+        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
         "source_urls": [
           "https://feeds.megaphone.fm/TTNSE2412391117",
           "https://thewallstreetskinny.com/podcast/"
@@ -353,16 +1094,16 @@
         "evidence": [
           {
             "url": "https://feeds.megaphone.fm/TTNSE2412391117",
-            "published_at": "2026-11-19T08:00:00Z",
-            "retrieved_at": "2026-11-19T13:52:34.102682+00:00",
-            "content_hash": "ec9d28ec34deb104c6b7df501eeefc72be4fb359d885f97cb2d264a02e8362d1",
+            "published_at": "2026-11-19T08:00:00+00:00",
+            "retrieved_at": "2026-11-22T13:53:51.851782+00:00",
+            "content_hash": "eb57fc3f362eaf19b09ff8a08f65dc43d8a728085e01d9a35507f6fd1ce0c8bf",
             "scope": "metadata"
           },
           {
             "url": "https://thewallstreetskinny.com/podcast/",
             "published_at": null,
-            "retrieved_at": "2026-11-19T13:52:50.816291+00:00",
-            "content_hash": "379cda8ae21288ef40379863c7884a071f438e0a5eee9fe9be3601db875c7ac7",
+            "retrieved_at": "2026-11-22T13:53:51.836168+00:00",
+            "content_hash": "eb9617073a30733c019545ce5c51802ac238c015bcb5e0fee8e421a1d7c33659",
             "scope": "metadata"
           }
         ]
@@ -1822,6 +2563,46 @@
       "content_hash": "d8e2b9044005b4cf7be7865cabccf8b5c4756b0023b920f53e032926bc3437b9"
     },
     {
+      "id": "wall-fa5fbc77514f2038dec2fc2f",
+      "section": "sports",
+      "source_id": "nba-communications",
+      "title": "Tempo wins top pick in 2027 WNBA Draft",
+      "url": "https://pr.nba.com/2027-nba-draft-lottery-results/",
+      "published_at": "2026-11-16T02:43:18Z",
+      "first_seen_at": "2026-11-20T13:58:14Z",
+      "updated_at": "2026-11-20T13:58:14Z",
+      "format": "article",
+      "topics": [
+        "WNBA"
+      ],
+      "summary": "",
+      "analysis": {
+        "scope": "full_text",
+        "confidence": "high",
+        "worth_reading": "skim",
+        "text": "Toronto won the first pick in the 2027 WNBA Draft, followed by Houston and Washington. The league release dates the lottery to November 15; its machine-readable publication timestamp is November 16 UTC. The draft is scheduled for April 12, 2027. The result determines selection order, not which players will be chosen or their future impact.",
+        "key_takeaway": "Toronto gains the first draft choice for its rebuild. This is WNBA roster-planning context, not a new NBA transaction or an already-selected player.",
+        "rationale": "Skim for the official draft order and traded-pick details; it is less relevant if your priority is current NBA games and players.",
+        "basis": "Full official public release, including the complete draft order and traded-pick notes, read on November 20. The visible release date is November 15; the retained machine-readable publication timestamp is November 16 UTC. Original source publication and review dates remain separate.",
+        "reviewed_at": "2026-11-20T14:00:36.808229+00:00",
+        "source_urls": [
+          "https://pr.nba.com/2027-nba-draft-lottery-results/"
+        ],
+        "content_hash": "69ff164ef8a2a9adb05fc11091180a7c99ffe35d055e01087b2166b86345fbbe",
+        "evidence": [
+          {
+            "url": "https://pr.nba.com/2027-nba-draft-lottery-results/",
+            "published_at": "2026-11-16T02:43:18Z",
+            "retrieved_at": "2026-11-20T13:59:27.731299+00:00",
+            "content_hash": "91590f6221130257102eedf5b656b71f028593240ad6edef40fc297f430504aa",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "c69cbc8ebf3d30131e541a652213eb0490fde714d51843486c84400272e52dc6",
+      "content_hash": "69ff164ef8a2a9adb05fc11091180a7c99ffe35d055e01087b2166b86345fbbe"
+    },
+    {
       "id": "wall-f75b68b0d05dedfef68398c1",
       "section": "sports",
       "source_id": "knicks-highlights",
@@ -2765,14 +3546,14 @@
       ],
       "summary": "Polymarket newsletter: BOND QUANT. Publisher commentary; forecasts are attributed claims, not verified probabilities.",
       "analysis": {
+        "text": "The accessible interview introduction describes Samba’s opt-in viewing measurement and demographic reach. The page stops before its candidate-by-candidate Bond assessment.",
+        "key_takeaway": "Audience reach measures viewing behavior, not a casting decision. The available excerpt does not establish that any actor’s market odds are mispriced.",
+        "rationale": "Unable to assess the advertised forecasting argument: the original page gates the candidate analysis behind subscription/sign-in. The interviewee’s measurement claims remain attributed.",
         "scope": "excerpt",
-        "confidence": "low",
+        "basis": "Read the accessible original-page excerpt on November 22 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
         "worth_reading": "unavailable",
-        "text": "The November 13 public interview excerpt describes Samba’s claimed opt-in television measurement and demographic segmentation. Access stops when the interviewer asks about Bond candidates, so the candidate ranking and predictive case were not reviewed.",
-        "key_takeaway": "Audience measurement can describe viewing patterns; it does not establish who will be cast as Bond. The article’s central prediction remains inaccessible.",
-        "rationale": "Unable to judge the full argument: only the measurement-method introduction and early answers were accessible, not the Bond analysis.",
-        "basis": "Public excerpt read on November 19. Stopped at the displayed sign-in/subscription gate; no gated continuation was accessed. Original publication date retained; review date is separate.",
-        "reviewed_at": "2026-11-19T13:53:16.465568+00:00",
+        "confidence": "low",
+        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
         "source_urls": [
           "https://news.polymarket.com/p/bond-quant"
         ],
@@ -2780,9 +3561,9 @@
         "evidence": [
           {
             "url": "https://news.polymarket.com/p/bond-quant",
-            "published_at": "2026-11-13T02:02:40Z",
-            "retrieved_at": "2026-11-19T13:51:56.206515+00:00",
-            "content_hash": "161f2f3cd5bb06057fb2365c469dcf827adcfdb60e0deed7a095fbe6f7e0e721",
+            "published_at": "2026-11-13T02:02:40+00:00",
+            "retrieved_at": "2026-11-22T13:53:51.664447+00:00",
+            "content_hash": "333f6b771ff23521b2fa8a791f7cd0e1d35173e94f750d54fcadc0764a5e606b",
             "scope": "excerpt"
           }
         ]
@@ -3187,14 +3968,14 @@
       ],
       "summary": "",
       "analysis": {
-        "text": "The publisher description advertises a discussion with Jason Reed about Anthropic valuation, compute costs, infrastructure obligations and model competition. These are listed topics, not an independently reviewed thesis or verification of the episode’s figures.",
-        "key_takeaway": "This November 12 episode predates final pricing. Its description cannot establish current IPO economics or whether the valuation argument is persuasive.",
-        "worth_reading": "unavailable",
-        "rationale": "Unable to judge the episode without its audio or transcript. The current publisher feed contains a description, not the spoken argument; the public homepage supplies no matching transcript link.",
-        "basis": "Current publisher RSS entry and public podcast homepage read November 19. The selected entry has no transcript element or episode webpage link; homepage links do not identify a transcript for this episode. Audio was not played or transcribed. Original episode date retained; descriptions and chapter headings are metadata only.",
+        "text": "The November 12 publisher description advertises a Jason Reed interview about compute costs, contractual obligations and AI valuation; it predates the later IPO closing.",
+        "key_takeaway": "The synopsis supplies topics, not enough assumptions to assess the valuation argument. Historical educational discussion should remain separate from current issuer funding and market pricing.",
+        "rationale": "Unable to judge the interview without its actual audio or transcript. The checked publisher sources supplied metadata, not the underlying analysis.",
         "scope": "metadata",
+        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 22. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
+        "worth_reading": "unavailable",
         "confidence": "low",
-        "reviewed_at": "2026-11-19T13:54:52.112127+00:00",
+        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
         "source_urls": [
           "https://feeds.megaphone.fm/TTNSE2412391117",
           "https://thewallstreetskinny.com/podcast/"
@@ -3203,16 +3984,16 @@
         "evidence": [
           {
             "url": "https://feeds.megaphone.fm/TTNSE2412391117",
-            "published_at": "2026-11-12T23:24:00Z",
-            "retrieved_at": "2026-11-19T13:52:34.102682+00:00",
-            "content_hash": "ec9d28ec34deb104c6b7df501eeefc72be4fb359d885f97cb2d264a02e8362d1",
+            "published_at": "2026-11-12T23:24:00+00:00",
+            "retrieved_at": "2026-11-22T13:53:51.851782+00:00",
+            "content_hash": "eb57fc3f362eaf19b09ff8a08f65dc43d8a728085e01d9a35507f6fd1ce0c8bf",
             "scope": "metadata"
           },
           {
             "url": "https://thewallstreetskinny.com/podcast/",
             "published_at": null,
-            "retrieved_at": "2026-11-19T13:52:50.816291+00:00",
-            "content_hash": "379cda8ae21288ef40379863c7884a071f438e0a5eee9fe9be3601db875c7ac7",
+            "retrieved_at": "2026-11-22T13:53:51.836168+00:00",
+            "content_hash": "eb9617073a30733c019545ce5c51802ac238c015bcb5e0fee8e421a1d7c33659",
             "scope": "metadata"
           }
         ]
@@ -3439,14 +4220,14 @@
       ],
       "summary": "",
       "analysis": {
-        "text": "The publisher description and chapter list advertise discussion of NVIDIA oversight allegations, ecosystem exposure and early Anthropic price talk. A chapter list is not a transcript, and the allegations and conclusions were not independently verified here.",
-        "key_takeaway": "Keep November 11 price talk and allegations dated. The listing alone cannot establish final offer terms, a confirmed governance outcome or financing effects.",
-        "worth_reading": "unavailable",
-        "rationale": "Unable to judge the episode without its audio or transcript. The current publisher feed contains a description, not the spoken argument; the public homepage supplies no matching transcript link.",
-        "basis": "Current publisher RSS entry and public podcast homepage read November 19. The selected entry has no transcript element or episode webpage link; homepage links do not identify a transcript for this episode. Audio was not played or transcribed. Original episode date retained; descriptions and chapter headings are metadata only.",
+        "text": "The November 11 publisher synopsis describes allegations involving NVIDIA leadership, industry dependence and Anthropic IPO price talk. Its chapter list is not a transcript and does not establish the allegations.",
+        "key_takeaway": "The episode predates the IPO closing. Its pricing discussion and governance allegations need dated primary evidence; no conclusion about misconduct or financing follows from this description.",
+        "rationale": "Unable to judge the episode itself: the checked publisher page and exact RSS entry supplied descriptions and chapter headings, not a transcript; audio was not reviewed.",
         "scope": "metadata",
+        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 22. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
+        "worth_reading": "unavailable",
         "confidence": "low",
-        "reviewed_at": "2026-11-19T13:54:52.112127+00:00",
+        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
         "source_urls": [
           "https://feeds.megaphone.fm/TTNSE2412391117",
           "https://thewallstreetskinny.com/podcast/"
@@ -3455,16 +4236,16 @@
         "evidence": [
           {
             "url": "https://feeds.megaphone.fm/TTNSE2412391117",
-            "published_at": "2026-11-11T11:00:00Z",
-            "retrieved_at": "2026-11-19T13:52:34.102682+00:00",
-            "content_hash": "ec9d28ec34deb104c6b7df501eeefc72be4fb359d885f97cb2d264a02e8362d1",
+            "published_at": "2026-11-11T11:00:00+00:00",
+            "retrieved_at": "2026-11-22T13:53:51.851782+00:00",
+            "content_hash": "eb57fc3f362eaf19b09ff8a08f65dc43d8a728085e01d9a35507f6fd1ce0c8bf",
             "scope": "metadata"
           },
           {
             "url": "https://thewallstreetskinny.com/podcast/",
             "published_at": null,
-            "retrieved_at": "2026-11-19T13:52:50.816291+00:00",
-            "content_hash": "379cda8ae21288ef40379863c7884a071f438e0a5eee9fe9be3601db875c7ac7",
+            "retrieved_at": "2026-11-22T13:53:51.836168+00:00",
+            "content_hash": "eb9617073a30733c019545ce5c51802ac238c015bcb5e0fee8e421a1d7c33659",
             "scope": "metadata"
           }
         ]
@@ -3797,14 +4578,14 @@
       ],
       "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
       "analysis": {
-        "text": "Formula 1 lists selected onboard highlights from São Paulo. The original watch page exposes metadata but no accessible caption tracks or transcript; the racing footage and audio have not been reviewed.",
-        "key_takeaway": "The title identifies an onboard compilation, but it cannot establish which moments are useful or support a driver-performance conclusion.",
+        "text": "Formula 1 lists selected onboard highlights from São Paulo. The original watch page provides metadata but exposes no caption tracks or transcript control. Racing footage and audio were not reviewed.",
+        "key_takeaway": "This is a dated onboard compilation, not newly reviewed race analysis. The title and description cannot establish useful moments or a driver-performance conclusion.",
         "worth_reading": "unavailable",
-        "rationale": "Unable to judge the actual video without footage or transcript access; no timestamped recommendation is invented.",
-        "basis": "Exact original watch-page metadata and publication date inspected November 19. No caption tracks, transcript control or segments were exposed. No audio, footage or third-party transcript reviewed. Existing source-level external-watch policy preserved.",
+        "rationale": "No accessible transcript was exposed, and footage was not substantively reviewed. No content-based recommendation or timestamp is invented.",
+        "basis": "Exact original public watch page and publication metadata inspected November 22. No caption tracks, transcript control or transcript segments exposed. No audio, footage or third-party transcript reviewed. Existing source-level external-watch policy preserved.",
         "scope": "metadata",
         "confidence": "low",
-        "reviewed_at": "2026-11-19T13:54:52.112127+00:00",
+        "reviewed_at": "2026-11-22T13:55:30.285485+00:00",
         "source_urls": [
           "https://www.youtube.com/watch?v=_09gPxeE_gc"
         ],
@@ -3813,14 +4594,14 @@
           {
             "url": "https://www.youtube.com/watch?v=_09gPxeE_gc",
             "published_at": "2026-11-10T11:30:09Z",
-            "retrieved_at": "2026-11-19T13:52:31.238Z",
-            "content_hash": "c642ab87f19e43737ac06aab9add21ba218f028e8e142eac864c1116e8b48b29",
+            "retrieved_at": "2026-11-22T13:54:07.649Z",
+            "content_hash": "80cca153b3051a33f4d529013bbdfd82e5110bdaa11ec4beefc1cfdc8bc2fa74",
             "scope": "metadata"
           },
           {
             "url": "https://www.youtube.com/watch?v=_09gPxeE_gc",
             "published_at": "2026-11-10T11:30:09Z",
-            "retrieved_at": "2026-11-19T13:52:31.238Z",
+            "retrieved_at": "2026-11-22T13:54:07.649Z",
             "content_hash": null,
             "scope": "unavailable"
           }
@@ -4988,13 +5769,13 @@
       "summary": "",
       "analysis": {
         "scope": "metadata",
-        "confidence": "low",
         "worth_reading": "unavailable",
-        "text": "The November 7 F1 page describes an Interlagos in-race betting article, but the fetched public page exposes no readable article body. Its race scenarios and probability reasoning could not be inspected.",
-        "key_takeaway": "No supported race takeaway is available from this response. Historical betting context must not be presented as current race analysis.",
-        "rationale": "Unable to judge: only publisher metadata and navigation were accessible.",
-        "basis": "Public page title/description metadata inspected on November 19; the response exposed no readable article body. No hidden or restricted continuation was accessed. Original publication date retained; review date is separate.",
-        "reviewed_at": "2026-11-19T13:53:16.465568+00:00",
+        "confidence": "low",
+        "text": "The original Sao Paulo page exposes a title and description for in-race betting commentary, but the public response contains no readable article body.",
+        "key_takeaway": "No race scenario analysis was reviewed. Historical betting metadata cannot establish current probabilities, results or a useful betting recommendation.",
+        "rationale": "Unable to judge: only publisher metadata and site navigation were accessible, with no substantive article text.",
+        "basis": "Inspected the canonical public page and its title, description and publication metadata on November 22. No article body was present in the ordinary response; no alternative restricted route was attempted. Original publication was November 7.",
+        "reviewed_at": "2026-11-22T13:54:43.882573+00:00",
         "source_urls": [
           "https://www.formula1.com/en/latest/article/what-could-turn-the-race-on-its-head-during-the-sao-paulo-grand-prix.6KujQenlA32et55AiQrTyB"
         ],
@@ -5003,8 +5784,8 @@
           {
             "url": "https://www.formula1.com/en/latest/article/what-could-turn-the-race-on-its-head-during-the-sao-paulo-grand-prix.6KujQenlA32et55AiQrTyB",
             "published_at": "2026-11-07T08:31:47.904Z",
-            "retrieved_at": "2026-11-19T13:51:55.968060+00:00",
-            "content_hash": "5f1c4cbbc44cac2f195c0d0601119ef55aa9b247ba3af2cfca622dc59bf8b326",
+            "retrieved_at": "2026-11-22T13:53:49.944437+00:00",
+            "content_hash": "79bc16b96b6a6eb0e6aa6e0c900d7df4df3da986bd01a00f3579f737befeac84",
             "scope": "metadata"
           }
         ]
@@ -5068,13 +5849,13 @@
       "summary": "",
       "analysis": {
         "scope": "excerpt",
-        "confidence": "low",
         "worth_reading": "unavailable",
-        "text": "The November 7 public introduction reports Antonelli’s strong Friday practice and narrow margins, then stops at the F1 Unlocked sign-in gate. The full comparison of teams, pace and race prospects was not accessible.",
-        "key_takeaway": "A practice-session lead is limited historical context, not evidence of the eventual race outcome. The deeper pace analysis remains unreviewed.",
-        "rationale": "Unable to judge the full debrief: the response provides only its introduction and initial answer.",
-        "basis": "Public excerpt read on November 19. Stopped at the displayed sign-in/subscription gate; no gated continuation was accessed. Original publication date retained; review date is separate.",
-        "reviewed_at": "2026-11-19T13:53:16.465568+00:00",
+        "confidence": "low",
+        "text": "The accessible practice debrief says Antonelli led Sao Paulo’s second practice after narrowly trailing Norris in the first session. The underlying comparative analysis is behind the F1 Unlocked gate.",
+        "key_takeaway": "A practice-leading lap alone does not establish race pace. The missing analysis prevents assessing Mercedes’ full advantage, and this is a November 7 preview rather than a current result.",
+        "rationale": "Unable to judge the full practice analysis: only the introduction and first answer were accessible.",
+        "basis": "Read the visible public excerpt and publication metadata on November 22, then stopped at the explicit F1 Unlocked sign-in/register gate. No restricted continuation or login was used. Original publication was November 7.",
+        "reviewed_at": "2026-11-22T13:54:43.882573+00:00",
         "source_urls": [
           "https://www.formula1.com/en/latest/article/can-mercedes-keep-their-rivals-at-bay-in-sao-paulo.7eVy5I4aTwZqm4N1WE2rBX"
         ],
@@ -5083,8 +5864,8 @@
           {
             "url": "https://www.formula1.com/en/latest/article/can-mercedes-keep-their-rivals-at-bay-in-sao-paulo.7eVy5I4aTwZqm4N1WE2rBX",
             "published_at": "2026-11-07T07:34:05.419Z",
-            "retrieved_at": "2026-11-19T13:51:56.345523+00:00",
-            "content_hash": "4c2c10ba9fbfd8620d75db71290595f0b24fc71932615870c46fb1d94396cdbc",
+            "retrieved_at": "2026-11-22T13:53:49.944553+00:00",
+            "content_hash": "5dec6e39e9d9f76291eb5564c0c25b468e04304cb22c91bfe7b81371eb6337dc",
             "scope": "excerpt"
           }
         ]
@@ -5652,14 +6433,14 @@
       ],
       "summary": "Polymarket newsletter: AFTER THE TSUNAMI. Publisher commentary; forecasts are attributed claims, not verified probabilities.",
       "analysis": {
+        "text": "The accessible November 6 excerpt argues that local political opposition could constrain later data-center construction, citing third-party ballot and planned-capacity estimates. The rest is gated.",
+        "key_takeaway": "Permitting opposition can delay future supply without demonstrating weaker paid AI demand. The excerpt does not verify affected sites, delivery dates or the newsletter’s repricing thesis.",
+        "rationale": "Unable to judge the complete analysis: the original stops before its market-repricing section. The cited ballot and capacity estimates were not independently verified in this bounded review.",
         "scope": "excerpt",
-        "confidence": "low",
+        "basis": "Read the accessible original-page excerpt on November 22 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
         "worth_reading": "unavailable",
-        "text": "The November 6 introduction argues that local political opposition may weigh more on future data-center projects than those already under construction. Its cited ballot and capacity figures were not independently checked here; the later market-repricing discussion is gated.",
-        "key_takeaway": "Permitting risk can differ between proposed and already-building capacity. This excerpt does not establish cancellations, delivered power or lower paid AI demand.",
-        "rationale": "Unable to judge the full piece: only the opening data-center argument was readable, before the subscription/sign-in gate.",
-        "basis": "Public excerpt read on November 19. Stopped at the displayed sign-in/subscription gate; no gated continuation was accessed. Original publication date retained; review date is separate.",
-        "reviewed_at": "2026-11-19T13:53:16.465568+00:00",
+        "confidence": "low",
+        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
         "source_urls": [
           "https://news.polymarket.com/p/after-the-tsunami"
         ],
@@ -5667,9 +6448,9 @@
         "evidence": [
           {
             "url": "https://news.polymarket.com/p/after-the-tsunami",
-            "published_at": "2026-11-06T18:09:58Z",
-            "retrieved_at": "2026-11-19T13:51:56.394442+00:00",
-            "content_hash": "1fd7540be63969792ded716e03e2d4f48b5b87ade085b840d0d1b933346c429d",
+            "published_at": "2026-11-06T18:09:58+00:00",
+            "retrieved_at": "2026-11-22T13:53:51.664638+00:00",
+            "content_hash": "ebb5b9fefc8557488659167c1b362b4e91d21c0534096c3d47fb6115cecacf76",
             "scope": "excerpt"
           }
         ]
@@ -5848,14 +6629,14 @@
       ],
       "summary": "",
       "analysis": {
-        "text": "The publisher description proposes a SpaceX–Tesla strategic thesis and discusses GPU leasing and funding. No audio or transcript was reviewed; the listing is not evidence of an actual transaction or a demonstrated financing need.",
-        "key_takeaway": "The proposed corporate connection is a publisher thesis. A description cannot establish a transaction, settled funding or the costs and risks of a lease.",
-        "worth_reading": "unavailable",
-        "rationale": "Unable to judge the episode without its audio or transcript. The current publisher feed contains a description, not the spoken argument; the public homepage supplies no matching transcript link.",
-        "basis": "Current publisher RSS entry and public podcast homepage read November 19. The selected entry has no transcript element or episode webpage link; homepage links do not identify a transcript for this episode. Audio was not played or transcribed. Original episode date retained; descriptions and chapter headings are metadata only.",
+        "text": "The publisher describes a historical November 5 discussion of GPU leases, SpaceX financing and a possible Tesla relationship. Its synopsis is a description of the hosts’ thesis, not a deal announcement.",
+        "key_takeaway": "The synopsis does not establish a SpaceX–Tesla transaction or a financing outcome. The lease-accounting argument remains unassessed without the episode’s actual content.",
+        "rationale": "Unable to judge the episode: only its publisher description was read; no transcript was supplied by the checked sources and the audio was not listened to.",
         "scope": "metadata",
         "confidence": "low",
-        "reviewed_at": "2026-11-19T13:54:52.112127+00:00",
+        "worth_reading": "unavailable",
+        "basis": "Read the exact-title and GUID-matched publisher RSS description and the public show landing page on November 21. No transcript was supplied in the selected feed entry or checked page. Audio was not listened to; this is publisher metadata, not a content review. Episode dates remain separate from review time.",
+        "reviewed_at": "2026-11-21T13:18:11.925270+00:00",
         "source_urls": [
           "https://feeds.megaphone.fm/TTNSE2412391117",
           "https://thewallstreetskinny.com/podcast/"
@@ -5864,16 +6645,16 @@
         "evidence": [
           {
             "url": "https://feeds.megaphone.fm/TTNSE2412391117",
-            "published_at": "2026-11-05T08:00:00Z",
-            "retrieved_at": "2026-11-19T13:52:34.102682+00:00",
-            "content_hash": "ec9d28ec34deb104c6b7df501eeefc72be4fb359d885f97cb2d264a02e8362d1",
+            "published_at": "2026-11-05T08:00:00+00:00",
+            "retrieved_at": "2026-11-21T13:13:23.302982+00:00",
+            "content_hash": "eb57fc3f362eaf19b09ff8a08f65dc43d8a728085e01d9a35507f6fd1ce0c8bf",
             "scope": "metadata"
           },
           {
             "url": "https://thewallstreetskinny.com/podcast/",
             "published_at": null,
-            "retrieved_at": "2026-11-19T13:52:50.816291+00:00",
-            "content_hash": "379cda8ae21288ef40379863c7884a071f438e0a5eee9fe9be3601db875c7ac7",
+            "retrieved_at": "2026-11-21T13:13:23.298120+00:00",
+            "content_hash": "27d9b8c93f5c73b37c525f83528a7b353e75970ff69bf476c5fcb2824a236290",
             "scope": "metadata"
           }
         ]
@@ -6331,13 +7112,13 @@
       "summary": "",
       "analysis": {
         "scope": "excerpt",
-        "confidence": "low",
         "worth_reading": "unavailable",
-        "text": "The November 4 technical introduction describes a changed Mercedes front-wing element layout and contrasts the original wing’s straight-line-mode movement. It stops before the complete explanation of setup, trade-offs and performance.",
-        "key_takeaway": "A design change alone does not explain the whole performance gain. The full technical case is inaccessible, so no causal verdict is supported.",
-        "rationale": "Unable to judge the complete analysis: only two introductory technical paragraphs are public before F1 Unlocked sign-in.",
-        "basis": "Public excerpt read on November 19. Stopped at the displayed sign-in/subscription gate; no gated continuation was accessed. Original publication date retained; review date is separate.",
-        "reviewed_at": "2026-11-19T13:53:16.465568+00:00",
+        "confidence": "low",
+        "text": "The public opening describes Mercedes’ front-wing debut and the older design’s limited flap movement in straight-line mode. The explanation of how the revised design reached its effective operating range is gated.",
+        "key_takeaway": "The excerpt identifies a design constraint, but it cannot establish the upgrade’s complete mechanism or performance gain. Treat this as partial historical technical context.",
+        "rationale": "Unable to judge the full technical explanation because the article stops at the F1 Unlocked sign-in gate.",
+        "basis": "Read the visible introductory paragraphs and publication metadata on November 22. Stopped at the explicit F1 Unlocked sign-in/register gate without accessing restricted content. Original publication was November 4.",
+        "reviewed_at": "2026-11-22T13:54:43.882573+00:00",
         "source_urls": [
           "https://www.formula1.com/en/latest/article/how-mercedes-got-their-temperamental-front-wing-upgrade-in-the-sweet-spot.1aj2enCvE05FHuszFII7yI"
         ],
@@ -6346,8 +7127,8 @@
           {
             "url": "https://www.formula1.com/en/latest/article/how-mercedes-got-their-temperamental-front-wing-upgrade-in-the-sweet-spot.1aj2enCvE05FHuszFII7yI",
             "published_at": "2026-11-04T10:30:30.197Z",
-            "retrieved_at": "2026-11-19T13:51:56.394634+00:00",
-            "content_hash": "2419fb87cb501c5e4a5f753bf31f2ba4de498ba44b687fc5638261df91eb681d",
+            "retrieved_at": "2026-11-22T13:53:49.944666+00:00",
+            "content_hash": "3f4868df4aee777a2d9f7a5b0fa0d6e82eadda42084287f56ffa57620a58ad60",
             "scope": "excerpt"
           }
         ]
@@ -6371,13 +7152,13 @@
       "summary": "",
       "analysis": {
         "scope": "metadata",
+        "text": "The original November 3 page identifies a Sao Paulo betting preview, but today’s public response contains only navigation and title/description metadata. The driver list and supporting analysis were not readable.",
+        "key_takeaway": "No driver comparison was reviewed. This historical betting headline cannot establish current probabilities, race results or a useful present-day pick.",
+        "rationale": "Unable to judge: the ordinary public page did not expose the article body.",
         "confidence": "low",
         "worth_reading": "unavailable",
-        "text": "The November 3 F1 page identifies a historical Sao Paulo betting preview, but the public response contains navigation and description metadata without a readable article body. No drivers, odds or supporting analysis were available to assess.",
-        "key_takeaway": "The preview cannot be judged from its title. Any historical odds would not be current probabilities or a race result.",
-        "rationale": "Unable to judge: the original article body was not available; no betting or sporting conclusion is inferred from metadata.",
-        "basis": "Public page title/description metadata inspected on November 19; the response exposed no readable article body. No hidden or restricted continuation was accessed. Original publication date retained; review date is separate.",
-        "reviewed_at": "2026-11-19T13:53:16.465568+00:00",
+        "basis": "Public title and description metadata inspected on November 21; no readable article body was present. No restricted continuation was accessed. Original publication and review dates remain separate.",
+        "reviewed_at": "2026-11-21T13:14:47.342757+00:00",
         "source_urls": [
           "https://www.formula1.com/en/latest/article/the-5-drivers-most-likely-to-win-the-sao-paulo-grand-prix-according-to-the-betting-markets.4bzkRPAjDqrOZ9EH6cwwoB"
         ],
@@ -6386,8 +7167,8 @@
           {
             "url": "https://www.formula1.com/en/latest/article/the-5-drivers-most-likely-to-win-the-sao-paulo-grand-prix-according-to-the-betting-markets.4bzkRPAjDqrOZ9EH6cwwoB",
             "published_at": "2026-11-03T22:13:36.642Z",
-            "retrieved_at": "2026-11-19T13:51:55.967822+00:00",
-            "content_hash": "6d5d36b34a3263b45e58f2d0101736dfacb5e25b984c372577510e76e6226c11",
+            "retrieved_at": "2026-11-21T13:13:35.307449+00:00",
+            "content_hash": "c2c80e27230ddf40ecef8134fa67dba899a0d6ccf33154d3958c73be37ce9304",
             "scope": "metadata"
           }
         ]
@@ -6640,11 +7421,11 @@
         "scope": "excerpt",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "key_takeaway": "Palmer’s visible introduction praises Antonelli’s season and Monza win, but his detailed assessment is gated. It cannot establish which performance lessons the full analysis supports.",
-        "text": "The opening presents consistency and confidence as strengths before beginning an example from Monza. The rest of the season comparison and supporting moments were inaccessible; this is November 3 commentary, not a new race result.",
-        "basis": "Original public introduction read before the F1 Unlocked sign-in/register gate. Original November 3 publication date verified and retained; full article, footage and independent performance comparisons not reviewed.",
-        "rationale": "Unable to assess the complete driver analysis from its introductory praise and one unfinished example.",
-        "reviewed_at": "2026-11-18T13:14:47.957358+00:00",
+        "text": "Palmer’s accessible introduction praises Antonelli’s composure and mentions Monza, but the analysis ends at the F1 Unlocked sign-in gate before its full examples and argument can be read.",
+        "key_takeaway": "The opening supports only Palmer’s broad assessment. It does not establish which detailed moments best explain the title campaign, and it is historical analysis rather than new race news.",
+        "rationale": "Unable to judge the complete analysis because only the opening paragraphs were publicly accessible.",
+        "basis": "Read the visible introductory excerpt and publication metadata on November 22. Stopped at the explicit F1 Unlocked sign-in/register gate; no login or restricted continuation accessed. Original publication was November 3.",
+        "reviewed_at": "2026-11-22T13:54:43.882573+00:00",
         "source_urls": [
           "https://www.formula1.com/en/latest/article/the-key-moments-that-impressed-me-most-in-antonellis-title-campaign.37DKCZ2ntXn8PNuOtMFv8q"
         ],
@@ -6653,8 +7434,8 @@
           {
             "url": "https://www.formula1.com/en/latest/article/the-key-moments-that-impressed-me-most-in-antonellis-title-campaign.37DKCZ2ntXn8PNuOtMFv8q",
             "published_at": "2026-11-03T16:38:49.553Z",
-            "retrieved_at": "2026-11-18T13:13:21.546773+00:00",
-            "content_hash": "d8223783713bafe598f0617bcfa0cf768d65b861f3fb504fcb9af2a6fe4cc40f",
+            "retrieved_at": "2026-11-22T13:53:49.944312+00:00",
+            "content_hash": "6e916b5331afcc3951b77364b4893a179faacf0ea404adf33dd16f6df43f2246",
             "scope": "excerpt"
           }
         ]
@@ -6677,14 +7458,14 @@
       ],
       "summary": "Polymarket newsletter: GAME TIME. Publisher commentary; forecasts are attributed claims, not verified probabilities.",
       "analysis": {
+        "text": "The accessible November 3 introduction identifies Brian Golden as a prediction-market trader interviewed before the midterms. It ends at the first question, before his answer.",
+        "key_takeaway": "The introduction contains no assessable election-night strategy, edge or track record. It is historical interview context, not current trading guidance.",
+        "rationale": "Unable to judge the interview because the answers require subscription/sign-in. No conclusions or recommendations were inferred from its headline.",
         "scope": "excerpt",
-        "confidence": "low",
+        "basis": "Read the accessible original-page excerpt on November 22 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
         "worth_reading": "unavailable",
-        "text": "The November 3 introduction identifies a prediction-market trader discussing election-night vote reading. Access stops at the first substantive question, before his answers or strategy are visible.",
-        "key_takeaway": "No usable strategy or forecast was reviewed. This historical interview introduction is not current election evidence or a trading recommendation.",
-        "rationale": "Unable to judge: the interview’s substantive answers are behind a subscription/sign-in gate.",
-        "basis": "Public excerpt read on November 19. Stopped at the displayed sign-in/subscription gate; no gated continuation was accessed. Original publication date retained; review date is separate.",
-        "reviewed_at": "2026-11-19T13:53:16.465568+00:00",
+        "confidence": "low",
+        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
         "source_urls": [
           "https://news.polymarket.com/p/game-time"
         ],
@@ -6692,9 +7473,9 @@
         "evidence": [
           {
             "url": "https://news.polymarket.com/p/game-time",
-            "published_at": "2026-11-03T16:12:12Z",
-            "retrieved_at": "2026-11-19T13:51:56.589470+00:00",
-            "content_hash": "304a6e25fbd9f1a428a5d5382791b8f446f375916e765427344f061dc907c180",
+            "published_at": "2026-11-03T16:12:12+00:00",
+            "retrieved_at": "2026-11-22T13:53:51.664752+00:00",
+            "content_hash": "f65acf0be65488b9988581472393a477335fe309097375e5c1d7417b6a14171a",
             "scope": "excerpt"
           }
         ]
@@ -6719,14 +7500,14 @@
       ],
       "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
       "analysis": {
-        "text": "Formula 1 lists selected onboard highlights from Mexico City. The original watch page exposes metadata but no accessible caption tracks or transcript; the racing footage and audio have not been reviewed.",
-        "key_takeaway": "The title identifies an onboard compilation, but it cannot establish which moments are useful or support a driver-performance conclusion.",
+        "text": "Formula 1 lists selected onboard highlights from Mexico City. The original watch page provides metadata but exposes no caption tracks or transcript control. Racing footage and audio were not reviewed.",
+        "key_takeaway": "This is a dated onboard compilation, not newly reviewed race analysis. The title and description cannot establish useful moments or a driver-performance conclusion.",
         "worth_reading": "unavailable",
-        "rationale": "Unable to judge the actual video without footage or transcript access; no timestamped recommendation is invented.",
-        "basis": "Exact original watch-page metadata and publication date inspected November 19. No caption tracks, transcript control or segments were exposed. No audio, footage or third-party transcript reviewed. Existing source-level external-watch policy preserved.",
+        "rationale": "No accessible transcript was exposed, and footage was not substantively reviewed. No content-based recommendation or timestamp is invented.",
+        "basis": "Exact original public watch page and publication metadata inspected November 22. No caption tracks, transcript control or transcript segments exposed. No audio, footage or third-party transcript reviewed. Existing source-level external-watch policy preserved.",
         "scope": "metadata",
         "confidence": "low",
-        "reviewed_at": "2026-11-19T13:54:52.112127+00:00",
+        "reviewed_at": "2026-11-22T13:55:30.285485+00:00",
         "source_urls": [
           "https://www.youtube.com/watch?v=4ihGzDHCfQQ"
         ],
@@ -6735,14 +7516,14 @@
           {
             "url": "https://www.youtube.com/watch?v=4ihGzDHCfQQ",
             "published_at": "2026-11-03T13:00:35Z",
-            "retrieved_at": "2026-11-19T13:52:44.919Z",
-            "content_hash": "772b4896b0ef7dd42c6cf10552d9c3aa85dce728e7e9abd3ba1af2f8b1536e76",
+            "retrieved_at": "2026-11-22T13:54:19.776Z",
+            "content_hash": "be25ae385ae1306f0278cc09762d39e3553acef04b76220921aecfedd2cd41ff",
             "scope": "metadata"
           },
           {
             "url": "https://www.youtube.com/watch?v=4ihGzDHCfQQ",
             "published_at": "2026-11-03T13:00:35Z",
-            "retrieved_at": "2026-11-19T13:52:44.919Z",
+            "retrieved_at": "2026-11-22T13:54:19.776Z",
             "content_hash": null,
             "scope": "unavailable"
           }
@@ -6834,8 +7615,8 @@
       "summary": "Selected public X post reviewed by the external research task. Open the original on X; no automatic timeline or embedded X player is connected.",
       "analysis": {
         "text": "The previously captured caption identifies Simmons’s criticism, not the reasoning or evidence in the clip. The footage, audio and original program remain unreviewed; no causal injury finding or content-based viewing recommendation is established.",
-        "basis": "Previously captured public X-caption excerpt and its November 4 receipt are preserved. On November 19 the exact original returned HTTP 403 once. No supported Safari control was available. Clip, audio and transcript remain unreviewed; no private session or account data accessed.",
-        "reviewed_at": "2026-11-19T13:54:52.112127+00:00",
+        "basis": "Previously captured public X-caption excerpt and its November 4 receipt are preserved. On November 22 the exact original returned HTTP 403 once. No supported Safari control was available. Clip, audio and transcript remain unreviewed; no private session or account data accessed.",
+        "reviewed_at": "2026-11-22T13:55:30.285485+00:00",
         "source_urls": [
           "https://x.com/TheDunkCentral/status/2117794825244475758"
         ],
@@ -6856,7 +7637,7 @@
           {
             "url": "https://x.com/TheDunkCentral/status/2117794825244475758",
             "published_at": "2026-11-03",
-            "retrieved_at": "2026-11-19T13:52:43.410Z",
+            "retrieved_at": "2026-11-22T13:54:06.131Z",
             "content_hash": null,
             "scope": "unavailable"
           }
@@ -7896,13 +8677,13 @@
       "summary": "Polymarket newsletter: BOOTS ON THE GROUND. Publisher commentary; forecasts are attributed claims, not verified probabilities.",
       "analysis": {
         "scope": "excerpt",
+        "text": "The October 29 introduction presents a logistics-based geopolitical forecaster and asks about a possible invasion before 2028. Access stops before the first answer. The headline’s 85% figure is attributed commentary whose full explanation was not accessible.",
+        "key_takeaway": "The headline is not a verified probability or current market quote. Its time horizon and supporting evidence require the full interview, which remains unreviewed.",
+        "rationale": "Unable to judge the forecast: only the introduction and first question were accessible before the subscription/sign-in gate.",
         "confidence": "low",
         "worth_reading": "unavailable",
-        "text": "The October 29 public introduction describes an interviewee using logistics indicators to assess conflict risk. Access stops before the first answer. The headline percentage is attributed to that interviewee; its assumptions and reasoning were not accessible.",
-        "key_takeaway": "The 85% headline is an attributed forecast, not a verified probability or current market quote. The accessible introduction cannot establish its reliability.",
-        "rationale": "Unable to judge the interview: the substantive answers are behind a subscription/sign-in gate.",
-        "basis": "Public excerpt read on November 19. Stopped at the displayed sign-in/subscription gate; no gated continuation was accessed. Original publication date retained; review date is separate.",
-        "reviewed_at": "2026-11-19T13:53:16.465568+00:00",
+        "basis": "Public excerpt read on November 21. Stopped at the displayed sign-in/subscription gate; no gated continuation was accessed. Original publication and review dates remain separate.",
+        "reviewed_at": "2026-11-21T13:14:47.342757+00:00",
         "source_urls": [
           "https://news.polymarket.com/p/boots-on-the-ground"
         ],
@@ -7911,8 +8692,8 @@
           {
             "url": "https://news.polymarket.com/p/boots-on-the-ground",
             "published_at": "2026-10-29T14:42:25Z",
-            "retrieved_at": "2026-11-19T13:51:55.967951+00:00",
-            "content_hash": "92d026e8c0c729aae648f380838302cb48417aadf80d68eefea3966f43fa1858",
+            "retrieved_at": "2026-11-21T13:13:35.307761+00:00",
+            "content_hash": "1e3dd2e0d33cad5bc8e34a2a08f8fd7e472bf997ce340a298bebcf7573748926",
             "scope": "excerpt"
           }
         ]
@@ -9620,14 +10401,14 @@
       ],
       "summary": "Polymarket newsletter: TEXAS IS BORDERLINE. Publisher commentary; forecasts are attributed claims, not verified probabilities.",
       "analysis": {
+        "text": "The accessible September 23 introduction argues that four Texas border House races deserved more attention than the Senate contest. The page stops before naming or analyzing those districts.",
+        "key_takeaway": "This is historical pre-election trader commentary, not a current probability estimate or a verified result. The excerpt cannot support the proposed district-level trading thesis.",
+        "rationale": "Unable to judge the full analysis: the canonical page requires subscription/sign-in before its core district evidence. No access workaround was attempted.",
         "scope": "excerpt",
+        "basis": "Read the accessible original-page excerpt on November 22 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "key_takeaway": "This September 23 election preview stops before naming its four highlighted House districts. Its claimed trading opportunity is unreviewed and is not a current probability assessment.",
-        "text": "The introduction argues that border-area House races deserved more attention than the Senate contest. The district list, evidence and full argument are behind the subscription gate; no election outcome or pricing accuracy is established here.",
-        "basis": "Public introduction read before the subscription/sign-in gate. Original September 23 date retained. No full district analysis, live odds, exchange account or trading access.",
-        "rationale": "Unable to judge the proposed opportunity because the substantive district analysis is unavailable and the preview predates the election.",
-        "reviewed_at": "2026-11-18T13:14:47.957358+00:00",
+        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
         "source_urls": [
           "https://news.polymarket.com/p/texas-is-borderline"
         ],
@@ -9635,9 +10416,9 @@
         "evidence": [
           {
             "url": "https://news.polymarket.com/p/texas-is-borderline",
-            "published_at": "2026-09-23T23:11:30Z",
-            "retrieved_at": "2026-11-18T13:13:21.546958+00:00",
-            "content_hash": "72dffb9d6e6484d1d5658badf712b854d06875d1ec90a9e8fb9eac3aff5a5ff4",
+            "published_at": "2026-09-23T23:11:30+00:00",
+            "retrieved_at": "2026-11-22T13:53:51.664123+00:00",
+            "content_hash": "163ce6d5bb5f840965dbf8d0a28a9b046def4b1612573ecd1b3a301fe5ecc311",
             "scope": "excerpt"
           }
         ]
