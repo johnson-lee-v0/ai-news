@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22T13:52:59Z",
+  "updated_at": "2026-11-23T13:26:44Z",
   "source_status": [
     {
       "id": "f1-official",
@@ -14,8 +14,8 @@
       ],
       "note": "Official F1 feed. Some entries have no publication date; fetch time is not an event date.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
       "item_count": 10
     },
     {
@@ -30,8 +30,8 @@
       ],
       "note": "League announcements, including business and WNBA coverage. This is not comprehensive game or breaking-news coverage.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
       "item_count": 10
     },
     {
@@ -47,8 +47,8 @@
       ],
       "note": "Publisher podcast metadata, not a transcript or independently verified analysis. Episodes without a webpage link open the podcast homepage.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
       "item_count": 24
     },
     {
@@ -63,9 +63,9 @@
       ],
       "note": "Public blog linked by Unusual Whales. Finance and AI title keywords filter broad news; relevant posts may be missed. Headlines are publisher claims, not verified conclusions. This is not its X feed.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
-      "item_count": 9
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
+      "item_count": 5
     },
     {
       "id": "unusual-whales-podcast",
@@ -80,8 +80,8 @@
       ],
       "note": "Public podcast feed. Source dates may be old; no transcript is collected. Audio opens externally when its host is outside the verified embedded-player allowlist.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
       "item_count": 24
     },
     {
@@ -96,8 +96,8 @@
       ],
       "note": "Newsletter news and commentary. Cards use its descriptive subtitle instead of a teaser headline when available. Publisher forecasts are attributed claims, not verified probabilities or live odds.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
       "item_count": 20
     },
     {
@@ -111,11 +111,11 @@
         "Markets",
         "Company analysis"
       ],
-      "note": "Tevis Shkodra's official site identifies this channel. Public Videos-page metadata, at most eight videos per refresh; RSS returned 404. No transcript is collected, and relative dates remain unknown unless separately verified. Latest fetch failed; previously stored items and last-success date are retained.",
-      "status": "error",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-21T13:11:50Z",
-      "item_count": 21
+      "note": "Tevis Shkodra's official site identifies this channel. Public Videos-page metadata, at most eight videos per refresh; RSS returned 404. No transcript is collected, and relative dates remain unknown unless separately verified.",
+      "status": "ok",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
+      "item_count": 8
     },
     {
       "id": "sixers-highlights",
@@ -131,9 +131,9 @@
       ],
       "note": "Official team Videos-page metadata. Up to eight highlight/game-recap titles per refresh; not every game or the full channel. Dates and video content require separate review; RSS returned 404.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
-      "item_count": 6
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
+      "item_count": 5
     },
     {
       "id": "knicks-highlights",
@@ -149,8 +149,8 @@
       ],
       "note": "Official team Videos-page metadata. Up to eight highlight/game-recap titles per refresh; not every game or the full channel. Dates and video content require separate review; RSS returned 404.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
       "item_count": 8
     },
     {
@@ -166,8 +166,8 @@
       ],
       "note": "Verified BenFelixCSI channel. Up to three public long-form videos per refresh; displayed durations below five minutes, Shorts, obvious promotions and member-only items are excluded. Source review scope is separate from channel metadata.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
       "item_count": 3
     },
     {
@@ -181,9 +181,9 @@
         "Markets",
         "AI education"
       ],
-      "note": "Verified AndrejKarpathy channel. Up to two public long-form AI videos per refresh; short/promotional and member-only items are excluded. Older educational videos keep their source dates and are not current market news.",
-      "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
+      "note": "Verified AndrejKarpathy channel. Up to two public long-form AI videos per refresh; short/promotional and member-only items are excluded. Older educational videos keep their source dates and are not current market news. Latest fetch failed; previously stored items and last-success date are retained.",
+      "status": "error",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
       "last_success_at": "2026-11-22T13:52:59Z",
       "item_count": 2
     },
@@ -200,8 +200,8 @@
       ],
       "note": "Verified ThinkingBasketball channel. Up to three public videos per refresh, excluding member-only videos, short clips and obvious promotions. Analysis is the creator's interpretation; selected older films remain dated.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
       "item_count": 3
     },
     {
@@ -218,8 +218,8 @@
       ],
       "note": "Verified official Formula 1 channel. Up to three public analysis, onboard or race/qualifying-highlight videos per refresh; under-five-minute clips, Shorts, obvious promotions and member-only items are excluded. This is a selected view, not every upload.",
       "status": "ok",
-      "last_attempt_at": "2026-11-22T13:52:59Z",
-      "last_success_at": "2026-11-22T13:52:59Z",
+      "last_attempt_at": "2026-11-23T13:26:44Z",
+      "last_success_at": "2026-11-23T13:26:44Z",
       "item_count": 3
     },
     {
@@ -321,6 +321,216 @@
     }
   ],
   "items": [
+    {
+      "id": "wall-3a3bc57d87ceffef5ad51bc0",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Warren Says Trump Has Made More Than 31,000 Stock Trades in Office, Calls for a Ban",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/warren-trump-31000-stock-trades-ban-congress/",
+      "published_at": "2026-11-23T11:53:24Z",
+      "first_seen_at": "2026-11-23T13:26:44Z",
+      "updated_at": "2026-11-23T13:26:44Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "scope": "full_text",
+        "worth_reading": "skip",
+        "confidence": "medium",
+        "text": "Unusual Whales reports Elizabeth Warren’s claim about presidential securities trades and her proposed ownership/trading ban. The count and legal status were not independently checked against disclosures or legislative records.",
+        "key_takeaway": "This is an attributed political proposal, not an enacted rule or a change in company earnings. It provides no demonstrated reason to infer a broad-market return.",
+        "rationale": "Skip for the daily investing brief unless the proposal advances or primary disclosure analysis becomes available; the short report adds no verified operating or financing evidence.",
+        "basis": "Read the complete public Unusual Whales article on November 23. Review concerns its reporting and argument only; Warren’s original statement, trade disclosures and legislative status were not independently reviewed.",
+        "reviewed_at": "2026-11-23T13:30:12.015199+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/warren-trump-31000-stock-trades-ban-congress/"
+        ],
+        "content_hash": "df91eb21ce65c8ea43d77865909c45a21541adbe961d484529cdbbaa16c8c483",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/warren-trump-31000-stock-trades-ban-congress/",
+            "published_at": "2026-11-23T11:53:24.000Z",
+            "retrieved_at": "2026-11-23T13:28:20.645058+00:00",
+            "content_hash": "197b6cb4ebc3a0631266ef7cf9802c912caf34721bb6e06ec6df00601aa0a59d",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "43d0f25623b6fd39d6f4808764c856a10cc75ab3cade4fcb099e00f39934522d",
+      "content_hash": "df91eb21ce65c8ea43d77865909c45a21541adbe961d484529cdbbaa16c8c483"
+    },
+    {
+      "id": "wall-fd57b28d9fd4dfecf1cbf715",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "72% of Americans Do Not Plan to Use AI for Holiday Shopping This Year, Survey Finds",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/72-percent-americans-no-ai-holiday-shopping-survey/",
+      "published_at": "2026-11-23T11:48:46Z",
+      "first_seen_at": "2026-11-23T13:26:44Z",
+      "updated_at": "2026-11-23T13:26:44Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "scope": "full_text",
+        "worth_reading": "skim",
+        "confidence": "medium",
+        "text": "The article relays Fortune’s reporting of a Bank of America survey: more respondents say they do not plan to use AI for holiday shopping. It describes trust, ethical concerns and loss of personal touch, while distinguishing intentions from actual use.",
+        "key_takeaway": "Consumer reluctance could slow AI shopping adoption, but stated intentions do not measure actual usage, purchases or retailer returns. Survey methods and transaction data are the next checks.",
+        "rationale": "Skim as a counterpoint to adoption claims. The original survey and methodology were not reviewed, so the reported comparison cannot establish a broad decline in realized AI use.",
+        "basis": "Read the complete public Unusual Whales article on November 23. This is secondary reporting through Fortune; the original Bank of America survey, sample, question wording and underlying data were not independently reviewed.",
+        "reviewed_at": "2026-11-23T13:30:12.015199+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/72-percent-americans-no-ai-holiday-shopping-survey/"
+        ],
+        "content_hash": "4535af4c725c6b76f7b36e89a48cd109067d48a2a55a51aff12bd239f832e8ce",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/72-percent-americans-no-ai-holiday-shopping-survey/",
+            "published_at": "2026-11-23T11:48:46.000Z",
+            "retrieved_at": "2026-11-23T13:28:20.645522+00:00",
+            "content_hash": "5cc22f4c7b041367c707615e16ccbec87bb67387676ef444db26ede8e3371318",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "43d0f25623b6fd39d6f4808764c856a10cc75ab3cade4fcb099e00f39934522d",
+      "content_hash": "4535af4c725c6b76f7b36e89a48cd109067d48a2a55a51aff12bd239f832e8ce"
+    },
+    {
+      "id": "wall-13f122dcdc9fcdb18342e8df",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Coffee Prices Up 122% Since Late 2019, With Fuel Oil and Eggs Close Behind",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/coffee-prices-up-122-percent-since-late-2019/",
+      "published_at": "2026-11-23T11:46:10Z",
+      "first_seen_at": "2026-11-23T13:26:44Z",
+      "updated_at": "2026-11-23T13:26:44Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "scope": "full_text",
+        "worth_reading": "skip",
+        "confidence": "medium",
+        "text": "The report lists cumulative price increases since late 2019 across food, energy, housing and other categories. Its figures were not independently reconciled to the underlying statistical series.",
+        "key_takeaway": "A cumulative rise in price levels is not today’s inflation rate. The list gives household-cost context but cannot establish the latest inflation trend, a rate decision or an investment return.",
+        "rationale": "Skip for current market triage: the article mixes categories without a verified common methodology or precise comparison endpoint in this review.",
+        "basis": "Read the complete public Unusual Whales article on November 23. No underlying price dataset or official release was reviewed; the headline percentages remain attributed report claims, not independently validated macroeconomic measures.",
+        "reviewed_at": "2026-11-23T13:30:12.015199+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/coffee-prices-up-122-percent-since-late-2019/"
+        ],
+        "content_hash": "a9e87c2a23a00270647dc186abb8d2f567abde7d62178d93bb9e221d7062b391",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/coffee-prices-up-122-percent-since-late-2019/",
+            "published_at": "2026-11-23T11:46:10.000Z",
+            "retrieved_at": "2026-11-23T13:28:20.645750+00:00",
+            "content_hash": "eba47ca41c9b6add31fe3e94a61c4313e1bf1e9d77025e404b909bc8d656314a",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "43d0f25623b6fd39d6f4808764c856a10cc75ab3cade4fcb099e00f39934522d",
+      "content_hash": "a9e87c2a23a00270647dc186abb8d2f567abde7d62178d93bb9e221d7062b391"
+    },
+    {
+      "id": "wall-3d25caccb9273c7bef200aaa",
+      "section": "markets",
+      "source_id": "unusual-whales-blog",
+      "title": "Microsoft Patent Filing Describes AI That Rewrites Livestream Speech in Real Time",
+      "url": "https://unusual-whales.ghost.io/unusual_blog/post/microsoft-patent-ai-rewrites-livestream-speech-real-time/",
+      "published_at": "2026-11-23T11:42:54Z",
+      "first_seen_at": "2026-11-23T13:26:44Z",
+      "updated_at": "2026-11-23T13:26:44Z",
+      "format": "article",
+      "topics": [
+        "Markets"
+      ],
+      "summary": "",
+      "analysis": {
+        "scope": "full_text",
+        "worth_reading": "skim",
+        "confidence": "medium",
+        "text": "Unusual Whales describes a Microsoft patent application for rewriting livestream speech and matching lip movements for different audiences, while retaining an original-speech record. The article explicitly says Microsoft has not said it will build the system.",
+        "key_takeaway": "A patent proposal is not a shipped product or revenue. If implemented, audience-specific speech changes would make consent, disclosure and preservation of the original record important adoption issues.",
+        "rationale": "Skim for the product-governance question, while keeping commercial conclusions conditional. The underlying patent, technical performance and deployment plans were not reviewed.",
+        "basis": "Read the complete public Unusual Whales article on November 23, including its explicit no-launch qualification. The patent application itself and any Microsoft product announcement were not independently reviewed.",
+        "reviewed_at": "2026-11-23T13:30:12.015199+00:00",
+        "source_urls": [
+          "https://unusual-whales.ghost.io/unusual_blog/post/microsoft-patent-ai-rewrites-livestream-speech-real-time/"
+        ],
+        "content_hash": "ee3ff86d8900529a9c7ad925bd2ff5b08d37dc6e3f81b85cb299e64a600b918d",
+        "evidence": [
+          {
+            "url": "https://unusual-whales.ghost.io/unusual_blog/post/microsoft-patent-ai-rewrites-livestream-speech-real-time/",
+            "published_at": "2026-11-23T11:42:54.000Z",
+            "retrieved_at": "2026-11-23T13:28:21.078516+00:00",
+            "content_hash": "4062735e64c9eef8efa7aed0e5348bfca849aaf419025ff5638f210fef007453",
+            "scope": "full_text"
+          }
+        ]
+      },
+      "provenance_hash": "43d0f25623b6fd39d6f4808764c856a10cc75ab3cade4fcb099e00f39934522d",
+      "content_hash": "ee3ff86d8900529a9c7ad925bd2ff5b08d37dc6e3f81b85cb299e64a600b918d"
+    },
+    {
+      "id": "wall-af756c01de1ae46957141182",
+      "section": "markets",
+      "source_id": "wall-street-skinny",
+      "title": "Market Turmoil: Nvidia SEC Investigation, Anthropic IPO & Hedge Fund Positioning",
+      "url": "https://thewallstreetskinny.com/podcast/",
+      "published_at": "2026-11-23",
+      "first_seen_at": "2026-11-23T13:26:44Z",
+      "updated_at": "2026-11-23T13:26:44Z",
+      "format": "podcast",
+      "topics": [
+        "Markets",
+        "Finance education"
+      ],
+      "summary": "",
+      "analysis": {
+        "text": "The November 23 publisher synopsis proposes explanations for market turbulence involving AI valuations, Anthropic’s IPO, hedge-fund leverage and systematic selling. It does not provide the underlying episode argument or evidence.",
+        "key_takeaway": "The synopsis identifies possible market mechanisms, not verified causes of a selloff. Financing, issuer results and positioning claims need separate evidence before drawing an investment conclusion.",
+        "rationale": "Unable to judge the episode: only the exact publisher description and landing page were read. No transcript was supplied by those checked sources, and audio was not listened to.",
+        "scope": "metadata",
+        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 23. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
+        "worth_reading": "unavailable",
+        "confidence": "low",
+        "reviewed_at": "2026-11-23T13:30:13.189996+00:00",
+        "source_urls": [
+          "https://feeds.megaphone.fm/TTNSE2412391117",
+          "https://thewallstreetskinny.com/podcast/"
+        ],
+        "content_hash": "e0bbd674b597dd255b0e109427f9d41fd0404f93ea66b4530c3496d35c287574",
+        "evidence": [
+          {
+            "url": "https://feeds.megaphone.fm/TTNSE2412391117",
+            "published_at": "2026-11-23T13:09:00+00:00",
+            "retrieved_at": "2026-11-23T13:28:54.177743+00:00",
+            "content_hash": "75d567f59bbafff8fb898538820ff1ed61627a6e0b01a1f468f7832381bbfaee",
+            "scope": "metadata"
+          },
+          {
+            "url": "https://thewallstreetskinny.com/podcast/",
+            "published_at": null,
+            "retrieved_at": "2026-11-23T13:28:54.162016+00:00",
+            "content_hash": "eb9617073a30733c019545ce5c51802ac238c015bcb5e0fee8e421a1d7c33659",
+            "scope": "metadata"
+          }
+        ]
+      },
+      "provenance_hash": "75d567f59bbafff8fb898538820ff1ed61627a6e0b01a1f468f7832381bbfaee",
+      "duration": "2206",
+      "content_hash": "e0bbd674b597dd255b0e109427f9d41fd0404f93ea66b4530c3496d35c287574"
+    },
     {
       "id": "wall-883f0c69d6b28b32fabe991d",
       "section": "sports",
@@ -453,6 +663,71 @@
       },
       "provenance_hash": "4c7cb47de9796335ed672b37230eaf46f98ff9145209372281aacf4868d87950",
       "content_hash": "b3c3cc10101338f7f630cf141690f64c26f2a1cd3e478e440ae433c9a3f10fe0"
+    },
+    {
+      "id": "wall-71700e6e355e7d435e0c6f3f",
+      "section": "markets",
+      "source_id": "tevis-investing",
+      "title": "WHEN WILL THE SELLING END... (Watch For THIS Date)",
+      "url": "https://www.youtube.com/watch?v=r5UzJQc7PPI",
+      "published_at": "2026-11-21T15:53:47Z",
+      "first_seen_at": "2026-11-23T13:26:44Z",
+      "updated_at": "2026-11-23T13:26:44Z",
+      "format": "video",
+      "topics": [
+        "Markets",
+        "Company analysis"
+      ],
+      "summary": "Public channel video listing. The review below states what could be accessed; footage is not automatically analyzed.",
+      "analysis": {
+        "text": "Tevis treats the December 9 policy decision as a possible catalyst, not a promised market bottom. He compares historical midterm drawdowns and argues that policy guidance, yields, market breadth and earnings expectations matter more than the decision headline alone.",
+        "key_takeaway": "Focus on the conditions that would change the outlook, not a single bottom date. Historical rebound patterns can frame scenarios, but they do not validate current odds or guarantee recovery.",
+        "worth_reading": "skim",
+        "rationale": "Useful for its scenario structure and four things to watch. The creator’s historical comparisons, market figures and rate probabilities were not independently verified, so this is commentary rather than a trading signal.",
+        "basis": "Full available English auto-caption transcript read through the original YouTube control: 132 segments, 0:00–16:51 of 17:01. Published November 21; discussion uses November 19–20 observations. Captions contain numerical and name errors. Dates, odds, valuation multiples and historical returns were not independently verified; no footage reviewed. Sponsor segment was read but its offer and external links were not followed.",
+        "video_citations": [
+          {
+            "start_seconds": 197,
+            "end_seconds": 225,
+            "note": "Tevis separates a growing business from a falling share price when investors pay a lower earnings multiple."
+          },
+          {
+            "start_seconds": 611,
+            "end_seconds": 723,
+            "note": "The same rate decision can have different market implications depending on policy guidance and the reason for a pause."
+          },
+          {
+            "start_seconds": 904,
+            "end_seconds": 932,
+            "note": "He lists policy guidance, Treasury yields, market breadth, and earnings/credit conditions as signs to monitor."
+          }
+        ],
+        "scope": "transcript",
+        "confidence": "medium",
+        "reviewed_at": "2026-11-23T13:31:03.089777+00:00",
+        "source_urls": [
+          "https://www.youtube.com/watch?v=r5UzJQc7PPI"
+        ],
+        "content_hash": "5333ba0ac6942f115030987b394d53f76763ceac1cd5cf10eff630c96e5244aa",
+        "evidence": [
+          {
+            "url": "https://www.youtube.com/watch?v=r5UzJQc7PPI",
+            "published_at": "2026-11-21T15:53:47Z",
+            "retrieved_at": "2026-11-23T13:29:21.794Z",
+            "content_hash": "fcc80f6814436e0af9d95ee9f3a1713a3f65e1139740fee21ba8279ba33e3648",
+            "scope": "transcript"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=r5UzJQc7PPI",
+            "published_at": "2026-11-21T15:53:47Z",
+            "retrieved_at": "2026-11-23T13:29:17.288Z",
+            "content_hash": "cc98706478a8dfef34393fe542c657eb3681b76741a84675747ebd5199030740",
+            "scope": "metadata"
+          }
+        ]
+      },
+      "provenance_hash": "66f67896fd2dfc8c7eab562e4a63673151b41eca9ed511fdd3714333c1bf2ac6",
+      "content_hash": "5333ba0ac6942f115030987b394d53f76763ceac1cd5cf10eff630c96e5244aa"
     },
     {
       "id": "wall-c6cdcb22ecd6ac448b58ebb9",
@@ -967,10 +1242,10 @@
         "key_takeaway": "This is show-introduction context rather than evidence of a market development. The promotion does not supply an investment implication or a reviewed audio argument.",
         "rationale": "Unable to judge the actual trailer from promotional metadata. No transcript was supplied by the checked sources, and audio was not listened to.",
         "scope": "metadata",
-        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 22. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
+        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 23. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
+        "reviewed_at": "2026-11-23T13:30:13.189996+00:00",
         "source_urls": [
           "https://feeds.megaphone.fm/TTNSE2412391117",
           "https://thewallstreetskinny.com/podcast/"
@@ -980,14 +1255,14 @@
           {
             "url": "https://feeds.megaphone.fm/TTNSE2412391117",
             "published_at": "2026-11-20T11:43:00+00:00",
-            "retrieved_at": "2026-11-22T13:53:51.851782+00:00",
-            "content_hash": "eb57fc3f362eaf19b09ff8a08f65dc43d8a728085e01d9a35507f6fd1ce0c8bf",
+            "retrieved_at": "2026-11-23T13:28:54.177743+00:00",
+            "content_hash": "75d567f59bbafff8fb898538820ff1ed61627a6e0b01a1f468f7832381bbfaee",
             "scope": "metadata"
           },
           {
             "url": "https://thewallstreetskinny.com/podcast/",
             "published_at": null,
-            "retrieved_at": "2026-11-22T13:53:51.836168+00:00",
+            "retrieved_at": "2026-11-23T13:28:54.162016+00:00",
             "content_hash": "eb9617073a30733c019545ce5c51802ac238c015bcb5e0fee8e421a1d7c33659",
             "scope": "metadata"
           }
@@ -1082,10 +1357,10 @@
         "key_takeaway": "A podcast description does not establish alleged events, the cause of a stock move or a loss of CUDA’s competitive advantage. Those conclusions require the argument and primary evidence.",
         "rationale": "Unable to assess the episode’s evidence or reasoning: only the exact RSS description and show page were read; no transcript or audio content was reviewed.",
         "scope": "metadata",
-        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 22. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
+        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 23. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
+        "reviewed_at": "2026-11-23T13:30:13.189996+00:00",
         "source_urls": [
           "https://feeds.megaphone.fm/TTNSE2412391117",
           "https://thewallstreetskinny.com/podcast/"
@@ -1095,14 +1370,14 @@
           {
             "url": "https://feeds.megaphone.fm/TTNSE2412391117",
             "published_at": "2026-11-19T08:00:00+00:00",
-            "retrieved_at": "2026-11-22T13:53:51.851782+00:00",
-            "content_hash": "eb57fc3f362eaf19b09ff8a08f65dc43d8a728085e01d9a35507f6fd1ce0c8bf",
+            "retrieved_at": "2026-11-23T13:28:54.177743+00:00",
+            "content_hash": "75d567f59bbafff8fb898538820ff1ed61627a6e0b01a1f468f7832381bbfaee",
             "scope": "metadata"
           },
           {
             "url": "https://thewallstreetskinny.com/podcast/",
             "published_at": null,
-            "retrieved_at": "2026-11-22T13:53:51.836168+00:00",
+            "retrieved_at": "2026-11-23T13:28:54.162016+00:00",
             "content_hash": "eb9617073a30733c019545ce5c51802ac238c015bcb5e0fee8e421a1d7c33659",
             "scope": "metadata"
           }
@@ -3550,10 +3825,10 @@
         "key_takeaway": "Audience reach measures viewing behavior, not a casting decision. The available excerpt does not establish that any actor’s market odds are mispriced.",
         "rationale": "Unable to assess the advertised forecasting argument: the original page gates the candidate analysis behind subscription/sign-in. The interviewee’s measurement claims remain attributed.",
         "scope": "excerpt",
-        "basis": "Read the accessible original-page excerpt on November 22 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
+        "basis": "Read the accessible original-page excerpt on November 23 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
+        "reviewed_at": "2026-11-23T13:30:13.189996+00:00",
         "source_urls": [
           "https://news.polymarket.com/p/bond-quant"
         ],
@@ -3562,7 +3837,7 @@
           {
             "url": "https://news.polymarket.com/p/bond-quant",
             "published_at": "2026-11-13T02:02:40+00:00",
-            "retrieved_at": "2026-11-22T13:53:51.664447+00:00",
+            "retrieved_at": "2026-11-23T13:28:53.897543+00:00",
             "content_hash": "333f6b771ff23521b2fa8a791f7cd0e1d35173e94f750d54fcadc0764a5e606b",
             "scope": "excerpt"
           }
@@ -4582,10 +4857,10 @@
         "key_takeaway": "This is a dated onboard compilation, not newly reviewed race analysis. The title and description cannot establish useful moments or a driver-performance conclusion.",
         "worth_reading": "unavailable",
         "rationale": "No accessible transcript was exposed, and footage was not substantively reviewed. No content-based recommendation or timestamp is invented.",
-        "basis": "Exact original public watch page and publication metadata inspected November 22. No caption tracks, transcript control or transcript segments exposed. No audio, footage or third-party transcript reviewed. Existing source-level external-watch policy preserved.",
+        "basis": "Exact original public watch page and publication metadata inspected November 23. No caption tracks, transcript control or transcript segments exposed. No audio, footage or third-party transcript reviewed. Existing source-level external-watch policy preserved.",
         "scope": "metadata",
         "confidence": "low",
-        "reviewed_at": "2026-11-22T13:55:30.285485+00:00",
+        "reviewed_at": "2026-11-23T13:31:03.089777+00:00",
         "source_urls": [
           "https://www.youtube.com/watch?v=_09gPxeE_gc"
         ],
@@ -4594,14 +4869,14 @@
           {
             "url": "https://www.youtube.com/watch?v=_09gPxeE_gc",
             "published_at": "2026-11-10T11:30:09Z",
-            "retrieved_at": "2026-11-22T13:54:07.649Z",
-            "content_hash": "80cca153b3051a33f4d529013bbdfd82e5110bdaa11ec4beefc1cfdc8bc2fa74",
+            "retrieved_at": "2026-11-23T13:29:21.932Z",
+            "content_hash": "9eb73b67293379ae744fdc6d21a50e80b0d0a419c0e4a28c852c29837d88cad1",
             "scope": "metadata"
           },
           {
             "url": "https://www.youtube.com/watch?v=_09gPxeE_gc",
             "published_at": "2026-11-10T11:30:09Z",
-            "retrieved_at": "2026-11-22T13:54:07.649Z",
+            "retrieved_at": "2026-11-23T13:29:21.932Z",
             "content_hash": null,
             "scope": "unavailable"
           }
@@ -5771,11 +6046,11 @@
         "scope": "metadata",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "text": "The original Sao Paulo page exposes a title and description for in-race betting commentary, but the public response contains no readable article body.",
-        "key_takeaway": "No race scenario analysis was reviewed. Historical betting metadata cannot establish current probabilities, results or a useful betting recommendation.",
-        "rationale": "Unable to judge: only publisher metadata and site navigation were accessible, with no substantive article text.",
-        "basis": "Inspected the canonical public page and its title, description and publication metadata on November 22. No article body was present in the ordinary response; no alternative restricted route was attempted. Original publication was November 7.",
-        "reviewed_at": "2026-11-22T13:54:43.882573+00:00",
+        "text": "The original Sao Paulo page identifies in-race betting commentary, but the accessible visible text contains no substantive article analysis.",
+        "key_takeaway": "The race scenarios were not reviewed. This older metadata is not evidence for current probabilities, outcomes or a betting recommendation.",
+        "rationale": "Unable to judge because only the page title, metadata and navigation were accessible.",
+        "basis": "Inspected the canonical public page’s visible text and publication metadata on November 23. No substantive visible article body was available and no restricted route was used. Original publication remains November 7.",
+        "reviewed_at": "2026-11-23T13:30:12.015199+00:00",
         "source_urls": [
           "https://www.formula1.com/en/latest/article/what-could-turn-the-race-on-its-head-during-the-sao-paulo-grand-prix.6KujQenlA32et55AiQrTyB"
         ],
@@ -5784,8 +6059,8 @@
           {
             "url": "https://www.formula1.com/en/latest/article/what-could-turn-the-race-on-its-head-during-the-sao-paulo-grand-prix.6KujQenlA32et55AiQrTyB",
             "published_at": "2026-11-07T08:31:47.904Z",
-            "retrieved_at": "2026-11-22T13:53:49.944437+00:00",
-            "content_hash": "79bc16b96b6a6eb0e6aa6e0c900d7df4df3da986bd01a00f3579f737befeac84",
+            "retrieved_at": "2026-11-23T13:28:20.645637+00:00",
+            "content_hash": "332f408606afe194c2bca79b17da8236ddbe10d9c0adbbf7de6e366d1bcdea24",
             "scope": "metadata"
           }
         ]
@@ -5851,11 +6126,11 @@
         "scope": "excerpt",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "text": "The accessible practice debrief says Antonelli led Sao Paulo’s second practice after narrowly trailing Norris in the first session. The underlying comparative analysis is behind the F1 Unlocked gate.",
-        "key_takeaway": "A practice-leading lap alone does not establish race pace. The missing analysis prevents assessing Mercedes’ full advantage, and this is a November 7 preview rather than a current result.",
-        "rationale": "Unable to judge the full practice analysis: only the introduction and first answer were accessible.",
-        "basis": "Read the visible public excerpt and publication metadata on November 22, then stopped at the explicit F1 Unlocked sign-in/register gate. No restricted continuation or login was used. Original publication was November 7.",
-        "reviewed_at": "2026-11-22T13:54:43.882573+00:00",
+        "text": "The accessible practice-debrief introduction says Antonelli narrowly trailed Norris in first practice before leading second practice. The comparative analysis stops at the F1 Unlocked sign-in gate.",
+        "key_takeaway": "A leading practice time alone does not establish race pace. The inaccessible comparison prevents judging Mercedes’ full advantage; this is a historical November 7 preview.",
+        "rationale": "Unable to judge the complete analysis from its introduction and opening answer alone.",
+        "basis": "Read the visible introductory excerpt on November 23, then stopped at the explicit F1 Unlocked sign-in/register gate. No login or restricted continuation accessed; original November 7 publication date retained.",
+        "reviewed_at": "2026-11-23T13:30:12.015199+00:00",
         "source_urls": [
           "https://www.formula1.com/en/latest/article/can-mercedes-keep-their-rivals-at-bay-in-sao-paulo.7eVy5I4aTwZqm4N1WE2rBX"
         ],
@@ -5864,8 +6139,8 @@
           {
             "url": "https://www.formula1.com/en/latest/article/can-mercedes-keep-their-rivals-at-bay-in-sao-paulo.7eVy5I4aTwZqm4N1WE2rBX",
             "published_at": "2026-11-07T07:34:05.419Z",
-            "retrieved_at": "2026-11-22T13:53:49.944553+00:00",
-            "content_hash": "5dec6e39e9d9f76291eb5564c0c25b468e04304cb22c91bfe7b81371eb6337dc",
+            "retrieved_at": "2026-11-23T13:28:21.068731+00:00",
+            "content_hash": "88c61d684f52ac1d8b3ef8e01b39b1e506d9e0195882f861663515572133ae38",
             "scope": "excerpt"
           }
         ]
@@ -6437,10 +6712,10 @@
         "key_takeaway": "Permitting opposition can delay future supply without demonstrating weaker paid AI demand. The excerpt does not verify affected sites, delivery dates or the newsletter’s repricing thesis.",
         "rationale": "Unable to judge the complete analysis: the original stops before its market-repricing section. The cited ballot and capacity estimates were not independently verified in this bounded review.",
         "scope": "excerpt",
-        "basis": "Read the accessible original-page excerpt on November 22 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
+        "basis": "Read the accessible original-page excerpt on November 23 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
+        "reviewed_at": "2026-11-23T13:30:13.189996+00:00",
         "source_urls": [
           "https://news.polymarket.com/p/after-the-tsunami"
         ],
@@ -6449,7 +6724,7 @@
           {
             "url": "https://news.polymarket.com/p/after-the-tsunami",
             "published_at": "2026-11-06T18:09:58+00:00",
-            "retrieved_at": "2026-11-22T13:53:51.664638+00:00",
+            "retrieved_at": "2026-11-23T13:28:53.897745+00:00",
             "content_hash": "ebb5b9fefc8557488659167c1b362b4e91d21c0534096c3d47fb6115cecacf76",
             "scope": "excerpt"
           }
@@ -6629,14 +6904,14 @@
       ],
       "summary": "",
       "analysis": {
-        "text": "The publisher describes a historical November 5 discussion of GPU leases, SpaceX financing and a possible Tesla relationship. Its synopsis is a description of the hosts’ thesis, not a deal announcement.",
-        "key_takeaway": "The synopsis does not establish a SpaceX–Tesla transaction or a financing outcome. The lease-accounting argument remains unassessed without the episode’s actual content.",
-        "rationale": "Unable to judge the episode: only its publisher description was read; no transcript was supplied by the checked sources and the audio was not listened to.",
+        "text": "The November 5 publisher description proposes a SpaceX–Tesla financing thesis and discusses equipment leases. Its speculation predates later financing developments and is not a disclosed takeover plan.",
+        "key_takeaway": "A financing thesis in podcast metadata is not evidence of a merger, debt closing or customer cash. The actual argument and dated contractual disclosures are needed to assess it.",
+        "rationale": "Unable to judge the episode from its description. The checked feed and show page provided no transcript; audio was not reviewed, and no access failure for the audio is claimed.",
         "scope": "metadata",
-        "confidence": "low",
+        "basis": "Read the exact-title publisher RSS entry and public show landing page on November 23. The RSS GUID identifies the episode. The checked sources supplied descriptions, not a transcript; chapter headings are not transcript content. Audio was not listened to. This is metadata-only context, not a review of the episode’s argument.",
         "worth_reading": "unavailable",
-        "basis": "Read the exact-title and GUID-matched publisher RSS description and the public show landing page on November 21. No transcript was supplied in the selected feed entry or checked page. Audio was not listened to; this is publisher metadata, not a content review. Episode dates remain separate from review time.",
-        "reviewed_at": "2026-11-21T13:18:11.925270+00:00",
+        "confidence": "low",
+        "reviewed_at": "2026-11-23T13:30:13.189996+00:00",
         "source_urls": [
           "https://feeds.megaphone.fm/TTNSE2412391117",
           "https://thewallstreetskinny.com/podcast/"
@@ -6646,15 +6921,15 @@
           {
             "url": "https://feeds.megaphone.fm/TTNSE2412391117",
             "published_at": "2026-11-05T08:00:00+00:00",
-            "retrieved_at": "2026-11-21T13:13:23.302982+00:00",
-            "content_hash": "eb57fc3f362eaf19b09ff8a08f65dc43d8a728085e01d9a35507f6fd1ce0c8bf",
+            "retrieved_at": "2026-11-23T13:28:54.177743+00:00",
+            "content_hash": "75d567f59bbafff8fb898538820ff1ed61627a6e0b01a1f468f7832381bbfaee",
             "scope": "metadata"
           },
           {
             "url": "https://thewallstreetskinny.com/podcast/",
             "published_at": null,
-            "retrieved_at": "2026-11-21T13:13:23.298120+00:00",
-            "content_hash": "27d9b8c93f5c73b37c525f83528a7b353e75970ff69bf476c5fcb2824a236290",
+            "retrieved_at": "2026-11-23T13:28:54.162016+00:00",
+            "content_hash": "eb9617073a30733c019545ce5c51802ac238c015bcb5e0fee8e421a1d7c33659",
             "scope": "metadata"
           }
         ]
@@ -7114,11 +7389,11 @@
         "scope": "excerpt",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "text": "The public opening describes Mercedes’ front-wing debut and the older design’s limited flap movement in straight-line mode. The explanation of how the revised design reached its effective operating range is gated.",
-        "key_takeaway": "The excerpt identifies a design constraint, but it cannot establish the upgrade’s complete mechanism or performance gain. Treat this as partial historical technical context.",
-        "rationale": "Unable to judge the full technical explanation because the article stops at the F1 Unlocked sign-in gate.",
-        "basis": "Read the visible introductory paragraphs and publication metadata on November 22. Stopped at the explicit F1 Unlocked sign-in/register gate without accessing restricted content. Original publication was November 4.",
-        "reviewed_at": "2026-11-22T13:54:43.882573+00:00",
+        "text": "The public opening describes the revised Mercedes front wing and a limitation of the older design’s flap movement in straight-line mode. The explanation of the upgrade’s effective operating range is gated.",
+        "key_takeaway": "The excerpt identifies a design constraint but does not establish the complete mechanism or performance gain. It remains partial historical technical context.",
+        "rationale": "Unable to judge the full explanation because the article stops at the F1 Unlocked gate.",
+        "basis": "Read the visible introductory paragraphs on November 23 and stopped at the explicit F1 Unlocked sign-in/register gate. No restricted continuation accessed; original November 4 publication date retained.",
+        "reviewed_at": "2026-11-23T13:30:12.015199+00:00",
         "source_urls": [
           "https://www.formula1.com/en/latest/article/how-mercedes-got-their-temperamental-front-wing-upgrade-in-the-sweet-spot.1aj2enCvE05FHuszFII7yI"
         ],
@@ -7127,8 +7402,8 @@
           {
             "url": "https://www.formula1.com/en/latest/article/how-mercedes-got-their-temperamental-front-wing-upgrade-in-the-sweet-spot.1aj2enCvE05FHuszFII7yI",
             "published_at": "2026-11-04T10:30:30.197Z",
-            "retrieved_at": "2026-11-22T13:53:49.944666+00:00",
-            "content_hash": "3f4868df4aee777a2d9f7a5b0fa0d6e82eadda42084287f56ffa57620a58ad60",
+            "retrieved_at": "2026-11-23T13:28:21.086988+00:00",
+            "content_hash": "d77c795c9e937a2ee8b53b004ed546a3095da4b6ef1554b6850ed5826758f212",
             "scope": "excerpt"
           }
         ]
@@ -7152,13 +7427,13 @@
       "summary": "",
       "analysis": {
         "scope": "metadata",
-        "text": "The original November 3 page identifies a Sao Paulo betting preview, but today’s public response contains only navigation and title/description metadata. The driver list and supporting analysis were not readable.",
-        "key_takeaway": "No driver comparison was reviewed. This historical betting headline cannot establish current probabilities, race results or a useful present-day pick.",
-        "rationale": "Unable to judge: the ordinary public page did not expose the article body.",
-        "confidence": "low",
         "worth_reading": "unavailable",
-        "basis": "Public title and description metadata inspected on November 21; no readable article body was present. No restricted continuation was accessed. Original publication and review dates remain separate.",
-        "reviewed_at": "2026-11-21T13:14:47.342757+00:00",
+        "confidence": "low",
+        "text": "The canonical page exposes title and publication metadata for a November 3 Sao Paulo betting preview, but its visible page text does not expose the article’s ranked-driver analysis.",
+        "key_takeaway": "No ranked-driver argument was reviewed. Historical betting metadata cannot establish current race probabilities or results.",
+        "rationale": "Unable to judge: only publisher metadata and site navigation were accessible in the visible response.",
+        "basis": "Inspected the original public page’s visible text and publication metadata on November 23. No substantive visible article body was available; no login or restricted continuation was attempted. Original publication remains November 3.",
+        "reviewed_at": "2026-11-23T13:30:12.015199+00:00",
         "source_urls": [
           "https://www.formula1.com/en/latest/article/the-5-drivers-most-likely-to-win-the-sao-paulo-grand-prix-according-to-the-betting-markets.4bzkRPAjDqrOZ9EH6cwwoB"
         ],
@@ -7167,8 +7442,8 @@
           {
             "url": "https://www.formula1.com/en/latest/article/the-5-drivers-most-likely-to-win-the-sao-paulo-grand-prix-according-to-the-betting-markets.4bzkRPAjDqrOZ9EH6cwwoB",
             "published_at": "2026-11-03T22:13:36.642Z",
-            "retrieved_at": "2026-11-21T13:13:35.307449+00:00",
-            "content_hash": "c2c80e27230ddf40ecef8134fa67dba899a0d6ccf33154d3958c73be37ce9304",
+            "retrieved_at": "2026-11-23T13:28:20.645380+00:00",
+            "content_hash": "d5eecf291906e656a6700e8d5c841166a96775a29e01040c5fff326f12e4f3df",
             "scope": "metadata"
           }
         ]
@@ -7462,10 +7737,10 @@
         "key_takeaway": "The introduction contains no assessable election-night strategy, edge or track record. It is historical interview context, not current trading guidance.",
         "rationale": "Unable to judge the interview because the answers require subscription/sign-in. No conclusions or recommendations were inferred from its headline.",
         "scope": "excerpt",
-        "basis": "Read the accessible original-page excerpt on November 22 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
+        "basis": "Read the accessible original-page excerpt on November 23 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
         "worth_reading": "unavailable",
         "confidence": "low",
-        "reviewed_at": "2026-11-22T13:55:19.434578+00:00",
+        "reviewed_at": "2026-11-23T13:30:13.189996+00:00",
         "source_urls": [
           "https://news.polymarket.com/p/game-time"
         ],
@@ -7474,7 +7749,7 @@
           {
             "url": "https://news.polymarket.com/p/game-time",
             "published_at": "2026-11-03T16:12:12+00:00",
-            "retrieved_at": "2026-11-22T13:53:51.664752+00:00",
+            "retrieved_at": "2026-11-23T13:28:53.897861+00:00",
             "content_hash": "f65acf0be65488b9988581472393a477335fe309097375e5c1d7417b6a14171a",
             "scope": "excerpt"
           }
@@ -7504,10 +7779,10 @@
         "key_takeaway": "This is a dated onboard compilation, not newly reviewed race analysis. The title and description cannot establish useful moments or a driver-performance conclusion.",
         "worth_reading": "unavailable",
         "rationale": "No accessible transcript was exposed, and footage was not substantively reviewed. No content-based recommendation or timestamp is invented.",
-        "basis": "Exact original public watch page and publication metadata inspected November 22. No caption tracks, transcript control or transcript segments exposed. No audio, footage or third-party transcript reviewed. Existing source-level external-watch policy preserved.",
+        "basis": "Exact original public watch page and publication metadata inspected November 23. No caption tracks, transcript control or transcript segments exposed. No audio, footage or third-party transcript reviewed. Existing source-level external-watch policy preserved.",
         "scope": "metadata",
         "confidence": "low",
-        "reviewed_at": "2026-11-22T13:55:30.285485+00:00",
+        "reviewed_at": "2026-11-23T13:31:03.089777+00:00",
         "source_urls": [
           "https://www.youtube.com/watch?v=4ihGzDHCfQQ"
         ],
@@ -7516,14 +7791,14 @@
           {
             "url": "https://www.youtube.com/watch?v=4ihGzDHCfQQ",
             "published_at": "2026-11-03T13:00:35Z",
-            "retrieved_at": "2026-11-22T13:54:19.776Z",
-            "content_hash": "be25ae385ae1306f0278cc09762d39e3553acef04b76220921aecfedd2cd41ff",
+            "retrieved_at": "2026-11-23T13:29:35.750Z",
+            "content_hash": "0dc5509af43d3a07ddf74c54a9123fa84a06c99d7f0e9cb0604074add8612037",
             "scope": "metadata"
           },
           {
             "url": "https://www.youtube.com/watch?v=4ihGzDHCfQQ",
             "published_at": "2026-11-03T13:00:35Z",
-            "retrieved_at": "2026-11-22T13:54:19.776Z",
+            "retrieved_at": "2026-11-23T13:29:35.750Z",
             "content_hash": null,
             "scope": "unavailable"
           }
@@ -7615,8 +7890,8 @@
       "summary": "Selected public X post reviewed by the external research task. Open the original on X; no automatic timeline or embedded X player is connected.",
       "analysis": {
         "text": "The previously captured caption identifies Simmons’s criticism, not the reasoning or evidence in the clip. The footage, audio and original program remain unreviewed; no causal injury finding or content-based viewing recommendation is established.",
-        "basis": "Previously captured public X-caption excerpt and its November 4 receipt are preserved. On November 22 the exact original returned HTTP 403 once. No supported Safari control was available. Clip, audio and transcript remain unreviewed; no private session or account data accessed.",
-        "reviewed_at": "2026-11-22T13:55:30.285485+00:00",
+        "basis": "Previously captured public X-caption excerpt and its November 4 receipt are preserved. On November 23 the exact original returned HTTP 403 once. No supported Safari control was available. Clip, audio and transcript remain unreviewed; no private session or account data accessed.",
+        "reviewed_at": "2026-11-23T13:31:03.089777+00:00",
         "source_urls": [
           "https://x.com/TheDunkCentral/status/2117794825244475758"
         ],
@@ -7637,7 +7912,7 @@
           {
             "url": "https://x.com/TheDunkCentral/status/2117794825244475758",
             "published_at": "2026-11-03",
-            "retrieved_at": "2026-11-22T13:54:06.131Z",
+            "retrieved_at": "2026-11-23T13:29:34.260Z",
             "content_hash": null,
             "scope": "unavailable"
           }
@@ -8676,14 +8951,14 @@
       ],
       "summary": "Polymarket newsletter: BOOTS ON THE GROUND. Publisher commentary; forecasts are attributed claims, not verified probabilities.",
       "analysis": {
+        "text": "The accessible October 29 introduction describes an interviewee’s logistics-based forecasting approach. It ends at the first question, before his reasoning or answer about invasion odds.",
+        "key_takeaway": "The headline probability is an attributed historical forecast, not a verified or current probability. The visible question asks about a period before 2028; the gated answer prevents checking the forecast’s supporting assumptions or predictive quality.",
+        "rationale": "Unable to assess the forecast because the original page gates the interview answers behind subscription/sign-in. No account or access workaround was used.",
         "scope": "excerpt",
-        "text": "The October 29 introduction presents a logistics-based geopolitical forecaster and asks about a possible invasion before 2028. Access stops before the first answer. The headline’s 85% figure is attributed commentary whose full explanation was not accessible.",
-        "key_takeaway": "The headline is not a verified probability or current market quote. Its time horizon and supporting evidence require the full interview, which remains unreviewed.",
-        "rationale": "Unable to judge the forecast: only the introduction and first question were accessible before the subscription/sign-in gate.",
-        "confidence": "low",
+        "basis": "Read the accessible original-page excerpt on November 23 through the explicit subscribe/sign-in continuation. The rest was not accessed. Publication time is from the same page’s structured metadata; this is an excerpt assessment, not a full article review or independent verification of publisher claims.",
         "worth_reading": "unavailable",
-        "basis": "Public excerpt read on November 21. Stopped at the displayed sign-in/subscription gate; no gated continuation was accessed. Original publication and review dates remain separate.",
-        "reviewed_at": "2026-11-21T13:14:47.342757+00:00",
+        "confidence": "low",
+        "reviewed_at": "2026-11-23T13:30:13.189996+00:00",
         "source_urls": [
           "https://news.polymarket.com/p/boots-on-the-ground"
         ],
@@ -8691,9 +8966,9 @@
         "evidence": [
           {
             "url": "https://news.polymarket.com/p/boots-on-the-ground",
-            "published_at": "2026-10-29T14:42:25Z",
-            "retrieved_at": "2026-11-21T13:13:35.307761+00:00",
-            "content_hash": "1e3dd2e0d33cad5bc8e34a2a08f8fd7e472bf997ce340a298bebcf7573748926",
+            "published_at": "2026-10-29T14:42:25+00:00",
+            "retrieved_at": "2026-11-23T13:28:53.897191+00:00",
+            "content_hash": "c606a0cb0d9e21d0b84dcc08eb13dbd9ce37c2048af1e4833c6cf58c29ec9b8c",
             "scope": "excerpt"
           }
         ]
