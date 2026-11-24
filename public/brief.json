@@ -1,12 +1,13 @@
 {
-  "reviewed_at": "2026-11-23T13:36:29.617037+00:00",
-  "headline": "Funding and power profits advance; AI delivery remains a separate test",
+  "reviewed_at": "2026-11-24T13:24:59.867173+00:00",
+  "headline": "Contracts and leadership improve visibility; funding timing and delivery still matter",
   "bullets": [
-    "Oracle’s November 20 statement says OpenAI-related funding, including vendor financing, is in place. It does not reconcile every cash receipt or obligation; Rubin handover and positive free cash flow remain future milestones.",
-    "Drax’s November 23 update improves its power-business outlook. Its AI-campus tenant talks, approvals and final investment decisions remain unresolved; existing grid access is not approved import capacity or operating compute.",
-    "Yesterday’s Anthropic closing, SpaceX note pricing and NVIDIA inquiry coverage retain their dates. New shopping-survey and patent commentary is explicitly separated from measured AI use and commercial deployment."
+    "Meta’s November 23 filing ties its prospective Class C ATM to the stock dividend, trading and litigation conditions. Earlier completed financing remains separate; the filing does not establish a cash shortfall.",
+    "Applied Digital’s November 23 lease covers150 MW over18 years, with about $5.4bn base-term value. H1 2028 delivery remains conditional, and first-in equity funding is not complete project financing or collected lease cash.",
+    "NVIDIA’s CEO reinstatement took effect November 22 and was filed November 23. The independent investigation continues; no clearance of the separately reported accounting inquiry is established.",
+    "OpenAI/Cisco released pre-release Shirudo tooling November 23. Temporary protection could reduce disruption while patching, but controlled demonstrations do not establish production uptake or revenue."
   ],
-  "notice": "Public research reviewed November 23. Oracle’s statement was published November 20; Drax’s update is November 23. Source, event and reporting dates remain separate. Some wall originals remain inaccessible; Karpathy’s source failed and prior posts were retained. X trends, live CDS and consensus feeds are not connected; coverage is selective.",
+  "notice": "Public research reviewed November 24. New source disclosures were published November 23; event dates and future milestones remain separate. Nineteen selected wall items have current evidence-bound dispositions, including17 unavailable content judgments. Four older retries are deferred; no comprehensive X trends, live CDS or consensus coverage is connected.",
   "articles": [
     {
       "id": "anthropic-ipo-expectations",
@@ -725,14 +726,14 @@
     },
     {
       "id": "nvidia-gtc-berlin-20261021",
-      "title": "NVIDIA changes CEO; operating continuity remains a test",
-      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
-      "published_at": "2026-11-12",
+      "title": "Huang returns to NVIDIA; investigations and operating tests remain",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
+      "published_at": "2026-11-23",
       "date_kind": "publication_date",
       "date_precision": "day",
-      "reviewed_at": "2026-11-13T13:53:32.622704+00:00",
-      "source_id": "nvidia-ceo-transition-20261112",
-      "source_name": "NVIDIA · CEO transition and SEC filing",
+      "reviewed_at": "2026-11-24T13:14:25.090326+00:00",
+      "source_id": "nvidia-reinstatement-8k-20261123",
+      "source_name": "NVIDIA · reinstatement 8-K and issuer statement",
       "source_role": "primary",
       "lens": "capacity",
       "relevance": "material",
@@ -748,15 +749,15 @@
         "models",
         "applications"
       ],
-      "observation": "The board accepted Jensen Huang’s immediate resignation November 11. Colette Kress becomes interim CEO while remaining CFO; Harvey Jones becomes chair.",
-      "summary": "Announced November 12; the board expects customer commitments and the roadmap to continue uninterrupted.",
-      "implication": "Leadership oversight has changed. Track deliveries and financing decisions before inferring a change in AI demand.",
-      "beneficiaries": "No commercial beneficiary is established; competitive gains require evidence of customer switching.",
-      "risks": "Transition may slow decisions across product delivery and ecosystem financing.",
-      "counterevidence": "The board expects operating continuity; this is an expectation, not proof of future execution.",
-      "confirms": "Documented delivery delays, revised commitments or published findings would establish operating consequences.",
-      "refutes": "Continuing deliveries and unchanged commitments would weaken a disruption thesis.",
-      "uncertainty": "The announcement establishes neither misconduct findings nor cancelled financing, orders or shipments.",
+      "observation": "NVIDIA reinstated Jensen Huang as President, CEO and a director effective November 22. Colette Kress remains EVP/CFO; Harvey Jones remains board chair.",
+      "summary": "The November 23 filing confirms the leadership reversal. The independent board investigation continues; reinstatement does not resolve the separately reported SEC accounting inquiry.",
+      "implication": "The interim-CEO period ends, but this is not clearance of the inquiries or proof of stronger demand. Deliveries, collections and compliance outcomes still need evidence.",
+      "beneficiaries": "Customers and suppliers may benefit from steadier decision-making; no quantified commercial benefit is disclosed.",
+      "risks": "Governance and compliance uncertainty persists; no new delivery, utilization or financing outcome is established.",
+      "counterevidence": "The board unanimously supports Huang’s return while retaining independent investigation and oversight. Reinstatement alone is neither a finding of wrongdoing nor exoneration.",
+      "confirms": "Published investigation findings, effective controls, accepted deliveries and customer collections would clarify operating consequences.",
+      "refutes": "New adverse findings, compliance restrictions or execution delays would undermine a return-to-normal thesis.",
+      "uncertainty": "No investigation conclusion or quantifiable business impact is disclosed. The board inquiry and Reuters’ November 20 report of an SEC accounting inquiry are distinct; no regulator closure or finding is established.",
       "highlights": [
         {
           "title": "Leadership change is confirmed",
@@ -823,19 +824,20 @@
           "source_date": "2026-10-21"
         }
       ],
-      "source_date_note": "Event November 11 per SEC 8-K; announcement and filing November 12; reviewed November 13. Earlier October 21 GTC and November 8/10 governance evidence remain historical.",
-      "access_note": "Full original announcement HTML and full SEC 8-K public-reader text reviewed. Earlier dated highlights retained without new verification.",
-      "claim_type": "issuer governance disclosure; attributed board expectation; implications are analysis",
-      "publication_note": "Same-ID update retains all seven prior dated highlights. No new financing edge or delivered-capacity claim.",
+      "source_date_note": "Reinstatement event November 22; SEC filing, signature and attached press release November 23; reviewed November 24. Accession 0001045810-26-000090. Earlier October 21 GTC and November 8/10/12 governance highlights remain historical.",
+      "access_note": "Full 8-K and complete attached issuer release read through the public web reader; direct SEC HTTP returned403 and was not retried. Reader receipts and text hashes are retained privately; original-byte retrieval is not claimed. Attached release: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nov23pressrelease.htm . Earlier source reviews are preserved without new verification.",
+      "claim_type": "Filed governance action; attributed board assessments; implications are analysis. Investigations are not findings.",
+      "publication_note": "Same-ID update supersedes the interim-CEO status. All eight prior dated highlights remain historical context, not a current CEO search or newly delivered GTC milestones. The separate November20 Reuters accounting report remains in the existing earnings story, without a new conclusion inferred here.",
       "reading_review": {
-        "key_takeaway": "Leadership oversight has changed. Track deliveries and financing decisions before inferring a change in AI demand.",
+        "key_takeaway": "The interim-CEO period ends, but this is not clearance of the inquiries or proof of stronger demand. Deliveries, collections and compliance outcomes still need evidence.",
         "worth_reading": "skim",
-        "rationale": "A confirmed leadership transition changes governance, while business effects remain unestablished.",
+        "rationale": "A confirmed leadership reversal updates governance; investigations and commercial execution remain separate tests.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-13T14:00:27.537204+00:00",
-        "content_hash": "db35995ca3c6246e4df2bcbc28433b13f6cafa33c6955697fa02210512007d43"
+        "reviewed_at": "2026-11-24T13:14:25.090326+00:00",
+        "content_hash": "5d45b46c9832e96a52b7be9567b40e3890e72629c8702a9d6fb3fe86c8d56bee"
       },
-      "event_date": "2026-11-11"
+      "event_date": "2026-11-22",
+      "report_period": "Governance event November22; announcement and filing November23; no new financial reporting period"
     },
     {
       "id": "coreweave-denmark-online-20261027",
@@ -1218,16 +1220,16 @@
       }
     },
     {
-      "access_note": "Full November 12 SEC 8-K body read through the ordinary public text reader. Direct original download returned403; stored provenance covers reader text, not original HTML bytes. Exhibits were not fully reviewed.",
+      "access_note": "Complete SEC 8-K public-reader text reviewed, including Item 8.01 and signature. Saved reader text and hashes document access; original HTML bytes were not retrieved. No additional exhibits are attached to this disclosure. Earlier financing source reviews are retained without new verification.",
       "ai_layers": [
         "chips",
         "infrastructure",
         "models"
       ],
-      "beneficiaries": "Meta gains financing flexibility; suppliers benefit only as equipment and services are accepted and paid for.",
-      "claim_type": "filed completed euro offering; historical financing stages retained; implications are analysis",
-      "confirms": "Documented receipts, accepted deployments and operating cash generation would support the financing plan.",
-      "counterevidence": "Completed euro and dollar offerings rebut a blanket inability-to-finance thesis. Closing alone does not establish cash returns from the buildout.",
+      "beneficiaries": "No new beneficiary or cash inflow is established; customers and suppliers still depend on Meta’s overall funding and accepted deployment plans.",
+      "claim_type": "Filed company agreement and financing-timing expectation; litigation outcome unresolved; implications are analysis",
+      "confirms": "Stock-dividend payment, Class C trading, an actual ATM launch and disclosed proceeds would establish progress on this funding route.",
+      "counterevidence": "Earlier completed euro, dollar and preferred financings remain valid separate evidence. The filing does not cancel the ATM or rule out an earlier litigation resolution.",
       "date_kind": "filing_date",
       "date_precision": "day",
       "entities": [
@@ -1236,7 +1238,7 @@
         "AMD",
         "Broadcom"
       ],
-      "event_date": "2026-11-12",
+      "event_date": "2026-11-18",
       "highlights": [
         {
           "title": "Euro offering completes",
@@ -1304,32 +1306,33 @@
         }
       ],
       "id": "meta-financing-20261026",
-      "implication": "Funding execution has advanced, adding fixed interest obligations; it does not demonstrate productive AI capacity or investment returns.",
+      "implication": "One prospective equity-funding route stays conditional while spending and fixed obligations continue. This filing does not establish a cash shortfall or reverse completed financing.",
       "lens": "funding",
-      "observation": "Meta’s November 12 filing confirms completion that day of six euro-note series totaling €9bn face principal.",
-      "publication_note": "Same-ID update to the completed euro stage. All seven earlier highlights retained as dated history; their expected-delivery wording describes the prior disclosure. No new dollar/euro aggregate or AI-only allocation is inferred.",
-      "published_at": "2026-11-12",
-      "refutes": "Weak collections or persistent investment cash deficits would weaken the returns case even after successful financing.",
+      "observation": "Meta agreed not to issue Class C shares during the shareholder litigation’s pretrial and trial proceedings. It expects to launch the ATM only after the stock dividend is paid and Class C begins trading.",
+      "publication_note": "Same-ID update adds the new Class C timing restriction. All eight prior dated financing highlights remain unchanged historical evidence, including the earlier ATM plan. No new raise, received cash, cancellation of completed offerings or aggregate funding total is inferred.",
+      "published_at": "2026-11-23",
+      "refutes": "Prolonged litigation or an adverse outcome could further delay the route; operating cash and other completed funding could reduce reliance on it.",
       "relevance": "material",
-      "reviewed_at": "2026-11-13T13:55:56.991251+00:00",
-      "risks": "New interest and preferred dividends increase fixed obligations; financing does not establish utilization or a return on the buildout.",
-      "source_date_note": "Euro offering completed and filing published November12; reviewed November13. Earlier highlights retain their original November4–6 and October dates.",
-      "source_id": "meta-euro-completion-20261112",
-      "source_name": "Meta · November 12 euro closing 8-K",
+      "reviewed_at": "2026-11-24T13:22:37.754779+00:00",
+      "risks": "Litigation and issuance timing may constrain financing flexibility; the historical ATM ceiling is not usable cash.",
+      "source_date_note": "8-K earliest report date November 18; filed and signed November 23; reviewed November 24. Trial is scheduled April 19, 2027. Earlier financing highlights retain their original dates and stages.",
+      "source_id": "meta-class-c-litigation-20261123",
+      "source_name": "Meta · Class C and ATM timing 8-K",
       "source_role": "primary",
-      "summary": "Euro issuance has moved from expected delivery to completed offering. Earlier dollar, preferred and common-forward transactions remain separate.",
-      "title": "Meta completes its €9bn euro bond offering",
-      "uncertainty": "The closing filing does not state actual net cash received. Approximately €8.96bn net remains a prior prospectus estimate; common-forward settlement, ATM sales and final supplier allocations remain unverified.",
-      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526458525/d177728d8k.htm",
+      "summary": "November 23 filing adds a timing restriction to the previously planned Class C ATM. Completed bond and preferred transactions remain separate.",
+      "title": "Meta’s planned Class C funding route waits on litigation",
+      "uncertainty": "No assured ATM launch date or sales are disclosed. The April 19, 2027 trial date and June 30 waiver longstop are not guaranteed fundraising dates; no financing-gap amount is established.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026075541/meta-20261118.htm",
       "rank": 15,
       "reading_review": {
-        "key_takeaway": "Funding execution has advanced, adding fixed interest obligations; it does not demonstrate productive AI capacity or investment returns.",
-        "worth_reading": "skim",
-        "rationale": "The primary filing resolves a previously pending financing stage without establishing AI utilization or returns.",
+        "key_takeaway": "One prospective equity-funding route stays conditional while spending and fixed obligations continue. This filing does not establish a cash shortfall or reverse completed financing.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Updates a prospective funding route’s actual conditions without confusing it with completed financing or cash received.",
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-13T14:00:27.537204+00:00",
-        "content_hash": "fa0aa47bc550db2e7ebf8949dfd2a088a10de6c849755abad0ae1e263eb84d12"
-      }
+        "reviewed_at": "2026-11-24T13:22:37.754779+00:00",
+        "content_hash": "c465415e00c4de754c9894f1e397a5abe9fc6cdad23b949d72cb3d9f72371b82"
+      },
+      "report_period": "November 18 earliest reported event; November 23 filing; future litigation and issuance conditions"
     },
     {
       "id": "nebius-q3-20261112",
@@ -1676,135 +1679,6 @@
       }
     },
     {
-      "id": "ai-buildout-delivery-cash-20261107",
-      "title": "Telekom says Munich is booked; expansion is the next delivery test",
-      "url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/11/ai-demand-rises-deutsche-telekom-expands-ai-factory-in-munich",
-      "published_at": "2026-11-09",
-      "date_kind": "issuer_publication_date",
-      "date_precision": "day",
-      "source_id": "telekom-munich-expansion-20261109",
-      "source_name": "Deutsche Telekom · Munich Industrial AI Cloud update",
-      "source_role": "primary",
-      "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
-      "lens": "capacity",
-      "relevance": "material",
-      "rank": 20,
-      "entities": [
-        "Deutsche Telekom",
-        "T-Systems",
-        "NVIDIA",
-        "Siemens",
-        "Daimler Truck",
-        "Soofi",
-        "IREN",
-        "Microsoft",
-        "Google",
-        "Alphabet",
-        "Crusoe",
-        "PPL",
-        "Invitium Energy",
-        "QTS",
-        "Equinix",
-        "Stockland",
-        "John Boyd Properties"
-      ],
-      "ai_layers": [
-        "energy",
-        "chips",
-        "infrastructure",
-        "models",
-        "applications"
-      ],
-      "observation": "Telekom says Munich’s first stage was fully booked seven months after its February launch and names industrial users. Its newly announced B300 expansion targets 20MW. Earlier November 8 ABC reporting: Stockland removed the proposed Cooks River data-centre use while retaining the logistics precinct.",
-      "summary": "A company-reported demand signal from an operating site, followed by a planned expansion. No utilization percentage, revenue, payment or commissioning date is disclosed. The prior Sydney proposal withdrawal and earlier IREN, Google, PPL and SG6 evidence remain dated context.",
-      "implication": "Company-reported bookings and named users support local demand; the next test is commissioned B300 capacity, paid usage and returns.",
-      "beneficiaries": "NVIDIA and infrastructure suppliers may benefit from accepted deliveries; industrial customers may gain usable local compute. Neither supplier revenue nor customer returns is quantified.",
-      "risks": "Chip delivery, power readiness, financing, pricing and customer adoption can still limit returns on expansion spending.",
-      "counterevidence": "The initial site is operating and management identifies users. However, booked capacity need not equal sustained utilization, paid collections or profitable customer applications. The wider Bavaria proposal remains conditional. Earlier ABC reporting separates residents’ opposition claims from Stockland’s logistics rationale; one cancelled proposal does not establish aggregate demand collapse.",
-      "confirms": "Commissioned B300 systems, dated energized capacity, disclosed billed usage/collections and customer renewal or productivity evidence would strengthen the case.",
-      "refutes": "Expansion delays, cancellations, price concessions or weak paid utilization would weaken the inference that bookings convert into durable returns.",
-      "uncertainty": "The release supplies no numeric utilization, contract duration, customer concentration, revenue, margin, collected cash or commissioning timetable. The first-stage sold-out claim has no independently measured denominator. Munich’s 20MW target is not current delivered capacity. Separate Bavaria expansion has no final investment decision. Prior Sydney context: exact withdrawal date and data-centre-only cost remain unknown; A$3.5bn describes the whole precinct. Earlier IREN margin excludes depreciation and site costs.",
-      "report_period": "IREN quarter ended September 30, 2026; cross-company announcements November 5-6, 2026",
-      "source_date_note": "Issuer announcement and press conference: November 9, 2026; publication time unavailable. Historical launch: February 2026; fully booked seven months later per issuer, with no exact date. Review date is separate. Prior context: ABC published November 8 at 03:26:43 UTC; the exact decision date is unknown. Earlier IREN/Google sources remain November 5 and Crusoe/PPL/Equinix November 6, reviewed November 7; these are not new November 8 events.",
-      "access_note": "November 9: Original English HTML downloaded successfully and read; linked German version checked for wording. Publication is day precision; page modification metadata is not treated as publication time. Earlier reviews retained without new verification: November 8: full original ABC article read, including the attributed Stockland statement. Company/NSW planning pages provided context but not separate confirmation of the new withdrawal. Earlier November 7 review: IREN release read through a public PDF reader after direct download failed; call, deck and 10-Q were not reviewed. Other original issuer webpages were downloaded and read. No independent site inspection or operating telemetry.",
-      "claim_type": "Issuer operating-use claims and forward capacity plans; implications are inference",
-      "highlights": [
-        {
-          "title": "Revenue is real; its mix matters",
-          "observation": "IREN reports $200m AI Cloud revenue: $135m services and $65m leases.",
-          "implication": "This is recognized revenue, not wholly GPU-service consumption.",
-          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
-          "source_date": "2026-11-05",
-          "claim_type": "Reported quarterly revenue"
-        },
-        {
-          "title": "Contracted ARR still needs delivery",
-          "observation": "The greater-than-$4bn ARR target moved to January 31, 2027, possibly end-February.",
-          "implication": "Commissioning and customer acceptance govern the ramp; ARR is not GAAP revenue.",
-          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
-          "source_date": "2026-11-05",
-          "claim_type": "Management target, not realized revenue"
-        },
-        {
-          "title": "Prepayments support cash flow",
-          "observation": "$529m operating cash includes $645m from deferred revenue, versus $4.824bn PP&E/hardware payments.",
-          "implication": "Their calculated difference is -$4.295bn, not company-defined FCF. Customer advances do not establish earned cash returns.",
-          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
-          "source_date": "2026-11-05",
-          "claim_type": "Reported cash flows; explicitly labeled calculation"
-        },
-        {
-          "title": "Funding coverage is narrower than expansion",
-          "observation": "Management calls remaining capex for its 0.3 GW program funded, using $9bn of mixed cash, restricted cash, facilities and unreceived prepayments. Remaining FY27 capex is $15bn; another $6bn is targeted.",
-          "implication": "Facility, escrow and availability conditions apply; this does not establish that all expansion is funded.",
-          "source_url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
-          "source_date": "2026-11-05",
-          "claim_type": "Management funding scope and conditional plan"
-        },
-        {
-          "title": "Wyoming ownership changes, not operating status",
-          "observation": "Crusoe announced November 6 that Google acquired the site, completing Crusoe predevelopment.",
-          "implication": "This advances construction preparation; it establishes no operating capacity or utilization.",
-          "source_url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
-          "source_date": "2026-11-06",
-          "claim_type": "Company-reported acquisition; closing date unspecified"
-        },
-        {
-          "title": "The $17bn belongs to an earlier plan",
-          "observation": "Google announced its long-term Wyoming investment on November 5.",
-          "implication": "Do not count it again as a new November 6 commitment, acquisition price or cash received by Crusoe.",
-          "source_url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/",
-          "source_date": "2026-11-05",
-          "claim_type": "Announced long-term investment, not realized spending"
-        },
-        {
-          "title": "QTS power is conditional and years away",
-          "observation": "PPL describes nonbinding 2 GW terms and separate specified-cost reimbursement. Fuel cells/storage could start in 2029; gas units in 2032-2033.",
-          "implication": "Some development risk is allocated, but this is neither final generation commitment nor delivered power.",
-          "source_url": "https://investors.pplweb.com/2026-11-06-PPL-Corporation-Delivers-Strong-Third-Quarter-2026-Earnings-Raises-Long-Term-EPS-Growth-Outlook",
-          "source_date": "2026-11-06",
-          "claim_type": "Nonbinding terms, executed cost protection and prospective dates"
-        },
-        {
-          "title": "SG6 reaches opening, with utilization still unknown",
-          "observation": "Equinix announced SG6 opening: about 1,550 Phase 1 cabinets and $290m initial investment. Up to 20 MW is full build-out.",
-          "implication": "Opened colocation supply is further along than a site plan; cabinet occupancy and cash returns still need evidence.",
-          "source_url": "https://newsroom.equinix.com/2026-11-06-Equinix-Opens-SG6-to-Support-Singapores-Digital-Future-and-Strengthen-Its-Role-as-a-Global-Innovation-Hub",
-          "source_date": "2026-11-06",
-          "claim_type": "Issuer opening milestone; full-buildout capacity separate"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "Company-reported bookings and named users support local demand; the next test is commissioned B300 capacity, paid usage and returns.",
-        "worth_reading": "skim",
-        "rationale": "The new evidence changes the company or financing assessment; dated details distinguish claims, delivery and cash.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-09T14:08:42.044744+00:00",
-        "content_hash": "97019967f5b26f5b65e68b13a523e23ca03e9d93640b4e3033449dbbf0d57379"
-      },
-      "publication_note": "New local demand evidence, not proof that GTC Berlin DSX/Rubin milestones have been delivered. Investment amount omitted from the compact public account because the release describes nearly another quarter of a billion without explicitly naming currency."
-    },
-    {
       "id": "alphabet-q3-20261028",
       "title": "Google adds TPU systems; deployment and customer economics remain the test",
       "url": "https://cloud.google.com/blog/topics/ai-infrastructure/tpu-8tx-and-tpu-8i-max",
@@ -2035,310 +1909,6 @@
       }
     },
     {
-      "id": "amd-q3-results-20261103",
-      "title": "AMD sales accelerate; inventory and receivables absorb cash",
-      "url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
-      "published_at": "2026-11-03T21:15:00Z",
-      "event_date": "2026-11-03",
-      "date_kind": "issuer_release",
-      "date_precision": "minute",
-      "source_id": "amd-q3-20261103-release",
-      "source_name": "AMD · Q3 earnings release",
-      "source_role": "primary",
-      "lens": "earnings",
-      "relevance": "material",
-      "reviewed_at": "2026-11-04T13:48:33+00:00",
-      "report_period": "Quarter ended September 26, 2026; Q4 2026 guidance",
-      "entities": [
-        "AMD",
-        "Anthropic",
-        "Meta",
-        "Microsoft",
-        "OpenAI",
-        "Oracle"
-      ],
-      "ai_layers": [
-        "chips",
-        "infrastructure"
-      ],
-      "rank": 23,
-      "claim_type": "Reported results; initial-workload statement and guidance are management claims; implications are analysis",
-      "observation": "Q3 revenue was $13.377bn, including $8.546bn from Data Center. Continuing operating cash was $1.202bn; company-defined free cash flow was $554m.",
-      "summary": "November 3 results provide new supplier operating evidence. Data Center includes CPUs and other products, not only AI GPUs.",
-      "implication": "Chip demand is reaching recognized sales, but the ramp consumes working capital. Accepted deliveries and collections determine cash returns.",
-      "beneficiaries": "AMD and its chip, memory, networking and systems suppliers if production is accepted and paid for.",
-      "risks": "Inventory, receivables, delivery execution and customer funding can separate revenue growth from cash returns.",
-      "counterevidence": "Quarterly free cash flow stayed positive; nine-month continuing operating cash and free cash flow increased year over year. Ramp inventory is not proof of obsolete stock or bad debts.",
-      "confirms": "Repeat workloads, accepted Helios deliveries and improving collections and inventory conversion.",
-      "refutes": "Cancellations, delayed acceptance or inventory and receivables growing without corresponding collections.",
-      "uncertainty": "No AI-only revenue, fleet deployment scale, utilization or customer profitability disclosed. Call, deck and Q3 10-Q were not reviewed.",
-      "source_date_note": "Release November 3 at 16:15 ET; reviewed November 4. Reported quarter ends September 26. Q4 guidance is prospective.",
-      "access_note": "Full issuer release and financial tables read through a public web reader. Direct download returned 403; preserved hashes describe reader text, not original HTML bytes.",
-      "highlights": [
-        {
-          "title": "Revenue growth has a cash cost",
-          "observation": "Data Center sales rose 97% year over year. Quarterly continuing operating cash fell from $2.366bn in Q2; inventory and receivables used $2.995bn and $1.928bn.",
-          "implication": "Working-capital conversion matters alongside booked sales.",
-          "claim_type": "Reported financial results; interpretation is inference",
-          "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
-          "source_date": "2026-11-03"
-        },
-        {
-          "title": "Initial workloads are a limited delivery milestone",
-          "observation": "AMD says first Helios systems run customer models and workloads. Deployment scale is undisclosed.",
-          "implication": "This advances beyond a purchase announcement without establishing fleet utilization or customer returns.",
-          "claim_type": "Vendor statement, not independently measured utilization",
-          "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
-          "source_date": "2026-11-03"
-        },
-        {
-          "title": "Higher sales guidance does not ensure higher margins",
-          "observation": "Q4 revenue guidance is $17bn ±3%; non-GAAP gross margin guidance is 55%, versus 56% reported in Q3.",
-          "implication": "Watch product mix and ramp costs as volume grows.",
-          "claim_type": "Management guidance versus reported non-GAAP result",
-          "source_url": "https://www.globenewswire.com/news-release/2026/11/03/3394824/0/en/amd-reports-third-quarter-2026-financial-results.html",
-          "source_date": "2026-11-03"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "Chip demand is reaching recognized sales, but the ramp consumes working capital. Accepted deliveries and collections determine cash returns.",
-        "worth_reading": "dig_deeper",
-        "rationale": "Reported chip revenue and cash-flow evidence changes the supply-chain picture. Inspect working capital and distinguish initial workloads from scaled deployment.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T13:48:33+00:00",
-        "content_hash": "184b7651199ab9f92839c91db2f621acc3e73db3c0fc90678985cc4ff9b3b967"
-      }
-    },
-    {
-      "id": "palantir-q3-results-20261102",
-      "title": "Palantir turns commercial demand into revenue and cash; contract growth lags",
-      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm",
-      "source_id": "palantir-q3-release-20261102",
-      "source_name": "Palantir · Q3 earnings release",
-      "source_role": "primary",
-      "published_at": "2026-11-02",
-      "event_date": "2026-11-02",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "reviewed_at": "2026-11-03T14:13:02+00:00",
-      "entities": [
-        "Palantir"
-      ],
-      "ai_layers": [
-        "applications"
-      ],
-      "lens": "earnings",
-      "relevance": "material",
-      "rank": 24,
-      "observation": "Q3 revenue rose 96% to $2.313bn. U.S. commercial revenue reached $984m, exceeding U.S. government revenue of $953m.",
-      "summary": "Reported profit and cash strengthen the adoption signal; slower contract-value growth limits extrapolation.",
-      "implication": "Palantir is converting enterprise software demand into sales and operating cash. AI-specific revenue and customers’ investment returns remain undisclosed.",
-      "claim_type": "Unaudited issuer results; contract metrics and forecasts are management disclosures; implication is inference",
-      "beneficiaries": "Palantir and implementation partners may benefit from expanding paid deployments.",
-      "risks": "Competition, customer concentration and contract cancellations could weaken conversion.",
-      "counterevidence": "U.S. commercial total contract value grew only 11%. That measure assumes exercised options and no termination; it is neither revenue nor collected cash.",
-      "confirms": "Renewals converting into revenue while operating cash and GAAP margins hold.",
-      "refutes": "Slower renewals, cancellations or cash growth falling behind recognized sales.",
-      "uncertainty": "Results combine products; they do not isolate AI revenue or customer-level savings.",
-      "source_date_note": "Reported November 2 for the quarter ended September 30, 2026.",
-      "access_note": "SEC release read through public web access; IR deck downloaded and financial reconciliations reviewed. Direct SEC download returned 403.",
-      "publication_note": "Revenue, profit, operating cash and conditional contract values are kept distinct.",
-      "highlights": [
-        {
-          "title": "Reported profit and cash",
-          "observation": "GAAP operating income was $1.085bn, a 47% margin; operating cash was $1.205bn.",
-          "implication": "Cash supports the sales signal, although working-capital timing and noncash compensation still matter.",
-          "claim_type": "Reported results; implication is analysis",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Adjusted figures use different definitions",
-          "observation": "Adjusted operating margin was 62%; it excludes stock compensation and related payroll taxes. Adjusted free cash flow adds back certain payroll-tax cash payments.",
-          "implication": "Use GAAP profit and operating cash alongside adjusted measures.",
-          "claim_type": "Issuer non-GAAP definitions",
-          "source_url": "https://investors.palantir.com/files/Palantir%20-%20Q3%202026%20Business%20Update.pdf",
-          "source_date": "2026-11-02"
-        }
-      ],
-      "report_period": "the quarter ended September 30, 2026",
-      "reading_review": {
-        "key_takeaway": "Palantir’s commercial growth is reaching revenue and cash, but slower contract-value growth limits extrapolation and AI-specific customer returns remain undisclosed.",
-        "worth_reading": "dig_deeper",
-        "rationale": "Strong operating evidence makes this more useful than an AI adoption headline. The contrast between sales, cash and contract growth is the main detail to inspect.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z",
-        "content_hash": "3600eaadf98cb66f21ca75471841f4c1e9053928977f70a6f65757a62dfac8b5"
-      }
-    },
-    {
-      "id": "marvell-lumentum-agreement-20261102",
-      "title": "Marvell–Lumentum deal: sales growth adds operating evidence",
-      "url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
-      "source_id": "marvell-lumentum-issuer-20261102",
-      "source_name": "Marvell and Lumentum · joint announcement",
-      "source_role": "primary",
-      "published_at": "2026-11-02",
-      "event_date": "2026-11-02",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "reviewed_at": "2026-11-03T14:13:02+00:00",
-      "entities": [
-        "Marvell",
-        "Lumentum"
-      ],
-      "ai_layers": [
-        "chips",
-        "infrastructure"
-      ],
-      "lens": "funding",
-      "relevance": "material",
-      "rank": 25,
-      "observation": "The companies announced a definitive all-stock acquisition agreement: 4.500 Marvell shares per Lumentum share, with approximately $115 billion implied enterprise value.",
-      "summary": "Lumentum’s same-day results add an operating checkpoint: $1.2626 billion quarterly revenue and management-disclosed purchase commitments above $5 billion for a second major near-packaged/co-packaged optics win. The proposed merger still targets closing in the first half of 2028.",
-      "implication": "Existing sales and purchase commitments give the optics thesis more substance. Their conversion into collected cash and delivered products matters separately from the all-stock acquisition value.",
-      "claim_type": "Issuer-disclosed agreement and unaudited results; commitments attributed to management; guidance and merger benefits are expectations; implications are analysis",
-      "beneficiaries": "AI infrastructure customers could gain more integrated chips and optical products; suppliers benefit only as customer demand converts into qualified shipments and collections.",
-      "risks": "Manufacturing constraints, customer order changes and weak cash conversion could limit the optics ramp. Regulatory or shareholder rejection and integration disruption could prevent merger benefits.",
-      "counterevidence": "Quarter-end cash and short-term investments fell $758.8 million. The release supplies no cash-flow statement or shipment-unit counts. Marvell’s preliminary fiscal Q3 revenue midpoint remained unchanged, and neither the merger nor the new optics commitments establish incremental cash receipts.",
-      "confirms": "Conversion of optics commitments into delivered revenue and cash, production progress, customer-qualified joint products and required merger approvals would support the thesis.",
-      "refutes": "Order reductions, delayed production, weakening margins or cash conversion, lost customers or a failed closing would weaken it.",
-      "uncertainty": "The new optics commitment disclosure omits customer identity, delivery timing, cancellation terms and prepayments. Management’s optical-switching opportunity, $550 billion addressable market and merger synergies remain forecasts.",
-      "source_date_note": "Agreement and Lumentum results were announced November 2, 2026. Earnings cover the quarter ended September 26. Results first reviewed here November 3; this is an expanded review of the existing November 2 story, not a new November 3 event. Deal valuation uses October 28 unaffected prices, not a current quote.",
-      "access_note": "Full issuer results retrieved normally (HTTP 200), including nine-page PDF and reconciliations; prior August 11 earnings deck reviewed for guidance comparison. No standalone fiscal Q1 2027 deck was located. Direct quarterly/events-index requests returned HTTP 403 and were not retried. Merger announcement and 24-page combination deck were reviewed November 2; calls, merger exhibits and Form S-4 remain unreviewed.",
-      "publication_note": "Same story ID retained. Realized sales, future purchase commitments, guidance, balance-sheet cash and acquisition consideration are distinct measures and must not be added together. No stock-price reaction or investment recommendation is included.",
-      "highlights": [
-        {
-          "title": "Fixed shares; variable market value",
-          "observation": "Lumentum holders would receive 4.500 Marvell shares each and own about 33% of the combined company; existing Marvell holders would own about 67%.",
-          "implication": "The approximately $115 billion enterprise value is not a fixed cash payment. The share ratio is fixed while the market value of the consideration can change.",
-          "claim_type": "issuer-disclosed transaction terms; implication is analysis",
-          "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Chips and lasers would be designed together",
-          "observation": "Marvell contributes interconnect, switching and custom silicon; Lumentum contributes lasers, optical transceivers, optical circuit switching and compound-semiconductor manufacturing.",
-          "implication": "Closer integration could improve bandwidth and power efficiency, but benefits require qualified products and actual customer deployment.",
-          "claim_type": "issuer-described capabilities and intended benefits; implication is conditional analysis",
-          "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "2028 closing is a milestone, not completion",
-          "observation": "Both boards unanimously approved the agreement. The companies target closing in the first half of 2028, subject to shareholder, regulatory and customary conditions.",
-          "implication": "Do not count the proposed combination as integrated supply today. Approval, execution and customer-retention risks remain.",
-          "claim_type": "issuer-disclosed approval status and closing expectation; implication is analysis",
-          "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Reported sales and margins advanced",
-          "observation": "Fiscal Q1 revenue rose 25.5% sequentially and 136.5% year over year to $1.2626 billion. GAAP operating margin was 28.5%; non-GAAP operating margin was 42.3%.",
-          "implication": "These are company-wide realized results, not a disclosed AI-only revenue total or a count of optical units shipped.",
-          "claim_type": "Issuer-reported unaudited results; interpretation is analysis",
-          "source_url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Optics commitments still need delivery",
-          "observation": "Management disclosed more than $5 billion of purchase commitments for its second major near-packaged/co-packaged optics win.",
-          "implication": "Commitments provide demand visibility; the release does not establish delivery dates, enforceability, prepayments or recognized revenue from this win.",
-          "claim_type": "Management statement about purchase commitments; conversion remains uncertain",
-          "source_url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Next quarter remains a forecast",
-          "observation": "Fiscal Q2 guidance calls for $1.575–1.625 billion revenue and a 45–46% non-GAAP operating margin.",
-          "implication": "Track actual delivery and margins against this dated outlook; guidance is neither collected cash nor completed production.",
-          "claim_type": "Management guidance, not reported results",
-          "source_url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Profit growth did not mean a larger cash balance",
-          "observation": "Cash, equivalents and short-term investments totaled $1.9796 billion at September 26, down $758.8 million from June 27.",
-          "implication": "The balance-sheet decline is not a measure of operating cash burn. A cash-flow statement is needed to explain operating, investing and financing movements.",
-          "claim_type": "Issuer-reported balance-sheet amounts; limitation is analysis",
-          "source_url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx",
-          "source_date": "2026-11-02"
-        }
-      ],
-      "report_period": "Lumentum fiscal Q1 2027, ended September 26, 2026; fiscal Q2 2027 guidance",
-      "reading_review": {
-        "key_takeaway": "Lumentum’s sales and optics commitments strengthen the operating case, while the proposed Marvell merger and future commitments remain separate from cash receipts.",
-        "worth_reading": "dig_deeper",
-        "rationale": "A material transaction plus fresh results deserve attention. Read delivery, cancellation and cash-conversion limits before treating the announced value as incremental demand.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z",
-        "content_hash": "77042ba5a55263d5eb12cbda1da03c52232417fb1318626d07142ca7c9bc2cd6"
-      }
-    },
-    {
-      "id": "onsemi-q3-results-20261102",
-      "title": "onsemi’s AI data-center sales grow; cash also benefits from low capex",
-      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126041580/ef20084671_ex99-1.htm",
-      "source_id": "onsemi-q3-release-20261102",
-      "source_name": "onsemi · Q3 earnings release",
-      "source_role": "primary",
-      "published_at": "2026-11-02",
-      "event_date": "2026-11-02",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "reviewed_at": "2026-11-03T14:13:02+00:00",
-      "entities": [
-        "onsemi"
-      ],
-      "ai_layers": [
-        "chips",
-        "infrastructure"
-      ],
-      "lens": "earnings",
-      "relevance": "material",
-      "rank": 26,
-      "observation": "AI data-center revenue reached $180m, up 175% year over year and 39% sequentially. Total revenue was $1.722bn.",
-      "summary": "The reported AI sales line provides a measurable power-chip demand signal within a broader semiconductor business.",
-      "implication": "Higher compute power requirements are converting into component sales; companywide results do not establish AI-specific profitability.",
-      "claim_type": "Unaudited issuer results and management end-market classification; implication is inference",
-      "beneficiaries": "onsemi gains from AI infrastructure component spending; customer deployment and utilization remain separate milestones.",
-      "risks": "Design changes, customer spending and weakness in other end markets could limit growth.",
-      "counterevidence": "AI data centers were about 10.5% of sales, calculated from reported figures. Automotive revenue fell 1% sequentially to $777m.",
-      "confirms": "Further AI shipments with sustained GAAP profitability and cash after reinvestment.",
-      "refutes": "AI sales slowing or stronger cash reversing as investment requirements rise.",
-      "uncertainty": "AI-specific margins and cash collection are undisclosed; future growth targets remain forecasts.",
-      "source_date_note": "Reported November 2 for Q3 ended October 2, 2026.",
-      "access_note": "SEC release and issuer deck read through public web access. Direct deck and issuer HTML downloads returned 403; stored hashes identify web extraction where raw bytes were unavailable.",
-      "publication_note": "Reported AI revenue is separated from management forecasts and prospective acquisitions.",
-      "highlights": [
-        {
-          "title": "Profit improves on both bases",
-          "observation": "GAAP operating margin was 22.0%, versus 17.0% a year earlier; non-GAAP operating margin was 23.2%.",
-          "implication": "Improved company margins support the demand signal without proving AI alone caused it.",
-          "claim_type": "Reported GAAP and non-GAAP results; implication is analysis",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126041580/ef20084671_ex99-1.htm",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Read cash beside investment",
-          "observation": "Operating cash was $516.4m. Non-GAAP free cash flow was $488.6m after $27.8m capex, versus $46.3m capex a year earlier.",
-          "implication": "Lower investment spending contributes to the stronger free-cash-flow result.",
-          "claim_type": "Reported reconciliation; implication is arithmetic analysis",
-          "source_url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126041580/ef20084671_ex99-1.htm",
-          "source_date": "2026-11-02"
-        }
-      ],
-      "report_period": "Q3 ended October 2, 2026",
-      "reading_review": {
-        "key_takeaway": "AI data-center power-chip demand is reaching onsemi sales, but it is still a minority of the business and its separate profitability is undisclosed.",
-        "worth_reading": "dig_deeper",
-        "rationale": "The disclosed AI sales line is a useful operating checkpoint. Read how low capital spending and the weaker automotive segment affect the companywide cash picture.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z",
-        "content_hash": "fafb43a9a4a9a8b0c774a95815d23c2915345585f053d5d28af17a5330f8820c"
-      }
-    },
-    {
       "id": "drax-brookfield-campus-agreement-20261103",
       "title": "Drax raises its power outlook; AI-campus income still needs tenants and approvals",
       "url": "https://www.drax.com/financial-news/trading-update-and-cmd-with-earnings-upgrades/",
@@ -2435,135 +2005,6 @@
         "content_hash": "30877672b00600c81e969a19743f1ea3d338a475035447ea8b11bb2581b97912"
       },
       "report_period": "2026 trading outlook; 2026–2031 cash-flow ambition; November 23 development status"
-    },
-    {
-      "id": "lgcns-jakarta-completion-20261102",
-      "title": "LG CNS completes Jakarta’s first 30 MW phase; use and returns remain undisclosed",
-      "url": "https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1",
-      "published_at": "2026-11-02T01:00:00Z",
-      "event_date": "2026-11-01",
-      "date_kind": "publication_date",
-      "date_precision": "timestamp",
-      "source_id": "lgcns-jakarta-20261102",
-      "source_name": "LG CNS · Jakarta construction completion",
-      "source_role": "primary",
-      "reviewed_at": "2026-11-02T13:34:20+00:00",
-      "lens": "capacity",
-      "entities": [
-        "LG CNS",
-        "KMG",
-        "LG Electronics",
-        "LG Energy Solution"
-      ],
-      "ai_layers": [
-        "energy",
-        "infrastructure"
-      ],
-      "rank": 28,
-      "relevance": "material",
-      "observation": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
-      "summary": "LG CNS reports completing a 30 MW Jakarta data center and securing customers for all capacity before completion. GPU activity and financial returns are undisclosed.",
-      "implication": "Completed construction reduces delivery risk and supports power-and-cooling suppliers; paid workloads must still prove the project’s economics.",
-      "claim_type": "issuer-reported construction milestone; economic implication is inference",
-      "beneficiaries": "LG CNS gains a completed overseas reference; LG Electronics supplies cooling and LG Energy Solution batteries.",
-      "risks": "Reserved space may take time to become revenue-producing compute; customer terms and returns are undisclosed.",
-      "counterevidence": "Customers covering all capacity provide a stronger demand signal than an unleased build, but do not establish active GPU use or cash collection.",
-      "confirms": "Customer move-ins, measured power draw, active GPU hours and collected revenue would demonstrate commercial conversion.",
-      "refutes": "Delayed activation, tenant cancellations or weak collections would weaken the economic case despite completed construction.",
-      "uncertainty": "No separately disclosed energization test, installed GPU count, utilization, rental revenue or project cash flow. The 30 MW label describes facility capacity, not measured demand.",
-      "source_date_note": "Issuer publication November 2; photo caption dates the completion ceremony November 1. Exact technical acceptance/energization dates are unspecified.",
-      "access_note": "Full public issuer HTML retrieved with HTTP 200; headline and article body checked. Publication timestamp comes from issuer structured metadata; ceremony date from its photo caption.",
-      "highlights": [
-        {
-          "title": "Completed first phase; expansion remains a plan",
-          "observation": "The issuer reports 30 MW completed. Proposed expansion to 400 MW of receiving-power capacity remains in follow-on design.",
-          "implication": "Count the first construction milestone, not the entire future expansion, as delivered building capacity.",
-          "claim_type": "issuer report; interpretation distinguishes project stages",
-          "source_url": "https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Cooling capability is staged",
-          "observation": "Phase one uses air cooling; liquid cooling is planned for later phases.",
-          "implication": "Do not equate the completed building with a fully installed liquid-cooled GPU cluster.",
-          "claim_type": "issuer report; implication is inference",
-          "source_url": "https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1",
-          "source_date": "2026-11-02"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "LG CNS reports a completed, fully contracted Jakarta phase, which reduces construction uncertainty without establishing active GPU use or financial returns.",
-        "worth_reading": "skim",
-        "rationale": "A useful delivery milestone. Further detail has limited economic value until energization, customer workloads or cash generation are disclosed.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z",
-        "content_hash": "d667a3df2dd015db85469477b37014f411351c36ecb7db2688694bf65cffe104"
-      }
-    },
-    {
-      "id": "openai-uae-deployment-20261102",
-      "title": "OpenAI expands UAE agreements; a government pilot is already running",
-      "url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
-      "published_at": "2026-11-02",
-      "event_date": "2026-11-02",
-      "date_kind": "publication_date",
-      "date_precision": "day",
-      "source_id": "openai-uae-20261102-reviewed",
-      "source_name": "Abu Dhabi Media Office",
-      "source_role": "primary",
-      "reviewed_at": "2026-11-02T13:34:20+00:00",
-      "lens": "demand",
-      "entities": [
-        "OpenAI",
-        "ADNOC",
-        "G42",
-        "Inception42",
-        "Mubadala"
-      ],
-      "ai_layers": [
-        "models",
-        "applications"
-      ],
-      "rank": 30,
-      "relevance": "watch",
-      "observation": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
-      "summary": "Abu Dhabi announced four OpenAI agreements. Its food-import compliance pilot is already in production; broader industrial and enterprise expansion remains to be demonstrated.",
-      "implication": "Industrial and government workflows open another route to recurring model demand. Signed agreements and a production pilot still need to translate into paid usage, renewals and savings after AI costs.",
-      "claim_type": "official announcement and deployment-status claims; economic interpretation is inference",
-      "beneficiaries": "OpenAI and Inception42 could gain model and implementation business; customers benefit only if reliable automation saves more than it costs.",
-      "risks": "Integration, inference costs, errors and compliance oversight can limit returns.",
-      "counterevidence": "A production pilot is stronger adoption evidence than a proposal, although no measured economic results are provided.",
-      "confirms": "Paid renewals, deployment acceptance and audited processing-time, error-rate and cost improvements would strengthen the case.",
-      "refutes": "Limited rollout, weak renewals or operating costs exceeding savings would weaken it.",
-      "uncertainty": "Contract values, cash receipts, paid users and measured productivity are undisclosed. No new energized capacity or funded equity is established.",
-      "access_note": "Full public government announcement retrieved and read. Deployment claims have not been independently audited.",
-      "source_date_note": "Published and agreements announced November 2. Pilot start date is unspecified; the pilot is not treated as newly activated today.",
-      "highlights": [
-        {
-          "title": "Separate the pilot from expansion",
-          "observation": "The food-import pilot supports officials; they retain final accountability. ADNOC and Mubadala signed agreements for operational and investment-analysis applications.",
-          "claim_type": "official deployment-status claim and signed agreements",
-          "implication": "A running pilot does not establish completed rollout across these organizations.",
-          "source_url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
-          "source_date": "2026-11-02"
-        },
-        {
-          "title": "Five years describes the channel agreement",
-          "observation": "OpenAI and Inception42 signed a five-year adoption agreement covering government, enterprise and education.",
-          "claim_type": "announced agreement",
-          "implication": "This creates a distribution route, not a disclosed revenue backlog or an investment in OpenAI.",
-          "source_url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
-          "source_date": "2026-11-02"
-        }
-      ],
-      "reading_review": {
-        "key_takeaway": "One UAE government pilot is already in production, while broader OpenAI agreements still lack disclosed paid use, contract values or measured savings.",
-        "worth_reading": "skim",
-        "rationale": "The production pilot is more informative than the agreement count. Read further mainly for workflow details, not as established evidence of profitable adoption.",
-        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
-        "reviewed_at": "2026-11-04T05:20:12Z",
-        "content_hash": "7eaa579d496b49c8dfc00feab57f84f3736d593bfcd852f5ff556e21a74e8572"
-      }
     },
     {
       "id": "oracle-chip-options-20261027",
@@ -2888,6 +2329,143 @@
         "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
         "reviewed_at": "2026-11-20T14:00:31.415488+00:00",
         "content_hash": "955e20476e0cdef68991b81336ad30379781abedc5d7128dba70178506ef4b4f"
+      }
+    },
+    {
+      "id": "shirudo-runtime-security-20261123",
+      "title": "Shirudo targets the patching gap; production economics remain unproven",
+      "url": "https://openai.com/index/introducing-shirudo/",
+      "published_at": "2026-11-23",
+      "date_kind": "publication_date",
+      "date_precision": "day",
+      "reviewed_at": "2026-11-24T13:17:47.222361+00:00",
+      "source_id": "openai-shirudo-20261123",
+      "source_name": "OpenAI and Cisco · Shirudo",
+      "source_role": "primary",
+      "lens": "applications",
+      "relevance": "material",
+      "rank": 28,
+      "entities": [
+        "OpenAI",
+        "Cisco"
+      ],
+      "ai_layers": [
+        "infrastructure",
+        "models",
+        "applications"
+      ],
+      "observation": "OpenAI and Cisco released an open-source runtime for temporary Linux protections while permanent patches are prepared.",
+      "summary": "The November23 launch adds inspectable defensive tooling. A controlled demonstration is not evidence of broad deployment or commercial adoption.",
+      "implication": "Reducing the vulnerable patching window could help operators preserve uptime, but production reliability and customer savings must be measured before inferring security revenue.",
+      "beneficiaries": "Operators and application teams if validated protections reduce disruption; commercial benefit to Cisco or OpenAI is unquantified.",
+      "risks": "Compatibility work, ineffective protections or application regressions could offset the intended operational benefit.",
+      "counterevidence": "The official README describes a pre-release requiring modified Linux kernels and TPM2.0 on production targets; this is not a generally deployable fleet solution.",
+      "confirms": "Independent tests, production references, measured incident reduction, deployment costs and durable paid adoption would strengthen the case.",
+      "refutes": "Frequent regressions, narrow compatibility or deployment costs exceeding avoided losses would weaken the case.",
+      "uncertainty": "The reviewed sources disclose no customer count, production fleet size, revenue, pricing or quantified return on investment.",
+      "highlights": [
+        {
+          "title": "Operator approval remains central",
+          "observation": "The launch describes testing proposed protections before authorized deployment.",
+          "implication": "Automation does not remove operational accountability or replace permanent patching.",
+          "claim_type": "issuer_design_description; implication is analysis",
+          "source_url": "https://openai.com/index/introducing-shirudo/",
+          "source_date": "2026-11-23"
+        },
+        {
+          "title": "A demonstration, not fleet evidence",
+          "observation": "Cisco reports a Codex-generated mitigation blocking a Java4Shell attempt against running Elasticsearch in a controlled test.",
+          "implication": "A successful example does not establish universal protection, production stability or customer uptake.",
+          "claim_type": "vendor_controlled_demonstration_not_independently_reproduced",
+          "source_url": "https://isovalent.com/blog/post/cisco-openai-shirudo/",
+          "source_date": "2026-11-23"
+        }
+      ],
+      "event_date": "2026-11-23",
+      "report_period": "Product announcement; no financial reporting period",
+      "source_date_note": "OpenAI and Cisco announcements November23; reviewed November24. README inspected November24; its publication date is unknown.",
+      "access_note": "Three complete public originals read and hashed; no software, exploit, lab, webinar or video was executed or reviewed. README: https://raw.githubusercontent.com/shirudo-dev/shirudo/main/README.md",
+      "claim_type": "Public code release and attributed design/test claims; commercial implications are inference.",
+      "publication_note": "New security-tooling development; not a repeat of the older PHP2Shell incident or Cisco earnings. No finance-map payment or revenue edge is established.",
+      "reading_review": {
+        "key_takeaway": "Reducing the vulnerable patching window could help operators preserve uptime, but production reliability and customer savings must be measured before inferring security revenue.",
+        "worth_reading": "skim",
+        "rationale": "Useful defensive tooling to monitor; adoption and financial evidence remain absent.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-24T13:17:47.222361+00:00",
+        "content_hash": "66ce902ca55d248b82c8472e203f59680177856976dea6efb19af947e3c04ef3"
+      }
+    },
+    {
+      "id": "applied-digital-hyperscaler-lease-20261123",
+      "title": "Applied Digital signs a $5.4bn lease; capacity arrives from 2028 if milestones hold",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/165/applied-digital-secures-new-150-mw-18-year-lease-with",
+      "source_id": "applied-digital-lease-20261123",
+      "source_name": "Applied Digital · November 23 lease announcement",
+      "source_role": "primary",
+      "published_at": "2026-11-23T13:00:00Z",
+      "event_date": "2026-11-23",
+      "date_kind": "publication_date",
+      "date_precision": "second",
+      "reviewed_at": "2026-11-24T13:21:11.923714+00:00",
+      "entities": [
+        "Applied Digital",
+        "Macquarie"
+      ],
+      "ai_layers": [
+        "infrastructure",
+        "energy"
+      ],
+      "lens": "demand",
+      "relevance": "material",
+      "rank": 55,
+      "observation": "Applied Digital announces an 18-year lease for 150MW of critical IT capacity with an unnamed investment-grade hyperscaler, worth approximately $5.4bn over its base term.",
+      "summary": "Signed customer commitment, with conditional future delivery.",
+      "implication": "A creditworthy tenant can support financing, but the developer still bears construction, power and funding risk before rent becomes cash.",
+      "claim_type": "Issuer-disclosed agreement and forward delivery/financing plans; implications are analysis",
+      "beneficiaries": "Applied Digital and construction suppliers if execution converts the lease into operating revenue.",
+      "risks": "Utility arrangements, approvals, financing and timely customer delivery.",
+      "counterevidence": "A signed long-term lease and funded initial equity offer stronger support than an unleased project.",
+      "confirms": "Closed project financing, completed utility milestones, accepted capacity and collected rent.",
+      "refutes": "Financing delays, missed delivery conditions or impaired collections.",
+      "uncertainty": "Tenant identity, full lease conditions, project-specific draw amounts and utilization are not disclosed in this release.",
+      "report_period": "November 23 lease announcement; expected delivery from H1 2028; 18-year base term",
+      "source_date_note": "Issuer release: November 23, 08:00 EST / 13:00 UTC. Reviewed November 24; not a new November 24 announcement.",
+      "access_note": "Full issuer release and risk statements read through ordinary public HTTP200; raw/text hashes retained privately. Full lease and new SEC exhibit not reviewed.",
+      "publication_note": "New source-backed story; no named-tenant financing edge or network-wide dollar total.",
+      "highlights": [
+        {
+          "title": "Renewals are optional",
+          "observation": "Approximately $12.7bn assumes every renewal over 33 years; it is not additional to the $5.4bn base term.",
+          "implication": "Do not book optional future rent as current revenue.",
+          "source_url": "https://ir.applieddigital.com/news-events/press-releases/detail/165/applied-digital-secures-new-150-mw-18-year-lease-with",
+          "source_date": "2026-11-23",
+          "claim_type": "Issuer contract summary; options conditional"
+        },
+        {
+          "title": "Delivery remains conditional",
+          "observation": "Capacity delivery is expected from H1 2028, subject to development, utilities and regulatory milestones.",
+          "implication": "150MW contracted is not 150MW operating or utilized.",
+          "source_url": "https://ir.applieddigital.com/news-events/press-releases/detail/165/applied-digital-secures-new-150-mw-18-year-lease-with",
+          "source_date": "2026-11-23",
+          "claim_type": "Management forecast"
+        },
+        {
+          "title": "Initial equity is not complete financing",
+          "observation": "Management cites funded first-in balance-sheet equity, its existing $5bn Macquarie equity program, then project financing.",
+          "implication": "The program is not a new $5bn payment or proof this build is fully funded.",
+          "source_url": "https://ir.applieddigital.com/news-events/press-releases/detail/165/applied-digital-secures-new-150-mw-18-year-lease-with",
+          "source_date": "2026-11-23",
+          "claim_type": "Issuer financing description and plan"
+        }
+      ],
+      "reading_review": {
+        "key_takeaway": "A creditworthy tenant can support financing, but the developer still bears construction, power and funding risk before rent becomes cash.",
+        "worth_reading": "dig_deeper",
+        "rationale": "Useful concrete example of contracted demand preceding financing completion and capacity delivery.",
+        "basis": "GPT triage of the existing reviewed research snapshot; original sources were not newly verified.",
+        "reviewed_at": "2026-11-24T13:21:11.923714+00:00",
+        "content_hash": "5e93740e4fc7e8deccbcf3ee7fad1ca329b768a4851c7c6912d4d1797fe2d9d6"
       }
     }
   ],
@@ -4145,21 +3723,6 @@
       "access_note": "Full Reuters syndication text read through public web reader; Reuters origin unavailable. Conflicting secondary forecast-year figures omitted. No stock-price narrative."
     },
     {
-      "id": "marvell-lumentum-issuer-20261102",
-      "name": "Marvell and Lumentum · definitive agreement announcement",
-      "url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
-      "source_date": "2026-11-02",
-      "role": "primary",
-      "kind": "issuer_release",
-      "reviewed_at": "2026-11-02T13:34:20+00:00",
-      "quality_note": "Joint company announcement confirms transaction terms and conditional closing target. Synergies, addressable market and product benefits are management forecasts, not independently realized outcomes.",
-      "topics": [
-        "funding",
-        "capacity"
-      ],
-      "access_note": "Full issuer announcement and 24-page investor deck retrieved normally (HTTP 200) and reviewed. Joint call, merger agreement exhibits and Form S-4 have not been reviewed."
-    },
-    {
       "id": "marvell-lumentum-deck-20261102",
       "name": "Marvell and Lumentum · combination investor presentation",
       "url": "https://investor.marvell.com/_assets/_cd374c2dc2b315cc33f74eeebf563db7/marvell/db/3849/35441/description/marvell-lumentum-combine-investor-presentation-110226.pdf",
@@ -4173,38 +3736,6 @@
         "capacity"
       ],
       "access_note": "Public issuer PDF retrieved normally (HTTP 200), 24 pages; text reviewed. Source body remains outside the public snapshot."
-    },
-    {
-      "id": "lgcns-jakarta-20261102",
-      "name": "LG CNS · Jakarta construction completion",
-      "url": "https://www.lgcns.com/kr/newsroom/press/detail.ax-2611-1",
-      "source_date": "2026-11-02",
-      "role": "primary",
-      "kind": "issuer_release",
-      "reviewed_at": "2026-11-02T13:34:20+00:00",
-      "quality_note": "Original Korean issuer release reviewed in full. Construction and customer coverage are company-reported, without independently measured occupancy, GPU activity or financial returns.",
-      "topics": [
-        "capacity",
-        "energy",
-        "infrastructure"
-      ],
-      "access_note": "Full public issuer HTML retrieved with HTTP 200; headline and article body checked. Publication timestamp comes from issuer structured metadata; ceremony date from its photo caption."
-    },
-    {
-      "id": "openai-uae-20261102-reviewed",
-      "name": "Abu Dhabi Media Office · OpenAI agreements",
-      "url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/",
-      "role": "primary",
-      "kind": "official_announcement",
-      "reviewed_at": "2026-11-02T13:34:20+00:00",
-      "source_date": "2026-11-02",
-      "quality_note": "Official government announcement establishes reported signing and pilot status, not independently verified financial returns.",
-      "topics": [
-        "demand",
-        "models",
-        "applications"
-      ],
-      "access_note": "Full public HTML retrieved successfully; no sign-in."
     },
     {
       "id": "lumentum-q1fy2027-results-20261102",
@@ -4252,21 +3783,6 @@
         "demand"
       ],
       "access_note": "Release and definitions reviewed through public web retrieval; direct SEC request returned 403. No access controls bypassed."
-    },
-    {
-      "id": "palantir-q3-deck-20261102",
-      "name": "Palantir · Q3 2026 business update",
-      "url": "https://investors.palantir.com/files/Palantir%20-%20Q3%202026%20Business%20Update.pdf",
-      "source_date": "2026-11-02",
-      "role": "primary",
-      "kind": "investor_presentation",
-      "reviewed_at": "2026-11-03T14:13:02+00:00",
-      "quality_note": "Issuer presentation; GAAP/non-GAAP reconciliations and customer metrics. Forecasts and product benefits are not independently realized outcomes.",
-      "topics": [
-        "earnings",
-        "demand"
-      ],
-      "access_note": "34-page PDF retrieved normally (HTTP 200); financial pages and reconciliation reviewed. Source body retained privately."
     },
     {
       "id": "onsemi-q3-release-20261102",
@@ -4432,66 +3948,6 @@
       "access_note": "Excerpt scope. Original filing identity cross-checked with SEC submissions metadata; preserved hash covers reader output."
     },
     {
-      "id": "crusoe-wyoming-20261106",
-      "name": "Crusoe · Wyoming site acquisition update",
-      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
-      "role": "primary",
-      "kind": "company_release",
-      "source_date": "2026-11-06",
-      "reviewed_at": "2026-11-07T13:52:19.756751+00:00",
-      "topics": [
-        "capacity",
-        "energy"
-      ],
-      "quality_note": "Company announcement of site acquisition and completed predevelopment; not proof of operating capacity.",
-      "access_note": "Complete original HTML retrieved HTTP200; full announcement text read."
-    },
-    {
-      "id": "google-wyoming-20261105",
-      "name": "Google · Wyoming investment and power design",
-      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/",
-      "role": "primary",
-      "kind": "company_release",
-      "source_date": "2026-11-05",
-      "reviewed_at": "2026-11-07T13:52:19.756751+00:00",
-      "topics": [
-        "capacity",
-        "energy"
-      ],
-      "quality_note": "Long-term announced investment and planned contracted power; not cash spent or commissioned capacity.",
-      "access_note": "Complete original HTML retrieved HTTP200; full authored article read, excluding generated summaries."
-    },
-    {
-      "id": "ppl-qts-terms-20261106",
-      "name": "PPL · November 6 results and Invitium/QTS terms",
-      "url": "https://investors.pplweb.com/2026-11-06-PPL-Corporation-Delivers-Strong-Third-Quarter-2026-Earnings-Raises-Long-Term-EPS-Growth-Outlook",
-      "role": "primary",
-      "kind": "issuer_release",
-      "source_date": "2026-11-06",
-      "reviewed_at": "2026-11-07T13:53:32.569299+00:00",
-      "topics": [
-        "energy",
-        "capacity"
-      ],
-      "quality_note": "Approximately 2GW is a nonbinding generation term sheet. A separate executed agreement addresses specified development-cost reimbursement; planned service dates remain 2029/2032/2033.",
-      "access_note": "Original issuer HTML downloaded successfully. Project/business-plan narrative and forward-looking cautions reviewed; full earnings call, deck and underlying agreements were not reviewed."
-    },
-    {
-      "id": "equinix-sg6-opening-20261106",
-      "name": "Equinix · SG6 opening",
-      "url": "https://newsroom.equinix.com/2026-11-06-Equinix-Opens-SG6-to-Support-Singapores-Digital-Future-and-Strengthen-Its-Role-as-a-Global-Innovation-Hub",
-      "role": "primary",
-      "kind": "issuer_release",
-      "source_date": "2026-11-06",
-      "reviewed_at": "2026-11-07T13:53:32.569299+00:00",
-      "topics": [
-        "infrastructure",
-        "capacity"
-      ],
-      "quality_note": "Announced opening is a delivery milestone; approximately1550 Phase1 cabinets are separate from up to 20 MW at full build-out. Occupancy, current operating MW and AI-specific revenue are not disclosed.",
-      "access_note": "Full original issuer announcement downloaded and read. No independent site inspection or operating telemetry reviewed."
-    },
-    {
       "id": "iren-q1fy27-20261105",
       "name": "IREN - Q1 FY27 results and funding assumptions",
       "url": "https://iren.gcs-web.com/static-files/8b5ff1cc-4a7c-444d-a3bf-bf5a621cf4b7",
@@ -4621,22 +4077,6 @@
       "quality_note": "Original ABC report quotes Stockland on the revised masterplan. Residents’ causal claims are separate from the company’s logistics rationale; no operating closure or cancelled data-centre capex is established.",
       "access_note": "Full original ABC HTML retrieved HTTP200 and article read; datePublished verified in page metadata. Stockland’s public planning page and NSW portal were checked for context but did not independently document the new withdrawal.",
       "publication_note": "Published November 8 at03:26:43UTC; exact decision/withdrawal event date is not established by the ABC article."
-    },
-    {
-      "id": "telekom-munich-expansion-20261109",
-      "name": "Deutsche Telekom · Munich Industrial AI Cloud update",
-      "url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/11/ai-demand-rises-deutsche-telekom-expands-ai-factory-in-munich",
-      "role": "primary",
-      "kind": "issuer_announcement",
-      "topics": [
-        "capacity",
-        "chips",
-        "industrial adoption"
-      ],
-      "reviewed_at": "2026-11-09T14:02:18.101642+00:00",
-      "source_date": "2026-11-09",
-      "quality_note": "Full issuer announcement reviewed. Booked capacity and customer use are company claims, not independently measured utilization or cash. B300/20MW expansion is prospective.",
-      "access_note": "Original English HTML downloaded successfully and read; linked German version checked for wording. Publication is day precision; page modification metadata is not treated as publication time."
     },
     {
       "id": "nvidia-board-20261108",
@@ -5432,6 +4872,114 @@
       ],
       "quality_note": "Issuer trading and refinancing disclosures, forward cash targets and conditional campus economics. Existing power performance is separate from prospective AI revenue.",
       "access_note": "Original full release and footnotes reviewed; HTTP200 and raw/text hashes preserved privately. CMD webcast/deck not reviewed."
+    },
+    {
+      "id": "nvidia-reinstatement-8k-20261123",
+      "name": "NVIDIA · Huang reinstatement 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
+      "source_date": "2026-11-23",
+      "reviewed_at": "2026-11-24T13:14:25.090326+00:00",
+      "role": "primary",
+      "kind": "sec_filing",
+      "topics": [
+        "policy",
+        "capacity"
+      ],
+      "quality_note": "Filed November23; reinstatement effective November22. Establishes an officer/director change, not financial or investigation outcomes.",
+      "access_note": "Complete SEC filing text read through public web reader. Direct HTTP returned403; reader text receipt retained, no original-byte archive claimed."
+    },
+    {
+      "id": "nvidia-reinstatement-release-20261123",
+      "name": "NVIDIA · reinstatement statement and continuing inquiry",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nov23pressrelease.htm",
+      "source_date": "2026-11-23",
+      "reviewed_at": "2026-11-24T13:14:25.090326+00:00",
+      "role": "primary",
+      "kind": "issuer_release",
+      "topics": [
+        "policy",
+        "capacity"
+      ],
+      "quality_note": "Issuer release in SEC Exhibit99.1. Board confidence is an attributed assessment; independent investigation and government cooperation continue.",
+      "access_note": "Complete attached release read through public web reader. Public reader receipt and text hash retained; no original-byte retrieval claimed."
+    },
+    {
+      "id": "meta-class-c-litigation-20261123",
+      "name": "Meta · Class C litigation and ATM timing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026075541/meta-20261118.htm",
+      "source_date": "2026-11-23",
+      "reviewed_at": "2026-11-24T13:22:37.754779+00:00",
+      "role": "primary",
+      "kind": "sec_filing",
+      "topics": [
+        "funding",
+        "policy"
+      ],
+      "quality_note": "Item 8.01 discloses Class C issuance restrictions and dependent ATM timing. No cash receipt, legal merits ruling or cancellation of prior financing is established.",
+      "access_note": "Full filing text read through public web reader. Earliest report dateNovember 18; filing/signatureNovember 23. Reader receipt and hash retained; no original-byte download claimed."
+    },
+    {
+      "id": "openai-shirudo-20261123",
+      "name": "OpenAI · Shirudo launch",
+      "url": "https://openai.com/index/introducing-shirudo/",
+      "source_date": "2026-11-23",
+      "reviewed_at": "2026-11-24T13:17:47.222361+00:00",
+      "role": "primary",
+      "kind": "issuer_release",
+      "topics": [
+        "applications",
+        "models",
+        "infrastructure"
+      ],
+      "quality_note": "Issuer launch and controlled-test claims; no disclosed production adoption or commercial returns.",
+      "access_note": "Complete public announcement read; ordinary HTTP200 body and extracted-text hashes retained privately."
+    },
+    {
+      "id": "cisco-shirudo-20261123",
+      "name": "Cisco Isovalent · Shirudo demonstration",
+      "url": "https://isovalent.com/blog/post/cisco-openai-shirudo/",
+      "source_date": "2026-11-23",
+      "reviewed_at": "2026-11-24T13:17:47.222361+00:00",
+      "role": "primary",
+      "kind": "issuer_release",
+      "topics": [
+        "applications",
+        "infrastructure"
+      ],
+      "quality_note": "Vendor demonstration, not independent efficacy or customer-scale evidence.",
+      "access_note": "Complete public technical explanation read; no exploit executed or software installed."
+    },
+    {
+      "id": "shirudo-readme-reviewed-20261124",
+      "name": "Shirudo · official project README",
+      "url": "https://raw.githubusercontent.com/shirudo-dev/shirudo/main/README.md",
+      "source_date": null,
+      "reviewed_at": "2026-11-24T13:17:47.222361+00:00",
+      "role": "primary",
+      "kind": "project_documentation",
+      "topics": [
+        "applications",
+        "infrastructure"
+      ],
+      "quality_note": "Development-branch state inspected November24; publication date unestablished. Pre-release status and production prerequisites limit availability claims.",
+      "publication_note": "November24 is inspection time, not an invented README publication date.",
+      "access_note": "Complete linked project README read through ordinary public raw-file access; bytes and hash retained privately."
+    },
+    {
+      "id": "applied-digital-lease-20261123",
+      "name": "Applied Digital · new hyperscaler lease",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/165/applied-digital-secures-new-150-mw-18-year-lease-with",
+      "source_date": "2026-11-23",
+      "role": "primary",
+      "kind": "company_release",
+      "reviewed_at": "2026-11-24T13:21:11.923714+00:00",
+      "topics": [
+        "demand",
+        "capacity",
+        "funding"
+      ],
+      "quality_note": "Issuer summary establishes announced signing; tenant unnamed. Renewal revenue, financing and delivery remain conditional, not collected cash or measured utilization.",
+      "access_note": "Complete ordinary public HTTP200 release and risk statements read; full contract and SEC exhibit not reviewed."
     }
   ],
   "ledger": [
@@ -6319,22 +5867,31 @@
       "to_entity": "Meta",
       "instrument": "equity",
       "currency": "USD bn",
-      "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
-      "source_date": "2026-10-26",
-      "as_of": "2026-10-26T16:19:17Z",
-      "reviewed_at": "2026-10-26T16:19:17Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026075541/meta-20261118.htm",
+      "source_date": "2026-11-23",
+      "as_of": "2026-11-24T13:22:37.754779+00:00",
+      "reviewed_at": "2026-11-24T13:22:37.754779+00:00",
       "flow_type": "money",
       "revenue_status": "Not revenue.",
       "id": "meta-future-class-c-atm-20261026",
       "from_entity": "Prospective Class C investors",
       "amount": 60,
-      "status": "planned; program not established",
-      "flow_label": "Future ATM equity",
-      "payment_status": "No completed sales verified.",
-      "note": "Up to $60bn; expected from Q1 2027.",
-      "uncertainty": "Actual issuance uncertain.",
-      "risk": "Dilution and timing risk.",
-      "overlap_group": "meta-atm-20261026"
+      "status": "not launched; Class C issuance and litigation timing conditions",
+      "flow_label": "Conditional future Class C ATM",
+      "payment_status": "No ATM sales or proceeds are established by the November 23 filing.",
+      "note": "The historical up-to-$60bn plan was expected from Q1 2027; that is not current cash or a guaranteed timetable. The November 23 filing says no Class C issuance during pretrial/trial proceedings and expects ATM launch only after the stock dividend is paid and Class C trades. Trial is scheduled April 19, 2027.",
+      "uncertainty": "Founder dividend-deadline waiver has stated litigation-resolution expiry conditions and a June 30, 2027 longstop if unpaid. None sets an assured ATM launch date. Earlier completed bond/preferred financings remain separate.",
+      "risk": "Litigation, issuance timing and dilution risk; no quantified funding shortfall is established.",
+      "overlap_group": "meta-atm-20261026",
+      "changed_at": "2026-11-23",
+      "sources": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+          "title": "Historical October 26 Class C ATM proposal",
+          "date": "2026-10-26",
+          "role": "primary"
+        }
+      ]
     },
     {
       "to_entity": "Meta",
