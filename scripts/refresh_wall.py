@@ -15,13 +15,16 @@ def main():
     parser.add_argument("--data-file", type=Path, default=ROOT / "data" / "wall.json")
     parser.add_argument("--public-output", type=Path, help="Explicit sanitized export to public/wall.json; never reads the market database")
     parser.add_argument("--export-only", action="store_true", help="Export the existing validated wall without fetching again")
+    parser.add_argument("--source", action="append", dest="source_ids", help="Refresh only this configured source ID; repeat for an explicit subset. Other sources and items are retained.")
     args = parser.parse_args()
     if args.export_only and not args.public_output:
         parser.error("--export-only requires --public-output")
+    if args.export_only and args.source_ids:
+        parser.error("--source cannot be combined with --export-only")
     try:
         if args.export_only and not args.data_file.exists():
             raise ValueError("No collected wall exists to export")
-        result = {"refresh_skipped": True} if args.export_only else wall.refresh_file(args.data_file)
+        result = {"refresh_skipped": True} if args.export_only else wall.refresh_file(args.data_file, source_ids=args.source_ids)
         if args.public_output:
             result["public_export"] = wall.write_public(args.public_output, wall.load_file(args.data_file, strict=True))
             result["public_written"] = True

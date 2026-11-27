@@ -18,6 +18,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 from .ingest import parse_date, plain_text
+from .kobeissi import check_public_product
 
 UTC = timezone.utc
 MAX_BYTES = 3_000_000
@@ -61,6 +62,8 @@ SOURCES = [
     {"id": "andrej-karpathy", "name": "Andrej Karpathy", "section": "markets", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@AndrejKarpathy", "feed_url": "https://www.youtube.com/@AndrejKarpathy/videos", "topics": ["Markets", "AI education"], "note": "Verified AndrejKarpathy channel. Up to two public long-form AI videos per refresh; short/promotional and member-only items are excluded. Older educational videos keep their source dates and are not current market news."},
     {"id": "thinking-basketball", "name": "Thinking Basketball", "section": "sports", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@ThinkingBasketball", "feed_url": "https://www.youtube.com/@ThinkingBasketball/videos", "topics": ["NBA", "Basketball analysis"], "note": "Verified ThinkingBasketball channel. Up to three public videos per refresh, excluding member-only videos, short clips and obvious promotions. Analysis is the creator's interpretation; selected older films remain dated."},
     {"id": "formula1-video", "name": "Formula 1 · videos", "section": "sports", "kind": "public_youtube_channel", "home_url": "https://www.youtube.com/@formula1", "feed_url": "https://www.youtube.com/@formula1/videos", "topics": ["F1", "Highlights", "Race analysis"], "note": "Verified official Formula 1 channel. Up to three public analysis, onboard or race/qualifying-highlight videos per refresh; under-five-minute clips, Shorts, obvious promotions and member-only items are excluded. This is a selected view, not every upload."},
+    {"id": "kobeissi-newsletter", "name": "Kobeissi · paid newsletter", "section": "markets", "kind": "public_access_notice", "home_url": "https://www.thekobeissiletter.com/analysis/newsletters", "feed_url": "https://www.thekobeissiletter.com/analysis/newsletters", "topics": ["Markets", "Macro"], "note": "Paid weekly flagship. Only the public product/access page is checked; successful check dates do not mean an issue was collected. Issue listings redirect to subscription access. No newsletter issues, previews or full text are captured; no signup or payment is used. Selected public X posts are separate."},
+    {"id": "kobeissi-chart-week", "name": "Kobeissi · free Chart of the Week", "section": "markets", "kind": "public_access_notice", "home_url": "https://www.thekobeissiletter.com/analysis/chart-of-the-week", "feed_url": "https://www.thekobeissiletter.com/analysis/chart-of-the-week", "topics": ["Markets", "Technical analysis"], "note": "Free recurring Chart of the Week, but an account is required to reach its issue listing. Only the public product/access page is checked; successful check dates do not mean a chart was collected. No issues or chart analysis are captured, and no account is created. Historical samples are not current issues."},
 ]
 GAPS = [
     {"id": "kobeissi-letter", "name": "The Kobeissi Letter", "section": "markets", "kind": "requested", "home_url": "https://www.thekobeissiletter.com/about/feed", "feed_url": None, "topics": ["Markets", "Macro"], "note": "Official site confirms @KobeissiLetter. Selected public posts can be reviewed through the existing external research task's supported browser access. Direct HTTP access is restricted; no automatic timeline API, complete X coverage or paid newsletter is connected."},
@@ -413,7 +416,7 @@ class _FeedRedirects(urllib.request.HTTPRedirectHandler):
 
 def fetch_feed(source):
     url = public_url(source["feed_url"])
-    accept = "text/html" if source["kind"] == "public_youtube_channel" else "application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9"
+    accept = "text/html" if source["kind"] in ("public_youtube_channel", "public_access_notice") else "application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9"
     request = urllib.request.Request(url, headers={"User-Agent": "AIStockPulse/0.3 personal public-feed reader", "Accept": accept, "Accept-Encoding": "identity", "Accept-Language": "en-US,en;q=0.9"})
     opener = urllib.request.build_opener(_FeedRedirects(urllib.parse.urlsplit(url).hostname))
     with opener.open(request, timeout=TIMEOUT) as response:
@@ -556,6 +559,10 @@ def _parse_youtube_channel(payload, source, observed_at):
 
 
 def parse_feed(payload, source, observed_at):
+    if source["kind"] == "public_access_notice":
+        if len(payload) > MAX_BYTES:
+            raise ValueError("Public product page exceeded the size limit")
+        return check_public_product(payload, source)
     if source["kind"] == "public_youtube_channel":
         try:
             return _parse_youtube_channel(payload, source, observed_at)
@@ -662,7 +669,7 @@ def _write(path, value):
     temporary.replace(path)
 
 
-def _refresh_file(path, fetcher=None, now=None):
+def _refresh_file(path, fetcher=None, now=None, source_ids=None):
     """Refresh a separate local store; public projection requires a separate step."""
     value = load_file(path, strict=True)
     fetcher = fetcher or fetch_feed
@@ -673,6 +680,8 @@ def _refresh_file(path, fetcher=None, now=None):
     statuses, receipts = [], []
     counts = {"new_count": 0, "changed_count": 0, "duplicate_count": 0, "error_count": 0, "skipped_count": 0, "rejected_count": 0}
     for source in SOURCES:
+        if source_ids is not None and source["id"] not in source_ids:
+            continue
         previous = previous_sources.get(source["id"], {})
         status = {**source, "status": "pending", "last_attempt_at": stamp, "last_success_at": previous.get("last_success_at"), "item_count": 0}
         status["item_count"] = sum(i["source_id"] == source["id"] for i in rows.values())
@@ -714,8 +723,8 @@ def _refresh_file(path, fetcher=None, now=None):
                 else:
                     counts["new_count"] += 1
                 rows[item["id"]] = item
-            status.update(status="ok" if items else "empty", last_success_at=stamp, item_count=len(items))
-            if not items:
+            status.update(status=stats.get("access_status", "ok" if items else "empty"), last_success_at=stamp, item_count=len(items))
+            if not items and "access_status" not in stats:
                 status["note"] += " Latest response was empty; previously stored items are retained."
             receipts.append({"id": source["id"], "status": status["status"], "response_sha256": hashlib.sha256(payload).hexdigest(), "item_count": len(items), **stats})
         except (OSError, ValueError, ET.ParseError, urllib.error.URLError) as exc:
@@ -726,7 +735,7 @@ def _refresh_file(path, fetcher=None, now=None):
                 status["cooldown_until"] = (current_time + timedelta(hours=24)).isoformat(timespec="seconds").replace("+00:00", "Z")
             receipts.append({"id": source["id"], "status": "error", "reason": "HTTP " + str(code) if code else "Public feed unavailable or invalid"})
         statuses.append(status)
-    configured = {s["id"] for s in SOURCES}
+    configured = {s["id"] for s in SOURCES if source_ids is None or s["id"] in source_ids}
     statuses += [s for s in value["source_status"] if s["id"] not in configured]
     known = {s["id"] for s in statuses}
     statuses += [s for s in empty_payload()["source_status"] if s["id"] not in known]
@@ -739,7 +748,14 @@ def _refresh_file(path, fetcher=None, now=None):
     return receipt
 
 
-def refresh_file(path, fetcher=None, now=None):
+def refresh_file(path, fetcher=None, now=None, source_ids=None):
+    """Default daily collection, or an explicit subset without re-fetching peers."""
+    if source_ids is not None:
+        if (not isinstance(source_ids, (list, tuple)) or not source_ids
+                or not all(isinstance(identity, str) for identity in source_ids)
+                or len(source_ids) != len(set(source_ids))
+                or set(source_ids) - {source["id"] for source in SOURCES}):
+            raise ValueError("Source selection must contain unique configured source IDs")
     path = Path(path)
     if path.is_symlink():
         raise ValueError("Refusing to update a symlinked wall store")
@@ -750,7 +766,7 @@ def refresh_file(path, fetcher=None, now=None):
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError:
             raise RuntimeError("A personal-wall refresh is already running")
-        return _refresh_file(path, fetcher=fetcher, now=now)
+        return _refresh_file(path, fetcher=fetcher, now=now, source_ids=source_ids)
 
 
 def write_public(path, payload):
